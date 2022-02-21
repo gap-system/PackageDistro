@@ -1,0 +1,78 @@
+{
+  "AbstractHTML": "This package provides functions for computations in finitely generated nilpotent groups based on the Deep Thought algorithm.",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveURL": "https://github.com/duskydolphin/DeepThoughtPackage/releases/download/v1.0.2/DeepThought-1.0.2",
+  "AvailabilityTest": null,
+  "Date": "13/09/2018",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">= 4.8",
+    "NeededOtherPackages": [
+      [
+        "GAPDoc",
+        ">= 1.5"
+      ],
+      [
+        "polycyclic",
+        ">= 2.11"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/DeepThought-1.0.2",
+  "IssueTrackerURL": "https://github.com/duskydolphin/DeepThoughtPackage/issues",
+  "Keywords": [
+    "Deep Thought",
+    "finitely generated nilpotent groups",
+    "Hall polynomials"
+  ],
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "DeepThought",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "This package provides functions for multiplication and other computations in finitely generated nilpotent groups based on the Deep Thought algorithm.",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoURL": "https://duskydolphin.github.io/DeepThoughtPackage/PackageInfo.g",
+  "PackageName": "DeepThought",
+  "PackageWWWHome": "https://duskydolphin.github.io/DeepThoughtPackage/",
+  "Persons": [
+    {
+      "Email": "nina.wagner@math.uni-giessen.de",
+      "FirstNames": "Nina",
+      "Institution": "Justus-Liebig-Universität Gießen",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Wagner",
+      "Place": "Gießen",
+      "PostalAddress": "AG Algebra\nMathematisches Institut\nJustus-Liebig-Universität Gießen\nArndtstraße 2\n35392 Gießen\nGermany"
+    },
+    {
+      "Email": "max.horn@math.uni-giessen.de",
+      "FirstNames": "Max",
+      "Institution": "Justus-Liebig-Universität Gießen",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Horn",
+      "Place": "Gießen",
+      "PostalAddress": "AG Algebra\nMathematisches Institut\nJustus-Liebig-Universität Gießen\nArndtstraße 2\n35392 Gießen\nGermany",
+      "WWWHome": "http://www.quendi.de/math"
+    }
+  ],
+  "README_URL": "https://duskydolphin.github.io/DeepThoughtPackage/README.md",
+  "Sha256": "5b0dcfd3526fb64f3504a4df230dd4db3fe6753f157e4ffaca99f405f8274c60",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/duskydolphin/DeepThoughtPackage"
+  },
+  "Status": "deposited",
+  "Subtitle": "This package provides functions for computations in finitely generated nilpotent groups based on the Deep Thought algorithm.",
+  "SupportEmail": "nina.wagner@math.uni-giessen.de",
+  "TestFile": "tst/testall.g",
+  "Version": "1.0.2"
+}

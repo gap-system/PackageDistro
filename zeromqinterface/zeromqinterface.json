@@ -1,0 +1,88 @@
+{
+  "AbstractHTML": "",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveURL": "https://github.com/gap-packages/ZeroMQInterface/releases/download/v0.12/ZeroMQInterface-0.12",
+  "AutoDoc": {
+    "TitlePage": {
+      "Acknowledgements": "We appreciate very much all past and future comments, suggestions and \ncontributions to this package and its documentation provided by &GAP; \nusers and developers.",
+      "Copyright": "&copyright; 2015-17 by Markus Pfeiffer, Reimer Behrends and others<P/>\nThe &ZeroMQInterface; package is free software; \nyou can redistribute it and/or modify it under the terms of the \n<URL Text=\"GNU General Public License\">http://www.fsf.org/licenses/gpl.html</URL> \nas published by the Free Software Foundation; either version 2 of the License, \nor (at your option) any later version."
+    }
+  },
+  "AvailabilityTest": null,
+  "Date": "01/11/2019",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">= 4.9",
+    "NeededOtherPackages": [
+      [
+        "GAPDoc",
+        ">= 1.6.1"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/ZeroMQInterface-0.12",
+  "IssueTrackerURL": "https://github.com/gap-packages/ZeroMQInterface/issues",
+  "Keywords": [
+    "zeromq",
+    "messaging",
+    "distributed"
+  ],
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "ZeroMQInterface",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "ZeroMQ bindings for GAP",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoURL": "https://gap-packages.github.io/ZeroMQInterface/PackageInfo.g",
+  "PackageName": "ZeroMQInterface",
+  "PackageWWWHome": "https://gap-packages.github.io/ZeroMQInterface/",
+  "Persons": [
+    {
+      "Email": "markus.pfeiffer@st-andrews.ac.uk",
+      "FirstNames": "Markus",
+      "Institution": "University of St Andrews",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Pfeiffer",
+      "Place": "St Andrews",
+      "PostalAddress": "School of Computer Science\nUniversity of St Andrews\nJack Cole Building, North Haugh\nSt Andrews, Fife, KY16 9SX\nUnited Kingdom",
+      "WWWHome": "http://www.morphism.de/~markusp/"
+    },
+    {
+      "Email": "behrends@gmail.com",
+      "FirstNames": "Reimer",
+      "Institution": "Universität Kaiserslautern",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Behrends",
+      "Place": "Kaiserslautern",
+      "PostalAddress": "Technische Universität Kaiserslautern\nFachbereich Mathematik\nPostfach 3049\n67653 Kaiserslautern\nDeutschland",
+      "WWWHome": "http://www.mathematik.uni-kl.de/agag/mitglieder/wissenschaftliche-mitarbeiter/dr-reimer-behrends/"
+    },
+    {
+      "Email": "support@gap-system.org",
+      "FirstNames": "The",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "GAP Team"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/ZeroMQInterface/README.md",
+  "Sha256": "3c61060ff5f7db5509ba2522cce1b5f22a4269e13ef220e4b0929536c45a7bfb",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/ZeroMQInterface"
+  },
+  "Status": "dev",
+  "Subtitle": "ZeroMQ bindings for GAP",
+  "TestFile": "tst/testall.g",
+  "Version": "0.12"
+}

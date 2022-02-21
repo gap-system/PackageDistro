@@ -1,0 +1,71 @@
+{
+  "AbstractHTML": "The <span class=\"pkgname\">JupyterViz</span> package    adds visualization tools for use in Jupyter Notebooks    or from the GAP REPL.  Those tools can be used to make    charts, graphs, and arbitrary other visualizations.",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveURL": "https://github.com/nathancarter/jupyterviz/releases/download/v1.5.1/jupyterviz-1.5.1",
+  "AvailabilityTest": null,
+  "Date": "28/03/2019",
+  "Dependencies": {
+    "GAP": ">= 4.9",
+    "NeededOtherPackages": [
+      [
+        "json",
+        "2.0.0"
+      ],
+      [
+        "GAPDoc",
+        "1.3"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/jupyterviz-1.5.1",
+  "IssueTrackerURL": "https://github.com/nathancarter/jupyterviz/issues",
+  "Keywords": [
+    "Jupyter Notebook",
+    "visualization",
+    "graph",
+    "plot",
+    "chart",
+    "HTML",
+    "JavaScript"
+  ],
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "JupyterViz",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "Visualization Tools for Jupyter and the GAP REPL",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoURL": "https://nathancarter.github.io/jupyterviz/PackageInfo.g",
+  "PackageName": "JupyterViz",
+  "PackageWWWHome": "https://nathancarter.github.io/jupyterviz",
+  "Persons": [
+    {
+      "Email": "ncarter@bentley.edu",
+      "FirstNames": "Nathan",
+      "Institution": "Bentley University",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Carter",
+      "Place": "Waltham",
+      "PostalAddress": "175 Forest St.\nWaltham, MA  02452\nUSA",
+      "WWWHome": "http://nathancarter.github.io"
+    }
+  ],
+  "README_URL": "https://nathancarter.github.io/jupyterviz/README.md",
+  "Sha256": "6acf01f72b85be2db286d64f2fb3514837541ceeaadb343c45627de813db881d",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/nathancarter/jupyterviz"
+  },
+  "Status": "dev",
+  "Subtitle": "Visualization Tools for Jupyter and the GAP REPL",
+  "SupportEmail": "ncarter@bentley.edu",
+  "TestFile": "tst/testall.g",
+  "Version": "1.5.1"
+}

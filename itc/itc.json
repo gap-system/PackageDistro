@@ -1,0 +1,89 @@
+{
+  "AbstractHTML": "This <span class=\"pkgname\">GAP</span> package provides    access to interactive Todd-Coxeter computations    with finitely presented groups.",
+  "AcceptDate": "03/2000",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveURL": "https://github.com/gap-packages/itc/releases/download/v1.5/itc-1.5",
+  "Autoload": false,
+  "AvailabilityTest": null,
+  "BannerString": "\n          Loading  ITC 1.5  (Interactive Todd-Coxeter)\n            by V. Felsch, L. Hippe, and J. Neubueser\n              (Volkmar.Felsch@math.rwth-aachen.de)\n\n",
+  "CommunicatedBy": "Edmund F. Robertson (St Andrews)",
+  "Date": "13/06/2018",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": "4.8",
+    "NeededOtherPackages": [
+      [
+        "xgap",
+        ">= 4.02"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/itc-1.5",
+  "IssueTrackerURL": "https://github.com/gap-packages/itc/issues",
+  "Keywords": [
+    "interactive Todd-Coxeter",
+    "coset enumeration"
+  ],
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc",
+        "htm"
+      ],
+      "Autoload": true,
+      "BookName": "ITC",
+      "HTMLStart": "htm/chapters.htm",
+      "LongTitle": "Interactive Todd-Coxeter computations",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoURL": "https://gap-packages.github.io/itc/PackageInfo.g",
+  "PackageName": "ITC",
+  "PackageWWWHome": "https://gap-packages.github.io/itc/",
+  "Persons": [
+    {
+      "Email": "Volkmar.Felsch@math.rwth-aachen.de",
+      "FirstNames": "Volkmar",
+      "Institution": "Lehrstuhl D für Mathematik, RWTH Aachen",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Felsch",
+      "Place": "Aachen",
+      "WWWHome": "http://www.math.rwth-aachen.de/LDFM/homes/Volkmar.Felsch/"
+    },
+    {
+      "FirstNames": "Ludger",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Hippe"
+    },
+    {
+      "Email": "Joachim.Neubueser@math.rwth-aachen.de",
+      "FirstNames": "Joachim",
+      "Institution": "Lehrstuhl D für Mathematik, RWTH Aachen",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Neubüser",
+      "Place": "Aachen",
+      "WWWHome": "http://www.math.rwth-aachen.de/LDFM/homes/Joachim.Neubueser/"
+    },
+    {
+      "Email": "support@gap-system.org",
+      "FirstNames": "The",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "GAP Team"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/itc/README",
+  "Sha256": "6a03b1a3361dd3f15095dfc68b89e37600491dc093c32c45d4d5e628ed940fe0",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/itc"
+  },
+  "Status": "accepted",
+  "Subtitle": "Interactive Todd-Coxeter",
+  "Version": "1.5"
+}

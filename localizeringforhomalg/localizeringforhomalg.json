@@ -1,0 +1,101 @@
+{
+  "AbstractHTML": "This package is part of the homalg-project and allows localization of a (computable) commutative ring at a (finitely generated) maximal ideal.",
+  "ArchiveFormats": ".tar.gz .zip",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/LocalizeRingForHomalg-2020.10-02/LocalizeRingForHomalg-2020.10-02",
+  "Autoload": false,
+  "AvailabilityTest": null,
+  "Date": "16/10/2020",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">=4.7",
+    "NeededOtherPackages": [
+      [
+        "MatricesForHomalg",
+        ">= 2020.06.27"
+      ],
+      [
+        "HomalgToCAS",
+        ">= 2020.06.27"
+      ],
+      [
+        "Modules",
+        ">= 2020.02.05"
+      ],
+      [
+        "GAPDoc",
+        ">= 1.0"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/LocalizeRingForHomalg-2020.10-02",
+  "IssueTrackerURL": "https://github.com/homalg-project/homalg_project/issues",
+  "Keywords": [
+    "homological algebra",
+    "local ring",
+    "submodule membership problem",
+    "syzygies",
+    "Mora"
+  ],
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "Autoload": false,
+      "BookName": "LocalizeRingForHomalg",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "A Package for Localization of Polynomial Rings",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoURL": "https://homalg-project.github.io/homalg_project/LocalizeRingForHomalg/PackageInfo.g",
+  "PackageName": "LocalizeRingForHomalg",
+  "PackageWWWHome": "https://homalg-project.github.io/homalg_project/LocalizeRingForHomalg",
+  "Persons": [
+    {
+      "Email": "mohamed.barakat@uni-siegen.de",
+      "FirstNames": "Mohamed",
+      "Institution": "University of Siegen",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Barakat",
+      "Place": "Siegen",
+      "PostalAddress": "Walter-Flex-Str. 3\n57072 Siegen\nGermany",
+      "WWWHome": "https://mohamed-barakat.github.io"
+    },
+    {
+      "Email": "markus.lange-hegermann@hs-owl.de",
+      "FirstNames": "Markus",
+      "Institution": "Hochschule Ostwestfalen-Lippe",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Lange-Hegermann",
+      "Place": "Aachen",
+      "PostalAddress": "Markus Lange-Hegermann\nHochschule Ostwestfalen-Lippe\nLiebigstraße 87\n32657 Lemgo\nGermany",
+      "WWWHome": "https://www.th-owl.de/eecs/fachbereich/team/markus-lange-hegermann/"
+    },
+    {
+      "Email": "waghoba@gmail.com",
+      "FirstNames": "Vinay",
+      "Institution": "Indian Institute of Technology Guwahati",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Wagh",
+      "Place": "Guwahati",
+      "PostalAddress": "E-102, Department of Mathematics,\nIndian Institute of Technology Guwahati,\nGuwahati, Assam, India.\nPIN: 781 039.\nIndia",
+      "WWWHome": "http://www.iitg.ernet.in/vinay.wagh/"
+    }
+  ],
+  "README_URL": "https://homalg-project.github.io/homalg_project/LocalizeRingForHomalg/README.md",
+  "Sha256": "102072d2b6c8d172031f441395334bebc004a3c06c2938abb3e6914e53e78197",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/homalg-project/homalg_project"
+  },
+  "Status": "deposited",
+  "Subtitle": "A Package for Localization of Polynomial Rings",
+  "Version": "2020.10-02"
+}

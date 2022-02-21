@@ -1,0 +1,57 @@
+{
+  "AbstractHTML": "The <span class=\"transgrp\">TransGrp</span> package provides the library of transitive groups.",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveURL": "https://www.math.colostate.edu/~hulpke/transgrp/transgrp3.0",
+  "AvailabilityTest": null,
+  "Date": "01/08/2020",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">=4.9",
+    "NeededOtherPackages": [],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/transgrp",
+  "IssueTrackerURL": "https://github.com/hulpke/transgrp/issues",
+  "Keywords": [
+    "Transitive Groups Library"
+  ],
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc/manual.pdf",
+        "htm"
+      ],
+      "Autoload": true,
+      "BookName": "transgrp",
+      "HTMLStart": "htm/chapters.htm",
+      "LongTitle": "Transitive Groups Library",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoURL": "https://www.math.colostate.edu/~hulpke/transgrp/PackageInfo.g",
+  "PackageName": "TransGrp",
+  "PackageWWWHome": "https://www.math.colostate.edu/~hulpke/transgrp",
+  "Persons": [
+    {
+      "Email": "hulpke@math.colostate.edu",
+      "FirstNames": "Alexander",
+      "Institution": "Department of Mathematics, Colorado State University",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Hulpke",
+      "Place": "Fort Collins, CO",
+      "WWWHome": "https://www.math.colostate.edu/~hulpke"
+    }
+  ],
+  "README_URL": "https://www.math.colostate.edu/~hulpke/transgrp/README.txt",
+  "Sha256": "f6caf27c3397085f18043950a63ee84b099a884ebc14e1497ef4bdb3f7b17f8c",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/hulpke/transgrp"
+  },
+  "Status": "deposited",
+  "Subtitle": "Transitive Groups Library",
+  "TestFile": "tst/testall.g",
+  "Version": "3.0"
+}

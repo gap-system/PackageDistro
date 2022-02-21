@@ -1,0 +1,78 @@
+{
+  "AbstractHTML": "The <span class=\"pkgname\">singular</span> package provides an interface    from <span class=\"pkgname\">GAP</span> to the computer algebra system    <span class=\"pkgname\">Singular</span>.",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveURL": "https://github.com/gap-packages/singular/releases/download/v2020.12.18/singular-2020.12.18",
+  "Autoload": false,
+  "AvailabilityTest": null,
+  "Date": "18/12/2020",
+  "Dependencies": {
+    "ExternalConditions": [
+      [
+        "Requires the computer algebra system Singular",
+        "https://www.singular.uni-kl.de/"
+      ]
+    ],
+    "GAP": ">=4.8",
+    "NeededOtherPackages": [],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/singular-2020.12.18",
+  "IssueTrackerURL": "https://github.com/gap-packages/singular/issues",
+  "Keywords": [
+    "Interface to Singular",
+    "Groebner bases"
+  ],
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "Autoload": true,
+      "BookName": "singular",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "A GAP interface to Singular",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoURL": "https://gap-packages.github.io/singular/PackageInfo.g",
+  "PackageName": "singular",
+  "PackageWWWHome": "https://gap-packages.github.io/singular/",
+  "Persons": [
+    {
+      "FirstNames": "Marco",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Costantini"
+    },
+    {
+      "Email": "degraaf@science.unitn.it",
+      "FirstNames": "Willem Adriaan",
+      "Institution": "Department of Mathematics, University of Trento",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "de Graaf",
+      "Place": "Trento",
+      "PostalAddress": "Willem de Graaf\nDipartimento di Matematica\nUniversità degli Studi di Trento\nI-38050 Povo (Trento)\nItaly",
+      "WWWHome": "https://www.science.unitn.it/~degraaf/"
+    },
+    {
+      "Email": "support@gap-system.org",
+      "FirstNames": "The",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "GAP Team"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/singular/README.md",
+  "Sha256": "131df6da24a75ffd24cfd1f9f1d67877a4b519a0961ee3d38d8761adf4c00085",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/singular"
+  },
+  "Status": "deposited",
+  "Subtitle": "A GAP interface to Singular",
+  "TestFile": "tst/testall.g",
+  "Version": "2020.12.18"
+}
