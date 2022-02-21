@@ -1,0 +1,74 @@
+{
+  "AbstractHTML": "This package can be used for work with sesquilinear and quadratic forms on finite vector spaces; objects that are used to describe polar spaces and classical groups.",
+  "AcceptDate": "03/2009",
+  "ArchiveFormats": ".tar.gz -win.zip .tar.bz2",
+  "ArchiveURL": "http://cage.ugent.be/geometry/software/forms/forms-1.2.5",
+  "Autoload": false,
+  "AvailabilityTest": null,
+  "BannerString": "---------------------------------------------------------------------\nLoading 'Forms' 1.2.5 (27/09/2018)\nby John Bamberg (http://school.maths.uwa.edu.au/~bamberg/)\n   Jan De Beule (http://www.debeule.eu)\nFor help, type: ?Forms \n---------------------------------------------------------------------\n",
+  "CommunicatedBy": "Leonard Soicher (London)",
+  "Date": "27/09/2018",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">=4.8",
+    "NeededOtherPackages": [
+      [
+        "GAPDoc",
+        ">= 1.6"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/forms",
+  "Keywords": [
+    "Forms",
+    "Sesquilinear",
+    "Quadratic"
+  ],
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "Autoload": true,
+      "BookName": "Forms",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "Forms - Sesquilinear and Quadratic",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoURL": "http://cage.ugent.be/geometry/software/forms/PackageInfo.g",
+  "PackageName": "Forms",
+  "PackageWWWHome": "http://cage.ugent.be/geometry/forms.php",
+  "Persons": [
+    {
+      "Email": "bamberg@maths.uwa.edu.au",
+      "FirstNames": "John",
+      "Institution": "The University of Western Australia",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Bamberg",
+      "Place": "Perth",
+      "PostalAddress": "John Bamberg\nSchool of Mathematics and Statistics\nThe University of Western Australia\n35 Stirling Highway\nCrawleyY WA 6009, Perth\nAustralia",
+      "WWWHome": "http://school.maths.uwa.edu.au/~bamberg/"
+    },
+    {
+      "Email": "jan@debeule.eu",
+      "FirstNames": "Jan",
+      "Institution": "Vrije Universiteit Brussel",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "De Beule",
+      "Place": "Brussels",
+      "PostalAddress": "Jan De Beule\nDepartment of Mathematics\nVrije Universiteit Brussel\nPleinlaan 2\nB-1050 Brussel\nBelgium",
+      "WWWHome": "http://www.debeule.eu"
+    }
+  ],
+  "README_URL": "http://cage.ugent.be/geometry/software/forms/README",
+  "Sha256": "327d26fa418355ddaed3b856ed6ebee0a8a70f06fc04a315988b5962c375aef1",
+  "Status": "accepted",
+  "Subtitle": "Sesquilinear and Quadratic",
+  "TestFile": "tst/testall.g",
+  "Version": "1.2.5"
+}

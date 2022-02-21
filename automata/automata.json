@@ -1,0 +1,82 @@
+{
+  "AbstractHTML": "The <span class=\"pkgname\">Automata</span> package, as its name suggests, is package with algorithms to deal with automata.",
+  "AcceptDate": "09/2004",
+  "ArchiveFormats": ".tar.gz .tar.bz2",
+  "ArchiveURL": "https://github.com/gap-packages/automata/releases/download/v1.14/automata-1.14",
+  "Autoload": false,
+  "AvailabilityTest": null,
+  "CommunicatedBy": "Edmund Robertson (St. Andrews)",
+  "Date": "26/09/2018",
+  "Dependencies": {
+    "GAP": ">=4.8",
+    "NeededOtherPackages": [],
+    "SuggestedOtherPackages": [
+      [
+        "GAPDoc",
+        ">= 1.2"
+      ]
+    ]
+  },
+  "InstallationPath": "pkg/automata-1.14",
+  "IssueTrackerURL": "https://github.com/gap-packages/automata/issues",
+  "Keywords": [
+    "Automata",
+    "Rational Expressions"
+  ],
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "Automata",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "Automata, a GAP package for finite state automata",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoURL": "https://gap-packages.github.io/automata/PackageInfo.g",
+  "PackageName": "Automata",
+  "PackageWWWHome": "https://gap-packages.github.io/automata/",
+  "Persons": [
+    {
+      "Email": "mdelgado@fc.up.pt",
+      "FirstNames": "Manuel",
+      "Institution": "Faculdade de Ciências",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Delgado",
+      "Place": "Porto",
+      "PostalAddress": "Departamento de Matemática - Faculdade de Ciências\nPorto\nPortugal",
+      "WWWHome": "http://www.fc.up.pt/cmup/mdelgado/"
+    },
+    {
+      "Email": "steve.linton@st-andrews.ac.uk",
+      "FirstNames": "Steve",
+      "Institution": "School of Computer Science, University of St. Andrews",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Linton",
+      "Place": "St. Andrews",
+      "PostalAddress": "School of Computer Science\nUniversity of St Andrews\nJack Cole Building, North Haugh\nSt Andrews, Fife, KY16 9SX\nUnited Kingdom",
+      "WWWHome": "http://www-groups.dcs.st-and.ac.uk/~sal/"
+    },
+    {
+      "FirstNames": "José João",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Morais",
+      "PostalAddress": "No address known"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/automata/README.md",
+  "Sha256": "89db068eea7acccf3a9a52ebdcc8d12fc9f320f5451c16b0c4b6a76dade28b29",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/automata"
+  },
+  "Status": "accepted",
+  "Subtitle": "A package on automata",
+  "TestFile": "tst/testall.g",
+  "Version": "1.14"
+}

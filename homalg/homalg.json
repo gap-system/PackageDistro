@@ -1,0 +1,94 @@
+{
+  "AbstractHTML": "A homological algebra meta-package for computable Abelian categories",
+  "ArchiveFormats": ".tar.gz .zip",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/homalg-2020.10-02/homalg-2020.10-02",
+  "Autoload": false,
+  "AvailabilityTest": null,
+  "Date": "16/10/2020",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">=4.7",
+    "NeededOtherPackages": [
+      [
+        "ToolsForHomalg",
+        ">=2012.10.27"
+      ],
+      [
+        "GAPDoc",
+        ">= 1.0"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/homalg-2020.10-02",
+  "IssueTrackerURL": "https://github.com/homalg-project/homalg_project/issues",
+  "Keywords": [
+    "homological",
+    "filtration",
+    "bicomplex",
+    "spectral sequence",
+    "Grothendieck",
+    "functor"
+  ],
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "Autoload": false,
+      "BookName": "homalg",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "A homological algebra meta-package for computable Abelian categories",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoURL": "https://homalg-project.github.io/homalg_project/homalg/PackageInfo.g",
+  "PackageName": "homalg",
+  "PackageWWWHome": "https://homalg-project.github.io/homalg_project/homalg",
+  "Persons": [
+    {
+      "Email": "mohamed.barakat@uni-siegen.de",
+      "FirstNames": "Mohamed",
+      "Institution": "University of Siegen",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Barakat",
+      "Place": "Siegen",
+      "PostalAddress": "Walter-Flex-Str. 3\n57072 Siegen\nGermany",
+      "WWWHome": "https://mohamed-barakat.github.io"
+    },
+    {
+      "Email": "gutsche@mathematik.uni-siegen.de",
+      "FirstNames": "Sebastian",
+      "Institution": "University of Siegen",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Gutsche",
+      "Place": "Siegen",
+      "PostalAddress": "Department Mathematik\nUniversität Siegen\nWalter-Flex-Straße 3\n57072 Siegen\nGermany",
+      "WWWHome": "https://sebasguts.github.io"
+    },
+    {
+      "Email": "markus.lange-hegermann@hs-owl.de",
+      "FirstNames": "Markus",
+      "Institution": "Hochschule Ostwestfalen-Lippe",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Lange-Hegermann",
+      "Place": "Aachen",
+      "PostalAddress": "Markus Lange-Hegermann\nHochschule Ostwestfalen-Lippe\nLiebigstraße 87\n32657 Lemgo\nGermany",
+      "WWWHome": "https://www.th-owl.de/eecs/fachbereich/team/markus-lange-hegermann/"
+    }
+  ],
+  "README_URL": "https://homalg-project.github.io/homalg_project/homalg/README.md",
+  "Sha256": "ee13096f7139fd2d5a4560801d3be85fbd7dc4f91cd8ea4b4eb60deb91fc8b8a",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/homalg-project/homalg_project"
+  },
+  "Status": "deposited",
+  "Subtitle": "A homological algebra meta-package for computable Abelian categories",
+  "Version": "2020.10-02"
+}

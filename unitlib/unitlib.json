@@ -1,0 +1,89 @@
+{
+  "AbstractHTML": "The <span class=\"pkgname\">UnitLib</span> package extends the <span class=\"pkgname\">LAGUNA</span> package and provides the library of normalized unit groups of modular group algebras of all finite p-groups of order less than 243 over the field of p elements.",
+  "AcceptDate": "03/2007",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveURL": "https://github.com/gap-packages/unitlib/releases/download/v4.0.0/unitlib-4.0.0",
+  "AvailabilityTest": null,
+  "CommunicatedBy": "Bettina Eick (Braunschweig)",
+  "Date": "01/05/2018",
+  "Dependencies": {
+    "ExternalConditions": [
+      "gzip (only for p=128)"
+    ],
+    "GAP": ">=4.9",
+    "NeededOtherPackages": [
+      [
+        "GAPDoc",
+        ">= 1.6"
+      ],
+      [
+        "IO",
+        "4.5"
+      ],
+      [
+        "LAGUNA",
+        ">= 3.9"
+      ]
+    ],
+    "SuggestedOtherPackages": [
+      [
+        "SCSCP",
+        ">=2.2"
+      ]
+    ]
+  },
+  "InstallationPath": "pkg/unitlib-4.0.0",
+  "IssueTrackerURL": "https://github.com/gap-packages/unitlib/issues",
+  "Keywords": [
+    "group ring",
+    "modular group algebra",
+    "normalized unit group"
+  ],
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "Autoload": true,
+      "BookName": "UnitLib",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "The library of normalized unit groups of modular group algebras",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoURL": "https://gap-packages.github.io/unitlib/PackageInfo.g",
+  "PackageName": "UnitLib",
+  "PackageWWWHome": "https://gap-packages.github.io/unitlib",
+  "Persons": [
+    {
+      "Email": "alexander.konovalov@st-andrews.ac.uk",
+      "FirstNames": "Alexander",
+      "Institution": "University of St Andrews",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Konovalov",
+      "Place": "St Andrews",
+      "PostalAddress": "School of Computer Science\nUniversity of St Andrews\nJack Cole Building, North Haugh,\nSt Andrews, Fife, KY16 9SX, Scotland",
+      "WWWHome": "https://alexk.host.cs.st-andrews.ac.uk"
+    },
+    {
+      "FirstNames": "Elena",
+      "Institution": "Zaporozhye National University",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Yakimenko",
+      "Place": "Zaporozhye"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/unitlib/README.md",
+  "Sha256": "6d0709181f21e7045704870d33515c16097ee50f4bc10fb6cf3b118dd8520573",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/unitlib"
+  },
+  "Status": "accepted",
+  "Subtitle": "Library of normalized unit groups of modular group algebras",
+  "TestFile": "tst/testall.g",
+  "Version": "4.0.0"
+}

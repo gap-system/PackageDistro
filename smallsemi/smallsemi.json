@@ -1,0 +1,86 @@
+{
+  "AbstractHTML": "The <Package>Smallsemi</Package> package is a data library of semigroups    of small size. It provides all semigroups with at most 8 elements as well    as various information about these objects.",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveURL": "https://github.com/gap-packages/smallsemi/releases/download/v0.6.12/smallsemi-0.6.12",
+  "AutoDoc": {
+    "TitlePage": {
+      "Acknowledgements": "\n            We would like to thank Tom Kelsey for making this library\n            possible by running all the initial computations in Minion <Cite\n            Key=\"minion\"/>. <Br/>\n\n            The first author acknowledges financial support of the University\n            of St Andrews. The second author acknowledges support of EPSRC\n            grant number GR/S/56085/01.\n            ",
+      "Colophon": "\n            If you use <Package>Smallsemi</Package>, please tell us by\n            sending an email to <Email>a.distler@tu-bs.de</Email> or\n            <Email>jdm3@st-and.ac.uk</Email>.\n            <P/>\n            If you find any bugs or have any suggestions or comments, we\n            would very much appreciate it if you would let us know. Also, we\n            would like to hear about applications of this software.\n            ",
+      "Copyright": "\n            &copyright; 2008-19 A. Distler &amp; J. D. Mitchell.<P/>\n\n            <Package>Smallsemi</Package> is free software: you can\n            redistribute it and/or modify it under the terms of the GNU\n            General Public License as published by the Free Software\n            Foundation, either version 3 of the license, or (at your option)\n            any later version.<P/>\n\n            <Package>Smallsemi</Package> is distributed in the hope that it\n            will be useful, but WITHOUT ANY WARRANTY; without even the\n            implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR\n            PURPOSE. See the GNU General Public License for more details.<P/>\n\n            A copy of the GNU General Public License is available in the file\n            'LICENSE'; for the latest version\n            see <URL>https://www.gnu.org/licenses/#GPL</URL>.<P/>\n\n            This file is part of <Package>Smallsemi</Package>, though as\n            documentation it is released under the GNU Free Documentation\n            License (see <URL>https://www.gnu.org/licenses/#FDL</URL>).\n            ",
+      "Version": "Version 0.6.12"
+    },
+    "entities": {
+      "ARCHIVENAME": "smallsemi-0.6.12",
+      "VERSION": "0.6.12"
+    }
+  },
+  "Autoload": false,
+  "AvailabilityTest": null,
+  "BannerString": "-----------------------------------------------------------------------------\nSmallsemi -   A library of small semigroups\nby Andreas Distler & James Mitchell\nFor contents, type: ?Smallsemi:\nLoading Smallsemi 0.6.12 ...\n-----------------------------------------------------------------------------\n",
+  "Date": "16/08/2019",
+  "Dependencies": {
+    "ExternalConditions": [
+      "gzip is needed in standard location if data files are used uncompressed"
+    ],
+    "GAP": ">=4.8",
+    "NeededOtherPackages": [],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/smallsemi-0.6.12",
+  "IssueTrackerURL": "https://github.com/gap-packages/smallsemi/issues",
+  "Keywords": [
+    "small semigroups",
+    "data library",
+    "multiplication tables"
+  ],
+  "License": "GPL-3.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "Autoload": true,
+      "BookName": "Smallsemi",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "a library of small semigroups",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoURL": "https://gap-packages.github.io/smallsemi/PackageInfo.g",
+  "PackageName": "Smallsemi",
+  "PackageWWWHome": "https://gap-packages.github.io/smallsemi/",
+  "Persons": [
+    {
+      "Email": "a.distler@tu-bs.de",
+      "FirstNames": "Andreas",
+      "Institution": "Technische Universität Braunschweig",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Distler",
+      "Place": "Braunschweig",
+      "PostalAddress": "AG Algebra und Diskrete Mathematik\nTU Braunschweig\nRebenring 31 (A14)\n38106 Braunschweig\nGermany"
+    },
+    {
+      "Email": "jdm3@st-and.ac.uk",
+      "FirstNames": "James",
+      "Institution": "University of St Andrews",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Mitchell",
+      "Place": "St Andrews",
+      "PostalAddress": "Mathematical Institute\nNorth Haugh\nSt Andrews\nFife\nKY16 9SS\nScotland",
+      "WWWHome": "http://tinyurl.com/jdmitchell"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/smallsemi/README",
+  "Sha256": "a62792a35b24cdf7ebb56572d35ef0df5ab2bd9d78cbcc8de5462fc3ccde44cc",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/smallsemi"
+  },
+  "Status": "deposited",
+  "Subtitle": "A library of small semigroups",
+  "TestFile": "tst/testall.g",
+  "Version": "0.6.12"
+}

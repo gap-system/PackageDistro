@@ -1,0 +1,91 @@
+{
+  "AbstractHTML": "The <span class=\"pkgname\">ToolsForHomalg</span> package provides GAP extensions for the homalg project",
+  "ArchiveFormats": ".tar.gz .zip",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/ToolsForHomalg-2020.10-03/ToolsForHomalg-2020.10-03",
+  "Autoload": false,
+  "AvailabilityTest": null,
+  "Date": "22/10/2020",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">=4.7",
+    "NeededOtherPackages": [
+      [
+        "GAPDoc",
+        ">= 1.0"
+      ],
+      [
+        "AutoDoc",
+        ">=2013.11.10"
+      ],
+      [
+        "IO",
+        ">=4.5.1"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/ToolsForHomalg-2020.10-03",
+  "IssueTrackerURL": "https://github.com/homalg-project/homalg_project/issues",
+  "Keywords": [],
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "Autoload": false,
+      "BookName": "ToolsForHomalg",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "Provides special methods and knowledge propagation tools",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoURL": "https://homalg-project.github.io/homalg_project/ToolsForHomalg/PackageInfo.g",
+  "PackageName": "ToolsForHomalg",
+  "PackageWWWHome": "https://homalg-project.github.io/homalg_project/ToolsForHomalg",
+  "Persons": [
+    {
+      "Email": "mohamed.barakat@uni-siegen.de",
+      "FirstNames": "Mohamed",
+      "Institution": "University of Siegen",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Barakat",
+      "Place": "Siegen",
+      "PostalAddress": "Walter-Flex-Str. 3\n57072 Siegen\nGermany",
+      "WWWHome": "https://mohamed-barakat.github.io"
+    },
+    {
+      "Email": "gutsche@mathematik.uni-siegen.de",
+      "FirstNames": "Sebastian",
+      "Institution": "University of Siegen",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Gutsche",
+      "Place": "Siegen",
+      "PostalAddress": "Department Mathematik\nUniversität Siegen\nWalter-Flex-Straße 3\n57072 Siegen\nGermany",
+      "WWWHome": "https://sebasguts.github.io"
+    },
+    {
+      "Email": "markus.lange.hegermann@rwth-aachen.de",
+      "FirstNames": "Markus",
+      "Institution": "RWTH Aachen University",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Lange-Hegermann",
+      "Place": "Aachen",
+      "PostalAddress": "Markus Lange-Hegermann\nLehrstuhl B fuer Mathematik, RWTH Aachen\nTemplergraben 64\n52062 Aachen\nGermany",
+      "WWWHome": "http://wwwb.math.rwth-aachen.de/~markus/"
+    }
+  ],
+  "README_URL": "https://homalg-project.github.io/homalg_project/ToolsForHomalg/README.md",
+  "Sha256": "404ae9b99140a8ad3a1fafb33b9b81c7c89ae5797807ba76d23f00cc2c1513bd",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/homalg-project/homalg_project"
+  },
+  "Status": "deposited",
+  "Subtitle": "Special methods and knowledge propagation tools",
+  "Version": "2020.10-03"
+}

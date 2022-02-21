@@ -1,0 +1,79 @@
+{
+  "AbstractHTML": "",
+  "AcceptDate": "08/2016",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveURL": "https://github.com/gap-packages/sglppow/releases/download/v2.1/sglppow-2.1",
+  "AvailabilityTest": null,
+  "BannerString": "----------------------------------------------------------------\nLoading SglPPow 2.1\nby Michael Vaughan-Lee and Bettina Eick \n----------------------------------------------------------------\n",
+  "CommunicatedBy": "Leonard Soicher (QMUL)",
+  "Date": "08/03/2018",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">=4.7",
+    "NeededOtherPackages": [],
+    "SuggestedOtherPackages": [
+      [
+        "LiePRing",
+        ">=1.8"
+      ],
+      [
+        "LieRing",
+        ">=2.2"
+      ]
+    ]
+  },
+  "InstallationPath": "pkg/sglppow-2.1",
+  "IssueTrackerURL": "https://github.com/gap-packages/sglppow/issues",
+  "Keywords": [
+    "",
+    "",
+    ""
+  ],
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "SglPPow",
+      "HTMLStart": "htm/chapters.htm",
+      "LongTitle": "Database of groups of prime-power order",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoURL": "https://gap-packages.github.io/sglppow/PackageInfo.g",
+  "PackageName": "SglPPow",
+  "PackageWWWHome": "https://gap-packages.github.io/sglppow/",
+  "Persons": [
+    {
+      "Email": "michael.vaughan-lee@chch.ox.ac.uk",
+      "FirstNames": "Michael",
+      "Institution": "Oxford University",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Vaughan-Lee",
+      "Place": "Oxford",
+      "WWWHome": "http://users.ox.ac.uk/~vlee"
+    },
+    {
+      "Email": "beick@tu-bs.de",
+      "FirstNames": "Bettina",
+      "Institution": "TU Braunschweig",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Eick",
+      "Place": "Braunschweig",
+      "WWWHome": "http://www.icm.tu-bs.de/~beick"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/sglppow/README",
+  "Sha256": "8d3ede9b8681dd73b0a6e55437aab4dadfed21e497d2ac2732be4861d23aad26",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/sglppow"
+  },
+  "Status": "accepted",
+  "Subtitle": "Database of groups of prime-power order for some prime-powers",
+  "TestFile": "tst/testall.g",
+  "Version": "2.1"
+}

@@ -1,0 +1,75 @@
+{
+  "AbstractHTML": "The <span class=\"pkgname\">FPLSA</span> package uses    the authors' C program (version 4.0) that implements    a Lie Todd-Coxeter method for converting    finitely presented Lie algebras into isomorphic    structure constant algebras.    This is called via the GAP function IsomorphismSCTableAlgebra.",
+  "AcceptDate": "07/1999",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveURL": "https://github.com/gap-packages/FPLSA/releases/download/v1.2.4/FPLSA-1.2.4",
+  "AvailabilityTest": null,
+  "CommunicatedBy": "Steve Linton (St Andrews)",
+  "Date": "07/07/2019",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">= 4.8",
+    "NeededOtherPackages": [],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/FPLSA-1.2.4",
+  "IssueTrackerURL": "https://github.com/gap-packages/FPLSA/issues",
+  "Keywords": [
+    "Lie algebra",
+    "presentation",
+    "structure constants"
+  ],
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "Autoload": true,
+      "BookName": "fplsa",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "Interface to fast external Lie Todd-Coxeter Program",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoURL": "https://gap-packages.github.io/FPLSA/PackageInfo.g",
+  "PackageName": "FPLSA",
+  "PackageWWWHome": "https://gap-packages.github.io/FPLSA",
+  "Persons": [
+    {
+      "Email": "gerdt@jinr.ru",
+      "FirstNames": "Vladimir",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Gerdt",
+      "WWWHome": "http://compalg.jinr.ru/CAGroup/Gerdt/"
+    },
+    {
+      "Email": "vkornyak@gmail.com",
+      "FirstNames": "Vladimir",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Kornyak",
+      "WWWHome": "http://compalg.jinr.ru/CAGroup/Kornyak"
+    },
+    {
+      "Email": "max.horn@uni-siegen.de",
+      "FirstNames": "Max",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "Horn",
+      "WWWHome": "https://www.quendi.de/math"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/FPLSA/README.md",
+  "Sha256": "f16f1fb166d9e13190c009cc8b74667c6b5fdecd0b1381c7cdc8cbffe66d5ff9",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/FPLSA"
+  },
+  "Status": "accepted",
+  "Subtitle": "Finitely Presented Lie Algebras",
+  "TestFile": "tst/testall.g",
+  "Version": "1.2.4"
+}

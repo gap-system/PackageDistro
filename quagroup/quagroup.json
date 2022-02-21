@@ -1,0 +1,73 @@
+{
+  "AbstractHTML": "The package <span class=\"pkgname\">QuaGroup</span> contains                  functionality for working with quantized enveloping algebras                 of finite-dimensional semisimple Lie algebras.",
+  "AcceptDate": "10/2003",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveURL": "https://github.com/gap-packages/quagroup/releases/download/v1.8.2/quagroup-1.8.2",
+  "AutoDoc": {
+    "TitlePage": {
+      "Copyright": "&copyright; 2002 Willem A. de Graaf",
+      "Version": "Version 1.8.2"
+    }
+  },
+  "AvailabilityTest": null,
+  "BannerString": "     |                                                                 \n     |          QuaGroup 1.8.2\n     |                                                                 \n-----------     A package for dealing with quantized enveloping algebras\n     |                                                                 \n     |          Willem de Graaf                                        \n     |          degraaf@science.unitn.it                               \n\n",
+  "CommunicatedBy": "Gerhard Hiss (Aachen)",
+  "Date": "01/10/2019",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">=4.8",
+    "NeededOtherPackages": [],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/quagroup-1.8.2",
+  "IssueTrackerURL": "https://github.com/gap-packages/quagroup/issues",
+  "Keywords": [
+    "quantum groups"
+  ],
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "Autoload": true,
+      "BookName": "QuaGroup",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "Computations with quantum groups",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoURL": "https://gap-packages.github.io/quagroup/PackageInfo.g",
+  "PackageName": "QuaGroup",
+  "PackageWWWHome": "https://gap-packages.github.io/quagroup/",
+  "Persons": [
+    {
+      "Email": "degraaf@science.unitn.it",
+      "FirstNames": "Willem Adriaan",
+      "Institution": "Dipartimento di Matematica",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "de Graaf",
+      "Place": "Trento",
+      "WWWHome": "http://www.science.unitn.it/~degraaf"
+    },
+    {
+      "Email": "support@gap-system.org",
+      "FirstNames": "The",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "GAP Team"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/quagroup/README.md",
+  "Sha256": "134e75aba61eed245d92946fd16d38637481bd9b81c91fcdcdb2f15d0a2b6327",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/quagroup"
+  },
+  "Status": "accepted",
+  "Subtitle": "Computations with quantum groups",
+  "TestFile": "tst/testall.g",
+  "Version": "1.8.2"
+}

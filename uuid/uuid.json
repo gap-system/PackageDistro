@@ -1,0 +1,62 @@
+{
+  "AbstractHTML": "UUIDs for GAP",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveURL": "https://github.com/gap-packages/uuid/releases/download/v0.6/uuid-0.6",
+  "AvailabilityTest": null,
+  "Date": "22/09/2018",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">= 4.8",
+    "NeededOtherPackages": [
+      [
+        "GAPDoc",
+        ">= 1.5"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/uuid-0.6",
+  "IssueTrackerURL": "https://github.com/gap-packages/uuid/issues",
+  "Keywords": [
+    "UUID",
+    "RFC4122"
+  ],
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "uuid",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "RFC 4122 UUIDs",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoURL": "https://gap-packages.github.io/uuid/PackageInfo.g",
+  "PackageName": "uuid",
+  "PackageWWWHome": "https://gap-packages.github.io/uuid/",
+  "Persons": [
+    {
+      "Email": "markus.pfeiffer@morphism.de",
+      "FirstNames": "Markus",
+      "Institution": "University of St Andrews",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Pfeiffer",
+      "Place": "St Andrews",
+      "PostalAddress": "School of Computer ScienceJack Cole BuildingNorth HaughSt AndrewsFifeKY16 9SSScotland",
+      "WWWHome": "http://www.morphism.de/~markusp/"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/uuid/README.md",
+  "Sha256": "6f30b40b56490e7f2fe273c55b5b03565ccd0b8eca1a28ee0bd4fec9b256e30d",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/uuid"
+  },
+  "Status": "dev",
+  "Subtitle": "RFC 4122 UUIDs",
+  "TestFile": "tst/testall.g",
+  "Version": "0.6"
+}

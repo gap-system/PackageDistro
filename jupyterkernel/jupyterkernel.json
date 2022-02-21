@@ -1,0 +1,105 @@
+{
+  "AbstractHTML": "The <span class=\"pkgname\">JupyterKernel</span> package provides a so-called kernel for the Jupyter interactive document system.",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveURL": "https://github.com/gap-packages/JupyterKernel/releases/download/v1.3/JupyterKernel-1.3",
+  "AvailabilityTest": null,
+  "Date": "23/02/2019",
+  "Dependencies": {
+    "ExternalConditions": [
+      [
+        "Jupyter",
+        "https://jupyter.org/install"
+      ]
+    ],
+    "GAP": ">= 4.10",
+    "NeededOtherPackages": [
+      [
+        "GAPDoc",
+        ">= 1.6.1"
+      ],
+      [
+        "io",
+        ">= 4.5.4"
+      ],
+      [
+        "json",
+        ">= 2.0.0"
+      ],
+      [
+        "uuid",
+        ">= 0.6"
+      ],
+      [
+        "ZeroMQInterface",
+        ">= 0.10"
+      ],
+      [
+        "crypting",
+        ">= 0.9"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/JupyterKernel-1.3",
+  "IssueTrackerURL": "https://github.com/gap-packages/JupyterKernel/issues",
+  "Keywords": [
+    "Jupyter",
+    "User Interface"
+  ],
+  "License": "BSD-3-Clause",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "JupyterKernel",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "Jupyter kernel written in GAP",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoURL": "https://gap-packages.github.io/JupyterKernel/PackageInfo.g",
+  "PackageName": "JupyterKernel",
+  "PackageWWWHome": "https://gap-packages.github.io/JupyterKernel/",
+  "Persons": [
+    {
+      "Email": "markus.pfeiffer@morphism.de",
+      "FirstNames": "Markus",
+      "Institution": "University of St Andrews",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Pfeiffer",
+      "Place": "St Andrews",
+      "PostalAddress": "School of Computer Science\nNorth Haugh\nSt Andrews\nFife\nKY16 9SX\nScotland",
+      "WWWHome": "https://markusp.morphism.de/"
+    },
+    {
+      "Email": "manuelmachadomartins@gmail.com",
+      "FirstNames": "Manuel",
+      "Institution": "Universidade Aberta",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Martins",
+      "Place": "Lisbon, PT",
+      "WWWHome": "http://github.com/mcmartins"
+    },
+    {
+      "Email": "support@gap-system.org",
+      "FirstNames": "The",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "GAP Team"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/JupyterKernel/README.md",
+  "Sha256": "6f6bb158c6c8cdc04d0cd24f0b1333e9324870ff4c51eb1096cbd620cfe2b614",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/JupyterKernel"
+  },
+  "Status": "deposited",
+  "Subtitle": "Jupyter kernel written in GAP",
+  "TestFile": "tst/testinstall.g",
+  "Version": "1.3"
+}
