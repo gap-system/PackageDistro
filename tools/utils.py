@@ -14,7 +14,6 @@ import re
 import shutil
 import subprocess
 import sys
-import github
 
 CURRENT_REPO_NAME = os.environ.get("GITHUB_REPOSITORY", "gap-system/gap")
 
