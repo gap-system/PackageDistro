@@ -17,41 +17,95 @@ This script is intended to iterate through package metadata in the repo:
 
 and do the following:
 
-    * extract the `PackageInfoURL` and `PackageInfoSHA256` fields from the
-      metadata
-    * download the `PackageInfo.g` file from the URL, find the sha256 of the
-      file, and compare it to the one in the metadata.
-    * if the sha256 hashes differ, then write the downloaded `PackageInfo.g`
-      file to `_tmp/package_name.g`
-
-usage:
-
-    import scan_for_updates
-    scan_for_updates.main()
-    4ti2interface: missing key "PackageInfoSHA256"
-    4ti2interface: detected different sha256 hash
-    ace: missing key "PackageInfoSHA256"
-    ace: detected different sha256 hash
-    ...
 """
 
 import hashlib
 import json
 import os
 import subprocess
-import sys
+import tarfile
+import zipfile
 
 import requests
 from utils import error, notice, warning
 
 
-def scan_for_updates(pkg_name):
+def sha256(archive_fname):
+    hash_archive = hashlib.sha256()
+    with open(archive_fname, "rb") as f:
+        for chunk in iter(lambda: f.read(1024), b""):
+            hash_archive.update(chunk)
+    return hash_archive.hexdigest()
+
+
+def download_archive(pkg_name, url, archive_dir, archive_fname, tries=5):
+    archive_ext = archive_fname.split(".")
+    if archive_ext[-1] == "gz" or archive_ext[-1] == "bz2":
+        archive_ext = "." + ".".join([archive_ext[-2], archive_ext[-1]])
+    else:
+        assert archive_ext[-1] == "zip"
+        archive_ext = ".zip"
+
+    archive_fname = os.path.join(archive_dir, archive_fname)
+    notice("{}: downloaded {} to {}".format(pkg_name, url, archive_fname))
+
+    for i in range(tries):
+        try:
+            response = requests.get(url, stream=True)
+            with open(archive_fname, "wb") as f:
+                for chunk in response.raw.stream(1024, decode_content=False):
+                    if chunk:
+                        f.write(chunk)
+            return
+        except:
+            notice("{}: attempt {}/{} failed".format(pkg_name, i + 1, tries))
+
+
+def unpack_archive(unpack_dir, archive_fname):
+    if not os.path.exists(unpack_dir):
+        os.mkdir(unpack_dir)
+    ext = archive_fname.split(".")[0]
+    notice("unpacking {} ...".format(archive_fname))
+
+    if ext.endswith("gz") or ext.endswith("bz2"):
+        with tarfile.open(archive_fname) as archive:
+            archive.extractall(unpack_dir)
+    elif ext.endswith("zip"):
+        with zipfile.ZipFile(archive_fname) as archive:
+            archive.extractall(unpack_dir)
+    else:
+        notice("unrecognized archive extension " + ext)
+
+
+def gap_exec(commands, gap="gap"):
+    assert isinstance(commands, str)
+    assert isinstance(gap, str)
+
+    with subprocess.Popen(
+        r'echo "{}"'.format(commands),
+        stdout=subprocess.PIPE,
+        shell=True,
+    ) as cmd:
+        with subprocess.Popen(
+            gap,
+            stdin=cmd.stdout,
+            shell=True,
+            stdout=subprocess.DEVNULL,
+        ) as GAP:
+            GAP.wait()
+            return GAP.returncode
+
+
+def scan_for_updates(archive_dir, pkginfos_dir, pkg_name):
     # TODO assumes we are in the root of the repo:
     # https://github.com/gap-system/PackageDistro
-    tmp_dir = "_tmp"
-    if not os.path.exists(tmp_dir):
-        os.mkdir(tmp_dir)
-    assert os.path.isdir("_tmp")
+    if not os.path.exists(archive_dir):
+        os.mkdir(archive_dir)
+    assert os.path.isdir(archive_dir)
+    if not os.path.exists(pkginfos_dir):
+        os.mkdir(pkginfos_dir)
+    assert os.path.isdir(pkginfos_dir)
+
     try:
         fname = os.path.join(pkg_name, pkg_name + ".json")
     except:
@@ -66,26 +120,73 @@ def scan_for_updates(pkg_name):
             notice(pkg_name + ': missing key "PackageInfoSHA256"')
             hash_distro = 0
         url = pkg_json["PackageInfoURL"]
-        html_response = requests.get(url)
-        if html_response.status_code != 200:
+        response = requests.get(url)
+        if response.status_code != 200:
             warning(
                 "error trying to download {}, status code {}, skipping!".format(
-                    url, html_response.status_code
+                    url, response.status_code
                 )
             )
             return
-        hash_url = hashlib.sha256(html_response.text.encode("utf-8"))
+        hash_url = hashlib.sha256(response.text.encode("utf-8"))
         if hash_url != hash_distro:
             notice(pkg_name + ": detected different sha256 hash")
-            pkg_info_fname = os.path.join(tmp_dir, pkg_name + ".g")
-            with open(pkg_info_fname, "w") as pif:
-                pif.write(html_response.text)
+            fmt = pkg_json["ArchiveFormats"].split(" ")[0]
+            url = pkg_json["ArchiveURL"] + fmt
+            with open(os.path.join(pkginfos_dir, pkg_name + ".g"), "w") as f:
+                f.write(response.text)
+            download_archive(pkg_name, url, archive_dir, pkg_name + fmt)
 
 
 def main():
-    for x in sorted(os.listdir(os.getcwd())):
-        if not x.startswith(".") and not x.startswith("_") and os.path.isdir(x):
-            scan_for_updates(x)
+    archive_dir = "_archives"
+    json_dir = "_json"
+    pkginfos_dir = "_pkginfos"
+    for pkgname in sorted(os.listdir(os.getcwd())):
+        if (
+            not pkgname.startswith(".")
+            and not pkgname.startswith("_")
+            and os.path.isdir(pkgname)
+        ):
+            scan_for_updates(archive_dir, pkginfos_dir, pkgname)
+
+    if (
+        gap_exec(
+            r"OutputJson(\"{}\", \"{}\");".format(pkginfos_dir, json_dir),
+            gap="gap scan_for_updates.g",
+        )
+        != 0
+    ):
+        error("Something went wrong")
+
+    for pkgname in sorted(os.listdir(os.getcwd())):
+        if (
+            not pkgname.startswith(".")
+            and not pkgname.startswith("_")
+            and os.path.isdir(pkgname)
+        ):
+            pkg_json_file = "{}/{}.json".format(json_dir, pkgname)
+            try:
+                pkg_archive = next(
+                    iter(
+                        x
+                        for x in os.listdir(archive_dir)
+                        if x.startswith(pkgname)
+                    )
+                )
+            except StopIteration:
+                notice("Could not locate archive for " + pkgname)
+                continue
+            pkg_archive = "{}/{}".format(archive_dir, pkg_archive)
+            pkg_json = {}
+            with open(pkg_json_file, "r") as f:
+                pkg_json = json.load(f)
+            pkg_json["PackageInfoSHA256"] = sha256(
+                os.path.join(pkginfos_dir, pkgname + ".g")
+            )
+            pkg_json["ArchiveSHA256"] = sha256(pkg_archive)
+            with open(pkg_json_file, "w") as f:
+                json.dump(pkg_json, f)
 
 
 if __name__ == "__main__":
