@@ -1,0 +1,80 @@
+{
+  "AbstractHTML": "<span class=\"pkgname\">DESIGN</span> is a package for constructing, classifying, partitioning, and studying block designs.",
+  "AcceptDate": "08/2006",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSha256": "3ac0e3acac08cdec786362aa77192c7fc78df7764c0f9a2b01849238aef75641",
+  "ArchiveURL": "https://github.com/gap-packages/design/releases/download/v1.7/design-1.7",
+  "AvailabilityTest": null,
+  "BinaryFiles": [
+    "doc/manual.dvi",
+    "doc/manual.pdf"
+  ],
+  "CommunicatedBy": "Akos Seress (Ohio State)",
+  "Date": "18/03/2019",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">=4.10",
+    "NeededOtherPackages": [
+      [
+        "GRAPE",
+        ">= 4.8"
+      ],
+      [
+        "GAPDoc",
+        ">=1.6"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/design-1.7",
+  "IssueTrackerURL": "https://github.com/gap-packages/design/issues",
+  "Keywords": [
+    "block design",
+    "t-design",
+    "design",
+    "resolution",
+    "efficiency",
+    "semi-Latin square",
+    "SOMA"
+  ],
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "htm",
+        "doc/manual.pdf"
+      ],
+      "Autoload": true,
+      "BookName": "DESIGN",
+      "HTMLStart": "htm/chapters.htm",
+      "LongTitle": "The Design Package for GAP",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSha256": "55b8812ecff3d3bab5c513bc6f20779580d5300d346b76697c8a379855111712",
+  "PackageInfoURL": "https://gap-packages.github.io/design/PackageInfo.g",
+  "PackageName": "DESIGN",
+  "PackageWWWHome": "https://gap-packages.github.io/design",
+  "Persons": [
+    {
+      "Email": "L.H.Soicher@qmul.ac.uk",
+      "FirstNames": "Leonard H.",
+      "Institution": "School of Mathematical Sciences, Queen Mary University of London",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Soicher",
+      "Place": "London",
+      "WWWHome": "http://www.maths.qmul.ac.uk/~lsoicher/"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/design/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/design"
+  },
+  "Status": "accepted",
+  "Subtitle": "The Design Package for GAP",
+  "TestFile": "tst/testall.g",
+  "Version": "1.7"
+}

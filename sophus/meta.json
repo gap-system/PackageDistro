@@ -1,0 +1,79 @@
+{
+  "AbstractHTML": "",
+  "AcceptDate": "10/2004",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSha256": "6a6344d103d44887d9063bc4bf40b47ca0f042251d7b054a6d850c552a1b6ab8",
+  "ArchiveURL": "https://github.com/gap-packages/sophus/releases/download/v1.24/sophus-1.24",
+  "AutoDoc": {
+    "TitlePage": {
+      "Abstract": "\n&Sophus; is a GAP4 package to compute with nilpotent\nLie algebras over finite prime fields. In particular, the package can be\nused to compute certain central extensions and the automorphism group\nof such Lie algebras. &Sophus; also enables its user to test\nisomorphism between two nilpotent Lie algebras. The author of the\npackage used it to construct all Lie algebras of dimension at most 9\nover <Math>\\mathbb F_2</Math>.\n",
+      "Acknowledgements": "\nMost of the work on this package was carried out while I held a\nresearch position at the Technische Universität Braunschweig. I\nwould like to express my gratitude to the staff and the students of\nthe Institut für Geometrie for their interest in this work. Special\nthanks go to Bettina Eick for her rôle in completing this project.\n",
+      "Copyright": "\n<Index>License</Index>\n&copyright; 2004, 2005 Csaba Schneider<P/>\nThe &Sophus; package is free software;\nyou can redistribute it and/or modify it under the terms of the\n<URL Text=\"GNU General Public License\">http://www.fsf.org/licenses/gpl.html</URL>\nas published by the Free Software Foundation; either version 2 of the License,\nor (at your option) any later version.\n"
+    }
+  },
+  "AvailabilityTest": null,
+  "CommunicatedBy": "Alexander Konovalov (Zaporozhye)",
+  "Date": "09/04/2018",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">= 4.8",
+    "NeededOtherPackages": [
+      [
+        "autpgrp",
+        "1.2"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/sophus-1.24",
+  "IssueTrackerURL": "https://github.com/gap-packages/sophus/issues",
+  "Keywords": [
+    "nilpotent Lie algebras"
+  ],
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "Autoload": true,
+      "BookName": "Sophus",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "Computing with nilpotent Lie algebras",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSha256": "25f895ef304c59d1916c37dd6b3b71549ad6129729a9c166fd037bf034ad7d5b",
+  "PackageInfoURL": "https://gap-packages.github.io/sophus/PackageInfo.g",
+  "PackageName": "Sophus",
+  "PackageWWWHome": "https://gap-packages.github.io/sophus/",
+  "Persons": [
+    {
+      "Email": "csaba@mat.ufmg.br",
+      "FirstNames": "Csaba",
+      "Institution": "Universidade Federal de Minas Gerais",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Schneider",
+      "Place": "Belo Horizonte",
+      "PostalAddress": "Departamento de Matemática\nInstituto de Ciências Exatas\nUniversidade Federal de Minas Gerais (UFMG)\nBelo Horizonte, Brasil",
+      "WWWHome": "http://www.mat.ufmg.br/~csaba/"
+    },
+    {
+      "Email": "support@gap-system.org",
+      "FirstNames": "The",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "GAP Team"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/sophus/README",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/sophus"
+  },
+  "Status": "accepted",
+  "Subtitle": "Computing in nilpotent Lie algebras",
+  "TestFile": "tst/testall.g",
+  "Version": "1.24"
+}

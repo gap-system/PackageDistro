@@ -1,0 +1,78 @@
+{
+  "AbstractHTML": "<span class=\"pkgname\">GeneralizedMorphismsForCAP</span> provides the category of generalized morphisms associated to an abelian category.",
+  "ArchiveFormats": ".tar.gz .zip",
+  "ArchiveSha256": "9b25c2a87db7394b8624954ce0dd8ee928e6a70b8d14de1ca8dbfe75170b20d3",
+  "ArchiveURL": "https://github.com/homalg-project/CAP_project/releases/download/GeneralizedMorphismsForCAP-2020.10-01/GeneralizedMorphismsForCAP-2020.10-01",
+  "AvailabilityTest": null,
+  "Date": "19/10/2020",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">= 4.6",
+    "NeededOtherPackages": [
+      [
+        "GAPDoc",
+        ">= 1.5"
+      ],
+      [
+        "CAP",
+        ">= 2019.01.16"
+      ],
+      [
+        "MonoidalCategories",
+        ">= 2019.01.16"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/GeneralizedMorphismsForCAP-2020.10-01",
+  "IssueTrackerURL": "https://github.com/homalg-project/CAP_project/issues",
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "GeneralizedMorphismsForCAP",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "Implementations of generalized morphisms for the CAP project",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSha256": "f141398e772f1dfef9e9fc2c175fa1c40f8f1900da445e56f4e2cfd32b89a0b9",
+  "PackageInfoURL": "https://homalg-project.github.io/CAP_project/GeneralizedMorphismsForCAP/PackageInfo.g",
+  "PackageName": "GeneralizedMorphismsForCAP",
+  "PackageWWWHome": "https://homalg-project.github.io/CAP_project/GeneralizedMorphismsForCAP",
+  "Persons": [
+    {
+      "Email": "gutsche@mathematik.uni-siegen.de",
+      "FirstNames": "Sebastian",
+      "Institution": "University of Siegen",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Gutsche",
+      "Place": "Siegen",
+      "PostalAddress": "Department Mathematik\nUniversität Siegen\nWalter-Flex-Straße 3\n57068 Siegen\nGermany",
+      "WWWHome": "https://sebasguts.github.io/"
+    },
+    {
+      "Email": "sebastian.posur@uni-siegen.de",
+      "FirstNames": "Sebastian",
+      "Institution": "University of Siegen",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Posur",
+      "Place": "Siegen",
+      "PostalAddress": "Department Mathematik\nUniversität Siegen\nWalter-Flex-Straße 3\n57068 Siegen\nGermany",
+      "WWWHome": "https://sebastianpos.github.io"
+    }
+  ],
+  "README_URL": "https://homalg-project.github.io/CAP_project/GeneralizedMorphismsForCAP/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/homalg-project/CAP_project"
+  },
+  "Status": "deposited",
+  "Subtitle": "Implementations of generalized morphisms for the CAP project",
+  "Version": "2020.10-01"
+}

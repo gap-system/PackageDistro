@@ -1,0 +1,75 @@
+{
+  "AbstractHTML": "The <span class=\"pkgname\">XGAP</span> package allows to use graphics in GAP.",
+  "AcceptDate": "07/1999",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSha256": "714016aee551b2e01a3429b0c2e3adddfce25d13d3b0b3c6faedd4cfd8a2e290",
+  "ArchiveURL": "https://github.com/gap-packages/xgap/releases/download/v4.30/xgap-4.30",
+  "AvailabilityTest": null,
+  "CommunicatedBy": "Gerhard Hiß (Aachen)",
+  "Date": "16/04/2019",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">=4.7",
+    "NeededOtherPackages": [],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/xgap-4.30",
+  "IssueTrackerURL": "https://github.com/gap-packages/xgap/issues",
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "htm",
+        "doc"
+      ],
+      "Autoload": true,
+      "BookName": "XGAP",
+      "HTMLStart": "htm/chapters.htm",
+      "LongTitle": "XGAP - a graphical user interface for GAP",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSha256": "0175e7837794e19232ffd3b9cad9b776635f1b631022b4cefd4b50b96cb6b1d5",
+  "PackageInfoURL": "https://gap-packages.github.io/xgap/PackageInfo.g",
+  "PackageName": "XGAP",
+  "PackageWWWHome": "https://gap-packages.github.io/xgap",
+  "Persons": [
+    {
+      "Email": "Frank@Celler.DE",
+      "FirstNames": "Frank",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Celler",
+      "WWWHome": "http://celler.de/"
+    },
+    {
+      "Email": "max.horn@uni-siegen.de",
+      "FirstNames": "Max",
+      "Institution": "Universität Siegen",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "Horn",
+      "Place": "Siegen",
+      "PostalAddress": "Department Mathematik\nUniversität Siegen\nWalter-Flex-Straße 3\n57072 Siegen\nGermany",
+      "WWWHome": "https://www.quendi.de/math"
+    },
+    {
+      "Email": "max@9hoeffer.de",
+      "FirstNames": "Max",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Neunhöffer",
+      "PostalAddress": "Gustav-Freytag-Straße 40\n50354 Hürth\nGermany",
+      "WWWHome": "http://www-groups.mcs.st-and.ac.uk/~neunhoef"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/xgap/README",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/xgap"
+  },
+  "Status": "accepted",
+  "Subtitle": "a graphical user interface for GAP",
+  "Version": "4.30"
+}

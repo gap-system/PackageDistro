@@ -1,0 +1,67 @@
+{
+  "AbstractHTML": "The <span class=\"pkgname\">float</span> package allows                     GAP to manipulate floating-point numbers with arbitrary                     precision. It is based on MPFR, MPFI, MPC, CXSC, FPLLL",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSha256": "a63c9ca75a38da3474eef9ccf35210acb90772404697dde8a7dee5f60221e329",
+  "ArchiveURL": "https://github.com/gap-packages/float/releases/download/v0.9.1/float-0.9.1",
+  "Autoload": false,
+  "AvailabilityTest": null,
+  "BannerString": "float 0.9.1 ...\n",
+  "Date": "14/06/2018",
+  "Dependencies": {
+    "ExternalConditions": [
+      "GAP compiled with GMP support"
+    ],
+    "GAP": ">=4.9.0",
+    "NeededOtherPackages": [
+      [
+        "GAPDoc",
+        ">=1.0"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/float-0.9.1",
+  "IssueTrackerURL": "https://github.com/gap-packages/float/issues",
+  "Keywords": [
+    "floating-point"
+  ],
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "Autoload": true,
+      "BookName": "float",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "Floating-point numbers",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSha256": "b56f216e77f1919c5ebf0ff945d9200f8850a5025f0f997fc0844c127b52a829",
+  "PackageInfoURL": "https://gap-packages.github.io/float/PackageInfo.g",
+  "PackageName": "float",
+  "PackageWWWHome": "https://gap-packages.github.io/float/",
+  "Persons": [
+    {
+      "Email": "laurent.bartholdi@gmail.com",
+      "FirstNames": "Laurent",
+      "Institution": "Georg-August Universität zu Göttingen",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Bartholdi",
+      "Place": "Göttingen",
+      "PostalAddress": "Mathematisches Institut\nBunsenstraße 3—5\nD-37073 Göttingen\nGermany",
+      "WWWHome": "http://www.uni-math.gwdg.de/laurent"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/float/README",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/float"
+  },
+  "Status": "deposited",
+  "Subtitle": "Integration of mpfr, mpfi, mpc, fplll and cxsc in GAP",
+  "TestFile": "tst/testall.g",
+  "Version": "0.9.1"
+}

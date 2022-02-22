@@ -1,0 +1,84 @@
+{
+  "AbstractHTML": "The <span class=\"pkgname\">matgrp</span> package provides an interface to the solvable radical functionality for matrix groups, building on constructive recognition.",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSha256": "f852faae6606d40e004127c50021e0759ff31e770f78d527bb3277e7430bf2b5",
+  "ArchiveURL": "http://www.math.colostate.edu/~hulpke/matgrp/matgrp0.64",
+  "Autoload": false,
+  "AvailabilityTest": null,
+  "BannerString": "Matrix Group Interface routines by A. Hulpke\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n",
+  "Date": "25/08/2020",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">=4.7",
+    "NeededOtherPackages": [
+      [
+        "recog",
+        ">= 1.2"
+      ],
+      [
+        "Forms",
+        ">= 1.2"
+      ],
+      [
+        "genss",
+        ">= 1.3"
+      ],
+      [
+        "Orb",
+        ">= 3.4"
+      ],
+      [
+        "AtlasRep",
+        ">= 1.4.0"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/matgrp",
+  "IssueTrackerURL": "https://github.com/hulpke/matgrp//issues",
+  "Keywords": [
+    "matrix group",
+    "solvable radical",
+    "fitting free"
+  ],
+  "License": "GPL-2.0 OR GPL-3.0",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc",
+        "htm"
+      ],
+      "Autoload": true,
+      "BookName": "matgrp",
+      "HTMLStart": "htm/chapters.htm",
+      "LongTitle": "Matrix Group Interface",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSha256": "32daa40880e032ab48776fe3410288a9ace920d4804d4b47bc98324d8f28bfc5",
+  "PackageInfoURL": "http://www.math.colostate.edu/~hulpke/matgrp/PackageInfo.g",
+  "PackageName": "matgrp",
+  "PackageWWWHome": "http://www.math.colostate.edu/~hulpke/matgrp",
+  "Persons": [
+    {
+      "Email": "hulpke@math.colostate.edu",
+      "FirstNames": "Alexander",
+      "Institution": "Department of Mathematics, Colorado State University",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Hulpke",
+      "Place": "Fort Collins, CO",
+      "WWWHome": "http://www.math.colostate.edu/~hulpke"
+    }
+  ],
+  "README_URL": "http://www.math.colostate.edu/~hulpke/matgrp/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/hulpke/matgrp/"
+  },
+  "Status": "deposited",
+  "Subtitle": "Matric Group Interface Routines",
+  "TestFile": "tst/testall.g",
+  "Version": "0.64"
+}

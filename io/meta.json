@@ -1,0 +1,84 @@
+{
+  "AbstractHTML": "The <span class=\"pkgname\">IO</span> package, as its name suggests,    provides bindings for <span class=\"pkgname\">GAP</span> to the lower    levels of Input/Output functionality in the C library.",
+  "ArchiveFormats": ".tar.gz .tar.bz2",
+  "ArchiveSha256": "0e91bc6472e6111d1a14c6040c21f2f7dfbb2f2f32ffbcf3d1749e052839a659",
+  "ArchiveURL": "https://github.com/gap-packages/io/releases/download/v4.7.0/io-4.7.0",
+  "AutoDoc": {
+    "TitlePage": {
+      "Copyright": "&copyright; 2005-2014 by Max Neunhöffer<P/>\n\nThis package may be distributed under the terms and conditions of the\nGNU Public License Version 3 or later (at your convenience).\n"
+    }
+  },
+  "AvailabilityTest": null,
+  "Date": "17/07/2019",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">=4.10",
+    "NeededOtherPackages": [],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/io-4.7.0",
+  "IssueTrackerURL": "https://github.com/gap-packages/io/issues",
+  "Keywords": [
+    "input",
+    "output",
+    "I/O",
+    "C-library",
+    "network",
+    "http",
+    "object serialisation",
+    "unpredictable random numbers",
+    "TCP/IP",
+    "inter process communication",
+    "background jobs",
+    "parallel skeletons",
+    "I/O multiplexing"
+  ],
+  "License": "GPL-3.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "IO",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "Bindings for low level C library I/O routines",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSha256": "42d3f99459943de6eb3883edba2ef5c89aaf698f8e017ec16782b53b01852e11",
+  "PackageInfoURL": "https://gap-packages.github.io/io/PackageInfo.g",
+  "PackageName": "IO",
+  "PackageWWWHome": "https://gap-packages.github.io/io",
+  "Persons": [
+    {
+      "Email": "max@9hoeffer.de",
+      "FirstNames": "Max",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Neunhöffer",
+      "PostalAddress": "Gustav-Freytag-Straße 40\n50354 Hürth\nGermany",
+      "WWWHome": "http://www-groups.mcs.st-and.ac.uk/~neunhoef"
+    },
+    {
+      "Email": "max.horn@uni-siegen.de",
+      "FirstNames": "Max",
+      "Institution": "Universität Siegen",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "Horn",
+      "Place": "Siegen",
+      "PostalAddress": "Department Mathematik\nUniversität Siegen\nWalter-Flex-Straße 3\n57072 Siegen\nGermany",
+      "WWWHome": "https://www.quendi.de/math"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/io/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/io"
+  },
+  "Status": "deposited",
+  "Subtitle": "Bindings for low level C library I/O routines",
+  "TestFile": "tst/testall.g",
+  "Version": "4.7.0"
+}

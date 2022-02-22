@@ -1,0 +1,66 @@
+{
+  "AbstractHTML": "The <span class='pkgname'>CddInterface</span> package provides a GAP interface to <a href='https://inf.ethz.ch/personal/fukudak/cdd_home'>cdd</a>, enabling direct access to the most of the functionality of cddlib, such as translating between H,V- representations of a polyhedron and solving linear programming problems.",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSha256": "ad59c4b429d58d25b233df708f884f96b4d09f0993b83ea719754bd584b9554e",
+  "ArchiveURL": "https://github.com/homalg-project/CddInterface/releases/download/v2020.06.24/CddInterface-2020.06.24",
+  "AvailabilityTest": null,
+  "Date": "24/06/2020",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">= 4.9",
+    "NeededOtherPackages": [
+      [
+        "GAPDoc",
+        ">= 1.5"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/CddInterface-2020.06.24",
+  "IssueTrackerURL": "https://github.com/homalg-project/CddInterface/issues",
+  "Keywords": [
+    "cddlib",
+    "Polyhedra",
+    "Convex Geometry",
+    "NConvex"
+  ],
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "CddInterface",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "Gap interface to Cdd package",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSha256": "ee93d608ab1f0e5142725663f94de110d391042e551515b60b7fc9866616515c",
+  "PackageInfoURL": "https://homalg-project.github.io/CddInterface/PackageInfo.g",
+  "PackageName": "CddInterface",
+  "PackageWWWHome": "https://homalg-project.github.io/CddInterface",
+  "Persons": [
+    {
+      "Email": "kamal.saleh@uni-siegen.de",
+      "FirstNames": "Kamal",
+      "Institution": "Universität Siegen",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Saleh",
+      "Place": "Siegen",
+      "PostalAddress": "Department Mathematik\nUniversität Siegen\nWalter-Flex-Straße 3\n57072 Siegen\nGermany",
+      "WWWHome": "https://github.com/kamalsaleh"
+    }
+  ],
+  "README_URL": "https://homalg-project.github.io/CddInterface/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/homalg-project/CddInterface"
+  },
+  "Status": "deposited",
+  "Subtitle": "Gap interface to Cdd package",
+  "TestFile": "tst/testall.g",
+  "Version": "2020.06.24"
+}

@@ -1,0 +1,138 @@
+{
+  "AbstractHTML": "The <span class=\"pkgname\">Modules</span> package provides ring independent homological algebra functionality for the abelian category of finitely presented modules over computable rings",
+  "ArchiveFormats": ".tar.gz .zip",
+  "ArchiveSha256": "8e54b85272e2d24b9c2c169199a3c514aebf415edb517fe9a0b2248ede848474",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/Modules-2020.10-02/Modules-2020.10-02",
+  "Autoload": false,
+  "AvailabilityTest": null,
+  "Date": "16/10/2020",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">=4.7",
+    "NeededOtherPackages": [
+      [
+        "MatricesForHomalg",
+        ">=2020.05.09"
+      ],
+      [
+        "ToolsForHomalg",
+        ">=2013.04.12"
+      ],
+      [
+        "homalg",
+        ">=2019.09.01"
+      ],
+      [
+        "GaussForHomalg",
+        ">=2019.09.01"
+      ],
+      [
+        "GAPDoc",
+        ">= 1.0"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/Modules-2020.10-02",
+  "IssueTrackerURL": "https://github.com/homalg-project/homalg_project/issues",
+  "Keywords": [
+    "modules",
+    "module homomorphisms",
+    "functor",
+    "ext",
+    "tor"
+  ],
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "Autoload": false,
+      "BookName": "Modules",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "A homalg based package for the Abelian category of finitely presented modules over computable rings",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSha256": "d109416fd348a33f520523c9aa39756aacf30f8bfdc2ce8af1060dadf7599756",
+  "PackageInfoURL": "https://homalg-project.github.io/homalg_project/Modules/PackageInfo.g",
+  "PackageName": "Modules",
+  "PackageWWWHome": "https://homalg-project.github.io/homalg_project/Modules",
+  "Persons": [
+    {
+      "Email": "thomas@momo.math.rwth-aachen.de",
+      "FirstNames": "Thomas",
+      "Institution": "RWTH Aachen",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Bächler",
+      "Place": "Aachen",
+      "PostalAddress": "Thomas Bächler\nLehrstuhl B für Mathematik\nRWTH Aachen\nTemplergraben 64\n52062 Aachen\nGermany",
+      "WWWHome": "http://wwwb.math.rwth-aachen.de/~thomas/"
+    },
+    {
+      "Email": "mohamed.barakat@uni-siegen.de",
+      "FirstNames": "Mohamed",
+      "Institution": "University of Siegen",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Barakat",
+      "Place": "Siegen",
+      "PostalAddress": "Walter-Flex-Str. 3\n57072 Siegen\nGermany",
+      "WWWHome": "https://mohamed-barakat.github.io"
+    },
+    {
+      "Email": "diebold@mathematik.uni-kl.de",
+      "FirstNames": "Florian",
+      "Institution": "University of Kaiserslautern",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Diebold",
+      "Place": "Kaiserslautern",
+      "PostalAddress": "Department of Mathematics\nUniversity of Kaiserslautern\n67653 Kaiserslautern\nGermany"
+    },
+    {
+      "Email": "gutsche@mathematik.uni-siegen.de",
+      "FirstNames": "Sebastian",
+      "Institution": "University of Siegen",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Gutsche",
+      "Place": "Siegen",
+      "PostalAddress": "Department Mathematik\nUniversität Siegen\nWalter-Flex-Straße 3\n57072 Siegen\nGermany",
+      "WWWHome": "https://sebasguts.github.io"
+    },
+    {
+      "Email": "markus.lange-hegermann@hs-owl.de",
+      "FirstNames": "Markus",
+      "Institution": "Hochschule Ostwestfalen-Lippe",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Lange-Hegermann",
+      "Place": "Aachen",
+      "PostalAddress": "Markus Lange-Hegermann\nHochschule Ostwestfalen-Lippe\nLiebigstraße 87\n32657 Lemgo\nGermany",
+      "WWWHome": "https://www.th-owl.de/eecs/fachbereich/team/markus-lange-hegermann/"
+    },
+    {
+      "Email": "waghoba@gmail.com",
+      "FirstNames": "Vinay",
+      "Institution": "Indian Institute of Technology Guwahati",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Wagh",
+      "Place": "Guwahati",
+      "PostalAddress": "E-102, Department of Mathematics,\nIndian Institute of Technology Guwahati,\nGuwahati, Assam, India.\nPIN: 781 039.\nIndia",
+      "WWWHome": "http://www.iitg.ernet.in/vinay.wagh/"
+    }
+  ],
+  "README_URL": "https://homalg-project.github.io/homalg_project/Modules/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/homalg-project/homalg_project"
+  },
+  "Status": "deposited",
+  "Subtitle": "A homalg based package for the Abelian category of finitely presented modules over computable rings",
+  "Version": "2020.10-02"
+}

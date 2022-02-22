@@ -1,0 +1,60 @@
+{
+  "AbstractHTML": "",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSha256": "da69122fc99c412ebeca0635439a74498797834696c54e1b27efebe921b6a66a",
+  "ArchiveURL": "https://github.com/gap-packages/json/releases/download/v2.0.2/json-2.0.2",
+  "AvailabilityTest": null,
+  "Date": "03/04/2020",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">= 4.9",
+    "NeededOtherPackages": [
+      [
+        "GAPDoc",
+        ">= 1.5"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/json-2.0.2",
+  "IssueTrackerURL": "https://github.com/gap-packages/json/issues",
+  "License": "BSD-2-Clause",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "json",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "Reading and Writing JSON",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSha256": "6cd7aa7c8b4c664556abbcf396f393b4b164469516be57c1267ae00c98fc3258",
+  "PackageInfoURL": "https://gap-packages.github.io/json/PackageInfo.g",
+  "PackageName": "json",
+  "PackageWWWHome": "https://gap-packages.github.io/json/",
+  "Persons": [
+    {
+      "Email": "caj21@st-andrews.ac.uk",
+      "FirstNames": "Christopher",
+      "Institution": "University of St Andrews",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Jefferson",
+      "Place": "St Andrews",
+      "PostalAddress": "St Andrews\nScotland\nUK",
+      "WWWHome": "http://caj.host.cs.st-andrews.ac.uk/"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/json/README",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/json"
+  },
+  "Status": "deposited",
+  "Subtitle": "Reading and Writing JSON",
+  "TestFile": "tst/testall.g",
+  "Version": "2.0.2"
+}

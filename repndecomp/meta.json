@@ -1,0 +1,82 @@
+{
+  "AbstractHTML": "The <span class='pkgname'>RepnDecomp</span> package provides functions implementing various algorithms for decomposing linear representations of finite groups.",
+  "ArchiveFormats": ".tar.gz .tar.bz2",
+  "ArchiveSha256": "05586bccf27fe2a5e7617370f892f5133e242f9c6ab313943a91b68c7e039963",
+  "ArchiveURL": "https://github.com/gap-packages/RepnDecomp/releases/download/v1.1.0/RepnDecomp-1.1.0",
+  "AvailabilityTest": null,
+  "Date": "15/02/2020",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">= 4.10",
+    "NeededOtherPackages": [
+      [
+        "GAPDoc",
+        ">= 1.6.1"
+      ],
+      [
+        "GRAPE",
+        ">= 4.8.1"
+      ]
+    ],
+    "SuggestedOtherPackages": [
+      [
+        "IO",
+        ">= 4.7.0"
+      ]
+    ]
+  },
+  "InstallationPath": "pkg/RepnDecomp-1.1.0",
+  "IssueTrackerURL": "https://github.com/gap-packages/RepnDecomp/issues",
+  "Keywords": [
+    "representations",
+    "groups"
+  ],
+  "License": "GPL-3.0",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "RepnDecomp",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "Decompose representations of finite groups into irreducibles",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSha256": "161026b19c04da8f4d890cddb89cdc6672c9c9b6f05a54100a16b981d5544512",
+  "PackageInfoURL": "https://gap-packages.github.io/RepnDecomp/PackageInfo.g",
+  "PackageName": "RepnDecomp",
+  "PackageWWWHome": "https://gap-packages.github.io/RepnDecomp",
+  "Persons": [
+    {
+      "Email": "kaashif@kaashif.co.uk",
+      "FirstNames": "Kaashif",
+      "Institution": "University of Oxford",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Hymabaccus",
+      "Place": "Oxford",
+      "WWWHome": "https://kaashif.co.uk"
+    },
+    {
+      "Email": "dima@e.email",
+      "FirstNames": "Dmitrii",
+      "Institution": "University of Oxford",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "Pasechnik",
+      "Place": "Oxford",
+      "WWWHome": "http://pasechnik.info"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/RepnDecomp/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/RepnDecomp"
+  },
+  "Status": "dev",
+  "Subtitle": "Decompose representations of finite groups into irreducibles",
+  "TestFile": "tst/testall.g",
+  "Version": "1.1.0"
+}

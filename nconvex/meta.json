@@ -1,0 +1,100 @@
+{
+  "AbstractHTML": "The <span class='pkgname'>NConvex</span> package is a GAP package.   Its aim is to carry out polyhedral constructions and computations,  namely computing properties and attributes of cones, polyhedrons, polytopes and fans.",
+  "ArchiveFormats": ".tar.gz .zip",
+  "ArchiveSha256": "8fd3a79428ab800c6068028103f1aefdc5a38477ece79393073e81abcbd3b67f",
+  "ArchiveURL": "https://github.com/homalg-project/NConvex/releases/download/v2020.11-04/NConvex-2020.11-04",
+  "AvailabilityTest": null,
+  "Date": "04/11/2020",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">= 4.9",
+    "NeededOtherPackages": [
+      [
+        "AutoDoc",
+        ">= 2018.02.14"
+      ],
+      [
+        "Modules",
+        ">= 0.5"
+      ],
+      [
+        "CddInterface",
+        ">= 2020.06.24"
+      ],
+      [
+        "NormalizInterface",
+        ">= 1.1.0"
+      ]
+    ],
+    "SuggestedOtherPackages": [
+      [
+        "4ti2Interface",
+        ">= 2018.07.06"
+      ],
+      [
+        "TopcomInterface",
+        ">=2019.06.15"
+      ]
+    ]
+  },
+  "InstallationPath": "pkg/NConvex-2020.11-04",
+  "IssueTrackerURL": "https://github.com/homalg-project/NConvex/issues",
+  "Keywords": [
+    "Cone",
+    "Fan",
+    "Polytope",
+    "Polyhedron",
+    "ToricVarieties",
+    "homalg"
+  ],
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "NConvex",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "A Gap package to perform polyhedral computations",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSha256": "410cb5f7db28d67d6cb4e29e75029ef5d30a0ef81543fc1da4e52e0b169348c1",
+  "PackageInfoURL": "https://homalg-project.github.io/NConvex/PackageInfo.g",
+  "PackageName": "NConvex",
+  "PackageWWWHome": "https://homalg-project.github.io/NConvex",
+  "Persons": [
+    {
+      "Email": "kamal.saleh@uni-siegen.de",
+      "FirstNames": "Kamal",
+      "Institution": "University of Siegen",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Saleh",
+      "Place": "Siegen",
+      "PostalAddress": "Department Mathematik\nUniversität Siegen\nWalter-Flex-Straße 3\n57068 Siegen\nGermany",
+      "WWWHome": "https://github.com/kamalsaleh"
+    },
+    {
+      "Email": "gutsche@mathematik.uni-siegen.de",
+      "FirstNames": "Sebastian",
+      "Institution": "University of Siegen",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Gutsche",
+      "Place": "Siegen",
+      "PostalAddress": "Department Mathematik\nUniversität Siegen\nWalter-Flex-Straße 3\n57068 Siegen\nGermany",
+      "WWWHome": "https://sebasguts.github.io/"
+    }
+  ],
+  "README_URL": "https://homalg-project.github.io/NConvex/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/homalg-project/NConvex"
+  },
+  "Status": "deposited",
+  "Subtitle": "A Gap package to perform polyhedral computations",
+  "TestFile": "tst/testall.g",
+  "Version": "2020.11-04"
+}

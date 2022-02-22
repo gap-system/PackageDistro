@@ -1,0 +1,83 @@
+{
+  "AbstractHTML": "This package permits to compute with set-theoretic unions of residue classes of&nbsp;Z and a few other rings. In particular it provides methods for computing unions, intersections and differences of these sets.",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSha256": "5cc5d63c92637de3361d25bd629885bc7cfe22e550266469a85c72596850d1fc",
+  "ArchiveURL": "https://github.com/gap-packages/resclasses/releases/download/v4.7.2/resclasses-4.7.2",
+  "AutoDoc": {
+    "TitlePage": {
+      "Abstract": "<#Include SYSTEM \"abstract.xml\">",
+      "Copyright": "\n&copyright; 2003 - 2017 by Stefan Kohl. <P/>\n\n&ResClasses; is free software: you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation, either version 2 of the License, or\n(at your option) any later version. <P/>\n\n&ResClasses; is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details. <P/>\n\nFor a copy of the GNU General Public License, see \nthe file <F>GPL</F> in the <F>etc</F> directory of the &GAP;\ndistribution or see <URL>https://www.gnu.org/licenses/gpl.html</URL>.\n        "
+    }
+  },
+  "AvailabilityTest": null,
+  "BannerString": "\nLoading ResClasses 4.7.2 (Computations with Residue Classes)\nby Stefan Kohl, stefan@mcs.st-and.ac.uk\n\n",
+  "Date": "24/03/2019",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">=4.8.7",
+    "NeededOtherPackages": [
+      [
+        "GAPDoc",
+        ">=1.5.1"
+      ],
+      [
+        "Polycyclic",
+        ">=2.11"
+      ],
+      [
+        "utils",
+        ">=0.40"
+      ]
+    ],
+    "SuggestedOtherPackages": [
+      [
+        "IO",
+        ">=4.4.5"
+      ]
+    ]
+  },
+  "InstallationPath": "pkg/resclasses-4.7.2",
+  "IssueTrackerURL": "https://github.com/gap-packages/resclasses/issues",
+  "Keywords": [
+    "residue classes",
+    "integers",
+    "number theory"
+  ],
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "Autoload": true,
+      "BookName": "ResClasses",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "Computations with Residue Classes and their Set-Theoretic Unions",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSha256": "c3b2ba3bdae4f20783fc1298391cb16ad2b7a8c909a21c5d33e2db86455403ed",
+  "PackageInfoURL": "https://gap-packages.github.io/resclasses/PackageInfo.g",
+  "PackageName": "ResClasses",
+  "PackageWWWHome": "https://gap-packages.github.io/resclasses/",
+  "Persons": [
+    {
+      "Email": "stefan@mcs.st-and.ac.uk",
+      "FirstNames": "Stefan",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Kohl",
+      "WWWHome": "https://stefan-kohl.github.io/"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/resclasses/README",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/resclasses"
+  },
+  "Status": "deposited",
+  "Subtitle": "Set-Theoretic Computations with Residue Classes",
+  "TestFile": "tst/testall.g",
+  "Version": "4.7.2"
+}

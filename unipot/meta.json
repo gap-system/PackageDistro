@@ -1,0 +1,69 @@
+{
+  "AbstractHTML": "Tools for computing with elements of unipotent subgroups of Chevalley groups.",
+  "ArchiveFormats": ".tar.bz2",
+  "ArchiveSha256": "83ffc3127217397a43c8b0a32e879e10b25e5572112eac24b4127a74e14c8889",
+  "ArchiveURL": "https://github.com/gap-packages/unipot/releases/download/v1.4/unipot-1.4",
+  "AvailabilityTest": null,
+  "Date": "09/04/2018",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">=4.7",
+    "NeededOtherPackages": [],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/unipot-1.4",
+  "IssueTrackerURL": "https://github.com/gap-packages/unipot/issues",
+  "Keywords": [
+    "Chevalley",
+    "unipotent elements",
+    "unipot"
+  ],
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc",
+        "htm"
+      ],
+      "Autoload": true,
+      "BookName": "unipot",
+      "HTMLStart": "htm/chapters.htm",
+      "LongTitle": "Computing with elements of unipotent subgroups of Chevalley groups",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSha256": "664c567359d757d39cf0bd37cdd99d986011bf6709755bee2e780a19e89621ce",
+  "PackageInfoURL": "https://gap-packages.github.io/unipot/PackageInfo.g",
+  "PackageName": "Unipot",
+  "PackageWWWHome": "https://gap-packages.github.io/unipot/",
+  "Persons": [
+    {
+      "Email": "sergei@sergei-haller.de",
+      "FirstNames": "Sergei",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Haller",
+      "WWWHome": "http://www.sergei-haller.de"
+    },
+    {
+      "Email": "max.horn@math.uni-giessen.de",
+      "FirstNames": "Max",
+      "Institution": "Justus-Liebig-Universität Gießen",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "Horn",
+      "Place": "Gießen, Germany",
+      "PostalAddress": "AG Algebra\nMathematisches Institut\nJustus-Liebig-Universität Gießen\nArndtstraße 2\n35392 Gießen\nGermany",
+      "WWWHome": "http://www.quendi.de/math"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/unipot/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/unipot"
+  },
+  "Status": "deposited",
+  "Subtitle": "Computing with elements of unipotent subgroups of Chevalley groups",
+  "TestFile": "tst/testall.g",
+  "Version": "1.4"
+}
