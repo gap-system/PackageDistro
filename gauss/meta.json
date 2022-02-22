@@ -1,0 +1,88 @@
+{
+  "AbstractHTML": "The <span class=\"pkgname\">Gauss</span> package provideds extended Gauss functionality for <span class=\"pkgname\">GAP</span>",
+  "ArchiveFormats": ".tar.gz .zip",
+  "ArchiveSha256": "62b2c5a24231dc39678939966adece5ebd6aff052bf550ff2501be649048deef",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/Gauss-2020.10-02/Gauss-2020.10-02",
+  "Autoload": false,
+  "AvailabilityTest": null,
+  "Date": "16/10/2020",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">=4.8",
+    "NeededOtherPackages": [],
+    "SuggestedOtherPackages": [
+      [
+        "GAPDoc",
+        ">= 1.0"
+      ]
+    ]
+  },
+  "InstallationPath": "pkg/Gauss-2020.10-02",
+  "IssueTrackerURL": "https://github.com/homalg-project/homalg_project/issues",
+  "Keywords": [
+    "Gauss",
+    "RREF",
+    "sparse"
+  ],
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "Autoload": false,
+      "BookName": "Gauss",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "Extended Gauss functionality for GAP",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSha256": "befa3f7fc65075ecff503555f87854554e0acd30b97e21d0c80895cb2917b0e6",
+  "PackageInfoURL": "https://homalg-project.github.io/homalg_project/Gauss/PackageInfo.g",
+  "PackageName": "Gauss",
+  "PackageWWWHome": "https://homalg-project.github.io/homalg_project/Gauss",
+  "Persons": [
+    {
+      "Email": "simon.goertzen@rwth-aachen.de",
+      "FirstNames": "Simon",
+      "Institution": "RWTH Aachen University",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Görtzen",
+      "Place": "Aachen",
+      "PostalAddress": "Simon Görtzen\nLehrstuhl B fuer Mathematik, RWTH Aachen\nTemplergraben 64\n52062 Aachen\nGermany",
+      "WWWHome": "https://www.linkedin.com/in/simongoertzen/"
+    },
+    {
+      "Email": "mohamed.barakat@uni-siegen.de",
+      "FirstNames": "Mohamed",
+      "Institution": "University of Siegen",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "Barakat",
+      "Place": "Siegen",
+      "PostalAddress": "Walter-Flex-Str. 3\n57072 Siegen\nGermany",
+      "WWWHome": "https://mohamed-barakat.github.io"
+    },
+    {
+      "Email": "gutsche@mathematik.uni-siegen.de",
+      "FirstNames": "Sebastian",
+      "Institution": "University of Siegen",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "Gutsche",
+      "Place": "Siegen",
+      "PostalAddress": "Department Mathematik\nUniversität Siegen\nWalter-Flex-Straße 3\n57072 Siegen\nGermany",
+      "WWWHome": "https://sebasguts.github.io"
+    }
+  ],
+  "README_URL": "https://homalg-project.github.io/homalg_project/Gauss/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/homalg-project/homalg_project"
+  },
+  "Status": "deposited",
+  "Subtitle": "Extended Gauss functionality for GAP",
+  "Version": "2020.10-02"
+}

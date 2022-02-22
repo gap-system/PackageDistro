@@ -1,0 +1,80 @@
+{
+  "AbstractHTML": "This package provides a very basic interface to the polymake program by Ewgenij Gawrilow, Michael Joswig et al.",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSha256": "7e1c8543f68fb35c7694a0be4a6d36944419566f33655b982e8f236e91701381",
+  "ArchiveURL": "https://github.com/gap-packages/polymaking/releases/download/v0.8.2/polymaking-0.8.2",
+  "AutoDoc": {
+    "TitlePage": {
+      "Abstract": "\n            This package provides a very basic interface to the polymake\n            program by Ewgenij Gawrilow, Michael Joswig et al. <Cite\n            Key=\"polymake\"></Cite>. The polymake program itself is not\n            included.\n        ",
+      "Acknowledgements": "\n          This work has been supported by Marie Curie Grant No. MTKD-CT-2006-042685\n        ",
+      "Copyright": "\n            &copyright; 2007--2013 Marc Roeder. <P/>\n\n            This package is distributed under the terms of the GNU General\n            Public License version 2 or later (at your convenience). See the\n            file \"LICENSE\" or\n            <URL>https://www.gnu.org/copyleft/gpl.html</URL>\n        ",
+      "Version": "Version 0.8.2"
+    }
+  },
+  "AvailabilityTest": null,
+  "Date": "23/02/2019",
+  "Dependencies": {
+    "ExternalConditions": [
+      "polymake (http://www.polymake.org) must be installed"
+    ],
+    "GAP": ">=4.8",
+    "NeededOtherPackages": [],
+    "SuggestedOtherPackages": [
+      [
+        "GAPDoc",
+        ">= 0.99"
+      ]
+    ]
+  },
+  "InstallationPath": "pkg/polymaking-0.8.2",
+  "IssueTrackerURL": "https://github.com/gap-packages/polymaking/issues",
+  "Keywords": [
+    "interface",
+    "polymake",
+    "computational geometry"
+  ],
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "Autoload": true,
+      "BookName": "polymaking",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "A package for using polymake in GAP",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSha256": "8706afe7a066db4a72a14d43cfb70cce0b8e1dff27fb03216c76d015c6fcb0ae",
+  "PackageInfoURL": "https://gap-packages.github.io/polymaking/PackageInfo.g",
+  "PackageName": "polymaking",
+  "PackageWWWHome": "https://gap-packages.github.io/polymaking/",
+  "Persons": [
+    {
+      "Email": "marc_roeder@web.de",
+      "FirstNames": "Marc",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Roeder",
+      "WWWHome": "http://csserver.evansville.edu/~mroeder"
+    },
+    {
+      "Email": "support@gap-system.org",
+      "FirstNames": "The",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "GAP Team"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/polymaking/README",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/polymaking"
+  },
+  "Status": "deposited",
+  "Subtitle": "Interfacing the geometry software polymake",
+  "TestFile": "tst/testall.g",
+  "Version": "0.8.2"
+}

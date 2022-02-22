@@ -1,0 +1,73 @@
+{
+  "AbstractHTML": "The <span class=\"pkgname\">IntPic</span> package, is a package for drawing integers, by emphasizing some subsets.",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSha256": "d073a3f27c6812a1d2a3d93b33b665239ef7313bce88593359f24bf8d3e9e9fc",
+  "ArchiveURL": "https://github.com/gap-packages/intpic/releases/download/v0.2.4/IntPic-0.2.4",
+  "AvailabilityTest": null,
+  "BannerString": "----------------------------------------------------------------\nLoading  IntPic 0.2.4 (drawing integers)\nby Manuel Delgado (http://www.fc.up.pt/cmup/mdelgado/)\nFor help, type: ?IntPic;\n----------------------------------------------------------------\n",
+  "Date": "23/08/2019",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": "4.7",
+    "NeededOtherPackages": [
+      [
+        "numericalsgps",
+        "1.0"
+      ],
+      [
+        "GAPDoc",
+        "1.5"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/IntPic-0.2.4",
+  "IssueTrackerURL": "https://github.com/gap-packages/intpic/issues",
+  "Keywords": [
+    "emphasize",
+    "highlight",
+    "draw",
+    "integer",
+    "picture"
+  ],
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc",
+        "images"
+      ],
+      "BookName": "IntPic",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "IntPic, a GAP package for drawing integers",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSha256": "f9c3e9c1fc55f3748db82420b8754ee0c14b0065b5a9a8c3aa455100cfebdf59",
+  "PackageInfoURL": "https://gap-packages.github.io/intpic/PackageInfo.g",
+  "PackageName": "IntPic",
+  "PackageWWWHome": "https://gap-packages.github.io/intpic",
+  "Persons": [
+    {
+      "Email": "mdelgado@fc.up.pt",
+      "FirstNames": "Manuel",
+      "Institution": "Faculdade de Ciências",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Delgado",
+      "Place": "Porto",
+      "PostalAddress": "Departamento de Matemática - Faculdade de Ciências\nPorto\nPortugal",
+      "WWWHome": "http://www.fc.up.pt/cmup/mdelgado/"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/intpic/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/intpic"
+  },
+  "Status": "deposited",
+  "Subtitle": "A package for drawing integers",
+  "TestFile": "tst/testall.g",
+  "Version": "0.2.4"
+}

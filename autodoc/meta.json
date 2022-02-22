@@ -1,0 +1,118 @@
+{
+  "AbstractHTML": "",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSha256": "ba660b09b37f467ef8e3d941ad4c1ceee5f0bc29335368bafe85124e2647d96a",
+  "ArchiveURL": "https://github.com/gap-packages/AutoDoc/releases/download/v2020.08.11/AutoDoc-2020.08.11",
+  "AutoDoc": {
+    "TitlePage": {
+      "Abstract": "&AutoDoc; is a &GAP; package whose purpose is to aid &GAP; package authors in creating and maintaining the documentation of their packages.\n",
+      "Acknowledgements": "This documentation was prepared using the &GAPDoc; package <Cite Key='GAPDoc'/>.\n<P/>\n",
+      "Copyright": "&copyright; 2012-2019 by Sebastian Gutsche and Max Horn<P/>\n\nThis package may be distributed under the terms and conditions of the GNU Public License Version 2 or (at your option) any later version.\n"
+    }
+  },
+  "Autoload": false,
+  "AvailabilityTest": null,
+  "Date": "11/08/2020",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">= 4.5",
+    "NeededOtherPackages": [
+      [
+        "GAPDoc",
+        ">= 1.5"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/AutoDoc-2020.08.11",
+  "IssueTrackerURL": "https://github.com/gap-packages/AutoDoc/issues",
+  "Keywords": [
+    "Automatic documentation, GAP, GAPDoc"
+  ],
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "AutoDoc",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "Generate documentation from GAP source code",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSha256": "d0dde790447eeb68c00be95ca30e81566fa96664680df16c7588327e9705d817",
+  "PackageInfoURL": "https://gap-packages.github.io/AutoDoc/PackageInfo.g",
+  "PackageName": "AutoDoc",
+  "PackageWWWHome": "https://gap-packages.github.io/AutoDoc",
+  "Persons": [
+    {
+      "Email": "gutsche@mathematik.uni-siegen.de",
+      "FirstNames": "Sebastian",
+      "Institution": "Universität Siegen",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Gutsche",
+      "Place": "Siegen",
+      "PostalAddress": "Department Mathematik\nUniversität Siegen\nWalter-Flex-Straße 3\n57072 Siegen\nGermany",
+      "WWWHome": "https://algebra.mathematik.uni-siegen.de/gutsche/"
+    },
+    {
+      "Email": "horn@mathematik.uni-kl.de",
+      "FirstNames": "Max",
+      "Institution": "TU Kaiserslautern",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Horn",
+      "Place": "Kaiserslautern, Germany",
+      "PostalAddress": "Fachbereich Mathematik\nTU Kaiserslautern\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
+      "WWWHome": "https://www.quendi.de/math"
+    },
+    {
+      "FirstNames": "Mohamed",
+      "IsAuthor": false,
+      "IsMaintainer": false,
+      "LastName": "Barakat"
+    },
+    {
+      "FirstNames": "Markus",
+      "IsAuthor": false,
+      "IsMaintainer": false,
+      "LastName": "Pfeiffer"
+    },
+    {
+      "FirstNames": "Øystein",
+      "IsAuthor": false,
+      "IsMaintainer": false,
+      "LastName": "Skartsæterhagen"
+    },
+    {
+      "FirstNames": "Chris",
+      "IsAuthor": false,
+      "IsMaintainer": false,
+      "LastName": "Wensley"
+    },
+    {
+      "FirstNames": "Glen",
+      "IsAuthor": false,
+      "IsMaintainer": false,
+      "LastName": "Whitney"
+    },
+    {
+      "FirstNames": "Fabian",
+      "IsAuthor": false,
+      "IsMaintainer": false,
+      "LastName": "Zickgraf"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/AutoDoc/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/AutoDoc"
+  },
+  "Status": "deposited",
+  "Subtitle": "Generate documentation from GAP source code",
+  "TestFile": "tst/testall.g",
+  "Version": "2020.08.11"
+}

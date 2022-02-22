@@ -1,0 +1,97 @@
+{
+  "AbstractHTML": "",
+  "ArchiveFormats": ".tar.gz .zip",
+  "ArchiveSha256": "dda63804398e126e31ddbeda6d40f491cf2a4df14eb7c484392d6616a0a44a04",
+  "ArchiveURL": "https://github.com/homalg-project/CAP_project/releases/download/MonoidalCategories-2020.10-01/MonoidalCategories-2020.10-01",
+  "AvailabilityTest": null,
+  "Date": "19/10/2020",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">= 4.9.1",
+    "NeededOtherPackages": [
+      [
+        "GAPDoc",
+        ">= 1.5"
+      ],
+      [
+        "ToolsForHomalg",
+        ">= 2018.05.22"
+      ],
+      [
+        "CAP",
+        ">= 2019.08.10"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/MonoidalCategories-2020.10-01",
+  "IssueTrackerURL": "https://github.com/homalg-project/CAP_project/issues",
+  "Keywords": [
+    "monoidal categories",
+    "monoidal closed categories",
+    "monoidal coclosed categories",
+    "tensor-Hom adjuction",
+    "coHom-tensor adjuction"
+  ],
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "MonoidalCategories",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "Monoidal and monoidal (co)closed categories",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSha256": "cb2fc16e33de95b2f7876dbdcb1ab5e7368fcd9f4284582acb1609978c9a92d7",
+  "PackageInfoURL": "https://homalg-project.github.io/CAP_project/MonoidalCategories/PackageInfo.g",
+  "PackageName": "MonoidalCategories",
+  "PackageWWWHome": "https://homalg-project.github.io/CAP_project/MonoidalCategories",
+  "Persons": [
+    {
+      "Email": "mohamed.barakat@uni-siegen.de",
+      "FirstNames": "Mohamed",
+      "Institution": "University of Siegen",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Barakat",
+      "Place": "Siegen",
+      "PostalAddress": "Walter-Flex-Str. 3\n57068 Siegen\nGermany",
+      "WWWHome": "http://algebra.mathematik.uni-siegen.de/barakat/"
+    },
+    {
+      "Email": "gutsche@mathematik.uni-siegen.de",
+      "FirstNames": "Sebastian",
+      "Institution": "University of Siegen",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Gutsche",
+      "Place": "Siegen",
+      "PostalAddress": "Department Mathematik\nUniversität Siegen\nWalter-Flex-Straße 3\n57068 Siegen\nGermany",
+      "WWWHome": "http://algebra.mathematik.uni-siegen.de/gutsche/"
+    },
+    {
+      "Email": "sebastian.posur@uni-siegen.de",
+      "FirstNames": "Sebastian",
+      "Institution": "University of Siegen",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Posur",
+      "Place": "Siegen",
+      "PostalAddress": "Department Mathematik\nUniversität Siegen\nWalter-Flex-Straße 3\n57068 Siegen\nGermany",
+      "WWWHome": "http://algebra.mathematik.uni-siegen.de/posur/"
+    }
+  ],
+  "README_URL": "https://homalg-project.github.io/CAP_project/MonoidalCategories/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/homalg-project/CAP_project"
+  },
+  "Status": "deposited",
+  "Subtitle": "Monoidal and monoidal (co)closed categories",
+  "TestFile": "tst/testall.g",
+  "Version": "2020.10-01"
+}

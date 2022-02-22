@@ -1,0 +1,93 @@
+{
+  "AbstractHTML": "This package provides functions for computing with permutability in finite groups.",
+  "AcceptDate": "04/2014",
+  "ArchiveFormats": ".tar.gz .tar.bz2 .zip",
+  "ArchiveSha256": "c57cb8a14d18161e4df7ffbba10dec4d459306ce514365bd4950734f5ef907ea",
+  "ArchiveURL": "https://github.com/gap-packages/permut/releases/download/v2.0.3/permut-2.0.3",
+  "AvailabilityTest": null,
+  "CommunicatedBy": "Alice Niemeyer (Perth)",
+  "Date": "19/08/2018",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": "4.7.4",
+    "NeededOtherPackages": [
+      [
+        "format",
+        "1.3"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/permut-2.0.3",
+  "IssueTrackerURL": "https://github.com/gap-packages/permut/issues",
+  "Keywords": [
+    "permutability",
+    "PT-group",
+    "PST-group",
+    "T-group",
+    "mutually permutable",
+    "totally permutable",
+    "Dedekind group",
+    "Iwasawa group"
+  ],
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "PERMUT",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "PERMUT: A package to deal with permutability in finite groups",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSha256": "f8b6bf2cec8f8eb312bc9d90e39472a045d999c3f6fb2c49857fa583dfedefd9",
+  "PackageInfoURL": "https://gap-packages.github.io/permut/PackageInfo.g",
+  "PackageName": "permut",
+  "PackageWWWHome": "https://gap-packages.github.io/permut/",
+  "Persons": [
+    {
+      "Email": "Adolfo.Ballester@uv.es",
+      "FirstNames": "Adolfo",
+      "Institution": "Departament de Matem\\`atiques, Universitat de Val\\`encia",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Ballester-Bolinches",
+      "Place": "Burjassot, Val\\`encia",
+      "PostalAddres": "Adolfo Ballester-Bolinches\nDepartament de Matem\\`atiques\nUniversitat de Val\\`encia\nDr.\\ Moliner, 50\n46100 Burjassot, Val\\`encia, Spain"
+    },
+    {
+      "Email": "Enric.Cosme@uv.es",
+      "FirstNames": "Enric",
+      "Institution": "Departament de Matem\\`atiques, Universitat de Val\\`encia",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Cosme-Llópez",
+      "Place": "Burjassot, Val\\`encia",
+      "PostalAddres": "Enric Cosme-Ll\\'opez\nDepartament de Matem\\`atiques\nUniversitat de Val\\`encia\nDr.\\ Moliner, 50\n46100 Burjassot, Val\\`encia, Spain",
+      "WWWHome": "https://www.uv.es/coslloen"
+    },
+    {
+      "Email": "Ramon.Esteban@uv.es",
+      "FirstNames": "Ramón",
+      "Institution": "Departament de Matem\\`atiques, Universitat de Val\\`encia",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Esteban-Romero",
+      "Place": "Burjassot, Val\\`encia",
+      "PostalAddres": "Ramon Esteban-Romero\nDepartament de Matem\\`atiques\nUniversitat de Val\\`encia\nDr.\\ Moliner, 50\n46100 Burjassot, Val\\`encia, Spain\nPermanent: \nInstitut Universitari de Matem\\`atica Pura i Aplicada\nUniversitat Polit\\`ecnica de Val\\`encia\nCam{\\'\\i} de Vera, s/n\n46022 Val\\`encia, Spain",
+      "WWWHome": "https://www.uv.es/estebanr"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/permut/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/permut"
+  },
+  "Status": "accepted",
+  "Subtitle": "A package to deal with permutability in finite groups",
+  "SupportEmail": "Ramon.Esteban@uv.es",
+  "TestFile": "tst/testall.g",
+  "Version": "2.0.3"
+}

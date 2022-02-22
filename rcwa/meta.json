@@ -1,0 +1,97 @@
+{
+  "AbstractHTML": "This package provides implementations of algorithms and methods for computation in certain infinite permutation groups. For an abstract, see <a href = \"https://gap-packages.github.io/rcwa/\">here</a>.",
+  "AcceptDate": "04/2005",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSha256": "79d6edc596e784585a54c6318df1f0260a27652d97da5d74a0ea4a25b4dae371",
+  "ArchiveURL": "https://github.com/gap-packages/rcwa/releases/download/v4.6.4/rcwa-4.6.4",
+  "AutoDoc": {
+    "TitlePage": {
+      "Abstract": "<#Include SYSTEM \"abstract.xml\">",
+      "Acknowledgements": "\nI am grateful to John P. McDermott for the discovery that the group\ndiscussed in Section&nbsp;<Ref Label=\"sec:ThompsonsGroupV\"/> is\nisomorphic to Thompson's Group V in July 2008, and to Laurent Bartholdi\nfor his hint on how to construct wreath products of residue-class-wise\naffine groups with&nbsp;(&ZZ;,+) in April 2006.\nFurther, I thank Bettina&nbsp;Eick for communicating this package\nand for her valuable suggestions on its manual in the time before its\nfirst public release in April 2005.\nLast but not least I thank the two anonymous referees for their\nconstructive criticism and their helpful suggestions.\n        ",
+      "Copyright": "\n&copyright; 2003 - 2018 by Stefan Kohl. <P/>\n\n&RCWA; is free software: you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation, either version 2 of the License, or\n(at your option) any later version. <P/>\n\n&RCWA; is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details. <P/>\n\nFor a copy of the GNU General Public License, see \nthe file <F>GPL</F> in the <F>etc</F> directory of the &GAP;\ndistribution or see <URL>https://www.gnu.org/licenses/gpl.html</URL>.\n<Alt Only=\"LaTeX\">\\vspace{-1cm}</Alt>\n        "
+    }
+  },
+  "AvailabilityTest": null,
+  "BannerString": "\nLoading RCWA 4.6.4 ([R]esidue-[C]lass-[W]ise [A]ffine groups)\n  by Stefan Kohl, stefan@mcs.st-and.ac.uk.\nSee ?RCWA:About for information about the package.\n\n",
+  "CommunicatedBy": "Bettina Eick (Braunschweig)",
+  "Date": "24/03/2019",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">=4.9.1",
+    "NeededOtherPackages": [
+      [
+        "ResClasses",
+        ">=4.7.2"
+      ],
+      [
+        "GRAPE",
+        ">=4.7"
+      ],
+      [
+        "Polycyclic",
+        ">=2.11"
+      ],
+      [
+        "FR",
+        ">=2.2.1"
+      ],
+      [
+        "GAPDoc",
+        ">=1.5.1"
+      ],
+      [
+        "Utils",
+        ">=0.40"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/rcwa-4.6.4",
+  "IssueTrackerURL": "https://github.com/gap-packages/rcwa/issues",
+  "Keywords": [
+    "infinite permutation groups",
+    "permutation groups over rings",
+    "combinatorial group theory",
+    "residue-class-wise affine groups",
+    "residue-class-wise affine mappings",
+    "Collatz conjecture",
+    "3n+1 conjecture"
+  ],
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "Autoload": true,
+      "BookName": "RCWA",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "[R]esidue-[C]lass-[W]ise [A]ffine groups",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSha256": "3d924d40560b670275dbedadbf00bdc58bd64bcd72159159c958b743f30afb7b",
+  "PackageInfoURL": "https://gap-packages.github.io/rcwa/PackageInfo.g",
+  "PackageName": "RCWA",
+  "PackageWWWHome": "https://gap-packages.github.io/rcwa/",
+  "Persons": [
+    {
+      "Email": "stefan@mcs.st-and.ac.uk",
+      "FirstNames": "Stefan",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Kohl",
+      "WWWHome": "https://stefan-kohl.github.io/"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/rcwa/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/rcwa"
+  },
+  "Status": "accepted",
+  "Subtitle": "Residue-Class-Wise Affine Groups",
+  "TestFile": "tst/testall.g",
+  "Version": "4.6.4"
+}

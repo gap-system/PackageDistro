@@ -1,0 +1,74 @@
+{
+  "AbstractHTML": "The <span class=\"pkgname\">YangBaxter</span> package provides functionality to construct classical and skew braces. It also includes a database of classical and skew braces of small orders.",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSha256": "02bd961572ac154a7e4833809523a283955ca54aacee078e71a475b21e03787e",
+  "ArchiveURL": "https://github.com/gap-packages/YangBaxter/releases/download/v0.9.0/YangBaxter-0.9.0",
+  "AvailabilityTest": null,
+  "Date": "08/11/2019",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">=4.9",
+    "NeededOtherPackages": [],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/YangBaxter-0.9.0",
+  "IssueTrackerURL": "https://github.com/gap-packages/YangBaxter/issues",
+  "Keywords": [
+    "QYBE",
+    "cycle sets",
+    "racks",
+    "quandles",
+    "braces",
+    "radical rings"
+  ],
+  "License": "GPL-3.0",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "YangBaxter",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "Combinatorial Solutions for the Yang-Baxter equation",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSha256": "00a26c77dbc9312015f1a979e09b2e69a38f1c19e47e6f188ea242955689c958",
+  "PackageInfoURL": "https://gap-packages.github.io/YangBaxter/PackageInfo.g",
+  "PackageName": "YangBaxter",
+  "PackageWWWHome": "https://gap-packages.github.io/YangBaxter",
+  "Persons": [
+    {
+      "Email": "lvendramin@dm.uba.ar",
+      "FirstNames": "Leandro",
+      "Institution": "UBA",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Vendramin",
+      "Place": "Buenos Aires",
+      "PostalAddress": "Departamento de matem'atica, FCEN, UBA\nCiudad Universitaria, Pab. 1\nBuenos Aires, Argentina",
+      "WWWHome": "http://mate.dm.uba.ar/~lvendram"
+    },
+    {
+      "Email": "alexander.konovalov@st-andrews.ac.uk",
+      "FirstNames": "Alexander",
+      "Institution": "University of St Andrews",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Konovalov",
+      "Place": "St Andrews",
+      "PostalAddress": "School of Computer Science\nUniversity of St Andrews\nJack Cole Building, North Haugh,\nSt Andrews, Fife, KY16 9SX, Scotland",
+      "WWWHome": "https://alexk.host.cs.st-andrews.ac.uk/"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/YangBaxter/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/YangBaxter"
+  },
+  "Status": "deposited",
+  "Subtitle": "Combinatorial Solutions for the Yang-Baxter equation",
+  "TestFile": "tst/testall.g",
+  "Version": "0.9.0"
+}

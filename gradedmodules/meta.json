@@ -1,0 +1,151 @@
+{
+  "AbstractHTML": "This homalg based package realizes the computability of the Abelian category of finitely presented graded modules over a computable graded ring",
+  "ArchiveFormats": ".tar.gz .zip",
+  "ArchiveSha256": "33f09d4a5fa77480276eef9e4cceb25ad79b6f98e02847142cf75c3381c88fad",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/GradedModules-2020.10-02/GradedModules-2020.10-02",
+  "Autoload": false,
+  "AvailabilityTest": null,
+  "Date": "16/10/2020",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">=4.7",
+    "NeededOtherPackages": [
+      [
+        "ToolsForHomalg",
+        ">= 2014.12.08"
+      ],
+      [
+        "MatricesForHomalg",
+        ">= 2020.02.05"
+      ],
+      [
+        "HomalgToCAS",
+        ">= 2011.10.05"
+      ],
+      [
+        "RingsForHomalg",
+        ">= 2020.04.17"
+      ],
+      [
+        "GradedRingForHomalg",
+        ">= 2020.02.05"
+      ],
+      [
+        "Modules",
+        ">= 2020.02.05"
+      ],
+      [
+        "homalg",
+        ">= 2013.06.23"
+      ],
+      [
+        "GAPDoc",
+        ">= 1.0"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "InstallationPath": "pkg/GradedModules-2020.10-02",
+  "IssueTrackerURL": "https://github.com/homalg-project/homalg_project/issues",
+  "Keywords": [
+    "modules",
+    "graded modules",
+    "graduation",
+    "multi-graded modules",
+    "Tate resolution"
+  ],
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "Autoload": false,
+      "BookName": "GradedModules",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "A homalg based package for the Abelian category of finitely presented graded modules over computable graded rings",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSha256": "e340764775f7203bd27abb0088545c7fa7ecd12d84c2ed2ff551e25bbd97dabc",
+  "PackageInfoURL": "https://homalg-project.github.io/homalg_project/GradedModules/PackageInfo.g",
+  "PackageName": "GradedModules",
+  "PackageWWWHome": "https://homalg-project.github.io/homalg_project/GradedModules",
+  "Persons": [
+    {
+      "Email": "mohamed.barakat@uni-siegen.de",
+      "FirstNames": "Mohamed",
+      "Institution": "University of Siegen",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Barakat",
+      "Place": "Siegen",
+      "PostalAddress": "Walter-Flex-Str. 3\n57072 Siegen\nGermany",
+      "WWWHome": "https://mohamed-barakat.github.io"
+    },
+    {
+      "Email": "gutsche@mathematik.uni-siegen.de",
+      "FirstNames": "Sebastian",
+      "Institution": "University of Siegen",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Gutsche",
+      "Place": "Siegen",
+      "PostalAddress": "Department Mathematik\nUniversität Siegen\nWalter-Flex-Straße 3\n57072 Siegen\nGermany",
+      "WWWHome": "https://sebasguts.github.io"
+    },
+    {
+      "Email": "sebastian.jambor@rwth-aachen.de",
+      "FirstNames": "Sebastian",
+      "Institution": "RWTH Aachen University",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Jambor",
+      "Place": "Aachen",
+      "PostalAddress": "Sebastian Jambor\nLehrstuhl B fuer Mathematik, RWTH Aachen\nTemplergraben 64\n52062 Aachen\nGermany",
+      "WWWHome": "http://wwwb.math.rwth-aachen.de/~sebastian/"
+    },
+    {
+      "Email": "markus.lange-hegermann@hs-owl.de",
+      "FirstNames": "Markus",
+      "Institution": "Hochschule Ostwestfalen-Lippe",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Lange-Hegermann",
+      "Place": "Aachen",
+      "PostalAddress": "Markus Lange-Hegermann\nHochschule Ostwestfalen-Lippe\nLiebigstraße 87\n32657 Lemgo\nGermany",
+      "WWWHome": "https://www.th-owl.de/eecs/fachbereich/team/markus-lange-hegermann/"
+    },
+    {
+      "Email": "arne.lorenz@rwth-aachen.de",
+      "FirstNames": "Arne",
+      "Institution": "RWTH Aachen University",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Lorenz",
+      "Place": "Aachen",
+      "PostalAddress": "Arne Lorenz\nLehrstuhl B fuer Mathematik, RWTH Aachen\nTemplergraben 64\n52062 Aachen\nGermany",
+      "WWWHome": "http://wwwb.math.rwth-aachen.de/~arne/"
+    },
+    {
+      "Email": "motsak@mathematik.uni-kl.de",
+      "FirstNames": "Oleksandr",
+      "Institution": "University of Kaiserslautern",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Motsak",
+      "Place": "Kaiserslautern",
+      "PostalAddress": "Department of Mathematics\nUniversity of Kaiserslautern\n67653 Kaiserslautern\nGermany",
+      "WWWHome": "http://www.mathematik.uni-kl.de/~motsak/"
+    }
+  ],
+  "README_URL": "https://homalg-project.github.io/homalg_project/GradedModules/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/homalg-project/homalg_project"
+  },
+  "Status": "deposited",
+  "Subtitle": "A homalg based package for the Abelian category of finitely presented graded modules over computable graded rings",
+  "Version": "2020.10-02"
+}

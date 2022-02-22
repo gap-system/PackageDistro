@@ -1,0 +1,118 @@
+{
+  "AbstractHTML": "The <span class=\"pkgname\">IO_ForHomalg</span> package launches the command-line-interface of an external computer algebra system and connects it to <span class=\"pkgname\">homalg</span> using an Input/Output stream",
+  "ArchiveFormats": ".tar.gz .zip",
+  "ArchiveSha256": "779eea473b5eb73ca7f6a617abb6041cdf78202c363584d457a554aadb510034",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/IO_ForHomalg-2020.10-02/IO_ForHomalg-2020.10-02",
+  "Autoload": false,
+  "AvailabilityTest": null,
+  "Date": "16/10/2020",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">=4.7",
+    "NeededOtherPackages": [
+      [
+        "IO",
+        ">= 2.3"
+      ],
+      [
+        "HomalgToCAS",
+        ">= 2009.06.18"
+      ]
+    ],
+    "SuggestedOtherPackages": [
+      [
+        "GAPDoc",
+        ">= 1.0"
+      ]
+    ]
+  },
+  "InstallationPath": "pkg/IO_ForHomalg-2020.10-02",
+  "IssueTrackerURL": "https://github.com/homalg-project/homalg_project/issues",
+  "Keywords": [
+    "IO",
+    "streams"
+  ],
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "Autoload": false,
+      "BookName": "IO_ForHomalg",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "IO capabilities for the homalg project",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSha256": "3bc0cfdb74fcad1f60aea17d9e6f8733a3315d30e4180b27628d286b556b236e",
+  "PackageInfoURL": "https://homalg-project.github.io/homalg_project/IO_ForHomalg/PackageInfo.g",
+  "PackageName": "IO_ForHomalg",
+  "PackageWWWHome": "https://homalg-project.github.io/homalg_project/IO_ForHomalg",
+  "Persons": [
+    {
+      "Email": "thomas@momo.math.rwth-aachen.de",
+      "FirstNames": "Thomas",
+      "Institution": "RWTH Aachen University",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Bächler",
+      "Place": "Aachen",
+      "PostalAddress": "Thomas Bächler\nLehrstuhl B fuer Mathematik, RWTH Aachen\nTemplergraben 64\n52062 Aachen\nGermany",
+      "WWWHome": "http://wwwb.math.rwth-aachen.de/~thomas/"
+    },
+    {
+      "Email": "mohamed.barakat@uni-siegen.de",
+      "FirstNames": "Mohamed",
+      "Institution": "University of Siegen",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Barakat",
+      "Place": "Siegen",
+      "PostalAddress": "Walter-Flex-Str. 3\n57072 Siegen\nGermany",
+      "WWWHome": "https://mohamed-barakat.github.io"
+    },
+    {
+      "Email": "gutsche@mathematik.uni-siegen.de",
+      "FirstNames": "Sebastian",
+      "Institution": "University of Siegen",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Gutsche",
+      "Place": "Siegen",
+      "PostalAddress": "Department Mathematik\nUniversität Siegen\nWalter-Flex-Straße 3\n57072 Siegen\nGermany",
+      "WWWHome": "https://algebra.mathematik.uni-siegen.de/gutsche/"
+    },
+    {
+      "Email": "neunhoef@mcs.st-and.ac.uk",
+      "FirstNames": "Max",
+      "Institution": "St Andrews University",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Neunhöffer",
+      "Place": "St Andrews",
+      "PostalAddress": "Max Neunhöffer\nSchool of Mathematics and Statistics \nMathematical Institute \nNorth Haugh\nSt Andrews, Fife KY16 9SS \nScotland, UK",
+      "WWWHome": "http://www-groups.mcs.st-and.ac.uk/~neunhoef/"
+    },
+    {
+      "Email": "daniel@momo.math.rwth-aachen.de",
+      "FirstNames": "Daniel",
+      "Institution": "RWTH Aachen University",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Robertz",
+      "Place": "Aachen",
+      "PostalAddress": "Daniel Robertz\nLehrstuhl B fuer Mathematik, RWTH Aachen\nTemplergraben 64\n52062 Aachen\nGermany",
+      "WWWHome": "http://wwwb.math.rwth-aachen.de/~daniel/"
+    }
+  ],
+  "README_URL": "https://homalg-project.github.io/homalg_project/IO_ForHomalg/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/homalg-project/homalg_project"
+  },
+  "Status": "deposited",
+  "Subtitle": "IO capabilities for the homalg project",
+  "Version": "2020.10-02"
+}
