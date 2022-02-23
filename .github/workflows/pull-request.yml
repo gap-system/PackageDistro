@@ -1,0 +1,117 @@
+name: PR
+
+on:
+  workflow_dispatch:  # TODO: for debugging
+  pull_request:
+
+concurrency:
+  # group by workflow and ref; the last slightly strange component ensures that for pull
+  # requests, we limit to 1 concurrent job, but for the master branch we don't
+  group: ${{ github.workflow }}-${{ github.ref }}-${{ github.ref != 'refs/heads/master' || github.run_number }}
+  # Cancel intermediate builds, but only if it is a pull request build.
+  cancel-in-progress: ${{ startsWith(github.ref, 'refs/pull/') }}
+
+jobs:
+  detect-changes:
+    name: "Detect packages that were added, removed or modified"
+    runs-on: ubuntu-18.04
+    outputs:
+      remove-matrix: ${{ steps.detect-changes.outputs.remove-matrix }}
+      update-matrix: ${{ steps.detect-changes.outputs.update-matrix }}
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 5
+
+      - name: "Determine what was added and what removed"
+        id: detect-changes
+        run: |
+            # turn off rename detection here, so we see renmes as "remove + add"
+            # and thus propertly detect if other packages depend on the old name
+            added=$(git diff --name-only --no-renames --diff-filter=A HEAD^ --)
+            deleted=$(git diff --name-only --no-renames --diff-filter=D HEAD^ --)
+            modified=$(git diff --name-only --no-renames --diff-filter=M HEAD^ --)
+
+            echo "Removed packages:"
+            MATRIX="{\"package\":["
+            for PKG in ${deleted}; do
+              PKG=${PKG%"/meta.json"}
+              echo "${PKG}"
+              MATRIX="${MATRIX}\"${PKG}\","
+            done
+            MATRIX="${MATRIX}]}"
+            echo "::set-output name=remove-matrix::$MATRIX"
+
+            echo "Added or modified packages:"
+            MATRIX="{\"package\":["
+            for PKG in ${added} ${modified}; do
+              PKG=${PKG%"/meta.json"}
+              echo "${PKG}"
+              MATRIX="${MATRIX}\"${PKG}\","
+            done
+            MATRIX="${MATRIX}]}"
+            echo "::set-output name=update-matrix::$MATRIX"
+
+  remove-package:
+    name: "Remove ${{ matrix.package }}"
+    needs: detect-changes
+    runs-on: ubuntu-18.04
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.detect-changes.outputs.remove-matrix) }}
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: "Clone package distribution tools"
+        run: git clone https://github.com/gap-system/PackageDistroTools
+
+      - name: "Check whether anything depends on the package"
+        run: |
+            echo "TODO"
+            # TODO: could read all JSON files, look at the `NeededOtherPackages`
+            # components, to see if anything else uses this package (no GAP needed!).
+            # But beware, those lists contains package names that are not always lowercased.
+            # TODO: should also SuggestedOtherPackages be considered?
+            # TODO: add special case for GAPDoc, primgrp, transgrp, smallgrp?
+
+  add-or-update-package:
+    name: "Add or update ${{ matrix.package }}"
+    needs: detect-changes
+    runs-on: ubuntu-18.04
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.detect-changes.outputs.update-matrix) }}
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: "Clone package distribution tools"
+        run: git clone https://github.com/gap-system/PackageDistroTools
+
+      - name: "Install GAP"
+        run: |
+            echo "TODO: install GAP via a container that contains prerequisits for most/all packages"
+
+      - name: "Obtain copy of old metadata, if any"
+        run: |
+            echo "TODO: this can then be passed validate-package.py so it can test if the version of the package increased"
+
+      - name: "Validate metadata"
+        run: |
+            echo "TODO: invoke validate-package.py"
+
+      - name: "Install and build package"
+        run: |
+            echo "TODO: we also need all dependencies to be compiled -- perhaps can (ab)use PackageManager?"
+
+      - name: "Run package tests with default packages"
+        run: |
+            echo "TODO: use TestPackage"
+
+      - name: "Run package tests with minimal packages"
+        run: |
+            echo "TODO: use TestPackage and start GAP with -A"
+
+      # TODO: also test `LoadAllPackages` works!
+      # TODO: perhaps: also run packages with `LoadAllPackages`?
+      # TODO: ideally test both with last GAP release (but using the current package distro,
+      #       and also with latest GAP nightly build)
