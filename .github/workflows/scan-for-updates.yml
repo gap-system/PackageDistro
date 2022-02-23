@@ -1,0 +1,95 @@
+name: "Scan for updates"
+
+on:
+  workflow_dispatch:  # TODO: for debugging
+  # schedule:
+  #  # Every day at 2:30 AM UTC
+  #  - cron: '30 2 * * *'
+
+jobs:
+  scan-for-updates:
+    name: "Scan for package updates"
+    runs-on: ubuntu-18.04
+    # FIXME: containers don't seem to work :-(
+    # container: ghcr.io/gap-system/gap-docker-master:master
+    outputs:
+      matrix: ${{ steps.get-names.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: "Setup _archives symlink"
+        run: mkdir -p ~/_archives && ln -s ~/_archives
+
+      - name: "Cache archives"
+        uses: actions/cache@v2
+        with:
+          path: ~/_archives
+          key: archives
+
+      - name: "Clone package distribution tools"
+        run: git clone https://github.com/gap-system/PackageDistroTools _tools
+
+      - name: "Install GAP"
+        uses: gap-actions/setup-gap@v2
+        with:
+          GAP_BOOTSTRAP: 'minimal'
+          GAP_PKGS_TO_CLONE: 'json'
+          GAP_PKGS_TO_BUILD: 'json'
+
+      - name: "Put GAP into PATH"
+        run: ln -s /home/runner/gap/bin/gap.sh /usr/local/bin/gap
+
+      - name: "Scan for updates"
+        run: _tools/scan_for_updates.py
+
+      - name: "Upload metadata as artifact for later jobs"
+        uses: actions/upload-artifact@v2
+        with:
+          name: metadata
+          path: "*/meta.json"
+
+      - name: "Creates jobs for modified packages"
+        id: get-names
+        run: |
+            modified=$(git diff --name-only --no-renames --diff-filter=M)
+
+            # HACK
+            modified="aclib digraphs walrus"
+
+            MATRIX="{\"package\":["
+            for PKG in ${modified}; do
+              PKG=${PKG%"/meta.json"}
+              echo "${PKG}"
+              MATRIX="${MATRIX}\"${PKG}\","
+            done
+            MATRIX="${MATRIX}]}"
+            echo "::set-output name=matrix::$MATRIX"
+
+  create-pull-request:
+    name: "Create pull request for ${{ matrix.package }}"
+    needs: scan-for-updates
+    runs-on: ubuntu-18.04
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.scan-for-updates.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: "Download metadata from previous job"
+        uses: actions/download-artifact@v2
+        with:
+          name: metadata
+
+      # TODO: add a step here which extracts the new version from the JSON
+      # and puts it into the commit message / PR title
+      # TODO: bonus points for also extracting the old version
+
+      - uses: peter-evans/create-pull-request@v3
+        with:
+          add-paths: ${{ matrix.package }}
+          commit-message: "[${{ matrix.package }}] Update"
+          branch: automatic/${{ matrix.package }}
+          delete-branch: true
+          title: "[${{ matrix.package }}] Update"
+          labels: |
+            automated pr
