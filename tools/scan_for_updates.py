@@ -107,9 +107,9 @@ def scan_for_updates(archive_dir, pkginfos_dir, pkg_name):
     assert os.path.isdir(pkginfos_dir)
 
     try:
-        fname = os.path.join(pkg_name, pkg_name + ".json")
+        fname = os.path.join(pkg_name, "meta.json")
     except:
-        notice(pkg_name + ": missing {}.json file, skipping!".format(pkg_name))
+        notice(pkg_name + ": missing meta.json file, skipping!")
         return
 
     with open(fname, "r") as f:
@@ -165,7 +165,7 @@ def main():
             and not pkgname.startswith("_")
             and os.path.isdir(pkgname)
         ):
-            pkg_json_file = "{}/{}.json".format(json_dir, pkgname)
+            pkg_json_file = "{}/meta.json".format(json_dir)
             try:
                 pkg_archive = next(
                     iter(
