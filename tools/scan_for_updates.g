@@ -47,6 +47,9 @@ OutputJson := function(pkginfos_dir)
       fi;
       json_fname := Concatenation(pkgname, "/meta.json");
       PrintFormatted("{}: updating {}\n", pkgname, json_fname);
+      if IsBound(pkginfo_rec.PackageDoc) and not IsList(pkginfo_rec.PackageDoc) then
+        pkginfo_rec.PackageDoc := [pkginfo_rec.PackageDoc];
+      fi;
       FileString(json_fname, GapToJsonString(pkginfo_rec));
     fi;
   od;
