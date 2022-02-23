@@ -10,6 +10,8 @@
 ##  SPDX-License-Identifier: GPL-2.0-or-later
 ##
 
+# pylint: disable=C0116, C0103
+
 """
 This script is intended to iterate through package metadata in the repo:
 
@@ -30,6 +32,14 @@ import requests
 from utils import error, notice, warning
 
 
+def skip_dir(string):
+    return (
+        string.startswith(".")
+        or string.startswith("_")
+        or string == "README.md"
+    )
+
+
 def sha256(archive_fname):
     hash_archive = hashlib.sha256()
     with open(archive_fname, "rb") as f:
@@ -47,6 +57,13 @@ def download_archive(pkg_name, url, archive_dir, archive_fname, tries=5):
         archive_ext = ".zip"
 
     archive_fname = os.path.join(archive_dir, archive_fname)
+    if os.path.exists(archive_fname) and os.path.isfile(archive_fname):
+        notice(
+            "{}: {} already exists, not downloading again".format(
+                pkg_name, archive_fname
+            )
+        )
+        return
     notice("{}: downloaded {} to {}".format(pkg_name, url, archive_fname))
 
     for i in range(tries):
@@ -57,7 +74,7 @@ def download_archive(pkg_name, url, archive_dir, archive_fname, tries=5):
                     if chunk:
                         f.write(chunk)
             return
-        except:
+        except requests.RequestException:
             notice("{}: attempt {}/{} failed".format(pkg_name, i + 1, tries))
 
 
@@ -96,76 +113,67 @@ def gap_exec(commands, gap="gap"):
             return GAP.returncode
 
 
-def scan_for_updates(archive_dir, pkginfos_dir, pkg_name):
-    # TODO assumes we are in the root of the repo:
-    # https://github.com/gap-system/PackageDistro
+def scan_for_one_update(archive_dir, pkginfos_dir, pkg_name):
+    try:
+        fname = os.path.join(pkg_name, "meta.json")
+        with open(fname, "r") as f:
+            pkg_json = json.load(f)
+            try:
+                hash_distro = pkg_json["PackageInfoSHA256"]
+            except KeyError:
+                notice(pkg_name + ': missing key "PackageInfoSHA256"')
+                hash_distro = 0
+            url = pkg_json["PackageInfoURL"]
+            response = requests.get(url)
+            if response.status_code != 200:
+                warning(
+                    "error trying to download {}, status code {}, skipping!".format(
+                        url, response.status_code
+                    )
+                )
+                return
+            hash_url = hashlib.sha256(response.text.encode("utf-8"))
+            if hash_url != hash_distro:
+                notice(pkg_name + ": detected different sha256 hash")
+                fmt = pkg_json["ArchiveFormats"].split(" ")[0]
+                url = pkg_json["ArchiveURL"] + fmt
+                with open(
+                    os.path.join(pkginfos_dir, pkg_name + ".g"), "w"
+                ) as f:
+                    f.write(response.text)
+                download_archive(pkg_name, url, archive_dir, pkg_name + fmt)
+    except (OSError, IOError):
+        notice(pkg_name + ": missing meta.json file, skipping!")
+        return
+
+
+def scan_for_updates(archive_dir, pkginfos_dir):
     if not os.path.exists(archive_dir):
         os.mkdir(archive_dir)
     assert os.path.isdir(archive_dir)
     if not os.path.exists(pkginfos_dir):
         os.mkdir(pkginfos_dir)
     assert os.path.isdir(pkginfos_dir)
-
-    try:
-        fname = os.path.join(pkg_name, "meta.json")
-    except:
-        notice(pkg_name + ": missing meta.json file, skipping!")
-        return
-
-    with open(fname, "r") as f:
-        pkg_json = json.load(f)
-        try:
-            hash_distro = pkg_json["PackageInfoSHA256"]
-        except KeyError:
-            notice(pkg_name + ': missing key "PackageInfoSHA256"')
-            hash_distro = 0
-        url = pkg_json["PackageInfoURL"]
-        response = requests.get(url)
-        if response.status_code != 200:
-            warning(
-                "error trying to download {}, status code {}, skipping!".format(
-                    url, response.status_code
-                )
-            )
-            return
-        hash_url = hashlib.sha256(response.text.encode("utf-8"))
-        if hash_url != hash_distro:
-            notice(pkg_name + ": detected different sha256 hash")
-            fmt = pkg_json["ArchiveFormats"].split(" ")[0]
-            url = pkg_json["ArchiveURL"] + fmt
-            with open(os.path.join(pkginfos_dir, pkg_name + ".g"), "w") as f:
-                f.write(response.text)
-            download_archive(pkg_name, url, archive_dir, pkg_name + fmt)
-
-
-def main():
-    archive_dir = "_archives"
-    json_dir = "_json"
-    pkginfos_dir = "_pkginfos"
     for pkgname in sorted(os.listdir(os.getcwd())):
-        if (
-            not pkgname.startswith(".")
-            and not pkgname.startswith("_")
-            and os.path.isdir(pkgname)
-        ):
-            scan_for_updates(archive_dir, pkginfos_dir, pkgname)
+        if not skip_dir(pkgname):
+            scan_for_one_update(archive_dir, pkginfos_dir, pkgname)
 
+
+def output_json(pkginfos_dir):
     if (
         gap_exec(
-            r"OutputJson(\"{}\", \"{}\");".format(pkginfos_dir, json_dir),
-            gap="gap scan_for_updates.g",
+            r"OutputJson(\"{}\");".format(pkginfos_dir),
+            gap="gap _tools/scan_for_updates.g",
         )
         != 0
     ):
         error("Something went wrong")
 
+
+def add_sha256_to_json(archive_dir, pkginfos_dir):
     for pkgname in sorted(os.listdir(os.getcwd())):
-        if (
-            not pkgname.startswith(".")
-            and not pkgname.startswith("_")
-            and os.path.isdir(pkgname)
-        ):
-            pkg_json_file = "{}/meta.json".format(json_dir)
+        if not skip_dir(pkgname):
+            pkg_json_file = "{}/meta.json".format(pkgname)
             try:
                 pkg_archive = next(
                     iter(
@@ -187,6 +195,15 @@ def main():
             pkg_json["ArchiveSHA256"] = sha256(pkg_archive)
             with open(pkg_json_file, "w") as f:
                 json.dump(pkg_json, f)
+
+
+def main():
+    archive_dir = "_archives"
+    pkginfos_dir = "_pkginfos"
+
+    scan_for_updates(archive_dir, pkginfos_dir)
+    output_json(pkginfos_dir)
+    add_sha256_to_json(archive_dir, pkginfos_dir)
 
 
 if __name__ == "__main__":

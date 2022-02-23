@@ -16,7 +16,6 @@ PackageInfoRec := function(pkginfo_file)
     Unbind(GAPInfo.PackageInfoCurrent);
     Read(pkginfo_file);
     if not IsBound(GAPInfo.PackageInfoCurrent) then
-      # TODO better error message
       Error(StringFormatted("reading {} failed", pkginfo_file));
     fi;
     return GAPInfo.PackageInfoCurrent;
@@ -28,39 +27,27 @@ function(o, x)
     PrintTo(o, "null");
 end);
 
-WriteJson := function(json_dir, pkginfo_record)
-  local json_fname, root;
-  # TODO is the following necessary?
-  # Remove the GAPROOT prefix from the package installation path
-  if IsBound(pkginfo_record.InstallationPath) then
-    for root in GAPInfo.RootPaths do
-      pkginfo_record.InstallationPath :=
-        ReplacedString(pkginfo_record.InstallationPath, root, "");
-    od;
-  fi;
-  Print(json_dir, "\n");
-  Print(pkginfo_record.PackageName, "\n");
-  json_fname := Concatenation(json_dir![1],
-                              LowercaseString(pkginfo_record.PackageName),
-                              ".json");
-  FileString(json_fname, GapToJsonString(pkginfo_record));
-end;
+OutputJson := function(pkginfos_dir)
+  local pkginfo, pkginfo_rec, pkgname, json_fname;
 
-OutputJson := function(pkginfos_dir, json_dir)
-  local pkginfo;
-
-  # TODO arg checks
-  if not IsDirectoryPath(json_dir) then
-    Exec(Concatenation("mkdir ", json_dir));
-    Assert(0, IsDirectoryPath(json_dir));
+  if not IsString(pkginfos_dir) or not IsDirectoryPath(pkginfos_dir) then
+    Error(StringFormatted("the directory {} does not exist", pkginfos_dir));
   fi;
 
   pkginfos_dir := Directory(pkginfos_dir);
-  json_dir     := Directory(json_dir);
+
   for pkginfo in DirectoryContents(pkginfos_dir) do
     if not StartsWith(pkginfo, ".") then
       pkginfo := Filename(pkginfos_dir, pkginfo);
-      WriteJson(json_dir, PackageInfoRec(pkginfo));
+      pkginfo_rec := PackageInfoRec(pkginfo);
+      pkgname := LowercaseString(pkginfo_rec.PackageName);
+      if not IsDirectoryPath(pkgname) then
+        PrintFormatted("{1}: the directory {1} does not exist, skipping!\n", pkgname);
+        continue;
+      fi;
+      json_fname := Concatenation(pkgname, "/meta.json");
+      PrintFormatted("{}: updating {}\n", pkgname, json_fname);
+      FileString(json_fname, GapToJsonString(pkginfo_rec));
     fi;
   od;
 end;
