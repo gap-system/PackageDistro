@@ -100,7 +100,7 @@ def gap_exec(commands, gap="gap"):
 def scan_for_one_update(pkginfos_dir, pkg_name):
     try:
         fname = join(pkg_name, "meta.json")
-        with open(fname, "r") as f:
+        with open(fname, "r", encoding="utf-8") as f:
             pkg_json = json.load(f)
             try:
                 hash_distro = pkg_json["PackageInfoSHA256"]
@@ -116,11 +116,12 @@ def scan_for_one_update(pkginfos_dir, pkg_name):
                     )
                 )
                 return
+            response.encoding = "utf-8"
             hash_url = hashlib.sha256(response.text.encode("utf-8")).hexdigest()
             if hash_url != hash_distro:
                 notice(pkg_name + ": detected different sha256 hash")
-                with open(join(pkginfos_dir, pkg_name + ".g"), "w") as f:
-                    f.write(response.text)
+                with open(join(pkginfos_dir, pkg_name + ".g"), "wb") as f:
+                    f.write(response.text.encode("utf-8"))
     except (OSError, IOError):
         notice(pkg_name + ": missing meta.json file, skipping!")
 
@@ -155,7 +156,9 @@ def download_all_archives(archive_dir, pkginfos_dir):
             continue
 
         pkgname = pkginfo.split(".")[0]
-        with open(join(pkgname, "meta.json")) as json_file:
+        with open(
+            join(pkgname, "meta.json"), "r", encoding="utf-8"
+        ) as json_file:
             pkg_json = json.load(json_file)
             fmt = pkg_json["ArchiveFormats"].split(" ")[0]
             url = pkg_json["ArchiveURL"] + fmt
@@ -179,13 +182,13 @@ def add_sha256_to_json(archive_dir, pkginfos_dir):
             continue
         pkg_archive = join(archive_dir, pkg_archive)
         pkg_json = {}
-        with open(pkg_json_file, "r") as f:
+        with open(pkg_json_file, "rb") as f:
             pkg_json = json.load(f)
         pkg_json["PackageInfoSHA256"] = sha256(
             join(pkginfos_dir, pkgname + ".g")
         )
         pkg_json["ArchiveSHA256"] = sha256(pkg_archive)
-        with open(pkg_json_file, "w") as f:
+        with open(pkg_json_file, "w", encoding="utf-8") as f:
             json.dump(pkg_json, f, indent=2, ensure_ascii=False, sort_keys=True)
 
 
