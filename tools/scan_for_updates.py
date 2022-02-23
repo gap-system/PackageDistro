@@ -135,10 +135,11 @@ def scan_for_updates(pkginfos_dir):
 
 
 def output_json(pkginfos_dir):
+    dir_of_this_file = os.path.dirname(os.path.realpath(__file__))
     if (
         gap_exec(
             r"OutputJson(\"{}\");".format(pkginfos_dir),
-            gap="gap _tools/scan_for_updates.g",
+            gap="gap {}/scan_for_updates.g".format(dir_of_this_file),
         )
         != 0
     ):
