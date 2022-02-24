@@ -1,6 +1,8 @@
 LoadPackage("json");
 
-InstallMethod(RecNames, [IsRecord and IsInternalRep], x -> AsSSortedList(REC_NAMES(x)));
+InstallMethod(RecNames,
+             [IsRecord and IsInternalRep],
+             x -> AsSSortedList(REC_NAMES(x)));
 
 PackageInfoRec := function(pkginfo_file)
     Unbind(GAPInfo.PackageInfoCurrent);
@@ -17,19 +19,19 @@ end;
 NormalizePkgDate := function(x)
   local date;
   if not (IsString(x) and Length(x) = 10
-    and (ForAll(x{[1, 2, 4, 5, 7, 8, 9, 10]}, IsDigitChar)
-    and x{[ 3, 6 ]} = "//"
-    or ForAll(x{[1, 2, 3, 4, 6, 7, 9, 10]}, IsDigitChar)
-       and x{[5, 8]} = "--")) then
-      return false;
-  elif x{[ 3, 6 ]} = "//" then
-      date := List( SplitString( x, "/" ), Int );
-  elif x{[ 5, 8 ]} = "--" then
-      date := List( SplitString( x, "-" ), Int );
-      date := date{[ 3, 2, 1 ]};
+      and (ForAll(x{[1, 2, 4, 5, 7, 8, 9, 10]}, IsDigitChar)
+      and x{[3, 6]} = "//"
+      or ForAll(x{[1, 2, 3, 4, 6, 7, 9, 10]}, IsDigitChar)
+      and x{[5, 8]} = "--")) then
+    return false;
+  elif x{[3, 6]} = "//" then
+    date := List(SplitString(x, " / "), Int);
+  elif x{[5, 8]} = "--" then
+    date := List(SplitString(x, "-"), Int);
+    date := date{[3, 2, 1]};
   fi;
-  if not (date[2] in [1 .. 12] and date[3] >= 1999 and date[1] in [1 ..
-    DaysInMonth(date[2], date[3])]) then
+  if not (date[2] in [1 .. 12] and date[3] >= 1999
+      and date[1] in [1 .. DaysInMonth(date[2], date[3])]) then
     return fail;
   fi;
   return date;
@@ -67,7 +69,7 @@ ValidatePackagesArchive := function(unpacked_dir, pkgnames)
     pkgnames := [pkgnames];
   fi;
   unpacked_dir := Directory(unpacked_dir);
-  meta_dir:= DirectoryCurrent();
+  meta_dir := DirectoryCurrent();
   nr_failures := 0;
   for pkgname in pkgnames do
       pkginfo_file := Filename(Directory(unpacked_dir), "PackageInfo.g");
@@ -77,9 +79,9 @@ ValidatePackagesArchive := function(unpacked_dir, pkgnames)
       # relative to the package directory can be checked.
       if not ValidatePackageInfo(pkginfo_file) then
         PrintToFormatted("*errout*",
-        "{}: ValidatePackageInfo(\"{}\"); FAILED, skipping!\n",
-                       pkgname,
-                       pkginfo_file);
+                         "{}: ValidatePackageInfo(\"{}\"); FAILED, skipping!\n",
+                         pkgname,
+                         pkginfo_file);
         nr_failures := nr_failures + 1;
         continue;
       fi;
@@ -87,35 +89,38 @@ ValidatePackagesArchive := function(unpacked_dir, pkgnames)
       json_file := Concatenation(pkgname, "/meta.json");
       json_file_old := Concatenation(pkgname, "/meta.json.old");
 
-      pkginfo_record:= PackageInfoRec(pkginfo_file);
+      pkginfo_record := PackageInfoRec(pkginfo_file);
 
       json := JsonStringToGap(StringFile(Filename(meta_dir, json_file)));
       json_old := JsonStringToGap(StringFile(Filename(meta_dir, json_file_old)));
       if CompareVersionNumbers(json_old.Version, json.Version) then
         PrintToFormatted("*errout*",
-        "{}: current release version is {}, but previous release version was {}, FAILED!\n",
-                       pkgname,
-                       json.Version,
-                       json_old.Version);
+                         Concatenation("{}: current release version is {},",
+                         " but previous release version was {}, FAILED!\n"),
+                         pkgname,
+                         json.Version,
+                         json_old.Version);
         nr_failures := nr_failures + 1;
         continue;
       fi;
 
       if EndsWith(LowercaseString(pkginfo_record.Version), "dev") then
         PrintToFormatted("*errout*",
-        "{}: invalid release version {}, FAILED!\n",
-                       pkgname,
-                       pkginfo_record.Version);
+                         "{}: invalid release version {}, FAILED!\n",
+                         pkgname,
+                         pkginfo_record.Version);
         nr_failures := nr_failures + 1;
         continue;
       fi;
 
       if not ComparePkgInfoDates(json_old.Date, pkginfo_record.Date) then
         PrintToFormatted("*errout*",
-        "{}: current release date is {}, but previous release date was {}, FAILED!\n",
-                       pkgname,
-                       pkginfo_record.Date,
-                       json_old.Date);
+                         Concatenation("{}: current release date is {},",
+                                       " but previous release date was {},",
+                                       " FAILED!\n"),
+                         pkgname,
+                         pkginfo_record.Date,
+                         json_old.Date);
         nr_failures := nr_failures + 1;
         continue;
       fi;

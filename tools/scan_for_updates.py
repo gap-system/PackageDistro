@@ -26,12 +26,14 @@ import json
 import os
 import subprocess
 from os.path import join
+from accepts import accepts
 
 import requests
 
 from utils import error, notice, warning
 
 
+@accepts(str)
 def skip(string: str) -> bool:
     return (
         string.startswith(".")
@@ -40,6 +42,7 @@ def skip(string: str) -> bool:
     )
 
 
+@accepts(str)
 def sha256(fname: str) -> str:
     hash_archive = hashlib.sha256()
     with open(fname, "rb") as f:
@@ -48,6 +51,7 @@ def sha256(fname: str) -> str:
     return hash_archive.hexdigest()
 
 
+@accepts(str)
 def metadata(pkg_name: str) -> dict:
     fname = join(pkg_name, "meta.json")
     pkg_json = {}
@@ -62,6 +66,7 @@ def metadata(pkg_name: str) -> dict:
     return pkg_json
 
 
+@accepts(str, str, str, int)
 def download_archive(
     pkg_name: str, url: str, archive_fname: str, tries=5
 ) -> None:
@@ -92,6 +97,7 @@ def download_archive(
             notice("{}: attempt {}/{} failed".format(pkg_name, i + 1, tries))
 
 
+@accepts(dict)
 def download_pkg_info(pkg_json: dict) -> str:
     url = pkg_json["PackageInfoURL"]
     response = requests.get(url)
@@ -106,6 +112,7 @@ def download_pkg_info(pkg_json: dict) -> str:
     return response.text.encode("utf-8")
 
 
+@accepts(str, str)
 def gap_exec(commands: str, gap="gap") -> int:
     assert isinstance(commands, str)
     assert isinstance(gap, str)
@@ -125,6 +132,7 @@ def gap_exec(commands: str, gap="gap") -> int:
             return GAP.returncode
 
 
+@accepts(str, str)
 def scan_for_one_update(pkginfos_dir: str, pkg_name: str) -> None:
     pkg_json = metadata(pkg_name)
     try:
@@ -142,6 +150,7 @@ def scan_for_one_update(pkginfos_dir: str, pkg_name: str) -> None:
             f.write(pkg_info)
 
 
+@accepts(str)
 def scan_for_updates(pkginfos_dir: str) -> None:
     if not os.path.exists(pkginfos_dir):
         os.mkdir(pkginfos_dir)
@@ -151,6 +160,7 @@ def scan_for_updates(pkginfos_dir: str) -> None:
             scan_for_one_update(pkginfos_dir, pkgname)
 
 
+@accepts(str)
 def output_json(pkginfos_dir: str) -> None:
     dir_of_this_file = os.path.dirname(os.path.realpath(__file__))
     if (
@@ -163,6 +173,7 @@ def output_json(pkginfos_dir: str) -> None:
         error("Something went wrong")
 
 
+@accepts(str, str)
 def download_all_archives(archive_dir: str, pkginfos_dir: str) -> dict:
     if not os.path.exists(archive_dir):
         os.mkdir(archive_dir)
@@ -187,6 +198,7 @@ def download_all_archives(archive_dir: str, pkginfos_dir: str) -> dict:
     return archive_name_lookup
 
 
+@accepts(str, dict)
 def add_sha256_to_json(pkginfos_dir: str, archive_name_lookup: dict) -> None:
     for pkgname in sorted(os.listdir(pkginfos_dir)):
         if skip(pkgname):
