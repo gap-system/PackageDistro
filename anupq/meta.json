@@ -2,16 +2,15 @@
   "AbstractHTML": "The <span class=\"pkgname\">ANUPQ</span> package provides an interactive    interface to the p-quotient, p-group generation and standard presentation    algorithms of the ANU pq C program.",
   "AcceptDate": "04/2002",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSha256": "dba77b141c63c913941eca8dd0955e643c86217ec04f2664a35b23dcf9b4a12c",
-  "ArchiveURL": "https://github.com/gap-packages/anupq/releases/download/v3.2.1/anupq-3.2.1",
-  "Autoload": false,
+  "ArchiveSHA256": "87a9f12cf37519848dac8b3c2e0252e77035a67add55cfb747353210a218f43a",
+  "ArchiveURL": "https://github.com/gap-packages/anupq/releases/download/v3.2.5/anupq-3.2.5",
   "AvailabilityTest": null,
-  "BannerString": "---------------------------------------------------------------------------\nLoading    ANUPQ (ANU p-Quotient) 3.2.1\nGAP code by  Greg Gamble <Greg.Gamble@uwa.edu.au> (address for correspondence)\n           Werner Nickel (http://www.mathematik.tu-darmstadt.de/~nickel/)\n           [uses ANU pq binary (C code program) version: 1.9]\nC code by  Eamonn O'Brien (https://www.math.auckland.ac.nz/~obrien)\nCo-maintained by Max Horn <max.horn@uni-siegen.de>\n\n            For help, type: ?ANUPQ\n---------------------------------------------------------------------------\n",
+  "BannerString": "---------------------------------------------------------------------------\nLoading    ANUPQ (ANU p-Quotient) 3.2.5\nGAP code by  Greg Gamble <Greg.Gamble@uwa.edu.au> (address for correspondence)\n           Werner Nickel (http://www.mathematik.tu-darmstadt.de/~nickel/)\n           [uses ANU pq binary (C code program) version: 1.9]\nC code by  Eamonn O'Brien (https://www.math.auckland.ac.nz/~obrien)\nCo-maintained by Max Horn <horn@mathematik.uni-kl.de>\n\n            For help, type: ?ANUPQ\n---------------------------------------------------------------------------\n",
   "CommunicatedBy": "Charles Wright (Eugene)",
-  "Date": "18/04/2019",
+  "Date": "22/02/2022",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">= 4.8",
+    "GAP": ">= 4.9",
     "NeededOtherPackages": [
       [
         "autpgrp",
@@ -20,7 +19,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/anupq-3.2.1",
   "IssueTrackerURL": "https://github.com/gap-packages/anupq/issues",
   "Keywords": [
     "p-quotient",
@@ -28,13 +26,11 @@
     "descendant",
     "standard presentation"
   ],
-  "License": "none",
   "PackageDoc": [
     {
       "ArchiveURLSubset": [
         "doc"
       ],
-      "Autoload": false,
       "BookName": "ANUPQ",
       "HTMLStart": "doc/chap0.html",
       "LongTitle": "ANU p-Quotient",
@@ -42,7 +38,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "ae1188209c19c093fef392a2ab0642d54f2ffb589fae0460ee656724b6b79006",
+  "PackageInfoSHA256": "be83c96ac1302d7d5718fad2adc14a4eace9fb2e83ad0be1bd6ec63baa0cacc8",
   "PackageInfoURL": "https://gap-packages.github.io/anupq/PackageInfo.g",
   "PackageName": "ANUPQ",
   "PackageWWWHome": "https://gap-packages.github.io/anupq/",
@@ -77,14 +73,14 @@
       "WWWHome": "https://www.math.auckland.ac.nz/~obrien"
     },
     {
-      "Email": "max.horn@uni-siegen.de",
+      "Email": "horn@mathematik.uni-kl.de",
       "FirstNames": "Max",
-      "Institution": "Universität Siegen",
+      "Institution": "TU Kaiserslautern",
       "IsAuthor": false,
       "IsMaintainer": true,
       "LastName": "Horn",
-      "Place": "Siegen, Germany",
-      "PostalAddress": "Department Mathematik\nUniversität Siegen\nWalter-Flex-Straße 3\n57072 Siegen\nGermany",
+      "Place": "Kaiserslautern, Germany",
+      "PostalAddress": "Fachbereich Mathematik\nTU Kaiserslautern\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
       "WWWHome": "https://www.quendi.de/math"
     }
   ],
@@ -96,5 +92,5 @@
   "Status": "accepted",
   "Subtitle": "ANU p-Quotient",
   "TestFile": "tst/testinstall.g",
-  "Version": "3.2.1"
+  "Version": "3.2.5"
 }
