@@ -190,6 +190,7 @@ def add_sha256_to_json(archive_dir, pkginfos_dir):
         pkg_json["ArchiveSHA256"] = sha256(pkg_archive)
         with open(pkg_json_file, "w", encoding="utf-8") as f:
             json.dump(pkg_json, f, indent=2, ensure_ascii=False, sort_keys=True)
+            f.write("\n")
 
 
 def main():
