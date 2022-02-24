@@ -40,9 +40,9 @@ def skip(string):
     )
 
 
-def sha256(archive_fname):
+def sha256(fname):
     hash_archive = hashlib.sha256()
-    with open(archive_fname, "rb") as f:
+    with open(fname, "rb") as f:
         for chunk in iter(lambda: f.read(1024), b""):
             hash_archive.update(chunk)
     return hash_archive.hexdigest()
@@ -62,7 +62,7 @@ def metadata(pkg_name):
     return pkg_json
 
 
-def download_archive(pkg_name, url, archive_dir, archive_fname, tries=5):
+def download_archive(pkg_name, url, archive_fname, tries=5):
     archive_ext = archive_fname.split(".")
     if archive_ext[-1] == "gz" or archive_ext[-1] == "bz2":
         archive_ext = "." + ".".join([archive_ext[-2], archive_ext[-1]])
@@ -70,7 +70,6 @@ def download_archive(pkg_name, url, archive_dir, archive_fname, tries=5):
         assert archive_ext[-1] == "zip"
         archive_ext = ".zip"
 
-    archive_fname = join(archive_dir, archive_fname)
     if os.path.exists(archive_fname) and os.path.isfile(archive_fname):
         notice(
             "{}: {} already exists, not downloading again".format(
@@ -172,13 +171,15 @@ def download_all_archives(archive_dir, pkginfos_dir):
             pkg_json = json.load(json_file)
             fmt = pkg_json["ArchiveFormats"].split(" ")[0]
             url = pkg_json["ArchiveURL"] + fmt
-            archive_name = pkg_json["ArchiveURL"].split("/")[-1] + fmt
+            archive_name = join(
+                archive_dir, pkg_json["ArchiveURL"].split("/")[-1] + fmt
+            )
             archive_name_lookup[pkgname] = archive_name
-            download_archive(pkgname, url, archive_dir, archive_name)
+            download_archive(pkgname, url, archive_name)
     return archive_name_lookup
 
 
-def add_sha256_to_json(archive_dir, pkginfos_dir, archive_name_lookup):
+def add_sha256_to_json(pkginfos_dir, archive_name_lookup):
     for pkgname in sorted(os.listdir(pkginfos_dir)):
         if skip(pkgname):
             continue
@@ -190,7 +191,6 @@ def add_sha256_to_json(archive_dir, pkginfos_dir, archive_name_lookup):
         except KeyError:
             notice("Could not locate archive for " + pkgname)
             continue
-        pkg_archive = join(archive_dir, pkg_archive)
         pkg_json = {}
         with open(pkg_json_file, "rb") as f:
             pkg_json = json.load(f)
@@ -210,7 +210,7 @@ def main():
     scan_for_updates(pkginfos_dir)
     output_json(pkginfos_dir)
     archive_name_lookup = download_all_archives(archive_dir, pkginfos_dir)
-    add_sha256_to_json(archive_dir, pkginfos_dir, archive_name_lookup)
+    add_sha256_to_json(pkginfos_dir, archive_name_lookup)
 
 
 if __name__ == "__main__":

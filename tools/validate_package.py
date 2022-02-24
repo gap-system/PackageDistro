@@ -13,19 +13,32 @@
 # pylint: disable=C0116, C0103
 
 """
-TODO
+Runs some basic validation of the pkgname/meta.json against the package
+archive, and the old meta data.
+
+Should be run after scan_for_updates.py, as follows
+
+    _tools/validate_package.py  aclib digraphs walrus
+    aclib: _archives/aclib-1.3.2.tar.gz already exists, not downloading again
+    aclib: unpacking _archives/aclib-1.3.2.tar.gz into _unpacked_archives ...
+    aclib: current release version is 1.3.2, but previous release version was 1.3.2, FAILED!
+    aclib: validation FAILED!
+    digraphs: _archives/digraphs-1.5.0.tar.gz already exists, not downloading again
+    digraphs: unpacking _archives/digraphs-1.5.0.tar.gz into _unpacked_archives ...
+    digraphs: validated ok!
+    walrus: _archives/walrus-0.9991.tar.gz already exists, not downloading again
+    walrus: unpacking _archives/walrus-0.9991.tar.gz into _unpacked_archives ...
+    walrus: the file walrus/meta.yml.old is missing, FAILED!
 """
 
-import json
 import os
-import shutil
 import sys
 import tarfile
 import zipfile
 from os.path import join
 
 from scan_for_updates import download_archive, gap_exec, metadata, sha256
-from utils import error, notice, warning
+from utils import notice, warning
 
 
 def unpack_archive(unpack_dir, pkg_name, archive_fname):
@@ -55,15 +68,8 @@ def unpack_archive(unpack_dir, pkg_name, archive_fname):
 def unpacked_archive_name(unpack_dir, pkg_name):
     for x in os.listdir(unpack_dir):
         if len(x) >= len(pkg_name) and x[: len(pkg_name)].lower() == pkg_name:
-            return x
+            return join(unpack_dir, x)
     warning("{}: couldn't determine the unpacked archive directory!")
-
-
-def archive_name(archive_dir, pkg_name):
-    for x in os.listdir(archive_dir):
-        if len(x) >= len(pkg_name) and x[: len(pkg_name)].lower() == pkg_name:
-            return x
-    warning("{}: couldn't determine the archive name!")
 
 
 def validate_package(pkg_name, unpacked_name, packed_name, pkg_json):
@@ -72,7 +78,7 @@ def validate_package(pkg_name, unpacked_name, packed_name, pkg_json):
 
     if pkg_json["PackageInfoSHA256"] != sha256(pkg_info_name):
         warning(
-            "{0}: {0}/meta.yml:PackageInfoSHA256 is not the SHA256 of {1}!".format(
+            "{0}: {0}/meta.yml:PackageInfoSHA256 is not the SHA256 of {1}, FAILED!".format(
                 pkg_name, pkg_info_name
             )
         )
@@ -80,18 +86,19 @@ def validate_package(pkg_name, unpacked_name, packed_name, pkg_json):
 
     if pkg_json["ArchiveSHA256"] != sha256(packed_name):
         warning(
-            "{0}: {0}/meta.yml:ArchiveSHA256 is not the SHA256 of {1}!".format(
+            "{0}: {0}/meta.yml:ArchiveSHA256 is not the SHA256 of {1}, FAILED!".format(
                 pkg_name, packed_name
             )
         )
         result = False
 
     if not os.path.exists(join(pkg_name, "meta.json.old")):
-        error(
-            "{0}: the file {0}/meta.yml.old is missing, failed!".format(
+        warning(
+            "{0}: the file {0}/meta.yml.old is missing, FAILED!".format(
                 pkg_name
             )
         )
+        result = False
 
     return result
     # TODO: check SHA256 hashes for PackageinfoURL and archive are the same.
@@ -106,18 +113,16 @@ def main(pkg_name):
     fmt = pkg_json["ArchiveFormats"].split(" ")[0]
     url = pkg_json["ArchiveURL"] + fmt
 
-    packed_name = pkg_json["ArchiveURL"].split("/")[-1] + fmt
-    download_archive(pkg_name, url, archive_dir, packed_name, tries=5)
+    packed_name = join(archive_dir, pkg_json["ArchiveURL"].split("/")[-1] + fmt)
+    download_archive(pkg_name, url, packed_name, tries=5)
 
-    unpack_archive(unpack_dir, pkg_name, join(archive_dir, packed_name))
-    unpacked_name = join(
-        unpack_dir, unpacked_archive_name(unpack_dir, pkg_name)
-    )
+    unpack_archive(unpack_dir, pkg_name, packed_name)
+    unpacked_name = unpacked_archive_name(unpack_dir, pkg_name)
 
     if validate_package(
         pkg_name,
         unpacked_name,
-        join(archive_dir, packed_name),
+        packed_name,
         pkg_json,
     ):
         dir_of_this_file = os.path.dirname(os.path.realpath(__file__))

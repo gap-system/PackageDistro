@@ -7,7 +7,7 @@ PackageInfoRec := function(pkginfo_file)
     Read(pkginfo_file);
     if not IsBound(GAPInfo.PackageInfoCurrent) then
       # TODO better error message
-      Error("reading PackageInfo.g failed");
+      Error("reading PackageInfo.g FAILED");
     fi;
     return GAPInfo.PackageInfoCurrent;
 end;
@@ -77,7 +77,7 @@ ValidatePackagesArchive := function(unpacked_dir, pkgnames)
       # relative to the package directory can be checked.
       if not ValidatePackageInfo(pkginfo_file) then
         PrintToFormatted("*errout*",
-        "{}: ValidatePackageInfo(\"{}\"); failed, skipping!\n",
+        "{}: ValidatePackageInfo(\"{}\"); FAILED, skipping!\n",
                        pkgname,
                        pkginfo_file);
         nr_failures := nr_failures + 1;
@@ -93,7 +93,7 @@ ValidatePackagesArchive := function(unpacked_dir, pkgnames)
       json_old := JsonStringToGap(StringFile(Filename(meta_dir, json_file_old)));
       if CompareVersionNumbers(json_old.Version, json.Version) then
         PrintToFormatted("*errout*",
-        "{}: current release version is {}, but previous release version was {}, failed!\n",
+        "{}: current release version is {}, but previous release version was {}, FAILED!\n",
                        pkgname,
                        json.Version,
                        json_old.Version);
@@ -103,7 +103,7 @@ ValidatePackagesArchive := function(unpacked_dir, pkgnames)
 
       if EndsWith(LowercaseString(pkginfo_record.Version), "dev") then
         PrintToFormatted("*errout*",
-        "{}: invalid release version {}, failed!\n",
+        "{}: invalid release version {}, FAILED!\n",
                        pkgname,
                        pkginfo_record.Version);
         nr_failures := nr_failures + 1;
@@ -112,7 +112,7 @@ ValidatePackagesArchive := function(unpacked_dir, pkgnames)
 
       if not ComparePkgInfoDates(json_old.Date, pkginfo_record.Date) then
         PrintToFormatted("*errout*",
-        "{}: current release date is {}, but previous release date was {}, failed!\n",
+        "{}: current release date is {}, but previous release date was {}, FAILED!\n",
                        pkgname,
                        pkginfo_record.Date,
                        json_old.Date);
