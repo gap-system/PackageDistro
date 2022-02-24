@@ -32,7 +32,7 @@ import requests
 from utils import error, notice, warning
 
 
-def skip(string):
+def skip(string: str) -> bool:
     return (
         string.startswith(".")
         or string.startswith("_")
@@ -40,7 +40,7 @@ def skip(string):
     )
 
 
-def sha256(fname):
+def sha256(fname: str) -> str:
     hash_archive = hashlib.sha256()
     with open(fname, "rb") as f:
         for chunk in iter(lambda: f.read(1024), b""):
@@ -48,7 +48,7 @@ def sha256(fname):
     return hash_archive.hexdigest()
 
 
-def metadata(pkg_name):
+def metadata(pkg_name: str) -> dict:
     fname = join(pkg_name, "meta.json")
     pkg_json = {}
 
@@ -62,7 +62,9 @@ def metadata(pkg_name):
     return pkg_json
 
 
-def download_archive(pkg_name, url, archive_fname, tries=5):
+def download_archive(
+    pkg_name: str, url: str, archive_fname: str, tries=5
+) -> None:
     archive_ext = archive_fname.split(".")
     if archive_ext[-1] == "gz" or archive_ext[-1] == "bz2":
         archive_ext = "." + ".".join([archive_ext[-2], archive_ext[-1]])
@@ -86,12 +88,11 @@ def download_archive(pkg_name, url, archive_fname, tries=5):
                 for chunk in response.raw.stream(1024, decode_content=False):
                     if chunk:
                         f.write(chunk)
-            return
         except requests.RequestException:
             notice("{}: attempt {}/{} failed".format(pkg_name, i + 1, tries))
 
 
-def download_pkg_info(pkg_json):
+def download_pkg_info(pkg_json: dict) -> str:
     url = pkg_json["PackageInfoURL"]
     response = requests.get(url)
     if response.status_code != 200:
@@ -105,7 +106,7 @@ def download_pkg_info(pkg_json):
     return response.text.encode("utf-8")
 
 
-def gap_exec(commands, gap="gap"):
+def gap_exec(commands: str, gap="gap") -> int:
     assert isinstance(commands, str)
     assert isinstance(gap, str)
 
@@ -124,7 +125,7 @@ def gap_exec(commands, gap="gap"):
             return GAP.returncode
 
 
-def scan_for_one_update(pkginfos_dir, pkg_name):
+def scan_for_one_update(pkginfos_dir: str, pkg_name: str) -> None:
     pkg_json = metadata(pkg_name)
     try:
         hash_distro = pkg_json["PackageInfoSHA256"]
@@ -141,7 +142,7 @@ def scan_for_one_update(pkginfos_dir, pkg_name):
             f.write(pkg_info)
 
 
-def scan_for_updates(pkginfos_dir):
+def scan_for_updates(pkginfos_dir: str) -> None:
     if not os.path.exists(pkginfos_dir):
         os.mkdir(pkginfos_dir)
     assert os.path.isdir(pkginfos_dir)
@@ -150,7 +151,7 @@ def scan_for_updates(pkginfos_dir):
             scan_for_one_update(pkginfos_dir, pkgname)
 
 
-def output_json(pkginfos_dir):
+def output_json(pkginfos_dir: str) -> None:
     dir_of_this_file = os.path.dirname(os.path.realpath(__file__))
     if (
         gap_exec(
@@ -162,7 +163,7 @@ def output_json(pkginfos_dir):
         error("Something went wrong")
 
 
-def download_all_archives(archive_dir, pkginfos_dir):
+def download_all_archives(archive_dir: str, pkginfos_dir: str) -> dict:
     if not os.path.exists(archive_dir):
         os.mkdir(archive_dir)
     assert os.path.isdir(archive_dir)
@@ -186,7 +187,7 @@ def download_all_archives(archive_dir, pkginfos_dir):
     return archive_name_lookup
 
 
-def add_sha256_to_json(pkginfos_dir, archive_name_lookup):
+def add_sha256_to_json(pkginfos_dir: str, archive_name_lookup: dict) -> None:
     for pkgname in sorted(os.listdir(pkginfos_dir)):
         if skip(pkgname):
             continue
