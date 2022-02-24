@@ -91,6 +91,20 @@ def download_archive(pkg_name, url, archive_fname, tries=5):
             notice("{}: attempt {}/{} failed".format(pkg_name, i + 1, tries))
 
 
+def download_pkg_info(pkg_json):
+    url = pkg_json["PackageInfoURL"]
+    response = requests.get(url)
+    if response.status_code != 200:
+        warning(
+            "error trying to download {}, status code {}, skipping!".format(
+                url, response.status_code
+            )
+        )
+        return
+    response.encoding = "utf-8"
+    return response.text.encode("utf-8")
+
+
 def gap_exec(commands, gap="gap"):
     assert isinstance(commands, str)
     assert isinstance(gap, str)
@@ -117,21 +131,14 @@ def scan_for_one_update(pkginfos_dir, pkg_name):
     except KeyError:
         notice(pkg_name + ': missing key "PackageInfoSHA256"')
         hash_distro = 0
-    url = pkg_json["PackageInfoURL"]
-    response = requests.get(url)
-    if response.status_code != 200:
-        warning(
-            "error trying to download {}, status code {}, skipping!".format(
-                url, response.status_code
-            )
-        )
+    pkg_info = download_pkg_info(pkg_json)
+    if not pkg_info:
         return
-    response.encoding = "utf-8"
-    hash_url = hashlib.sha256(response.text.encode("utf-8")).hexdigest()
+    hash_url = hashlib.sha256(pkg_info).hexdigest()
     if hash_url != hash_distro:
         notice(pkg_name + ": detected different sha256 hash")
         with open(join(pkginfos_dir, pkg_name + ".g"), "wb") as f:
-            f.write(response.text.encode("utf-8"))
+            f.write(pkg_info)
 
 
 def scan_for_updates(pkginfos_dir):
