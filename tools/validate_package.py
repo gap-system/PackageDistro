@@ -36,8 +36,15 @@ import sys
 import tarfile
 import zipfile
 from os.path import join
+from accepts import accepts
 
-from scan_for_updates import download_archive, gap_exec, metadata, sha256
+from scan_for_updates import (
+    download_archive,
+    download_pkg_info,
+    gap_exec,
+    metadata,
+    sha256,
+)
 from utils import notice, warning
 
 

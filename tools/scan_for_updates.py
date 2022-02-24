@@ -26,9 +26,9 @@ import json
 import os
 import subprocess
 from os.path import join
-from accepts import accepts
 
 import requests
+from accepts import accepts
 
 from utils import error, notice, warning
 
@@ -72,8 +72,9 @@ def download_archive(
 ) -> None:
     archive_ext = archive_fname.split(".")
     if archive_ext[-1] == "gz" or archive_ext[-1] == "bz2":
-        archive_ext = "." + ".".join([archive_ext[-2], archive_ext[-1]])
+        archive_ext = "." + ".".join(archive_ext[-2:])
     else:
+        print(archive_ext)
         assert archive_ext[-1] == "zip"
         archive_ext = ".zip"
 
@@ -93,8 +94,11 @@ def download_archive(
                 for chunk in response.raw.stream(1024, decode_content=False):
                     if chunk:
                         f.write(chunk)
+            return
         except requests.RequestException:
             notice("{}: attempt {}/{} failed".format(pkg_name, i + 1, tries))
+    else:
+        error("{}: failed to download archive".format(pkg_name))
 
 
 @accepts(dict)
@@ -114,8 +118,6 @@ def download_pkg_info(pkg_json: dict) -> str:
 
 @accepts(str, str)
 def gap_exec(commands: str, gap="gap") -> int:
-    assert isinstance(commands, str)
-    assert isinstance(gap, str)
 
     with subprocess.Popen(
         r'echo "{}"'.format(commands),
