@@ -2,7 +2,7 @@
   "AbstractHTML": "<span class=\"pkgname\">GRAPE</span> is a package for computing with graphs and groups, and is primarily designed for constructing and analysing graphs related to groups, finite geometries, and designs.",
   "AcceptDate": "07/1993",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "bbd325dce879a046dbad2485d6b14ee261c718b90e3021b034eaf05d43eb3e4e",
+  "ArchiveSHA256": "bbd325dce879a046dbad2485d6b14ee261c718b90e3021b034eaf05d43eb3e4e",
   "ArchiveURL": "https://github.com/gap-packages/grape/releases/download/v4.8.3/grape-4.8.3",
   "AvailabilityTest": null,
   "BinaryFiles": [
@@ -40,7 +40,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "e067e5e0aa8778fc38c9818e227a29a1c1c0524d4d9424b9de43099cdd735027",
+  "PackageInfoSHA256": "e067e5e0aa8778fc38c9818e227a29a1c1c0524d4d9424b9de43099cdd735027",
   "PackageInfoURL": "https://gap-packages.github.io/grape/PackageInfo.g",
   "PackageName": "GRAPE",
   "PackageWWWHome": "https://gap-packages.github.io/grape",

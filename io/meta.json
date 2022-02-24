@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">IO</span> package, as its name suggests,    provides bindings for <span class=\"pkgname\">GAP</span> to the lower    levels of Input/Output functionality in the C library.",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSha256": "0e91bc6472e6111d1a14c6040c21f2f7dfbb2f2f32ffbcf3d1749e052839a659",
+  "ArchiveSHA256": "0e91bc6472e6111d1a14c6040c21f2f7dfbb2f2f32ffbcf3d1749e052839a659",
   "ArchiveURL": "https://github.com/gap-packages/io/releases/download/v4.7.0/io-4.7.0",
   "AutoDoc": {
     "TitlePage": {
@@ -46,7 +46,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "42d3f99459943de6eb3883edba2ef5c89aaf698f8e017ec16782b53b01852e11",
+  "PackageInfoSHA256": "42d3f99459943de6eb3883edba2ef5c89aaf698f8e017ec16782b53b01852e11",
   "PackageInfoURL": "https://gap-packages.github.io/io/PackageInfo.g",
   "PackageName": "IO",
   "PackageWWWHome": "https://gap-packages.github.io/io",

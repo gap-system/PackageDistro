@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">IO_ForHomalg</span> package launches the command-line-interface of an external computer algebra system and connects it to <span class=\"pkgname\">homalg</span> using an Input/Output stream",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSha256": "779eea473b5eb73ca7f6a617abb6041cdf78202c363584d457a554aadb510034",
+  "ArchiveSHA256": "779eea473b5eb73ca7f6a617abb6041cdf78202c363584d457a554aadb510034",
   "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/IO_ForHomalg-2020.10-02/IO_ForHomalg-2020.10-02",
   "Autoload": false,
   "AvailabilityTest": null,
@@ -46,7 +46,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "3bc0cfdb74fcad1f60aea17d9e6f8733a3315d30e4180b27628d286b556b236e",
+  "PackageInfoSHA256": "3bc0cfdb74fcad1f60aea17d9e6f8733a3315d30e4180b27628d286b556b236e",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/IO_ForHomalg/PackageInfo.g",
   "PackageName": "IO_ForHomalg",
   "PackageWWWHome": "https://homalg-project.github.io/homalg_project/IO_ForHomalg",

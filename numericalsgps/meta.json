@@ -2,7 +2,7 @@
   "AbstractHTML": "The <span class=\"pkgname\">NumericalSgps</span> package, is a package to compute with numerical semigroups.",
   "AcceptDate": "05/2015",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "3a58910d5242f83dba994002c3a4726ae13a5f10e0e73aab4b07ce11170e2def",
+  "ArchiveSHA256": "3a58910d5242f83dba994002c3a4726ae13a5f10e0e73aab4b07ce11170e2def",
   "ArchiveURL": "https://github.com/gap-packages/numericalsgps/releases/download/v1.2.2/NumericalSgps-1.2.2",
   "AvailabilityTest": null,
   "BannerString": "----------------------------------------------------------------\nLoading  NumericalSgps 1.2.2\nFor help, type: ?NumericalSgps: \nTo gain profit from other packages, please refer to chapter\n'External Packages' in the manual, or type: ?NumSgpsUse \n----------------------------------------------------------------\n",
@@ -34,7 +34,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "5b59242fb950e6f13756979bbf821c88545be563899fe856bb8bd2476f4c57f4",
+  "PackageInfoSHA256": "5b59242fb950e6f13756979bbf821c88545be563899fe856bb8bd2476f4c57f4",
   "PackageInfoURL": "https://gap-packages.github.io/numericalsgps/PackageInfo.g",
   "PackageName": "NumericalSgps",
   "PackageWWWHome": "https://gap-packages.github.io/numericalsgps",

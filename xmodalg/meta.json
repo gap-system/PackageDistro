@@ -2,7 +2,7 @@
   "AbstractHTML": "The <span class=\"pkgname\">XModAlg</span> package provides a collection of functions for computing with crossed modules and cat1-algebras and morphisms of these structures.",
   "AcceptDate": "",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "a03c598a5d0b973d2c767a02016b526806c4af2eb986ae3ca80c892f320fca39",
+  "ArchiveSHA256": "a03c598a5d0b973d2c767a02016b526806c4af2eb986ae3ca80c892f320fca39",
   "ArchiveURL": "https://github.com/gap-packages/xmodalg/releases/download/v1.18/XModAlg-1.18",
   "AutoDoc": {
     "TitlePage": {
@@ -51,7 +51,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "a36613c4a9556330f8bdbc3fb76c0d7692ea914363caf14cf7051d83374fcb1f",
+  "PackageInfoSHA256": "a36613c4a9556330f8bdbc3fb76c0d7692ea914363caf14cf7051d83374fcb1f",
   "PackageInfoURL": "https://gap-packages.github.io/xmodalg/PackageInfo.g",
   "PackageName": "XModAlg",
   "PackageWWWHome": "https://gap-packages.github.io/xmodalg/",

@@ -2,7 +2,7 @@
   "AbstractHTML": "The LPRES Package defines new GAP objects to work with L-presented groups, namely groups given by a finite generating set and a possibly-infinite set of relations given as iterates of finitely many seed relations by a finite set of endomorphisms. The package implements nilpotent quotient, Todd-Coxeter and Reidemeister-Schreier algorithms for L-presented groups.",
   "AcceptDate": "09/2018",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "595115fe5fe62574a4304647deeb3e4b375d8223392cb7de2531eeb5b847aca6",
+  "ArchiveSHA256": "595115fe5fe62574a4304647deeb3e4b375d8223392cb7de2531eeb5b847aca6",
   "ArchiveURL": "https://github.com/gap-packages/lpres/releases/download/v1.0.1/lpres-1.0.1",
   "Autoload": false,
   "AvailabilityTest": null,
@@ -69,7 +69,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "e84acdd294753edb4247823c8595f4866890fa1388dd14c4b80e7840ddff08ac",
+  "PackageInfoSHA256": "e84acdd294753edb4247823c8595f4866890fa1388dd14c4b80e7840ddff08ac",
   "PackageInfoURL": "https://gap-packages.github.io/lpres/PackageInfo.g",
   "PackageName": "lpres",
   "PackageWWWHome": "https://gap-packages.github.io/lpres",

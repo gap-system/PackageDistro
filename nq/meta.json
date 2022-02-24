@@ -2,7 +2,7 @@
   "AbstractHTML": "This package provides access to the ANU nilpotent quotient program for computing nilpotent factor groups of finitely presented groups.",
   "AcceptDate": "01/2003",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSha256": "e35d19252b83efa28df82c4998d438579ac29a41442576510dd8212eac338da6",
+  "ArchiveSHA256": "e35d19252b83efa28df82c4998d438579ac29a41442576510dd8212eac338da6",
   "ArchiveURL": "https://github.com/gap-packages/nq/releases/download/v2.5.4/nq-2.5.4",
   "AutoDoc": {
     "TitlePage": {
@@ -60,7 +60,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "4225b45e92ea66284a835fd2ce5654f0cb4ff42ebba10b4919adebc99bccc5f5",
+  "PackageInfoSHA256": "4225b45e92ea66284a835fd2ce5654f0cb4ff42ebba10b4919adebc99bccc5f5",
   "PackageInfoURL": "https://gap-packages.github.io/nq/PackageInfo.g",
   "PackageName": "nq",
   "PackageWWWHome": "https://gap-packages.github.io/nq/",

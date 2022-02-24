@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "This package contains Brauer tables of Schur covers of symmetric and alternating groups, and provides some related functionalities.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "700b55f0b00b5578e2de014b286b815777644dde605c60f2095c8555eb508587",
+  "ArchiveSHA256": "700b55f0b00b5578e2de014b286b815777644dde605c60f2095c8555eb508587",
   "ArchiveURL": "https://github.com/gap-packages/spinsym/releases/download/v1.5.2/spinsym-1.5.2",
   "AutoDoc": {
     "TitlePage": {
@@ -51,7 +51,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "3fb065403af7448084daa29cc4e87026c466beaa4102b58aad23b6bd6353a215",
+  "PackageInfoSHA256": "3fb065403af7448084daa29cc4e87026c466beaa4102b58aad23b6bd6353a215",
   "PackageInfoURL": "https://gap-packages.github.io/spinsym/PackageInfo.g",
   "PackageName": "SpinSym",
   "PackageWWWHome": "https://gap-packages.github.io/spinsym/",

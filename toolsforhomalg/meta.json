@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">ToolsForHomalg</span> package provides GAP extensions for the homalg project",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSha256": "404ae9b99140a8ad3a1fafb33b9b81c7c89ae5797807ba76d23f00cc2c1513bd",
+  "ArchiveSHA256": "404ae9b99140a8ad3a1fafb33b9b81c7c89ae5797807ba76d23f00cc2c1513bd",
   "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/ToolsForHomalg-2020.10-03/ToolsForHomalg-2020.10-03",
   "Autoload": false,
   "AvailabilityTest": null,
@@ -42,7 +42,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "0af058199a19fa6d393008f847fc1c62e30067c900ff9e1f7d44b77577fc6696",
+  "PackageInfoSHA256": "0af058199a19fa6d393008f847fc1c62e30067c900ff9e1f7d44b77577fc6696",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/ToolsForHomalg/PackageInfo.g",
   "PackageName": "ToolsForHomalg",
   "PackageWWWHome": "https://homalg-project.github.io/homalg_project/ToolsForHomalg",

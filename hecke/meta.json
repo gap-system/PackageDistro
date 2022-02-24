@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">Hecke</span> package provides functions for calculating decomposition matrices of Hecke algebras of the symmetric groups and q-Schur algebras. Hecke is a port of the <span class=\"pkgname\">GAP 3</span> package <span class=\"pkgname\">Specht 2.4</span> to <span class=\"pkgname\">GAP 4</span>.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "f8847a80b74ee979f0275ee8496232475e1c2939990a091f44e31ef39b7718ed",
+  "ArchiveSHA256": "f8847a80b74ee979f0275ee8496232475e1c2939990a091f44e31ef39b7718ed",
   "ArchiveURL": "https://github.com/gap-packages/hecke/releases/download/v1.5.3/hecke-1.5.3",
   "AutoDoc": {
     "TitlePage": {
@@ -39,7 +39,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "07a7555399aecd810d80448cac82e6fe448550324e4ea90445abbab3d6e9c63a",
+  "PackageInfoSHA256": "07a7555399aecd810d80448cac82e6fe448550324e4ea90445abbab3d6e9c63a",
   "PackageInfoURL": "https://gap-packages.github.io/hecke/PackageInfo.g",
   "PackageName": "hecke",
   "PackageWWWHome": "https://gap-packages.github.io/hecke/",

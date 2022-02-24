@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "This homalg based package realizes the computability of the Abelian category of finitely presented graded modules over a computable graded ring",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSha256": "33f09d4a5fa77480276eef9e4cceb25ad79b6f98e02847142cf75c3381c88fad",
+  "ArchiveSHA256": "33f09d4a5fa77480276eef9e4cceb25ad79b6f98e02847142cf75c3381c88fad",
   "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/GradedModules-2020.10-02/GradedModules-2020.10-02",
   "Autoload": false,
   "AvailabilityTest": null,
@@ -68,7 +68,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "e340764775f7203bd27abb0088545c7fa7ecd12d84c2ed2ff551e25bbd97dabc",
+  "PackageInfoSHA256": "e340764775f7203bd27abb0088545c7fa7ecd12d84c2ed2ff551e25bbd97dabc",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/GradedModules/PackageInfo.g",
   "PackageName": "GradedModules",
   "PackageWWWHome": "https://homalg-project.github.io/homalg_project/GradedModules",

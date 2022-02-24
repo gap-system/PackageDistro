@@ -2,7 +2,7 @@
   "AbstractHTML": "The package <span class=\"pkgname\">LieRing</span> contains                  functionality for working with finitely presented Lie rings and the Lazard correspondence.",
   "AcceptDate": "12/2013",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "f5a7e413179a8fa6ff4df87678b64118166fd05c33741e6a2e5f2138b8a2087c",
+  "ArchiveSHA256": "f5a7e413179a8fa6ff4df87678b64118166fd05c33741e6a2e5f2138b8a2087c",
   "ArchiveURL": "https://github.com/gap-packages/liering/releases/download/v2.4.1/liering-2.4.1",
   "AutoDoc": {
     "TitlePage": {
@@ -41,7 +41,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "e69ef94fb705e2f082724674fc61d5b2470dda762773e73efdd59aa915236c44",
+  "PackageInfoSHA256": "e69ef94fb705e2f082724674fc61d5b2470dda762773e73efdd59aa915236c44",
   "PackageInfoURL": "https://gap-packages.github.io/liering/PackageInfo.g",
   "PackageName": "LieRing",
   "PackageWWWHome": "https://gap-packages.github.io/liering/",

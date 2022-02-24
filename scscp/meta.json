@@ -2,7 +2,7 @@
   "AbstractHTML": "This package implements the <a href=\"https://www.openmath.org/standard/scscp/\">Symbolic Computation Software Composability Protocol</a> for the GAP system.",
   "AcceptDate": "08/2010",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "f316ff03a19ad4cc2982e9126e5facf5e296b25250e99cc3c5eddca2b9b5c5ff",
+  "ArchiveSHA256": "f316ff03a19ad4cc2982e9126e5facf5e296b25250e99cc3c5eddca2b9b5c5ff",
   "ArchiveURL": "https://github.com/gap-packages/scscp/releases/download/v2.3.1/SCSCP-2.3.1",
   "Autoload": false,
   "AvailabilityTest": null,
@@ -53,7 +53,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "18d259d37acdc5b518fd618c9379f793ce5bb3529cc728496b85a3d1cda29d83",
+  "PackageInfoSHA256": "18d259d37acdc5b518fd618c9379f793ce5bb3529cc728496b85a3d1cda29d83",
   "PackageInfoURL": "https://gap-packages.github.io/scscp/PackageInfo.g",
   "PackageName": "SCSCP",
   "PackageWWWHome": "https://gap-packages.github.io/scscp",

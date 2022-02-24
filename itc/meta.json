@@ -2,7 +2,7 @@
   "AbstractHTML": "This <span class=\"pkgname\">GAP</span> package provides    access to interactive Todd-Coxeter computations    with finitely presented groups.",
   "AcceptDate": "03/2000",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "6a03b1a3361dd3f15095dfc68b89e37600491dc093c32c45d4d5e628ed940fe0",
+  "ArchiveSHA256": "6a03b1a3361dd3f15095dfc68b89e37600491dc093c32c45d4d5e628ed940fe0",
   "ArchiveURL": "https://github.com/gap-packages/itc/releases/download/v1.5/itc-1.5",
   "Autoload": false,
   "AvailabilityTest": null,
@@ -40,7 +40,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "adbdb491e71a26ba3bfa292a1f71994b0189a671724be42c922a2d479cc25d6a",
+  "PackageInfoSHA256": "adbdb491e71a26ba3bfa292a1f71994b0189a671724be42c922a2d479cc25d6a",
   "PackageInfoURL": "https://gap-packages.github.io/itc/PackageInfo.g",
   "PackageName": "ITC",
   "PackageWWWHome": "https://gap-packages.github.io/itc/",

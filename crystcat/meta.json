@@ -2,7 +2,7 @@
   "AbstractHTML": "This package provides a catalog of crystallographic groups of dimensions 2, 3, and 4 which covers most of the data contained in the book <em>Crystallographic groups of four-dimensional space</em> by H. Brown, R. B&uuml;low, J. Neub&uuml;ser, H. Wondratschek, and H. Zassenhaus (John Wiley, New York, 1978). Methods for the computation with these groups are provided by the package <span class=\"pkgname\">Cryst</span>, which must be installed as well.",
   "AcceptDate": "02/2000",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "2326a766b328dbf006d84aecf96788724eb225b873d6a174e01fd0c79b576873",
+  "ArchiveSHA256": "2326a766b328dbf006d84aecf96788724eb225b873d6a174e01fd0c79b576873",
   "ArchiveURL": "https://www.math.uni-bielefeld.de/~gaehler/gap45/CrystCat/crystcat-1.1.9",
   "AvailabilityTest": null,
   "BinaryFiles": [
@@ -43,7 +43,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "cb968f2020adb668794993b0e3a7e648af82562ed80be3c391c86a77ff956071",
+  "PackageInfoSHA256": "cb968f2020adb668794993b0e3a7e648af82562ed80be3c391c86a77ff956071",
   "PackageInfoURL": "https://www.math.uni-bielefeld.de/~gaehler/gap45/CrystCat/PackageInfo.g",
   "PackageName": "CrystCat",
   "PackageWWWHome": "https://www.math.uni-bielefeld.de/~gaehler/gap45/packages.php",

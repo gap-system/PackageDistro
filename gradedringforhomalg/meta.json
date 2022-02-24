@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "This package is part of the homalg-project and manages graded rings.",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSha256": "5686cba0130cc8881cbbace68c6bc584fff2a64245e2c778591883dd74112a36",
+  "ArchiveSHA256": "5686cba0130cc8881cbbace68c6bc584fff2a64245e2c778591883dd74112a36",
   "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/GradedRingForHomalg-2020.10-02/GradedRingForHomalg-2020.10-02",
   "Autoload": false,
   "AvailabilityTest": null,
@@ -66,7 +66,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "a69bf07023c763299faa2b617759218f6f8cc9186855902ded6e6ae5f74476b9",
+  "PackageInfoSHA256": "a69bf07023c763299faa2b617759218f6f8cc9186855902ded6e6ae5f74476b9",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/GradedRingForHomalg/PackageInfo.g",
   "PackageName": "GradedRingForHomalg",
   "PackageWWWHome": "https://homalg-project.github.io/homalg_project/GradedRingForHomalg",

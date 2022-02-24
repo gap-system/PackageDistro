@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">GaussForHomalg</span> package provides Gauss functionality for <span class=\"pkgname\">homalg</span> using the package <span class=\"pkgname\">Gauss</span>",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSha256": "25d9386cecf0e3726b8861f8414cc6191cdf57c2458907632e472cb4197506e1",
+  "ArchiveSHA256": "25d9386cecf0e3726b8861f8414cc6191cdf57c2458907632e472cb4197506e1",
   "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/GaussForHomalg-2020.10-02/GaussForHomalg-2020.10-02",
   "Autoload": false,
   "AvailabilityTest": null,
@@ -46,7 +46,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "e068f40f45ec96a2ebef78fec5d0f49883317c63154be0f544f0a0f2d4ed9a9f",
+  "PackageInfoSHA256": "e068f40f45ec96a2ebef78fec5d0f49883317c63154be0f544f0a0f2d4ed9a9f",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/GaussForHomalg/PackageInfo.g",
   "PackageName": "GaussForHomalg",
   "PackageWWWHome": "https://homalg-project.github.io/homalg_project/GaussForHomalg",

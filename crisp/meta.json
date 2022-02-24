@@ -2,7 +2,7 @@
   "AbstractHTML": "The <span class=\"pkgname\">GAP</span> package <span class=\"pkgname\">CRISP</span> provides algorithms for computing subgroups of finite soluble groups related to a group class <i>C</i>. In particular, it allows to compute <i>C</i>-radicals and <i>C</i>-injectors for Fitting classes (and Fitting sets) <i>C</i>, <i>C</i>-residuals for formations <i>C</i>, and <i>C</i>-projectors for Schunck classes <i>C</i>. In order to carry out these computations, the group class <i>C</i> must be represented by an algorithm which can decide membership in the group class.</p>  <p>Moreover, <span class=\"pkgname\">CRISP</span> contains algorithms for the computation of normal subgroups invariant under a prescribed set of automorphisms and belonging to a given group class.</p>  <p>This includes an improved method to compute the set of all normal subgroups of a finite soluble group, its characteristic subgroups, minimal normal subgroups and the socle and <i>p</i>-socles for given primes <i>p</i>.",
   "AcceptDate": "12/2000",
   "ArchiveFormats": ".tar.bz2",
-  "ArchiveSha256": "07764ccd055fbefc9feaac56dab88de872c8f785b1c178128c8258aa5df2a884",
+  "ArchiveSHA256": "07764ccd055fbefc9feaac56dab88de872c8f785b1c178128c8258aa5df2a884",
   "ArchiveURL": "http://www.icm.tu-bs.de/~bhoeflin/crisp/crisp-1.4.5",
   "Autoload": true,
   "AvailabilityTest": null,
@@ -48,7 +48,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "b9c1d3fa6577e4a2e3bb64e59f105083f100f8c478cb64ff2f97157203f61360",
+  "PackageInfoSHA256": "b9c1d3fa6577e4a2e3bb64e59f105083f100f8c478cb64ff2f97157203f61360",
   "PackageInfoURL": "http://www.icm.tu-bs.de/~bhoeflin/crisp/PackageInfo.g",
   "PackageName": "CRISP",
   "PackageWWWHome": "http://www.icm.tu-bs.de/~bhoeflin/crisp/index.html",

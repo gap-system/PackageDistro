@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "Tools for computing with elements of unipotent subgroups of Chevalley groups.",
   "ArchiveFormats": ".tar.bz2",
-  "ArchiveSha256": "83ffc3127217397a43c8b0a32e879e10b25e5572112eac24b4127a74e14c8889",
+  "ArchiveSHA256": "83ffc3127217397a43c8b0a32e879e10b25e5572112eac24b4127a74e14c8889",
   "ArchiveURL": "https://github.com/gap-packages/unipot/releases/download/v1.4/unipot-1.4",
   "AvailabilityTest": null,
   "Date": "09/04/2018",
@@ -32,7 +32,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "664c567359d757d39cf0bd37cdd99d986011bf6709755bee2e780a19e89621ce",
+  "PackageInfoSHA256": "664c567359d757d39cf0bd37cdd99d986011bf6709755bee2e780a19e89621ce",
   "PackageInfoURL": "https://gap-packages.github.io/unipot/PackageInfo.g",
   "PackageName": "Unipot",
   "PackageWWWHome": "https://gap-packages.github.io/unipot/",

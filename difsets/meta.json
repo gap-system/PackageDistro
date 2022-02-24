@@ -2,7 +2,7 @@
   "AbstractHTML": "The <span class=\"pkgname\">DifSets</span> package is a         <span class=\"pkgname\">GAP</span> package implementing an algorithm         for enumerating all difference sets up to equivalence in a group.",
   "AcceptDate": "07/2019",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "9474bd64007006b74087908bc05544fea9e5c7ef085dfdf0109d3142003cb303",
+  "ArchiveSHA256": "9474bd64007006b74087908bc05544fea9e5c7ef085dfdf0109d3142003cb303",
   "ArchiveURL": "https://github.com/dylanpeifer/difsets/releases/download/v2.3.1/difsets-2.3.1",
   "AutoDoc": {
     "TitlePage": {
@@ -50,7 +50,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "170d48c64f64e9a1788c67a510c77ef00ecb9c6d07499134169b3c6eb33fc8bc",
+  "PackageInfoSHA256": "170d48c64f64e9a1788c67a510c77ef00ecb9c6d07499134169b3c6eb33fc8bc",
   "PackageInfoURL": "https://dylanpeifer.github.io/difsets/PackageInfo.g",
   "PackageName": "DifSets",
   "PackageWWWHome": "https://dylanpeifer.github.io/difsets",

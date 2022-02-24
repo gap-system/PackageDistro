@@ -2,7 +2,7 @@
   "AbstractHTML": "This package provides functions for computing with formations of finite solvable groups.",
   "AcceptDate": "12/2000",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "49e13347e5f8cb292e6d1b7b2b399a162aeca6c388ab132750d5558536d61015",
+  "ArchiveSHA256": "49e13347e5f8cb292e6d1b7b2b399a162aeca6c388ab132750d5558536d61015",
   "ArchiveURL": "https://github.com/gap-packages/format/releases/download/v1.4.3/format-1.4.3",
   "AvailabilityTest": null,
   "CommunicatedBy": "Joachim Neubüser (Aachen)",
@@ -35,7 +35,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "5b4c676b91cfdd68c96d63dbc46b36a0f437c5dabbbb2063dc9a5abe578ebcc5",
+  "PackageInfoSHA256": "5b4c676b91cfdd68c96d63dbc46b36a0f437c5dabbbb2063dc9a5abe578ebcc5",
   "PackageInfoURL": "https://gap-packages.github.io/format/PackageInfo.g",
   "PackageName": "FORMAT",
   "PackageWWWHome": "https://gap-packages.github.io/format/",

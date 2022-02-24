@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "The <span class='pkgname'>RepnDecomp</span> package provides functions implementing various algorithms for decomposing linear representations of finite groups.",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSha256": "05586bccf27fe2a5e7617370f892f5133e242f9c6ab313943a91b68c7e039963",
+  "ArchiveSHA256": "05586bccf27fe2a5e7617370f892f5133e242f9c6ab313943a91b68c7e039963",
   "ArchiveURL": "https://github.com/gap-packages/RepnDecomp/releases/download/v1.1.0/RepnDecomp-1.1.0",
   "AvailabilityTest": null,
   "Date": "15/02/2020",
@@ -44,7 +44,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "161026b19c04da8f4d890cddb89cdc6672c9c9b6f05a54100a16b981d5544512",
+  "PackageInfoSHA256": "161026b19c04da8f4d890cddb89cdc6672c9c9b6f05a54100a16b981d5544512",
   "PackageInfoURL": "https://gap-packages.github.io/RepnDecomp/PackageInfo.g",
   "PackageName": "RepnDecomp",
   "PackageWWWHome": "https://gap-packages.github.io/RepnDecomp",

@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">AGT</span> package provides functionality to      inspect combinatorial and algebraic properties of graphs in GRAPE format.      It also provides a library  strongly regular graphs on at most 40 vertices,     and several graph constructions",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "d7d5564328eceadb2420524fdb7d4c8f1261e95490950858f31dcca89b8675ae",
+  "ArchiveSHA256": "d7d5564328eceadb2420524fdb7d4c8f1261e95490950858f31dcca89b8675ae",
   "ArchiveURL": "https://github.com/gap-packages/AGT/releases/download/v0.2/AGT-0.2",
   "AvailabilityTest": null,
   "Date": "02/03/2020",
@@ -51,7 +51,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "101d52564de1a1f4f6663829aa1f12f28a444c9e72cd3361f777b1cc67adb59e",
+  "PackageInfoSHA256": "101d52564de1a1f4f6663829aa1f12f28a444c9e72cd3361f777b1cc67adb59e",
   "PackageInfoURL": "https://gap-packages.github.io/agt/PackageInfo.g",
   "PackageName": "AGT",
   "PackageWWWHome": "https://gap-packages.github.io/agt",

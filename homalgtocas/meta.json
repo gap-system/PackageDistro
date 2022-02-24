@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">HomalgToCAS</span> package provides the first layer of abstraction  needed for <span class=\"pkgname\">homalg</span> to access external computer algebra systems",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSha256": "1ccbdfdaa1951ea8d6b09f35c0c8559a1e1cfc3b38ab260a17cbf13f798dda4e",
+  "ArchiveSHA256": "1ccbdfdaa1951ea8d6b09f35c0c8559a1e1cfc3b38ab260a17cbf13f798dda4e",
   "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/HomalgToCAS-2020.10-02/HomalgToCAS-2020.10-02",
   "Autoload": false,
   "AvailabilityTest": null,
@@ -50,7 +50,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "222f497c2fbeaeaa7c2aff19e973fbee5455bd02927247cce1182724d3f07f4c",
+  "PackageInfoSHA256": "222f497c2fbeaeaa7c2aff19e973fbee5455bd02927247cce1182724d3f07f4c",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/HomalgToCAS/PackageInfo.g",
   "PackageName": "HomalgToCAS",
   "PackageWWWHome": "https://homalg-project.github.io/homalg_project/HomalgToCAS",

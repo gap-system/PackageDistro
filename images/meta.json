@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "A package for finding minimal and canonical images in permutation groups",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "3e4f4f6fc6c3812ff0698b9820aaea82b341eeb8543a684405d1c0cefdfd34b7",
+  "ArchiveSHA256": "3e4f4f6fc6c3812ff0698b9820aaea82b341eeb8543a684405d1c0cefdfd34b7",
   "ArchiveURL": "https://github.com/gap-packages/images/releases/download/v1.3.0/images-1.3.0",
   "AutoDoc": {
     "TitlePage": {
@@ -42,7 +42,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "feee0cf2d512a4851e103a8fc351d609d074a96716f277c7483333a566cb48d8",
+  "PackageInfoSHA256": "feee0cf2d512a4851e103a8fc351d609d074a96716f277c7483333a566cb48d8",
   "PackageInfoURL": "https://gap-packages.github.io/images/PackageInfo.g",
   "PackageName": "images",
   "PackageWWWHome": "https://gap-packages.github.io/images/",

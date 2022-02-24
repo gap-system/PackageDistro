@@ -2,7 +2,7 @@
   "AbstractHTML": "IdRel is a package for computing the identities among relations of a group presentation using rewriting, logged rewriting, monoid polynomials, module polynomials and Y-sequences.",
   "AcceptDate": "05/2015",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "142d2c3faf4544655539a7e5df84ec18b0c2c73e98684e6af1874c5dc38b72f4",
+  "ArchiveSHA256": "142d2c3faf4544655539a7e5df84ec18b0c2c73e98684e6af1874c5dc38b72f4",
   "ArchiveURL": "https://github.com/gap-packages/idrel/releases/download/v2.43/idrel-2.43",
   "AutoDoc": {
     "TitlePage": {
@@ -53,7 +53,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "6c09e0e5e1542d48495f5009f059092e402a4885d9902661041a81e51d27fb0d",
+  "PackageInfoSHA256": "6c09e0e5e1542d48495f5009f059092e402a4885d9902661041a81e51d27fb0d",
   "PackageInfoURL": "https://gap-packages.github.io/idrel/PackageInfo.g",
   "PackageName": "idrel",
   "PackageWWWHome": "https://gap-packages.github.io/idrel/",

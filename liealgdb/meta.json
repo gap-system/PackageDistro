@@ -2,7 +2,7 @@
   "AbstractHTML": "",
   "AcceptDate": "09/2007",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "378ee7dc82fde2e2e7fccf60bf6a92eb3fcefa9a05057f9404f7cc551968c427",
+  "ArchiveSHA256": "378ee7dc82fde2e2e7fccf60bf6a92eb3fcefa9a05057f9404f7cc551968c427",
   "ArchiveURL": "https://github.com/gap-packages/liealgdb/releases/download/v2.2.1/liealgdb-2.2.1",
   "AutoDoc": {
     "TitlePage": {
@@ -39,7 +39,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "363904dedb9a47b067890b08ac42c802ad4c054a67b53b9dc8eb9f6663f941f2",
+  "PackageInfoSHA256": "363904dedb9a47b067890b08ac42c802ad4c054a67b53b9dc8eb9f6663f941f2",
   "PackageInfoURL": "https://gap-packages.github.io/liealgdb/PackageInfo.g",
   "PackageName": "LieAlgDB",
   "PackageWWWHome": "https://gap-packages.github.io/liealgdb/",

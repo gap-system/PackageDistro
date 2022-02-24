@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">matgrp</span> package provides an interface to the solvable radical functionality for matrix groups, building on constructive recognition.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "f852faae6606d40e004127c50021e0759ff31e770f78d527bb3277e7430bf2b5",
+  "ArchiveSHA256": "f852faae6606d40e004127c50021e0759ff31e770f78d527bb3277e7430bf2b5",
   "ArchiveURL": "http://www.math.colostate.edu/~hulpke/matgrp/matgrp0.64",
   "Autoload": false,
   "AvailabilityTest": null,
@@ -56,7 +56,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "32daa40880e032ab48776fe3410288a9ace920d4804d4b47bc98324d8f28bfc5",
+  "PackageInfoSHA256": "32daa40880e032ab48776fe3410288a9ace920d4804d4b47bc98324d8f28bfc5",
   "PackageInfoURL": "http://www.math.colostate.edu/~hulpke/matgrp/PackageInfo.g",
   "PackageName": "matgrp",
   "PackageWWWHome": "http://www.math.colostate.edu/~hulpke/matgrp",

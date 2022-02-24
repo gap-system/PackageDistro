@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "The Guarana package provides computational applications of the Mal'cev correspondence, in particular for collection in infinite polycyclic groups.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "af6b2aba1f989ccd879597e2e1e05c4c1aaa5dba436470004067a3fe7daa8b93",
+  "ArchiveSHA256": "af6b2aba1f989ccd879597e2e1e05c4c1aaa5dba436470004067a3fe7daa8b93",
   "ArchiveURL": "https://github.com/gap-packages/guarana/releases/download/v0.96.2/guarana-0.96.2",
   "AutoDoc": {
     "TitlePage": {
@@ -60,7 +60,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "017936b1afa7ef6a31c7670d7806924efb98bc599c7d2a63f3a6691bd7b57c7c",
+  "PackageInfoSHA256": "017936b1afa7ef6a31c7670d7806924efb98bc599c7d2a63f3a6691bd7b57c7c",
   "PackageInfoURL": "https://gap-packages.github.io/guarana/PackageInfo.g",
   "PackageName": "Guarana",
   "PackageWWWHome": "https://gap-packages.github.io/guarana/",

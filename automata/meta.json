@@ -2,7 +2,7 @@
   "AbstractHTML": "The <span class=\"pkgname\">Automata</span> package, as its name suggests, is package with algorithms to deal with automata.",
   "AcceptDate": "09/2004",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSha256": "89db068eea7acccf3a9a52ebdcc8d12fc9f320f5451c16b0c4b6a76dade28b29",
+  "ArchiveSHA256": "89db068eea7acccf3a9a52ebdcc8d12fc9f320f5451c16b0c4b6a76dade28b29",
   "ArchiveURL": "https://github.com/gap-packages/automata/releases/download/v1.14/automata-1.14",
   "Autoload": false,
   "AvailabilityTest": null,
@@ -36,7 +36,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "9f6c8e4c4153d3b31733e297fa6b30bda79058c8474694f662eaf6db4be64aaa",
+  "PackageInfoSHA256": "9f6c8e4c4153d3b31733e297fa6b30bda79058c8474694f662eaf6db4be64aaa",
   "PackageInfoURL": "https://gap-packages.github.io/automata/PackageInfo.g",
   "PackageName": "Automata",
   "PackageWWWHome": "https://gap-packages.github.io/automata/",

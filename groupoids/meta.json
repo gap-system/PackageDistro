@@ -2,7 +2,7 @@
   "AbstractHTML": "The groupoids package provides a collection of functions for computing with finite groupoids, graph of groups, and graphs of groupoids. These are based on the more basic structures of magmas with objects and their mappings. It provides functions for normal forms of elements in Free Products with Amalgamation and in HNN extensions. Up until April 2017 this package was named Gpd.",
   "AcceptDate": "05/2015",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "28c50ca358b4d3f9c0ddf65d578ac1a83acafaa39ca9d859a9fbe981ac465142",
+  "ArchiveSHA256": "28c50ca358b4d3f9c0ddf65d578ac1a83acafaa39ca9d859a9fbe981ac465142",
   "ArchiveURL": "https://github.com/gap-packages/groupoids/releases/download/v1.68/groupoids-1.68",
   "AutoDoc": {
     "TitlePage": {
@@ -68,7 +68,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "4e9b1163782638eb0d50fd7743830f3eaae30868741249c52a570d9c5304ed76",
+  "PackageInfoSHA256": "4e9b1163782638eb0d50fd7743830f3eaae30868741249c52a570d9c5304ed76",
   "PackageInfoURL": "https://gap-packages.github.io/groupoids/PackageInfo.g",
   "PackageName": "groupoids",
   "PackageWWWHome": "https://gap-packages.github.io/groupoids/",

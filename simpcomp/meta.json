@@ -2,7 +2,7 @@
   "AbstractHTML": "<span class=\"pkgname\">simpcomp</span> is a <span class=\"pkgname\">GAP</span> package for working with simplicial complexes. It allows the computation of many properties of simplicial complexes (such as the f-, g- and h-vectors, the face lattice, the automorphism group, (co-)homology with explicit basis computation, intersection form, etc.) and provides the user with functions to compute new complexes from old (simplex links and stars, connected sums, cartesian products, handle additions, bistellar flips, etc.). Furthermore, it comes with an extensive library of known triangulations of manifolds and provides the user with the possibility to create own complex libraries.<br /> <span class=\"pkgname\">simpcomp</span> caches computed properties of a simplicial complex, thus avoiding unnecessary computations, internally handles the vertex labeling of the complexes and insures the consistency of a simplicial complex throughout all operations.<br /> <span class=\"pkgname\">simpcomp</span> relies on the <span class=\"pkgname\">GAP</span> package <span class=\"pkgname\">homology</span> for its homology computation, but also provides the user with an own (co-)homology algorithm in case the packacke <span class=\"pkgname\">homology</span> is not available. For automorphism group computation the <span class=\"pkgname\">GAP</span> package <span class=\"pkgname\">GRAPE</span> is used, which in turn uses the program <tt>nauty</tt> by Brendan McKay. An internal automorphism group calculation algorithm in used as fallback if the <span class=\"pkgname\">GRAPE</span> package is not available.",
   "AcceptDate": "11/2013",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "b828fb4f730421e1e74581f23248f7c5c51f75b0e4a39d5fc33ee2f65566fe61",
+  "ArchiveSHA256": "b828fb4f730421e1e74581f23248f7c5c51f75b0e4a39d5fc33ee2f65566fe61",
   "ArchiveURL": "http://github.com/simpcomp-team/simpcomp/releases/download/v2.1.10/simpcomp-2.1.10",
   "Autoload": false,
   "AvailabilityTest": null,
@@ -75,7 +75,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "a922fee1c94dce6bd14c0d007bb3f8ff931136c8df16467c0d6b0b785869865d",
+  "PackageInfoSHA256": "a922fee1c94dce6bd14c0d007bb3f8ff931136c8df16467c0d6b0b785869865d",
   "PackageInfoURL": "https://simpcomp-team.github.io/simpcomp/PackageInfo.g",
   "PackageName": "simpcomp",
   "PackageWWWHome": "https://simpcomp-team.github.io/simpcomp/",

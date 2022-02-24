@@ -2,7 +2,7 @@
   "AbstractHTML": "The <span class=\"pkgname\">UnitLib</span> package extends the <span class=\"pkgname\">LAGUNA</span> package and provides the library of normalized unit groups of modular group algebras of all finite p-groups of order less than 243 over the field of p elements.",
   "AcceptDate": "03/2007",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "6d0709181f21e7045704870d33515c16097ee50f4bc10fb6cf3b118dd8520573",
+  "ArchiveSHA256": "6d0709181f21e7045704870d33515c16097ee50f4bc10fb6cf3b118dd8520573",
   "ArchiveURL": "https://github.com/gap-packages/unitlib/releases/download/v4.0.0/unitlib-4.0.0",
   "AvailabilityTest": null,
   "CommunicatedBy": "Bettina Eick (Braunschweig)",
@@ -53,7 +53,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "73771fabdffa7caabc665f3c9e01200d18057b4eb7af6b577e1c72fbf083872d",
+  "PackageInfoSHA256": "73771fabdffa7caabc665f3c9e01200d18057b4eb7af6b577e1c72fbf083872d",
   "PackageInfoURL": "https://gap-packages.github.io/unitlib/PackageInfo.g",
   "PackageName": "UnitLib",
   "PackageWWWHome": "https://gap-packages.github.io/unitlib",

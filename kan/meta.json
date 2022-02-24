@@ -2,7 +2,7 @@
   "AbstractHTML": "The Kan package provides functions for the computation of normal forms   of representatives of double cosets of finitely presented groups.",
   "AcceptDate": "05/2015",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "a39a980254374c456adba5e0b317498088d3e838fa20af38b679e812fefa8a46",
+  "ArchiveSHA256": "a39a980254374c456adba5e0b317498088d3e838fa20af38b679e812fefa8a46",
   "ArchiveURL": "https://github.com/gap-packages/kan/releases/download/v1.32/kan-1.32",
   "AutoDoc": {
     "TitlePage": {
@@ -55,7 +55,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "f4d75a823f1b68bf9da98a34c8fcd9d7bdb20c752837cde5f3395f0655c9e57f",
+  "PackageInfoSHA256": "f4d75a823f1b68bf9da98a34c8fcd9d7bdb20c752837cde5f3395f0655c9e57f",
   "PackageInfoURL": "https://gap-packages.github.io/kan/PackageInfo.g",
   "PackageName": "kan",
   "PackageWWWHome": "https://gap-packages.github.io/kan/",

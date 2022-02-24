@@ -2,7 +2,7 @@
   "AbstractHTML": "The <span class=\"pkgname\">FGA</span> package installs methods for    computations with finitely generated subgroups of free groups and    provides a presentation for their automorphism groups.",
   "AcceptDate": "05/2005",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "7c9e01ead442441bdf5635ebb9ccf1b75fa9eceae52b4c7957afb54ab9a23507",
+  "ArchiveSHA256": "7c9e01ead442441bdf5635ebb9ccf1b75fa9eceae52b4c7957afb54ab9a23507",
   "ArchiveURL": "http://www.icm.tu-bs.de/ag_algebra/software/FGA/FGA-1.4.0",
   "Autoload": true,
   "AvailabilityTest": null,
@@ -36,7 +36,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "34422dc7f3806a56b8c87710eb58d8c06eff7f4d3ed624116becd0113e58e888",
+  "PackageInfoSHA256": "34422dc7f3806a56b8c87710eb58d8c06eff7f4d3ed624116becd0113e58e888",
   "PackageInfoURL": "http://www.icm.tu-bs.de/ag_algebra/software/FGA/PackageInfo.g",
   "PackageName": "FGA",
   "PackageWWWHome": "http://www.icm.tu-bs.de/ag_algebra/software/FGA/",

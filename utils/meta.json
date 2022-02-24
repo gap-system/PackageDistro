@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">Utils</span> package provides a collection   of utility functions gleaned from many packages.",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSha256": "b783309b1eea96fc5cc26b124a7c5154788b3a6790ae7d97d5ca6d55838ae2cb",
+  "ArchiveSHA256": "b783309b1eea96fc5cc26b124a7c5154788b3a6790ae7d97d5ca6d55838ae2cb",
   "ArchiveURL": "https://github.com/gap-packages/utils/releases/download/v0.69/utils-0.69",
   "AutoDoc": {
     "TitlePage": {
@@ -50,7 +50,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "a95c6055a83c072289851ec1e0f7c6eb45fa3a24a74e9345011a0b8eb60bc3e5",
+  "PackageInfoSHA256": "a95c6055a83c072289851ec1e0f7c6eb45fa3a24a74e9345011a0b8eb60bc3e5",
   "PackageInfoURL": "https://gap-packages.github.io/utils/PackageInfo.g",
   "PackageName": "utils",
   "PackageWWWHome": "https://gap-packages.github.io/utils",

@@ -2,7 +2,7 @@
   "AbstractHTML": "This package provides various algorithms for computations with polycyclic groups defined by polycyclic presentations.",
   "AcceptDate": "01/2004",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "6983a72c90d92d0e6a3706dde7686c4a5658e48b04b5889d24808939896df007",
+  "ArchiveSHA256": "6983a72c90d92d0e6a3706dde7686c4a5658e48b04b5889d24808939896df007",
   "ArchiveURL": "https://github.com/gap-packages/polycyclic/releases/download/v2.16/polycyclic-2.16",
   "AutoDoc": {
     "TitlePage": {
@@ -73,7 +73,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "e9470e813ff0773e47fda0420335aa8c1856ea89f8d361538f304e046503487d",
+  "PackageInfoSHA256": "e9470e813ff0773e47fda0420335aa8c1856ea89f8d361538f304e046503487d",
   "PackageInfoURL": "https://gap-packages.github.io/polycyclic/PackageInfo.g",
   "PackageName": "Polycyclic",
   "PackageWWWHome": "https://gap-packages.github.io/polycyclic/",

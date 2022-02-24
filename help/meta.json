@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "<span class=\"pkgname\">HeLP</span> is a package to compute constraints on partial augmentations of torsion units in integral group rings using a method developed by Luthar, Passi and Hertweck.  The package can be employed to verify the Zassenhaus Conjecture and the Prime Graph Question for finite groups, once characters are known. It uses an interface to the software package 4ti2 to solve integral linear inequalities.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "f650a53ac7840a7cb6e7a3616bc25ae0459b281bbf87426898567209245e26a8",
+  "ArchiveSHA256": "f650a53ac7840a7cb6e7a3616bc25ae0459b281bbf87426898567209245e26a8",
   "ArchiveURL": "https://github.com/gap-packages/HeLP/releases/download/v3.5/HeLP-3.5",
   "AutoDoc": {
     "TitlePage": {
@@ -66,7 +66,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "f9948bddfd40eb2a1fd2ac9f7b760f488dc2ee68e52adf04353fc88b8c7a9d93",
+  "PackageInfoSHA256": "f9948bddfd40eb2a1fd2ac9f7b760f488dc2ee68e52adf04353fc88b8c7a9d93",
   "PackageInfoURL": "https://gap-packages.github.io/HeLP/PackageInfo.g",
   "PackageName": "HeLP",
   "PackageWWWHome": "https://gap-packages.github.io/HeLP",

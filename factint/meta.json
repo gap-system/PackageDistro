@@ -2,7 +2,7 @@
   "AbstractHTML": "\nThis package provides routines for factoring integers, in particular:\n<ul>\n  <li>Pollard's <em>p</em>-1</li>\n  <li>Williams' <em>p</em>+1</li>\n  <li>Elliptic Curves Method (ECM)</li>\n  <li>Continued Fraction Algorithm (CFRAC)</li>\n  <li>Multiple Polynomial Quadratic Sieve (MPQS)</li>\n</ul>\nIt also provides access to Richard P. Brent's tables of factors of integers of the form <em>b</em>^<em>k</em> +/- 1.\n",
   "AcceptDate": "07/1999",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "fdd63f32fc88d7dc035024a9fb30fc2f2cf70747a3c2dae2f168bf89fb48af06",
+  "ArchiveSHA256": "fdd63f32fc88d7dc035024a9fb30fc2f2cf70747a3c2dae2f168bf89fb48af06",
   "ArchiveURL": "https://github.com/gap-packages/FactInt/releases/download/v1.6.3/FactInt-1.6.3",
   "AutoDoc": {
     "TitlePage": {
@@ -54,7 +54,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "0e6b7eb9c382aff70cab5567d0c51be41e06eabff11776e48e492ac9fe2fe066",
+  "PackageInfoSHA256": "0e6b7eb9c382aff70cab5567d0c51be41e06eabff11776e48e492ac9fe2fe066",
   "PackageInfoURL": "https://gap-packages.github.io/FactInt/PackageInfo.g",
   "PackageName": "FactInt",
   "PackageWWWHome": "https://gap-packages.github.io/FactInt",

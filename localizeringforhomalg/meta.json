@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "This package is part of the homalg-project and allows localization of a (computable) commutative ring at a (finitely generated) maximal ideal.",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSha256": "102072d2b6c8d172031f441395334bebc004a3c06c2938abb3e6914e53e78197",
+  "ArchiveSHA256": "102072d2b6c8d172031f441395334bebc004a3c06c2938abb3e6914e53e78197",
   "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/LocalizeRingForHomalg-2020.10-02/LocalizeRingForHomalg-2020.10-02",
   "Autoload": false,
   "AvailabilityTest": null,
@@ -52,7 +52,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "05ce20756b9b2a198894d33867ac266364f0711fbd0ce2384e21edb4f04770bd",
+  "PackageInfoSHA256": "05ce20756b9b2a198894d33867ac266364f0711fbd0ce2384e21edb4f04770bd",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/LocalizeRingForHomalg/PackageInfo.g",
   "PackageName": "LocalizeRingForHomalg",
   "PackageWWWHome": "https://homalg-project.github.io/homalg_project/LocalizeRingForHomalg",

@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">Modules</span> package provides ring independent homological algebra functionality for the abelian category of finitely presented modules over computable rings",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSha256": "8e54b85272e2d24b9c2c169199a3c514aebf415edb517fe9a0b2248ede848474",
+  "ArchiveSHA256": "8e54b85272e2d24b9c2c169199a3c514aebf415edb517fe9a0b2248ede848474",
   "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/Modules-2020.10-02/Modules-2020.10-02",
   "Autoload": false,
   "AvailabilityTest": null,
@@ -56,7 +56,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "d109416fd348a33f520523c9aa39756aacf30f8bfdc2ce8af1060dadf7599756",
+  "PackageInfoSHA256": "d109416fd348a33f520523c9aa39756aacf30f8bfdc2ce8af1060dadf7599756",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/Modules/PackageInfo.g",
   "PackageName": "Modules",
   "PackageWWWHome": "https://homalg-project.github.io/homalg_project/Modules",

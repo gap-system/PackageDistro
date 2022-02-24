@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">Francy</span> package allows to use graphics in GAP.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "3ccbc422990d203592767eea64b4ed916b0a23efd456274a1ba53580d10abe86",
+  "ArchiveSHA256": "3ccbc422990d203592767eea64b4ed916b0a23efd456274a1ba53580d10abe86",
   "ArchiveURL": "https://github.com/gap-packages/francy/releases/download/v1.2.4/francy-1.2.4",
   "AvailabilityTest": null,
   "Date": "17/05/2019",
@@ -47,7 +47,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "fa39785e3bcac0f8ff5c40ee5b2dc662b7a67c1aa92f12d2f8133c10d36cc705",
+  "PackageInfoSHA256": "fa39785e3bcac0f8ff5c40ee5b2dc662b7a67c1aa92f12d2f8133c10d36cc705",
   "PackageInfoURL": "https://gap-packages.github.io/francy/PackageInfo.g",
   "PackageName": "Francy",
   "PackageWWWHome": "https://gap-packages.github.io/francy",

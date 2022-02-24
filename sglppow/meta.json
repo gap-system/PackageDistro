@@ -2,7 +2,7 @@
   "AbstractHTML": "",
   "AcceptDate": "08/2016",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "8d3ede9b8681dd73b0a6e55437aab4dadfed21e497d2ac2732be4861d23aad26",
+  "ArchiveSHA256": "8d3ede9b8681dd73b0a6e55437aab4dadfed21e497d2ac2732be4861d23aad26",
   "ArchiveURL": "https://github.com/gap-packages/sglppow/releases/download/v2.1/sglppow-2.1",
   "AvailabilityTest": null,
   "BannerString": "----------------------------------------------------------------\nLoading SglPPow 2.1\nby Michael Vaughan-Lee and Bettina Eick \n----------------------------------------------------------------\n",
@@ -42,7 +42,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "bf98dffe271f28370aa39e40992012ebf4d5d5595308d801425a69931ae9fbef",
+  "PackageInfoSHA256": "bf98dffe271f28370aa39e40992012ebf4d5d5595308d801425a69931ae9fbef",
   "PackageInfoURL": "https://gap-packages.github.io/sglppow/PackageInfo.g",
   "PackageName": "SglPPow",
   "PackageWWWHome": "https://gap-packages.github.io/sglppow/",

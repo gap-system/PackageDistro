@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "ba660b09b37f467ef8e3d941ad4c1ceee5f0bc29335368bafe85124e2647d96a",
+  "ArchiveSHA256": "ba660b09b37f467ef8e3d941ad4c1ceee5f0bc29335368bafe85124e2647d96a",
   "ArchiveURL": "https://github.com/gap-packages/AutoDoc/releases/download/v2020.08.11/AutoDoc-2020.08.11",
   "AutoDoc": {
     "TitlePage": {
@@ -42,7 +42,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "d0dde790447eeb68c00be95ca30e81566fa96664680df16c7588327e9705d817",
+  "PackageInfoSHA256": "d0dde790447eeb68c00be95ca30e81566fa96664680df16c7588327e9705d817",
   "PackageInfoURL": "https://gap-packages.github.io/AutoDoc/PackageInfo.g",
   "PackageName": "AutoDoc",
   "PackageWWWHome": "https://gap-packages.github.io/AutoDoc",

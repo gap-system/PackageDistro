@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">Thelma</span> package is package with algorithms to deal with threshold elements.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "9abd1951c335dad114d16f9ff74b6ffe264d86edd32bfc5a8ad9c3e3f357369b",
+  "ArchiveSHA256": "9abd1951c335dad114d16f9ff74b6ffe264d86edd32bfc5a8ad9c3e3f357369b",
   "ArchiveURL": "https://github.com/gap-packages/Thelma/releases/download/v1.02/Thelma-1.02",
   "Autoload": false,
   "AvailabilityTest": null,
@@ -41,7 +41,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "89a437aa164691a49105ec8b4694e018ac7325bb051e746c1ef29cf4f7891e2e",
+  "PackageInfoSHA256": "89a437aa164691a49105ec8b4694e018ac7325bb051e746c1ef29cf4f7891e2e",
   "PackageInfoURL": "https://gap-packages.github.io/Thelma/PackageInfo.g",
   "PackageName": "Thelma",
   "PackageWWWHome": "https://gap-packages.github.io/Thelma",

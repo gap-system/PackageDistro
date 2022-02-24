@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "This package provides functions for computations in finitely generated nilpotent groups based on the Deep Thought algorithm.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "5b0dcfd3526fb64f3504a4df230dd4db3fe6753f157e4ffaca99f405f8274c60",
+  "ArchiveSHA256": "5b0dcfd3526fb64f3504a4df230dd4db3fe6753f157e4ffaca99f405f8274c60",
   "ArchiveURL": "https://github.com/duskydolphin/DeepThoughtPackage/releases/download/v1.0.2/DeepThought-1.0.2",
   "AvailabilityTest": null,
   "Date": "13/09/2018",
@@ -39,7 +39,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "028f1eeed3cc6692acae79e58541b446ee57ed74cfe55afccc135deac33791b9",
+  "PackageInfoSHA256": "028f1eeed3cc6692acae79e58541b446ee57ed74cfe55afccc135deac33791b9",
   "PackageInfoURL": "https://duskydolphin.github.io/DeepThoughtPackage/PackageInfo.g",
   "PackageName": "DeepThought",
   "PackageWWWHome": "https://duskydolphin.github.io/DeepThoughtPackage/",

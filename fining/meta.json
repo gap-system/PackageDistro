@@ -2,7 +2,7 @@
   "AbstractHTML": "<span class=\"pkgname\">FinInG</span> is a package for computation in Finite Incidence Geometry. It provides users with the basic tools to work in  various areas of finite geometry from the realms of projective spaces to the flat  lands of generalised polygons. The algebraic power of GAP is employed, particularly  in its facility with matrix and permutation groups.",
   "AcceptDate": "11/2017",
   "ArchiveFormats": ".tar.gz -win.zip .tar.bz2",
-  "ArchiveSha256": "62b3b8db5d3c78793b5be89fa124a7578dc7122e80293dc8e179ffbef75ac852",
+  "ArchiveSHA256": "62b3b8db5d3c78793b5be89fa124a7578dc7122e80293dc8e179ffbef75ac852",
   "ArchiveURL": "http://cage.ugent.be/fining/archive/fining-1.4.1",
   "AvailabilityTest": null,
   "BannerString": "-------------------------------------------------------------------------------\n         ______________       ________      _________   __________ __          \n         ___  ____/__(_)__________  _/________  ____/   __<  /_  // /          \n         __  /_   __  /__  __ __  / __  __   / __     __  /_  // /_          \n         _  __/   _  / _  / / /_/ /  _  / / / /_/ /     _  /_/__  __/          \n         /_/      /_/  /_/ /_//___/  /_/ /_/____/      /_/_(_)/_/             \n-------------------------------------------------------------------------------\nLoading  FinInG 1.4.1 (Finite Incidence Geometry) \nby John Bamberg (http://school.maths.uwa.edu.au/~bamberg/)\n   Anton Betten (http://www.math.colostate.edu/~betten)\n   Jan De Beule (http://www.debeule.eu)\n   Philippe Cara (http://homepages.vub.ac.be/~pcara)\n   Michel Lavrauw (http://people.sabanciuniv.edu/~mlavrauw/)\n   Max Neunhoeffer (http://www-groups.mcs.st-and.ac.uk/~neunhoef/)\nFor help, type: ?FinInG \n---------------------------------------------------------------------\n",
@@ -59,7 +59,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "415c7716cffcc01efa519497ea572b0d1e5804e86fbe83f67d5fd259f1b4b7c6",
+  "PackageInfoSHA256": "415c7716cffcc01efa519497ea572b0d1e5804e86fbe83f67d5fd259f1b4b7c6",
   "PackageInfoURL": "http://cage.ugent.be/fining/PackageInfo.g",
   "PackageName": "FinInG",
   "PackageWWWHome": "http://www.fining.org",

@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">SgpViz</span> package, is a package with some visualization features for finite semigroups.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "03672d22ddf903737857931c66865c7be09e6533de39997f09097df144d52009",
+  "ArchiveSHA256": "03672d22ddf903737857931c66865c7be09e6533de39997f09097df144d52009",
   "ArchiveURL": "https://github.com/gap-packages/sgpviz/releases/download/v0.999.4/SgpViz-0.999.4",
   "AvailabilityTest": null,
   "BannerString": "----------------------------------------------------------------\nLoading  SgpViz 0.999.4(semigroup visualization)\nFor help, type: ?SgpViz: \n----------------------------------------------------------------\n",
@@ -36,7 +36,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "9f1d3bfb4189ca9a385462d1fb4f597126bf7a69ac62d64250270c7f565f7ed0",
+  "PackageInfoSHA256": "9f1d3bfb4189ca9a385462d1fb4f597126bf7a69ac62d64250270c7f565f7ed0",
   "PackageInfoURL": "https://gap-packages.github.io/sgpviz/PackageInfo.g",
   "PackageName": "SgpViz",
   "PackageWWWHome": "https://gap-packages.github.io/sgpviz",

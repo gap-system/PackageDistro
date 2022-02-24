@@ -2,7 +2,7 @@
   "AbstractHTML": "The <span class=\"pkgname\">XMod</span> package provides a collection   of functions for computing with crossed modules and cat1-groups, their derivations and sections, morphisms of these structures, and higher-dimensional generalisations.",
   "AcceptDate": "12/1996",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "baadba7f15778d08d1c018f5ac7f46f7b554d00666340015cbbd0ee24b13aa83",
+  "ArchiveSHA256": "baadba7f15778d08d1c018f5ac7f46f7b554d00666340015cbbd0ee24b13aa83",
   "ArchiveURL": "https://github.com/gap-packages/xmod/releases/download/v2.82/XMod-2.82",
   "AutoDoc": {
     "TitlePage": {
@@ -76,7 +76,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "9ae4dd9c440a02eb75d92f78e44b0acb3c9c777b89dd5840fb3f6264de5c8d7d",
+  "PackageInfoSHA256": "9ae4dd9c440a02eb75d92f78e44b0acb3c9c777b89dd5840fb3f6264de5c8d7d",
   "PackageInfoURL": "https://gap-packages.github.io/xmod/PackageInfo.g",
   "PackageName": "XMod",
   "PackageWWWHome": "https://gap-packages.github.io/xmod/",

@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">Example</span> package, as its name suggests,    is an example of how to create a <span class=\"pkgname\">GAP</span>    package. It has little functionality except for being a package.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "ba9d033a11afa1d6c7e1af550e07d827c3581bbd1908298d790bc2f34562280e",
+  "ArchiveSHA256": "ba9d033a11afa1d6c7e1af550e07d827c3581bbd1908298d790bc2f34562280e",
   "ArchiveURL": "https://github.com/gap-packages/example/releases/download/v4.2.1/Example-4.2.1",
   "AutoDoc": {
     "TitlePage": {
@@ -41,7 +41,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "bc38c6d08a8068f19c8ae0c36e12ac2ab29158765e7240050ad106e34ecf7608",
+  "PackageInfoSHA256": "bc38c6d08a8068f19c8ae0c36e12ac2ab29158765e7240050ad106e34ecf7608",
   "PackageInfoURL": "https://gap-packages.github.io/example/PackageInfo.g",
   "PackageName": "Example",
   "PackageWWWHome": "https://gap-packages.github.io/example",

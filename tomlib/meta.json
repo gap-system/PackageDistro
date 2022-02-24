@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "The package contains the <span class=\"pkgname\">GAP</span> Library of Tables of Marks",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "6f1df43c3790f81868fe674deb4bbd96ddeb06520d07f493ccf993b4abf3a60b",
+  "ArchiveSHA256": "6f1df43c3790f81868fe674deb4bbd96ddeb06520d07f493ccf993b4abf3a60b",
   "ArchiveURL": "https://github.com/gap-packages/tomlib/releases/download/v1.2.9/tomlib-1.2.9",
   "AutoDoc": {
     "TitlePage": {
@@ -51,7 +51,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "fa72f9827cfb2552bbc95d36e54a0dd5dc6969673751e74c1be81d6cc7120386",
+  "PackageInfoSHA256": "fa72f9827cfb2552bbc95d36e54a0dd5dc6969673751e74c1be81d6cc7120386",
   "PackageInfoURL": "https://gap-packages.github.io/tomlib/PackageInfo.g",
   "PackageName": "TomLib",
   "PackageWWWHome": "https://gap-packages.github.io/tomlib",

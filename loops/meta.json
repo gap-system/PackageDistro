@@ -2,7 +2,7 @@
   "AbstractHTML": "The LOOPS package provides researchers in nonassociative algebra with a computational tool that integrates standard notions of loop theory with libraries of loops and group-theoretical algorithms of GAP. The package also expands GAP toward nonassociative structures.",
   "AcceptDate": "05/2015",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "497e42c4bdb587ff0be28a2ce75bbc58bbd95d98c7b8a5943a3e9b7f1405589c",
+  "ArchiveSHA256": "497e42c4bdb587ff0be28a2ce75bbc58bbd95d98c7b8a5943a3e9b7f1405589c",
   "ArchiveURL": "https://github.com/gap-packages/loops/releases/download/v3.4.1/loops-3.4.1",
   "AutoDoc": {
     "TitlePage": {
@@ -51,7 +51,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "7bc269e88e99b0deb4eab4b6a9e12792076ab5279dfb4fdc79f9649f77cb0265",
+  "PackageInfoSHA256": "7bc269e88e99b0deb4eab4b6a9e12792076ab5279dfb4fdc79f9649f77cb0265",
   "PackageInfoURL": "https://gap-packages.github.io/loops/PackageInfo.g",
   "PackageName": "loops",
   "PackageWWWHome": "https://gap-packages.github.io/loops/",

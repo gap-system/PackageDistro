@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "a980e0dac3824e2997b81aa8583af10f3586830195bba33cb40944d67efd4f24",
+  "ArchiveSHA256": "a980e0dac3824e2997b81aa8583af10f3586830195bba33cb40944d67efd4f24",
   "ArchiveURL": "https://github.com/gap-packages/profiling/releases/download/v2.3/profiling-2.3",
   "AvailabilityTest": null,
   "Date": "03/04/2020",
@@ -35,7 +35,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "10147fd4de607c47f99a3ad768f5d4a71f35ff9c4a846ac6f0c0986d96473e50",
+  "PackageInfoSHA256": "10147fd4de607c47f99a3ad768f5d4a71f35ff9c4a846ac6f0c0986d96473e50",
   "PackageInfoURL": "https://gap-packages.github.io/profiling/PackageInfo.g",
   "PackageName": "profiling",
   "PackageWWWHome": "https://gap-packages.github.io/profiling/",

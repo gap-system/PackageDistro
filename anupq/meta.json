@@ -2,7 +2,7 @@
   "AbstractHTML": "The <span class=\"pkgname\">ANUPQ</span> package provides an interactive    interface to the p-quotient, p-group generation and standard presentation    algorithms of the ANU pq C program.",
   "AcceptDate": "04/2002",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSha256": "dba77b141c63c913941eca8dd0955e643c86217ec04f2664a35b23dcf9b4a12c",
+  "ArchiveSHA256": "dba77b141c63c913941eca8dd0955e643c86217ec04f2664a35b23dcf9b4a12c",
   "ArchiveURL": "https://github.com/gap-packages/anupq/releases/download/v3.2.1/anupq-3.2.1",
   "Autoload": false,
   "AvailabilityTest": null,
@@ -42,7 +42,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "ae1188209c19c093fef392a2ab0642d54f2ffb589fae0460ee656724b6b79006",
+  "PackageInfoSHA256": "ae1188209c19c093fef392a2ab0642d54f2ffb589fae0460ee656724b6b79006",
   "PackageInfoURL": "https://gap-packages.github.io/anupq/PackageInfo.g",
   "PackageName": "ANUPQ",
   "PackageWWWHome": "https://gap-packages.github.io/anupq/",

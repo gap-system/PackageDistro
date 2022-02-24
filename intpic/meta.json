@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">IntPic</span> package, is a package for drawing integers, by emphasizing some subsets.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "d073a3f27c6812a1d2a3d93b33b665239ef7313bce88593359f24bf8d3e9e9fc",
+  "ArchiveSHA256": "d073a3f27c6812a1d2a3d93b33b665239ef7313bce88593359f24bf8d3e9e9fc",
   "ArchiveURL": "https://github.com/gap-packages/intpic/releases/download/v0.2.4/IntPic-0.2.4",
   "AvailabilityTest": null,
   "BannerString": "----------------------------------------------------------------\nLoading  IntPic 0.2.4 (drawing integers)\nby Manuel Delgado (http://www.fc.up.pt/cmup/mdelgado/)\nFor help, type: ?IntPic;\n----------------------------------------------------------------\n",
@@ -44,7 +44,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "f9c3e9c1fc55f3748db82420b8754ee0c14b0065b5a9a8c3aa455100cfebdf59",
+  "PackageInfoSHA256": "f9c3e9c1fc55f3748db82420b8754ee0c14b0065b5a9a8c3aa455100cfebdf59",
   "PackageInfoURL": "https://gap-packages.github.io/intpic/PackageInfo.g",
   "PackageName": "IntPic",
   "PackageWWWHome": "https://gap-packages.github.io/intpic",

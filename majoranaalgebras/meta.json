@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "MajoranaAlgebras is a package for constructing Majorana representations of finite groups. It also offers some functions to calculate with a constructed Majorana representation. The main constructive functions use the algorithm described in the preprint Constructing Majorana Representations (https://arxiv.org/abs/1803.10723) by Markus Pfeiffer and Madeleine Whybrow.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "60782dc0c9bcd573674a41678425da09fbe0f4c5e17d4282b972ba6460913987",
+  "ArchiveSHA256": "60782dc0c9bcd573674a41678425da09fbe0f4c5e17d4282b972ba6460913987",
   "ArchiveURL": "https://github.com/MWhybrow92/MajoranaAlgebras/releases/download/v1.4/MajoranaAlgebras-1.4",
   "AutoDoc": {
     "TitlePage": {
@@ -56,7 +56,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "512c3931e56f945384ad4251d51736f8930fd21c758a0853a7a7488f2688be59",
+  "PackageInfoSHA256": "512c3931e56f945384ad4251d51736f8930fd21c758a0853a7a7488f2688be59",
   "PackageInfoURL": "https://MWhybrow92.github.io/MajoranaAlgebras/PackageInfo.g",
   "PackageName": "MajoranaAlgebras",
   "PackageWWWHome": "https://MWhybrow92.github.io/MajoranaAlgebras/",

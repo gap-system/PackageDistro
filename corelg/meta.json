@@ -2,7 +2,7 @@
   "AbstractHTML": "The package <span class=\"pkgname\">CoReLG</span> contains functionality for working with real semisimple Lie algebras.",
   "AcceptDate": "01/2014",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "4a108e802a8fbe0879f9cb10962be2d8e9d5ddefc67916ceed8f500edcc33d8c",
+  "ArchiveSHA256": "4a108e802a8fbe0879f9cb10962be2d8e9d5ddefc67916ceed8f500edcc33d8c",
   "ArchiveURL": "https://github.com/gap-packages/corelg/releases/download/v1.54/corelg-1.54",
   "AutoDoc": {
     "TitlePage": {
@@ -47,7 +47,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "80d84d74b3896a293c487b73c9a93de07ee3d0636e2f5d9bc8ba155a2ad92c11",
+  "PackageInfoSHA256": "80d84d74b3896a293c487b73c9a93de07ee3d0636e2f5d9bc8ba155a2ad92c11",
   "PackageInfoURL": "https://gap-packages.github.io/corelg/PackageInfo.g",
   "PackageName": "CoReLG",
   "PackageWWWHome": "https://gap-packages.github.io/corelg/",

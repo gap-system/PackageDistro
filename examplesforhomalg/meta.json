@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">ExamplesForHomalg</span> package provides example scripts for the <span class=\"pkgname\">homalg</span> package that can be used with several computer algebra systems",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSha256": "3e2689c7884c50f3fa3759252f899de554665780fbc21ebe525083f0c3cf2ebb",
+  "ArchiveSHA256": "3e2689c7884c50f3fa3759252f899de554665780fbc21ebe525083f0c3cf2ebb",
   "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/ExamplesForHomalg-2020.10-02/ExamplesForHomalg-2020.10-02",
   "Autoload": false,
   "AvailabilityTest": null,
@@ -61,7 +61,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "5e1cf496bfe7f2d2cd548327f909b87ad223c787abf871b8aa9d46876de33f5e",
+  "PackageInfoSHA256": "5e1cf496bfe7f2d2cd548327f909b87ad223c787abf871b8aa9d46876de33f5e",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/ExamplesForHomalg/PackageInfo.g",
   "PackageName": "ExamplesForHomalg",
   "PackageWWWHome": "https://homalg-project.github.io/homalg_project/ExamplesForHomalg",

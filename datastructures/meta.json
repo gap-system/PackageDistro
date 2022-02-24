@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">datastructures</span> package provides some    standard data structures.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "bd49f77186afb31210424382e3a6c782f123af54025105dc72697fe4493c6978",
+  "ArchiveSHA256": "bd49f77186afb31210424382e3a6c782f123af54025105dc72697fe4493c6978",
   "ArchiveURL": "https://github.com/gap-packages/datastructures/releases/download/v0.2.5/datastructures-0.2.5",
   "AutoDoc": {
     "TitlePage": {
@@ -41,7 +41,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "95121bfaecf62c6424f72b7dff2bd34c79d8799bb5e2e68d7d3c9be98965e0ed",
+  "PackageInfoSHA256": "95121bfaecf62c6424f72b7dff2bd34c79d8799bb5e2e68d7d3c9be98965e0ed",
   "PackageInfoURL": "https://gap-packages.github.io/datastructures/PackageInfo.g",
   "PackageName": "datastructures",
   "PackageWWWHome": "https://gap-packages.github.io/datastructures",

@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "This package provides an implementation of compact vectors over finite   fields. Contrary to earlier implementations no table lookups are used   but only word-based processor arithmetic. This allows for bigger finite   fields and higher speed.",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSha256": "499bb9d778341e063f401f1ca6338fb6f4045f747e4ecdc9d83815f94529fc19",
+  "ArchiveSHA256": "499bb9d778341e063f401f1ca6338fb6f4045f747e4ecdc9d83815f94529fc19",
   "ArchiveURL": "https://github.com/gap-packages/cvec/releases/download/v2.7.4/cvec-2.7.4",
   "AutoDoc": {
     "TitlePage": {
@@ -45,7 +45,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "55be4987f2ba9b005f6eb29867cdd6fc9b6695c57619b9bdaf878c293b076868",
+  "PackageInfoSHA256": "55be4987f2ba9b005f6eb29867cdd6fc9b6695c57619b9bdaf878c293b076868",
   "PackageInfoURL": "https://gap-packages.github.io/cvec/PackageInfo.g",
   "PackageName": "cvec",
   "PackageWWWHome": "https://gap-packages.github.io/cvec",

@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "The <span class='pkgname'>NormalizInterface</span> package provides  a GAP interface to <a href='https://www.normaliz.uni-osnabrueck.de'>Normaliz</a>,  enabling direct access to the complete functionality of Normaliz, such as  computations in affine monoids, vector configurations, lattice polytopes, and rational cones.  ",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSha256": "c831cad2df654b66e580714ee26f141bd2a9469382240ec800921de26ad7ff51",
+  "ArchiveSHA256": "c831cad2df654b66e580714ee26f141bd2a9469382240ec800921de26ad7ff51",
   "ArchiveURL": "https://github.com/gap-packages/NormalizInterface/releases/download/v1.1.0/NormalizInterface-1.1.0",
   "AvailabilityTest": null,
   "BannerFunction": null,
@@ -32,7 +32,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "6eab45bf42065469353c86b06b1cc44978b9fc03d510080021e143327b9a0d3a",
+  "PackageInfoSHA256": "6eab45bf42065469353c86b06b1cc44978b9fc03d510080021e143327b9a0d3a",
   "PackageInfoURL": "https://gap-packages.github.io/NormalizInterface/PackageInfo.g",
   "PackageName": "NormalizInterface",
   "PackageWWWHome": "https://gap-packages.github.io/NormalizInterface",

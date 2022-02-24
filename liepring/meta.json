@@ -2,7 +2,7 @@
   "AbstractHTML": "",
   "AcceptDate": "09/2014",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "cb6b9db59bd749d7585e9c02fae792be7d77f7a0c4345af88d515ceb530cd6d9",
+  "ArchiveSHA256": "cb6b9db59bd749d7585e9c02fae792be7d77f7a0c4345af88d515ceb530cd6d9",
   "ArchiveURL": "https://github.com/gap-packages/liepring/releases/download/v1.9.2/liepring-1.9.2",
   "AvailabilityTest": null,
   "BannerString": "----------------------------------------------------------------\nLoading  LiePRing 1.9.2\nby Michael Vaughan-Lee and Bettina Eick \n----------------------------------------------------------------\n",
@@ -38,7 +38,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "06f4857ebd9aabe8fbfad79578a857302d0d01a11f7a67c2a6889fedf555a2bc",
+  "PackageInfoSHA256": "06f4857ebd9aabe8fbfad79578a857302d0d01a11f7a67c2a6889fedf555a2bc",
   "PackageInfoURL": "https://gap-packages.github.io/liepring/PackageInfo.g",
   "PackageName": "LiePRing",
   "PackageWWWHome": "https://gap-packages.github.io/liepring/",

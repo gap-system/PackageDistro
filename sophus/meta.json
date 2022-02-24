@@ -2,7 +2,7 @@
   "AbstractHTML": "",
   "AcceptDate": "10/2004",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "6a6344d103d44887d9063bc4bf40b47ca0f042251d7b054a6d850c552a1b6ab8",
+  "ArchiveSHA256": "6a6344d103d44887d9063bc4bf40b47ca0f042251d7b054a6d850c552a1b6ab8",
   "ArchiveURL": "https://github.com/gap-packages/sophus/releases/download/v1.24/sophus-1.24",
   "AutoDoc": {
     "TitlePage": {
@@ -43,7 +43,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "25f895ef304c59d1916c37dd6b3b71549ad6129729a9c166fd037bf034ad7d5b",
+  "PackageInfoSHA256": "25f895ef304c59d1916c37dd6b3b71549ad6129729a9c166fd037bf034ad7d5b",
   "PackageInfoURL": "https://gap-packages.github.io/sophus/PackageInfo.g",
   "PackageName": "Sophus",
   "PackageWWWHome": "https://gap-packages.github.io/sophus/",

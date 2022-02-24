@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">RingsForHomalg</span> package provides small dictionaries for  <span class=\"pkgname\">homalg</span> to speak (as much as needed of) the languages  of Singular, Macaulay2, MAGMA, Sage, and Maple",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSha256": "cb4106874450bbde9ac922a563867641540e023fdf8db94d6509721b01241cc9",
+  "ArchiveSHA256": "cb4106874450bbde9ac922a563867641540e023fdf8db94d6509721b01241cc9",
   "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/RingsForHomalg-2020.11-01/RingsForHomalg-2020.11-01",
   "Autoload": false,
   "AvailabilityTest": null,
@@ -51,7 +51,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "9e95e7fc62cd216665f0da905618dd94eac87259e96b0e83524971f7be74fc22",
+  "PackageInfoSHA256": "9e95e7fc62cd216665f0da905618dd94eac87259e96b0e83524971f7be74fc22",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/RingsForHomalg/PackageInfo.g",
   "PackageName": "RingsForHomalg",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/RingsForHomalg",

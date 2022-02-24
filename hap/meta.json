@@ -2,7 +2,7 @@
   "AbstractHTML": "This package provides some functions for group cohomology. ",
   "AcceptDate": "03/2006",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "a7c6a93f629cac589561623d92a9d714e7f8315ade1804332a2862bd83224be7",
+  "ArchiveSHA256": "a7c6a93f629cac589561623d92a9d714e7f8315ade1804332a2862bd83224be7",
   "ArchiveURL": "https://github.com/gap-packages/hap/releases/download/v1.29/hap-1.29",
   "AvailabilityTest": null,
   "BannerString": "Loading HAP 1.29 ...\n",
@@ -112,7 +112,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "653a26ad0cba69a686cff619ed32166f4d25a3d99fa81db30cd2a714d0a2b8ea",
+  "PackageInfoSHA256": "653a26ad0cba69a686cff619ed32166f4d25a3d99fa81db30cd2a714d0a2b8ea",
   "PackageInfoURL": "https://gap-packages.github.io/hap/PackageInfo.g",
   "PackageName": "HAP",
   "PackageWWWHome": "https://gap-packages.github.io/hap",

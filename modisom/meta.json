@@ -2,7 +2,7 @@
   "AbstractHTML": "The <span class=\"pkgname\">ModIsom</span> package contains various methods for computing with nilpotent associative algebras. In particular, it contains a method to determine the automorphism group and to test isomorphis of such algebras over finite fields and of modular group algebras of finite p-groups, and it contains a nilpotent quotient algorithm for finitely presented associative algebras and a method to determine Kurosh algebras.",
   "AcceptDate": "11/2013",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "2d844f58295ffb2b4b6837675496c91b960f07caae0b0bfa42dbbd51f1554363",
+  "ArchiveSHA256": "2d844f58295ffb2b4b6837675496c91b960f07caae0b0bfa42dbbd51f1554363",
   "ArchiveURL": "https://github.com/gap-packages/modisom/releases/download/v2.5.1/modisom-2.5.1",
   "Autoload": false,
   "AvailabilityTest": null,
@@ -45,7 +45,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "4f960521809556dbae4ec251555ec530e9066d572dcea56e6a7155683fb12e4b",
+  "PackageInfoSHA256": "4f960521809556dbae4ec251555ec530e9066d572dcea56e6a7155683fb12e4b",
   "PackageInfoURL": "https://gap-packages.github.io/modisom/PackageInfo.g",
   "PackageName": "ModIsom",
   "PackageWWWHome": "https://gap-packages.github.io/modisom/",

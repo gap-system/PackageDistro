@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "3c61060ff5f7db5509ba2522cce1b5f22a4269e13ef220e4b0929536c45a7bfb",
+  "ArchiveSHA256": "3c61060ff5f7db5509ba2522cce1b5f22a4269e13ef220e4b0929536c45a7bfb",
   "ArchiveURL": "https://github.com/gap-packages/ZeroMQInterface/releases/download/v0.12/ZeroMQInterface-0.12",
   "AutoDoc": {
     "TitlePage": {
@@ -42,7 +42,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "63ec87ea4c895a88bbdf2b47004ed8cfacae191cdff08e8c7320d042723faea7",
+  "PackageInfoSHA256": "63ec87ea4c895a88bbdf2b47004ed8cfacae191cdff08e8c7320d042723faea7",
   "PackageInfoURL": "https://gap-packages.github.io/ZeroMQInterface/PackageInfo.g",
   "PackageName": "ZeroMQInterface",
   "PackageWWWHome": "https://gap-packages.github.io/ZeroMQInterface/",

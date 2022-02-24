@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "The <Package>Smallsemi</Package> package is a data library of semigroups    of small size. It provides all semigroups with at most 8 elements as well    as various information about these objects.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "a62792a35b24cdf7ebb56572d35ef0df5ab2bd9d78cbcc8de5462fc3ccde44cc",
+  "ArchiveSHA256": "a62792a35b24cdf7ebb56572d35ef0df5ab2bd9d78cbcc8de5462fc3ccde44cc",
   "ArchiveURL": "https://github.com/gap-packages/smallsemi/releases/download/v0.6.12/smallsemi-0.6.12",
   "AutoDoc": {
     "TitlePage": {
@@ -48,7 +48,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "c3d119f8336347aa32d50b00901ca30416e36bcc7d558592832ddff6f8f8f297",
+  "PackageInfoSHA256": "c3d119f8336347aa32d50b00901ca30416e36bcc7d558592832ddff6f8f8f297",
   "PackageInfoURL": "https://gap-packages.github.io/smallsemi/PackageInfo.g",
   "PackageName": "Smallsemi",
   "PackageWWWHome": "https://gap-packages.github.io/smallsemi/",

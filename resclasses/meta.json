@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "This package permits to compute with set-theoretic unions of residue classes of&nbsp;Z and a few other rings. In particular it provides methods for computing unions, intersections and differences of these sets.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "5cc5d63c92637de3361d25bd629885bc7cfe22e550266469a85c72596850d1fc",
+  "ArchiveSHA256": "5cc5d63c92637de3361d25bd629885bc7cfe22e550266469a85c72596850d1fc",
   "ArchiveURL": "https://github.com/gap-packages/resclasses/releases/download/v4.7.2/resclasses-4.7.2",
   "AutoDoc": {
     "TitlePage": {
@@ -57,7 +57,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "c3b2ba3bdae4f20783fc1298391cb16ad2b7a8c909a21c5d33e2db86455403ed",
+  "PackageInfoSHA256": "c3b2ba3bdae4f20783fc1298391cb16ad2b7a8c909a21c5d33e2db86455403ed",
   "PackageInfoURL": "https://gap-packages.github.io/resclasses/PackageInfo.g",
   "PackageName": "ResClasses",
   "PackageWWWHome": "https://gap-packages.github.io/resclasses/",

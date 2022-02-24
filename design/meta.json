@@ -2,7 +2,7 @@
   "AbstractHTML": "<span class=\"pkgname\">DESIGN</span> is a package for constructing, classifying, partitioning, and studying block designs.",
   "AcceptDate": "08/2006",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "3ac0e3acac08cdec786362aa77192c7fc78df7764c0f9a2b01849238aef75641",
+  "ArchiveSHA256": "3ac0e3acac08cdec786362aa77192c7fc78df7764c0f9a2b01849238aef75641",
   "ArchiveURL": "https://github.com/gap-packages/design/releases/download/v1.7/design-1.7",
   "AvailabilityTest": null,
   "BinaryFiles": [
@@ -52,7 +52,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "55b8812ecff3d3bab5c513bc6f20779580d5300d346b76697c8a379855111712",
+  "PackageInfoSHA256": "55b8812ecff3d3bab5c513bc6f20779580d5300d346b76697c8a379855111712",
   "PackageInfoURL": "https://gap-packages.github.io/design/PackageInfo.g",
   "PackageName": "DESIGN",
   "PackageWWWHome": "https://gap-packages.github.io/design",

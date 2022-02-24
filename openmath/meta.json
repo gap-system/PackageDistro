@@ -2,7 +2,7 @@
   "AbstractHTML": "This package provides an <a href=\"http://www.openmath.org/\">OpenMath</a> phrasebook for <span class=\"pkgname\">GAP</span>. This package allows <span class=\"pkgname\">GAP</span> users to import and export mathematical objects encoded in OpenMath, for the purpose of exchanging them with other applications that are OpenMath enabled.",
   "AcceptDate": "08/2010",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "514df449620c61ae20de9416d9ede3eff45402df13961b1df81c4d5619c02982",
+  "ArchiveSHA256": "514df449620c61ae20de9416d9ede3eff45402df13961b1df81c4d5619c02982",
   "ArchiveURL": "https://github.com/gap-packages/openmath/releases/download/v11.5.0/OpenMath-11.5.0",
   "Autoload": false,
   "AvailabilityTest": null,
@@ -42,7 +42,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "4c4e243ece76f62c31cc1d4aec053745eff9eb5eb0b854825ac1021abc321c7b",
+  "PackageInfoSHA256": "4c4e243ece76f62c31cc1d4aec053745eff9eb5eb0b854825ac1021abc321c7b",
   "PackageInfoURL": "https://gap-packages.github.io/openmath/PackageInfo.g",
   "PackageName": "OpenMath",
   "PackageWWWHome": "https://gap-packages.github.io/openmath",

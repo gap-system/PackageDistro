@@ -2,7 +2,7 @@
   "AbstractHTML": "<span class=\"pkgname\">toric</span> is a <span class=\"pkgname\">GAP</span>package for computing with toric varieties.",
   "AcceptDate": "10/2005",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "8eb65c64bc38038957e9552fc8f409023407a0ed079884fd484fffe8d61e03de",
+  "ArchiveSHA256": "8eb65c64bc38038957e9552fc8f409023407a0ed079884fd484fffe8d61e03de",
   "ArchiveURL": "https://github.com/gap-packages/toric/releases/download/v1.9.5/Toric-1.9.5",
   "AutoDoc": {
     "TitlePage": {
@@ -42,7 +42,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "767fa004dba1c7cd76bd98caedeab70bcdc7463faa8e0a2dac5e852df80ae492",
+  "PackageInfoSHA256": "767fa004dba1c7cd76bd98caedeab70bcdc7463faa8e0a2dac5e852df80ae492",
   "PackageInfoURL": "https://gap-packages.github.io/toric/PackageInfo.g",
   "PackageName": "Toric",
   "PackageWWWHome": "https://gap-packages.github.io/toric",

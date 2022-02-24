@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">JupyterKernel</span> package provides a so-called kernel for the Jupyter interactive document system.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "6f6bb158c6c8cdc04d0cd24f0b1333e9324870ff4c51eb1096cbd620cfe2b614",
+  "ArchiveSHA256": "6f6bb158c6c8cdc04d0cd24f0b1333e9324870ff4c51eb1096cbd620cfe2b614",
   "ArchiveURL": "https://github.com/gap-packages/JupyterKernel/releases/download/v1.3/JupyterKernel-1.3",
   "AvailabilityTest": null,
   "Date": "23/02/2019",
@@ -60,7 +60,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "cd6b405b4b6754b5e8f5e7b0af9c7d4814ba6b2b78afdadaf532ff90143e89ff",
+  "PackageInfoSHA256": "cd6b405b4b6754b5e8f5e7b0af9c7d4814ba6b2b78afdadaf532ff90143e89ff",
   "PackageInfoURL": "https://gap-packages.github.io/JupyterKernel/PackageInfo.g",
   "PackageName": "JupyterKernel",
   "PackageWWWHome": "https://gap-packages.github.io/JupyterKernel/",

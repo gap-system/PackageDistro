@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">JupyterViz</span> package    adds visualization tools for use in Jupyter Notebooks    or from the GAP REPL.  Those tools can be used to make    charts, graphs, and arbitrary other visualizations.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "6acf01f72b85be2db286d64f2fb3514837541ceeaadb343c45627de813db881d",
+  "ArchiveSHA256": "6acf01f72b85be2db286d64f2fb3514837541ceeaadb343c45627de813db881d",
   "ArchiveURL": "https://github.com/nathancarter/jupyterviz/releases/download/v1.5.1/jupyterviz-1.5.1",
   "AvailabilityTest": null,
   "Date": "28/03/2019",
@@ -42,7 +42,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "a2ff310a7dbeb5adb7bb950f7472edb8c46b75d647bac77bafc6014c3b96e412",
+  "PackageInfoSHA256": "a2ff310a7dbeb5adb7bb950f7472edb8c46b75d647bac77bafc6014c3b96e412",
   "PackageInfoURL": "https://nathancarter.github.io/jupyterviz/PackageInfo.g",
   "PackageName": "JupyterViz",
   "PackageWWWHome": "https://nathancarter.github.io/jupyterviz",

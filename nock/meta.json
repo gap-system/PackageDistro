@@ -2,7 +2,7 @@
   "AbstractHTML": "The <span class=\"pkgname\">NoCK</span> package    is used for computing Tolzanos's obstruction    for compact Clifford-Klein forms",
   "AcceptDate": "07/2019",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "e163197e5d837f2f2abbbc12b293b127316b13b3f5562b2850781345f7421f9a",
+  "ArchiveSHA256": "e163197e5d837f2f2abbbc12b293b127316b13b3f5562b2850781345f7421f9a",
   "ArchiveURL": "https://github.com/pjastr/NoCK/releases/download/v1.4/NoCK-1.4",
   "AvailabilityTest": null,
   "BannerString": "----------------------------------------------------------------\nNoCK Package 1.4\nby Maciej Bocheński, Piotr Jastrzębski, Anna Szczepkowska, Aleksy Tralle, Artur Woike.\n----------------------------------------------------------------\n",
@@ -46,7 +46,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "00ea24968142e9941e3e121f7a005205d7e7e0a244f79a28951c59b11c1ad622",
+  "PackageInfoSHA256": "00ea24968142e9941e3e121f7a005205d7e7e0a244f79a28951c59b11c1ad622",
   "PackageInfoURL": "https://pjastr.github.io/NoCK/PackageInfo.g",
   "PackageName": "NoCK",
   "PackageWWWHome": "https://pjastr.github.io/NoCK",
