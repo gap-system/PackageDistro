@@ -151,6 +151,7 @@ def download_all_archives(archive_dir, pkginfos_dir):
     if not os.path.exists(archive_dir):
         os.mkdir(archive_dir)
     assert os.path.isdir(archive_dir)
+    archive_name_lookup = {}
     for pkginfo in sorted(os.listdir(pkginfos_dir)):
         if skip(pkginfo):
             continue
@@ -162,22 +163,22 @@ def download_all_archives(archive_dir, pkginfos_dir):
             pkg_json = json.load(json_file)
             fmt = pkg_json["ArchiveFormats"].split(" ")[0]
             url = pkg_json["ArchiveURL"] + fmt
-            download_archive(pkgname, url, archive_dir, pkgname + fmt)
+            archive_name = pkg_json["ArchiveURL"].split("/")[-1] + fmt
+            archive_name_lookup[pkgname] = archive_name
+            download_archive(pkgname, url, archive_dir, archive_name)
+    return archive_name_lookup
 
 
-def add_sha256_to_json(archive_dir, pkginfos_dir):
+def add_sha256_to_json(archive_dir, pkginfos_dir, archive_name_lookup):
     for pkgname in sorted(os.listdir(pkginfos_dir)):
         if skip(pkgname):
             continue
         pkgname = pkgname.split(".")[0]
         pkg_json_file = "{}/meta.json".format(pkgname)
+
         try:
-            pkg_archive = next(
-                iter(
-                    x for x in os.listdir(archive_dir) if x.startswith(pkgname)
-                )
-            )
-        except StopIteration:
+            pkg_archive = archive_name_lookup[pkgname]
+        except KeyError:
             notice("Could not locate archive for " + pkgname)
             continue
         pkg_archive = join(archive_dir, pkg_archive)
@@ -199,8 +200,8 @@ def main():
 
     scan_for_updates(pkginfos_dir)
     output_json(pkginfos_dir)
-    download_all_archives(archive_dir, pkginfos_dir)
-    add_sha256_to_json(archive_dir, pkginfos_dir)
+    archive_name_lookup = download_all_archives(archive_dir, pkginfos_dir)
+    add_sha256_to_json(archive_dir, pkginfos_dir, archive_name_lookup)
 
 
 if __name__ == "__main__":
