@@ -60,22 +60,27 @@ end;
 #   in <nam>/meta.json.old.
 
 ValidatePackagesArchive := function(unpacked_dir, pkgnames)
-  local meta_dir, pkgname, archive_dir, pkginfo_file,
-        json_file, json_file_old, pkginfo_record, json, json_old;
+  local meta_dir, nr_failures, pkginfo_file, json_file, json_file_old,
+  pkginfo_record, json, json_old, pkgname;
 
+  if IsString(pkgnames) then
+    pkgnames := [pkgnames];
+  fi;
   unpacked_dir := Directory(unpacked_dir);
   meta_dir:= DirectoryCurrent();
+  nr_failures := 0;
   for pkgname in pkgnames do
-      archive_dir := Directory(Filename(unpacked_dir, pkgname));
-      pkginfo_file := Filename(archive_dir, "PackageInfo.g");
+      pkginfo_file := Filename(Directory(unpacked_dir), "PackageInfo.g");
 
       # We call 'ValidatePackageInfo' with the filename not with the record,
       # because then the validity of some filenames
       # relative to the package directory can be checked.
       if not ValidatePackageInfo(pkginfo_file) then
-        PrintFormatted("{}: ValidatePackageInfo(\"{}\"); failed, skipping!\n",
-                              pkgname,
-                              pkginfo_file));
+        PrintToFormatted("*errout*",
+        "{}: ValidatePackageInfo(\"{}\"); failed, skipping!\n",
+                       pkgname,
+                       pkginfo_file);
+        nr_failures := nr_failures + 1;
         continue;
       fi;
 
@@ -87,26 +92,33 @@ ValidatePackagesArchive := function(unpacked_dir, pkgnames)
       json := JsonStringToGap(StringFile(Filename(meta_dir, json_file)));
       json_old := JsonStringToGap(StringFile(Filename(meta_dir, json_file_old)));
       if CompareVersionNumbers(json_old.Version, json.Version) then
-        PrintFormatted("{}: current release version is {}, but previous release version was {}, skipping!\n",
-                              pkgname,
-                              json.Version,
-                              json_old.Version));
+        PrintToFormatted("*errout*",
+        "{}: current release version is {}, but previous release version was {}, failed!\n",
+                       pkgname,
+                       json.Version,
+                       json_old.Version);
+        nr_failures := nr_failures + 1;
         continue;
       fi;
 
       if EndsWith(LowercaseString(pkginfo_record.Version), "dev") then
-        PrintFormatted("{}: invalid release version {}, skipping!\n",
-                              pkgname,
-                              pkginfo_record.Version));
+        PrintToFormatted("*errout*",
+        "{}: invalid release version {}, failed!\n",
+                       pkgname,
+                       pkginfo_record.Version);
+        nr_failures := nr_failures + 1;
         continue;
       fi;
 
       if not ComparePkgInfoDates(json_old.Date, pkginfo_record.Date) then
-        PrintFormatted("{}: current release date is {}, but previous release date was {}, skipping!\n",
-                              pkgname,
-                              pkginfo_record.Date,
-                              json_old.Date));
+        PrintToFormatted("*errout*",
+        "{}: current release date is {}, but previous release date was {}, failed!\n",
+                       pkgname,
+                       pkginfo_record.Date,
+                       json_old.Date);
+        nr_failures := nr_failures + 1;
         continue;
       fi;
   od;
+  QUIT_GAP(nr_failures = 0);
 end;

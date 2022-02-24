@@ -48,6 +48,20 @@ def sha256(archive_fname):
     return hash_archive.hexdigest()
 
 
+def metadata(pkg_name):
+    fname = join(pkg_name, "meta.json")
+    pkg_json = {}
+
+    try:
+        with open(fname, "r", encoding="utf-8") as f:
+            pkg_json = json.load(f)
+    except (OSError, IOError):
+        error("{}: file {} not found".format(pkg_name, fname))
+    except json.JSONDecodeError as e:
+        error("{}: invalid json in {}\n{}".format(pkg_name, fname, e.msg))
+    return pkg_json
+
+
 def download_archive(pkg_name, url, archive_dir, archive_fname, tries=5):
     archive_ext = archive_fname.split(".")
     if archive_ext[-1] == "gz" or archive_ext[-1] == "bz2":
@@ -98,32 +112,27 @@ def gap_exec(commands, gap="gap"):
 
 
 def scan_for_one_update(pkginfos_dir, pkg_name):
+    pkg_json = metadata(pkg_name)
     try:
-        fname = join(pkg_name, "meta.json")
-        with open(fname, "r", encoding="utf-8") as f:
-            pkg_json = json.load(f)
-            try:
-                hash_distro = pkg_json["PackageInfoSHA256"]
-            except KeyError:
-                notice(pkg_name + ': missing key "PackageInfoSHA256"')
-                hash_distro = 0
-            url = pkg_json["PackageInfoURL"]
-            response = requests.get(url)
-            if response.status_code != 200:
-                warning(
-                    "error trying to download {}, status code {}, skipping!".format(
-                        url, response.status_code
-                    )
-                )
-                return
-            response.encoding = "utf-8"
-            hash_url = hashlib.sha256(response.text.encode("utf-8")).hexdigest()
-            if hash_url != hash_distro:
-                notice(pkg_name + ": detected different sha256 hash")
-                with open(join(pkginfos_dir, pkg_name + ".g"), "wb") as f:
-                    f.write(response.text.encode("utf-8"))
-    except (OSError, IOError):
-        notice(pkg_name + ": missing meta.json file, skipping!")
+        hash_distro = pkg_json["PackageInfoSHA256"]
+    except KeyError:
+        notice(pkg_name + ': missing key "PackageInfoSHA256"')
+        hash_distro = 0
+    url = pkg_json["PackageInfoURL"]
+    response = requests.get(url)
+    if response.status_code != 200:
+        warning(
+            "error trying to download {}, status code {}, skipping!".format(
+                url, response.status_code
+            )
+        )
+        return
+    response.encoding = "utf-8"
+    hash_url = hashlib.sha256(response.text.encode("utf-8")).hexdigest()
+    if hash_url != hash_distro:
+        notice(pkg_name + ": detected different sha256 hash")
+        with open(join(pkginfos_dir, pkg_name + ".g"), "wb") as f:
+            f.write(response.text.encode("utf-8"))
 
 
 def scan_for_updates(pkginfos_dir):
