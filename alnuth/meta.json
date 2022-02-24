@@ -23,7 +23,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/alnuth-3.1.2",
   "IssueTrackerURL": "https://github.com/gap-packages/alnuth/issues",
   "Keywords": [
     "algebraic number theory",

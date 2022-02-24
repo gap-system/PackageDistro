@@ -53,7 +53,6 @@
       ]
     ]
   },
-  "InstallationPath": "pkg/simpcomp",
   "IssueTrackerURL": "https://github.com/simpcomp-team/simpcomp/issues",
   "Keywords": [
     "simplicial complexes",

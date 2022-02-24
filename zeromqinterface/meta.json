@@ -22,7 +22,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/ZeroMQInterface-0.12",
   "IssueTrackerURL": "https://github.com/gap-packages/ZeroMQInterface/issues",
   "Keywords": [
     "zeromq",

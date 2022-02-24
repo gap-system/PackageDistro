@@ -44,7 +44,6 @@
       ]
     ]
   },
-  "InstallationPath": "pkg/fr-2.4.6",
   "IssueTrackerURL": "https://github.com/gap-packages/fr/issues",
   "Keywords": [
     "functionally recursive group",

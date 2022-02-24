@@ -13,7 +13,6 @@
     "NeededOtherPackages": [],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/xgap-4.30",
   "IssueTrackerURL": "https://github.com/gap-packages/xgap/issues",
   "License": "GPL-2.0-or-later",
   "PackageDoc": [

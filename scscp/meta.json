@@ -30,7 +30,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/SCSCP-2.3.1",
   "IssueTrackerURL": "https://github.com/gap-packages/scscp/issues",
   "Keywords": [
     "SCSCP",

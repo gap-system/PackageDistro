@@ -37,7 +37,6 @@
       ]
     ]
   },
-  "InstallationPath": "pkg/lpres-1.0.1",
   "IssueTrackerURL": "https://github.com/gap-packages/lpres/issues",
   "Keywords": [
     "nilpotent quotient algorithm",

@@ -24,7 +24,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/francy-1.2.4",
   "IssueTrackerURL": "https://github.com/gap-packages/Francy/issues",
   "Keywords": [
     "Jupyter",

@@ -81,7 +81,6 @@
       ]
     ]
   },
-  "InstallationPath": "pkg/hap-1.29",
   "IssueTrackerURL": "https://github.com/gap-packages/hap/issues",
   "Keywords": [
     "homology",

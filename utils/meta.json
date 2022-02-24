@@ -33,7 +33,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/utils-0.69",
   "IssueTrackerURL": "https://github.com/gap-packages/utils/issues",
   "Keywords": [],
   "License": "GPL-2.0-or-later",

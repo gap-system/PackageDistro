@@ -22,7 +22,6 @@
       ]
     ]
   },
-  "InstallationPath": "pkg/OpenMath-11.5.0",
   "IssueTrackerURL": "https://github.com/gap-packages/openmath/issues",
   "Keywords": [
     "OpenMath",

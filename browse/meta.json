@@ -28,7 +28,6 @@
       ]
     ]
   },
-  "InstallationPath": "pkg/Browse",
   "Keywords": [
     "Browse",
     "ncurses"

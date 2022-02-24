@@ -14,7 +14,6 @@
     "NeededOtherPackages": [],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/MapClass-1.4.4",
   "IssueTrackerURL": "https://github.com/gap-packages/MapClass/issues",
   "Keywords": [
     "braid orbit",

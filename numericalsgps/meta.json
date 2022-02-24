@@ -14,7 +14,6 @@
     "NeededOtherPackages": [],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/NumericalSgps-1.2.2",
   "IssueTrackerURL": "https://github.com/gap-packages/numericalsgps/issues",
   "Keywords": [
     "Numerical Semigroups",

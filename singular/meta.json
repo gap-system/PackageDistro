@@ -17,7 +17,6 @@
     "NeededOtherPackages": [],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/singular-2020.12.18",
   "IssueTrackerURL": "https://github.com/gap-packages/singular/issues",
   "Keywords": [
     "Interface to Singular",

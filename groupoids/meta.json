@@ -44,7 +44,6 @@
       ]
     ]
   },
-  "InstallationPath": "pkg/groupoids-1.68",
   "IssueTrackerURL": "https://github.com/gap-packages/groupoids/issues",
   "Keywords": [
     "magma with objects",

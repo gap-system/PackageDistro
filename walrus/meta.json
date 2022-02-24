@@ -33,7 +33,6 @@
       ]
     ]
   },
-  "InstallationPath": "pkg/walrus-0.999",
   "IssueTrackerURL": "https://github.com/gap-packages/walrus/issues",
   "Keywords": [
     "Finitely Generated",

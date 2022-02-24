@@ -23,7 +23,6 @@
       ]
     ]
   },
-  "InstallationPath": "pkg/CaratInterface",
   "IssueTrackerURL": "https://github.com/gap-packages/caratinterface/issues",
   "Keywords": [
     "crystallographic groups",

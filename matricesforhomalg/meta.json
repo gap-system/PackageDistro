@@ -25,7 +25,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/MatricesForHomalg-2020.10-04",
   "IssueTrackerURL": "https://github.com/homalg-project/homalg_project/issues",
   "Keywords": [
     "rings",

@@ -39,7 +39,6 @@
       ]
     ]
   },
-  "InstallationPath": "pkg/semigroups-3.4.0",
   "IssueTrackerURL": "https://github.com/gap-packages/Semigroups/issues",
   "Keywords": [
     "transformation semigroups",

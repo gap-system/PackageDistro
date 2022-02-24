@@ -16,7 +16,6 @@
     "NeededOtherPackages": [],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/cohomolo-1.6.8",
   "IssueTrackerURL": "https://github.com/gap-packages/cohomolo/issues",
   "Keywords": [
     "Cohomology",

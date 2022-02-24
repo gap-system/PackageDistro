@@ -35,7 +35,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/kan-1.32",
   "IssueTrackerURL": "https://github.com/gap-packages/kan/issues",
   "Keywords": [
     "Kan extension",

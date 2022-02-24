@@ -18,7 +18,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/permut-2.0.3",
   "IssueTrackerURL": "https://github.com/gap-packages/permut/issues",
   "Keywords": [
     "permutability",

@@ -18,7 +18,6 @@
       ]
     ]
   },
-  "InstallationPath": "pkg/automata-1.14",
   "IssueTrackerURL": "https://github.com/gap-packages/automata/issues",
   "Keywords": [
     "Automata",

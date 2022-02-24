@@ -16,7 +16,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/json-2.0.2",
   "IssueTrackerURL": "https://github.com/gap-packages/json/issues",
   "License": "BSD-2-Clause",
   "PackageDoc": [

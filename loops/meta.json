@@ -21,7 +21,6 @@
     "NeededOtherPackages": [],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/loops-3.4.1",
   "IssueTrackerURL": "https://github.com/gap-packages/loops/issues",
   "Keywords": [
     "loop",

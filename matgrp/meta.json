@@ -34,7 +34,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/matgrp",
   "IssueTrackerURL": "https://github.com/hulpke/matgrp//issues",
   "Keywords": [
     "matrix group",

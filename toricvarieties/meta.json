@@ -51,7 +51,6 @@
       ]
     ]
   },
-  "InstallationPath": "pkg/ToricVarieties",
   "IssueTrackerURL": "https://homalg-project.github.io/ToricVarieties_project/ToricVarieties/issues",
   "Keywords": [
     "Toric geometry",

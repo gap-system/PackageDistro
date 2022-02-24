@@ -26,7 +26,6 @@
       ]
     ]
   },
-  "InstallationPath": "pkg/polymaking-0.8.2",
   "IssueTrackerURL": "https://github.com/gap-packages/polymaking/issues",
   "Keywords": [
     "interface",

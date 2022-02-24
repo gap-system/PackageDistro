@@ -52,7 +52,6 @@
       ]
     ]
   },
-  "InstallationPath": "pkg/XMod-2.82",
   "IssueTrackerURL": "https://github.com/gap-packages/xmod/issues",
   "Keywords": [
     "crossed module",

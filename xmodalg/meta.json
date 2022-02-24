@@ -31,7 +31,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/XModAlg-1.18",
   "IssueTrackerURL": "https://github.com/gap-packages/xmodalg/issues",
   "Keywords": [
     "crossed module of algebras",

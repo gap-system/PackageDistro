@@ -18,7 +18,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/circle-1.6.3",
   "IssueTrackerURL": "https://github.com/gap-packages/circle/issues",
   "Keywords": [
     "circle multiplication",

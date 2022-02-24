@@ -12,7 +12,6 @@
     "NeededOtherPackages": [],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/NormalizInterface-1.1.0",
   "IssueTrackerURL": "https://github.com/gap-packages/NormalizInterface/issues",
   "Keywords": [
     "normaliz",

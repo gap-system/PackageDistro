@@ -21,7 +21,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/ferret-1.0.3",
   "IssueTrackerURL": "https://github.com/gap-packages/ferret/issues",
   "Keywords": [
     "Permutation Groups",

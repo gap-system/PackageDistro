@@ -16,7 +16,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/crypting-0.10",
   "IssueTrackerURL": "https://github.com/gap-packages/crypting/issues",
   "JupyterKernelAbstractHTML": "",
   "License": "BSD-3-Clause",

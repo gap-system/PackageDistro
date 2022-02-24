@@ -26,7 +26,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/spinsym-1.5.2",
   "IssueTrackerURL": "https://github.com/gap-packages/spinsym/issues",
   "Keywords": [
     "spin",

@@ -16,7 +16,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/uuid-0.6",
   "IssueTrackerURL": "https://github.com/gap-packages/uuid/issues",
   "Keywords": [
     "UUID",

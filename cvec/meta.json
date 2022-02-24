@@ -29,7 +29,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/cvec-2.7.4",
   "IssueTrackerURL": "https://github.com/gap-packages/cvec/issues",
   "Keywords": [],
   "License": "GPL-2.0-or-later",

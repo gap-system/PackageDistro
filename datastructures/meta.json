@@ -22,7 +22,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/datastructures-0.2.5",
   "IssueTrackerURL": "https://github.com/gap-packages/datastructures/issues",
   "Keywords": [
     "data structures",

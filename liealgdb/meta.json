@@ -20,7 +20,6 @@
     "NeededOtherPackages": [],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/liealgdb-2.2.1",
   "IssueTrackerURL": "https://github.com/gap-packages/liealgdb/issues",
   "Keywords": [
     "Lie algebras"

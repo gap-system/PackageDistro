@@ -13,7 +13,6 @@
     "NeededOtherPackages": [],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/format-1.4.3",
   "IssueTrackerURL": "https://github.com/gap-packages/format/issues",
   "Keywords": [
     "formations",

@@ -31,7 +31,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/nq-2.5.4",
   "IssueTrackerURL": "https://github.com/gap-packages/nq/issues",
   "Keywords": [
     "nilpotent quotient algorithm",

@@ -22,7 +22,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/Example-4.2.1",
   "IssueTrackerURL": "https://github.com/gap-packages/example/issues",
   "Keywords": [
     "package example",

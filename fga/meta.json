@@ -14,7 +14,6 @@
     "NeededOtherPackages": [],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/fga",
   "IssueTrackerURL": "https://github.com/chsievers/fga/issues",
   "Keywords": [
     "free groups",

@@ -23,7 +23,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/cubefree-1.18",
   "IssueTrackerURL": "https://github.com/gap-packages/cubefree/issues",
   "Keywords": [
     "cubefree",

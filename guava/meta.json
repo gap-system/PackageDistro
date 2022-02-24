@@ -20,7 +20,6 @@
       ]
     ]
   },
-  "InstallationPath": "pkg/guava-3.15",
   "IssueTrackerURL": "https://github.com/gap-packages/guava/issues",
   "Keywords": [
     "code",

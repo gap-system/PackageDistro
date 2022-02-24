@@ -17,7 +17,6 @@
     "NeededOtherPackages": [],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/hecke-1.5.3",
   "IssueTrackerURL": "https://github.com/gap-packages/hecke/issues",
   "Keywords": [
     "Hecke",

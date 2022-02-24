@@ -54,7 +54,6 @@
       ]
     ]
   },
-  "InstallationPath": "pkg/hapcryst-0.1.13",
   "IssueTrackerURL": "https://github.com/gap-packages/hapcryst/issues",
   "Keywords": [
     "homological algebra",

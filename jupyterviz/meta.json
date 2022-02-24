@@ -19,7 +19,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/jupyterviz-1.5.1",
   "IssueTrackerURL": "https://github.com/nathancarter/jupyterviz/issues",
   "Keywords": [
     "Jupyter Notebook",

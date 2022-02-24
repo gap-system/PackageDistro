@@ -32,7 +32,6 @@
       ]
     ]
   },
-  "InstallationPath": "pkg/difsets-2.3.1",
   "IssueTrackerURL": "https://github.com/dylanpeifer/difsets/issues",
   "Keywords": [
     "difference sets"

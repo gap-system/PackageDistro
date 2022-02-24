@@ -18,7 +18,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/SmallGrp-1.4.2",
   "IssueTrackerURL": "https://github.com/gap-packages/SmallGrp/issues",
   "License": "Artistic-2.0",
   "PackageDoc": [

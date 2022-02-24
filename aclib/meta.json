@@ -23,7 +23,6 @@
       ]
     ]
   },
-  "InstallationPath": "pkg/aclib-1.3.2",
   "IssueTrackerURL": "https://github.com/gap-packages/aclib/issues",
   "Keywords": [
     "almost crystallographic groups",

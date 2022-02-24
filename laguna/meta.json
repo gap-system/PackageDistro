@@ -23,7 +23,6 @@
       ]
     ]
   },
-  "InstallationPath": "pkg/laguna-3.9.3",
   "IssueTrackerURL": "https://github.com/gap-packages/laguna/issues",
   "Keywords": [
     "group ring",

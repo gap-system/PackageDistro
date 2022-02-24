@@ -29,7 +29,6 @@
     "OtherPackagesLoadedInAdvance": [],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/AGT-0.2",
   "IssueTrackerURL": "https://github.com/gap-packages/AGT/issues",
   "Keywords": [
     "strongly regular",

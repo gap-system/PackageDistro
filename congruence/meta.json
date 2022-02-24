@@ -18,7 +18,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/congruence-1.2.3",
   "IssueTrackerURL": "https://github.com/gap-packages/congruence/issues",
   "Keywords": [
     "congruence subgroup",

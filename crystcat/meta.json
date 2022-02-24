@@ -22,7 +22,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/crystcat",
   "IssueTrackerURL": "https://github.com/gap-packages/crystcat/issues",
   "Keywords": [
     "crystallographic groups",

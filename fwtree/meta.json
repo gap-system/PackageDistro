@@ -29,7 +29,6 @@
       ]
     ]
   },
-  "InstallationPath": "pkg/fwtree-1.3",
   "IssueTrackerURL": "https://github.com/gap-packages/fwtree/issues",
   "Keywords": [
     "finite width",

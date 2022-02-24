@@ -37,7 +37,6 @@
       ]
     ]
   },
-  "InstallationPath": "pkg/polenta-1.3.9",
   "IssueTrackerURL": "https://github.com/gap-packages/polenta/issues",
   "Keywords": [
     "polycyclic presentations",

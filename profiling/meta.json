@@ -20,7 +20,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/profiling-2.3",
   "IssueTrackerURL": "https://github.com/gap-packages/profiling/issues",
   "License": "MIT AND CDDL-1.0",
   "PackageDoc": [

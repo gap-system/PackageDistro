@@ -16,7 +16,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/SgpViz-0.999.4",
   "IssueTrackerURL": "https://github.com/gap-packages/sgpviz/issues",
   "Keywords": [
     "Semigroup",

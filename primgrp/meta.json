@@ -16,7 +16,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/primgrp-3.4.1",
   "IssueTrackerURL": "https://github.com/gap-packages/primgrp/issues",
   "Keywords": [
     "primitive permutation group"

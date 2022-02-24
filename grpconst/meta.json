@@ -22,7 +22,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/grpconst-2.6.2",
   "IssueTrackerURL": "https://github.com/gap-packages/grpconst/issues",
   "Keywords": [
     "constructing groups of small order",

@@ -32,7 +32,6 @@
       ]
     ]
   },
-  "InstallationPath": "pkg/idrel-2.43",
   "IssueTrackerURL": "https://github.com/gap-packages/idrel/issues",
   "Keywords": [
     "logged rewriting",

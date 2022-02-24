@@ -21,7 +21,6 @@
     "NeededOtherPackages": [],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/crime-1.5",
   "IssueTrackerURL": "https://github.com/gap-packages/crime/issues",
   "Keywords": [
     "cohomology"

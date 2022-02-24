@@ -13,7 +13,6 @@
     "NeededOtherPackages": [],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/autpgrp-1.10.2",
   "IssueTrackerURL": "https://github.com/gap-packages/autpgrp/issues",
   "Keywords": [
     "p-group",

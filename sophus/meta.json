@@ -25,7 +25,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/sophus-1.24",
   "IssueTrackerURL": "https://github.com/gap-packages/sophus/issues",
   "Keywords": [
     "nilpotent Lie algebras"

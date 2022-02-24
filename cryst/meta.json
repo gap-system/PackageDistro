@@ -35,7 +35,6 @@
       ]
     ]
   },
-  "InstallationPath": "pkg/cryst",
   "IssueTrackerURL": "https://github.com/gap-packages/cryst/issues",
   "Keywords": [
     "crystallographic groups",

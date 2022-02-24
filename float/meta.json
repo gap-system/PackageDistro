@@ -20,7 +20,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/float-0.9.1",
   "IssueTrackerURL": "https://github.com/gap-packages/float/issues",
   "Keywords": [
     "floating-point"

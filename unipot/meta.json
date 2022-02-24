@@ -11,7 +11,6 @@
     "NeededOtherPackages": [],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/unipot-1.4",
   "IssueTrackerURL": "https://github.com/gap-packages/unipot/issues",
   "Keywords": [
     "Chevalley",

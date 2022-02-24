@@ -22,7 +22,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/Thelma-1.02",
   "IssueTrackerURL": "https://github.com/gap-packages/Thelma/issues",
   "Keywords": [
     "threshold elements",

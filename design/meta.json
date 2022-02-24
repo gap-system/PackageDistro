@@ -26,7 +26,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/design-1.7",
   "IssueTrackerURL": "https://github.com/gap-packages/design/issues",
   "Keywords": [
     "block design",

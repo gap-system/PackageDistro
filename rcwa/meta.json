@@ -46,7 +46,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/rcwa-4.6.4",
   "IssueTrackerURL": "https://github.com/gap-packages/rcwa/issues",
   "Keywords": [
     "infinite permutation groups",

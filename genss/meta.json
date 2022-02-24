@@ -29,7 +29,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/genss-1.6.6",
   "IssueTrackerURL": "https://github.com/gap-packages/genss/issues",
   "Keywords": [
     "Schreier-Sims",

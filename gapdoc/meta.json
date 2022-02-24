@@ -21,7 +21,6 @@
       ]
     ]
   },
-  "InstallationPath": "pkg/GAPDoc-1.6.4",
   "IssueTrackerURL": "https://github.com/frankluebeck/GAPDoc/issues",
   "Keywords": [
     "GAP documentation",

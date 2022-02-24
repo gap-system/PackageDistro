@@ -20,7 +20,6 @@
     "NeededOtherPackages": [],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/quagroup-1.8.2",
   "IssueTrackerURL": "https://github.com/gap-packages/quagroup/issues",
   "Keywords": [
     "quantum groups"

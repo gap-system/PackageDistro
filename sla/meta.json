@@ -25,7 +25,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/sla-1.5.3",
   "IssueTrackerURL": "https://github.com/gap-packages/sla/issues",
   "Keywords": [
     "simple Lie algebras",

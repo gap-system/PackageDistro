@@ -28,7 +28,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/polycyclic-2.16",
   "IssueTrackerURL": "https://github.com/gap-packages/polycyclic/issues",
   "Keywords": [
     "finitely generated nilpotent groups",

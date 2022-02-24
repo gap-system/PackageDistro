@@ -32,7 +32,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/ModulePresentationsForCAP-2020.10-01",
   "IssueTrackerURL": "https://github.com/homalg-project/CAP_project/issues",
   "License": "GPL-2.0-or-later",
   "PackageDoc": [

@@ -36,7 +36,6 @@
       ]
     ]
   },
-  "InstallationPath": "pkg/resclasses-4.7.2",
   "IssueTrackerURL": "https://github.com/gap-packages/resclasses/issues",
   "Keywords": [
     "residue classes",

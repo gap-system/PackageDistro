@@ -20,7 +20,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/nilmat-1.4",
   "IssueTrackerURL": "https://github.com/gap-packages/nilmat/issues",
   "Keywords": [
     "nilpotent groups",

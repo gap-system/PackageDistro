@@ -20,7 +20,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/modisom-2.5.1",
   "IssueTrackerURL": "https://github.com/gap-packages/modisom/issues",
   "Keywords": [
     "modular isomorphism problem",

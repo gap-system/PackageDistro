@@ -20,7 +20,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/itc-1.5",
   "IssueTrackerURL": "https://github.com/gap-packages/itc/issues",
   "Keywords": [
     "interactive Todd-Coxeter",

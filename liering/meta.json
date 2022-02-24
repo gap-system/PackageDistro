@@ -21,7 +21,6 @@
     "NeededOtherPackages": [],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/liering-2.4.1",
   "IssueTrackerURL": "https://github.com/gap-packages/liering/issues",
   "Keywords": [
     "Lie rings",

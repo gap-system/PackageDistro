@@ -19,7 +19,6 @@
     "NeededOtherPackages": [],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/grape-4.8.3",
   "IssueTrackerURL": "https://github.com/gap-packages/grape/issues",
   "Keywords": [
     "graph",

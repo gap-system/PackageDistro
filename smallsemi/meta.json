@@ -27,7 +27,6 @@
     "NeededOtherPackages": [],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/smallsemi-0.6.12",
   "IssueTrackerURL": "https://github.com/gap-packages/smallsemi/issues",
   "Keywords": [
     "small semigroups",

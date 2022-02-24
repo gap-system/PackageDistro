@@ -25,7 +25,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/FactInt-1.6.3",
   "IssueTrackerURL": "https://github.com/gap-packages/FactInt/issues",
   "Keywords": [
     "Integer factorization",

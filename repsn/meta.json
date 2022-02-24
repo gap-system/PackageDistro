@@ -18,7 +18,6 @@
     "NeededOtherPackages": [],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/repsn-3.1.0",
   "IssueTrackerURL": "https://github.com/gap-packages/repsn/issues",
   "Keywords": [
     "group representations",

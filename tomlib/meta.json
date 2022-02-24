@@ -27,7 +27,6 @@
       ]
     ]
   },
-  "InstallationPath": "pkg/tomlib-1.2.9",
   "IssueTrackerURL": "https://github.com/gap-packages/tomlib/issues",
   "Keywords": [
     "table of marks",

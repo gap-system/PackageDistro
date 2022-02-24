@@ -21,7 +21,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/radiroot-2.8",
   "IssueTrackerURL": "https://github.com/gap-packages/radiroot/issues",
   "Keywords": [
     "roots",

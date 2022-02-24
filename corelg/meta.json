@@ -27,7 +27,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/corelg-1.54",
   "IssueTrackerURL": "https://github.com/gap-packages/corelg/issues",
   "Keywords": [
     "real Lie algebras",

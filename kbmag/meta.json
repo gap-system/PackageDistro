@@ -23,7 +23,6 @@
     "NeededOtherPackages": [],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/kbmag-1.5.9",
   "IssueTrackerURL": "https://github.com/gap-packages/kbmag/issues",
   "Keywords": [
     "Knuth-Bendix",

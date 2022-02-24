@@ -41,7 +41,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/JupyterKernel-1.3",
   "IssueTrackerURL": "https://github.com/gap-packages/JupyterKernel/issues",
   "Keywords": [
     "Jupyter",

@@ -27,7 +27,6 @@
       ]
     ]
   },
-  "InstallationPath": "pkg/wedderga-4.10.0",
   "IssueTrackerURL": "https://github.com/gap-packages/wedderga/issues",
   "Keywords": [
     "Wedderburn decomposition",

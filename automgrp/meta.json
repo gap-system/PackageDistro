@@ -25,7 +25,6 @@
       ]
     ]
   },
-  "InstallationPath": "pkg/automgrp-1.3.2",
   "IssueTrackerURL": "https://github.com/gap-packages/automgrp/issues",
   "Keywords": [
     "finite automata",

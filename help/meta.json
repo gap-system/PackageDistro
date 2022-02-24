@@ -43,7 +43,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/HeLP-3.5",
   "IssueTrackerURL": "https://github.com/gap-packages/HeLP/issues",
   "Keywords": [
     "HeLP method",

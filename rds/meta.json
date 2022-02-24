@@ -23,7 +23,6 @@
       ]
     ]
   },
-  "InstallationPath": "pkg/rds-1.7",
   "IssueTrackerURL": "https://github.com/gap-packages/rds/issues",
   "Keywords": [
     "relative difference sets",

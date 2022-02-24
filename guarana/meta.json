@@ -38,7 +38,6 @@
       ]
     ]
   },
-  "InstallationPath": "pkg/guarana-0.96.2",
   "IssueTrackerURL": "https://github.com/gap-packages/guarana/issues",
   "Keywords": [
     "Mal'cev correspondence",

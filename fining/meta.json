@@ -39,7 +39,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/fining",
   "IssueTrackerURL": "https://bitbucket.org/jdebeule/fining/issues",
   "Keywords": [
     "FinInG",

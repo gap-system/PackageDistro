@@ -24,7 +24,6 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "InstallationPath": "pkg/MonoidalCategories-2020.10-01",
   "IssueTrackerURL": "https://github.com/homalg-project/CAP_project/issues",
   "Keywords": [
     "monoidal categories",
