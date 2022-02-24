@@ -74,7 +74,6 @@ def download_archive(
     if archive_ext[-1] == "gz" or archive_ext[-1] == "bz2":
         archive_ext = "." + ".".join(archive_ext[-2:])
     else:
-        print(archive_ext)
         assert archive_ext[-1] == "zip"
         archive_ext = ".zip"
 

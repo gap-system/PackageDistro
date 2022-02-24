@@ -1,1 +1,4 @@
 __pycache__
+.coverage
+coverage_html.js
+htmlcov
