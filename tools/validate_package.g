@@ -73,7 +73,7 @@ ValidatePackagesArchive := function(unpacked_dir, pkgnames)
       # because then the validity of some filenames
       # relative to the package directory can be checked.
       if not ValidatePackageInfo(pkginfo_file) then
-        Print(StringFormatted("{}: ValidatePackageInfo(\"{}\"); failed, skipping!\n",
+        PrintFormatted("{}: ValidatePackageInfo(\"{}\"); failed, skipping!\n",
                               pkgname,
                               pkginfo_file));
         continue;
@@ -87,7 +87,7 @@ ValidatePackagesArchive := function(unpacked_dir, pkgnames)
       json := JsonStringToGap(StringFile(Filename(meta_dir, json_file)));
       json_old := JsonStringToGap(StringFile(Filename(meta_dir, json_file_old)));
       if CompareVersionNumbers(json_old.Version, json.Version) then
-        Print(StringFormatted("{}: current release version is {}, but previous release version was {}, skipping!\n",
+        PrintFormatted("{}: current release version is {}, but previous release version was {}, skipping!\n",
                               pkgname,
                               json.Version,
                               json_old.Version));
@@ -95,20 +95,18 @@ ValidatePackagesArchive := function(unpacked_dir, pkgnames)
       fi;
 
       if EndsWith(LowercaseString(pkginfo_record.Version), "dev") then
-        Print(StringFormatted("{}: invalid release version {}, skipping!\n",
+        PrintFormatted("{}: invalid release version {}, skipping!\n",
                               pkgname,
                               pkginfo_record.Version));
         continue;
       fi;
 
       if not ComparePkgInfoDates(json_old.Date, pkginfo_record.Date) then
-        Print(StringFormatted("{}: current release date is {}, but previous release date was {}, skipping!\n",
+        PrintFormatted("{}: current release date is {}, but previous release date was {}, skipping!\n",
                               pkgname,
                               pkginfo_record.Date,
                               json_old.Date));
         continue;
       fi;
-
-#T    WriteJson(pkginfo_record);
   od;
 end;
