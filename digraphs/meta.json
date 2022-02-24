@@ -1,11 +1,11 @@
 {
   "AbstractHTML": "The <b>Digraphs</b> package is a <b>GAP</b> package for digraphs and multidigraphs.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSha256": "88b719589f7294c6b7f5ab315f5727c44e7acc15288a4e5a4e43abf4a374c70a",
-  "ArchiveURL": "https://github.com/digraphs/Digraphs/releases/download/v1.3.1/digraphs-1.3.1",
+  "ArchiveSHA256": "d3f68a1bf765610b44a6da27d1c61d404d4075789fd18df950454ed9798573d9",
+  "ArchiveURL": "https://github.com/digraphs/Digraphs/releases/download/v1.5.0/digraphs-1.5.0",
   "Autoload": false,
   "AvailabilityTest": null,
-  "Date": "27/11/2020",
+  "Date": "27/10/2021",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10.0",
@@ -25,8 +25,8 @@
     ],
     "SuggestedOtherPackages": [
       [
-        "gapdoc",
-        ">=1.5.1"
+        "GAPDoc",
+        ">=1.6.3"
       ],
       [
         "grape",
@@ -38,7 +38,6 @@
       ]
     ]
   },
-  "InstallationPath": "pkg/digraphs-1.3.1",
   "IssueTrackerURL": "https://github.com/digraphs/Digraphs/issues",
   "Keywords": [],
   "License": "GPL-3.0-or-later",
@@ -55,11 +54,21 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSha256": "7d94e39a11db5945818078123502eeb44c904e85c75cb6b05ad146eaa1d0c437",
+  "PackageInfoSHA256": "95a109df953e22dfd07c382ef0f7927dfea90e1b1ce40d59178ed8c045a3fb72",
   "PackageInfoURL": "https://digraphs.github.io/Digraphs/PackageInfo.g",
   "PackageName": "Digraphs",
   "PackageWWWHome": "https://digraphs.github.io/Digraphs",
   "Persons": [
+    {
+      "Email": "mam49@st-andrews.ac.uk",
+      "FirstNames": "Marina",
+      "Institution": "University of St Andrews",
+      "IsAuthor": false,
+      "IsMaintainer": false,
+      "LastName": "Anagnostopoulou-Merkouri",
+      "Place": "St Andrews",
+      "PostalAddress": "Mathematical Institute, North Haugh, St Andrews, Fife, KY16 9SS, Scotland"
+    },
     {
       "Email": "jdebeule@cage.ugent.be",
       "FirstNames": "Jan",
@@ -70,6 +79,16 @@
       "Place": "Brussels",
       "PostalAddress": "Vrije Universiteit Brussel,  Vakgroep Wiskunde,  Pleinlaan 2,  B - 1050 Brussels,  Belgium",
       "WWWHome": "http://homepages.vub.ac.be/~jdbeule/"
+    },
+    {
+      "Email": "flb5@st-andrews.ac.uk",
+      "FirstNames": "Finn",
+      "Institution": "University of St Andrews",
+      "IsAuthor": false,
+      "IsMaintainer": false,
+      "LastName": "Buck",
+      "Place": "St Andrews",
+      "PostalAddress": "Mathematical Institute, North Haugh, St Andrews, Fife, KY16 9SS, Scotland"
     },
     {
       "Email": "sb235@st-andrews.ac.uk",
@@ -92,12 +111,42 @@
       "PostalAddress": "Mathematical Institute, North Haugh, St Andrews, Fife, KY16 9SS, Scotland"
     },
     {
+      "Email": "tdcl@st-andrews.ac.uk",
+      "FirstNames": "Tom",
+      "Institution": "University of St Andrews",
+      "IsAuthor": false,
+      "IsMaintainer": false,
+      "LastName": "Conti-Leslie",
+      "Place": "St Andrews",
+      "PostalAddress": "Mathematical Institute, North Haugh, St Andrews, Fife, KY16 9SS, Scotland"
+    },
+    {
       "Email": "le27@st-andrews.ac.uk",
       "FirstNames": "Luke",
       "Institution": "University of St Andrews",
       "IsAuthor": false,
       "IsMaintainer": false,
       "LastName": "Elliott",
+      "Place": "St Andrews",
+      "PostalAddress": "Mathematical Institute, North Haugh, St Andrews, Fife, KY16 9SS, Scotland"
+    },
+    {
+      "Email": "eg207@st-andrews.ac.uk",
+      "FirstNames": "Ewan",
+      "Institution": "University of St Andrews",
+      "IsAuthor": false,
+      "IsMaintainer": false,
+      "LastName": "Gilligan",
+      "Place": "St Andrews",
+      "PostalAddress": "Mathematical Institute, North Haugh, St Andrews, Fife, KY16 9SS, Scotland"
+    },
+    {
+      "Email": "seh25@st-andrews.ac.uk",
+      "FirstNames": "Samantha",
+      "Institution": "University of St Andrews",
+      "IsAuthor": false,
+      "IsMaintainer": false,
+      "LastName": "Harper",
       "Place": "St Andrews",
       "PostalAddress": "Mathematical Institute, North Haugh, St Andrews, Fife, KY16 9SS, Scotland"
     },
@@ -121,7 +170,7 @@
       "LastName": "Jefferson",
       "Place": "St Andrews",
       "PostalAddress": "Jack Cole Building, North Haugh, St Andrews, Fife, KY16 9SX, Scotland",
-      "WWWHome": "http://caj.host.cs.st-andrews.ac.uk"
+      "WWWHome": "https://caj.host.cs.st-andrews.ac.uk"
     },
     {
       "Email": "julius.jonusas@tuwien.ac.at",
@@ -157,6 +206,16 @@
       "WWWHome": "https://www.morphism.de/~markusp"
     },
     {
+      "Email": "lr217@st-andrews.ac.uk",
+      "FirstNames": "Lea",
+      "Institution": "University of St Andrews",
+      "IsAuthor": false,
+      "IsMaintainer": false,
+      "LastName": "Racine",
+      "Place": "St Andrews",
+      "PostalAddress": "Mathematical Institute, North Haugh, St Andrews, Fife, KY16 9SS, Scotland"
+    },
+    {
       "Email": "cr66@st-andrews.ac.uk",
       "FirstNames": "Christopher",
       "Institution": "University of St Andrews",
@@ -177,15 +236,14 @@
       "PostalAddress": "Mathematical Institute, North Haugh, St Andrews, Fife, KY16 9SS, Scotland"
     },
     {
-      "Email": "mct25@st-andrews.ac.uk",
-      "FirstNames": "Michael",
+      "Email": "bs201@st-andrews.ac.uk",
+      "FirstNames": "Ben",
       "Institution": "University of St Andrews",
-      "IsAuthor": true,
+      "IsAuthor": false,
       "IsMaintainer": false,
-      "LastName": "Torpey",
+      "LastName": "Spiers",
       "Place": "St Andrews",
-      "PostalAddress": "Jack Cole Building, North Haugh, St Andrews, Fife, KY16 9SX, Scotland",
-      "WWWHome": "https://mtorpey.github.io"
+      "PostalAddress": "Mathematical Institute, North Haugh, St Andrews, Fife, KY16 9SS, Scotland"
     },
     {
       "Email": "mt200@st-andrews.ac.uk",
@@ -215,6 +273,17 @@
       "IsMaintainer": true,
       "LastName": "Wilson",
       "WWWHome": "https://wilf.me"
+    },
+    {
+      "Email": "mct25@st-andrews.ac.uk",
+      "FirstNames": "Michael",
+      "Institution": "University of St Andrews",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Young",
+      "Place": "St Andrews",
+      "PostalAddress": "Jack Cole Building, North Haugh, St Andrews, Fife, KY16 9SX, Scotland",
+      "WWWHome": "https://mct25.host.cs.st-andrews.ac.uk"
     }
   ],
   "README_URL": "https://digraphs.github.io/Digraphs/README.md",
@@ -224,6 +293,6 @@
   },
   "Status": "deposited",
   "Subtitle": "Graphs, digraphs, and multidigraphs in GAP",
-  "TestFile": "tst/testinstall.tst",
-  "Version": "1.3.1"
+  "TestFile": "tst/teststandard.g",
+  "Version": "1.5.0"
 }
