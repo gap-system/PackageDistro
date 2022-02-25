@@ -79,7 +79,7 @@ ValidatePackagesArchive := function(unpacked_dir, pkgnames)
       # relative to the package directory can be checked.
       if not ValidatePackageInfo(pkginfo_file) then
         PrintToFormatted("*errout*",
-                         "{}: ValidatePackageInfo(\"{}\"); FAILED, skipping!\n",
+                         "\033[33m{}: ValidatePackageInfo(\"{}\"); FAILED, skipping!\n\033[0m",
                          pkgname,
                          pkginfo_file);
         nr_failures := nr_failures + 1;
@@ -95,8 +95,8 @@ ValidatePackagesArchive := function(unpacked_dir, pkgnames)
       json_old := JsonStringToGap(StringFile(Filename(meta_dir, json_file_old)));
       if CompareVersionNumbers(json_old.Version, json.Version) then
         PrintToFormatted("*errout*",
-                         Concatenation("{}: current release version is {},",
-                         " but previous release version was {}, FAILED!\n"),
+                         Concatenation("\033[33m{}: current release version is {},",
+                         " but previous release version was {}, FAILED!\n\033[0m"),
                          pkgname,
                          json.Version,
                          json_old.Version);
@@ -106,7 +106,7 @@ ValidatePackagesArchive := function(unpacked_dir, pkgnames)
 
       if EndsWith(LowercaseString(pkginfo_record.Version), "dev") then
         PrintToFormatted("*errout*",
-                         "{}: invalid release version {}, FAILED!\n",
+                         "\033[33m{}: invalid release version {}, FAILED!\n\033[0m",
                          pkgname,
                          pkginfo_record.Version);
         nr_failures := nr_failures + 1;
@@ -115,9 +115,9 @@ ValidatePackagesArchive := function(unpacked_dir, pkgnames)
 
       if not ComparePkgInfoDates(json_old.Date, pkginfo_record.Date) then
         PrintToFormatted("*errout*",
-                         Concatenation("{}: current release date is {},",
+                         Concatenation("\033[33m{}: current release date is {},",
                                        " but previous release date was {},",
-                                       " FAILED!\n"),
+                                       " FAILED!\n\033[0m"),
                          pkgname,
                          pkginfo_record.Date,
                          json_old.Date);

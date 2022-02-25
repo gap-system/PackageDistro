@@ -31,6 +31,7 @@ import requests
 from accepts import accepts
 
 from utils import error, notice, warning
+from download_packages import download_archive, metadata
 
 
 @accepts(str)
@@ -49,55 +50,6 @@ def sha256(fname: str) -> str:
         for chunk in iter(lambda: f.read(1024), b""):
             hash_archive.update(chunk)
     return hash_archive.hexdigest()
-
-
-@accepts(str)
-def metadata(pkg_name: str) -> dict:
-    fname = join(pkg_name, "meta.json")
-    pkg_json = {}
-
-    try:
-        with open(fname, "r", encoding="utf-8") as f:
-            pkg_json = json.load(f)
-    except (OSError, IOError):
-        error("{}: file {} not found".format(pkg_name, fname))
-    except json.JSONDecodeError as e:
-        error("{}: invalid json in {}\n{}".format(pkg_name, fname, e.msg))
-    return pkg_json
-
-
-@accepts(str, str, str, int)
-def download_archive(
-    pkg_name: str, url: str, archive_fname: str, tries=5
-) -> None:
-    archive_ext = archive_fname.split(".")
-    if archive_ext[-1] == "gz" or archive_ext[-1] == "bz2":
-        archive_ext = "." + ".".join(archive_ext[-2:])
-    else:
-        assert archive_ext[-1] == "zip"
-        archive_ext = ".zip"
-
-    if os.path.exists(archive_fname) and os.path.isfile(archive_fname):
-        notice(
-            "{}: {} already exists, not downloading again".format(
-                pkg_name, archive_fname
-            )
-        )
-        return
-    notice("{}: downloaded {} to {}".format(pkg_name, url, archive_fname))
-
-    for i in range(tries):
-        try:
-            response = requests.get(url, stream=True)
-            with open(archive_fname, "wb") as f:
-                for chunk in response.raw.stream(1024, decode_content=False):
-                    if chunk:
-                        f.write(chunk)
-            return
-        except requests.RequestException:
-            notice("{}: attempt {}/{} failed".format(pkg_name, i + 1, tries))
-    else:
-        error("{}: failed to download archive".format(pkg_name))
 
 
 @accepts(dict)
@@ -146,7 +98,7 @@ def scan_for_one_update(pkginfos_dir: str, pkg_name: str) -> None:
         return
     hash_url = hashlib.sha256(pkg_info).hexdigest()
     if hash_url != hash_distro:
-        notice(pkg_name + ": detected different sha256 hash")
+        notice(pkg_name + ": detected different sha256 hash of PackageInfo.g")
         with open(join(pkginfos_dir, pkg_name + ".g"), "wb") as f:
             f.write(pkg_info)
 
@@ -183,19 +135,9 @@ def download_all_archives(archive_dir: str, pkginfos_dir: str) -> dict:
     for pkginfo in sorted(os.listdir(pkginfos_dir)):
         if skip(pkginfo):
             continue
-
         pkgname = pkginfo.split(".")[0]
-        with open(
-            join(pkgname, "meta.json"), "r", encoding="utf-8"
-        ) as json_file:
-            pkg_json = json.load(json_file)
-            fmt = pkg_json["ArchiveFormats"].split(" ")[0]
-            url = pkg_json["ArchiveURL"] + fmt
-            archive_name = join(
-                archive_dir, pkg_json["ArchiveURL"].split("/")[-1] + fmt
-            )
-            archive_name_lookup[pkgname] = archive_name
-            download_archive(pkgname, url, archive_name)
+        archive_name_lookup[pkgname] = download_archive(archive_dir, pkgname)
+
     return archive_name_lookup
 
 
@@ -219,6 +161,7 @@ def add_sha256_to_json(pkginfos_dir: str, archive_name_lookup: dict) -> None:
             join(pkginfos_dir, pkgname + ".g")
         )
         pkg_json["ArchiveSHA256"] = sha256(pkg_archive)
+        notice("{0}: writing updated {0}/meta.json".format(pkgname))
         with open(pkg_json_file, "w", encoding="utf-8") as f:
             json.dump(pkg_json, f, indent=2, ensure_ascii=False, sort_keys=True)
             f.write("\n")

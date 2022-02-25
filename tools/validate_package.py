@@ -36,19 +36,16 @@ import sys
 import tarfile
 import zipfile
 from os.path import join
+
 from accepts import accepts
 
-from scan_for_updates import (
-    download_archive,
-    download_pkg_info,
-    gap_exec,
-    metadata,
-    sha256,
-)
+from download_packages import archive_name, metadata, download_archive
+from scan_for_updates import download_pkg_info, gap_exec, sha256
 from utils import notice, warning
 
 
-def unpack_archive(unpack_dir, pkg_name, archive_fname):
+def unpack_archive(archive_dir, unpack_dir, pkg_name):
+    archive_fname = join(archive_dir, archive_name(pkg_name))
     if not os.path.exists(unpack_dir):
         os.mkdir(unpack_dir)
     ext = archive_fname.split(".")[-1]
@@ -79,9 +76,14 @@ def unpacked_archive_name(unpack_dir, pkg_name):
     warning("{}: couldn't determine the unpacked archive directory!")
 
 
-def validate_package(pkg_name, unpacked_name, packed_name, pkg_json):
+def validate_package(archive_dir, unpack_dir, pkg_name):
     result = True
-    pkg_info_name = join(unpacked_name, "PackageInfo.g")
+
+    pkg_json = metadata(pkg_name)
+
+    pkg_info_name = join(
+        unpacked_archive_name(unpack_dir, pkg_name), "PackageInfo.g"
+    )
 
     if pkg_json["PackageInfoSHA256"] != sha256(pkg_info_name):
         warning(
@@ -90,6 +92,8 @@ def validate_package(pkg_name, unpacked_name, packed_name, pkg_json):
             )
         )
         result = False
+
+    packed_name = join(archive_dir, archive_name(pkg_name))
 
     if pkg_json["ArchiveSHA256"] != sha256(packed_name):
         warning(
@@ -115,24 +119,12 @@ def main(pkg_name):
     unpack_dir = "_unpacked_archives"
     archive_dir = "_archives"
 
-    pkg_json = metadata(pkg_name)
+    download_archive(archive_dir, pkg_name)
+    unpack_archive(archive_dir, unpack_dir, pkg_name)
 
-    fmt = pkg_json["ArchiveFormats"].split(" ")[0]
-    url = pkg_json["ArchiveURL"] + fmt
-
-    packed_name = join(archive_dir, pkg_json["ArchiveURL"].split("/")[-1] + fmt)
-    download_archive(pkg_name, url, packed_name, tries=5)
-
-    unpack_archive(unpack_dir, pkg_name, packed_name)
-    unpacked_name = unpacked_archive_name(unpack_dir, pkg_name)
-
-    if validate_package(
-        pkg_name,
-        unpacked_name,
-        packed_name,
-        pkg_json,
-    ):
+    if validate_package(archive_dir, unpack_dir, pkg_name):
         dir_of_this_file = os.path.dirname(os.path.realpath(__file__))
+        unpacked_name = unpacked_archive_name(unpack_dir, pkg_name)
         if (
             gap_exec(
                 r"ValidatePackagesArchive(\"{}\", \"{}\");".format(
