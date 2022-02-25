@@ -75,7 +75,9 @@ def archive_url(pkg_name: str) -> str:
 
 
 @accepts(str, str, int)
-def download_archive(archive_dir: str, pkg_name: str, tries=5) -> str:
+def download_archive(  # pylint: disable=inconsistent-return-statements
+    archive_dir: str, pkg_name: str, tries=5
+) -> str:
     """Returns the full archive name (including archive_dir) for the downloaded
     archive of the package `pkg_name`"""
     if not os.path.exists(archive_dir):
@@ -111,7 +113,6 @@ def download_archive(archive_dir: str, pkg_name: str, tries=5) -> str:
             notice("{}: attempt {}/{} failed".format(pkg_name, i + 1, tries))
 
     error("{}: failed to download archive".format(pkg_name))
-    return None
 
 
 def main(pkg_names) -> None:

@@ -15,7 +15,7 @@
         "polycyclic",
         ">=1.0"
       ]
-    ],
+    ]
     "SuggestedOtherPackages": [
       [
         "crystcat",

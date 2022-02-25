@@ -19,6 +19,8 @@ This script is intended to iterate through package metadata in the repo:
 
 and do the following:
 
+    TODO
+
 """
 
 import hashlib
@@ -52,8 +54,9 @@ def sha256(fname: str) -> str:
     return hash_archive.hexdigest()
 
 
-@accepts(dict)
-def download_pkg_info(pkg_json: dict) -> str:
+@accepts(str)
+def download_pkg_info(pkg_name: str) -> str:
+    pkg_json = metadata(pkg_name)
     url = pkg_json["PackageInfoURL"]
     response = requests.get(url)
     if response.status_code != 200:
@@ -62,7 +65,7 @@ def download_pkg_info(pkg_json: dict) -> str:
                 url, response.status_code
             )
         )
-        return
+        return False
     response.encoding = "utf-8"
     return response.text.encode("utf-8")
 
@@ -93,7 +96,7 @@ def scan_for_one_update(pkginfos_dir: str, pkg_name: str) -> None:
     except KeyError:
         notice(pkg_name + ': missing key "PackageInfoSHA256"')
         hash_distro = 0
-    pkg_info = download_pkg_info(pkg_json)
+    pkg_info = download_pkg_info(pkg_name)
     if not pkg_info:
         return
     hash_url = hashlib.sha256(pkg_info).hexdigest()
@@ -109,7 +112,7 @@ def scan_for_updates(pkginfos_dir: str) -> None:
         os.mkdir(pkginfos_dir)
     assert os.path.isdir(pkginfos_dir)
     for pkgname in sorted(os.listdir(os.getcwd())):
-        if not skip(pkgname):
+        if not skip(pkgname) and os.path.isdir(pkgname):
             scan_for_one_update(pkginfos_dir, pkgname)
 
 

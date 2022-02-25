@@ -1,0 +1,122 @@
+{
+  "AbstractHTML": "The package provides a <span class=\"pkgname\">GAP</span> interface to the <a href=\"http://brauer.maths.qmul.ac.uk/Atlas/v3\">Atlas of Group Representations</a>",
+  "AcceptDate": "04/2001",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSHA256": "4443976572d377212ad34fa96ee971d6674bb0d642e60a696198e0c6f21d6084",
+  "ArchiveURL": "http://www.math.rwth-aachen.de/~Thomas.Breuer/atlasrep/atlasrep-2r1p0",
+  "AvailabilityTest": null,
+  "CommunicatedBy": "Herbert Pahlings (Aachen)",
+  "Date": "10/05/2019",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">= 4.10.1",
+    "NeededOtherPackages": [
+      [
+        "gapdoc",
+        ">= 1.6.2"
+      ]
+    ],
+    "SuggestedOtherPackages": [
+      [
+        "browse",
+        ">= 1.8.3"
+      ],
+      [
+        "ctbllib",
+        ">= 1.2"
+      ],
+      [
+        "io",
+        ">= 3.3"
+      ],
+      [
+        "mfer",
+        ">= 1.0"
+      ],
+      [
+        "ctblocks",
+        ">= 1.0"
+      ],
+      [
+        "recog",
+        ">= 1.3.1"
+      ]
+    ]
+  },
+  "Keywords": [
+    "group representations",
+    "finite simple groups"
+  ],
+  "License": "GPL-3.0-or-later",
+  "MyVersion": "2r1p0",
+  "MyWWWHome": "http://www.math.rwth-aachen.de/~Thomas.Breuer",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "AtlasRep",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "An Atlas of Group Representations",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSHA256": "e697d378a11ee06d601c886222afdb799e41ee52662e3e74055b8e0b1e00091f",
+  "PackageInfoURL": "http://www.math.rwth-aachen.de/~Thomas.Breuer/atlasrep/PackageInfo.g",
+  "PackageName": "AtlasRep",
+  "PackageWWWHome": "http://www.math.rwth-aachen.de/~Thomas.Breuer/atlasrep",
+  "Persons": [
+    {
+      "Email": "R.A.Wilson@qmul.ac.uk",
+      "FirstNames": "Robert A.",
+      "Institution": "School of Mathematical Sciences, Queen Mary, University of London",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Wilson",
+      "Place": "London",
+      "WWWHome": "http://www.maths.qmw.ac.uk/~raw"
+    },
+    {
+      "Email": "richpark7920@gmail.com",
+      "FirstNames": "Richard A.",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Parker"
+    },
+    {
+      "FirstNames": "Simon",
+      "Institution": "School of Mathematics, University of Birmingham",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Nickerson",
+      "WWWHome": "http://nickerson.org.uk/groups"
+    },
+    {
+      "Email": "J.N.Bray@qmul.ac.uk",
+      "FirstNames": "John N.",
+      "Institution": "School of Mathematical Sciences, Queen Mary, University of London",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Bray",
+      "Place": "London",
+      "WWWHome": "http://www.maths.qmw.ac.uk/~jnb"
+    },
+    {
+      "Email": "sam@math.rwth-aachen.de",
+      "FirstNames": "Thomas",
+      "Institution": "Lehrstuhl D für Mathematik, RWTH Aachen",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Breuer",
+      "Place": "Aachen",
+      "PostalAddress": "Thomas Breuer\nLehrstuhl D für Mathematik\nPontdriesch 14/16\n52062 Aachen\nGermany",
+      "WWWHome": "http://www.math.rwth-aachen.de/~Thomas.Breuer"
+    }
+  ],
+  "README_URL": "http://www.math.rwth-aachen.de/~Thomas.Breuer/atlasrep/README.md",
+  "Status": "accepted",
+  "Subtitle": "A GAP Interface to the Atlas of Group Representations",
+  "TestFile": "tst/testauto.g",
+  "Version": "2.1.0"
+}
