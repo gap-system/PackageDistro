@@ -84,7 +84,7 @@ jobs:
       matrix: ${{ fromJSON(needs.detect-changes.outputs.update-matrix) }}
     steps:
       - uses: actions/checkout@v2
-        with: 
+        with:
           fetch-depth: '2'
 
       - name: "Install package distribution tools"
@@ -111,15 +111,23 @@ jobs:
 
       - name: "Install and build package"
         run: |
-            echo "TODO: we also need all dependencies to be compiled -- perhaps can (ab)use PackageManager?"
+          _tools/download_dependencies.py ${{ matrix.package }}
+          BuildPackagesOptions="--strict"
+          cd _unpacked_archives
+          for file in * ; do
+            ln -s "$PWD/$file" "/home/runner/gap/pkg/$file"
+          done
+          cd /home/runner/gap/pkg
 
-      - name: "Run package tests with default packages"
-        run: |
-            echo "TODO: use TestPackage"
+          for pkg in * ; do
+              ../bin/BuildPackages.sh "$BuildPackagesOptions" $pkg*
+          done
 
       - name: "Run package tests with minimal packages"
         run: |
-            echo "TODO: use TestPackage and start GAP with -A"
+            for pkg in ${{ matrix.package }}; do
+                echo "FORCE_QUIT_GAP(TestPackage(\"$pkg\"));" | gap
+            done
 
       # TODO: also test `LoadAllPackages` works!
       # TODO: perhaps: also run packages with `LoadAllPackages`?
