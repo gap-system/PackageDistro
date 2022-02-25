@@ -91,16 +91,19 @@ jobs:
           pip install -r _tools/requirements.txt
 
       - name: "Install GAP"
-        run: |
-            echo "TODO: install GAP via a container that contains prerequisits for most/all packages"
+        uses: gap-actions/setup-gap@v2
+        with:
+          GAP_BOOTSTRAP: 'minimal'
+          GAP_PKGS_TO_CLONE: 'json'
+          GAP_PKGS_TO_BUILD: 'json'
 
       - name: "Obtain copy of old metadata, if any"
         run: |
-            echo "TODO: this can then be passed validate-package.py so it can test if the version of the package increased"
+          git show HEAD^:${{ matrix.package }}/meta.json > ${{ matrix.package }}/meta.json.old || :
 
       - name: "Validate metadata"
         run: |
-            echo "TODO: invoke validate-package.py"
+            _tools/validate_package.py ${{ matrix.package }}
 
       - name: "Install and build package"
         run: |
