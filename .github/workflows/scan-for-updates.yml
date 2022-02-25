@@ -1,7 +1,7 @@
 name: "Scan for updates"
 
 on:
-  workflow_dispatch:  # TODO: for debugging
+  workflow_dispatch:  # for debugging
   # schedule:
   #  # Every day at 2:30 AM UTC
   #  - cron: '30 2 * * *'
@@ -9,7 +9,7 @@ on:
 jobs:
   scan-for-updates:
     name: "Scan for package updates"
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     # FIXME: containers don't seem to work :-(
     # container: ghcr.io/gap-system/gap-docker-master:master
     outputs:
@@ -26,8 +26,10 @@ jobs:
           path: ~/_archives
           key: archives
 
-      - name: "Clone package distribution tools"
-        run: git clone https://github.com/gap-system/PackageDistroTools _tools
+      - name: "Install package distribution tools"
+        run: |
+          git clone https://github.com/gap-system/PackageDistroTools _tools
+          pip install -r _tools/requirements.txt
 
       - name: "Install GAP"
         uses: gap-actions/setup-gap@v2
@@ -53,14 +55,12 @@ jobs:
         run: |
             modified=$(git diff --name-only --no-renames --diff-filter=M)
 
-            # HACK
-            modified="aclib digraphs walrus"
-
             MATRIX="{\"package\":["
             for PKG in ${modified}; do
               PKG=${PKG%"/meta.json"}
               echo "${PKG}"
               MATRIX="${MATRIX}\"${PKG}\","
+              break  # TODO HACK stop after just one PR for debugging
             done
             MATRIX="${MATRIX}]}"
             echo "::set-output name=matrix::$MATRIX"
@@ -68,7 +68,7 @@ jobs:
   create-pull-request:
     name: "Create pull request for ${{ matrix.package }}"
     needs: scan-for-updates
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix: ${{ fromJSON(needs.scan-for-updates.outputs.matrix) }}
@@ -79,10 +79,6 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: metadata
-
-      # TODO: add a step here which extracts the new version from the JSON
-      # and puts it into the commit message / PR title
-      # TODO: bonus points for also extracting the old version
 
       - uses: peter-evans/create-pull-request@v3
         with:

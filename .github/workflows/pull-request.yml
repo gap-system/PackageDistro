@@ -1,4 +1,4 @@
-name: PR
+name: "Test pull requests"
 
 on:
   workflow_dispatch:  # TODO: for debugging
@@ -14,7 +14,7 @@ concurrency:
 jobs:
   detect-changes:
     name: "Detect packages that were added, removed or modified"
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     outputs:
       remove-matrix: ${{ steps.detect-changes.outputs.remove-matrix }}
       update-matrix: ${{ steps.detect-changes.outputs.update-matrix }}
@@ -55,15 +55,17 @@ jobs:
   remove-package:
     name: "Remove ${{ matrix.package }}"
     needs: detect-changes
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix: ${{ fromJSON(needs.detect-changes.outputs.remove-matrix) }}
     steps:
       - uses: actions/checkout@v2
 
-      - name: "Clone package distribution tools"
-        run: git clone https://github.com/gap-system/PackageDistroTools
+      - name: "Install package distribution tools"
+        run: |
+          git clone https://github.com/gap-system/PackageDistroTools _tools
+          pip install -r _tools/requirements.txt
 
       - name: "Check whether anything depends on the package"
         run: |
@@ -77,7 +79,7 @@ jobs:
   add-or-update-package:
     name: "Add or update ${{ matrix.package }}"
     needs: detect-changes
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix: ${{ fromJSON(needs.detect-changes.outputs.update-matrix) }}
