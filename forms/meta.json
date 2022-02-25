@@ -1,36 +1,31 @@
 {
   "AbstractHTML": "This package can be used for work with sesquilinear and quadratic forms on finite vector spaces; objects that are used to describe polar spaces and classical groups.",
   "AcceptDate": "03/2009",
-  "ArchiveFormats": ".tar.gz -win.zip .tar.bz2",
-  "ArchiveSHA256": "327d26fa418355ddaed3b856ed6ebee0a8a70f06fc04a315988b5962c375aef1",
-  "ArchiveURL": "http://cage.ugent.be/geometry/software/forms/forms-1.2.5",
-  "Autoload": false,
+  "ArchiveFormats": ".tar.gz .zip .tar.bz2",
+  "ArchiveSHA256": "e1195de04b1d9c4faf50d4fb111096974a221174d5af6cc5fb74c0db4312aa1f",
+  "ArchiveURL": "https://github.com/gap-packages/Forms/releases/download/v1.2.6/Forms-1.2.6",
   "AvailabilityTest": null,
-  "BannerString": "---------------------------------------------------------------------\nLoading 'Forms' 1.2.5 (27/09/2018)\nby John Bamberg (http://school.maths.uwa.edu.au/~bamberg/)\n   Jan De Beule (http://www.debeule.eu)\nFor help, type: ?Forms \n---------------------------------------------------------------------\n",
+  "BannerString": "---------------------------------------------------------------------\nLoading 'Forms' 1.2.6 (29/07/2021)\nby John Bamberg (http://school.maths.uwa.edu.au/~bamberg/)\n   Jan De Beule (http://www.debeule.eu)\nFor help, type: ?Forms \n---------------------------------------------------------------------\n",
   "CommunicatedBy": "Leonard Soicher (London)",
-  "Date": "27/09/2018",
+  "Date": "29/07/2021",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">=4.8",
-    "NeededOtherPackages": [
-      [
-        "GAPDoc",
-        ">= 1.6"
-      ]
-    ],
+    "GAP": ">=4.9",
+    "NeededOtherPackages": [],
     "SuggestedOtherPackages": []
   },
+  "IssueTrackerURL": "https://github.com/gap-packages/Forms/issues",
   "Keywords": [
     "Forms",
     "Sesquilinear",
     "Quadratic"
   ],
+  "License": "GPL-2.0-or-later",
   "PackageDoc": [
     {
       "ArchiveURLSubset": [
         "doc"
       ],
-      "Autoload": true,
       "BookName": "Forms",
       "HTMLStart": "doc/chap0.html",
       "LongTitle": "Forms - Sesquilinear and Quadratic",
@@ -38,10 +33,10 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "5e8381d1dfd23782fdf7de8099f584a54b9c1a7999650b9b5c2f185a477077be",
-  "PackageInfoURL": "http://cage.ugent.be/geometry/software/forms/PackageInfo.g",
+  "PackageInfoSHA256": "a3e17ab5d38c13ddd74bb5bf45bd04e675181ffaaa329f3b95a854fb5a1eb468",
+  "PackageInfoURL": "https://gap-packages.github.io/Forms/PackageInfo.g",
   "PackageName": "Forms",
-  "PackageWWWHome": "http://cage.ugent.be/geometry/forms.php",
+  "PackageWWWHome": "https://gap-packages.github.io/Forms",
   "Persons": [
     {
       "Email": "bamberg@maths.uwa.edu.au",
@@ -51,7 +46,7 @@
       "IsMaintainer": true,
       "LastName": "Bamberg",
       "Place": "Perth",
-      "PostalAddress": "John Bamberg\nSchool of Mathematics and Statistics\nThe University of Western Australia\n35 Stirling Highway\nCrawleyY WA 6009, Perth\nAustralia",
+      "PostalAddress": "School of Mathematics and Statistics\nThe University of Western Australia\n35 Stirling Highway\nCrawleyY WA 6009, Perth\nAustralia",
       "WWWHome": "http://school.maths.uwa.edu.au/~bamberg/"
     },
     {
@@ -62,13 +57,17 @@
       "IsMaintainer": true,
       "LastName": "De Beule",
       "Place": "Brussels",
-      "PostalAddress": "Jan De Beule\nDepartment of Mathematics\nVrije Universiteit Brussel\nPleinlaan 2\nB-1050 Brussel\nBelgium",
+      "PostalAddress": "Department of Mathematics and Data Science\nVrije Universiteit Brussel\nPleinlaan 2\nB-1050 Brussel\nBelgium",
       "WWWHome": "http://www.debeule.eu"
     }
   ],
-  "README_URL": "http://cage.ugent.be/geometry/software/forms/README",
+  "README_URL": "https://gap-packages.github.io/Forms/README",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/Forms"
+  },
   "Status": "accepted",
   "Subtitle": "Sesquilinear and Quadratic",
   "TestFile": "tst/testall.g",
-  "Version": "1.2.5"
+  "Version": "1.2.6"
 }

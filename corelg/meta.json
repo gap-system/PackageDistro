@@ -2,20 +2,20 @@
   "AbstractHTML": "The package <span class=\"pkgname\">CoReLG</span> contains functionality for working with real semisimple Lie algebras.",
   "AcceptDate": "01/2014",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "4a108e802a8fbe0879f9cb10962be2d8e9d5ddefc67916ceed8f500edcc33d8c",
-  "ArchiveURL": "https://github.com/gap-packages/corelg/releases/download/v1.54/corelg-1.54",
+  "ArchiveSHA256": "50e72f408c96befbdc89aba8c3525cf5a7945edc69b2c1984fdfaae22c6d1376",
+  "ArchiveURL": "https://github.com/gap-packages/corelg/releases/download/v1.55/corelg-1.55",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "\n      This package provides functions for computing with various\n      aspects of the theory of real simple Lie algebras.\n      ",
       "Acknowledgements": "\n      The research leading to this package has received funding from\n      the European Union's Seventh Framework Program FP7/2007-2013\n      under grant agreement no 271712, and from the Australian Research\n      Council, grantor code DE140100088 and DP190100317.\n      ",
       "Copyright": "&copyright; 2013-2019 Heiko Dietrich, Paolo Faccin, and Willem de Graaf",
-      "Version": "Version 1.54"
+      "Version": "Version 1.55"
     }
   },
   "Autoload": false,
   "AvailabilityTest": null,
   "CommunicatedBy": "Bettina Eick (Braunschweig)",
-  "Date": "17/01/2020",
+  "Date": "10/02/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.8",
@@ -46,7 +46,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "80d84d74b3896a293c487b73c9a93de07ee3d0636e2f5d9bc8ba155a2ad92c11",
+  "PackageInfoSHA256": "3366ffaf819bfd5279d8f0816f3c8824bec1e386e6897e001307e128a24dcf25",
   "PackageInfoURL": "https://gap-packages.github.io/corelg/PackageInfo.g",
   "PackageName": "CoReLG",
   "PackageWWWHome": "https://gap-packages.github.io/corelg/",
@@ -81,7 +81,7 @@
       "LastName": "de Graaf",
       "Place": "Trento",
       "PostalAddress": "Dipartimento di Matematica\n    Via Sommarive 14\n    I-38050 Povo (Trento), Italy\n    ",
-      "WWWHome": "http://www.science.unitn.it/~degraaf"
+      "WWWHome": "https://www.science.unitn.it/~degraaf"
     }
   ],
   "README_URL": "https://gap-packages.github.io/corelg/README.md",
@@ -91,5 +91,5 @@
   },
   "Status": "accepted",
   "Subtitle": "Computing with real Lie algebras",
-  "Version": "1.54"
+  "Version": "1.55"
 }

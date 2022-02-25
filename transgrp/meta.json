@@ -4,7 +4,7 @@
   "ArchiveSHA256": "34665ff0b3ebf81be51eac8f880e73fa37095d4c2053308ff0843d1313559e27",
   "ArchiveURL": "https://www.math.colostate.edu/~hulpke/transgrp/transgrp3.3",
   "AvailabilityTest": null,
-  "Date": "01/08/2020",
+  "Date": "01/06/2021",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.9",
@@ -53,5 +53,5 @@
   "Status": "deposited",
   "Subtitle": "Transitive Groups Library",
   "TestFile": "tst/testall.g",
-  "Version": "3.0"
+  "Version": "3.3"
 }

@@ -1,11 +1,11 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">Gauss</span> package provideds extended Gauss functionality for <span class=\"pkgname\">GAP</span>",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "62b2c5a24231dc39678939966adece5ebd6aff052bf550ff2501be649048deef",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/Gauss-2020.10-02/Gauss-2020.10-02",
+  "ArchiveSHA256": "af55cca309f598b66f0150dd7772fe30143cf59d3155ef87b748e4d1719593c5",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/Gauss-2021.04-01/Gauss-2021.04-01",
   "Autoload": false,
   "AvailabilityTest": null,
-  "Date": "16/10/2020",
+  "Date": "27/04/2021",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.8",
@@ -37,10 +37,10 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "befa3f7fc65075ecff503555f87854554e0acd30b97e21d0c80895cb2917b0e6",
+  "PackageInfoSHA256": "d3b981b84eb8e62f30ada831b294aaef38e8ca7ffae13a70b4b631ede4761735",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/Gauss/PackageInfo.g",
   "PackageName": "Gauss",
-  "PackageWWWHome": "https://homalg-project.github.io/homalg_project/Gauss",
+  "PackageWWWHome": "https://homalg-project.github.io/pkg/Gauss",
   "Persons": [
     {
       "Email": "simon.goertzen@rwth-aachen.de",
@@ -83,5 +83,5 @@
   },
   "Status": "deposited",
   "Subtitle": "Extended Gauss functionality for GAP",
-  "Version": "2020.10-02"
+  "Version": "2021.04-01"
 }

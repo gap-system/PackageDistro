@@ -2,20 +2,20 @@
   "AbstractHTML": "The Kan package provides functions for the computation of normal forms   of representatives of double cosets of finitely presented groups.",
   "AcceptDate": "05/2015",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "a39a980254374c456adba5e0b317498088d3e838fa20af38b679e812fefa8a46",
-  "ArchiveURL": "https://github.com/gap-packages/kan/releases/download/v1.32/kan-1.32",
+  "ArchiveSHA256": "8cc7173547407d990a63035f89630d1a1d840fca7b5530f362421ca7c495b2f4",
+  "ArchiveURL": "https://github.com/gap-packages/kan/releases/download/v1.33/kan-1.33",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "&Kan; is a &GAP; package originally implemented in 1996 using the &GAP; 3 language, to compute induced actions of categories, when the first author was studying for a Ph.D. in Bangor.\n<P/>\nThis reduced version only provides functions for the computation of normal forms of representatives of double cosets of finitely presented groups.\n<P/>\n&Kan; became an accepted &GAP; package in May 2015.\n<P/>\nBug reports, suggestions and comments are, of course, welcome.\nPlease contact the last author at <Email>c.d.wensley@bangor.ac.uk</Email> or submit an issue at the GitHub repository <URL>https://github.com/gap-packages/kan/issues/</URL>.\n",
       "Acknowledgements": "This documentation was prepared using the &GAPDoc; <Cite Key='GAPDoc'/> and &AutoDoc; <Cite Key='AutoDoc'/> packages.<P/>\nThe procedure used to produce new releases uses the package <Package>GitHubPagesForGAP</Package> <Cite Key='GitHubPagesForGAP' /> and the package <Package>ReleaseTools</Package>.<P/>",
-      "Copyright": "&copyright; 1996-2019 Anne Heyworth and Chris Wensley<P/>\nThe &Kan; package is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\n"
+      "Copyright": "&copyright; 1996-2021 Anne Heyworth and Chris Wensley<P/>\nThe &Kan; package is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\n"
     }
   },
   "Autoload": false,
   "AvailabilityTest": null,
-  "BannerString": "Loading Kan 1.32 (computing with Kan extensions)\nby Anne Heyworth and Chris Wensley (http://pages.bangor.ac.uk/~mas023/)\n-----------------------------------------------------------------------\n",
+  "BannerString": "Loading Kan 1.33 (computing with Kan extensions)\nby Anne Heyworth and Chris Wensley (https://github.com/cdwensley)\n-----------------------------------------------------------------------\n",
   "CommunicatedBy": "Leonard Soicher (QMUL)",
-  "Date": "16/07/2020",
+  "Date": "15/11/2021",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.11.0",
@@ -54,7 +54,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "f4d75a823f1b68bf9da98a34c8fcd9d7bdb20c752837cde5f3395f0655c9e57f",
+  "PackageInfoSHA256": "3b34ced678c799d3bd8af4f4c4f2e42166a8414f36bf012dcf279ca3946cc022",
   "PackageInfoURL": "https://gap-packages.github.io/kan/PackageInfo.g",
   "PackageName": "kan",
   "PackageWWWHome": "https://gap-packages.github.io/kan/",
@@ -75,7 +75,7 @@
       "LastName": "Wensley",
       "Place": "Bangor",
       "PostalAddress": "Dr. C.D. Wensley\nSchool of Computer Science\nBangor University\nDean Street\nBangor\nGwynedd LL57 1UT\nUK",
-      "WWWHome": "http://pages.bangor.ac.uk/~mas023/"
+      "WWWHome": "https://github.com/gap-packages/kan"
     }
   ],
   "README_URL": "https://gap-packages.github.io/kan/README.md",
@@ -86,5 +86,5 @@
   "Status": "accepted",
   "Subtitle": "including double coset rewriting systems",
   "TestFile": "tst/testall.g",
-  "Version": "1.32"
+  "Version": "1.33"
 }

@@ -1,15 +1,15 @@
 {
   "AbstractHTML": "The Guarana package provides computational applications of the Mal'cev correspondence, in particular for collection in infinite polycyclic groups.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "af6b2aba1f989ccd879597e2e1e05c4c1aaa5dba436470004067a3fe7daa8b93",
-  "ArchiveURL": "https://github.com/gap-packages/guarana/releases/download/v0.96.2/guarana-0.96.2",
+  "ArchiveSHA256": "14b487e9663bb0ad59aea03e2361631eb093f20f647b2574b31a05002eab12ed",
+  "ArchiveURL": "https://github.com/gap-packages/guarana/releases/download/v0.96.3/guarana-0.96.3",
   "AutoDoc": {
     "TitlePage": {
       "Copyright": "&copyright; 2007 Björn Assmann."
     }
   },
   "AvailabilityTest": null,
-  "Date": "15/11/2018",
+  "Date": "11/02/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.7",
@@ -46,6 +46,7 @@
     "Baker Campbell Haussdorff Formula",
     "polycyclic groups"
   ],
+  "License": "GPL-2.0-or-later",
   "PackageDoc": [
     {
       "ArchiveURLSubset": [
@@ -59,7 +60,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "017936b1afa7ef6a31c7670d7806924efb98bc599c7d2a63f3a6691bd7b57c7c",
+  "PackageInfoSHA256": "9f747b270b146e556b2b38542ce8500f9c82c6071dab4d7b3bba446fc842ffe0",
   "PackageInfoURL": "https://gap-packages.github.io/guarana/PackageInfo.g",
   "PackageName": "Guarana",
   "PackageWWWHome": "https://gap-packages.github.io/guarana/",
@@ -67,12 +68,9 @@
     {
       "Email": "bjoern@mcs.st-and.ac.uk",
       "FirstNames": "Björn",
-      "Institution": "University of St. Andrews",
       "IsAuthor": true,
       "IsMaintainer": false,
-      "LastName": "Assmann",
-      "Place": "St. Andrews",
-      "PostalAddress": "Mathematical Institute\nUniversity of St. Andrews\nNorth Haugh, St. Andrews\n Fife, KY 16 9SS, Scotland"
+      "LastName": "Assmann"
     },
     {
       "Email": "jjm@mcs.st-and.ac.uk",
@@ -100,5 +98,5 @@
   "Status": "deposited",
   "Subtitle": "Applications of Lie methods for computations with infinite polycyclic groups",
   "TestFile": "tst/testall.g",
-  "Version": "0.96.2"
+  "Version": "0.96.3"
 }

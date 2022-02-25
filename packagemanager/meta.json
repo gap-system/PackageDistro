@@ -1,20 +1,19 @@
 {
   "AbstractHTML": "<span class=\"pkgname\">PackageManager</span> is a basic collection of    simple functions for installing and removing    <span class=\"pkgname\">GAP</span> packages, with the eventual aim of    becoming a full pip-style package manager for the    <span class=\"pkgname\">GAP</span> system.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "94b1691b33b84f0de0ca898b0f38f0fc82ce84b3ec0ddd5411d90365724e7a47",
-  "ArchiveURL": "https://github.com/gap-packages/PackageManager/releases/download/v1.1/PackageManager-1.1",
+  "ArchiveSHA256": "5f538eb947272fc2ae44e0fbcd9eef290d14d05543227427213e912373a65a12",
+  "ArchiveURL": "https://github.com/gap-packages/PackageManager/releases/download/v1.2/PackageManager-1.2",
   "AvailabilityTest": null,
-  "Date": "14/10/2020",
+  "Date": "02/10/2021",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.9",
-    "NeededOtherPackages": [
+    "NeededOtherPackages": [],
+    "SuggestedOtherPackages": [
       [
         "GAPDoc",
         ">= 1.6.1"
-      ]
-    ],
-    "SuggestedOtherPackages": [
+      ],
       [
         "curlInterface",
         ">= 2.1.0"
@@ -35,7 +34,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "c2e19c2674846911c8011d34232d2f1e48934c4c88bbc2345226a37ac5b1697d",
+  "PackageInfoSHA256": "8efe4366cdfb6cf1aa92a4853fa520e911839d51f1b83199950e5ac604ef4f03",
   "PackageInfoURL": "https://gap-packages.github.io/PackageManager/PackageInfo.g",
   "PackageName": "PackageManager",
   "PackageWWWHome": "https://gap-packages.github.io/PackageManager/",
@@ -46,10 +45,10 @@
       "Institution": "University of St Andrews",
       "IsAuthor": true,
       "IsMaintainer": true,
-      "LastName": "Torpey",
+      "LastName": "Young",
       "Place": "St Andrews",
       "PostalAddress": "School of Computer Science\nUniversity of St Andrews\nJack Cole Building, North Haugh\nSt Andrews, Fife, KY16 9SX\nUnited Kingdom",
-      "WWWHome": "http://mtorpey.github.io/"
+      "WWWHome": "https://mct25.host.cs.st-andrews.ac.uk/"
     }
   ],
   "README_URL": "https://gap-packages.github.io/PackageManager/README.md",
@@ -60,5 +59,5 @@
   "Status": "deposited",
   "Subtitle": "Easily download and install GAP packages",
   "TestFile": "tst/test-without-texlive.g",
-  "Version": "1.1"
+  "Version": "1.2"
 }

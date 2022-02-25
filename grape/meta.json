@@ -2,8 +2,8 @@
   "AbstractHTML": "<span class=\"pkgname\">GRAPE</span> is a package for computing with graphs and groups, and is primarily designed for constructing and analysing graphs related to groups, finite geometries, and designs.",
   "AcceptDate": "07/1993",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "bbd325dce879a046dbad2485d6b14ee261c718b90e3021b034eaf05d43eb3e4e",
-  "ArchiveURL": "https://github.com/gap-packages/grape/releases/download/v4.8.3/grape-4.8.3",
+  "ArchiveSHA256": "affc932da0887aba1aa27e22e82f48908b8065ecf5e3c79952b4867743f6f413",
+  "ArchiveURL": "https://github.com/gap-packages/grape/releases/download/v4.8.5/grape-4.8.5",
   "AvailabilityTest": null,
   "BinaryFiles": [
     "doc/manual.dvi",
@@ -12,10 +12,10 @@
     "bin/i686-pc-cygwin-gcc-default32/dreadnautB.exe"
   ],
   "CommunicatedBy": "Leonard Soicher (QMUL)",
-  "Date": "09/12/2019",
+  "Date": "26/03/2021",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">=4.10",
+    "GAP": ">=4.11",
     "NeededOtherPackages": [],
     "SuggestedOtherPackages": []
   },
@@ -39,7 +39,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "e067e5e0aa8778fc38c9818e227a29a1c1c0524d4d9424b9de43099cdd735027",
+  "PackageInfoSHA256": "d648c98cc6232a63d61823850815fe31908618b25bbe6c59f354c392b5e92c5c",
   "PackageInfoURL": "https://gap-packages.github.io/grape/PackageInfo.g",
   "PackageName": "GRAPE",
   "PackageWWWHome": "https://gap-packages.github.io/grape",
@@ -63,5 +63,5 @@
   "Status": "accepted",
   "Subtitle": "GRaph Algorithms using PErmutation groups",
   "TestFile": "tst/testall.g",
-  "Version": "4.8.3"
+  "Version": "4.8.5"
 }

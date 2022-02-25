@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "a980e0dac3824e2997b81aa8583af10f3586830195bba33cb40944d67efd4f24",
-  "ArchiveURL": "https://github.com/gap-packages/profiling/releases/download/v2.3/profiling-2.3",
+  "ArchiveSHA256": "11e785390361473009d8bf0398777b009dff7f01ac4b49e4ecd782e9e6a2ed40",
+  "ArchiveURL": "https://github.com/gap-packages/profiling/releases/download/v2.4.1/profiling-2.4.1",
   "AvailabilityTest": null,
-  "Date": "03/04/2020",
+  "Date": "14/02/2021",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.10",
@@ -34,7 +34,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "10147fd4de607c47f99a3ad768f5d4a71f35ff9c4a846ac6f0c0986d96473e50",
+  "PackageInfoSHA256": "c680185fbcfa89b71e4199619a2a4d72d747f279b8ce1f827443317674069fd2",
   "PackageInfoURL": "https://gap-packages.github.io/profiling/PackageInfo.g",
   "PackageName": "profiling",
   "PackageWWWHome": "https://gap-packages.github.io/profiling/",
@@ -48,16 +48,16 @@
       "LastName": "Jefferson",
       "Place": "St Andrews",
       "PostalAddress": "St Andrews\nScotland\nUK",
-      "WWWHome": "http://caj.host.cs.st-andrews.ac.uk/"
+      "WWWHome": "https://caj.host.cs.st-andrews.ac.uk/"
     }
   ],
-  "README_URL": "https://gap-packages.github.io/profiling/README",
+  "README_URL": "https://gap-packages.github.io/profiling/README.md",
   "SourceRepository": {
     "Type": "git",
     "URL": "https://github.com/gap-packages/profiling"
   },
-  "Status": "dev",
+  "Status": "deposited",
   "Subtitle": "Line by line profiling and code coverage for GAP",
   "TestFile": "tst/testall.g",
-  "Version": "2.3"
+  "Version": "2.4.1"
 }

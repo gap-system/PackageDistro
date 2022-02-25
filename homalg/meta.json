@@ -1,11 +1,10 @@
 {
   "AbstractHTML": "A homological algebra meta-package for computable Abelian categories",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "ee13096f7139fd2d5a4560801d3be85fbd7dc4f91cd8ea4b4eb60deb91fc8b8a",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/homalg-2020.10-02/homalg-2020.10-02",
-  "Autoload": false,
+  "ArchiveSHA256": "07dd466725d02034a26897a5afb05aa7e21eb27955fc70913982d7f172c4a6d6",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/homalg-2021.06-01/homalg-2021.06-01",
   "AvailabilityTest": null,
-  "Date": "16/10/2020",
+  "Date": "18/06/2021",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.7",
@@ -36,7 +35,6 @@
       "ArchiveURLSubset": [
         "doc"
       ],
-      "Autoload": false,
       "BookName": "homalg",
       "HTMLStart": "doc/chap0.html",
       "LongTitle": "A homological algebra meta-package for computable Abelian categories",
@@ -44,10 +42,10 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "0550a8ab82874b793a3bd687a622587007dd07d8a9f17b661df4542803e1252d",
+  "PackageInfoSHA256": "448f23aba4827b4b586b181b96c54e4ff4d315c514e4b34226f9dce5aa355ded",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/homalg/PackageInfo.g",
   "PackageName": "homalg",
-  "PackageWWWHome": "https://homalg-project.github.io/homalg_project/homalg",
+  "PackageWWWHome": "https://homalg-project.github.io/pkg/homalg",
   "Persons": [
     {
       "Email": "mohamed.barakat@uni-siegen.de",
@@ -90,5 +88,5 @@
   },
   "Status": "deposited",
   "Subtitle": "A homological algebra meta-package for computable Abelian categories",
-  "Version": "2020.10-02"
+  "Version": "2021.06-01"
 }

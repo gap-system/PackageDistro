@@ -1,17 +1,17 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">float</span> package allows                     GAP to manipulate floating-point numbers with arbitrary                     precision. It is based on MPFR, MPFI, MPC, CXSC, FPLLL",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "a63c9ca75a38da3474eef9ccf35210acb90772404697dde8a7dee5f60221e329",
-  "ArchiveURL": "https://github.com/gap-packages/float/releases/download/v0.9.1/float-0.9.1",
-  "Autoload": false,
+  "ArchiveSHA256": "1efeb768644e55394fd5f5d89b0cd91ac744121e644ea4c58f0f54265b474930",
+  "ArchiveURL": "https://github.com/gap-packages/float/releases/download/v1.0.2/float-1.0.2",
   "AvailabilityTest": null,
-  "BannerString": "float 0.9.1 ...\n",
-  "Date": "14/06/2018",
+  "BannerFunction": null,
+  "BannerString": "float 1.0.2 with modules [?] ...\n",
+  "Date": "13/12/2021",
   "Dependencies": {
     "ExternalConditions": [
       "GAP compiled with GMP support"
     ],
-    "GAP": ">=4.9.0",
+    "GAP": ">=4.11.0",
     "NeededOtherPackages": [
       [
         "GAPDoc",
@@ -24,12 +24,12 @@
   "Keywords": [
     "floating-point"
   ],
+  "License": "GPL-2.0-or-later",
   "PackageDoc": [
     {
       "ArchiveURLSubset": [
         "doc"
       ],
-      "Autoload": true,
       "BookName": "float",
       "HTMLStart": "doc/chap0.html",
       "LongTitle": "Floating-point numbers",
@@ -37,7 +37,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "b56f216e77f1919c5ebf0ff945d9200f8850a5025f0f997fc0844c127b52a829",
+  "PackageInfoSHA256": "c4f02b2b14749427cddb1d1ea9c215b533c8945f2ffe010bb37290757dbd0ee3",
   "PackageInfoURL": "https://gap-packages.github.io/float/PackageInfo.g",
   "PackageName": "float",
   "PackageWWWHome": "https://gap-packages.github.io/float/",
@@ -45,16 +45,16 @@
     {
       "Email": "laurent.bartholdi@gmail.com",
       "FirstNames": "Laurent",
-      "Institution": "Georg-August Universität zu Göttingen",
+      "Institution": "Universität des Saarlandes",
       "IsAuthor": true,
       "IsMaintainer": true,
       "LastName": "Bartholdi",
-      "Place": "Göttingen",
-      "PostalAddress": "Mathematisches Institut\nBunsenstraße 3—5\nD-37073 Göttingen\nGermany",
-      "WWWHome": "http://www.uni-math.gwdg.de/laurent"
+      "Place": "Saarbrücken",
+      "PostalAddress": "FR Mathematik\nD-68041 Saarbrücken\nGermany",
+      "WWWHome": "https://www.math.uni-sb.de/ag/bartholdi/"
     }
   ],
-  "README_URL": "https://gap-packages.github.io/float/README",
+  "README_URL": "https://gap-packages.github.io/float/README.md",
   "SourceRepository": {
     "Type": "git",
     "URL": "https://github.com/gap-packages/float"
@@ -62,5 +62,5 @@
   "Status": "deposited",
   "Subtitle": "Integration of mpfr, mpfi, mpc, fplll and cxsc in GAP",
   "TestFile": "tst/testall.g",
-  "Version": "0.9.1"
+  "Version": "1.0.2"
 }

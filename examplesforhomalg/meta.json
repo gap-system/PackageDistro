@@ -1,11 +1,10 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">ExamplesForHomalg</span> package provides example scripts for the <span class=\"pkgname\">homalg</span> package that can be used with several computer algebra systems",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "3e2689c7884c50f3fa3759252f899de554665780fbc21ebe525083f0c3cf2ebb",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/ExamplesForHomalg-2020.10-02/ExamplesForHomalg-2020.10-02",
-  "Autoload": false,
+  "ArchiveSHA256": "b4c22ba17fb26457bfa6a4a3f542e63bf168525030e9576eb941786d13c3a616",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/ExamplesForHomalg-2021.10-01/ExamplesForHomalg-2021.10-01",
   "AvailabilityTest": null,
-  "Date": "16/10/2020",
+  "Date": "19/10/2021",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.7",
@@ -20,7 +19,7 @@
       ],
       [
         "RingsForHomalg",
-        ">= 2020.05.09"
+        ">= 2021.10-01"
       ],
       [
         "Modules",
@@ -52,7 +51,6 @@
       "ArchiveURLSubset": [
         "doc"
       ],
-      "Autoload": false,
       "BookName": "ExamplesForHomalg",
       "HTMLStart": "doc/chap0.html",
       "LongTitle": "Examples for the GAP Package homalg",
@@ -60,10 +58,10 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "5e1cf496bfe7f2d2cd548327f909b87ad223c787abf871b8aa9d46876de33f5e",
+  "PackageInfoSHA256": "8c3b77a25b2949496760213b79f6272225bb0ede7620b5d9032c795601650711",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/ExamplesForHomalg/PackageInfo.g",
   "PackageName": "ExamplesForHomalg",
-  "PackageWWWHome": "https://homalg-project.github.io/homalg_project/ExamplesForHomalg",
+  "PackageWWWHome": "https://homalg-project.github.io/pkg/ExamplesForHomalg",
   "Persons": [
     {
       "Email": "mohamed.barakat@uni-siegen.de",
@@ -106,5 +104,5 @@
   },
   "Status": "deposited",
   "Subtitle": "Examples for the GAP Package homalg",
-  "Version": "2020.10-02"
+  "Version": "2021.10-01"
 }

@@ -1,11 +1,10 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">MatricesForHomalg</span> package provides lazy evaluated matrices with clever operations for the homalg project",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "f0737daee9c7972cb820e14dacf3c05476003d2f7b93bba70175ad0c12b70b7c",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/MatricesForHomalg-2020.10-04/MatricesForHomalg-2020.10-04",
-  "Autoload": false,
+  "ArchiveSHA256": "81f4082c7865dcab177d5b79a5f1e31eb79e6542703997b5d560e333e7a27d89",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/MatricesForHomalg-2021.12-01/MatricesForHomalg-2021.12-01",
   "AvailabilityTest": null,
-  "Date": "24/10/2020",
+  "Date": "07/12/2021",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.7",
@@ -41,7 +40,6 @@
       "ArchiveURLSubset": [
         "doc"
       ],
-      "Autoload": false,
       "BookName": "MatricesForHomalg",
       "HTMLStart": "doc/chap0.html",
       "LongTitle": "Lazy evaluated matrices with clever operations for the homalg project",
@@ -49,10 +47,10 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "3e8d98e3d664df6b841922add2abb7ce89760afa8c6336a216159717462230e5",
+  "PackageInfoSHA256": "cd65832cbd67a1ec0e481b1e4f2bdd95a5b24dba88e3ea4de90880558873b7e5",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/MatricesForHomalg/PackageInfo.g",
   "PackageName": "MatricesForHomalg",
-  "PackageWWWHome": "https://homalg-project.github.io/homalg_project/MatricesForHomalg",
+  "PackageWWWHome": "https://homalg-project.github.io/pkg/MatricesForHomalg",
   "Persons": [
     {
       "Email": "mohamed.barakat@uni-siegen.de",
@@ -106,5 +104,5 @@
   },
   "Status": "deposited",
   "Subtitle": "Matrices for the homalg project",
-  "Version": "2020.10-04"
+  "Version": "2021.12-01"
 }

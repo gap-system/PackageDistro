@@ -1,24 +1,19 @@
 {
   "AbstractHTML": "ToricVarieties provides data structures to handle toric varieties by their commutative algebra structure and by their combinatorics. For combinatorics, it uses the Convex package. Its goal is to provide a suitable framework to work with toric varieties.",
   "ArchiveFormats": ".zip",
-  "ArchiveSHA256": "aead0fd46ba28ff02335d7cc4c45a05a23caeef66834a5ab331989d024634625",
-  "ArchiveURL": "https://github.com/homalg-project/ToricVarieties_project/releases/download/2021-01-12/ToricVarieties",
+  "ArchiveSHA256": "8adc04114e17ea005c8ee5a50de8dba74bc62de6b96d75b97888dc39ceead732",
+  "ArchiveURL": "https://github.com/homalg-project/ToricVarieties_project/releases/download/2021-11-17/ToricVarieties",
   "AutoDoc": {
     "TitlePage": {
       "Copyright": "\nThis package may be distributed under the terms and conditions\nof the GNU Public License Version 2 or (at your option) any later version.\n"
     }
   },
-  "Autoload": false,
   "AvailabilityTest": null,
-  "Date": "12/01/2021",
+  "Date": "17/11/2021",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.7",
     "NeededOtherPackages": [
-      [
-        "NConvex",
-        ">= 2017.01.01"
-      ],
       [
         "GradedRingForHomalg",
         ">=2020.04.25"
@@ -38,6 +33,10 @@
       [
         "AutoDoc",
         ">=2016.02.16"
+      ],
+      [
+        "NConvex",
+        ">=2020.11-04"
       ]
     ],
     "SuggestedOtherPackages": [
@@ -48,6 +47,10 @@
       [
         "TopcomInterface",
         ">=2019.06.15"
+      ],
+      [
+        "Convex",
+        ">= 2021.04.24"
       ]
     ]
   },
@@ -64,7 +67,6 @@
       "ArchiveURLSubset": [
         "doc"
       ],
-      "Autoload": false,
       "BookName": "ToricVarieties",
       "HTMLStart": "doc/chap0.html",
       "LongTitle": "A package to compute properties of toric varieties",
@@ -72,7 +74,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "a454f3f33fe5e498b6383e12d428c887a9cb65ae8452c41fd843aa8be038935b",
+  "PackageInfoSHA256": "12fee70ef10b96bbcb9c2582906a0b621a421591b8d0d40bc4cb98b0e02fcfb6",
   "PackageInfoURL": "https://homalg-project.github.io/ToricVarieties_project/ToricVarieties/PackageInfo.g",
   "PackageName": "ToricVarieties",
   "PackageWWWHome": "https://homalg-project.github.io/ToricVarieties_project/ToricVarieties/",
@@ -91,7 +93,7 @@
     {
       "Email": "martin.bies@alumni.uni-heidelberg.de",
       "FirstNames": "Martin",
-      "Institution": "USA",
+      "Institution": "University of Pennsylvania",
       "IsAuthor": true,
       "IsMaintainer": true,
       "LastName": "Bies",
@@ -107,5 +109,5 @@
   },
   "Status": "deposited",
   "Subtitle": "A package to handle toric varieties",
-  "Version": "2021.01.12"
+  "Version": "2021.11.17"
 }

@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "The <span class='pkgname'>Browse</span> package provides three levels of functionality</p><ul><li>A <span class='pkgname'>GAP</span> interface to the C-library <a href='http://www.gnu.org/software/ncurses/ncurses.html'>ncurses</a>.</li><li>A generic function for interactive browsing through two-dimensional arrays of data.</li><li>Several applications of the first two, e.g., a method for browsing character tables, browsing through the content of some data collections, or some games.</li></ul><p>",
   "ArchiveFormats": ".tar.bz2",
-  "ArchiveSHA256": "6525e29d1eb56bab0626cae7175a148b77e564264dfc125f2d89e3325511c66d",
-  "ArchiveURL": "http://www.math.rwth-aachen.de/~Browse/Browse-1.8.11",
+  "ArchiveSHA256": "118d1f7fb67044c103cf44673ade8de57e4289a906dd01e15d7562dd0aface5b",
+  "ArchiveURL": "https://www.math.rwth-aachen.de/~Browse/Browse-1.8.13",
   "AvailabilityTest": null,
-  "Date": "28/08/2020",
+  "Date": "08/11/2021",
   "Dependencies": {
     "ExternalConditions": [
       "C-compiler",
@@ -46,10 +46,10 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "20054989872882b4a5fa4ba5bd94eee16fb1b23eef50ead5bdafb59262816ae3",
-  "PackageInfoURL": "http://www.math.rwth-aachen.de/~Browse/PackageInfo.g",
+  "PackageInfoSHA256": "a65f500616c4a7904b5634a787f200bdae90f7b48dabd4e78ce643dbd37707cb",
+  "PackageInfoURL": "https://www.math.rwth-aachen.de/~Browse/PackageInfo.g",
   "PackageName": "Browse",
-  "PackageWWWHome": "http://www.math.rwth-aachen.de/~Browse",
+  "PackageWWWHome": "https://www.math.rwth-aachen.de/~Browse",
   "Persons": [
     {
       "Email": "Thomas.Breuer@Math.RWTH-Aachen.De",
@@ -60,7 +60,7 @@
       "LastName": "Breuer",
       "Place": "Aachen",
       "PostalAddress": "Thomas Breuer\nLehrstuhl für Algebra und Zahlentheorie\nRWTH Aachen\nPontdriesch 14/16\n52062 Aachen\nGERMANY\n",
-      "WWWHome": "http://www.math.rwth-aachen.de/~Thomas.Breuer"
+      "WWWHome": "https://www.math.rwth-aachen.de/~Thomas.Breuer"
     },
     {
       "Email": "Frank.Luebeck@Math.RWTH-Aachen.De",
@@ -71,11 +71,11 @@
       "LastName": "Lübeck",
       "Place": "Aachen",
       "PostalAddress": "Frank Lübeck\nLehrstuhl für Algebra und Zahlentheorie\nRWTH Aachen\nPontdriesch 14/16\n52062 Aachen\nGERMANY\n",
-      "WWWHome": "http://www.math.rwth-aachen.de/~Frank.Luebeck"
+      "WWWHome": "https://www.math.rwth-aachen.de/~Frank.Luebeck"
     }
   ],
-  "README_URL": "http://www.math.rwth-aachen.de/~Browse/README",
+  "README_URL": "https://www.math.rwth-aachen.de/~Browse/README",
   "Status": "deposited",
   "Subtitle": "browsing applications and ncurses interface",
-  "Version": "1.8.11"
+  "Version": "1.8.13"
 }

@@ -1,11 +1,10 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">ToolsForHomalg</span> package provides GAP extensions for the homalg project",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "404ae9b99140a8ad3a1fafb33b9b81c7c89ae5797807ba76d23f00cc2c1513bd",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/ToolsForHomalg-2020.10-03/ToolsForHomalg-2020.10-03",
-  "Autoload": false,
+  "ArchiveSHA256": "1c50b3455a87def3d9112288d744727d39cf9f7eac9dc01246ff51f67107b428",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/ToolsForHomalg-2022.01-01/ToolsForHomalg-2022.01-01",
   "AvailabilityTest": null,
-  "Date": "22/10/2020",
+  "Date": "10/01/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.7",
@@ -33,7 +32,6 @@
       "ArchiveURLSubset": [
         "doc"
       ],
-      "Autoload": false,
       "BookName": "ToolsForHomalg",
       "HTMLStart": "doc/chap0.html",
       "LongTitle": "Provides special methods and knowledge propagation tools",
@@ -41,10 +39,10 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "0af058199a19fa6d393008f847fc1c62e30067c900ff9e1f7d44b77577fc6696",
+  "PackageInfoSHA256": "f983cf1e0fafb2a43a7e9a77be0a739cdf80b44cf0a27e8860527dfd7b0f0b97",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/ToolsForHomalg/PackageInfo.g",
   "PackageName": "ToolsForHomalg",
-  "PackageWWWHome": "https://homalg-project.github.io/homalg_project/ToolsForHomalg",
+  "PackageWWWHome": "https://homalg-project.github.io/pkg/ToolsForHomalg",
   "Persons": [
     {
       "Email": "mohamed.barakat@uni-siegen.de",
@@ -87,5 +85,5 @@
   },
   "Status": "deposited",
   "Subtitle": "Special methods and knowledge propagation tools",
-  "Version": "2020.10-03"
+  "Version": "2022.01-01"
 }

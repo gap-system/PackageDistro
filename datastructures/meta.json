@@ -1,8 +1,8 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">datastructures</span> package provides some    standard data structures.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "bd49f77186afb31210424382e3a6c782f123af54025105dc72697fe4493c6978",
-  "ArchiveURL": "https://github.com/gap-packages/datastructures/releases/download/v0.2.5/datastructures-0.2.5",
+  "ArchiveSHA256": "fa05bd5ece4392c78927c7069e8db6fbd0712f73f1b1a00b2d2a2eae712b6fbe",
+  "ArchiveURL": "https://github.com/gap-packages/datastructures/releases/download/v0.2.6/datastructures-0.2.6",
   "AutoDoc": {
     "TitlePage": {
       "Acknowledgements": "We appreciate very much all past and future comments, suggestions and\ncontributions to this package and its documentation provided by &GAP;\nusers and developers.",
@@ -10,7 +10,7 @@
     }
   },
   "AvailabilityTest": null,
-  "Date": "11/11/2019",
+  "Date": "13/04/2021",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.10",
@@ -40,7 +40,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "95121bfaecf62c6424f72b7dff2bd34c79d8799bb5e2e68d7d3c9be98965e0ed",
+  "PackageInfoSHA256": "e50147c11105bef1dc7c8a498b3784756f31a5b126479264e0602ad5409a84fe",
   "PackageInfoURL": "https://gap-packages.github.io/datastructures/PackageInfo.g",
   "PackageName": "datastructures",
   "PackageWWWHome": "https://gap-packages.github.io/datastructures",
@@ -57,14 +57,14 @@
       "WWWHome": "http://www.morphism.de/~markusp"
     },
     {
-      "Email": "max.horn@uni-siegen.de",
+      "Email": "horn@mathematik.uni-kl.de",
       "FirstNames": "Max",
-      "Institution": "Universität Siegen",
+      "Institution": "TU Kaiserslautern",
       "IsAuthor": true,
       "IsMaintainer": true,
       "LastName": "Horn",
-      "Place": "Siegen, Germany",
-      "PostalAddress": "Department Mathematik\nUniversität Siegen\nWalter-Flex-Straße 3\n57072 Siegen\nGermany",
+      "Place": "Kaiserslautern, Germany",
+      "PostalAddress": "Fachbereich Mathematik\nTU Kaiserslautern\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
       "WWWHome": "https://www.quendi.de/math"
     },
     {
@@ -98,5 +98,5 @@
   "Status": "dev",
   "Subtitle": "Collection of standard data structures for GAP",
   "TestFile": "tst/testall.g",
-  "Version": "0.2.5"
+  "Version": "0.2.6"
 }
