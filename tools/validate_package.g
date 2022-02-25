@@ -89,6 +89,12 @@ ValidatePackagesArchive := function(unpacked_dir, pkgnames)
       json_file := Concatenation(pkgname, "/meta.json");
       json_file_old := Concatenation(pkgname, "/meta.json.old");
 
+      if not IsFile(Filename(meta_dir, json_file_old)) then
+        PrintToFormatted("*errout*", "{}: new package!", pkgname);
+        continue;
+      fi;
+
+      # TODO check if release date is in the future.
       pkginfo_record := PackageInfoRec(pkginfo_file);
 
       json := JsonStringToGap(StringFile(Filename(meta_dir, json_file)));

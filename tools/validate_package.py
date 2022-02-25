@@ -104,12 +104,11 @@ def validate_package(archive_dir, unpack_dir, pkg_name):
         result = False
 
     if not os.path.exists(join(pkg_name, "meta.json.old")):
-        warning(
-            "{0}: the file {0}/meta.yml.old is missing, FAILED!".format(
+        notice(
+            "{0}: the file {0}/meta.yml.old is not present, new package!".format(
                 pkg_name
             )
         )
-        result = False
 
     return result
     # TODO: check SHA256 hashes for PackageinfoURL and archive are the same.
