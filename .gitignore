@@ -1,5 +1,7 @@
 _archives
 _pkginfos
 _tools
+_releases
+
 *.pyc
 _*
