@@ -5,34 +5,27 @@ on:
   pull_request:
 
 concurrency:
-  # group by workflow and ref; the last slightly strange component ensures that for pull
-  # requests, we limit to 1 concurrent job, but for the master branch we don't
-  group: ${{ github.workflow }}-${{ github.ref }}-${{ github.ref != 'refs/heads/master' || github.run_number }}
+  # group by workflow and ref
+  group: ${{ github.workflow }}-${{ github.ref }}
   # Cancel intermediate builds, but only if it is a pull request build.
-  cancel-in-progress: ${{ startsWith(github.ref, 'refs/pull/') }}
+  cancel-in-progress: true
 
 jobs:
   detect-changes:
-    name: "Detect packages that were added, removed or modified"
+    name: "Detect affected packages"
     runs-on: ubuntu-latest
     outputs:
-      remove-matrix: ${{ steps.detect-changes.outputs.remove-matrix }}
-      update-matrix: ${{ steps.detect-changes.outputs.update-matrix }}
+      remove-matrix: ${{ steps.detect-removals.outputs.matrix }}
+      update-matrix: ${{ steps.detect-updates.outputs.matrix }}
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 5
 
-      - name: "Determine what was added and what removed"
-        id: detect-changes
+      - name: "Determine what was removed"
+        id: detect-removals
         run: |
-            # turn off rename detection here, so we see renmes as "remove + add"
-            # and thus propertly detect if other packages depend on the old name
-            added=$(git diff --name-only --no-renames --diff-filter=A HEAD^ --)
             deleted=$(git diff --name-only --no-renames --diff-filter=D HEAD^ --)
-            modified=$(git diff --name-only --no-renames --diff-filter=M HEAD^ --)
-
-            echo "Removed packages:"
             MATRIX="{\"package\":["
             for PKG in ${deleted}; do
               PKG=${PKG%"/meta.json"}
@@ -40,9 +33,13 @@ jobs:
               MATRIX="${MATRIX}\"${PKG}\","
             done
             MATRIX="${MATRIX}]}"
-            echo "::set-output name=remove-matrix::$MATRIX"
+            echo "::set-output name=matrix::$MATRIX"
 
-            echo "Added or modified packages:"
+      - name: "Determine what was added or modified"
+        id: detect-updates
+        run: |
+            added=$(git diff --name-only --no-renames --diff-filter=A HEAD^ --)
+            modified=$(git diff --name-only --no-renames --diff-filter=M HEAD^ --)
             MATRIX="{\"package\":["
             for PKG in ${added} ${modified}; do
               PKG=${PKG%"/meta.json"}
@@ -50,14 +47,13 @@ jobs:
               MATRIX="${MATRIX}\"${PKG}\","
             done
             MATRIX="${MATRIX}]}"
-            echo "::set-output name=update-matrix::$MATRIX"
+            echo "::set-output name=matrix::$MATRIX"
 
   remove-package:
     name: "Remove ${{ matrix.package }}"
     needs: detect-changes
     runs-on: ubuntu-latest
     strategy:
-      fail-fast: false
       matrix: ${{ fromJSON(needs.detect-changes.outputs.remove-matrix) }}
     steps:
       - uses: actions/checkout@v2
@@ -77,11 +73,10 @@ jobs:
             # TODO: add special case for GAPDoc, primgrp, transgrp, smallgrp?
 
   add-or-update-package:
-    name: "Add or update ${{ matrix.package }}"
+    name: "Update ${{ matrix.package }}"
     needs: detect-changes
     runs-on: ubuntu-latest
     strategy:
-      fail-fast: false
       matrix: ${{ fromJSON(needs.detect-changes.outputs.update-matrix) }}
     steps:
       - uses: actions/checkout@v2
