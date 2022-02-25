@@ -78,6 +78,9 @@ def archive_url(pkg_name: str) -> str:
 def download_archive(archive_dir: str, pkg_name: str, tries=5) -> str:
     """Returns the full archive name (including archive_dir) for the downloaded
     archive of the package `pkg_name`"""
+    if not os.path.exists(archive_dir):
+        os.mkdir(archive_dir)
+
     archive_fname = join(archive_dir, archive_name(pkg_name))
     archive_ext = archive_fname.split(".")
     if archive_ext[-1] == "gz" or archive_ext[-1] == "bz2":
