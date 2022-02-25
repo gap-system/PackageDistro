@@ -67,6 +67,7 @@ jobs:
 
   create-pull-request:
     name: "Create pull request for ${{ matrix.package }}"
+    if: ${{ needs.scan-for-updates.outputs.matrix != '{"package":[]}' }}
     needs: scan-for-updates
     runs-on: ubuntu-latest
     strategy:
