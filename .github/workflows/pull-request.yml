@@ -33,6 +33,7 @@ jobs:
               MATRIX="${MATRIX}\"${PKG}\","
             done
             MATRIX="${MATRIX}]}"
+            echo "MATRIX=${MATRIX}" # For debugging a log
             echo "::set-output name=matrix::$MATRIX"
 
       - name: "Determine what was added or modified"
@@ -47,10 +48,12 @@ jobs:
               MATRIX="${MATRIX}\"${PKG}\","
             done
             MATRIX="${MATRIX}]}"
+            echo "MATRIX=${MATRIX}" # For debugging a log
             echo "::set-output name=matrix::$MATRIX"
 
   remove-package:
     name: "Remove ${{ matrix.package }}"
+    if: ${{ needs.detect-changes.outputs.remove-matrix != '{"package":[]}' }}
     needs: detect-changes
     runs-on: ubuntu-latest
     strategy:
@@ -74,6 +77,7 @@ jobs:
 
   add-or-update-package:
     name: "Update ${{ matrix.package }}"
+    if: ${{ needs.detect-changes.outputs.update-matrix != '{"package":[]}' }}
     needs: detect-changes
     runs-on: ubuntu-latest
     strategy:
