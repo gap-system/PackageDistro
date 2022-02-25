@@ -37,6 +37,26 @@ NormalizePkgDate := function(x)
   return date;
 end;
 
+NormalizedTomorrowDate:= function()
+    local options, name, str, out;
+
+    options:= [ "-u", "+%d/%m/%Y" ];
+
+    name:= Filename( DirectoriesSystemPrograms(), "date" );
+    if name = fail then
+      return "unknown";
+    fi;
+
+    str:= "";
+    out:= OutputTextString( str, true );
+    Process( DirectoryCurrent(), name, InputTextNone(), out, options );
+    CloseStream( out );
+
+    # Strip the trailing newline character.
+    Unbind( str[ Length( str ) ] );
+    return DMYDay( DayDMY( NormalizePkgDate( str ) ) + 1 );
+end;
+
 ComparePkgInfoDates := function(pkg1, pkg2)
   # TODO check for fails
   return DayDMY(NormalizePkgDate(pkg1)) <= DayDMY(NormalizePkgDate(pkg2));
@@ -45,7 +65,8 @@ end;
 # For each package name <nam> in <pkgnames>, ASSUME that
 # - <unpacked_dir> is a directory path having a subdirectory <nam>
 #   that contains the files of the package,
-# - the current directory contains files <nam>/meta.json and <nam>/meta.json.old,
+# - the current directory contains files <nam>/meta.json
+#   and (if the package is not new) <nam>/meta.json.old,
 # - <unpacked_dir>/<nam>/PackageInfo.g has the checksum stored in
 #   PackageInfoSha256 of <nam>/meta.json (this is checked easier outside GAP)
 #   [Note that the stored PackageInfoSha256 was derived from the downloaded
@@ -60,6 +81,7 @@ end;
 #   the version number in <nam>/meta.json.old,
 # - the release date in <nam>/meta.json is *at least* the release date
 #   in <nam>/meta.json.old.
+# - the release date in <nam>/meta.json is not more than one day in the future
 
 ValidatePackagesArchive := function(unpacked_dir, pkgnames)
   local meta_dir, nr_failures, pkginfo_file, json_file, json_file_old,
@@ -98,8 +120,12 @@ ValidatePackagesArchive := function(unpacked_dir, pkgnames)
       pkginfo_record := PackageInfoRec(pkginfo_file);
 
       json := JsonStringToGap(StringFile(Filename(meta_dir, json_file)));
-      json_old := JsonStringToGap(StringFile(Filename(meta_dir, json_file_old)));
-      if CompareVersionNumbers(json_old.Version, json.Version) then
+      json_old := StringFile(Filename(meta_dir, json_file_old));
+      if json_old <> fail then
+        json_old := JsonStringToGap(json_old);
+      fi;
+      if json_old <> fail and
+         CompareVersionNumbers(json_old.Version, json.Version) then
         PrintToFormatted("*errout*",
                          Concatenation("\033[33m{}: current release version is {},",
                          " but previous release version was {}, FAILED!\n\033[0m"),
@@ -119,10 +145,23 @@ ValidatePackagesArchive := function(unpacked_dir, pkgnames)
         continue;
       fi;
 
-      if not ComparePkgInfoDates(json_old.Date, pkginfo_record.Date) then
+      if json_old <> fail and
+         not ComparePkgInfoDates(json_old.Date, pkginfo_record.Date) then
         PrintToFormatted("*errout*",
                          Concatenation("\033[33m{}: current release date is {},",
                                        " but previous release date was {},",
+                                       " FAILED!\n\033[0m"),
+                         pkgname,
+                         pkginfo_record.Date,
+                         json_old.Date);
+        nr_failures := nr_failures + 1;
+        continue;
+      fi;
+
+      if DayDMY(NormalizePkgDate(pkginfo_record.Date)) > DayDMY(NormalizedTomorrowDate()) then
+        PrintToFormatted("*errout*",
+                         Concatenation("\033[33m{}: current release date is {},",
+                                       " but tomorrow is only {},",
                                        " FAILED!\n\033[0m"),
                          pkgname,
                          pkginfo_record.Date,
