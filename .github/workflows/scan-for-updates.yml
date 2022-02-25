@@ -70,6 +70,7 @@ jobs:
     needs: scan-for-updates
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix: ${{ fromJSON(needs.scan-for-updates.outputs.matrix) }}
     steps:
       - uses: actions/checkout@v2
