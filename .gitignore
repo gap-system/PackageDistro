@@ -1,3 +1,5 @@
 _archives
 _pkginfos
 _tools
+*.pyc
+_*

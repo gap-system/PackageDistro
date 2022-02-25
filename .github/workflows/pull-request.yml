@@ -25,7 +25,7 @@ jobs:
       - name: "Determine what was removed"
         id: detect-removals
         run: |
-            deleted=$(git diff --name-only --no-renames --diff-filter=D HEAD^ --)
+            deleted=$(git diff --name-only --no-renames --diff-filter=D HEAD^ -- */meta.json)
             MATRIX="{\"package\":["
             for PKG in ${deleted}; do
               PKG=${PKG%"/meta.json"}
@@ -39,8 +39,8 @@ jobs:
       - name: "Determine what was added or modified"
         id: detect-updates
         run: |
-            added=$(git diff --name-only --no-renames --diff-filter=A HEAD^ --)
-            modified=$(git diff --name-only --no-renames --diff-filter=M HEAD^ --)
+            added=$(git diff --name-only --no-renames --diff-filter=A HEAD^ -- */meta.json)
+            modified=$(git diff --name-only --no-renames --diff-filter=M HEAD^ -- */meta.json)
             MATRIX="{\"package\":["
             for PKG in ${added} ${modified}; do
               PKG=${PKG%"/meta.json"}
