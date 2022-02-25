@@ -53,7 +53,7 @@ jobs:
       - name: "Creates jobs for modified packages"
         id: get-names
         run: |
-            modified=$(git diff --name-only --no-renames --diff-filter=M)
+            modified=$(git diff --name-only --no-renames --diff-filter=M -- */meta.json)
 
             MATRIX="{\"package\":["
             for PKG in ${modified}; do
