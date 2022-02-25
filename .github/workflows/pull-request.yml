@@ -103,6 +103,7 @@ jobs:
 
       - name: "Validate metadata"
         run: |
+            alias gap='"${GAPROOT-$HOME/gap}/bin/gap.sh"'
             _tools/validate_package.py ${{ matrix.package }}
 
       - name: "Install and build package"
