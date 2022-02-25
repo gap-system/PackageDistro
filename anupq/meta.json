@@ -2,12 +2,12 @@
   "AbstractHTML": "The <span class=\"pkgname\">ANUPQ</span> package provides an interactive    interface to the p-quotient, p-group generation and standard presentation    algorithms of the ANU pq C program.",
   "AcceptDate": "04/2002",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSHA256": "bba32e365ad3263024bae6632bfa703cba025b637356dd11578870bd01dcadd5",
-  "ArchiveURL": "https://github.com/gap-packages/anupq/releases/download/v3.2.3/anupq-3.2.3",
+  "ArchiveSHA256": "87a9f12cf37519848dac8b3c2e0252e77035a67add55cfb747353210a218f43a",
+  "ArchiveURL": "https://github.com/gap-packages/anupq/releases/download/v3.2.5/anupq-3.2.5",
   "AvailabilityTest": null,
-  "BannerString": "---------------------------------------------------------------------------\nLoading    ANUPQ (ANU p-Quotient) 3.2.3\nGAP code by  Greg Gamble <Greg.Gamble@uwa.edu.au> (address for correspondence)\n           Werner Nickel (http://www.mathematik.tu-darmstadt.de/~nickel/)\n           [uses ANU pq binary (C code program) version: 1.9]\nC code by  Eamonn O'Brien (https://www.math.auckland.ac.nz/~obrien)\nCo-maintained by Max Horn <horn@mathematik.uni-kl.de>\n\n            For help, type: ?ANUPQ\n---------------------------------------------------------------------------\n",
+  "BannerString": "---------------------------------------------------------------------------\nLoading    ANUPQ (ANU p-Quotient) 3.2.5\nGAP code by  Greg Gamble <Greg.Gamble@uwa.edu.au> (address for correspondence)\n           Werner Nickel (http://www.mathematik.tu-darmstadt.de/~nickel/)\n           [uses ANU pq binary (C code program) version: 1.9]\nC code by  Eamonn O'Brien (https://www.math.auckland.ac.nz/~obrien)\nCo-maintained by Max Horn <horn@mathematik.uni-kl.de>\n\n            For help, type: ?ANUPQ\n---------------------------------------------------------------------------\n",
   "CommunicatedBy": "Charles Wright (Eugene)",
-  "Date": "31/10/2021",
+  "Date": "22/02/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.9",
@@ -38,7 +38,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "462ae147aecd27823f49c2739818877e59f0fe16cf80d1288a4c2d27d053d602",
+  "PackageInfoSHA256": "be83c96ac1302d7d5718fad2adc14a4eace9fb2e83ad0be1bd6ec63baa0cacc8",
   "PackageInfoURL": "https://gap-packages.github.io/anupq/PackageInfo.g",
   "PackageName": "ANUPQ",
   "PackageWWWHome": "https://gap-packages.github.io/anupq/",
@@ -92,5 +92,5 @@
   "Status": "accepted",
   "Subtitle": "ANU p-Quotient",
   "TestFile": "tst/testinstall.g",
-  "Version": "3.2.3"
+  "Version": "3.2.5"
 }
