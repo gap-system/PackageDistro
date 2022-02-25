@@ -81,8 +81,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: "Clone package distribution tools"
-        run: git clone https://github.com/gap-system/PackageDistroTools
+      - name: "Install package distribution tools"
+        run: |
+          git clone https://github.com/gap-system/PackageDistroTools _tools
+          pip install -r _tools/requirements.txt
 
       - name: "Install GAP"
         run: |
