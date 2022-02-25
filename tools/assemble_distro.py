@@ -38,6 +38,7 @@ def make_packages_tar_gz(archive_dir, release_dir, pkgs):
     # Don't put temporary directory in /tmp, as some machines have limited size.
     with TemporaryDirectory(dir=".") as tempdir:
         for pkg_name, pkg_archive in archive_list.items():
+            print("Extracting tarball: ", pkg_archive)
             # Unpack into packagename-unpack
             unpack = tempdir + "/" + pkg_name + "-unpack"
             os.mkdir(unpack)
@@ -52,7 +53,8 @@ def make_packages_tar_gz(archive_dir, release_dir, pkgs):
                 os.rename(unpack + "/" + pkgdirs[0], unpack + "/" + pkg_name)
                 os.rename(unpack + "/" + pkg_name, tempdir + "/" + pkg_name)
             os.rmdir(unpack)
-    
+
+        print("Creating final tarball: ", release_dir + "/packages.tar.gz")
         subprocess.run(["tar", "czf", release_dir + "/packages.tar.gz", "-C", tempdir, "."])
         with open(release_dir + "/packages.tar.gz.sha256", "w") as f:
             f.write(sha256file(release_dir + "/packages.tar.gz"))
@@ -67,7 +69,6 @@ def main():
     pkgs = sys.argv[1:]
     if len(pkgs) == 0:
         pkgs = sorted([d for d in os.listdir(".")  if os.path.isdir(d) and not skip(d)])
-        print("Usage: build_package_archive.py <packagelist> ...")
 
     # Make packages.tar.gz
     make_packages_tar_gz(archive_dir, release_dir, pkgs)
