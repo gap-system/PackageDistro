@@ -1,0 +1,80 @@
+# This action is invoked when new changes are pushed to the `main` branch,
+# or new tags are created. It then assembles the package distribution
+# tarballs, and uploads it to the given tag, or (in the case of pushes to
+# `main`) to the tag `latest` (this tag then is also changed to point to
+# the new HEAD of `main`)
+name: "Assemble the package distribution"
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - v[1-9]+.[0-9]+
+      - v[1-9]+.[0-9]+.[0-9]+
+
+concurrency:
+  group: assemble-pkgdist
+  cancel-in-progress: true
+
+jobs:
+  assemble:
+    name: "Assemble the package distribution"
+    runs-on: ubuntu-latest
+    outputs:
+      remove-matrix: ${{ steps.detect-changes.outputs.remove-matrix }}
+      update-matrix: ${{ steps.detect-changes.outputs.update-matrix }}
+    steps:
+      - uses: actions/checkout@v2
+
+      # TODO: if no meta.json file was modified, and the trigger was a push to
+      # main, then skip all remaining steps (this situation happens if e.g.
+      # the workflows or the README.md are updated)
+
+      - name: "Setup _archives symlink"
+        run: mkdir -p ~/_archives && ln -s ~/_archives
+
+      - name: "Cache archives"
+        uses: actions/cache@v2
+        with:
+          path: ~/_archives
+          key: archives
+
+      - name: "Install package distribution tools"
+        run: |
+          git clone https://github.com/gap-system/PackageDistroTools _tools
+          pip install -r _tools/requirements.txt
+
+      - name: "Assemble distribution"
+        run: _tools/assemble_distro.py
+
+      # Decide to which tag to update: if the trigger for this job was the
+      # creation of a tag `vX.Y.Z`, then upload to that tag.
+      # Otherwise upload to tag `latest` and move that tag to our commit
+      - name: "Determine target tag"
+        run: |
+          tag=latest
+          if [[ "$GITHUB_REF" = refs/tags/* ]] ; then
+            tag=${GITHUB_REF#"refs/tags/"}
+          fi
+          # Relevant documentation for the next line:
+          # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#environment-files
+          echo "RELEASE_TAG=$tag" >> $GITHUB_ENV
+
+      - name: "Upload files to tag '${{ env.RELEASE_TAG }}'"
+        uses: meeDamian/github-release@7ae19492500104f636b3fee4d8103af0fed36c8e # @2.0.3
+        with:
+          allow_override: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ env.RELEASE_TAG }}
+          commitish: ${{ github.sha }}
+          gzip: false
+          name: "GAP package distribution (${{ env.RELEASE_TAG }})"
+          body: |
+            TODO: put in a nice list of packages and their versions, perhaps inspired by
+            https://github.com/gap-system/gap-distribution/releases/tag/package-archives
+          files: |
+            _releases/packages.tar.gz
+            _releases/packages.tar.gz.sha256
+            _releases/package-infos.json.gz
+            _releases/package-infos.json.gz.sha256
