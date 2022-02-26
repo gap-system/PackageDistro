@@ -18,18 +18,32 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  assemble:
-    name: "Assemble the package distribution"
+  find-modified:
+    name: "Check if any packages were modified"
     runs-on: ubuntu-latest
     outputs:
-      remove-matrix: ${{ steps.detect-changes.outputs.remove-matrix }}
-      update-matrix: ${{ steps.detect-changes.outputs.update-matrix }}
+      modified: ${{ steps.find-modified.outputs.modified }}
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 5
 
-      # TODO: if no meta.json file was modified, and the trigger was a push to
-      # main, then skip all remaining steps (this situation happens if e.g.
-      # the workflows or the README.md are updated)
+      - name: "Check if any packages were modified"
+        id: find-modified
+        run: |
+          # if no meta.json file was modified, and the trigger was a push to
+          # main, then skip all remaining steps (this situation happens if e.g.
+          # the workflow YAML files or README.md are updated)
+          modified=$(git diff --name-only --no-renames --diff-filter=M HEAD^ -- */meta.json)
+          echo "::set-output name=modified::$modified"
+
+  assemble:
+    name: "Assemble the package distribution"
+    if: ${{ needs.find-modified.outputs.modified != '' }}
+    needs: find-modified
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
 
       - name: "Setup _archives symlink"
         run: mkdir -p ~/_archives && ln -s ~/_archives
@@ -61,7 +75,7 @@ jobs:
           # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#environment-files
           echo "RELEASE_TAG=$tag" >> $GITHUB_ENV
 
-      - name: "Upload files to tag '${{ env.RELEASE_TAG }}'"
+      - name: "Upload files to tag ${{ env.RELEASE_TAG }}"
         uses: meeDamian/github-release@7ae19492500104f636b3fee4d8103af0fed36c8e # @2.0.3
         with:
           allow_override: true
