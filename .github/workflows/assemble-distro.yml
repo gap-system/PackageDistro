@@ -75,14 +75,11 @@ jobs:
           # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#environment-files
           echo "RELEASE_TAG=$tag" >> $GITHUB_ENV
 
-      - name: "Upload files to tag ${{ env.RELEASE_TAG }}"
-        uses: meeDamian/github-release@7ae19492500104f636b3fee4d8103af0fed36c8e # @2.0.3
+      - name: "Upload files to tag"
+        uses: softprops/action-gh-release@v1
         with:
-          allow_override: true
-          token: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ env.RELEASE_TAG }}
-          commitish: ${{ github.sha }}
-          gzip: false
+          tag_name: ${{ env.RELEASE_TAG }}
+          target_commitish: ${{ github.sha }}
           name: "GAP package distribution (${{ env.RELEASE_TAG }})"
           body: |
             TODO: put in a nice list of packages and their versions, perhaps inspired by
