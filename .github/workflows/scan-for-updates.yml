@@ -83,8 +83,20 @@ jobs:
         with:
           name: metadata
 
+      # We set up a GitHub App in order to ensure that workflows are run on the PRs
+      # created by us, following the instructions here:
+      # <https://github.com/peter-evans/create-pull-request/blob/main/docs/concepts-guidelines.md#authenticating-with-github-app-generated-tokens>
+      # The bot can also be set up for personal forks of this repository, for testing
+      # and debugging, see <https://github.com/apps/gap-package-distribution-bot>.
+      - uses: tibdex/github-app-token@v1
+        id: generate-token
+        with:
+          app_id: ${{ secrets.APP_ID }}
+          private_key: ${{ secrets.APP_PRIVATE_KEY }}
+
       - uses: peter-evans/create-pull-request@v3
         with:
+          token: ${{ steps.generate-token.outputs.token }}
           add-paths: ${{ matrix.package }}
           commit-message: "[${{ matrix.package }}] Update"
           body: ""
