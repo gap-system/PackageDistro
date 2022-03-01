@@ -21,7 +21,7 @@ import sys
 
 from accepts import accepts
 
-from download_packages import download_archive, metadata
+from download_packages import download_archive, metadata, normalize_pkg_name
 from utils import error
 from validate_package import unpack_archive
 
@@ -52,7 +52,7 @@ def download_dependencies(pkg_name: str) -> None:
 
 def main(pkgs) -> None:
     for pkg in pkgs:
-        download_dependencies(pkg.removesuffix("/meta.json"))
+        download_dependencies(normalize_pkg_name(pkg))
 
 
 if __name__ == "__main__":

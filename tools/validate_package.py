@@ -40,7 +40,7 @@ from os.path import join
 
 from accepts import accepts
 
-from download_packages import archive_name, metadata, download_archive
+from download_packages import archive_name, metadata, download_archive, normalize_pkg_name
 from scan_for_updates import download_pkg_info, gap_exec, sha256
 from utils import notice, warning
 
@@ -141,4 +141,4 @@ def main(pkg_name):
 
 if __name__ == "__main__":
     for i in range(1, len(sys.argv)):
-        main(sys.argv[i].removesuffix("/meta.json"))
+        main(normalize_pkg_name(sys.argv[i]))

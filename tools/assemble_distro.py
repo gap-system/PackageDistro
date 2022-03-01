@@ -16,7 +16,7 @@ import sys
 import os
 import gzip
 from tempfile import TemporaryDirectory
-from download_packages import download_archive, metadata_fname
+from download_packages import download_archive, metadata_fname, normalize_pkg_name
 
 from scan_for_updates import all_packages
 from utils import sha256file
@@ -70,7 +70,7 @@ def main():
     if len(pkgs) == 0:
         pkgs = all_packages()
     else:
-        pkgs = [x.removesuffix("/meta.json") for x in pkgs]
+        pkgs = [normalize_pkg_name(x) for x in pkgs]
 
     # Make packages.tar.gz
     make_packages_tar_gz(archive_dir, release_dir, pkgs)

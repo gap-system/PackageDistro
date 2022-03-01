@@ -47,6 +47,10 @@ from accepts import accepts
 from utils import error, notice
 
 @accepts(str)
+def normalize_pkg_name(pkg_name: str) -> str:
+    return pkg_name.removesuffix("/meta.json")
+
+@accepts(str)
 def metadata_fname(pkg_name: str) -> str:
     return join(pkg_name, "meta.json")
 
@@ -124,7 +128,7 @@ def download_archive(  # pylint: disable=inconsistent-return-statements
 def main(pkg_names) -> None:
     archive_dir = "_archives"
     for pkg_name in pkg_names:
-        download_archive(archive_dir, pkg_name.removesuffix("/meta.json"))
+        download_archive(archive_dir, normalize_pkg_name(pkg_name))
 
 
 if __name__ == "__main__":
