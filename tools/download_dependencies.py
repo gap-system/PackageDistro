@@ -52,7 +52,7 @@ def download_dependencies(pkg_name: str) -> None:
 
 def main(pkgs) -> None:
     for pkg in pkgs:
-        download_dependencies(pkg)
+        download_dependencies(pkg.removesuffix("/meta.json"))
 
 
 if __name__ == "__main__":

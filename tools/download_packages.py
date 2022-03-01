@@ -14,19 +14,22 @@
 
 """
 This module can be used as a script to download package archives into the
-`_archives` directory of the cwd. The packages to download should be given as
-command line arguments, each given name must correspond to a subdirectory in
-the cwd named `pkg_name` and containing a `meta.json` file (i.e. should be run
-inside the `PackageDistro` git repo from:
+`_archives` directory of the cwd. The command should be run inside the
+`PackageDistro` git repo from:
 
 https://github.com/gap-system/PackageDistro
+
+The packages to download should be given as command line arguments, each
+given name must either correspond to a subdirectory in the cwd named
+`pkg_name` and containing a `meta.json` file, or be of the form
+`pkg_name/meta.json`.
 
 If the archive already exists in the `_archives` directory, then it is not
 downloaded again.
 
 Usage:
 
-    > _tools/download_packages.py digraphs walrus
+    > _tools/download_packages.py digraphs walrus/meta.json
     digraphs: _archives/digraphs-1.5.0.tar.gz already exists, not downloading again
     walrus: _archives/walrus-0.9991.tar.gz already exists, not downloading again
 
@@ -118,7 +121,7 @@ def download_archive(  # pylint: disable=inconsistent-return-statements
 def main(pkg_names) -> None:
     archive_dir = "_archives"
     for pkg_name in pkg_names:
-        download_archive(archive_dir, pkg_name)
+        download_archive(archive_dir, pkg_name.removesuffix("/meta.json"))
 
 
 if __name__ == "__main__":

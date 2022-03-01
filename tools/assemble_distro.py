@@ -69,6 +69,8 @@ def main():
     pkgs = sys.argv[1:]
     if len(pkgs) == 0:
         pkgs = sorted([d for d in os.listdir(".")  if os.path.isdir(d) and not skip(d)])
+    else:
+        pkgs = [x.removesuffix("/meta.json") for x in pkgs]
 
     # Make packages.tar.gz
     make_packages_tar_gz(archive_dir, release_dir, pkgs)

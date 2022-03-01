@@ -16,9 +16,10 @@
 Runs some basic validation of the pkgname/meta.json against the package
 archive, and the old meta data.
 
-Should be run after scan_for_updates.py, as follows
+Should be run after scan_for_updates.py. Arguments can be either package
+names, or the path to a meta.json file. For example:
 
-    _tools/validate_package.py  aclib digraphs walrus
+    _tools/validate_package.py  aclib digraphs walrus/meta.json
     aclib: _archives/aclib-1.3.2.tar.gz already exists, not downloading again
     aclib: unpacking _archives/aclib-1.3.2.tar.gz into _unpacked_archives ...
     aclib: current release version is 1.3.2, but previous release version was 1.3.2, FAILED!
@@ -140,4 +141,4 @@ def main(pkg_name):
 
 if __name__ == "__main__":
     for i in range(1, len(sys.argv)):
-        main(sys.argv[i])
+        main(sys.argv[i].removesuffix("/meta.json"))
