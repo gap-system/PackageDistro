@@ -33,7 +33,7 @@ import requests
 from accepts import accepts
 
 from utils import error, notice, warning
-from download_packages import download_archive, metadata
+from download_packages import download_archive, metadata, metadata_fname
 
 
 @accepts(str)
@@ -47,7 +47,7 @@ def skip(string: str) -> bool:
 
 def all_packages():
     pkgs = sorted(os.listdir(os.getcwd()))
-    return [d for d in pkgs if os.path.isdir(d) and os.path.isfile(join(d, 'meta.json')) and not skip(d)]
+    return [d for d in pkgs if os.path.isdir(d) and os.path.isfile(metadata_fname(d)) and not skip(d)]
 
 
 @accepts(str)
@@ -154,7 +154,7 @@ def add_sha256_to_json(pkginfos_dir: str, archive_name_lookup: dict) -> None:
         if skip(pkgname):
             continue
         pkgname = pkgname.split(".")[0]
-        pkg_json_file = "{}/meta.json".format(pkgname)
+        pkg_json_file = metadata_fname(pkgname)
 
         try:
             pkg_archive = archive_name_lookup[pkgname]
@@ -168,7 +168,7 @@ def add_sha256_to_json(pkginfos_dir: str, archive_name_lookup: dict) -> None:
             join(pkginfos_dir, pkgname + ".g")
         )
         pkg_json["ArchiveSHA256"] = sha256(pkg_archive)
-        notice("{0}: writing updated {0}/meta.json".format(pkgname))
+        notice("{0}: writing updated {0}".format(pkg_json_file))
         with open(pkg_json_file, "w", encoding="utf-8") as f:
             json.dump(pkg_json, f, indent=2, ensure_ascii=False, sort_keys=True)
             f.write("\n")

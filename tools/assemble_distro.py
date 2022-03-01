@@ -16,7 +16,7 @@ import sys
 import os
 import gzip
 from tempfile import TemporaryDirectory
-from download_packages import download_archive
+from download_packages import download_archive, metadata_fname
 
 from scan_for_updates import all_packages
 from utils import sha256file
@@ -25,7 +25,7 @@ from utils import sha256file
 def make_package_info_json(pkgs):
     package_info = dict()
     for p in pkgs:
-        with open(p + "/meta.json") as f:
+        with open(metadata_fname(p)) as f:
             package_info[p] = json.load(f)
     return package_info
 

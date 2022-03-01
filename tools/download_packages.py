@@ -46,10 +46,13 @@ from accepts import accepts
 
 from utils import error, notice
 
+@accepts(str)
+def metadata_fname(pkg_name: str) -> str:
+    return join(pkg_name, "meta.json")
 
 @accepts(str)
 def metadata(pkg_name: str) -> dict:
-    fname = join(pkg_name, "meta.json")
+    fname = metadata_fname(pkg_name)
     pkg_json = {}
 
     try:
