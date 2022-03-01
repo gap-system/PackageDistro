@@ -18,7 +18,7 @@ import gzip
 from tempfile import TemporaryDirectory
 from download_packages import download_archive
 
-from utils import error, normalize_pkg_name, metadata, sha256
+from utils import error, normalize_pkg_name, metadata, sha256, all_packages
 
 
 def make_package_info_json(pkgs):
