@@ -18,7 +18,7 @@ import gzip
 from tempfile import TemporaryDirectory
 from download_packages import download_archive
 
-from scan_for_updates import skip
+from scan_for_updates import all_packages
 from utils import sha256file
 
 
@@ -68,7 +68,7 @@ def main():
 
     pkgs = sys.argv[1:]
     if len(pkgs) == 0:
-        pkgs = sorted([d for d in os.listdir(".")  if os.path.isdir(d) and not skip(d)])
+        pkgs = all_packages()
     else:
         pkgs = [x.removesuffix("/meta.json") for x in pkgs]
 

@@ -45,6 +45,11 @@ def skip(string: str) -> bool:
     )
 
 
+def all_packages():
+    pkgs = sorted(os.listdir(os.getcwd()))
+    return [d for d in pkgs if os.path.isdir(d) and os.path.isfile(join(d, 'meta.json')) and not skip(d)]
+
+
 @accepts(str)
 def sha256(fname: str) -> str:
     hash_archive = hashlib.sha256()
@@ -111,9 +116,8 @@ def scan_for_updates(pkginfos_dir: str) -> None:
     if not os.path.exists(pkginfos_dir):
         os.mkdir(pkginfos_dir)
     assert os.path.isdir(pkginfos_dir)
-    for pkgname in sorted(os.listdir(os.getcwd())):
-        if not skip(pkgname) and os.path.isdir(pkgname):
-            scan_for_one_update(pkginfos_dir, pkgname)
+    for pkgname in all_packages():
+        scan_for_one_update(pkginfos_dir, pkgname)
 
 
 @accepts(str)
