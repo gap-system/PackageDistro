@@ -34,8 +34,7 @@ names, or the path to a meta.json file. For example:
 
 import os
 import sys
-import tarfile
-import zipfile
+import shutil
 from os.path import join
 
 from accepts import accepts
@@ -49,26 +48,8 @@ def unpack_archive(archive_dir, unpack_dir, pkg_name):
     archive_fname = join(archive_dir, archive_name(pkg_name))
     if not os.path.exists(unpack_dir):
         os.mkdir(unpack_dir)
-    ext = archive_fname.split(".")[-1]
-    notice(
-        "{}: unpacking {} into {} ...".format(
-            pkg_name, archive_fname, unpack_dir
-        )
-    )
-
-    if ext.endswith("gz") or ext.endswith("bz2"):
-        with tarfile.open(archive_fname) as archive:
-            archive.extractall(unpack_dir)
-    elif ext.endswith("zip"):
-        with zipfile.ZipFile(archive_fname) as archive:
-            archive.extractall(unpack_dir)
-    else:
-        notice(
-            "{}: bad archive extension {}, skipping {}".format(
-                pkg_name, ext, archive_fname
-            )
-        )
-
+    notice("unpacking {} into {} ...".format(archive_fname, unpack_dir))
+    shutil.unpack_archive(archive_fname, unpack_dir)
 
 def unpacked_archive_name(unpack_dir, pkg_name):
     for x in os.listdir(unpack_dir):
