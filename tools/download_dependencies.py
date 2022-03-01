@@ -21,10 +21,10 @@ import sys
 
 from accepts import accepts
 
-from download_packages import download_archive, metadata, normalize_pkg_name
-from utils import error
+from download_packages import download_archive
 from validate_package import unpack_archive
 
+from utils import error, normalize_pkg_name, metadata, metadata_fname
 
 # TODO allow downloading of SuggestedPackages too
 @accepts(str)

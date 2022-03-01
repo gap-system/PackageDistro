@@ -32,31 +32,9 @@ from os.path import join
 import requests
 from accepts import accepts
 
-from utils import error, notice, warning
-from download_packages import download_archive, metadata, metadata_fname
+from download_packages import download_archive
 
-
-@accepts(str)
-def skip(string: str) -> bool:
-    return (
-        string.startswith(".")
-        or string.startswith("_")
-        or string == "README.md"
-    )
-
-
-def all_packages():
-    pkgs = sorted(os.listdir(os.getcwd()))
-    return [d for d in pkgs if os.path.isdir(d) and os.path.isfile(metadata_fname(d)) and not skip(d)]
-
-
-@accepts(str)
-def sha256(fname: str) -> str:
-    hash_archive = hashlib.sha256()
-    with open(fname, "rb") as f:
-        for chunk in iter(lambda: f.read(1024), b""):
-            hash_archive.update(chunk)
-    return hash_archive.hexdigest()
+from utils import notice, error, warning, all_packages, metadata, metadata_fname, skip, sha256
 
 
 @accepts(str)

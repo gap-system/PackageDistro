@@ -36,7 +36,6 @@ Usage:
 """
 
 
-import json
 import os
 import sys
 from os.path import join
@@ -44,44 +43,7 @@ from os.path import join
 import requests
 from accepts import accepts
 
-from utils import error, notice
-
-@accepts(str)
-def normalize_pkg_name(pkg_name: str) -> str:
-    return pkg_name.removesuffix("/meta.json")
-
-@accepts(str)
-def metadata_fname(pkg_name: str) -> str:
-    return join(pkg_name, "meta.json")
-
-@accepts(str)
-def metadata(pkg_name: str) -> dict:
-    fname = metadata_fname(pkg_name)
-    pkg_json = {}
-
-    try:
-        with open(fname, "r", encoding="utf-8") as f:
-            pkg_json = json.load(f)
-    except (OSError, IOError):
-        error("{}: file {} not found".format(pkg_name, fname))
-    except json.JSONDecodeError as e:
-        error("{}: invalid json in {}\n{}".format(pkg_name, fname, e.msg))
-    return pkg_json
-
-
-@accepts(str)
-def archive_name(pkg_name: str) -> str:
-    pkg_json = metadata(pkg_name)
-    return (
-        pkg_json["ArchiveURL"].split("/")[-1]
-        + pkg_json["ArchiveFormats"].split(" ")[0]
-    )
-
-
-@accepts(str)
-def archive_url(pkg_name: str) -> str:
-    pkg_json = metadata(pkg_name)
-    return pkg_json["ArchiveURL"] + pkg_json["ArchiveFormats"].split(" ")[0]
+from utils import error, notice, normalize_pkg_name, archive_name, archive_url
 
 
 @accepts(str, str, int)

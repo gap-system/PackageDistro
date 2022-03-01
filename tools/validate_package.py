@@ -39,9 +39,11 @@ from os.path import join
 
 from accepts import accepts
 
-from download_packages import archive_name, metadata, download_archive, normalize_pkg_name
-from scan_for_updates import download_pkg_info, gap_exec, sha256
-from utils import notice, warning
+from download_packages import download_archive
+from scan_for_updates import download_pkg_info, gap_exec
+
+from utils import notice, warning, normalize_pkg_name, archive_name, metadata, sha256
+
 
 
 def unpack_archive(archive_dir, unpack_dir, pkg_name):

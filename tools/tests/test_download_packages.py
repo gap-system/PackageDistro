@@ -22,10 +22,14 @@ sys.path.insert(
 
 
 from download_packages import (
-    archive_name,
-    archive_url,
     download_archive,
     main,
+)
+
+# TODO: move the tests for these functions to their own test file?
+from utils import (
+    archive_name,
+    archive_url,
     metadata,
 )
 

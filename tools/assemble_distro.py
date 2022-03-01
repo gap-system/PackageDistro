@@ -16,17 +16,15 @@ import sys
 import os
 import gzip
 from tempfile import TemporaryDirectory
-from download_packages import download_archive, metadata_fname, normalize_pkg_name
+from download_packages import download_archive
 
-from scan_for_updates import all_packages
-from utils import sha256file
+from utils import error, normalize_pkg_name, metadata, sha256
 
 
 def make_package_info_json(pkgs):
     package_info = dict()
     for p in pkgs:
-        with open(metadata_fname(p)) as f:
-            package_info[p] = json.load(f)
+        package_info[p] = metadata(p)
     return package_info
 
 def make_packages_tar_gz(archive_dir, release_dir, pkgs):
@@ -46,9 +44,9 @@ def make_packages_tar_gz(archive_dir, release_dir, pkgs):
             # Check there is only one directory. Rename it to standardised name (pkg_name)
             pkgdirs = os.listdir(unpack)
             if len(pkgdirs) == 0:
-                print("Error: no package directory found in archive: " + pkg_archive)
+                error("Error: no package directory found in archive: " + pkg_archive)
             elif len(pkgdirs) > 1:
-                print("Error: more than one package directory found in archive: " + pkg_archive)
+                error("Error: more than one package directory found in archive: " + pkg_archive)
             else:
                 os.rename(unpack + "/" + pkgdirs[0], unpack + "/" + pkg_name)
                 os.rename(unpack + "/" + pkg_name, tempdir + "/" + pkg_name)
@@ -57,7 +55,7 @@ def make_packages_tar_gz(archive_dir, release_dir, pkgs):
         print("Creating final tarball: ", release_dir + "/packages.tar.gz")
         subprocess.run(["tar", "czf", release_dir + "/packages.tar.gz", "-C", tempdir, "."])
         with open(release_dir + "/packages.tar.gz.sha256", "w") as f:
-            f.write(sha256file(release_dir + "/packages.tar.gz"))
+            f.write(sha256(release_dir + "/packages.tar.gz"))
 
 def main():
     archive_dir = "_archives"
@@ -80,7 +78,7 @@ def main():
     with gzip.open(release_dir + "/package-infos.json.gz", "wt", encoding="utf-8") as f:
         json.dump(package_info, f, indent=4)
     with open(release_dir + "/package-infos.json.gz.sha256", "w") as f:
-        f.write(sha256file(release_dir + "/package-infos.json.gz"))
+        f.write(sha256(release_dir + "/package-infos.json.gz"))
 
 
 if __name__ == "__main__":
