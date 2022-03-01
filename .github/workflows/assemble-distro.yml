@@ -52,7 +52,9 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/_archives
-          key: archives
+          key: archives-${{ hashFiles('**/meta.json') }}
+          restore-keys: |
+            archives-
 
       - name: "Install package distribution tools"
         run: |
@@ -61,6 +63,9 @@ jobs:
 
       - name: "Assemble distribution"
         run: _tools/assemble_distro.py
+
+      - name: "Cleanup archives"
+        run: _tools/cleanup_archives.py
 
       # Decide to which tag to update: if the trigger for this job was the
       # creation of a tag `vX.Y.Z`, then upload to that tag.

@@ -24,7 +24,9 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/_archives
-          key: archives
+          key: archives-${{ hashFiles('**/meta.json') }}
+          restore-keys: |
+            archives-
 
       - name: "Install package distribution tools"
         run: |
