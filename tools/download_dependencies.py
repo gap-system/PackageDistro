@@ -31,11 +31,10 @@ from validate_package import unpack_archive
 def download_dependencies(pkg_name: str) -> None:
     pkg_json = metadata(pkg_name)
     seen = set()
-    pkgs_in_distro = set(os.listdir(os.getcwd()))
 
     for pkg, _ in pkg_json["Dependencies"]["NeededOtherPackages"]:
         pkg = pkg.lower()
-        if not pkg in pkgs_in_distro:
+        if not os.path.isfile(metadata_fname(pkg)):
             error(
                 "{}: dependency {} not in distro, giving up!".format(
                     pkg_name, pkg
