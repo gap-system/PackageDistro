@@ -27,10 +27,10 @@ from validate_package import unpack_archive
 from utils import error, normalize_pkg_name, metadata, metadata_fname
 
 # TODO allow downloading of SuggestedPackages too
-@accepts(str)
-def download_dependencies(pkg_name: str) -> None:
+@accepts(str, set)
+def download_dependencies(pkg_name: str, seen: set) -> None:
     pkg_json = metadata(pkg_name)
-    seen = set()
+    seen.add(pkg_name)
 
     for pkg, _ in pkg_json["Dependencies"]["NeededOtherPackages"]:
         pkg = pkg.lower()
@@ -46,12 +46,12 @@ def download_dependencies(pkg_name: str) -> None:
             seen.add(pkg)
             download_archive("_archives", pkg)
             unpack_archive("_archives", "_unpacked_archives", pkg)
-            download_dependencies(pkg)
+            download_dependencies(pkg, seen)
 
 
 def main(pkgs) -> None:
     for pkg in pkgs:
-        download_dependencies(normalize_pkg_name(pkg))
+        download_dependencies(normalize_pkg_name(pkg), set())
 
 
 if __name__ == "__main__":
