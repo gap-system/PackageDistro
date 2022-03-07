@@ -111,6 +111,7 @@ jobs:
 
       - name: "Install and build package"
         run: |
+          sudo apt-get install $(_tools/gather_dependencies.py ${{ matrix.package }})
           _tools/download_dependencies.py ${{ matrix.package }}
           BuildPackagesOptions="--strict"
           cd _unpacked_archives
