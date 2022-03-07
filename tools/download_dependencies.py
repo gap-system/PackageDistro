@@ -43,7 +43,6 @@ def download_dependencies(pkg_name: str, seen: set) -> None:
         # TODO fail if required version number in PackageInfo.g is higher than
         # the version in the distro
         if not pkg in seen:
-            seen.add(pkg)
             download_archive("_archives", pkg)
             unpack_archive("_archives", "_unpacked_archives", pkg)
             download_dependencies(pkg, seen)
