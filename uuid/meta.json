@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "UUIDs for GAP",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "6f30b40b56490e7f2fe273c55b5b03565ccd0b8eca1a28ee0bd4fec9b256e30d",
-  "ArchiveURL": "https://github.com/gap-packages/uuid/releases/download/v0.6/uuid-0.6",
+  "ArchiveSHA256": "30d83223fde65db8be8a496428347416816a296ea63605cc9d54bca4e4f9436c",
+  "ArchiveURL": "https://github.com/gap-packages/uuid/releases/download/v0.7/uuid-0.7",
   "AvailabilityTest": null,
-  "Date": "22/09/2018",
+  "Date": "01/03/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.8",
@@ -21,6 +21,7 @@
     "UUID",
     "RFC4122"
   ],
+  "License": "BSD-3-Clause",
   "PackageDoc": [
     {
       "ArchiveURLSubset": [
@@ -33,7 +34,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "9e6bf9948d544eba0f1ddad57fa3da44982c7dd0cc24904376b24f2351afb630",
+  "PackageInfoSHA256": "a01557c614b73e10813d01822f72c3a6af4f5db1ab679033b4095a1431162485",
   "PackageInfoURL": "https://gap-packages.github.io/uuid/PackageInfo.g",
   "PackageName": "uuid",
   "PackageWWWHome": "https://gap-packages.github.io/uuid/",
@@ -43,11 +44,18 @@
       "FirstNames": "Markus",
       "Institution": "University of St Andrews",
       "IsAuthor": true,
-      "IsMaintainer": true,
+      "IsMaintainer": false,
       "LastName": "Pfeiffer",
       "Place": "St Andrews",
       "PostalAddress": "School of Computer ScienceJack Cole BuildingNorth HaughSt AndrewsFifeKY16 9SSScotland",
       "WWWHome": "http://www.morphism.de/~markusp/"
+    },
+    {
+      "Email": "support@gap-system.org",
+      "FirstNames": "The",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "GAP Team"
     }
   ],
   "README_URL": "https://gap-packages.github.io/uuid/README.md",
@@ -55,8 +63,8 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/uuid"
   },
-  "Status": "dev",
+  "Status": "deposited",
   "Subtitle": "RFC 4122 UUIDs",
   "TestFile": "tst/testall.g",
-  "Version": "0.6"
+  "Version": "0.7"
 }

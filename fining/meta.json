@@ -58,7 +58,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "415c7716cffcc01efa519497ea572b0d1e5804e86fbe83f67d5fd259f1b4b7c6",
+  "PackageInfoSHA256": "367a69d0bb2160d9c63f2741cba5236374aa614fb7234aeef599c01140767f1c",
   "PackageInfoURL": "http://cage.ugent.be/fining/PackageInfo.g",
   "PackageName": "FinInG",
   "PackageWWWHome": "http://www.fining.org",
@@ -110,12 +110,12 @@
     {
       "Email": "michel.lavrauw@unipd.it",
       "FirstNames": "Michel",
-      "Institution": "Sabancõ niversitesi, and Universit degli Studi di Padova",
+      "Institution": "Sabanc� �niversitesi, and Universit� degli Studi di Padova",
       "IsAuthor": true,
       "IsMaintainer": true,
       "LastName": "Lavrauw",
       "Place": "Istanbul, and Vicenza",
-      "PostalAddress": "Michel Lavrauw\nFaculty of Engineering and Natural Sciences\nSabancõ niversitesi\nIstanbul\nTurkey\nUniversit degli Studi di Padova\nDipartimento di Tecnica e Gestione dei Sistemi Industriali\nStradella S. Nicola, 3\nI-36100\nItaly",
+      "PostalAddress": "Michel Lavrauw\nFaculty of Engineering and Natural Sciences\nSabanc� �niversitesi\nIstanbul\nTurkey\nUniversit� degli Studi di Padova\nDipartimento di Tecnica e Gestione dei Sistemi Industriali\nStradella S. Nicola, 3\nI-36100\nItaly",
       "WWWHome": "http://people.sabanciuniv.edu/~mlavrauw/"
     },
     {

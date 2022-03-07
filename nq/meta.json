@@ -2,19 +2,18 @@
   "AbstractHTML": "This package provides access to the ANU nilpotent quotient program for computing nilpotent factor groups of finitely presented groups.",
   "AcceptDate": "01/2003",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSHA256": "fb57c654a063dff57ff9cab8bf2e393b3d797baa814988cc947c20c1ef33c1a7",
-  "ArchiveURL": "https://github.com/gap-packages/nq/releases/download/v2.5.5/nq-2.5.5",
+  "ArchiveSHA256": "40797363eb626c0fc28bb426c5d6a5dd8db7b432660535c94bb4a579bac89678",
+  "ArchiveURL": "https://github.com/gap-packages/nq/releases/download/v2.5.6/nq-2.5.6",
   "AutoDoc": {
     "TitlePage": {
       "Acknowledgements": "\n            The author of ANU NQ is Werner Nickel.\n\n            <P/>The development of this program was started while the\n            author was supported by an Australian National University PhD\n            scholarship and an Overseas Postgraduate Research Scholarship.\n\n            <P/>Further development of this program was done with support from the\n            DFG-Schwerpunkt-Projekt \"`Algorithmische Zahlentheorie und Algebra\"'.\n\n            <P/>Since then, maintenance of ANU NQ has been taken over by Max Horn. All\n            credit for creating ANU NQ still goes to Werner Nickel as sole author.\n            However, bug reports and other inquiries should be sent to Max Horn.\n\n            <P/>The following are the original acknowledgements by Werner Nickel.\n\n            <P/>Over the years a number of people have made useful suggestions\n            that found their way into the code:  Mike Newman, Michael\n            Vaughan-Lee, Joachim Neubüser, Charles Sims.\n\n            <P/>Thanks to Volkmar Felsch and Joachim Neubüser for their careful\n            examination of the package prior to its release for GAP 4.\n\n            <P/>This documentation was prepared with the <Package>GAPDoc</Package>\n            package by Frank Lübeck and Max Neunhöffer.",
       "Copyright": "\n            <Index>License</Index>\n            &copyright; 1992-2007 Werner Nickel<P/>\n            The &nq; package is free software;\n            you can redistribute it and/or modify it under the terms of the\n            <URL Text=\"GNU General Public License\">http://www.fsf.org/licenses/gpl.html</URL>\n            as published by the Free Software Foundation; either version 2 of the License,\n            or (at your option) any later version."
     }
   },
-  "Autoload": false,
   "AvailabilityTest": null,
-  "BannerString": "Loading nq 2.5.5 (Nilpotent Quotient Algorithm)\n  by Werner Nickel\n  maintained by Max Horn (horn@mathematik.uni-kl.de)\n",
+  "BannerString": "Loading nq 2.5.6 (Nilpotent Quotient Algorithm)\n  by Werner Nickel\n  maintained by Max Horn (horn@mathematik.uni-kl.de)\n",
   "CommunicatedBy": "Joachim Neubüser (RWTH Aachen)",
-  "Date": "11/04/2021",
+  "Date": "22/02/2022",
   "Dependencies": {
     "ExternalConditions": [
       "needs a UNIX system with C-compiler",
@@ -49,7 +48,6 @@
       "ArchiveURLSubset": [
         "doc"
       ],
-      "Autoload": false,
       "BookName": "nq",
       "HTMLStart": "doc/chap0.html",
       "LongTitle": "Nilpotent Quotient Algorithm",
@@ -57,7 +55,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "0320b2f11e52f6ded4ce21014edfd0854ef02b20245c61718032bf4768fa36be",
+  "PackageInfoSHA256": "533e0dea2fd95ca9e342ee9059b5e88d9eda8155d9e543dd497a6442761b215b",
   "PackageInfoURL": "https://gap-packages.github.io/nq/PackageInfo.g",
   "PackageName": "nq",
   "PackageWWWHome": "https://gap-packages.github.io/nq/",
@@ -89,5 +87,5 @@
   "Status": "accepted",
   "Subtitle": "Nilpotent Quotients of Finitely Presented Groups",
   "TestFile": "tst/testall.g",
-  "Version": "2.5.5"
+  "Version": "2.5.6"
 }

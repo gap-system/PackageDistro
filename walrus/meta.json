@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "An implementation of hyperbolicity testing using an ideas\nby Derek Holt, Max Neunhöffer, Richard Parker, and Colva Roney-Dougal,\nand probably quite a few more",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "5ab0b8d96839de7ccbc91eedbd7d1e5c7403bbf89060023d57694d20ff7dde7f",
-  "ArchiveURL": "https://github.com/gap-packages/walrus/releases/download/v0.999/walrus-0.999",
+  "ArchiveSHA256": "53f9169ac7ebd7a0ac35597a31620ab0a7e2d8d096784f47e0ad1f93145bf84d",
+  "ArchiveURL": "https://github.com/gap-packages/walrus/releases/download/v0.9991/walrus-0.9991",
   "AvailabilityTest": null,
-  "Date": "19/12/2019",
+  "Date": "21/02/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.10",
@@ -53,7 +53,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "d94d3f42ef127603f2652b8ebda3f1b85de1e22d3b8f53ab54475f40f70f6789",
+  "PackageInfoSHA256": "d210173f9099910f4f606ea5536c7d9c7293e4bb95e7f6d66ddaffecd22dfc86",
   "PackageInfoURL": "https://gap-packages.github.io/walrus/PackageInfo.g",
   "PackageName": "walrus",
   "PackageWWWHome": "https://gap-packages.github.io/walrus",
@@ -75,8 +75,8 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/walrus"
   },
-  "Status": "dev",
+  "Status": "deposited",
   "Subtitle": "A new approach to proving hyperbolicity",
   "TestFile": "tst/testall.g",
-  "Version": "0.999"
+  "Version": "0.9991"
 }

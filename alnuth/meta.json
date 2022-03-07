@@ -2,11 +2,11 @@
   "AbstractHTML": "The <span class=\"pkgname\">Alnuth</span> package provides various methods to compute with number fields which are given by a defining polynomial or by generators. Some of the methods provided in this package are written in <span class=\"pkgname\">GAP</span> code. The other part of the methods is imported from the computer algebra system PARI/GP. Hence this package contains some <span class=\"pkgname\">GAP</span> functions and an interface to some functions in the computer algebra system PARI/GP. The main methods included in <span class=\"pkgname\">Alnuth</span> are: creating a number field, computing its maximal order (using PARI/GP), computing its unit group (using PARI/GP) and a presentation of this unit group, computing the elements of a given norm of the number field (using PARI/GP), determining a presentation for a finitely generated multiplicative subgroup (using PARI/GP), and factoring polynomials defined over number fields (using PARI/GP).",
   "AcceptDate": "01/2004",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "e08a5ca5833b3b0e33e804bbcaca66fd65713423fd0b75bfc951d7bc25b738c8",
-  "ArchiveURL": "https://github.com/gap-packages/alnuth/releases/download/v3.1.2/alnuth-3.1.2",
+  "ArchiveSHA256": "e33e20ed0bb9ad9ddb2d8e2f71b57029ef84ddc7b5d61329a8923696bb2535b6",
+  "ArchiveURL": "https://github.com/gap-packages/alnuth/releases/download/v3.2.0/alnuth-3.2.0",
   "AvailabilityTest": null,
   "CommunicatedBy": "Charles Wright (Eugene)",
-  "Date": "28/01/2020",
+  "Date": "02/03/2022",
   "Dependencies": {
     "ExternalConditions": [
       [
@@ -47,7 +47,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "3b538bc9a28e67f83a4e6e12977bd66bad4c2ab8458ce7b387364d1f9875b2d9",
+  "PackageInfoSHA256": "3e232686767762eee8d88036c5341ecda70c65c1e86b628c3d92d3cd01fc0ed3",
   "PackageInfoURL": "https://gap-packages.github.io/alnuth/PackageInfo.g",
   "PackageName": "Alnuth",
   "PackageWWWHome": "https://gap-packages.github.io/alnuth",
@@ -62,7 +62,7 @@
       "Email": "a.distler@tu-bs.de",
       "FirstNames": "Andreas",
       "IsAuthor": true,
-      "IsMaintainer": true,
+      "IsMaintainer": false,
       "LastName": "Distler"
     },
     {
@@ -85,5 +85,5 @@
   "Status": "accepted",
   "Subtitle": "Algebraic number theory and an interface to PARI/GP",
   "TestFile": "tst/testall.g",
-  "Version": "3.1.2"
+  "Version": "3.2.0"
 }

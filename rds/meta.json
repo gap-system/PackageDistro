@@ -2,11 +2,11 @@
   "AbstractHTML": "This package provides functions for the complete enumeration of relative difference sets.",
   "AcceptDate": "02/2008",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "3ad3d3118486665a2fc287bb556a2ad5bdff5ce0bc460b74f5cec69c70c4509b",
-  "ArchiveURL": "https://github.com/gap-packages/rds/releases/download/v1.7/rds-1.7",
+  "ArchiveSHA256": "d58c1320b84fde09d3b778f64de3ce312e9ee53f3aa4361ff846d8ffa4a34faa",
+  "ArchiveURL": "https://github.com/gap-packages/rds/releases/download/v1.8/rds-1.8",
   "AvailabilityTest": null,
   "CommunicatedBy": "Leonard Soicher (Queen Mary, London)",
-  "Date": "23/02/2019",
+  "Date": "21/02/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.8",
@@ -44,7 +44,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "2309f564608eaa3b346bbb4bd7f9309b7b1a96354eea0767266b0d023eb75ec5",
+  "PackageInfoSHA256": "4781e3a8a0f1ea6f10886400ed87fb212e9f9f01c58391e3419382f7c3b4b38b",
   "PackageInfoURL": "https://gap-packages.github.io/rds/PackageInfo.g",
   "PackageName": "RDS",
   "PackageWWWHome": "https://gap-packages.github.io/rds/",
@@ -73,5 +73,5 @@
   "Status": "accepted",
   "Subtitle": "A package for searching relative difference sets",
   "TestFile": "tst/testall.g",
-  "Version": "1.7"
+  "Version": "1.8"
 }

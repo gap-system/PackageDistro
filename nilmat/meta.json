@@ -2,13 +2,13 @@
   "AbstractHTML": "The <span class=\"pkgname\">Nilmat</span> package contains methods for checking whether a finitely generated matrix group over a finite field or the field of rational numbers is nilpotent, methods for computing with such nilpotent matrix groups and methods for constructing important classes of such nilpotent matrix groups.",
   "AcceptDate": "08/2007",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSHA256": "0b26992c6bd23dfb13ffcfa9629ac5e9338eaf03b5741e414a09f8e372e2c7e8",
-  "ArchiveURL": "https://github.com/gap-packages/nilmat/releases/download/v1.4/nilmat-1.4",
+  "ArchiveSHA256": "73f5329db4a66e88578a72bf6051f2b2dfc456d919d5fccf1b8d45abf8230bdc",
+  "ArchiveURL": "https://github.com/gap-packages/nilmat/releases/download/v1.4.1/nilmat-1.4.1",
   "Autoload": false,
   "AvailabilityTest": null,
-  "BannerString": "Loading Nilmat 1.4...\n",
+  "BannerString": "Loading Nilmat 1.4.1...\n",
   "CommunicatedBy": "Derek Holt (Warwick)",
-  "Date": "09/02/2020",
+  "Date": "21/02/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.8",
@@ -40,7 +40,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "e428be3b1ca494de7617266bdc560de9422f252e0720d4868308f02028af9e03",
+  "PackageInfoSHA256": "0534af2006d45d5aac5e89669866321e5131b01d10f8416673c5b5641a1ef11e",
   "PackageInfoURL": "https://gap-packages.github.io/nilmat/PackageInfo.g",
   "PackageName": "Nilmat",
   "PackageWWWHome": "https://gap-packages.github.io/nilmat",
@@ -87,5 +87,5 @@
   "Status": "accepted",
   "Subtitle": "Computing with nilpotent matrix groups",
   "TestFile": "tst/testall.g",
-  "Version": "1.4"
+  "Version": "1.4.1"
 }

@@ -1,11 +1,10 @@
 {
   "AbstractHTML": "This homalg based package realizes the computability of the Abelian category of finitely presented graded modules over a computable graded ring",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "923ec2c2bb772463b16d66d03a5a6cc22b9e5b7d0346ac609303a137a68c5a1b",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/GradedModules-2021.04-03/GradedModules-2021.04-03",
-  "Autoload": false,
+  "ArchiveSHA256": "a1829deb059907835744d396ffbc741371ae712d2882dc6e1cecfe2c0e507a9b",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/GradedModules-2022.02-01/GradedModules-2022.02-01",
   "AvailabilityTest": null,
-  "Date": "09/04/2021",
+  "Date": "12/02/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.7",
@@ -16,7 +15,7 @@
       ],
       [
         "MatricesForHomalg",
-        ">= 2021.02-03"
+        ">= 2022.02-01"
       ],
       [
         "HomalgToCAS",
@@ -32,11 +31,11 @@
       ],
       [
         "Modules",
-        ">= 2020.02.05"
+        ">= 2022.02-01"
       ],
       [
         "homalg",
-        ">= 2013.06.23"
+        ">= 2022.02-01"
       ],
       [
         "GAPDoc",
@@ -59,7 +58,6 @@
       "ArchiveURLSubset": [
         "doc"
       ],
-      "Autoload": false,
       "BookName": "GradedModules",
       "HTMLStart": "doc/chap0.html",
       "LongTitle": "A homalg based package for the Abelian category of finitely presented graded modules over computable graded rings",
@@ -67,7 +65,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "5c4115d13f0e89782e343d7ecb4c57366d966784292d61ba17c90da0648b4dd1",
+  "PackageInfoSHA256": "1112e7f4e6741e81f47cd3cff09e43dff7051ea5f5e96a41c01cb179e651bae0",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/GradedModules/PackageInfo.g",
   "PackageName": "GradedModules",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/GradedModules",
@@ -146,5 +144,5 @@
   },
   "Status": "deposited",
   "Subtitle": "A homalg based package for the Abelian category of finitely presented graded modules over computable graded rings",
-  "Version": "2021.04-03"
+  "Version": "2022.02-01"
 }

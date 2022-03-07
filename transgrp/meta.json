@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "The <span class=\"transgrp\">TransGrp</span> package provides the library of transitive groups.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "34665ff0b3ebf81be51eac8f880e73fa37095d4c2053308ff0843d1313559e27",
-  "ArchiveURL": "https://www.math.colostate.edu/~hulpke/transgrp/transgrp3.3",
+  "ArchiveSHA256": "9ba754af0379c2936af69d12b7f0773d38ac78e3ca0e75bc105a9dd86b468c6c",
+  "ArchiveURL": "https://www.math.colostate.edu/~hulpke/transgrp/transgrp3.5",
   "AvailabilityTest": null,
-  "Date": "01/06/2021",
+  "Date": "11/02/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.9",
@@ -29,7 +29,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "b3c1d34d7de75f668d9d5e82856c69d39a0d199155e32e23fdd23d5213c1f1b4",
+  "PackageInfoSHA256": "9605ac5a7eddbd97e3e19debe41b0964cc2bab1914e2b6b71f3b2fb8e5039251",
   "PackageInfoURL": "https://www.math.colostate.edu/~hulpke/transgrp/PackageInfo.g",
   "PackageName": "TransGrp",
   "PackageWWWHome": "https://www.math.colostate.edu/~hulpke/transgrp",
@@ -53,5 +53,5 @@
   "Status": "deposited",
   "Subtitle": "Transitive Groups Library",
   "TestFile": "tst/testall.g",
-  "Version": "3.3"
+  "Version": "3.5"
 }

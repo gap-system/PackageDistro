@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "da69122fc99c412ebeca0635439a74498797834696c54e1b27efebe921b6a66a",
-  "ArchiveURL": "https://github.com/gap-packages/json/releases/download/v2.0.2/json-2.0.2",
+  "ArchiveSHA256": "12d82c7cf1454526f1b9d998117d15d96c80e8c164aae728b921f41f04df8e44",
+  "ArchiveURL": "https://github.com/gap-packages/json/releases/download/v2.1.0/json-2.1.0",
   "AvailabilityTest": null,
-  "Date": "03/04/2020",
+  "Date": "22/02/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.9",
@@ -30,7 +30,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "6cd7aa7c8b4c664556abbcf396f393b4b164469516be57c1267ae00c98fc3258",
+  "PackageInfoSHA256": "1ff6d9f6703774c50cda0f7e83c66b1f4038889ed1b4b343aff7d1bd0a75ff71",
   "PackageInfoURL": "https://gap-packages.github.io/json/PackageInfo.g",
   "PackageName": "json",
   "PackageWWWHome": "https://gap-packages.github.io/json/",
@@ -55,5 +55,5 @@
   "Status": "deposited",
   "Subtitle": "Reading and Writing JSON",
   "TestFile": "tst/testall.g",
-  "Version": "2.0.2"
+  "Version": "2.1.0"
 }

@@ -1,11 +1,11 @@
 {
   "AbstractHTML": "The <span class='pkgname'>NormalizInterface</span> package provides  a GAP interface to <a href='https://www.normaliz.uni-osnabrueck.de'>Normaliz</a>,  enabling direct access to the complete functionality of Normaliz, such as  computations in affine monoids, vector configurations, lattice polytopes, and rational cones.  ",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSHA256": "609b4efde6f36ed456e7e80286f2f485dc67fd5e0a36c9c651f2b9adb92b2f16",
-  "ArchiveURL": "https://github.com/gap-packages/NormalizInterface/releases/download/v1.3.0/NormalizInterface-1.3.0",
+  "ArchiveSHA256": "05f8ec10bd9975cc3f84249057b96e4865c284d9aaf5d94ac0c3e96377c3645e",
+  "ArchiveURL": "https://github.com/gap-packages/NormalizInterface/releases/download/v1.3.2/NormalizInterface-1.3.2",
   "AvailabilityTest": null,
   "BannerFunction": null,
-  "Date": "31/10/2020",
+  "Date": "24/02/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.9",
@@ -31,7 +31,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "626ee8a99925539723b9bb1f12c90fc5e97eecf4ec1ea4f428bd03a416e37ba4",
+  "PackageInfoSHA256": "546e06350c652efb0fc5a8d173a30ecaf360ee5e3be2c50d900e1f973ea58b0b",
   "PackageInfoURL": "https://gap-packages.github.io/NormalizInterface/PackageInfo.g",
   "PackageName": "NormalizInterface",
   "PackageWWWHome": "https://gap-packages.github.io/NormalizInterface",
@@ -39,13 +39,9 @@
     {
       "Email": "gutsche@mathematik.uni-siegen.de",
       "FirstNames": "Sebastian",
-      "Institution": "Universität Siegen",
       "IsAuthor": true,
       "IsMaintainer": false,
-      "LastName": "Gutsche",
-      "Place": "Siegen",
-      "PostalAddress": "Department Mathematik\nUniversität Siegen\nWalter-Flex-Straße 3\n57072 Siegen\nGermany",
-      "WWWHome": "https://algebra.mathematik.uni-siegen.de/gutsche/"
+      "LastName": "Gutsche"
     },
     {
       "Email": "horn@mathematik.uni-kl.de",
@@ -61,13 +57,9 @@
     {
       "Email": "csoeger@uos.de",
       "FirstNames": "Christof",
-      "Institution": "University of Osnabrück",
       "IsAuthor": true,
       "IsMaintainer": false,
-      "LastName": "Söger",
-      "Place": "Osnabrück",
-      "PostalAddress": "Institut für Mathematik\nAlbrechtstr. 28a\n49076 Osnabrück\nGermany",
-      "WWWHome": "https://www.normaliz.uni-osnabrueck.de"
+      "LastName": "Söger"
     }
   ],
   "README_URL": "https://gap-packages.github.io/NormalizInterface/README.md",
@@ -78,5 +70,5 @@
   "Status": "deposited",
   "Subtitle": "GAP wrapper for Normaliz",
   "TestFile": "tst/testall.g",
-  "Version": "1.3.0"
+  "Version": "1.3.2"
 }

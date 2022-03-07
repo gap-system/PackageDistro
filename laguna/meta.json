@@ -2,11 +2,11 @@
   "AbstractHTML": "The <span class=\"pkgname\">LAGUNA</span> package replaces the <span class=\"pkgname\">LAG</span> package and provides functionality for calculation of the normalized unit group of the modular group algebra of the finite p-group and for investigation of Lie algebra associated with group algebras and other associative algebras.",
   "AcceptDate": "06/2003",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "81c034dc4e8a506c0279de7970ef33405502d61dc4bad6c0c73ecda4ca401789",
-  "ArchiveURL": "https://github.com/gap-packages/laguna/releases/download/v3.9.3/laguna-3.9.3",
+  "ArchiveSHA256": "625c1a9ad78292f2ca401dc164d1e81e832815fcb0a83bee54cbfaa12c7a93a7",
+  "ArchiveURL": "https://github.com/gap-packages/laguna/releases/download/v3.9.4/laguna-3.9.4",
   "AvailabilityTest": null,
   "CommunicatedBy": "Herbert Pahlings (Aachen)",
-  "Date": "19/05/2019",
+  "Date": "23/02/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.9",
@@ -36,7 +36,6 @@
       "ArchiveURLSubset": [
         "doc"
       ],
-      "Autoload": true,
       "BookName": "LAGUNA",
       "HTMLStart": "doc/chap0.html",
       "LongTitle": "Lie AlGebras and UNits of group Algebras",
@@ -44,7 +43,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "13528eb05787e4f6675d716ad65609775d8110d90a7af38eb30c6f0472cabbd9",
+  "PackageInfoSHA256": "ed7c58723e8d514583ab3b53b4714a19e716897e96087e376b8974c28694bfa3",
   "PackageInfoURL": "https://gap-packages.github.io/laguna/PackageInfo.g",
   "PackageName": "LAGUNA",
   "PackageWWWHome": "https://gap-packages.github.io/laguna",
@@ -96,5 +95,5 @@
   "Status": "accepted",
   "Subtitle": "Lie AlGebras and UNits of group Algebras",
   "TestFile": "tst/testall.g",
-  "Version": "3.9.3"
+  "Version": "3.9.4"
 }

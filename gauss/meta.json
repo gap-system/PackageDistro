@@ -1,11 +1,10 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">Gauss</span> package provideds extended Gauss functionality for <span class=\"pkgname\">GAP</span>",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "af55cca309f598b66f0150dd7772fe30143cf59d3155ef87b748e4d1719593c5",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/Gauss-2021.04-01/Gauss-2021.04-01",
-  "Autoload": false,
+  "ArchiveSHA256": "8d6d9b81685b8465708d70b494765d302ca562223d7429973b6790b5a032c73f",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/Gauss-2022.02-01/Gauss-2022.02-01",
   "AvailabilityTest": null,
-  "Date": "27/04/2021",
+  "Date": "12/02/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.8",
@@ -29,7 +28,6 @@
       "ArchiveURLSubset": [
         "doc"
       ],
-      "Autoload": false,
       "BookName": "Gauss",
       "HTMLStart": "doc/chap0.html",
       "LongTitle": "Extended Gauss functionality for GAP",
@@ -37,7 +35,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "d3b981b84eb8e62f30ada831b294aaef38e8ca7ffae13a70b4b631ede4761735",
+  "PackageInfoSHA256": "9138696090327719247b116b24fc4ee686fcd42be1cac4bb0a17af25d63655bd",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/Gauss/PackageInfo.g",
   "PackageName": "Gauss",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/Gauss",
@@ -83,5 +81,5 @@
   },
   "Status": "deposited",
   "Subtitle": "Extended Gauss functionality for GAP",
-  "Version": "2021.04-01"
+  "Version": "2022.02-01"
 }

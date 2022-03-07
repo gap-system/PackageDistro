@@ -2,12 +2,12 @@
   "AbstractHTML": "The <span class=\"pkgname\">RadiRoot</span> package installs a method to    display the roots of a rational polynomial as radicals if it is solvable.",
   "AcceptDate": "02/2007",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "ca09ab357506891be96e56e5dc1e3954ce1bbc7a509029c7ba1567d82e8cbd61",
-  "ArchiveURL": "https://github.com/gap-packages/radiroot/releases/download/v2.8/radiroot-2.8",
+  "ArchiveSHA256": "9a14209632490ab1149022165c2936f57cb7044293ffb2aef0580b3d4085eb8a",
+  "ArchiveURL": "https://github.com/gap-packages/radiroot/releases/download/v2.9/radiroot-2.9",
   "Autoload": false,
   "AvailabilityTest": null,
   "CommunicatedBy": "Edmund Robertson (St Andrews)",
-  "Date": "23/04/2018",
+  "Date": "01/03/2022",
   "Dependencies": {
     "ExternalConditions": [
       "latex and the dvi-viewer xdvi are recommended"
@@ -26,6 +26,7 @@
     "roots",
     "radicals"
   ],
+  "License": "GPL-2.0-or-later",
   "PackageDoc": [
     {
       "ArchiveURLSubset": [
@@ -40,7 +41,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "2b0088144090a5668fb9c5cad476f02ac88a3bd47ed263f16fba671b8ecb051e",
+  "PackageInfoSHA256": "fb544aca6c659a85821b1da0ca828d57e0d36cd02385cfc792dbdc0cda3edb7a",
   "PackageInfoURL": "https://gap-packages.github.io/radiroot/PackageInfo.g",
   "PackageName": "RadiRoot",
   "PackageWWWHome": "https://gap-packages.github.io/radiroot/",
@@ -68,5 +69,5 @@
   "Status": "accepted",
   "Subtitle": "Roots of a Polynomial as Radicals",
   "TestFile": "tst/testall.g",
-  "Version": "2.8"
+  "Version": "2.9"
 }

@@ -2,19 +2,19 @@
   "AbstractHTML": "This package can be used for work with sesquilinear and quadratic forms on finite vector spaces; objects that are used to describe polar spaces and classical groups.",
   "AcceptDate": "03/2009",
   "ArchiveFormats": ".tar.gz .zip .tar.bz2",
-  "ArchiveSHA256": "e1195de04b1d9c4faf50d4fb111096974a221174d5af6cc5fb74c0db4312aa1f",
-  "ArchiveURL": "https://github.com/gap-packages/Forms/releases/download/v1.2.6/Forms-1.2.6",
+  "ArchiveSHA256": "748aff55d88a5333117283c6797452bbb4d52148e7d3a21286229b03bb0c907f",
+  "ArchiveURL": "https://github.com/gap-packages/forms/releases/download/v1.2.7/forms-1.2.7",
   "AvailabilityTest": null,
-  "BannerString": "---------------------------------------------------------------------\nLoading 'Forms' 1.2.6 (29/07/2021)\nby John Bamberg (http://school.maths.uwa.edu.au/~bamberg/)\n   Jan De Beule (http://www.debeule.eu)\nFor help, type: ?Forms \n---------------------------------------------------------------------\n",
+  "BannerString": "---------------------------------------------------------------------\nLoading 'Forms' 1.2.7 (02/03/2022)\nby John Bamberg (http://school.maths.uwa.edu.au/~bamberg/)\n   Jan De Beule (http://www.debeule.eu)\nFor help, type: ?Forms \n---------------------------------------------------------------------\n",
   "CommunicatedBy": "Leonard Soicher (London)",
-  "Date": "29/07/2021",
+  "Date": "02/03/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.9",
     "NeededOtherPackages": [],
     "SuggestedOtherPackages": []
   },
-  "IssueTrackerURL": "https://github.com/gap-packages/Forms/issues",
+  "IssueTrackerURL": "https://github.com/gap-packages/forms/issues",
   "Keywords": [
     "Forms",
     "Sesquilinear",
@@ -33,10 +33,10 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "a3e17ab5d38c13ddd74bb5bf45bd04e675181ffaaa329f3b95a854fb5a1eb468",
-  "PackageInfoURL": "https://gap-packages.github.io/Forms/PackageInfo.g",
+  "PackageInfoSHA256": "e36cd6786369713e139832abe3e90f64f27dc38d12dd0f19185e3b9ecadf3c32",
+  "PackageInfoURL": "https://gap-packages.github.io/forms/PackageInfo.g",
   "PackageName": "Forms",
-  "PackageWWWHome": "https://gap-packages.github.io/Forms",
+  "PackageWWWHome": "https://gap-packages.github.io/forms",
   "Persons": [
     {
       "Email": "bamberg@maths.uwa.edu.au",
@@ -61,13 +61,13 @@
       "WWWHome": "http://www.debeule.eu"
     }
   ],
-  "README_URL": "https://gap-packages.github.io/Forms/README",
+  "README_URL": "https://gap-packages.github.io/forms/README",
   "SourceRepository": {
     "Type": "git",
-    "URL": "https://github.com/gap-packages/Forms"
+    "URL": "https://github.com/gap-packages/forms"
   },
   "Status": "accepted",
   "Subtitle": "Sesquilinear and Quadratic",
   "TestFile": "tst/testall.g",
-  "Version": "1.2.6"
+  "Version": "1.2.7"
 }

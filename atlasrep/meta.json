@@ -2,14 +2,14 @@
   "AbstractHTML": "The package provides a <span class=\"pkgname\">GAP</span> interface to the <a href=\"http://brauer.maths.qmul.ac.uk/Atlas/v3\">Atlas of Group Representations</a>",
   "AcceptDate": "04/2001",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "4443976572d377212ad34fa96ee971d6674bb0d642e60a696198e0c6f21d6084",
-  "ArchiveURL": "http://www.math.rwth-aachen.de/~Thomas.Breuer/atlasrep/atlasrep-2r1p0",
+  "ArchiveSHA256": "bae954ef15bedcc7c62e4f7ef1fe97b15f15a7b0ea0a537ce2df2364acbffa01",
+  "ArchiveURL": "https://www.math.rwth-aachen.de/~Thomas.Breuer/atlasrep/atlasrep-2.1.1",
   "AvailabilityTest": null,
   "CommunicatedBy": "Herbert Pahlings (Aachen)",
-  "Date": "10/05/2019",
+  "Date": "23/02/2022",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">= 4.10.1",
+    "GAP": ">= 4.11.0",
     "NeededOtherPackages": [
       [
         "gapdoc",
@@ -26,6 +26,10 @@
         ">= 1.2"
       ],
       [
+        "ctblocks",
+        ">= 1.0"
+      ],
+      [
         "io",
         ">= 3.3"
       ],
@@ -34,12 +38,12 @@
         ">= 1.0"
       ],
       [
-        "ctblocks",
-        ">= 1.0"
-      ],
-      [
         "recog",
         ">= 1.3.1"
+      ],
+      [
+        "tomlib",
+        ">= 1.0"
       ]
     ]
   },
@@ -48,8 +52,7 @@
     "finite simple groups"
   ],
   "License": "GPL-3.0-or-later",
-  "MyVersion": "2r1p0",
-  "MyWWWHome": "http://www.math.rwth-aachen.de/~Thomas.Breuer",
+  "MyWWWHome": "https://www.math.rwth-aachen.de/~Thomas.Breuer",
   "PackageDoc": [
     {
       "ArchiveURLSubset": [
@@ -62,10 +65,10 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "e697d378a11ee06d601c886222afdb799e41ee52662e3e74055b8e0b1e00091f",
-  "PackageInfoURL": "http://www.math.rwth-aachen.de/~Thomas.Breuer/atlasrep/PackageInfo.g",
+  "PackageInfoSHA256": "8e9d876e908bea5a558365b2028aedfe00e31074cc625e6f60248bb41becf6b6",
+  "PackageInfoURL": "https://www.math.rwth-aachen.de/~Thomas.Breuer/atlasrep/PackageInfo.g",
   "PackageName": "AtlasRep",
-  "PackageWWWHome": "http://www.math.rwth-aachen.de/~Thomas.Breuer/atlasrep",
+  "PackageWWWHome": "https://www.math.rwth-aachen.de/~Thomas.Breuer/atlasrep",
   "Persons": [
     {
       "Email": "R.A.Wilson@qmul.ac.uk",
@@ -105,18 +108,18 @@
     {
       "Email": "sam@math.rwth-aachen.de",
       "FirstNames": "Thomas",
-      "Institution": "Lehrstuhl D für Mathematik, RWTH Aachen",
+      "Institution": "Lehrstuhl für Algebra und Zahlentheorie, RWTH Aachen",
       "IsAuthor": true,
       "IsMaintainer": true,
       "LastName": "Breuer",
       "Place": "Aachen",
-      "PostalAddress": "Thomas Breuer\nLehrstuhl D für Mathematik\nPontdriesch 14/16\n52062 Aachen\nGermany",
-      "WWWHome": "http://www.math.rwth-aachen.de/~Thomas.Breuer"
+      "PostalAddress": "Thomas Breuer\nLehrstuhl für Algebra und Zahlentheorie\nPontdriesch 14/16\n52062 Aachen\nGermany",
+      "WWWHome": "https://www.math.rwth-aachen.de/~Thomas.Breuer"
     }
   ],
-  "README_URL": "http://www.math.rwth-aachen.de/~Thomas.Breuer/atlasrep/README.md",
+  "README_URL": "https://www.math.rwth-aachen.de/~Thomas.Breuer/atlasrep/README.md",
   "Status": "accepted",
   "Subtitle": "A GAP Interface to the Atlas of Group Representations",
   "TestFile": "tst/testauto.g",
-  "Version": "2.1.0"
+  "Version": "2.1.1"
 }

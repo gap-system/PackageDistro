@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "The <span class='pkgname'>RepnDecomp</span> package provides functions implementing various algorithms for decomposing linear representations of finite groups.",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSHA256": "05586bccf27fe2a5e7617370f892f5133e242f9c6ab313943a91b68c7e039963",
-  "ArchiveURL": "https://github.com/gap-packages/RepnDecomp/releases/download/v1.1.0/RepnDecomp-1.1.0",
+  "ArchiveSHA256": "c871d86d7876b85155cf2ed714e89971f324fa76337ab955c413e82c628f6fc1",
+  "ArchiveURL": "https://github.com/gap-packages/RepnDecomp/releases/download/v1.2.1/RepnDecomp-1.2.1",
   "AvailabilityTest": null,
-  "Date": "15/02/2020",
+  "Date": "02/03/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.10",
@@ -43,7 +43,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "161026b19c04da8f4d890cddb89cdc6672c9c9b6f05a54100a16b981d5544512",
+  "PackageInfoSHA256": "f3d15f91672844a6c34e5e089070b0ff5412cf6d1d91aab92581b1357ece56be",
   "PackageInfoURL": "https://gap-packages.github.io/RepnDecomp/PackageInfo.g",
   "PackageName": "RepnDecomp",
   "PackageWWWHome": "https://gap-packages.github.io/RepnDecomp",
@@ -74,8 +74,8 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/RepnDecomp"
   },
-  "Status": "dev",
+  "Status": "deposited",
   "Subtitle": "Decompose representations of finite groups into irreducibles",
   "TestFile": "tst/testall.g",
-  "Version": "1.1.0"
+  "Version": "1.2.1"
 }

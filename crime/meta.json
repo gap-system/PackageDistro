@@ -38,7 +38,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "4c370e1f4478ceb74d8898ad7a7bcf65b19142a73b4f8ae14160748598abc678",
+  "PackageInfoSHA256": "09e5b6500700e2491f233df430ccb951c3ec1b895c629372e143e0fda3ef3171",
   "PackageInfoURL": "https://gap-packages.github.io/crime/PackageInfo.g",
   "PackageName": "CRIME",
   "PackageWWWHome": "https://gap-packages.github.io/crime/",

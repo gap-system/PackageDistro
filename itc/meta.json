@@ -2,13 +2,13 @@
   "AbstractHTML": "This <span class=\"pkgname\">GAP</span> package provides    access to interactive Todd-Coxeter computations    with finitely presented groups.",
   "AcceptDate": "03/2000",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "6a03b1a3361dd3f15095dfc68b89e37600491dc093c32c45d4d5e628ed940fe0",
-  "ArchiveURL": "https://github.com/gap-packages/itc/releases/download/v1.5/itc-1.5",
+  "ArchiveSHA256": "19875fb3407fbda5f3696114d2a381fedacbfae6df311f928c49887ce8b18675",
+  "ArchiveURL": "https://github.com/gap-packages/itc/releases/download/v1.5.1/itc-1.5.1",
   "Autoload": false,
   "AvailabilityTest": null,
-  "BannerString": "\n          Loading  ITC 1.5  (Interactive Todd-Coxeter)\n            by V. Felsch, L. Hippe, and J. Neubueser\n              (Volkmar.Felsch@math.rwth-aachen.de)\n\n",
+  "BannerString": "\n          Loading  ITC 1.5.1  (Interactive Todd-Coxeter)\n            by V. Felsch, L. Hippe, and J. Neubueser\n              (Volkmar.Felsch@math.rwth-aachen.de)\n\n",
   "CommunicatedBy": "Edmund F. Robertson (St Andrews)",
-  "Date": "13/06/2018",
+  "Date": "01/03/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": "4.8",
@@ -25,6 +25,7 @@
     "interactive Todd-Coxeter",
     "coset enumeration"
   ],
+  "License": "GPL-2.0-or-later",
   "PackageDoc": [
     {
       "ArchiveURLSubset": [
@@ -39,7 +40,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "adbdb491e71a26ba3bfa292a1f71994b0189a671724be42c922a2d479cc25d6a",
+  "PackageInfoSHA256": "4e58818b4dd5c8e34830b487a9844d608ebc699a7e5421f31a67d321dbc366d9",
   "PackageInfoURL": "https://gap-packages.github.io/itc/PackageInfo.g",
   "PackageName": "ITC",
   "PackageWWWHome": "https://gap-packages.github.io/itc/",
@@ -85,5 +86,5 @@
   },
   "Status": "accepted",
   "Subtitle": "Interactive Todd-Coxeter",
-  "Version": "1.5"
+  "Version": "1.5.1"
 }

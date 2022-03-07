@@ -2,11 +2,11 @@
   "AbstractHTML": "The <span class=\"pkgname\">XGAP</span> package allows to use graphics in GAP.",
   "AcceptDate": "07/1999",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "714016aee551b2e01a3429b0c2e3adddfce25d13d3b0b3c6faedd4cfd8a2e290",
-  "ArchiveURL": "https://github.com/gap-packages/xgap/releases/download/v4.30/xgap-4.30",
+  "ArchiveSHA256": "4c5157785d68b562a29d97c1e63ceaefd34e02500a3ff38f0ef90c94fd1ebfea",
+  "ArchiveURL": "https://github.com/gap-packages/xgap/releases/download/v4.31/xgap-4.31",
   "AvailabilityTest": null,
   "CommunicatedBy": "Gerhard Hiß (Aachen)",
-  "Date": "16/04/2019",
+  "Date": "17/02/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.7",
@@ -29,7 +29,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "0175e7837794e19232ffd3b9cad9b776635f1b631022b4cefd4b50b96cb6b1d5",
+  "PackageInfoSHA256": "4678ab7da4df43a833df4c96d925f5290e99e1145a2ebb27d4a83af4e735d721",
   "PackageInfoURL": "https://gap-packages.github.io/xgap/PackageInfo.g",
   "PackageName": "XGAP",
   "PackageWWWHome": "https://gap-packages.github.io/xgap",
@@ -43,14 +43,14 @@
       "WWWHome": "http://celler.de/"
     },
     {
-      "Email": "max.horn@uni-siegen.de",
+      "Email": "horn@mathematik.uni-kl.de",
       "FirstNames": "Max",
-      "Institution": "Universität Siegen",
+      "Institution": "TU Kaiserslautern",
       "IsAuthor": false,
       "IsMaintainer": true,
       "LastName": "Horn",
-      "Place": "Siegen",
-      "PostalAddress": "Department Mathematik\nUniversität Siegen\nWalter-Flex-Straße 3\n57072 Siegen\nGermany",
+      "Place": "Kaiserslautern, Germany",
+      "PostalAddress": "Fachbereich Mathematik\nTU Kaiserslautern\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
       "WWWHome": "https://www.quendi.de/math"
     },
     {
@@ -70,5 +70,6 @@
   },
   "Status": "accepted",
   "Subtitle": "a graphical user interface for GAP",
-  "Version": "4.30"
+  "TestFile": "tst/testall.g",
+  "Version": "4.31"
 }

@@ -2,12 +2,17 @@
   "AbstractHTML": "The <span class=\"pkgname\">ANUPQ</span> package provides an interactive    interface to the p-quotient, p-group generation and standard presentation    algorithms of the ANU pq C program.",
   "AcceptDate": "04/2002",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSHA256": "87a9f12cf37519848dac8b3c2e0252e77035a67add55cfb747353210a218f43a",
-  "ArchiveURL": "https://github.com/gap-packages/anupq/releases/download/v3.2.5/anupq-3.2.5",
+  "ArchiveSHA256": "9df9f662c4df3b32916c61e0becd2d04162b75150368b2dadc50f1c432ca8579",
+  "ArchiveURL": "https://github.com/gap-packages/anupq/releases/download/v3.2.6/anupq-3.2.6",
+  "AutoDoc": {
+    "TitlePage": {
+      "Copyright": "\n      &copyright; 2001-2016 by Greg Gamble<P/>\n      &copyright; 2001-2005 by Werner Nickel<P/>\n      &copyright; 1995-2001 by Eamon O'Brien<P/>\n\n      The &GAP; package &ANUPQ; is licensed under the <URL Text=\"Artistic License 2.0\">https://opensource.org/licenses/artistic-license-2.0</URL>.\n      "
+    }
+  },
   "AvailabilityTest": null,
-  "BannerString": "---------------------------------------------------------------------------\nLoading    ANUPQ (ANU p-Quotient) 3.2.5\nGAP code by  Greg Gamble <Greg.Gamble@uwa.edu.au> (address for correspondence)\n           Werner Nickel (http://www.mathematik.tu-darmstadt.de/~nickel/)\n           [uses ANU pq binary (C code program) version: 1.9]\nC code by  Eamonn O'Brien (https://www.math.auckland.ac.nz/~obrien)\nCo-maintained by Max Horn <horn@mathematik.uni-kl.de>\n\n            For help, type: ?ANUPQ\n---------------------------------------------------------------------------\n",
+  "BannerFunction": null,
   "CommunicatedBy": "Charles Wright (Eugene)",
-  "Date": "22/02/2022",
+  "Date": "07/03/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.9",
@@ -26,6 +31,7 @@
     "descendant",
     "standard presentation"
   ],
+  "License": "Artistic-2.0",
   "PackageDoc": [
     {
       "ArchiveURLSubset": [
@@ -38,7 +44,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "be83c96ac1302d7d5718fad2adc14a4eace9fb2e83ad0be1bd6ec63baa0cacc8",
+  "PackageInfoSHA256": "7a4aad3b14a78000226f9c861d44c9305ddb6e1c33d1dfd3b0f33f7d6ad4c655",
   "PackageInfoURL": "https://gap-packages.github.io/anupq/PackageInfo.g",
   "PackageName": "ANUPQ",
   "PackageWWWHome": "https://gap-packages.github.io/anupq/",
@@ -51,7 +57,7 @@
       "IsMaintainer": true,
       "LastName": "Gamble",
       "Place": "Perth",
-      "PostalAddress": "Greg Gamble\nDepartment of Mathematics and Statistics\nCurtin University\nGPO Box U 1987\nPerth WA 6845\nAustralia",
+      "PostalAddress": "Department of Mathematics and Statistics\nCurtin University\nGPO Box U 1987\nPerth WA 6845\nAustralia",
       "WWWHome": "http://school.maths.uwa.edu.au/~gregg"
     },
     {
@@ -59,7 +65,7 @@
       "IsAuthor": true,
       "IsMaintainer": false,
       "LastName": "Nickel",
-      "WWWHome": "http://www.mathematik.tu-darmstadt.de/~nickel/"
+      "WWWHome": "https://www2.mathematik.tu-darmstadt.de/~nickel/"
     },
     {
       "Email": "obrien@math.auckland.ac.nz",
@@ -84,7 +90,7 @@
       "WWWHome": "https://www.quendi.de/math"
     }
   ],
-  "README_URL": "https://gap-packages.github.io/anupq/README",
+  "README_URL": "https://gap-packages.github.io/anupq/README.md",
   "SourceRepository": {
     "Type": "git",
     "URL": "https://github.com/gap-packages/anupq"
@@ -92,5 +98,5 @@
   "Status": "accepted",
   "Subtitle": "ANU p-Quotient",
   "TestFile": "tst/testinstall.g",
-  "Version": "3.2.5"
+  "Version": "3.2.6"
 }
