@@ -109,7 +109,7 @@ jobs:
             _tools/validate_package.py ${{ matrix.package }} | tee ${{ matrix.package }}.log
             ( ! grep "FAILED" ${{ matrix.package }}.log )
 
-      - name: "Install and build package"
+      - name: "Install required binary dependencies"
         run: |
           deps=$(_tools/gather_dependencies.py ${{ matrix.package }})
           if [[ -n "$deps" ]]; then
@@ -118,17 +118,17 @@ jobs:
           else
             echo "No required binary depedencies to be installed"
           fi
+
+      - name: "Install and build package"
+        run: |
           _tools/download_dependencies.py ${{ matrix.package }}
-          BuildPackagesOptions="--strict"
           cd _unpacked_archives
           for file in * ; do
             ln -s "$PWD/$file" "/home/runner/gap/pkg/$file"
           done
           cd /home/runner/gap/pkg
 
-          for pkg in * ; do
-              ../bin/BuildPackages.sh "$BuildPackagesOptions" $pkg*
-          done
+          MAKEFLAGS=-j3 ../bin/BuildPackages.sh --strict
 
       - name: "Run package tests with minimal packages"
         run: |
