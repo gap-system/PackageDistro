@@ -87,8 +87,7 @@ jobs:
           target_commitish: ${{ github.sha }}
           name: "GAP package distribution (${{ env.RELEASE_TAG }})"
           body: |
-            TODO: put in a nice list of packages and their versions, perhaps inspired by
-            https://github.com/gap-system/gap-distribution/releases/tag/package-archives
+            Snapshot of the GAP package distribution
           files: |
             _releases/packages.tar.gz
             _releases/packages.tar.gz.sha256
