@@ -83,6 +83,11 @@ jobs:
         with:
           name: metadata
 
+      - name: "Extract package version"
+        run: |
+          pkg_version=$(jq -r '.Version' < ${{ matrix.package }}/meta.json)
+          echo "PKG_VERSION=$pkg_version" >> $GITHUB_ENV
+
       # We set up a GitHub App in order to ensure that workflows are run on the PRs
       # created by us, following the instructions here:
       # <https://github.com/peter-evans/create-pull-request/blob/main/docs/concepts-guidelines.md#authenticating-with-github-app-generated-tokens>
@@ -98,10 +103,10 @@ jobs:
         with:
           token: ${{ steps.generate-token.outputs.token }}
           add-paths: ${{ matrix.package }}
-          commit-message: "[${{ matrix.package }}] Update"
+          commit-message: "[${{ matrix.package }}] Update to ${{ env.PKG_VERSION }}"
           body: ""
           branch: automatic/${{ matrix.package }}
           delete-branch: true
-          title: "[${{ matrix.package }}] Update"
+          title: "[${{ matrix.package }}] Update to ${{ env.PKG_VERSION }}"
           labels: |
             automated pr
