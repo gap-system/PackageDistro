@@ -2,9 +2,8 @@ name: "Scan for updates"
 
 on:
   workflow_dispatch:  # for debugging
-  # schedule:
-  #  # Every day at 2:30 AM UTC
-  #  - cron: '30 2 * * *'
+  schedule:
+    - cron: '3 * * * *' # Every hours at 3 past
 
 jobs:
   scan-for-updates:
@@ -62,7 +61,6 @@ jobs:
               PKG=${PKG%"/meta.json"}
               echo "${PKG}"
               MATRIX="${MATRIX}\"${PKG}\","
-              break  # TODO HACK stop after just one PR for debugging
             done
             MATRIX="${MATRIX}]}"
             echo "::set-output name=matrix::$MATRIX"
