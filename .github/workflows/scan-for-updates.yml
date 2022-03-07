@@ -42,7 +42,7 @@ jobs:
       - name: "Scan for updates"
         run: |
           # first put GAP into PATH
-          ln -s /home/runner/gap/bin/gap.sh /usr/local/bin/gap
+          ln -s $HOME/gap/bin/gap.sh /usr/local/bin/gap
           _tools/scan_for_updates.py
 
       - name: "Upload metadata as artifact for pull request jobs"
