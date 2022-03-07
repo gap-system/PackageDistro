@@ -1,0 +1,200 @@
+name: "Test all packages"
+
+on:
+  workflow_dispatch:
+    inputs:
+      pkgarchiveurl:
+        description: 'URL of the package archive to test'
+        # TODO: instead / alternatively, specify a commit in this repo and then
+        # assemble a tarball from that?
+        required: true
+        type: string
+        default: https://github.com/gap-system/PackageDistro/releases/download/latest/packages.tar.gz
+  workflow_call:
+    inputs:
+      pkgarchiveurl:
+        required: true
+        type: string
+
+jobs:
+  build:
+    name: "Build GAP and the packages"
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.get-names.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: "Setup _archives symlink"
+        run: mkdir -p ~/_archives && ln -s ~/_archives
+
+      - name: "Cache archives"
+        uses: actions/cache@v2
+        with:
+          path: ~/_archives
+          key: archives-${{ hashFiles('**/meta.json') }}
+          restore-keys: |
+            archives-
+
+      - name: "Install package distribution tools"
+        run: |
+          git clone https://github.com/gap-system/PackageDistroTools _tools
+          pip install -r _tools/requirements.txt
+
+      # TOOD: dependencies should come from a container
+      - name: "Install binary package dependencies"
+        run: |
+          deps=$(_tools/gather_dependencies.py */meta.json)
+          if [[ -n "$deps" ]]; then
+            echo "Installing required binary depedencies: $deps"
+            sudo apt-get install $deps
+          else
+            echo "No required binary depedencies to be installed"
+          fi
+
+      - name: "Download packages"
+        run: |
+          #curl -L -o $HOME/packages.tar.gz ${{ github.event.inputs.pkgarchiveurl || inputs.pkgarchiveurl }}
+          #ls -l $HOME/packages.tar.gz
+          #shasum -a 256 $HOME/packages.tar.gz
+          ## TODO: also download and test checksum???
+          _tools/download_packages.py */meta.json
+
+      - name: "Cleanup archives"
+        run: _tools/cleanup_archives.py
+
+      # TOOD: gap should come from a container
+      - name: "Install GAP"
+        run: |
+          git clone --depth=2 -b master https://github.com/gap-system/gap.git $HOME/gap
+          cd $HOME/gap
+
+          echo "::group::autogen"
+          ./autogen.sh
+          echo "::endgroup::"
+
+          echo "::group::configure"
+          ./configure
+          echo "::endgroup::"
+
+          echo "::group::make"
+          make -j4
+          echo "::endgroup::"
+
+          # put GAP into PATH
+          ln -s $HOME/gap/bin/gap.sh /usr/local/bin/gap
+
+      - name: "Extract packages"
+        run: |
+          mkdir -p $HOME/gap/pkg
+          cd $HOME/gap/pkg
+          #tar xvf $HOME/packages.tar.gz
+          for f in $GITHUB_WORKSPACE/_archives/* ; do
+            case "$f" in
+              *.tar.*)
+                tar xvf "$f"
+              ;;
+              *.zip)
+                unzip "$f"
+              ;;
+              *)
+                echo "Skipping $f"
+              ;;
+            esac
+          done
+
+      - name: "Build packages"
+        run: |
+          cd $HOME/gap/pkg
+
+          # HACK: prevent BuildPackages.sh from building the Normaliz verison
+          # "bundled" with NormalizInterface, as this is very slow (takes 5-10
+          # minutes). Instead we want it to use libnormaliz-dev installed by
+          # us
+          rm -f */build-normaliz.sh
+
+          # skip xgap: no X11 headers, and no means to test it
+          rm -rf xgap*
+
+          # skip itc because it requires xgap
+          rm -rf itc*
+
+          MAKEFLAGS=-j3 ../bin/BuildPackages.sh --strict
+
+      # TODO: the following is disabled because right now it FAILS due to IsSymmetric
+      # conflicting between LAGUNA and numericalsgps (authors are already informed,
+      # solution is being worked on)
+      #- name: "Test LoadAllPackages"
+      #  run: |
+      #    gap --quitonbreak -r -c "SetInfoLevel(InfoPackageLoading, PACKAGE_WARNING);LoadAllPackages();QUIT;"
+
+      - name: "Create tarball"
+        run: |
+          cd $HOME
+          tar --exclude-vcs --exclude=build --exclude=.libs --auto-compress -cf gap.tar.gz gap
+
+      - name: "Upload GAP with packages as artifact"
+        uses: actions/upload-artifact@v2
+        with:
+          name: gap
+          path: /home/runner/gap.tar.gz
+
+      - name: "Creates jobs for all packages"
+        id: get-names
+        run: |
+            MATRIX="{\"package\":["
+            for PKG in */meta.json; do
+              PKG=${PKG%"/meta.json"}
+              # skip packages without a TestFile
+              if ! jq -e -r '.TestFile' < ${PKG}/meta.json > /dev/null ; then
+                echo "Skipping ${PKG}"
+                continue
+              fi
+              MATRIX="${MATRIX}\"${PKG}\","
+            done
+            MATRIX="${MATRIX}]}"
+            echo "::set-output name=matrix::$MATRIX"
+
+  test-package:
+    name: "Testing ${{ matrix.package }}"
+    if: ${{ needs.build.outputs.matrix != '{"package":[]}' }}
+    needs: build
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.build.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: "Install package distribution tools"
+        run: |
+          git clone https://github.com/gap-system/PackageDistroTools _tools
+          pip install -r _tools/requirements.txt
+
+      - name: "Download GAP from previous job"
+        uses: actions/download-artifact@v2
+        with:
+          name: gap
+
+      - name: "Extract GAP artifact"
+        run: |
+          cd $HOME
+          tar xvf $GITHUB_WORKSPACE/gap.tar.gz
+          ln -s $HOME/gap/bin/gap.sh /usr/local/bin/gap
+          cd $GITHUB_WORKSPACE
+
+      - name: "Install binary package dependencies"
+        run: |
+          deps=$(_tools/gather_dependencies.py ${{ matrix.package }})
+          if [[ -n "$deps" ]]; then
+            echo "Installing required binary depedencies: $deps"
+            sudo apt-get install $deps
+          else
+            echo "No required binary depedencies to be installed"
+          fi
+
+      - name: "Run tests"
+        timeout-minutes: 20
+        run: |
+          PKG=${{ matrix.package }}
+          gap -A --quitonbreak -r -c "SetInfoLevel(InfoPackageLoading, PACKAGE_WARNING);res:=TestPackage(\"$PKG\");FORCE_QUIT_GAP(res);"
