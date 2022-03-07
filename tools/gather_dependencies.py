@@ -31,8 +31,7 @@ ubtunu_deps = {
 'curlinterface': [ 'libcurl4-openssl-dev' ],
 'float': [ 'libmpc-dev', 'libmpfi-dev', 'libmpfr-dev' ],
 'normalizinterface': [ 'libnormaliz-dev' ],
-'normalizinterface': [ 'pari-gp' ],
-'polymakeinterface': [ 'polymake' ],
+'polymaking': [ 'polymake' ],
 'singular': [ 'singular' ],
 'zeromqinterface': [ 'libzmq3-dev' ],
 }
