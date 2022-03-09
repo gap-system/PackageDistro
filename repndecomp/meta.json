@@ -43,7 +43,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "161026b19c04da8f4d890cddb89cdc6672c9c9b6f05a54100a16b981d5544512",
+  "PackageInfoSHA256": "f3d15f91672844a6c34e5e089070b0ff5412cf6d1d91aab92581b1357ece56be",
   "PackageInfoURL": "https://gap-packages.github.io/RepnDecomp/PackageInfo.g",
   "PackageName": "RepnDecomp",
   "PackageWWWHome": "https://gap-packages.github.io/RepnDecomp",
