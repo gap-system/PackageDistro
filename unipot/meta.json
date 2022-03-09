@@ -31,7 +31,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "664c567359d757d39cf0bd37cdd99d986011bf6709755bee2e780a19e89621ce",
+  "PackageInfoSHA256": "3d87ed1079fd8488b91680b8485180d68e08e54352981a318213440c005c7e74",
   "PackageInfoURL": "https://gap-packages.github.io/unipot/PackageInfo.g",
   "PackageName": "Unipot",
   "PackageWWWHome": "https://gap-packages.github.io/unipot/",
