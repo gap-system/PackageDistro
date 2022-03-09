@@ -68,7 +68,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "4a8c351f65c799cb76a69cdb624c0de5b0a7a1f86edbea4e5b915496f9bf7c97",
+  "PackageInfoSHA256": "7301612c8e77a86f02facdf0dc04b5aeac1fe134068ba6304591b4d430e5d820",
   "PackageInfoURL": "https://semigroups.github.io/Semigroups/PackageInfo.g",
   "PackageName": "Semigroups",
   "PackageWWWHome": "https://semigroups.github.io/Semigroups",
