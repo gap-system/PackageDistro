@@ -55,7 +55,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "32daa40880e032ab48776fe3410288a9ace920d4804d4b47bc98324d8f28bfc5",
+  "PackageInfoSHA256": "b6d3cd7842a16d169b582226e04141b395a6ca6e167c9aeef5a6fd7297398d28",
   "PackageInfoURL": "http://www.math.colostate.edu/~hulpke/matgrp/PackageInfo.g",
   "PackageName": "matgrp",
   "PackageWWWHome": "http://www.math.colostate.edu/~hulpke/matgrp",
