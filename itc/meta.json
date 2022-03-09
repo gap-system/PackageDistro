@@ -39,7 +39,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "adbdb491e71a26ba3bfa292a1f71994b0189a671724be42c922a2d479cc25d6a",
+  "PackageInfoSHA256": "4e58818b4dd5c8e34830b487a9844d608ebc699a7e5421f31a67d321dbc366d9",
   "PackageInfoURL": "https://gap-packages.github.io/itc/PackageInfo.g",
   "PackageName": "ITC",
   "PackageWWWHome": "https://gap-packages.github.io/itc/",
