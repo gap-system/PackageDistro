@@ -44,7 +44,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "2309f564608eaa3b346bbb4bd7f9309b7b1a96354eea0767266b0d023eb75ec5",
+  "PackageInfoSHA256": "4781e3a8a0f1ea6f10886400ed87fb212e9f9f01c58391e3419382f7c3b4b38b",
   "PackageInfoURL": "https://gap-packages.github.io/rds/PackageInfo.g",
   "PackageName": "RDS",
   "PackageWWWHome": "https://gap-packages.github.io/rds/",
