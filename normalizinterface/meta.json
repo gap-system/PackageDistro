@@ -31,7 +31,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "626ee8a99925539723b9bb1f12c90fc5e97eecf4ec1ea4f428bd03a416e37ba4",
+  "PackageInfoSHA256": "546e06350c652efb0fc5a8d173a30ecaf360ee5e3be2c50d900e1f973ea58b0b",
   "PackageInfoURL": "https://gap-packages.github.io/NormalizInterface/PackageInfo.g",
   "PackageName": "NormalizInterface",
   "PackageWWWHome": "https://gap-packages.github.io/NormalizInterface",
