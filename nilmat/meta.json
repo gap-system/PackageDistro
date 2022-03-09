@@ -40,7 +40,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "e428be3b1ca494de7617266bdc560de9422f252e0720d4868308f02028af9e03",
+  "PackageInfoSHA256": "0534af2006d45d5aac5e89669866321e5131b01d10f8416673c5b5641a1ef11e",
   "PackageInfoURL": "https://gap-packages.github.io/nilmat/PackageInfo.g",
   "PackageName": "Nilmat",
   "PackageWWWHome": "https://gap-packages.github.io/nilmat",
