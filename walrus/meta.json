@@ -53,7 +53,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "d94d3f42ef127603f2652b8ebda3f1b85de1e22d3b8f53ab54475f40f70f6789",
+  "PackageInfoSHA256": "d210173f9099910f4f606ea5536c7d9c7293e4bb95e7f6d66ddaffecd22dfc86",
   "PackageInfoURL": "https://gap-packages.github.io/walrus/PackageInfo.g",
   "PackageName": "walrus",
   "PackageWWWHome": "https://gap-packages.github.io/walrus",
