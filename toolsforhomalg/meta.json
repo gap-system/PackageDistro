@@ -39,7 +39,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "f983cf1e0fafb2a43a7e9a77be0a739cdf80b44cf0a27e8860527dfd7b0f0b97",
+  "PackageInfoSHA256": "ec834b1cb36c88b28aa527387dbdf467a0cbf7e8eff4d2aaf78e9fa7c30a8505",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/ToolsForHomalg/PackageInfo.g",
   "PackageName": "ToolsForHomalg",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/ToolsForHomalg",
