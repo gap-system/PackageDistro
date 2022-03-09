@@ -40,7 +40,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "89a437aa164691a49105ec8b4694e018ac7325bb051e746c1ef29cf4f7891e2e",
+  "PackageInfoSHA256": "dd12f1379f61b7e6a98ae8510d3338a0d4f9ab33a466413c835c42b63184b3b0",
   "PackageInfoURL": "https://gap-packages.github.io/Thelma/PackageInfo.g",
   "PackageName": "Thelma",
   "PackageWWWHome": "https://gap-packages.github.io/Thelma",
