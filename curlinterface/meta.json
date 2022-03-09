@@ -30,7 +30,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "016049ef8f268020c95a4c62c02bb473bc88635c74e142a5c9367d845e6f5aa6",
+  "PackageInfoSHA256": "ec906ea13126720d34162313c1884d0f946aacd73cc09e04c529d863d9961980",
   "PackageInfoURL": "https://gap-packages.github.io/curlInterface/PackageInfo.g",
   "PackageName": "curlInterface",
   "PackageWWWHome": "https://gap-packages.github.io/curlInterface/",
