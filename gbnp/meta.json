@@ -48,7 +48,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "9526769eb3a24f9b7ba3917308a2ff2dd895c3ade0d27c237d8b582f9ed12d74",
+  "PackageInfoSHA256": "1a792e83ae3e71a17d08d00132cbaa7a7826049f8e632015ac93687540332cf3",
   "PackageInfoURL": "https://gap-packages.github.io/gbnp/PackageInfo.g",
   "PackageName": "GBNP",
   "PackageWWWHome": "https://gap-packages.github.io/gbnp/",
