@@ -52,7 +52,7 @@
       "SixFile": "doc/tut/manual.six"
     }
   ],
-  "PackageInfoSHA256": "95014e5a54b3262a1eec583e0c4e05463b6717dadfe1e938fd6a492dcf2f7ab0",
+  "PackageInfoSHA256": "d4bef776740f707d7e0cb70e01d9851da82e935bee7d7585ba51d59b5f434c98",
   "PackageInfoURL": "https://gap-packages.github.io/sonata/PackageInfo.g",
   "PackageName": "SONATA",
   "PackageWWWHome": "https://gap-packages.github.io/sonata/",
