@@ -85,7 +85,7 @@
       "SixFile": "lib/datatypes/doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "1f83c000e9c042840f3911ecfe9b41c1b42a1832d411f352d076266cf7369379",
+  "PackageInfoSHA256": "8b9d7fc0be2fc4567f0051da0e15c4fda15f57849e393e6588fff1fcbecb91fc",
   "PackageInfoURL": "https://gap-packages.github.io/hapcryst/PackageInfo.g",
   "PackageName": "HAPcryst",
   "PackageWWWHome": "https://gap-packages.github.io/hapcryst/",
