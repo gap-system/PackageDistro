@@ -47,7 +47,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "3b538bc9a28e67f83a4e6e12977bd66bad4c2ab8458ce7b387364d1f9875b2d9",
+  "PackageInfoSHA256": "3e232686767762eee8d88036c5341ecda70c65c1e86b628c3d92d3cd01fc0ed3",
   "PackageInfoURL": "https://gap-packages.github.io/alnuth/PackageInfo.g",
   "PackageName": "Alnuth",
   "PackageWWWHome": "https://gap-packages.github.io/alnuth",
