@@ -33,7 +33,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "f49711e2200dd56e2a7eb54356907d002a07457c2ecc7a2f048af60317d2297f",
+  "PackageInfoSHA256": "e70a48456872ef5b5e49debbb177f6b7a598bf139623494cb37c0570736d6ddd",
   "PackageInfoURL": "https://gap-packages.github.io/MapClass/PackageInfo.g",
   "PackageName": "MapClass",
   "PackageWWWHome": "https://gap-packages.github.io/MapClass",
