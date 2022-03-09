@@ -37,7 +37,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "c4f02b2b14749427cddb1d1ea9c215b533c8945f2ffe010bb37290757dbd0ee3",
+  "PackageInfoSHA256": "ba852d7aeb2a214ccb89bff9fa2c7fe4c7b6f27d4acecbdac6f31a9cd85ed5bc",
   "PackageInfoURL": "https://gap-packages.github.io/float/PackageInfo.g",
   "PackageName": "float",
   "PackageWWWHome": "https://gap-packages.github.io/float/",
