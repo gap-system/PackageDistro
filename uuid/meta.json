@@ -33,7 +33,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "9e6bf9948d544eba0f1ddad57fa3da44982c7dd0cc24904376b24f2351afb630",
+  "PackageInfoSHA256": "a01557c614b73e10813d01822f72c3a6af4f5db1ab679033b4095a1431162485",
   "PackageInfoURL": "https://gap-packages.github.io/uuid/PackageInfo.g",
   "PackageName": "uuid",
   "PackageWWWHome": "https://gap-packages.github.io/uuid/",
