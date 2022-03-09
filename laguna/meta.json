@@ -44,7 +44,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "13528eb05787e4f6675d716ad65609775d8110d90a7af38eb30c6f0472cabbd9",
+  "PackageInfoSHA256": "ed7c58723e8d514583ab3b53b4714a19e716897e96087e376b8974c28694bfa3",
   "PackageInfoURL": "https://gap-packages.github.io/laguna/PackageInfo.g",
   "PackageName": "LAGUNA",
   "PackageWWWHome": "https://gap-packages.github.io/laguna",
