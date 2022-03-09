@@ -39,7 +39,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "2ab46520060d736c40aab7080d5aa7dfcf031c57cc01ba51cf54bc2944237512",
+  "PackageInfoSHA256": "3ca7b843b195640f5ce14c17e6d82241b769eff93807bc8a5f317fcd0d2d30f5",
   "PackageInfoURL": "https://gap-packages.github.io/ace/PackageInfo.g",
   "PackageName": "ACE",
   "PackageWWWHome": "https://gap-packages.github.io/ace",
