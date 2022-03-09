@@ -42,7 +42,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "25f895ef304c59d1916c37dd6b3b71549ad6129729a9c166fd037bf034ad7d5b",
+  "PackageInfoSHA256": "4456a42a6789a80a78965017039235ffa3889ab3baab51452653d85122e641a3",
   "PackageInfoURL": "https://gap-packages.github.io/sophus/PackageInfo.g",
   "PackageName": "Sophus",
   "PackageWWWHome": "https://gap-packages.github.io/sophus/",
