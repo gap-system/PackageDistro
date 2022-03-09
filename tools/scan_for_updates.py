@@ -30,6 +30,7 @@ import requests
 import subprocess
 from os.path import join
 from accepts import accepts
+from multiprocessing.pool import ThreadPool
 
 from download_packages import download_archive
 
@@ -95,8 +96,7 @@ def scan_for_updates() -> None:
     if not os.path.exists(pkginfos_dir):
         os.mkdir(pkginfos_dir)
     assert os.path.isdir(pkginfos_dir)
-    for pkgname in all_packages():
-        scan_for_one_update(pkginfos_dir, pkgname)
+    ThreadPool(5).map(scan_for_one_update, all_packages())
 
 
 @accepts()
