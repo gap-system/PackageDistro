@@ -29,7 +29,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "0175e7837794e19232ffd3b9cad9b776635f1b631022b4cefd4b50b96cb6b1d5",
+  "PackageInfoSHA256": "4678ab7da4df43a833df4c96d925f5290e99e1145a2ebb27d4a83af4e735d721",
   "PackageInfoURL": "https://gap-packages.github.io/xgap/PackageInfo.g",
   "PackageName": "XGAP",
   "PackageWWWHome": "https://gap-packages.github.io/xgap",
