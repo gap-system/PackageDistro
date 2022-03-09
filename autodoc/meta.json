@@ -41,7 +41,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "d0dde790447eeb68c00be95ca30e81566fa96664680df16c7588327e9705d817",
+  "PackageInfoSHA256": "2cb3dc1d57806df290082dfe24811f598ae666c1ef23f063dc3f0ab451b03620",
   "PackageInfoURL": "https://gap-packages.github.io/AutoDoc/PackageInfo.g",
   "PackageName": "AutoDoc",
   "PackageWWWHome": "https://gap-packages.github.io/AutoDoc",
