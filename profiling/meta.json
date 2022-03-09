@@ -34,7 +34,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "c680185fbcfa89b71e4199619a2a4d72d747f279b8ce1f827443317674069fd2",
+  "PackageInfoSHA256": "38e93b36f8ee07600b5b4350947299e05492e76c8cce00fce8d9d472c931344b",
   "PackageInfoURL": "https://gap-packages.github.io/profiling/PackageInfo.g",
   "PackageName": "profiling",
   "PackageWWWHome": "https://gap-packages.github.io/profiling/",
