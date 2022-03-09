@@ -47,7 +47,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "cd65832cbd67a1ec0e481b1e4f2bdd95a5b24dba88e3ea4de90880558873b7e5",
+  "PackageInfoSHA256": "013f6548ff63bcf438d71b4ff757c60b5ad208d93b30dc4ad86c5d75e138da18",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/MatricesForHomalg/PackageInfo.g",
   "PackageName": "MatricesForHomalg",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/MatricesForHomalg",
