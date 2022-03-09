@@ -57,7 +57,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "0320b2f11e52f6ded4ce21014edfd0854ef02b20245c61718032bf4768fa36be",
+  "PackageInfoSHA256": "533e0dea2fd95ca9e342ee9059b5e88d9eda8155d9e543dd497a6442761b215b",
   "PackageInfoURL": "https://gap-packages.github.io/nq/PackageInfo.g",
   "PackageName": "nq",
   "PackageWWWHome": "https://gap-packages.github.io/nq/",
