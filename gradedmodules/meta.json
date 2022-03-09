@@ -67,7 +67,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "5c4115d13f0e89782e343d7ecb4c57366d966784292d61ba17c90da0648b4dd1",
+  "PackageInfoSHA256": "1112e7f4e6741e81f47cd3cff09e43dff7051ea5f5e96a41c01cb179e651bae0",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/GradedModules/PackageInfo.g",
   "PackageName": "GradedModules",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/GradedModules",
