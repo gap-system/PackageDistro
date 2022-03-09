@@ -40,7 +40,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "2b0088144090a5668fb9c5cad476f02ac88a3bd47ed263f16fba671b8ecb051e",
+  "PackageInfoSHA256": "fb544aca6c659a85821b1da0ca828d57e0d36cd02385cfc792dbdc0cda3edb7a",
   "PackageInfoURL": "https://gap-packages.github.io/radiroot/PackageInfo.g",
   "PackageName": "RadiRoot",
   "PackageWWWHome": "https://gap-packages.github.io/radiroot/",
