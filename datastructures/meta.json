@@ -40,7 +40,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "e50147c11105bef1dc7c8a498b3784756f31a5b126479264e0602ad5409a84fe",
+  "PackageInfoSHA256": "cc6cd1a1ad7367d1f29326c5a9494a1ebac56ddaae867a0cd400246577005327",
   "PackageInfoURL": "https://gap-packages.github.io/datastructures/PackageInfo.g",
   "PackageName": "datastructures",
   "PackageWWWHome": "https://gap-packages.github.io/datastructures",
