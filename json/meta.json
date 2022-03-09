@@ -30,7 +30,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "6cd7aa7c8b4c664556abbcf396f393b4b164469516be57c1267ae00c98fc3258",
+  "PackageInfoSHA256": "1ff6d9f6703774c50cda0f7e83c66b1f4038889ed1b4b343aff7d1bd0a75ff71",
   "PackageInfoURL": "https://gap-packages.github.io/json/PackageInfo.g",
   "PackageName": "json",
   "PackageWWWHome": "https://gap-packages.github.io/json/",
