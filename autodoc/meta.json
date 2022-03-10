@@ -1,7 +1,7 @@
 {
   "AbstractHTML": "",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "89dd232cc7aa504407293fa23cefa0c178f19126e827325f74a8bd98ece1439a",
+  "ArchiveSHA256": "7c60b8c3f0ddf05645a30738ff7c0e7b4ed4244c066d07012e14e4e23c0e3c8f",
   "ArchiveURL": "https://github.com/gap-packages/AutoDoc/releases/download/v2022.02.24/AutoDoc-2022.02.24",
   "AutoDoc": {
     "TitlePage": {
@@ -40,7 +40,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "2cb3dc1d57806df290082dfe24811f598ae666c1ef23f063dc3f0ab451b03620",
+  "PackageInfoSHA256": "d9f8419bbf0c879174b83b28f11e499909a91a3bdbf05bf113d66658ecca4d06",
   "PackageInfoURL": "https://gap-packages.github.io/AutoDoc/PackageInfo.g",
   "PackageName": "AutoDoc",
   "PackageWWWHome": "https://gap-packages.github.io/AutoDoc",
