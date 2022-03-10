@@ -33,7 +33,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "ae5e724adb58943ee8d167dca81ef272a63508bea6c5c1200784fcbd1d950e6e",
+  "PackageInfoSHA256": "fa6fe046cb7f8c3717f2e39de6349a5a10ae153e97672186fd33c441667e4cd3",
   "PackageInfoURL": "https://gap-packages.github.io/FPLSA/PackageInfo.g",
   "PackageName": "FPLSA",
   "PackageWWWHome": "https://gap-packages.github.io/FPLSA",
