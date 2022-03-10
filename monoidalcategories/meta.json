@@ -45,7 +45,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "167e5dabd837d4e7f1eee7ab507d319e21bc23e81cb45755624b6412095bd46f",
+  "PackageInfoSHA256": "91288aa91fd350759aa0ffb7f392ecd8b1ac1046a032661d6c381004fbb4bb6d",
   "PackageInfoURL": "https://homalg-project.github.io/CAP_project/MonoidalCategories/PackageInfo.g",
   "PackageName": "MonoidalCategories",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/MonoidalCategories",
