@@ -55,7 +55,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "0f2d8f5956f713cc573f1eaa88123fd6feb78def2cf92ec192b9ace25ac3135b",
+  "PackageInfoSHA256": "9898d8e83212452893e42dd4e1bea76731e923dc46458e05f1badfe0e82f1f4b",
   "PackageInfoURL": "https://homalg-project.github.io/CAP_project/LinearAlgebraForCAP/PackageInfo.g",
   "PackageName": "LinearAlgebraForCAP",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/LinearAlgebraForCAP",
