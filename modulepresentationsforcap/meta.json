@@ -51,7 +51,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "80b06f636d427b392d0c8a13ecfd9ca3129703dcca62a94098b16bac56364dc6",
+  "PackageInfoSHA256": "a352169dbb11db756051d6ba5913694ad4ae8608672cc1da335100c463d5fbb5",
   "PackageInfoURL": "https://homalg-project.github.io/CAP_project/ModulePresentationsForCAP/PackageInfo.g",
   "PackageName": "ModulePresentationsForCAP",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/ModulePresentationsForCAP",
