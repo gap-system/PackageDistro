@@ -38,7 +38,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "f88f2f6b8f0a40b898d1e786b293ec6c41adbd1b94d326f659f7491779baabee",
+  "PackageInfoSHA256": "c99e8af17f8fd13af596d106344e856a25dac15963c3f7edb4000cb6e3e7f7f8",
   "PackageInfoURL": "https://homalg-project.github.io/CAP_project/GeneralizedMorphismsForCAP/PackageInfo.g",
   "PackageName": "GeneralizedMorphismsForCAP",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/GeneralizedMorphismsForCAP",
