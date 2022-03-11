@@ -150,6 +150,10 @@ jobs:
                 echo "Skipping ${PKG}"
                 continue
               fi
+              if [[ ${PKG} == xgap ]]; then
+                # skip xgap: no X11 headers, and no means to test it
+                continue
+              fi
               MATRIX="${MATRIX}\"${PKG}\","
             done
             MATRIX="${MATRIX}]}"
