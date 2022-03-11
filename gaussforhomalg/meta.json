@@ -45,7 +45,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "2c0d307e2b24857cab2949286bd99d8adc089e9a339c4f6b56c61bcfe7ce9aeb",
+  "PackageInfoSHA256": "304d23203be00a63b016d18e7db4ae4ba9ba985e0b8fe7fc8b3622bb0ffd494a",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/GaussForHomalg/PackageInfo.g",
   "PackageName": "GaussForHomalg",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/GaussForHomalg",
