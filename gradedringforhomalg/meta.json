@@ -63,7 +63,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "8f1db69b3e808b8f103bc0b9c9f9ec513c0cd3773c85ed9226638737b4146c36",
+  "PackageInfoSHA256": "dd901f2a66f19dbc077e2de96d0181e35a836a3287c5b2c84207291bb75d7939",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/GradedRingForHomalg/PackageInfo.g",
   "PackageName": "GradedRingForHomalg",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/GradedRingForHomalg",
