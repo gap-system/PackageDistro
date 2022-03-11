@@ -198,3 +198,9 @@ jobs:
         run: |
           PKG=${{ matrix.package }}
           gap -A --quitonbreak -r -c "SetInfoLevel(InfoPackageLoading, PACKAGE_WARNING);res:=TestPackage(\"$PKG\");FORCE_QUIT_GAP(res);"
+
+      - name: "Run tests with OnlyNeeded"
+        timeout-minutes: 20
+        run: |
+          PKG=${{ matrix.package }}
+          gap -A --quitonbreak -r -c "SetInfoLevel(InfoPackageLoading, PACKAGE_WARNING);res:=TestPackage(\"$PKG\":OnlyNeeded);FORCE_QUIT_GAP(res);"
