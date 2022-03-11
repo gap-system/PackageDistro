@@ -51,7 +51,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "05ce20756b9b2a198894d33867ac266364f0711fbd0ce2384e21edb4f04770bd",
+  "PackageInfoSHA256": "d8c771dfcd7ea637cc884ee1bef870d1334bc2ecae419b6e55b37030adeca83d",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/LocalizeRingForHomalg/PackageInfo.g",
   "PackageName": "LocalizeRingForHomalg",
   "PackageWWWHome": "https://homalg-project.github.io/homalg_project/LocalizeRingForHomalg",
