@@ -114,7 +114,7 @@ jobs:
           deps=$(_tools/gather_dependencies.py ${{ matrix.package }})
           if [[ -n "$deps" ]]; then
             echo "Installing required binary depedencies: $deps"
-            sudo apt-get install $deps
+            sudo apt-get install --no-install-recommends $deps
           else
             echo "No required binary depedencies to be installed"
           fi
