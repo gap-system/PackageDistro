@@ -47,7 +47,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "fcf2b0f8c25f130bd2ed59af71427b90ae82217c27cf3ad6c807d475bd9e75fc",
+  "PackageInfoSHA256": "2d5859800b76fd15d44557e3e285e011a0ef9674add4a78557a1d45086988dad",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/HomalgToCAS/PackageInfo.g",
   "PackageName": "HomalgToCAS",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/HomalgToCAS",
