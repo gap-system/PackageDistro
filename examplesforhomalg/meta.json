@@ -58,7 +58,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "8c3b77a25b2949496760213b79f6272225bb0ede7620b5d9032c795601650711",
+  "PackageInfoSHA256": "db08028239f8c440e63e5f657a04f6fda65bd4db6f563235c091626c6da5ae32",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/ExamplesForHomalg/PackageInfo.g",
   "PackageName": "ExamplesForHomalg",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/ExamplesForHomalg",
