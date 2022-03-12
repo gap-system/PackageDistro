@@ -75,7 +75,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "ad6c8adc4bbd728da211461ad5519ae021123aeaf9172ba2b6fc9b447991303a",
+  "PackageInfoSHA256": "5060bfc1fa456669a20cbc2b2a1bd4957b3f20c194f736700f2d58fc1ff5644b",
   "PackageInfoURL": "https://gap-packages.github.io/xmod/PackageInfo.g",
   "PackageName": "XMod",
   "PackageWWWHome": "https://gap-packages.github.io/xmod/",
