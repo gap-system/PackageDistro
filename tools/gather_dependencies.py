@@ -39,11 +39,16 @@ ubtunu_deps = {
 
 @accepts(str, set)
 def gather_dependencies(pkg_name: str, seen: set) -> None:
-    pkg_json = metadata(pkg_name)
+    try:
+        pkg_json = metadata(pkg_name)
+    except:
+        return set()
     seen.add(pkg_name)
     deps = set(ubtunu_deps.get(pkg_name, []))
 
-    for pkg, _ in pkg_json["Dependencies"]["NeededOtherPackages"]:
+    gap_deps = pkg_json["Dependencies"]["NeededOtherPackages"]
+    gap_deps += pkg_json["Dependencies"]["SuggestedOtherPackages"]
+    for pkg, _ in gap_deps:
         pkg = pkg.lower()
         if not pkg in seen:
             deps |= gather_dependencies(pkg, seen)
