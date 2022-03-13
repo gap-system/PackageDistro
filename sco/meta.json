@@ -1,14 +1,13 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">SCO</span> package provides functionality to compute simplicial cohomology of orbifolds",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "e7059a6a33cd200d98a423142611a1d09514ad414a958839fe5072389704cd4e",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/SCO-2020.10-02/SCO-2020.10-02",
-  "Autoload": false,
+  "ArchiveSHA256": "dca79d57b6603d5a467a88b07035ae1d8bf9547ac229048bf2205a9b7f5b19a5",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/SCO-2022.03-01/SCO-2022.03-01",
   "AvailabilityTest": null,
-  "Date": "16/10/2020",
+  "Date": "11/03/2022",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">=4.7",
+    "GAP": ">= 4.11.1",
     "NeededOtherPackages": [
       [
         "MatricesForHomalg",
@@ -40,7 +39,6 @@
       "ArchiveURLSubset": [
         "doc"
       ],
-      "Autoload": true,
       "BookName": "SCO",
       "HTMLStart": "doc/chap0.html",
       "LongTitle": "SCO - Simplicial Cohomology of Orbifolds",
@@ -48,10 +46,10 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "2bc2d6e73264b68bce11e2d646c4caa538872e756db642c8a99d078a4ecb64f7",
+  "PackageInfoSHA256": "b9f1fed0e5e230fdcc2f38215bb08c90e36b76e5c931b1198005303327361f8d",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/SCO/PackageInfo.g",
   "PackageName": "SCO",
-  "PackageWWWHome": "https://homalg-project.github.io/homalg_project/SCO",
+  "PackageWWWHome": "https://homalg-project.github.io/pkg/SCO",
   "Persons": [
     {
       "Email": "simon.goertzen@rwth-aachen.de",
@@ -83,5 +81,5 @@
   },
   "Status": "deposited",
   "Subtitle": "SCO - Simplicial Cohomology of Orbifolds",
-  "Version": "2020.10-02"
+  "Version": "2022.03-01"
 }

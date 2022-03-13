@@ -1,13 +1,13 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">RingsForHomalg</span> package provides small dictionaries for  <span class=\"pkgname\">homalg</span> to speak (as much as needed of) the languages  of Singular, Macaulay2, MAGMA, Sage, and Maple",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "10aba4e5960b40e4928399c2264d7ffc97ed4300bd839ab1332efbbbfe7222ff",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/RingsForHomalg-2021.10-01/RingsForHomalg-2021.10-01",
+  "ArchiveSHA256": "9027a2600c3e0b1d80a00092ed5a13b1a00e23ac8eea653438238c63cc17aab9",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/RingsForHomalg-2022.03-01/RingsForHomalg-2022.03-01",
   "AvailabilityTest": null,
-  "Date": "19/10/2021",
+  "Date": "11/03/2022",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">=4.7",
+    "GAP": ">= 4.11.1",
     "NeededOtherPackages": [
       [
         "MatricesForHomalg",
@@ -48,7 +48,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "5c451a123823d2132a0016ec507170b81481aab9d92d7056d4c067fc778340e6",
+  "PackageInfoSHA256": "a39965fe63843cb4c205b30db43536a3d98778d9c1aaa5a199c75f795da8b82f",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/RingsForHomalg/PackageInfo.g",
   "PackageName": "RingsForHomalg",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/RingsForHomalg",
@@ -170,5 +170,5 @@
   },
   "Status": "deposited",
   "Subtitle": "Dictionaries of external rings",
-  "Version": "2021.10-01"
+  "Version": "2022.03-01"
 }

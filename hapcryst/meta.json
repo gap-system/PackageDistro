@@ -1,20 +1,20 @@
 {
   "AbstractHTML": "This is an extension to the HAP package by Graham Ellis. It implements geometric methods for the calculation of resolutions of Bieberbach groups.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "c3c8f9801b407fc91ba6b10fc4fa9eded44d0520b1370e6fa937e7c70198b4b0",
-  "ArchiveURL": "https://github.com/gap-packages/hapcryst/releases/download/v0.1.13/hapcryst-0.1.13",
+  "ArchiveSHA256": "ae52b80dcce1276ff0b4487e2acc4e773b29e11d63f6dbd5fc4bf2174ce595c8",
+  "ArchiveURL": "https://github.com/gap-packages/hapcryst/releases/download/v0.1.14/hapcryst-0.1.14",
   "AutoDoc": {
     "TitlePage": {
       "Acknowledgements": "\n          This work was supported by Marie Curie Grant No. MTKD-CT-2006-042685\n        ",
       "Copyright": "\n            &copyright; 2007 Marc Röder. <P/>\n\n            This package is distributed under the terms of the GNU General\n            Public License version 2 or later (at your convenience). See the\n            file <File>LICENSE</File> or\n            <URL>https://www.gnu.org/copyleft/gpl.html</URL>\n        ",
-      "Version": "Version 0.1.13"
+      "Version": "Version 0.1.14"
     }
   },
   "AvailabilityTest": null,
-  "Date": "10/02/2020",
+  "Date": "09/03/2022",
   "Dependencies": {
     "ExternalConditions": [
-      "polymake (http://www.polymake.org) must be installed to calculate resolutions"
+      "polymake (https://polymake.org) must be installed to calculate resolutions"
     ],
     "GAP": ">=4.9",
     "NeededOtherPackages": [
@@ -85,7 +85,7 @@
       "SixFile": "lib/datatypes/doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "1f83c000e9c042840f3911ecfe9b41c1b42a1832d411f352d076266cf7369379",
+  "PackageInfoSHA256": "8b9d7fc0be2fc4567f0051da0e15c4fda15f57849e393e6588fff1fcbecb91fc",
   "PackageInfoURL": "https://gap-packages.github.io/hapcryst/PackageInfo.g",
   "PackageName": "HAPcryst",
   "PackageWWWHome": "https://gap-packages.github.io/hapcryst/",
@@ -113,5 +113,5 @@
   "Status": "deposited",
   "Subtitle": "A HAP extension for crystallographic groups",
   "TestFile": "tst/testall.g",
-  "Version": "0.1.13"
+  "Version": "0.1.14"
 }

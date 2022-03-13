@@ -1,14 +1,13 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">GaussForHomalg</span> package provides Gauss functionality for <span class=\"pkgname\">homalg</span> using the package <span class=\"pkgname\">Gauss</span>",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "4a59fd28bbbf60c4357002f665592e89a4f1bf36e9b439a6a2fdf78c8c7029d1",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/GaussForHomalg-2021.04-02/GaussForHomalg-2021.04-02",
-  "Autoload": false,
+  "ArchiveSHA256": "ea9f29594e283d7ec1e3ba46f0aeb18f6ee7bc2a2ac8ce7e0f8549725ae2c864",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/GaussForHomalg-2022.03-01/GaussForHomalg-2022.03-01",
   "AvailabilityTest": null,
-  "Date": "27/04/2021",
+  "Date": "11/03/2022",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">=4.7",
+    "GAP": ">= 4.11.1",
     "NeededOtherPackages": [
       [
         "Gauss",
@@ -37,7 +36,6 @@
       "ArchiveURLSubset": [
         "doc"
       ],
-      "Autoload": false,
       "BookName": "GaussForHomalg",
       "HTMLStart": "doc/chap0.html",
       "LongTitle": "Gauss functionality for the homalg project",
@@ -45,7 +43,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "2c0d307e2b24857cab2949286bd99d8adc089e9a339c4f6b56c61bcfe7ce9aeb",
+  "PackageInfoSHA256": "304d23203be00a63b016d18e7db4ae4ba9ba985e0b8fe7fc8b3622bb0ffd494a",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/GaussForHomalg/PackageInfo.g",
   "PackageName": "GaussForHomalg",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/GaussForHomalg",
@@ -80,5 +78,5 @@
   },
   "Status": "deposited",
   "Subtitle": "Gauss functionality for the homalg project",
-  "Version": "2021.04-02"
+  "Version": "2022.03-01"
 }

@@ -1,13 +1,13 @@
 {
   "AbstractHTML": "<span class=\"pkgname\">GeneralizedMorphismsForCAP</span> provides the category of generalized morphisms associated to an abelian category.",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "ad766a73a833ecc5d9ff3812752250e8728c55afea13536dc048d796f827804e",
-  "ArchiveURL": "https://github.com/homalg-project/CAP_project/releases/download/GeneralizedMorphismsForCAP-2021.10-01/GeneralizedMorphismsForCAP-2021.10-01",
+  "ArchiveSHA256": "9dbb3bf36dfdaa816b8f21687aed9d164cfb717857399ebd98240ac90da9886a",
+  "ArchiveURL": "https://github.com/homalg-project/CAP_project/releases/download/GeneralizedMorphismsForCAP-2022.03-03/GeneralizedMorphismsForCAP-2022.03-03",
   "AvailabilityTest": null,
-  "Date": "26/10/2021",
+  "Date": "10/03/2022",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">= 4.6",
+    "GAP": ">= 4.11.1",
     "NeededOtherPackages": [
       [
         "GAPDoc",
@@ -38,7 +38,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "f88f2f6b8f0a40b898d1e786b293ec6c41adbd1b94d326f659f7491779baabee",
+  "PackageInfoSHA256": "c99e8af17f8fd13af596d106344e856a25dac15963c3f7edb4000cb6e3e7f7f8",
   "PackageInfoURL": "https://homalg-project.github.io/CAP_project/GeneralizedMorphismsForCAP/PackageInfo.g",
   "PackageName": "GeneralizedMorphismsForCAP",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/GeneralizedMorphismsForCAP",
@@ -73,5 +73,6 @@
   },
   "Status": "deposited",
   "Subtitle": "Implementations of generalized morphisms for the CAP project",
-  "Version": "2021.10-01"
+  "TestFile": "tst/testall.g",
+  "Version": "2022.03-03"
 }

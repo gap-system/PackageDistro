@@ -1,14 +1,13 @@
 {
   "AbstractHTML": "This package is part of the homalg-project and allows localization of a (computable) commutative ring at a (finitely generated) maximal ideal.",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "102072d2b6c8d172031f441395334bebc004a3c06c2938abb3e6914e53e78197",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/LocalizeRingForHomalg-2020.10-02/LocalizeRingForHomalg-2020.10-02",
-  "Autoload": false,
+  "ArchiveSHA256": "e8c18b5506503239468662aee296b5da962f0ed314f7a205d68553517820becc",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/LocalizeRingForHomalg-2022.03-01/LocalizeRingForHomalg-2022.03-01",
   "AvailabilityTest": null,
-  "Date": "16/10/2020",
+  "Date": "11/03/2022",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">=4.7",
+    "GAP": ">= 4.11.1",
     "NeededOtherPackages": [
       [
         "MatricesForHomalg",
@@ -43,7 +42,6 @@
       "ArchiveURLSubset": [
         "doc"
       ],
-      "Autoload": false,
       "BookName": "LocalizeRingForHomalg",
       "HTMLStart": "doc/chap0.html",
       "LongTitle": "A Package for Localization of Polynomial Rings",
@@ -51,10 +49,10 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "05ce20756b9b2a198894d33867ac266364f0711fbd0ce2384e21edb4f04770bd",
+  "PackageInfoSHA256": "d8c771dfcd7ea637cc884ee1bef870d1334bc2ecae419b6e55b37030adeca83d",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/LocalizeRingForHomalg/PackageInfo.g",
   "PackageName": "LocalizeRingForHomalg",
-  "PackageWWWHome": "https://homalg-project.github.io/homalg_project/LocalizeRingForHomalg",
+  "PackageWWWHome": "https://homalg-project.github.io/pkg/LocalizeRingForHomalg",
   "Persons": [
     {
       "Email": "mohamed.barakat@uni-siegen.de",
@@ -97,5 +95,5 @@
   },
   "Status": "deposited",
   "Subtitle": "A Package for Localization of Polynomial Rings",
-  "Version": "2020.10-02"
+  "Version": "2022.03-01"
 }

@@ -2,11 +2,11 @@
   "AbstractHTML": "The <span class=\"pkgname\">FPLSA</span> package uses    the authors' C program (version 4.0) that implements    a Lie Todd-Coxeter method for converting    finitely presented Lie algebras into isomorphic    structure constant algebras.    This is called via the GAP function IsomorphismSCTableAlgebra.",
   "AcceptDate": "07/1999",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "f16f1fb166d9e13190c009cc8b74667c6b5fdecd0b1381c7cdc8cbffe66d5ff9",
-  "ArchiveURL": "https://github.com/gap-packages/FPLSA/releases/download/v1.2.4/FPLSA-1.2.4",
+  "ArchiveSHA256": "a6fac07a4af350cae94907c22f5c74b7d02effa5aa565ff141a47d9170c9b39a",
+  "ArchiveURL": "https://github.com/gap-packages/FPLSA/releases/download/v1.2.5/FPLSA-1.2.5",
   "AvailabilityTest": null,
   "CommunicatedBy": "Steve Linton (St Andrews)",
-  "Date": "07/07/2019",
+  "Date": "10/03/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.8",
@@ -25,7 +25,6 @@
       "ArchiveURLSubset": [
         "doc"
       ],
-      "Autoload": true,
       "BookName": "fplsa",
       "HTMLStart": "doc/chap0.html",
       "LongTitle": "Interface to fast external Lie Todd-Coxeter Program",
@@ -33,7 +32,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "ae5e724adb58943ee8d167dca81ef272a63508bea6c5c1200784fcbd1d950e6e",
+  "PackageInfoSHA256": "fa6fe046cb7f8c3717f2e39de6349a5a10ae153e97672186fd33c441667e4cd3",
   "PackageInfoURL": "https://gap-packages.github.io/FPLSA/PackageInfo.g",
   "PackageName": "FPLSA",
   "PackageWWWHome": "https://gap-packages.github.io/FPLSA",
@@ -55,7 +54,7 @@
       "WWWHome": "http://compalg.jinr.ru/CAGroup/Kornyak"
     },
     {
-      "Email": "max.horn@uni-siegen.de",
+      "Email": "horn@mathematik.uni-kl.de",
       "FirstNames": "Max",
       "IsAuthor": false,
       "IsMaintainer": true,
@@ -71,5 +70,5 @@
   "Status": "accepted",
   "Subtitle": "Finitely Presented Lie Algebras",
   "TestFile": "tst/testall.g",
-  "Version": "1.2.4"
+  "Version": "1.2.5"
 }

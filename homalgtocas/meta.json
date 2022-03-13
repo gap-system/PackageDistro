@@ -1,13 +1,13 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">HomalgToCAS</span> package provides the first layer of abstraction  needed for <span class=\"pkgname\">homalg</span> to access external computer algebra systems",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "515f47fdcd17e169d23a5e59afa07a0c2412dbce473c82d48c282929c2ca54cc",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/HomalgToCAS-2021.10-01/HomalgToCAS-2021.10-01",
+  "ArchiveSHA256": "cb7b30015d17829031d822849bf7c760607a1572922e4312c4b83a49e312140b",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/HomalgToCAS-2022.03-01/HomalgToCAS-2022.03-01",
   "AvailabilityTest": null,
-  "Date": "19/10/2021",
+  "Date": "11/03/2022",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">=4.7",
+    "GAP": ">= 4.11.1",
     "NeededOtherPackages": [
       [
         "IO",
@@ -47,7 +47,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "fcf2b0f8c25f130bd2ed59af71427b90ae82217c27cf3ad6c807d475bd9e75fc",
+  "PackageInfoSHA256": "2d5859800b76fd15d44557e3e285e011a0ef9674add4a78557a1d45086988dad",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/HomalgToCAS/PackageInfo.g",
   "PackageName": "HomalgToCAS",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/HomalgToCAS",
@@ -137,5 +137,5 @@
   },
   "Status": "deposited",
   "Subtitle": "A window to the outer world",
-  "Version": "2021.10-01"
+  "Version": "2022.03-01"
 }
