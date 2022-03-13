@@ -23,12 +23,12 @@ def notice(msg):
 
 # print warnings in yellow
 def warning(msg):
-    print("\033[33m" + msg + "\033[0m")
+    print("\033[33m" + msg + "\033[0m", file = sys.stderr)
 
 
 # print error in red and exit
 def error(msg):
-    print("\033[31m" + msg + "\033[0m")
+    print("\033[31m" + msg + "\033[0m", file = sys.stderr)
     sys.exit(1)
 
 
