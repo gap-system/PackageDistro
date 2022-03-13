@@ -54,7 +54,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "3b34ced678c799d3bd8af4f4c4f2e42166a8414f36bf012dcf279ca3946cc022",
+  "PackageInfoSHA256": "630450ab95dab493736fe0775a74cb2fbea727e26abb03fa04762c673348f646",
   "PackageInfoURL": "https://gap-packages.github.io/kan/PackageInfo.g",
   "PackageName": "kan",
   "PackageWWWHome": "https://gap-packages.github.io/kan/",
