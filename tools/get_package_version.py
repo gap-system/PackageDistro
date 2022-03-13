@@ -22,20 +22,6 @@ from accepts import accepts
 
 from utils import normalize_pkg_name, metadata
 
-# TODO: support other distros?
-ubtunu_deps = {
-'4ti2interface': [ '4ti2' ],
-'alnuth': [ 'pari-gp' ],
-'browse': [ 'libncurses5-dev' ],
-'cddinterface': [ 'libcdd-dev' ],
-'curlinterface': [ 'libcurl4-openssl-dev' ],
-'float': [ 'libmpc-dev', 'libmpfi-dev', 'libmpfr-dev' ],
-'normalizinterface': [ 'libnormaliz-dev' ],
-'polymaking': [ 'polymake' ],
-'singular': [ 'singular' ],
-'zeromqinterface': [ 'libzmq3-dev' ],
-}
-
 @accepts(str)
 def get_version(pkg_name: str) -> str:
     pkg_json = metadata(pkg_name)
