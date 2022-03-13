@@ -32,6 +32,7 @@ ubtunu_deps = {
 'float': [ 'libmpc-dev', 'libmpfi-dev', 'libmpfr-dev' ],
 'normalizinterface': [ 'libnormaliz-dev' ],
 'polymaking': [ 'polymake' ],
+'ringsforhomalg': [ 'singular' ],
 'singular': [ 'singular' ],
 'zeromqinterface': [ 'libzmq3-dev' ],
 }
