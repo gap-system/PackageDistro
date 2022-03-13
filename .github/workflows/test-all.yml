@@ -116,9 +116,6 @@ jobs:
           # skip xgap: no X11 headers, and no means to test it
           rm -rf xgap*
 
-          # skip itc because it requires xgap
-          rm -rf itc*
-
           MAKEFLAGS=-j3 ../bin/BuildPackages.sh --strict
 
       # TODO: the following is disabled because right now it FAILS due to IsSymmetric
