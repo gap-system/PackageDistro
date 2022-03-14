@@ -20,12 +20,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 5
+          fetch-depth: 0
 
       - name: "Determine what was removed"
         id: detect-removals
         run: |
-            deleted=$(git diff --name-only --no-renames --diff-filter=D HEAD^ -- */meta.json)
+            deleted=$(git diff --name-only --no-renames --diff-filter=D ${{ github.event.pull_request.base.sha }} -- */meta.json)
             MATRIX="{\"package\":["
             for PKG in ${deleted}; do
               PKG=${PKG%"/meta.json"}
@@ -39,8 +39,8 @@ jobs:
       - name: "Determine what was added or modified"
         id: detect-updates
         run: |
-            added=$(git diff --name-only --no-renames --diff-filter=A HEAD^ -- */meta.json)
-            modified=$(git diff --name-only --no-renames --diff-filter=M HEAD^ -- */meta.json)
+            added=$(git diff --name-only --no-renames --diff-filter=A ${{ github.event.pull_request.base.sha }} -- */meta.json)
+            modified=$(git diff --name-only --no-renames --diff-filter=M ${{ github.event.pull_request.base.sha }} -- */meta.json)
             MATRIX="{\"package\":["
             for PKG in ${added} ${modified}; do
               PKG=${PKG%"/meta.json"}
@@ -85,7 +85,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch-depth: '2'
+          fetch-depth: 0
 
       - name: "Install package distribution tools"
         run: |
@@ -101,7 +101,7 @@ jobs:
 
       - name: "Obtain copy of old metadata, if any"
         run: |
-          git show HEAD^:${{ matrix.package }}/meta.json > ${{ matrix.package }}/meta.json.old || :
+          git show ${{ github.event.pull_request.base.sha }}:${{ matrix.package }}/meta.json > ${{ matrix.package }}/meta.json.old || :
 
       - name: "Validate metadata"
         run: |
