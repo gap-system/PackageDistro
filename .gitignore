@@ -1,7 +1,10 @@
 _archives
 _pkginfos
-_tools
 _releases
 
 *.pyc
 _*
+__pycache__
+.coverage
+coverage_html.js
+htmlcov
