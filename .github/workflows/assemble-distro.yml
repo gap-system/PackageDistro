@@ -26,7 +26,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 5
+          fetch-depth: 0
 
       - name: "Check if any packages were modified"
         id: find-modified
@@ -34,7 +34,7 @@ jobs:
           # if no meta.json file was modified, and the trigger was a push to
           # main, then skip all remaining steps (this situation happens if e.g.
           # the workflow YAML files or README.md are updated)
-          modified=$(git diff --name-only --no-renames --diff-filter=M HEAD^ -- */meta.json)
+          modified=$(git diff --name-only --no-renames --diff-filter=M ${{ github.event.before }} -- */meta.json)
           echo "::set-output name=modified::$modified"
 
   assemble:
