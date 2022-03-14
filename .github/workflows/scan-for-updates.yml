@@ -33,10 +33,17 @@ jobs:
           pip install -r _tools/requirements.txt
 
       - name: "Install GAP"
-        run: sudo apt-get install --no-install-recommends gap-core
+        uses: gap-actions/setup-gap@v2
+        with:
+          GAP_BOOTSTRAP: 'minimal'
+          GAP_PKGS_TO_CLONE: 'json'
+          GAP_PKGS_TO_BUILD: 'json'
 
       - name: "Scan for updates"
-        run: _tools/scan_for_updates.py
+        run: |
+          # first put GAP into PATH
+          ln -s $HOME/gap/bin/gap.sh /usr/local/bin/gap
+          _tools/scan_for_updates.py
 
       - name: "Upload metadata as artifact for pull request jobs"
         uses: actions/upload-artifact@v2
