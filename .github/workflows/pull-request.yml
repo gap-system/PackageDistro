@@ -101,7 +101,7 @@ jobs:
 
       - name: "Obtain copy of old metadata, if any"
         run: |
-          git show ${{ github.event.pull_request.base.sha }}:${{ matrix.package }}/meta.json > packages/${{ matrix.package }}/meta.json.old || :
+          git cat-file blob ${{ github.event.pull_request.base.sha }}:packages/${{ matrix.package }}/meta.json > packages/${{ matrix.package }}/meta.json.old || :
 
       - name: "Validate metadata"
         run: |
