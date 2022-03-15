@@ -31,18 +31,9 @@ def error(msg):
     print("\033[31m" + msg + "\033[0m", file = sys.stderr)
     sys.exit(1)
 
-
-@accepts(str)
-def skip(string: str) -> bool:
-    return (
-        string.startswith(".")
-        or string.startswith("_")
-        or string == "README.md"
-    )
-
 def all_packages():
-    pkgs = sorted(os.listdir(os.getcwd()))
-    return [d for d in pkgs if os.path.isdir(d) and os.path.isfile(metadata_fname(d)) and not skip(d)]
+    pkgs = sorted(os.listdir(os.path.join(os.getcwd(), "packages")))
+    return [d for d in pkgs if os.path.isfile(metadata_fname(d))]
 
 @accepts(str)
 def sha256(fname: str) -> str:
@@ -55,14 +46,19 @@ def sha256(fname: str) -> str:
 @accepts(str)
 def normalize_pkg_name(pkg_name: str) -> str:
     suffix = "/meta.json"
-    if pkg_name.endswith(suffix):
+    prefix = "packages/"
+    if pkg_name.endswith(suffix) and pkg_name.startswith(prefix):
+        return pkg_name[len(prefix):-len(suffix)]
+    elif pkg_name.endswith(suffix):
         return pkg_name[:-len(suffix)]
+    elif pkg_name.startswith(prefix):
+        return pkg_name[len(prefix):]
     else:
         return pkg_name
 
 @accepts(str)
 def metadata_fname(pkg_name: str) -> str:
-    return join(pkg_name, "meta.json")
+    return os.path.join("packages", pkg_name, "meta.json")
 
 @accepts(str)
 def metadata(pkg_name: str) -> dict:

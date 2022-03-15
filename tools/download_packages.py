@@ -29,7 +29,7 @@ downloaded again.
 
 Usage:
 
-    > _tools/download_packages.py digraphs walrus/meta.json
+    > tools/download_packages.py digraphs walrus/meta.json
     digraphs: _archives/digraphs-1.5.0.tar.gz already exists, not downloading again
     walrus: _archives/walrus-0.9991.tar.gz already exists, not downloading again
 

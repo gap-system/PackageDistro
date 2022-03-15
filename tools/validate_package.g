@@ -84,14 +84,13 @@ end;
 # - the release date in <nam>/meta.json is not more than one day in the future
 
 ValidatePackagesArchive := function(unpacked_dir, pkgnames)
-  local meta_dir, nr_failures, pkginfo_file, json_file, json_file_old,
+  local nr_failures, pkginfo_file, json_file, json_file_old,
   pkginfo_record, json, json_old, pkgname;
 
   if IsString(pkgnames) then
     pkgnames := [pkgnames];
   fi;
   unpacked_dir := Directory(unpacked_dir);
-  meta_dir := DirectoryCurrent();
   nr_failures := 0;
   for pkgname in pkgnames do
       pkginfo_file := Filename(Directory(unpacked_dir), "PackageInfo.g");
@@ -108,13 +107,13 @@ ValidatePackagesArchive := function(unpacked_dir, pkgnames)
         continue;
       fi;
 
-      json_file := Concatenation(pkgname, "/meta.json");
-      json_file_old := Concatenation(pkgname, "/meta.json.old");
+      json_file := Concatenation("packages/", pkgname, "/meta.json");
+      json_file_old := Concatenation("packages/", pkgname, "/meta.json.old");
 
       pkginfo_record := PackageInfoRec(pkginfo_file);
 
-      json := JsonStringToGap(StringFile(Filename(meta_dir, json_file)));
-      json_old := StringFile(Filename(meta_dir, json_file_old));
+      json := JsonStringToGap(StringFile(json_file));
+      json_old := StringFile(json_file_old);
       if json_old <> fail then
         json_old := JsonStringToGap(json_old);
       fi;

@@ -25,7 +25,6 @@ from scan_for_updates import (
     scan_for_one_update,
     scan_for_updates,
     sha256,
-    skip,
 )
 
 
@@ -35,22 +34,15 @@ def ensure_in_tests_dir():
 
 
 def reset():
-    os.system("git checkout -- badjson/meta.json")
-    os.system("git checkout -- aclib/meta.json")
-    os.system("git checkout -- atlasrep/meta.json")
+    os.system("git checkout -- packages/badjson/meta.json")
+    os.system("git checkout -- packages/aclib/meta.json")
+    os.system("git checkout -- packages/atlasrep/meta.json")
     if exists("_pkginfos"):
         shutil.rmtree("_pkginfos")
     if exists("_archives"):
         shutil.rmtree("_archives")
     if exists(".fakefile"):
         os.remove(".fakefile")
-
-
-def test_skip():
-    assert skip(".DS_STORE")
-    assert skip("__file__")
-    assert skip("README.md")
-    assert not skip("digraphs")
 
 
 def test_sha256(ensure_in_tests_dir):
@@ -91,24 +83,24 @@ def test_scan_for_one_update(ensure_in_tests_dir, tmpdir):
     scan_for_one_update(str(tmpdir), "atlasrep")
     assert exists(join(str(tmpdir), "atlasrep.g"))
 
-    os.system("git checkout -- aclib/meta.json")
-    os.system("git checkout -- atlasrep/meta.json")
+    os.system("git checkout -- packages/aclib/meta.json")
+    os.system("git checkout -- packages/atlasrep/meta.json")
 
 
 def test_scan_updates(ensure_in_tests_dir, tmpdir):
     if shutil.which("gap") == None:
         return
     with pytest.raises(SystemExit) as e:
-        scan_for_updates(str(tmpdir))
+        scan_for_updates(str(tmpdir), True)
     # fails because badjson is considered and bad!
     assert e.type == SystemExit
     assert e.value.code == 1
 
     output_json(str(tmpdir))
-    assert os.system("git diff --exit-code aclib/meta.json") != 0
-    assert os.system("git diff --exit-code atlasrep/meta.json") != 0
-    assert os.system("git diff --exit-code badjson/meta.json") == 0
-    assert os.system("git diff --exit-code toricvarieties/meta.json") == 0
+    assert os.system("git diff --exit-code packages/aclib/meta.json") != 0
+    assert os.system("git diff --exit-code packages/atlasrep/meta.json") != 0
+    assert os.system("git diff --exit-code packages/badjson/meta.json") == 0
+    assert os.system("git diff --exit-code packages/toricvarieties/meta.json") == 0
     reset()
     output_json("bananaananan")
 
@@ -116,7 +108,7 @@ def test_scan_updates(ensure_in_tests_dir, tmpdir):
 def test_main(ensure_in_tests_dir):
     if shutil.which("gap") == None:
         return
-    shutil.rmtree("badjson")
+    shutil.rmtree("packages/badjson")
     os.mkdir("_pkginfos")
     os.system("touch _pkginfos/.fakefile")
     main()
@@ -126,6 +118,6 @@ def test_main(ensure_in_tests_dir):
 def test_main_again(ensure_in_tests_dir):
     if shutil.which("gap") == None:
         return
-    shutil.rmtree("badjson")
+    shutil.rmtree("packages/badjson")
     main()
     reset()

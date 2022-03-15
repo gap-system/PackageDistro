@@ -34,7 +34,7 @@ from multiprocessing.pool import ThreadPool
 
 from download_packages import download_archive
 
-from utils import notice, error, warning, all_packages, metadata, metadata_fname, skip, sha256
+from utils import notice, error, warning, all_packages, metadata, metadata_fname, sha256
 
 archive_dir = "_archives"
 pkginfos_dir = "_pkginfos"
@@ -73,8 +73,8 @@ def gap_exec(commands: str, gap="gap") -> int:
             return GAP.returncode
 
 
-@accepts(str)
-def scan_for_one_update(pkg_name: str) -> None:
+@accepts(str, str)
+def scan_for_one_update(pkginfos_dir: str, pkg_name: str) -> None:
     pkg_json = metadata(pkg_name)
     try:
         hash_distro = pkg_json["PackageInfoSHA256"]
@@ -87,20 +87,22 @@ def scan_for_one_update(pkg_name: str) -> None:
     hash_url = hashlib.sha256(pkg_info).hexdigest()
     if hash_url != hash_distro:
         notice(pkg_name + ": detected different sha256 hash of PackageInfo.g")
-        with open(join(pkginfos_dir, pkg_name + ".g"), "wb") as f:
-            f.write(pkg_info)
+    with open(join(pkginfos_dir, pkg_name + ".g"), "wb") as f:
+        f.write(pkg_info)
 
 
-@accepts()
-def scan_for_updates() -> None:
+def scan_for_updates(pkginfos_dir = pkginfos_dir, disable_threads = False):
     if not os.path.exists(pkginfos_dir):
         os.mkdir(pkginfos_dir)
     assert os.path.isdir(pkginfos_dir)
-    ThreadPool(5).map(scan_for_one_update, all_packages())
+    if disable_threads:
+        for pkg_name in all_packages():
+            scan_for_one_update(pkginfos_dir, pkg_name)
+    else: 
+        ThreadPool(5).map(lambda x: scan_for_one_update(pkginfos_dir, x), all_packages())
 
 
-@accepts()
-def output_json() -> None:
+def output_json(pkginfos_dir = pkginfos_dir):
     dir_of_this_file = os.path.dirname(os.path.realpath(__file__))
     if (
         gap_exec(
@@ -118,10 +120,7 @@ def download_all_archives() -> dict:
         os.mkdir(archive_dir)
     assert os.path.isdir(archive_dir)
     archive_name_lookup = {}
-    for pkginfo in sorted(os.listdir(pkginfos_dir)):
-        if skip(pkginfo):
-            continue
-        pkgname = pkginfo.split(".")[0]
+    for pkgname in all_packages():
         archive_name_lookup[pkgname] = download_archive(archive_dir, pkgname)
 
     return archive_name_lookup
@@ -130,9 +129,6 @@ def download_all_archives() -> dict:
 @accepts(dict)
 def add_sha256_to_json(archive_name_lookup: dict) -> None:
     for pkgname in sorted(os.listdir(pkginfos_dir)):
-        if skip(pkgname):
-            continue
-        pkgname = pkgname.split(".")[0]
         pkg_json_file = metadata_fname(pkgname)
 
         try:
