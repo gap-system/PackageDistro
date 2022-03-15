@@ -109,8 +109,7 @@ jobs:
 
       - name: "Validate metadata"
         run: |
-            tools/validate_package.py ${{ matrix.package }} | tee ${{ matrix.package }}.log
-            ( ! grep "FAILED" ${{ matrix.package }}.log )
+            tools/validate_package.py ${{ matrix.package }}
 
       - name: "Install required binary dependencies"
         run: |

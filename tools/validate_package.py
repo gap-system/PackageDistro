@@ -16,17 +16,19 @@
 Runs some basic validation of the pkgname/meta.json against the package
 archive, and the old meta data.
 
-Should be run after scan_for_updates.py. Arguments can be either package
-names, or the path to a meta.json file. For example:
+Should be run after scan_for_updates.py. Arguments can be either a package
+name, or the path to a meta.json file. For example:
 
-    tools/validate_package.py  aclib digraphs walrus/meta.json
+    $ tools/validate_package.py aclib digraphs walrus/meta.json
     aclib: _archives/aclib-1.3.2.tar.gz already exists, not downloading again
     aclib: unpacking _archives/aclib-1.3.2.tar.gz into _unpacked_archives ...
-    aclib: current release version is 1.3.2, but previous release version was 1.3.2, FAILED!
+    aclib: current release version is 1.3.2, but previous release version was 1.3.2
     aclib: validation FAILED!
+    $ tools/validate_package.py digraphs
     digraphs: _archives/digraphs-1.5.0.tar.gz already exists, not downloading again
     digraphs: unpacking _archives/digraphs-1.5.0.tar.gz into _unpacked_archives ...
     digraphs: validated ok!
+    $ tools/validate_package.py walrus/meta.json
     walrus: _archives/walrus-0.9991.tar.gz already exists, not downloading again
     walrus: unpacking _archives/walrus-0.9991.tar.gz into _unpacked_archives ...
     walrus: the file walrus/meta.yml.old is missing, FAILED!
@@ -42,7 +44,7 @@ from accepts import accepts
 from download_packages import download_archive
 from scan_for_updates import download_pkg_info, gap_exec
 
-from utils import notice, warning, normalize_pkg_name, archive_name, metadata, sha256
+from utils import notice, warning, error, normalize_pkg_name, archive_name, metadata, sha256
 
 
 
@@ -61,8 +63,6 @@ def unpacked_archive_name(unpack_dir, pkg_name):
 
 
 def validate_package(archive_dir, unpack_dir, pkg_name):
-    result = True
-
     pkg_json = metadata(pkg_name)
 
     pkg_info_name = join(
@@ -70,31 +70,28 @@ def validate_package(archive_dir, unpack_dir, pkg_name):
     )
 
     if pkg_json["PackageInfoSHA256"] != sha256(pkg_info_name):
-        warning(
-            "{0}: {0}/meta.yml:PackageInfoSHA256 is not the SHA256 of {1}, FAILED!".format(
+        error(
+            "{0}/meta.yml:PackageInfoSHA256 is not the SHA256 of {1}".format(
                 pkg_name, pkg_info_name
             )
         )
-        result = False
 
     packed_name = join(archive_dir, archive_name(pkg_name))
 
     if pkg_json["ArchiveSHA256"] != sha256(packed_name):
-        warning(
-            "{0}: {0}/meta.yml:ArchiveSHA256 is not the SHA256 of {1}, FAILED!".format(
+        error(
+            "{0}/meta.yml:ArchiveSHA256 is not the SHA256 of {1}".format(
                 pkg_name, packed_name
             )
         )
-        result = False
 
     if not os.path.exists(join(pkg_name, "meta.json.old")):
         notice(
-            "{0}: the file {0}/meta.yml.old is not present, new package!".format(
+            "{0}/meta.yml.old is not present, new package!".format(
                 pkg_name
             )
         )
 
-    return result
     # TODO: check SHA256 hashes for PackageinfoURL and archive are the same.
 
 
@@ -117,7 +114,7 @@ def main(pkg_name):
             )
             != 0
         ):
-            warning("{}: validation FAILED!".format(pkg_name))
+            error("{}: validation FAILED!".format(pkg_name))
         else:
             notice("{}: validated ok!".format(pkg_name))
 
