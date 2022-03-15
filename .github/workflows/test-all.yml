@@ -2,23 +2,11 @@ name: "Test all packages"
 
 on:
   workflow_dispatch:
-    inputs:
-      pkgarchiveurl:
-        description: 'URL of the package archive to test'
-        # TODO: instead / alternatively, specify a commit in this repo and then
-        # assemble a tarball from that?
-        required: true
-        type: string
-        default: https://github.com/gap-system/PackageDistro/releases/download/latest/packages.tar.gz
   workflow_call:
-    inputs:
-      pkgarchiveurl:
-        required: true
-        type: string
 
 jobs:
   build:
-    name: "Build GAP and the packages"
+    name: "Build GAP and packages"
     runs-on: ubuntu-latest
     outputs:
       matrix: ${{ steps.get-names.outputs.matrix }}
@@ -37,8 +25,7 @@ jobs:
             archives-
 
       - name: "Install package distribution tools"
-        run: |
-          python -m pip install -r tools/requirements.txt
+        run: python -m pip install -r tools/requirements.txt
 
       # TOOD: dependencies should come from a container
       - name: "Install binary package dependencies"
@@ -52,12 +39,7 @@ jobs:
           fi
 
       - name: "Download packages"
-        run: |
-          #curl -L -o $HOME/packages.tar.gz ${{ github.event.inputs.pkgarchiveurl || inputs.pkgarchiveurl }}
-          #ls -l $HOME/packages.tar.gz
-          #shasum -a 256 $HOME/packages.tar.gz
-          ## TODO: also download and test checksum???
-          tools/download_packages.py packages/*/meta.json
+        run: tools/download_packages.py packages/*/meta.json
 
       - name: "Cleanup archives"
         run: tools/cleanup_archives.py
@@ -129,7 +111,7 @@ jobs:
       # solution is being worked on)
       #- name: "Test LoadAllPackages"
       #  run: |
-      #    gap --quitonbreak -r -c "SetInfoLevel(InfoPackageLoading, PACKAGE_WARNING);LoadAllPackages();QUIT;"
+      #    gap --quitonbreak -r -c "SetInfoLevel(InfoPackageLoading, PACKAGE_DEBUG);LoadAllPackages();QUIT;"
 
       - name: "Create tarball"
         run: |
@@ -164,7 +146,7 @@ jobs:
             echo "::set-output name=matrix::$MATRIX"
 
   test-package:
-    name: "Testing ${{ matrix.package }}"
+    name: "${{ matrix.package }}"
     if: ${{ needs.build.outputs.matrix != '{"package":[]}' }}
     needs: build
     runs-on: ubuntu-latest
@@ -204,10 +186,22 @@ jobs:
         timeout-minutes: 12
         run: |
           PKG=${{ matrix.package }}
-          gap -A --quitonbreak -r -c "SetInfoLevel(InfoPackageLoading, PACKAGE_WARNING);res:=TestPackage(\"$PKG\");FORCE_QUIT_GAP(res);"
+          gap -A --quitonbreak -r -c "
+                SetInfoLevel(InfoPackageLoading, PACKAGE_DEBUG);
+                LoadPackage(\"$PKG\");
+                SetInfoLevel(InfoPackageLoading, PACKAGE_WARNING);
+                res:=TestPackage(\"$PKG\");
+                FORCE_QUIT_GAP(res);
+                "
 
       - name: "Run tests with OnlyNeeded"
         timeout-minutes: 12
         run: |
           PKG=${{ matrix.package }}
-          gap -A --quitonbreak -r -c "SetInfoLevel(InfoPackageLoading, PACKAGE_WARNING);res:=TestPackage(\"$PKG\":OnlyNeeded);FORCE_QUIT_GAP(res);"
+          gap -A --quitonbreak -r -c "
+                SetInfoLevel(InfoPackageLoading, PACKAGE_DEBUG);
+                LoadPackage(\"$PKG\" : OnlyNeeded);
+                SetInfoLevel(InfoPackageLoading, PACKAGE_WARNING);
+                res:=TestPackage(\"$PKG\");
+                FORCE_QUIT_GAP(res);
+                "
