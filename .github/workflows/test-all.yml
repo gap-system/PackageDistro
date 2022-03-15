@@ -101,7 +101,7 @@ jobs:
           # "bundled" with NormalizInterface, as this is very slow (takes 5-10
           # minutes). Instead we want it to use libnormaliz-dev installed by
           # us
-          rm -f */build-normaliz.sh
+          rm -f **/build-normaliz.sh
 
           # skip xgap: no X11 headers, and no means to test it
           rm -rf xgap*
@@ -202,8 +202,15 @@ jobs:
                 FORCE_QUIT_GAP(res);
                 "
 
+      - name: "Get job status"
+        if: ${{ always() }}
+        run: |
+          PKG="${{ matrix.package }}"
+          STATUS="${{ job.status }}"
+
       - name: "Run tests with OnlyNeeded"
         timeout-minutes: 10
+        if: ${{ always() }}
         run: |
           PKG=${{ matrix.package }}
           gap -A --quitonbreak -r -c "
@@ -213,3 +220,35 @@ jobs:
                 res:=TestPackage(\"$PKG\");
                 FORCE_QUIT_GAP(res);
                 "
+
+      - name: "Get job status with OnlyNeeded"
+        if: ${{ always() }}
+        run: |
+          STATUS_ONLY_NEEDED="${{ job.status }}"
+
+      - name: "Create job status json-file"
+        if: ${{ always() }}
+        run: |
+          jq --null-input \
+            --arg status "${STATUS}" \
+            --arg status_only_needed "${STATUS_ONLY_NEEDED}" \
+            '{"status": $status, "status_only_needed": $status_only_needed}' > reports-${PKG}.json
+          cat reports-${PKG}.json
+
+      - name: "Upload job status as artifact"
+        uses: actions/upload-artifact@v2
+        with:
+          name: reports-${PKG}
+          path: reports-${PKG}.json
+
+  report:
+    name: "Report"
+    needs: test-package
+    if: ${{ always() }}
+    runs-on: ubuntu-18.04
+    steps:
+      - name: "Download every job status"
+        uses: elonh/download-artifact-regexp@master # FIXME/TODO: Switch to download-artifact once they officially support wildcards
+        with:
+         pattern: reports-*
+      - run: ls
