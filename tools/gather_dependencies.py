@@ -46,8 +46,10 @@ def gather_dependencies(pkg_name: str, seen: set) -> None:
     seen.add(pkg_name)
     deps = set(ubtunu_deps.get(pkg_name, []))
 
-    gap_deps = pkg_json["Dependencies"]["NeededOtherPackages"]
-    gap_deps += pkg_json["Dependencies"]["SuggestedOtherPackages"]
+    tmp = pkg_json["Dependencies"]
+    gap_deps = tmp["NeededOtherPackages"]
+    if "SuggestedOtherPackages" in tmp:
+        gap_deps += tmp["SuggestedOtherPackages"]
     for pkg, _ in gap_deps:
         pkg = pkg.lower()
         if not pkg in seen:
