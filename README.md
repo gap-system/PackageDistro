@@ -9,8 +9,7 @@ Workflows.
 ## The scripts
 
 The following scrips are provided. The usage examples assume that we start in
-a git clone of the `PackageDistro`  repository, and that a clone of of
-`PackageDistroTools` exists in the `_tools` subdirectory
+a git clone of the `PackageDistro` repository.
 
 Some of the scripts store package tarballs in the directory `_archive` inside
 the package distribution directory. This directory is not part of the
@@ -34,7 +33,7 @@ Iterates over all metadata files in the package distribution, and do the followi
 Usage:
 
     cd PackageDistro
-    _tools/scan-for-updates.py
+    tools/scan-for-updates.py
 
 
 ### `validate-package.py`
@@ -71,8 +70,6 @@ The scripts from the previous section are called from GitHub Workflows on the
 `PackageDistro` repository to automate most of the maintenance on the GAP
 package distribution.
 
-These workflows typically clone the `PackageDistroTools` repository into a
-directory named `_tools` inside the `PackageDistro` clone.
 
 The following jobs exist (for further details, look at their sources in
 <https://github.com/gap-system/PackageDistro/tree/main/.github/workflows>.
