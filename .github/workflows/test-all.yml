@@ -38,13 +38,12 @@ jobs:
 
       - name: "Install package distribution tools"
         run: |
-          git clone https://github.com/gap-system/PackageDistroTools _tools
-          pip install -r _tools/requirements.txt
+          python -m pip install -r tools/requirements.txt
 
       # TOOD: dependencies should come from a container
       - name: "Install binary package dependencies"
         run: |
-          deps=$(_tools/gather_dependencies.py */meta.json)
+          deps=$(tools/gather_dependencies.py packages/*/meta.json)
           if [[ -n "$deps" ]]; then
             echo "Installing required binary depedencies: $deps"
             sudo apt-get install --no-install-recommends $deps
@@ -58,10 +57,10 @@ jobs:
           #ls -l $HOME/packages.tar.gz
           #shasum -a 256 $HOME/packages.tar.gz
           ## TODO: also download and test checksum???
-          _tools/download_packages.py */meta.json
+          tools/download_packages.py packages/*/meta.json
 
       - name: "Cleanup archives"
-        run: _tools/cleanup_archives.py
+        run: tools/cleanup_archives.py
 
       # TOOD: gap should come from a container
       - name: "Install GAP"
@@ -140,10 +139,11 @@ jobs:
         id: get-names
         run: |
             MATRIX="{\"package\":["
-            for PKG in */meta.json; do
+            for PKG in packages/*/meta.json; do
               PKG=${PKG%"/meta.json"}
+              PKG=${PKG#"packages/"}
               # skip packages without a TestFile
-              if ! jq -e -r '.TestFile' < ${PKG}/meta.json > /dev/null ; then
+              if ! jq -e -r '.TestFile' < packages/${PKG}/meta.json > /dev/null ; then
                 echo "Skipping ${PKG}"
                 continue
               fi
@@ -169,8 +169,7 @@ jobs:
 
       - name: "Install package distribution tools"
         run: |
-          git clone https://github.com/gap-system/PackageDistroTools _tools
-          pip install -r _tools/requirements.txt
+          python -m pip install -r tools/requirements.txt
 
       - name: "Download GAP from previous job"
         uses: actions/download-artifact@v2
@@ -186,7 +185,7 @@ jobs:
 
       - name: "Install binary package dependencies"
         run: |
-          deps=$(_tools/gather_dependencies.py ${{ matrix.package }})
+          deps=$(tools/gather_dependencies.py ${{ matrix.package }})
           if [[ -n "$deps" ]]; then
             echo "Installing required binary depedencies: $deps"
             sudo apt-get install --no-install-recommends $deps
