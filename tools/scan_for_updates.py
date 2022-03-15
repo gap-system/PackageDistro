@@ -87,8 +87,8 @@ def scan_for_one_update(pkginfos_dir: str, pkg_name: str) -> None:
     hash_url = hashlib.sha256(pkg_info).hexdigest()
     if hash_url != hash_distro:
         notice(pkg_name + ": detected different sha256 hash of PackageInfo.g")
-    with open(join(pkginfos_dir, pkg_name + ".g"), "wb") as f:
-        f.write(pkg_info)
+        with open(join(pkginfos_dir, pkg_name + ".g"), "wb") as f:
+            f.write(pkg_info)
 
 
 def scan_for_updates(pkginfos_dir = pkginfos_dir, disable_threads = False):
