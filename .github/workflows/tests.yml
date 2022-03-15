@@ -1,5 +1,6 @@
 name: Run tests
-on: [pull_request, workflow_dispatch]
+
+on: workflow_dispatch  # for debugging
 
 jobs:
   py39: 
@@ -18,4 +19,4 @@ jobs:
           python -m pip install pytest mock
           
       - name: Run tests
-        run: pytest tests/test*.py -vv
+        run: pytest tools/tests/test*.py -vv

@@ -25,10 +25,11 @@ jobs:
       - name: "Determine what was removed"
         id: detect-removals
         run: |
-            deleted=$(git diff --name-only --no-renames --diff-filter=D ${{ github.event.pull_request.base.sha }} -- */meta.json)
+            deleted=$(git diff --name-only --no-renames --diff-filter=D ${{ github.event.pull_request.base.sha }} -- packages/*/meta.json)
             MATRIX="{\"package\":["
             for PKG in ${deleted}; do
               PKG=${PKG%"/meta.json"}
+              PKG=${PKG#"packages/"}
               echo "${PKG}"
               MATRIX="${MATRIX}\"${PKG}\","
             done
@@ -39,11 +40,12 @@ jobs:
       - name: "Determine what was added or modified"
         id: detect-updates
         run: |
-            added=$(git diff --name-only --no-renames --diff-filter=A ${{ github.event.pull_request.base.sha }} -- */meta.json)
-            modified=$(git diff --name-only --no-renames --diff-filter=M ${{ github.event.pull_request.base.sha }} -- */meta.json)
+            added=$(git diff --name-only --no-renames --diff-filter=A ${{ github.event.pull_request.base.sha }} -- packages/*/meta.json)
+            modified=$(git diff --name-only --no-renames --diff-filter=M ${{ github.event.pull_request.base.sha }} -- packages/*/meta.json)
             MATRIX="{\"package\":["
             for PKG in ${added} ${modified}; do
               PKG=${PKG%"/meta.json"}
+              PKG=${PKG#"packages/"}
               echo "${PKG}"
               MATRIX="${MATRIX}\"${PKG}\","
             done
@@ -63,8 +65,7 @@ jobs:
 
       - name: "Install package distribution tools"
         run: |
-          git clone https://github.com/gap-system/PackageDistroTools _tools
-          pip install -r _tools/requirements.txt
+          python -m pip install -r tools/requirements.txt
 
       - name: "Check whether anything depends on the package"
         run: |
@@ -89,8 +90,7 @@ jobs:
 
       - name: "Install package distribution tools"
         run: |
-          git clone https://github.com/gap-system/PackageDistroTools _tools
-          pip install -r _tools/requirements.txt
+          python -m pip install -r tools/requirements.txt
 
       - name: "Install GAP"
         uses: gap-actions/setup-gap@v2
@@ -101,17 +101,17 @@ jobs:
 
       - name: "Obtain copy of old metadata, if any"
         run: |
-          git show ${{ github.event.pull_request.base.sha }}:${{ matrix.package }}/meta.json > ${{ matrix.package }}/meta.json.old || :
+          git show ${{ github.event.pull_request.base.sha }}:${{ matrix.package }}/meta.json > packages/${{ matrix.package }}/meta.json.old || :
 
       - name: "Validate metadata"
         run: |
             ln -s $HOME/gap/bin/gap.sh /usr/local/bin/gap
-            _tools/validate_package.py ${{ matrix.package }} | tee ${{ matrix.package }}.log
+            tools/validate_package.py ${{ matrix.package }} | tee ${{ matrix.package }}.log
             ( ! grep "FAILED" ${{ matrix.package }}.log )
 
       - name: "Install required binary dependencies"
         run: |
-          deps=$(_tools/gather_dependencies.py ${{ matrix.package }})
+          deps=$(tools/gather_dependencies.py ${{ matrix.package }})
           if [[ -n "$deps" ]]; then
             echo "Installing required binary depedencies: $deps"
             sudo apt-get install --no-install-recommends $deps
@@ -121,7 +121,7 @@ jobs:
 
       - name: "Install and build package"
         run: |
-          _tools/download_dependencies.py ${{ matrix.package }}
+          tools/download_dependencies.py ${{ matrix.package }}
           cd _unpacked_archives
           for file in * ; do
             ln -s "$PWD/$file" "/home/runner/gap/pkg/$file"
