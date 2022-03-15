@@ -2,7 +2,7 @@ name: "Test pull requests"
 
 on:
   workflow_dispatch:  # manual trigger for debugging
-  # pull_request:
+  # pull_request:     # TODO/FIXME: enable this again once everything works
 
 concurrency:
   # group by workflow and ref
