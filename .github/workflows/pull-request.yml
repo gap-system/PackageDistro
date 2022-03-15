@@ -15,74 +15,7 @@ jobs:
     name: "Detect affected packages"
     runs-on: ubuntu-latest
     outputs:
-      remove-matrix: ${{ steps.detect-removals.outputs.matrix }}
-      update-matrix: ${{ steps.detect-updates.outputs.matrix }}
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-
-      - name: "Determine what was removed"
-        id: detect-removals
-        run: |
-            deleted=$(git diff --name-only --no-renames --diff-filter=D ${{ github.event.pull_request.base.sha }} -- packages/*/meta.json)
-            MATRIX="{\"package\":["
-            for PKG in ${deleted}; do
-              PKG=${PKG%"/meta.json"}
-              PKG=${PKG#"packages/"}
-              echo "${PKG}"
-              MATRIX="${MATRIX}\"${PKG}\","
-            done
-            MATRIX="${MATRIX}]}"
-            echo "MATRIX=${MATRIX}" # For debugging a log
-            echo "::set-output name=matrix::$MATRIX"
-
-      - name: "Determine what was added or modified"
-        id: detect-updates
-        run: |
-            added=$(git diff --name-only --no-renames --diff-filter=A ${{ github.event.pull_request.base.sha }} -- packages/*/meta.json)
-            modified=$(git diff --name-only --no-renames --diff-filter=M ${{ github.event.pull_request.base.sha }} -- packages/*/meta.json)
-            MATRIX="{\"package\":["
-            for PKG in ${added} ${modified}; do
-              PKG=${PKG%"/meta.json"}
-              PKG=${PKG#"packages/"}
-              echo "${PKG}"
-              MATRIX="${MATRIX}\"${PKG}\","
-            done
-            MATRIX="${MATRIX}]}"
-            echo "MATRIX=${MATRIX}" # For debugging a log
-            echo "::set-output name=matrix::$MATRIX"
-
-  remove-package:
-    name: "Remove ${{ matrix.package }}"
-    if: ${{ needs.detect-changes.outputs.remove-matrix != '{"package":[]}' }}
-    needs: detect-changes
-    runs-on: ubuntu-latest
-    strategy:
-      matrix: ${{ fromJSON(needs.detect-changes.outputs.remove-matrix) }}
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: "Install package distribution tools"
-        run: |
-          python -m pip install -r tools/requirements.txt
-
-      - name: "Check whether anything depends on the package"
-        run: |
-            echo "TODO"
-            # TODO: could read all JSON files, look at the `NeededOtherPackages`
-            # components, to see if anything else uses this package (no GAP needed!).
-            # But beware, those lists contains package names that are not always lowercased.
-            # TODO: should also SuggestedOtherPackages be considered?
-            # TODO: add special case for GAPDoc, primgrp, transgrp, smallgrp?
-
-  add-or-update-package:
-    name: "Update ${{ matrix.package }}"
-    if: ${{ needs.detect-changes.outputs.update-matrix != '{"package":[]}' }}
-    needs: detect-changes
-    runs-on: ubuntu-latest
-    strategy:
-      matrix: ${{ fromJSON(needs.detect-changes.outputs.update-matrix) }}
+      modified: ${{ steps.modified.outputs.modified }}
     steps:
       - uses: actions/checkout@v2
         with:
@@ -93,52 +26,40 @@ jobs:
           python -m pip install -r tools/requirements.txt
 
       - name: "Install GAP"
-        uses: gap-actions/setup-gap@v2
+        uses: gap-actions/setup-gap@4e865453a9185dfd6d47cdd97e5ce011bee37e9a
         with:
           GAP_BOOTSTRAP: 'minimal'
           GAP_PKGS_TO_CLONE: 'json'
           GAP_PKGS_TO_BUILD: 'json'
 
-      - name: "Symlink GAP into PATH"
+      - name: "Determine what was removed"
         run: |
-          ln -s $HOME/gap/bin/gap.sh /usr/local/bin/gap
+            deleted=$(git diff --name-only --no-renames --diff-filter=D ${{ github.event.pull_request.base.sha }} -- packages/*/meta.json)
+            echo "Deleted packages: ${deleted}"
+            # TODO: removing packages should block auto-merging
+
+      - name: "Determine what was added or modified"
+        id: modified
+        run: |
+            modified=$(git diff --name-only --no-renames --diff-filter=AM ${{ github.event.pull_request.base.sha }} -- packages/*/meta.json)
+            echo "Add or updated packages: ${modified}"
+            if [[ -n "${modified}" ]]; then
+              echo "::set-output name=modified::true"
+            else
+              echo "::set-output name=modified::false"
+            fi
 
       - name: "Obtain copy of old metadata, if any"
         run: |
-          git cat-file blob ${{ github.event.pull_request.base.sha }}:packages/${{ matrix.package }}/meta.json > packages/${{ matrix.package }}/meta.json.old || :
-
-      - name: "Validate metadata"
-        run: |
-            tools/validate_package.py ${{ matrix.package }}
-
-      - name: "Install required binary dependencies"
-        run: |
-          deps=$(tools/gather_dependencies.py ${{ matrix.package }})
-          if [[ -n "$deps" ]]; then
-            echo "Installing required binary depedencies: $deps"
-            sudo apt-get install --no-install-recommends $deps
-          else
-            echo "No required binary depedencies to be installed"
-          fi
-
-      - name: "Install and build package"
-        run: |
-          tools/download_dependencies.py ${{ matrix.package }}
-          cd _unpacked_archives
-          for file in * ; do
-            ln -s "$PWD/$file" "/home/runner/gap/pkg/$file"
-          done
-          cd /home/runner/gap/pkg
-
-          MAKEFLAGS=-j3 ../bin/BuildPackages.sh --strict
-
-      - name: "Run package tests with minimal packages"
-        run: |
-            for pkg in ${{ matrix.package }}; do
-                echo "FORCE_QUIT_GAP(TestPackage(\"$pkg\"));" | gap
+            for PKG in ${modified}; do
+              git cat-file blob ${{ github.event.pull_request.base.sha }}:$PKG > $PKG.old || :
             done
 
-      # TODO: also test `LoadAllPackages` works!
-      # TODO: perhaps: also run packages with `LoadAllPackages`?
-      # TODO: ideally test both with last GAP release (but using the current package distro,
-      #       and also with latest GAP nightly build)
+      - name: "Validate metadata"
+        run: tools/validate_package.py ${modified}
+
+  call-test-all:
+    name: "Test packages"
+    needs: detect-changes
+    if: ${{ needs.detect-changes.outputs.modified == 'true' }}
+    uses: ./.github/workflows/test-all.yml
