@@ -69,9 +69,9 @@ def metadata(pkg_name: str) -> dict:
         with open(fname, "r", encoding="utf-8") as f:
             pkg_json = json.load(f)
     except (OSError, IOError):
-        error("{}: file {} not found".format(pkg_name, fname))
+        error("file {} not found".format(pkg_name, fname))
     except json.JSONDecodeError as e:
-        error("{}: invalid json in {}\n{}".format(pkg_name, fname, e.msg))
+        error("invalid json in {}\n{}".format(pkg_name, fname, e.msg))
     return pkg_json
 
 
