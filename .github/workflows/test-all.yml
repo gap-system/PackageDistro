@@ -62,6 +62,13 @@ jobs:
       - name: "Cleanup archives"
         run: tools/cleanup_archives.py
 
+      # Setup ccache, to speed up repeated compilation of the same binaries
+      # (i.e., GAP and the packages)
+      - name: Setup ccache
+        uses: Chocobo1/setup-ccache-action@v1
+        with:
+          update_packager_index: false
+
       # TOOD: gap should come from a container
       - name: "Install GAP"
         run: |
