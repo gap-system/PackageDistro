@@ -65,13 +65,11 @@ def download_archive(  # pylint: disable=inconsistent-return-statements
 
     if os.path.exists(archive_fname) and os.path.isfile(archive_fname):
         notice(
-            "{}: {} already exists, not downloading again".format(
-                pkg_name, archive_fname
-            )
+            "{} already exists, not downloading again".format(archive_fname)
         )
         return archive_fname
     url = archive_url(pkg_name)
-    notice("{}: downloaded {} to {}".format(pkg_name, url, archive_fname))
+    notice("downloading {} to {}".format(url, archive_fname))
 
     for i in range(tries):
         try:
@@ -82,9 +80,9 @@ def download_archive(  # pylint: disable=inconsistent-return-statements
                         f.write(chunk)
             return archive_fname
         except requests.RequestException:
-            notice("{}: attempt {}/{} failed".format(pkg_name, i + 1, tries))
+            notice("  attempt {}/{} failed".format(i + 1, tries))
 
-    error("{}: failed to download archive".format(pkg_name))
+    error("  failed to download archive {}".format(archive_fname))
 
 
 def main(pkg_names) -> None:
