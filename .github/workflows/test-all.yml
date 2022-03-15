@@ -203,10 +203,11 @@ jobs:
                 "
 
       - name: "Get job status"
+        id: job-status
         if: ${{ always() }}
         run: |
           PKG="${{ matrix.package }}"
-          STATUS="${{ job.status }}"
+          echo '::set-output name=status::${{ job.status }}'
 
       - name: "Run tests with OnlyNeeded"
         timeout-minutes: 10
@@ -222,24 +223,30 @@ jobs:
                 "
 
       - name: "Get job status with OnlyNeeded"
+        id: job-status-only-needed
         if: ${{ always() }}
         run: |
-          STATUS_ONLY_NEEDED="${{ job.status }}"
+          PKG="${{ matrix.package }}"
+          echo '::set-output name=status::${{ job.status }}'
 
       - name: "Create job status json-file"
         if: ${{ always() }}
         run: |
+          PKG="${{ matrix.package }}"
+          STATUS="${{ steps.job-status.outputs.status }}"
+          STATUS_ONLY_NEEDED="${{ steps.job-status-only-needed.outputs.status }}"
           jq --null-input \
             --arg status "${STATUS}" \
             --arg status_only_needed "${STATUS_ONLY_NEEDED}" \
-            '{"status": $status, "status_only_needed": $status_only_needed}' > reports-${PKG}.json
-          cat reports-${PKG}.json
+            '{"status": $status, "status_only_needed": $status_only_needed}' > ${PKG}.json
+          cat ${PKG}.json
 
       - name: "Upload job status as artifact"
+        if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
-          name: reports-${PKG}
-          path: reports-${PKG}.json
+          name: "reports-${{ matrix.package }}"
+          path: "${{ matrix.package }}.json"
 
   report:
     name: "Report"
@@ -247,8 +254,19 @@ jobs:
     if: ${{ always() }}
     runs-on: ubuntu-18.04
     steps:
+      - name: "Create _reports directory"
+        run: |
+          mkdir -p _reports
+
       - name: "Download every job status"
-        uses: elonh/download-artifact-regexp@master # FIXME/TODO: Switch to download-artifact once they officially support wildcards
+        uses: elonh/download-artifact-regexp@master # FIXME/TODO: Switch to actions/download-artifact once they officially support wildcards, see https://github.com/actions/download-artifact/issues/6
         with:
          pattern: reports-*
-      - run: ls
+         path: _reports
+
+      - name: "Show Files"
+        run: |
+          cd _reports
+          ls
+          cd reports-ace
+          ls
