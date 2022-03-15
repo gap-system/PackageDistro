@@ -34,7 +34,7 @@ jobs:
           # if no meta.json file was modified, and the trigger was a push to
           # main, then skip all remaining steps (this situation happens if e.g.
           # the workflow YAML files or README.md are updated)
-          modified=$(git diff --name-only --no-renames --diff-filter=M ${{ github.event.before }} -- */meta.json)
+          modified=$(git diff --name-only --no-renames --diff-filter=M ${{ github.event.before }} -- packages/*/meta.json)
           echo "::set-output name=modified::$modified"
 
   assemble:
@@ -52,20 +52,19 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/_archives
-          key: archives-${{ hashFiles('**/meta.json') }}
+          key: archives-${{ hashFiles('packages/*/meta.json') }}
           restore-keys: |
             archives-
 
       - name: "Install package distribution tools"
         run: |
-          git clone https://github.com/gap-system/PackageDistroTools _tools
-          pip install -r _tools/requirements.txt
+          python -m pip install -r tools/requirements.txt
 
       - name: "Assemble distribution"
-        run: _tools/assemble_distro.py
+        run: tools/assemble_distro.py
 
       - name: "Cleanup archives"
-        run: _tools/cleanup_archives.py
+        run: tools/cleanup_archives.py
 
       # Decide to which tag to update: if the trigger for this job was the
       # creation of a tag `vX.Y.Z`, then upload to that tag.

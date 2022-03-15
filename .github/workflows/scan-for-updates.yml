@@ -29,8 +29,7 @@ jobs:
 
       - name: "Install package distribution tools"
         run: |
-          git clone https://github.com/gap-system/PackageDistroTools _tools
-          pip install -r _tools/requirements.txt
+          python -m pip install -r tools/requirements.txt
 
       - name: "Install GAP"
         uses: gap-actions/setup-gap@v2
@@ -43,22 +42,23 @@ jobs:
         run: |
           # first put GAP into PATH
           ln -s $HOME/gap/bin/gap.sh /usr/local/bin/gap
-          _tools/scan_for_updates.py
+          tools/scan_for_updates.py
 
       - name: "Upload metadata as artifact for pull request jobs"
         uses: actions/upload-artifact@v2
         with:
           name: metadata
-          path: "*/meta.json"
+          path: "packages/*/meta.json"
 
       - name: "Creates jobs for modified packages"
         id: get-names
         run: |
-            modified=$(git diff --name-only --no-renames --diff-filter=M -- */meta.json)
+            modified=$(git diff --name-only --no-renames --diff-filter=M -- packages/*/meta.json)
 
             MATRIX="{\"package\":["
             for PKG in ${modified}; do
               PKG=${PKG%"/meta.json"}
+              PKG=${PKG#"packages/"}
               echo "${PKG}"
               MATRIX="${MATRIX}\"${PKG}\","
             done
@@ -83,7 +83,7 @@ jobs:
 
       - name: "Extract package version"
         run: |
-          pkg_version=$(jq -r '.Version' < ${{ matrix.package }}/meta.json)
+          pkg_version=$(jq -r '.Version' < packages/${{ matrix.package }}/meta.json)
           echo "PKG_VERSION=$pkg_version" >> $GITHUB_ENV
 
       # We set up a GitHub App in order to ensure that workflows are run on the PRs

@@ -1,0 +1,113 @@
+{
+  "AbstractHTML": "ToricVarieties provides data structures to handle toric varieties by their commutative algebra structure and by their combinatorics. For combinatorics, it uses the Convex package. Its goal is to provide a suitable framework to work with toric varieties.",
+  "ArchiveFormats": ".zip",
+  "ArchiveSHA256": "8adc04114e17ea005c8ee5a50de8dba74bc62de6b96d75b97888dc39ceead732",
+  "ArchiveURL": "https://github.com/homalg-project/ToricVarieties_project/releases/download/2021-11-17/ToricVarieties",
+  "AutoDoc": {
+    "TitlePage": {
+      "Copyright": "\nThis package may be distributed under the terms and conditions\nof the GNU Public License Version 2 or (at your option) any later version.\n"
+    }
+  },
+  "AvailabilityTest": null,
+  "Date": "17/11/2021",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">=4.7",
+    "NeededOtherPackages": [
+      [
+        "GradedRingForHomalg",
+        ">=2020.04.25"
+      ],
+      [
+        "Modules",
+        ">=2016.01.20"
+      ],
+      [
+        "GradedModules",
+        ">=2015.12.04"
+      ],
+      [
+        "ToolsForHomalg",
+        ">=2016.02.17"
+      ],
+      [
+        "AutoDoc",
+        ">=2016.02.16"
+      ],
+      [
+        "NConvex",
+        ">=2020.11-04"
+      ]
+    ],
+    "SuggestedOtherPackages": [
+      [
+        "4ti2Interface",
+        ">=2020.04.25"
+      ],
+      [
+        "TopcomInterface",
+        ">=2019.06.15"
+      ],
+      [
+        "Convex",
+        ">= 2021.04.24"
+      ]
+    ]
+  },
+  "IssueTrackerURL": "https://homalg-project.github.io/ToricVarieties_project/ToricVarieties/issues",
+  "Keywords": [
+    "Toric geometry",
+    "Toric varieties",
+    "Divisors",
+    "Geometry"
+  ],
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "ToricVarieties",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "A package to compute properties of toric varieties",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSHA256": "12fee70ef10b96bbcb9c2582906a0b621a421591b8d0d40bc4cb98b0e02",
+  "PackageInfoURL": "https://homal-project.github.io/ToricVarieties_project/ToricVarieties/PackageInfo.g",
+  "PackageName": "ToricVarieties",
+  "PackageWWWHome": "https://homalg-project.github.io/ToricVarieties_project/ToricVarieties/",
+  "Persons": [
+    {
+      "Email": "gutsche@mathematik.uni-siegen.de",
+      "FirstNames": "Sebastian",
+      "Institution": "University of Siegen",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Gutsche",
+      "Place": "Siegen",
+      "PostalAddress": "Department Mathematik\nUniversität Siegen\nWalter-Flex-Straße 3\n57072 Siegen\nGermany",
+      "WWWHome": "https://sebasguts.github.io"
+    },
+    {
+      "Email": "martin.bies@alumni.uni-heidelberg.de",
+      "FirstNames": "Martin",
+      "Institution": "University of Pennsylvania",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Bies",
+      "Place": "Philadelphia",
+      "PostalAddress": "Department of Mathematics \nUniversity of Pennsylvania \nDavid Rittenhouse Laboratory \n209 S 33rd St \nPhiladelphia \nPA 19104",
+      "WWWHome": "https://martinbies.github.io/"
+    }
+  ],
+  "README_URL": "https://homalg-project.github.io/ToricVarieties_project/ToricVarieties/README",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://homalg-project.github.io/ToricVarieties_project/ToricVarieties"
+  },
+  "Status": "deposited",
+  "Subtitle": "A package to handle toric varieties",
+  "Version": "2021.11.17"
+}
