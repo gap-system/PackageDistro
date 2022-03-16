@@ -48,7 +48,7 @@ FILES.sort()
 PKG_STATUS = {}
 
 for FILE in FILES:
-    with open(FILE, 'r') as f:
+    with open(FILE, 'r', encoding='utf-8', errors='ignore') as f:
         data = json.load(f)
 
     PKG_STATUS[os.path.splitext(os.path.basename(FILE))[0]] = data
