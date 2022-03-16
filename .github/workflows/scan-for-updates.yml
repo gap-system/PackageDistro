@@ -51,7 +51,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: metadata
-          path: "packages/*/meta.json"
+          path: packages
 
       - name: "Creates jobs for modified packages"
         id: get-names
@@ -83,6 +83,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: metadata
+          path: packages
 
       - name: "Extract package version"
         run: |
