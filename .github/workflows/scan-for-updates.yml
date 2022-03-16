@@ -45,6 +45,7 @@ jobs:
       - name: "Scan for updates"
         run: |
           tools/scan_for_updates.py
+          git status
 
       - name: "Upload metadata as artifact for pull request jobs"
         uses: actions/upload-artifact@v2
