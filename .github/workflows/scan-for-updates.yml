@@ -38,10 +38,12 @@ jobs:
           GAP_PKGS_TO_CLONE: 'json'
           GAP_PKGS_TO_BUILD: 'json'
 
+      - name: "Symlink GAP into PATH"
+        run: |
+          ln -s $HOME/gap/bin/gap.sh /usr/local/bin/gap
+
       - name: "Scan for updates"
         run: |
-          # first put GAP into PATH
-          ln -s $HOME/gap/bin/gap.sh /usr/local/bin/gap
           tools/scan_for_updates.py
 
       - name: "Upload metadata as artifact for pull request jobs"
