@@ -32,7 +32,7 @@ if num_args > 5:
 
 repo = runID = hash = hash_short ='Unknown'
 
-if num_args > 1: repo = sys.argv[1]
+if num_args > 1: repo = 'https://github.com/'+sys.argv[1]
 if num_args > 2: runID = sys.argv[2]
 if num_args > 3: hash = sys.argv[3]
 if num_args > 4: hash_short = sys.argv[4]
