@@ -1,7 +1,10 @@
-# PackageDistroTools
+# PackageDistro
 
-This repository contains tools for maintaining the
-[GAP package distribution](https://github.com/gap-system/PackageDistro).
+The GAP package distribution is managed via this repository: this repository
+contains the meta data of all the GAP packages in the distribution. We also
+upload snapshots the package distribution tarballs to appropriate release tags
+on this repository.
+
 
 Below we give an overview of the available scripts and the various GitHub
 Workflows.
