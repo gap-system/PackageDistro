@@ -24,10 +24,7 @@ import json
 from datetime import datetime
 
 ################################################################################
-# Insist on Python >= 3.6
-if sys.version_info < (3,6):
-    error('Python 3.6 or newer is required')
-
+# Arguments
 num_args = len(sys.argv)
 
 if num_args > 5:
