@@ -107,7 +107,7 @@ def output_json(pkginfos_dir = pkginfos_dir):
     if (
         gap_exec(
             r"OutputJson(\"{}\");".format(pkginfos_dir),
-            gap="gap {}/scan_for_updates.g".format(dir_of_this_file),
+            gap="gap -A -b {}/scan_for_updates.g".format(dir_of_this_file),
         )
         != 0
     ):
@@ -144,7 +144,7 @@ def add_sha256_to_json(archive_name_lookup: dict) -> None:
             join(pkginfos_dir, pkgname + ".g")
         )
         pkg_json["ArchiveSHA256"] = sha256(pkg_archive)
-        notice("{0}: writing updated {0}".format(pkg_json_file))
+        notice("update {0}".format(pkg_json_file))
         with open(pkg_json_file, "w", encoding="utf-8") as f:
             json.dump(pkg_json, f, indent=2, ensure_ascii=False, sort_keys=True)
             f.write("\n")

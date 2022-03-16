@@ -41,12 +41,12 @@ OutputJson := function(pkginfos_dir)
       pkginfo := Filename(pkginfos_dir, pkginfo);
       pkginfo_rec := PackageInfoRec(pkginfo);
       pkgname := LowercaseString(pkginfo_rec.PackageName);
-      if not IsDirectoryPath(pkgname) then
-        PrintFormatted("{1}: the directory {1} does not exist, skipping!\n", pkgname);
+      json_fname := Concatenation("packages/", pkgname, "/meta.json");
+      if not IsExistingFile(json_fname) then
+        PrintFormatted("{1} does not exist, skipping!\n", json_fname);
         continue;
       fi;
-      json_fname := Concatenation(pkgname, "/meta.json");
-      PrintFormatted("{}: updating {}\n", pkgname, json_fname);
+      PrintFormatted("updating {}\n", json_fname);
       if IsBound(pkginfo_rec.PackageDoc) and not IsList(pkginfo_rec.PackageDoc) then
         pkginfo_rec.PackageDoc := [pkginfo_rec.PackageDoc];
       fi;
