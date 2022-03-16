@@ -134,13 +134,13 @@ jobs:
       - name: "Create tarball"
         run: |
           cd $HOME
-          tar --exclude-vcs --exclude=build --exclude=.libs --auto-compress -cf gap.tar.gz gap
+          tar --exclude-vcs --exclude=build --exclude=.libs -cf gap.tar.zst gap
 
       - name: "Upload GAP with packages as artifact"
         uses: actions/upload-artifact@v2
         with:
           name: gap
-          path: /home/runner/gap.tar.gz
+          path: /home/runner/gap.tar.zst
 
       - name: "Creates jobs for all packages"
         id: get-names
@@ -186,7 +186,7 @@ jobs:
       - name: "Extract GAP artifact"
         run: |
           cd $HOME
-          tar xvf $GITHUB_WORKSPACE/gap.tar.gz
+          tar xvf $GITHUB_WORKSPACE/gap.tar.zst
           ln -s $HOME/gap/bin/gap.sh /usr/local/bin/gap
           cd $GITHUB_WORKSPACE
 
