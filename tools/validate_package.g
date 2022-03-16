@@ -117,7 +117,7 @@ ValidatePackagesArchive := function(unpacked_dir, pkgnames)
       if json_old <> fail then
         json_old := JsonStringToGap(json_old);
       fi;
-      if json_old <> fail and
+      if json_old <> fail and json <> json_old and
          CompareVersionNumbers(json_old.Version, json.Version) then
         PrintToFormatted("*errout*",
                          Concatenation("\033[33m{}: current release version is {},",
