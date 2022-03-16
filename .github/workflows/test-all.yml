@@ -267,9 +267,14 @@ jobs:
          pattern: reports-*
          path: _reports
 
-      - name: "Show Files"
-        run: |
-          cd _reports
-          ls
-          cd reports-ace
-          ls
+      - name: "Set up Python 3.7"
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+
+      - name: "Generate test_status.json"
+        id: report
+        run: python generate_test_status.py ${{ github.repository }}$ ${{ github.run_id }} "$GITHUB_SHA" $(git rev-parse --short "$GITHUB_SHA")
+
+      - name: "Print test_status.json"
+        run: cat test_status.json
