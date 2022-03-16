@@ -70,6 +70,19 @@ for pkg, data in PKG_STATUS.items():
     data['archive_url'] = meta['ArchiveURL']
     data['archive_sha256'] = meta['ArchiveSHA256']
 
+    # Get maximum of each status via the hierarchy 'failure' > 'cancelled' > 'success'.
+    # For safety, check if status is always known.
+    status_list = [data['status_default'], data['status_only_needed']]
+    unknown_status_list = [status for status in status_list if not status in ['failure', 'cancelled', 'success']]
+    if len(unknown_status_list) > 0:
+        data['status'] = 'unknown'
+    elif 'failure' in status_list:
+        data['status'] = 'failure'
+    elif 'cancelled' in status_list:
+        data['status'] = 'cancelled'
+    else: # all are 'success'
+        data['status'] = 'success'
+
 REPORT['pkgs'] = PKG_STATUS
 
 # Summary Information
@@ -88,7 +101,7 @@ for pkg, data in PKG_STATUS.items():
     elif status == 'cancelled':
         REPORT['cancelled'] += 1
     else:
-        warning('Unknown job status \"'+status+'\" for pkg \"'+pkg+'\"')
+        warning('Unknown job status detected for pkg \"'+pkg+'\"')
 
 with open('test-status.json', 'w') as f:
     json.dump(REPORT, f, ensure_ascii=False, indent=2)

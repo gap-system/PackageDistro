@@ -206,7 +206,7 @@ jobs:
                 "
 
       - name: "Get job status"
-        id: job-status
+        id: job-status-default
         if: ${{ always() }}
         run: |
           PKG="${{ matrix.package }}"
@@ -236,12 +236,12 @@ jobs:
         if: ${{ always() }}
         run: |
           PKG="${{ matrix.package }}"
-          STATUS="${{ steps.job-status.outputs.status }}"
+          STATUS_DEFAULT="${{ steps.job-status-default.outputs.status }}"
           STATUS_ONLY_NEEDED="${{ steps.job-status-only-needed.outputs.status }}"
           jq --null-input \
-            --arg status "${STATUS}" \
+            --arg status_default "${STATUS_DEFAULT}" \
             --arg status_only_needed "${STATUS_ONLY_NEEDED}" \
-            '{"status": $status, "status_only_needed": $status_only_needed}' > ${PKG}.json
+            '{"status_default": $status_default, "status_only_needed": $status_only_needed}' > ${PKG}.json
           cat ${PKG}.json
 
       - name: "Upload job status as artifact"
