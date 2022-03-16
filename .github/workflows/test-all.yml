@@ -280,7 +280,7 @@ jobs:
 
       - name: "Generate test_status.json"
         id: report
-        run: python tools/generate_test_status.py ${{ github.repository }}$ ${{ github.run_id }} "$GITHUB_SHA" $(git rev-parse --short "$GITHUB_SHA")
+        run: python tools/generate_test_status.py ${{ github.repository }}$ ${{ github.run_id }}
 
       - name: "Print test_status.json"
         run: cat test_status.json
