@@ -100,7 +100,7 @@ jobs:
       - uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ steps.generate-token.outputs.token }}
-          add-paths: ${{ matrix.package }}
+          add-paths: packages/${{ matrix.package }}
           commit-message: "[${{ matrix.package }}] Update to ${{ env.PKG_VERSION }}"
           body: ""
           branch: automatic/${{ matrix.package }}
