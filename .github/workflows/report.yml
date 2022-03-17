@@ -1,0 +1,58 @@
+name: "Test generation of comparison reports"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: "Run Tests"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: "Generate Test Results"
+        uses: ./.github/workflows/test-all.yml
+
+
+  report:
+    name: "Create Report"
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: "Set up Python 3.7"
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+
+      - name: "Create data and gh-pages worktree"
+        run: |
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
+          git fetch
+          git branch --track data origin/data
+          git worktree add data origin/data
+          git branch --track gh-pages origin/gh-pages
+          git worktree add gh-pages origin/gh-pages
+
+      - name: "Generate report"
+        id: report
+        run: |
+          HASH=$(jq -r '.hash' <<< ${{ needs.test.outputs.test-status }})
+          DIR="data/reports/manual/${HASH}"
+          echo ${{ needs.test.outputs.test-status }} > "${DIR}/test-status.json"
+          python pkg-report.py ${DIR}
+
+      - name: "Push report"
+        id: push-report
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          cd data
+          git add -A
+          git commit -m "Automated report"
+          git push origin HEAD:data
+          cd ../gh-pages
+          git add -A
+          git commit -m "Update redirect"
+          git push origin HEAD:gh-pages
