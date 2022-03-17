@@ -81,7 +81,7 @@ for pkg, data in PKG_STATUS.items():
         data['status'] = 'unknown'
     elif 'failure' in status_list:
         data['status'] = 'failure'
-    elif 'cancelled' or 'skipped' in status_list:
+    elif 'cancelled' in status_list or 'skipped' in status_list:
         data['status'] = 'cancelled'
     else: # all are 'success'
         data['status'] = 'success'
