@@ -21,11 +21,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: "Test SHA"
-        run: |
-          echo "$GITHUB_SHA"
-          echo $(git rev-parse --short "$GITHUB_SHA")
-
       - name: "Setup _archives symlink"
         run: mkdir -p ~/_archives && ln -s ~/_archives
 
@@ -146,9 +141,9 @@ jobs:
             for PKG in packages/*/meta.json; do
               PKG=${PKG%"/meta.json"}
               PKG=${PKG#"packages/"}
-              if [[ ${PKG} == anupq ]]; then
-                break # FIXME: HACK for faster testing, remove before merge
-              fi
+              # if [[ ${PKG} == anupq ]]; then
+              #   break # FIXME: HACK for faster testing, remove before merge
+              # fi
               # skip packages without a TestFile
               if ! jq -e -r '.TestFile' < packages/${PKG}/meta.json > /dev/null ; then
                 echo "Skipping ${PKG}"
