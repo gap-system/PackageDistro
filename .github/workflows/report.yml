@@ -2,6 +2,7 @@ name: "Test generation of comparison reports"
 
 on:
   workflow_dispatch:
+  push:
 
 jobs:
   test:
