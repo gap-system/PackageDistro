@@ -259,8 +259,8 @@ jobs:
       - name: "Download every job status"
         uses: elonh/download-artifact-regexp@master # FIXME/TODO: Switch to actions/download-artifact once they officially support wildcards, see https://github.com/actions/download-artifact/issues/6
         with:
-         pattern: reports-*
-         path: _reports
+          pattern: reports-*
+          path: _reports
 
       # warning/error in utils.py throw a syntax error with default version of python
       - name: "Set up Python 3.7"
