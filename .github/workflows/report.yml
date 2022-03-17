@@ -36,6 +36,7 @@ jobs:
         run: |
           HASH=$(jq -r '.hash' <<< ${{ needs.test.outputs.test-status }})
           DIR="data/reports/manual/${HASH}"
+          mkdir -p ${DIR}
           echo ${{ needs.test.outputs.test-status }} > "${DIR}/test-status.json"
           python pkg-report.py ${DIR}
 
@@ -50,5 +51,5 @@ jobs:
           git push origin HEAD:data
           cd ../gh-pages
           git add -A
-          git commit -m "Update redirect"
+          git commit -m "Automated redirect"
           git push origin HEAD:gh-pages
