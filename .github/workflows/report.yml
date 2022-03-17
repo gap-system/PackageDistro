@@ -42,9 +42,10 @@ jobs:
         id: report
         run: |
           JSON='${{ env.test-status }}'
-          HASH=$(jq -r '.hash' <<< ${JSON})
-          echo ${HASH}
-          DIR_REL="manual/${HASH}"
+          HASH=$(jq -r '.hash_short' <<< ${JSON})
+          DATE=$(jq -r '.date' <<< ${JSON})
+          DATE=$(echo $DATE | sed 's/ /-/g' | cut -d '.' -f1)
+          DIR_REL="manual/${HASH}-${DATE}"
           DIR="data/reports/${DIR_REL}"
           mkdir -p ${DIR}
           echo ${JSON} > "${DIR}/test-status.json"
