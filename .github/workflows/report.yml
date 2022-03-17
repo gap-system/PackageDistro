@@ -35,7 +35,8 @@ jobs:
       - name: "Generate report"
         id: report
         run: |
-          HASH=$(jq -r '.hash' <<< ${{ needs.test.outputs.test-status }})
+          JSON=${{ needs.test.outputs.test-status }}
+          HASH=$(jq -r '.hash' <<< ${JSON})
           DIR="data/reports/manual/${HASH}"
           mkdir -p ${DIR}
           echo ${{ needs.test.outputs.test-status }} > "${DIR}/test-status.json"
