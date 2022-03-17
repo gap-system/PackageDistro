@@ -6,6 +6,7 @@
 name: "Assemble the package distribution"
 
 on:
+  workflow_dispatch:  # manual trigger for debugging
   push:
     branches:
       - main
@@ -34,8 +35,15 @@ jobs:
           # if no meta.json file was modified, and the trigger was a push to
           # main, then skip all remaining steps (this situation happens if e.g.
           # the workflow YAML files or README.md are updated)
-          modified=$(git diff --name-only --no-renames --diff-filter=M ${{ github.event.before }} -- packages/*/meta.json)
-          echo "::set-output name=modified::$modified"
+          modified=$(git diff --name-only --no-renames ${{ github.event.before }} -- packages/*/meta.json)
+          echo "modified:"
+          echo "$modified"
+          if [[ -n "$modified" ]]; then
+              echo "::set-output name=modified::true"
+          elif [[ ${{ github.event_name }} == 'workflow_dispatch' ]]; then
+              echo "workflow_dispatch, forcing modified=true"
+              echo "::set-output name=modified::true"
+          fi
 
   assemble:
     name: "Assemble the package distribution"
@@ -81,6 +89,7 @@ jobs:
 
       - name: "Upload files to tag"
         uses: softprops/action-gh-release@v1
+        if: ${{ github.event_name != 'workflow_dispatch' }}
         with:
           tag_name: ${{ env.RELEASE_TAG }}
           target_commitish: ${{ github.sha }}
@@ -90,5 +99,7 @@ jobs:
           files: |
             _releases/packages.tar.gz
             _releases/packages.tar.gz.sha256
+            _releases/packages-required.tar.gz
+            _releases/packages-required.tar.gz.sha256
             _releases/package-infos.json.gz
             _releases/package-infos.json.gz.sha256

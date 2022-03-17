@@ -21,13 +21,17 @@ from download_packages import download_archive
 from utils import error, normalize_pkg_name, metadata, sha256, all_packages
 
 
+def write_sha256(filename):
+    with open(filename + ".sha256", "w") as f:
+        f.write(sha256(filename))
+
 def make_package_info_json(pkgs):
     package_info = dict()
     for p in pkgs:
         package_info[p] = metadata(p)
     return package_info
 
-def make_packages_tar_gz(archive_dir, release_dir, pkgs):
+def make_packages_tar_gz(tarname, archive_dir, release_dir, pkgs):
     # Check archive files are up to date
     archive_list = {}
     for p in pkgs:
@@ -38,7 +42,7 @@ def make_packages_tar_gz(archive_dir, release_dir, pkgs):
         for pkg_name, pkg_archive in archive_list.items():
             print("Extracting tarball: ", pkg_archive)
             # Unpack into packagename-unpack
-            unpack = tempdir + "/" + pkg_name + "-unpack"
+            unpack = os.path.join(tempdir, pkg_name + "-unpack")
             os.mkdir(unpack)
             shutil.unpack_archive(pkg_archive, unpack)
             # Check there is only one directory. Rename it to standardised name (pkg_name)
@@ -48,14 +52,14 @@ def make_packages_tar_gz(archive_dir, release_dir, pkgs):
             elif len(pkgdirs) > 1:
                 error("Error: more than one package directory found in archive: " + pkg_archive)
             else:
-                os.rename(unpack + "/" + pkgdirs[0], unpack + "/" + pkg_name)
-                os.rename(unpack + "/" + pkg_name, tempdir + "/" + pkg_name)
+                os.rename(os.path.join(unpack, pkgdirs[0]), os.path.join(unpack, pkg_name))
+                os.rename(os.path.join(unpack, pkg_name), os.path.join(tempdir, pkg_name))
             os.rmdir(unpack)
 
-        print("Creating final tarball: ", release_dir + "/packages.tar.gz")
-        subprocess.run(["tar", "czf", release_dir + "/packages.tar.gz", "-C", tempdir, "."])
-        with open(release_dir + "/packages.tar.gz.sha256", "w") as f:
-            f.write(sha256(release_dir + "/packages.tar.gz"))
+        full_tarname = os.path.join(release_dir, tarname)
+        print("Creating final tarball: ", full_tarname)
+        subprocess.run(["tar", "czf", full_tarname, "-C", tempdir, "."])
+        write_sha256(full_tarname)
 
 def main():
     archive_dir = "_archives"
@@ -71,14 +75,15 @@ def main():
         pkgs = [normalize_pkg_name(x) for x in pkgs]
 
     # Make packages.tar.gz
-    make_packages_tar_gz(archive_dir, release_dir, pkgs)
+    make_packages_tar_gz("packages.tar.gz", archive_dir, release_dir, pkgs)
+    make_packages_tar_gz("packages-required.tar.gz", archive_dir, release_dir, ['gapdoc', 'primgrp', 'smallgrp', 'transgrp'])
 
     # Make package-infos.json
     package_info = make_package_info_json(pkgs)
-    with gzip.open(release_dir + "/package-infos.json.gz", "wt", encoding="utf-8") as f:
+    package_infos_file = os.path.join(release_dir, "package-infos.json.gz")
+    with gzip.open(package_infos_file, "wt", encoding="utf-8") as f:
         json.dump(package_info, f, indent=4)
-    with open(release_dir + "/package-infos.json.gz.sha256", "w") as f:
-        f.write(sha256(release_dir + "/package-infos.json.gz"))
+    write_sha256(package_infos_file)
 
 
 if __name__ == "__main__":
