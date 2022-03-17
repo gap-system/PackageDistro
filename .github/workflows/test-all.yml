@@ -236,10 +236,7 @@ jobs:
           PKG="${{ matrix.package }}"
           STATUS_DEFAULT="${{ steps.job-status-default.outputs.status }}"
           STATUS_ONLY_NEEDED="${{ steps.job-status-only-needed.outputs.status }}"
-          jq --null-input \
-            --arg status_default "${STATUS_DEFAULT}" \
-            --arg status_only_needed "${STATUS_ONLY_NEEDED}" \
-            '{"status_default": $status_default, "status_only_needed": $status_only_needed}' > ${PKG}.json
+          echo "{\"status_default\": \"$STATUS_DEFAULT\", \"status_only_needed\": \"$STATUS_ONLY_NEEDED\"}" > ${PKG}.json
           cat ${PKG}.json
 
       - name: "Upload job status as artifact"
