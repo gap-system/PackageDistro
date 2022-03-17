@@ -11,6 +11,7 @@ import hashlib
 import json
 import os
 import sys
+import tempfile
 
 from accepts import accepts
 from os.path import join

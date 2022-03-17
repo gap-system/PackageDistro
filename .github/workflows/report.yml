@@ -7,13 +7,15 @@ on:
 jobs:
   test:
     name: "Run Tests"
-    uses: ./.github/workflows/test-all.yml
+    uses: ./.github/workflows/report-caller.yml
 
 
   report:
     name: "Create Report"
     runs-on: ubuntu-latest
     needs: test
+    env:
+      test-status: ${{ fromJson(needs.test.outputs.test-status) }}
     if: ${{ always() }}
     steps:
       - uses: actions/checkout@v2
@@ -22,6 +24,10 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.7
+
+      - name: "Install package distribution tools"
+        run: |
+          python -m pip install -r tools/requirements.txt
 
       - name: "Create data and gh-pages worktree"
         run: |
@@ -35,12 +41,14 @@ jobs:
       - name: "Generate report"
         id: report
         run: |
-          JSON=$(echo ${{ needs.test.outputs.test-status }})
+          JSON='${{ env.test-status }}'
           HASH=$(jq -r '.hash' <<< ${JSON})
-          DIR="data/reports/manual/${HASH}"
+          echo ${HASH}
+          DIR_REL="manual/${HASH}"
+          DIR="data/reports/${DIR_REL}"
           mkdir -p ${DIR}
           echo ${JSON} > "${DIR}/test-status.json"
-          python pkg-report.py ${DIR}
+          python tools/generate_report.py ${DIR_REL}
 
       - name: "Push report"
         id: push-report

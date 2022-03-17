@@ -1,0 +1,24 @@
+name: "Test all packages"
+
+on:
+  workflow_dispatch:
+  workflow_call:
+    outputs:
+      test-status:
+        description: "The test-status report"
+        value: ${{ jobs.report.outputs.test-status }}
+
+jobs:
+  report:
+    name: "Report"
+    runs-on: ubuntu-latest
+    outputs:
+      test-status: ${{ steps.test-status.outputs.test-status }}
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: "Output test-status"
+        id: test-status
+        run: |
+          TEST_STATUS=$(cat test-status.json | jq -aRs)
+          echo "::set-output name=test-status::$TEST_STATUS"

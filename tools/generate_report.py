@@ -37,7 +37,8 @@ if num_args < 1 or num_args > 4:
 
 # relative paths to report directories from ROOT
 ROOT = 'data/reports'
-DIR_LAST_REPORT_REL = '/latest'
+os.makedirs(ROOT, exist_ok = True)
+DIR_LAST_REPORT_REL = 'latest'
 OVERRIDE_LAST = True
 
 if num_args > 1: DIR_REPORT_REL = sys.argv[1]
@@ -47,7 +48,6 @@ if num_args > 3: OVERRIDE_LAST = string_to_bool(sys.argv[3])
 DIR_REPORT = os.path.realpath(os.path.join(ROOT, DIR_REPORT_REL))
 DIR_LAST_REPORT_SYMBOLIC = os.path.join(ROOT, DIR_LAST_REPORT_REL)
 DIR_LAST_REPORT = os.path.realpath(DIR_LAST_REPORT_SYMBOLIC)
-os.makedirs(DIR_LAST_REPORT, exist_ok = True)
 
 REPORT_PATH = os.path.join(DIR_REPORT, 'test-status.json')
 LAST_REPORT_PATH = os.path.join(DIR_LAST_REPORT, 'test-status.json')
@@ -57,7 +57,7 @@ if OVERRIDE_LAST:
     os.makedirs(DIR_BADGE, exist_ok = True)
 
     DIR_REDIRECT = os.path.join('gh-pages', DIR_LAST_REPORT_REL)
-    os.makedirs(DIR_BADGE, exist_ok = True)
+    os.makedirs(DIR_REDIRECT, exist_ok = True)
 
 ################################################################################
 # Read current and previous test-status
@@ -68,7 +68,7 @@ if os.path.isfile(LAST_REPORT_PATH):
     with open(LAST_REPORT_PATH, 'r') as f:
         LAST_REPORT = json.load(f)
 else: # deal with the first run of this script
-    LAST_REPORT = {'pkgs': {}}
+    LAST_REPORT = {'pkgs': {}, 'hash': 'Unknown'}
 
 REPO = REPORT['repo']
 
