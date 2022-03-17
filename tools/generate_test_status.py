@@ -73,15 +73,15 @@ for pkg, data in PKG_STATUS.items():
     data['archive_url'] = meta['ArchiveURL']
     data['archive_sha256'] = meta['ArchiveSHA256']
 
-    # Get maximum of each status via the hierarchy 'failure' > 'cancelled' > 'success'.
+    # Get maximum of each status via the hierarchy 'failure' > 'cancelled' = 'skipped' > 'success'.
     # For safety, check if status is always known.
-    status_list = [data['status_default'], data['status_only_needed']]
-    unknown_status_list = [status for status in status_list if not status in ['failure', 'cancelled', 'success']]
+    status_list = [value for key, value in data.items() if key.startswith('status_')]
+    unknown_status_list = [status for status in status_list if not status in ['failure', 'cancelled', 'skipped', 'success']]
     if len(unknown_status_list) > 0:
         data['status'] = 'unknown'
     elif 'failure' in status_list:
         data['status'] = 'failure'
-    elif 'cancelled' in status_list:
+    elif 'cancelled' or 'skipped' in status_list:
         data['status'] = 'cancelled'
     else: # all are 'success'
         data['status'] = 'success'
