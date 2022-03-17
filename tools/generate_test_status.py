@@ -82,7 +82,7 @@ for pkg, data in PKG_STATUS.items():
     elif 'failure' in status_list:
         data['status'] = 'failure'
     elif 'cancelled' in status_list or 'skipped' in status_list:
-        data['status'] = 'cancelled'
+        data['status'] = 'skipped'
     else: # all are 'success'
         data['status'] = 'success'
 
@@ -92,7 +92,7 @@ REPORT['pkgs'] = PKG_STATUS
 REPORT['total'] = 0
 REPORT['success'] = 0
 REPORT['failure'] = 0
-REPORT['cancelled'] = 0
+REPORT['skipped'] = 0
 
 for pkg, data in PKG_STATUS.items():
     REPORT['total'] += 1
@@ -101,8 +101,8 @@ for pkg, data in PKG_STATUS.items():
         REPORT['success'] += 1
     elif status == 'failure':
         REPORT['failure'] += 1
-    elif status == 'cancelled':
-        REPORT['cancelled'] += 1
+    elif status == 'skipped':
+        REPORT['skipped'] += 1
     else:
         warning('Unknown job status detected for pkg \"'+pkg+'\"')
 
