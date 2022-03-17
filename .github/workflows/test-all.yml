@@ -101,7 +101,7 @@ jobs:
           # "bundled" with NormalizInterface, as this is very slow (takes 5-10
           # minutes). Instead we want it to use libnormaliz-dev installed by
           # us
-          rm -f **/build-normaliz.sh
+          rm -f */build-normaliz.sh
 
           # skip xgap: no X11 headers, and no means to test it
           rm -rf xgap*
