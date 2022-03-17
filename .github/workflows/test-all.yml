@@ -21,6 +21,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: "Test SHA"
+        run: |
+          echo "$GITHUB_SHA"
+          echo $(git rev-parse --short "$GITHUB_SHA")
+
       - name: "Setup _archives symlink"
         run: mkdir -p ~/_archives && ln -s ~/_archives
 
@@ -278,7 +283,7 @@ jobs:
 
       - name: "Generate test-status.json"
         id: report
-        run: python tools/generate_test_status.py ${{ github.repository }} "$GITHUB_RUN_ID"
+        run: python tools/generate_test_status.py ${{ github.repository }} "$GITHUB_RUN_ID" "$GITHUB_SHA" $(git rev-parse --short "$GITHUB_SHA")
 
       - name: "Output test-status"
         id: test-status
