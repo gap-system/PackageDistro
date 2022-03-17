@@ -80,9 +80,11 @@ jobs:
           for f in $GITHUB_WORKSPACE/_archives/* ; do
             case "$f" in
               *.tar.*)
-                tar xvf "$f"
+                echo "Extracting $f"
+                tar xf "$f"
               ;;
               *.zip)
+                echo "Extracting $f"
                 unzip "$f"
               ;;
               *)
