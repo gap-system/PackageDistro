@@ -27,6 +27,9 @@ jobs:
         run: |
           python -m pip install -r tools/requirements.txt
 
+      - name: HACK
+        run: tools/add-pr-comment.py
+
       # Setup ccache, to speed up repeated compilation of the same binaries
       # (i.e., GAP and the packages)
       - name: Setup ccache
