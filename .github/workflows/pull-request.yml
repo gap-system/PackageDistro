@@ -3,6 +3,8 @@ name: "Test pull requests"
 on:
   workflow_dispatch:  # manual trigger for debugging
   pull_request:
+    paths:
+      - 'packages/*/meta.json'
 
 concurrency:
   # group by workflow and ref
