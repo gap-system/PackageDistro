@@ -45,7 +45,7 @@ jobs:
           HASH=$(jq -r '.hash_short' <<< ${JSON})
           DATE=$(jq -r '.date' <<< ${JSON})
           DATE=$(echo $DATE | sed 's/ /-/g' | cut -d '.' -f1)
-          DIR_REL="manual/${HASH}-${DATE}"
+          DIR_REL="manual/${DATE}-${HASH}"
           DIR="data/reports/${DIR_REL}"
           mkdir -p ${DIR}
           jq <<< ${JSON} > "${DIR}/test-status.json"
