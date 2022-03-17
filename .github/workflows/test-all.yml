@@ -195,6 +195,7 @@ jobs:
 
       - name: "Run tests"
         timeout-minutes: 10
+        id: tests-default
         run: |
           PKG=${{ matrix.package }}
           gap -A --quitonbreak -r -c "
@@ -205,14 +206,9 @@ jobs:
                 FORCE_QUIT_GAP(res);
                 "
 
-      - name: "Get job status"
-        id: job-status-default
-        if: ${{ always() }}
-        run: |
-          echo '::set-output name=status::${{ job.status }}'
-
       - name: "Run tests with OnlyNeeded"
         timeout-minutes: 10
+        id: tests-only-needed
         if: ${{ always() }}
         run: |
           PKG=${{ matrix.package }}
@@ -224,18 +220,12 @@ jobs:
                 FORCE_QUIT_GAP(res);
                 "
 
-      - name: "Get job status with OnlyNeeded"
-        id: job-status-only-needed
-        if: ${{ always() }}
-        run: |
-          echo '::set-output name=status::${{ job.status }}'
-
       - name: "Create job status json-file"
         if: ${{ always() }}
         run: |
           PKG="${{ matrix.package }}"
-          STATUS_DEFAULT="${{ steps.job-status-default.outputs.status }}"
-          STATUS_ONLY_NEEDED="${{ steps.job-status-only-needed.outputs.status }}"
+          STATUS_DEFAULT="${{ steps.tests-default.outcome }}"
+          STATUS_ONLY_NEEDED="${{ steps.tests-only-needed.outcome }}"
           echo "{\"status_default\": \"$STATUS_DEFAULT\", \"status_only_needed\": \"$STATUS_ONLY_NEEDED\"}" > ${PKG}.json
           cat ${PKG}.json
 
