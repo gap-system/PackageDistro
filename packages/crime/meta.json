@@ -2,8 +2,8 @@
   "AbstractHTML": "This package computes the cohomology rings of finite p-groups, induced maps, and Massey products.",
   "AcceptDate": "10/2006",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "4435729f945949994d19b0f8341eb4cb29ac396cd46b2230c75bc46f7b0fdd6f",
-  "ArchiveURL": "https://github.com/gap-packages/crime/releases/download/v1.5/crime-1.5",
+  "ArchiveSHA256": "c6630c5d5385caa3a0e470599759f8e42bd5f0147eebfee164ca808cec83371e",
+  "ArchiveURL": "https://github.com/gap-packages/crime/releases/download/v1.6/crime-1.6",
   "AutoDoc": {
     "TitlePage": {
       "Acknowledgements": "\nThis project would not have been possible without Jon Carlson.\nJon devised the algorithms used by <K>ProjectiveResolution</K>,\n<K>CohomologyGenerators</K>, and <K>CohomologyRelators</K>,\nhaving already implemented them in <Package>Magma</Package>,\nand shared these programs with me.\n",
@@ -12,9 +12,9 @@
   },
   "Autoload": false,
   "AvailabilityTest": null,
-  "BannerString": "\nThis is CRIME, Version 1.5\n\"Obviously crime pays, or there'd be no crime\".\n                                G. Gordon Liddy\n\n",
+  "BannerString": "\nThis is CRIME, Version 1.6\n\"Obviously crime pays, or there'd be no crime\".\n                                G. Gordon Liddy\n\n",
   "CommunicatedBy": "Bettina Eick (Braunschweig)",
-  "Date": "11/10/2018",
+  "Date": "17/03/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.9",
@@ -25,6 +25,7 @@
   "Keywords": [
     "cohomology"
   ],
+  "License": "GPL-2.0-or-later",
   "PackageDoc": [
     {
       "ArchiveURLSubset": [
@@ -38,7 +39,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "09e5b6500700e2491f233df430ccb951c3ec1b895c629372e143e0fda3ef3171",
+  "PackageInfoSHA256": "55aa57305113b28ad7cc3ed3185675e2225d5732597454f85b080712fbb89860",
   "PackageInfoURL": "https://gap-packages.github.io/crime/PackageInfo.g",
   "PackageName": "CRIME",
   "PackageWWWHome": "https://gap-packages.github.io/crime/",
@@ -67,5 +68,5 @@
   "Status": "accepted",
   "Subtitle": "A GAP Package to Calculate Group Cohomology and Massey Products",
   "TestFile": "tst/testall.g",
-  "Version": "1.5"
+  "Version": "1.6"
 }
