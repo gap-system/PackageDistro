@@ -7,7 +7,7 @@ on:
 jobs:
   test:
     name: "Run Tests"
-    uses: ./.github/workflows/report-caller.yml
+    uses: ./.github/workflows/test-all.yml
 
 
   report:
@@ -35,7 +35,6 @@ jobs:
       - name: "Generate report"
         id: report
         run: |
-          echo ${{ needs.test.outputs.test-status }}
           JSON=${{ needs.test.outputs.test-status }}
           HASH=$(jq -r '.hash' <<< ${JSON})
           DIR="data/reports/manual/${HASH}"
