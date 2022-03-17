@@ -48,7 +48,7 @@ jobs:
           DIR_REL="manual/${HASH}-${DATE}"
           DIR="data/reports/${DIR_REL}"
           mkdir -p ${DIR}
-          echo ${JSON} > "${DIR}/test-status.json"
+          jq <<< ${JSON} > "${DIR}/test-status.json"
           python tools/generate_report.py ${DIR_REL}
 
       - name: "Push report"
