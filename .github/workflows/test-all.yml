@@ -220,6 +220,8 @@ jobs:
                 FORCE_QUIT_GAP(res);
                 "
 
+      # https://docs.github.com/en/actions/learn-github-actions/contexts#steps-context
+      # steps.<id>.outcome possible values are success, failure, cancelled, or skipped.
       - name: "Create job status json-file"
         if: ${{ always() }}
         run: |
