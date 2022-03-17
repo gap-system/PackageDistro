@@ -268,7 +268,7 @@ jobs:
 
       - name: "Generate test-status.json"
         id: report
-        run: python tools/generate_test_status.py ${{ github.repository }}$ ${{ github.run_id }}
+        run: python tools/generate_test_status.py ${{ github.repository }}$ "$GITHUB_RUN_ID"
 
       - name: "Print test-status.json"
         run: cat test-status.json
