@@ -266,9 +266,9 @@ jobs:
         run: |
           python -m pip install -r tools/requirements.txt
 
-      - name: "Generate test_status.json"
+      - name: "Generate test-status.json"
         id: report
         run: python tools/generate_test_status.py ${{ github.repository }}$ ${{ github.run_id }}
 
-      - name: "Print test_status.json"
-        run: cat test_status.json
+      - name: "Print test-status.json"
+        run: cat test-status.json
