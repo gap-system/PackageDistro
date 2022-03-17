@@ -35,11 +35,11 @@ jobs:
       - name: "Generate report"
         id: report
         run: |
-          JSON=${{ needs.test.outputs.test-status }}
+          JSON=$(echo ${{ needs.test.outputs.test-status }})
           HASH=$(jq -r '.hash' <<< ${JSON})
           DIR="data/reports/manual/${HASH}"
           mkdir -p ${DIR}
-          echo ${{ needs.test.outputs.test-status }} > "${DIR}/test-status.json"
+          echo ${JSON} > "${DIR}/test-status.json"
           python pkg-report.py ${DIR}
 
       - name: "Push report"
