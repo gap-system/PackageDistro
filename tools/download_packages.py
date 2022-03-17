@@ -43,7 +43,7 @@ from os.path import join
 import requests
 from accepts import accepts
 
-from utils import error, notice, normalize_pkg_name, archive_name, archive_url
+from utils import error, notice, normalize_pkg_name, archive_name, archive_url, metadata, sha256
 
 
 @accepts(str, str, int)
@@ -64,9 +64,13 @@ def download_archive(  # pylint: disable=inconsistent-return-statements
         archive_ext = ".zip"
 
     if os.path.exists(archive_fname) and os.path.isfile(archive_fname):
-        notice(
-            "{} already exists, not downloading again".format(archive_fname)
-        )
+        pkg_json = metadata(pkg_name)
+        archive_sha = sha256(archive_fname)
+        if "ArchiveSHA256" in pkg_json and pkg_json["ArchiveSHA256"] != archive_sha:
+            notice("{} already exists, but has SHA256 {}, expected {}".format(archive_fname, archive_sha, pkg_json["ArchiveSHA256"]))
+            os.remove(archive_fname)
+        else:
+            notice("{} already exists, not downloading again".format(archive_fname))
         return archive_fname
     url = archive_url(pkg_name)
     notice("downloading {} to {}".format(url, archive_fname))
