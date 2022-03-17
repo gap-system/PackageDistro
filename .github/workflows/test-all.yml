@@ -3,6 +3,14 @@ name: "Test all packages"
 on:
   workflow_dispatch:
   workflow_call:
+    inputs:
+      pkgarchiveurl:
+        required: true
+        type: string
+    outputs:
+      test-status:
+        description: "The test-status report"
+        value: ${{ jobs.report.outputs.test-status }}
 
 jobs:
   build:
@@ -243,6 +251,8 @@ jobs:
     needs: test-package
     if: ${{ always() }}
     runs-on: ubuntu-latest
+    outputs:
+      test-status: ${{ steps.test-status.outputs.test-status }}
     steps:
       - uses: actions/checkout@v2
 
@@ -268,7 +278,10 @@ jobs:
 
       - name: "Generate test-status.json"
         id: report
-        run: python tools/generate_test_status.py ${{ github.repository }}$ "$GITHUB_RUN_ID"
+        run: python tools/generate_test_status.py ${{ github.repository }} "$GITHUB_RUN_ID"
 
-      - name: "Print test-status.json"
-        run: cat test-status.json
+      - name: "Output test-status"
+        id: test-status
+        run: |
+          TEST_STATUS=$(cat test-status.json)
+          echo "::set-output name=test-status::$TEST_STATUS"
