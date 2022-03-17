@@ -209,7 +209,6 @@ jobs:
         id: job-status-default
         if: ${{ always() }}
         run: |
-          PKG="${{ matrix.package }}"
           echo '::set-output name=status::${{ job.status }}'
 
       - name: "Run tests with OnlyNeeded"
@@ -229,7 +228,6 @@ jobs:
         id: job-status-only-needed
         if: ${{ always() }}
         run: |
-          PKG="${{ matrix.package }}"
           echo '::set-output name=status::${{ job.status }}'
 
       - name: "Create job status json-file"
