@@ -3,10 +3,6 @@ name: "Test all packages"
 on:
   workflow_dispatch:
   workflow_call:
-    inputs:
-      pkgarchiveurl:
-        required: true
-        type: string
     outputs:
       test-status:
         description: "The test-status report"
