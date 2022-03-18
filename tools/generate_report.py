@@ -30,7 +30,7 @@ import json
 # Arguments and Paths
 num_args = len(sys.argv)
 
-if num_args < 1 or num_args > 4:
+if num_args <= 1 or num_args > 4:
     error('Unknown number of arguments')
 
 # relative paths to report directories from ROOT
