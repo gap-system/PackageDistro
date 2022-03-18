@@ -2,13 +2,21 @@
   "AbstractHTML": "<span class=\"pkgname\">simpcomp</span> is a <span class=\"pkgname\">GAP</span> package for working with simplicial complexes. It allows the computation of many properties of simplicial complexes (such as the f-, g- and h-vectors, the face lattice, the automorphism group, (co-)homology with explicit basis computation, intersection form, etc.) and provides the user with functions to compute new complexes from old (simplex links and stars, connected sums, cartesian products, handle additions, bistellar flips, etc.). Furthermore, it comes with an extensive library of known triangulations of manifolds and provides the user with the possibility to create own complex libraries.<br /> <span class=\"pkgname\">simpcomp</span> caches computed properties of a simplicial complex, thus avoiding unnecessary computations, internally handles the vertex labeling of the complexes and insures the consistency of a simplicial complex throughout all operations.<br /> <span class=\"pkgname\">simpcomp</span> relies on the <span class=\"pkgname\">GAP</span> package <span class=\"pkgname\">homology</span> for its homology computation, but also provides the user with an own (co-)homology algorithm in case the packacke <span class=\"pkgname\">homology</span> is not available. For automorphism group computation the <span class=\"pkgname\">GAP</span> package <span class=\"pkgname\">GRAPE</span> is used, which in turn uses the program <tt>nauty</tt> by Brendan McKay. An internal automorphism group calculation algorithm in used as fallback if the <span class=\"pkgname\">GRAPE</span> package is not available.",
   "AcceptDate": "11/2013",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "6629c9b59bb64f19779da52004844553691d02e9a910e6724af55455116d5609",
-  "ArchiveURL": "https://github.com/simpcomp-team/simpcomp/releases/download/v2.1.12/simpcomp--2.1.12",
+  "ArchiveSHA256": "2a1a33068b038776d6932f13b5eb63d32b0799906a2ec190f585b2931d724dcd",
+  "ArchiveURL": "https://github.com/simpcomp-team/simpcomp/releases/download/v2.1.14/simpcomp-2.1.14",
+  "AutoDoc": {
+    "TitlePage": {},
+    "entities": {
+      "DATE": "15/03/2022",
+      "VERSION": "2.1.14",
+      "YEAR": "2022"
+    }
+  },
   "Autoload": false,
   "AvailabilityTest": null,
-  "BannerString": "Loading simpcomp 2.1.12\nby F. Effenberger and J. Spreer\nhttps://github.com/simpcomp-team/simpcomp\n",
+  "BannerString": "Loading simpcomp 2.1.14\nby F. Effenberger and J. Spreer\nhttps://github.com/simpcomp-team/simpcomp\n",
   "CommunicatedBy": "Graham Ellis (Galway)",
-  "Date": "28/05/2021",
+  "Date": "15/03/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.5",
@@ -75,10 +83,10 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "28229f1d4569f4c933f9e0a4a9714e490be017ec549b9788f5c91fd1d4f79138",
-  "PackageInfoURL": "https://simpcomp-team.github.io/simpcomp//PackageInfo.g",
+  "PackageInfoSHA256": "5e5e7eb3b2f286f1c086782fc317a74bbebd2b9a67620af503eb8a41f09489e1",
+  "PackageInfoURL": "https://simpcomp-team.github.io/simpcomp/PackageInfo.g",
   "PackageName": "simpcomp",
-  "PackageWWWHome": "https://simpcomp-team.github.io/simpcomp/",
+  "PackageWWWHome": "https://simpcomp-team.github.io/simpcomp",
   "Persons": [
     {
       "Email": "exilef@gmail.com",
@@ -103,7 +111,7 @@
       "WWWHome": "http://www.tacet.de/Jonathan"
     }
   ],
-  "README_URL": "https://simpcomp-team.github.io/simpcomp//README.md",
+  "README_URL": "https://simpcomp-team.github.io/simpcomp/README.md",
   "SourceRepository": {
     "Type": "git",
     "URL": "https://github.com/simpcomp-team/simpcomp"
@@ -111,5 +119,5 @@
   "Status": "accepted",
   "Subtitle": "A GAP toolbox for simplicial complexes",
   "TestFile": "tst/simpcomp.tst",
-  "Version": "2.1.12"
+  "Version": "2.1.14"
 }
