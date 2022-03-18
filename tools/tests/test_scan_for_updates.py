@@ -96,13 +96,12 @@ def test_scan_updates(ensure_in_tests_dir, tmpdir):
     assert e.type == SystemExit
     assert e.value.code == 1
 
-    output_json(str(tmpdir))
+    output_json(["aclib", "atlasrep", "badjson", "toricvarieties"], str(tmpdir))
     assert os.system("git diff --exit-code packages/aclib/meta.json") != 0
     assert os.system("git diff --exit-code packages/atlasrep/meta.json") != 0
     assert os.system("git diff --exit-code packages/badjson/meta.json") == 0
     assert os.system("git diff --exit-code packages/toricvarieties/meta.json") == 0
     reset()
-    output_json("bananaananan")
 
 
 def test_main(ensure_in_tests_dir):
