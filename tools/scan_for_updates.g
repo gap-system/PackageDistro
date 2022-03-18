@@ -27,7 +27,7 @@ function(o, x)
     PrintTo(o, "null");
 end);
 
-OutputJson := function(pkginfos_dir)
+OutputJson := function(updated_pkgs, pkginfos_dir)
   local pkginfo, pkginfo_rec, pkgname, json_fname;
 
   if not IsString(pkginfos_dir) or not IsDirectoryPath(pkginfos_dir) then
@@ -36,21 +36,19 @@ OutputJson := function(pkginfos_dir)
 
   pkginfos_dir := Directory(pkginfos_dir);
 
-  for pkginfo in DirectoryContents(pkginfos_dir) do
-    if not StartsWith(pkginfo, ".") then
-      pkginfo := Filename(pkginfos_dir, pkginfo);
-      pkginfo_rec := PackageInfoRec(pkginfo);
-      pkgname := LowercaseString(pkginfo_rec.PackageName);
-      json_fname := Concatenation("packages/", pkgname, "/meta.json");
-      if not IsExistingFile(json_fname) then
-        PrintFormatted("{1} does not exist, skipping!\n", json_fname);
-        continue;
-      fi;
-      PrintFormatted("updating {}\n", json_fname);
-      if IsBound(pkginfo_rec.PackageDoc) and not IsList(pkginfo_rec.PackageDoc) then
-        pkginfo_rec.PackageDoc := [pkginfo_rec.PackageDoc];
-      fi;
-      FileString(json_fname, GapToJsonString(pkginfo_rec));
+  for pkgname in updated_pkgs do
+    pkginfo := Filename(pkginfos_dir, Concatenation(pkgname, ".g"));
+    pkginfo_rec := PackageInfoRec(pkginfo);
+    Assert(0, pkgname = LowercaseString(pkginfo_rec.PackageName));
+    json_fname := Concatenation("packages/", pkgname, "/meta.json");
+    if not IsExistingFile(json_fname) then
+      PrintFormatted("{1} does not exist, skipping!\n", json_fname);
+      continue;
     fi;
+    PrintFormatted("updating {}\n", json_fname);
+    if IsBound(pkginfo_rec.PackageDoc) and not IsList(pkginfo_rec.PackageDoc) then
+      pkginfo_rec.PackageDoc := [pkginfo_rec.PackageDoc];
+    fi;
+    FileString(json_fname, GapToJsonString(pkginfo_rec));
   od;
 end;
