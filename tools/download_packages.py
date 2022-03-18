@@ -71,7 +71,7 @@ def download_archive(  # pylint: disable=inconsistent-return-statements
             os.remove(archive_fname)
         else:
             notice("{} already exists, not downloading again".format(archive_fname))
-        return archive_fname
+            return archive_fname
     url = archive_url(pkg_name)
     notice("downloading {} to {}".format(url, archive_fname))
 
