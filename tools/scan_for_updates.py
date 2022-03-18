@@ -117,6 +117,10 @@ def output_json(updated_pkgs, pkginfos_dir = pkginfos_dir):
 def download_package_archives(pkgs):
     archive_name_lookup = {}
     for pkgname in pkgs:
+        # force a fresh download, in case upstream changed the archive in the meantime
+        archive_fname = join(archive_dir, archive_name(pkgname))
+        if os.path.exists(archive_fname):
+            os.remove(archive_fname)
         archive_name_lookup[pkgname] = download_archive(archive_dir, pkgname)
     return archive_name_lookup
 
