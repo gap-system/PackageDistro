@@ -52,7 +52,10 @@ jobs:
       - name: "Scan for updates"
         run: |
           tools/scan_for_updates.py
-          git status
+          git status -s
+
+      - name: "Cleanup archives"
+        run: tools/cleanup_archives.py
 
       - name: "Upload metadata as artifact for pull request jobs"
         uses: actions/upload-artifact@v2
