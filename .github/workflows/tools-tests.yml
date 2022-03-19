@@ -1,6 +1,13 @@
-name: Run tests
+#
+# This workflow tests the Python scripts in the 'tools' directory
+#
+name: "Test Python tools"
 
-on: workflow_dispatch  # for debugging
+on:
+  workflow_dispatch:  # manual trigger for debugging
+  pull_request:
+    paths:
+      - 'tools/*'
 
 jobs:
   py39: 
@@ -15,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install -r requirements.txt
+          python -m pip install -r tools/requirements.txt
           python -m pip install pytest mock
           
       - name: Run tests
