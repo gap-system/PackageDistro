@@ -51,8 +51,7 @@ def download_pkg_info(pkg_name: str) -> str:
             )
         )
         return False
-    response.encoding = "utf-8"
-    return response.text.encode("utf-8")
+    return response.content
 
 
 @accepts(str, str)
