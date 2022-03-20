@@ -56,7 +56,7 @@ def download_pkg_info(pkg_name: str) -> str:
 
 
 @accepts(str, str)
-def gap_exec(commands: str, gap="gap") -> int:
+def gap_exec(commands: str, args="") -> int:
 
     with subprocess.Popen(
         r'echo "{}"'.format(commands),
@@ -64,10 +64,9 @@ def gap_exec(commands: str, gap="gap") -> int:
         shell=True,
     ) as cmd:
         with subprocess.Popen(
-            gap,
+            "gap -A -b --quitonbreak -q " + args,
             stdin=cmd.stdout,
             shell=True,
-            stdout=subprocess.DEVNULL,
         ) as GAP:
             GAP.wait()
             return GAP.returncode
@@ -108,7 +107,7 @@ def output_json(updated_pkgs, pkginfos_dir = pkginfos_dir):
     str = '\\", \\"'.join(updated_pkgs)
     result = gap_exec(
             r"OutputJson([\"{}\"], \"{}\");".format(str, pkginfos_dir),
-            gap="gap -A -b {}/scan_for_updates.g".format(dir_of_this_file),
+            gap="{}/scan_for_updates.g".format(dir_of_this_file),
         )
     if result != 0:
         error("Something went wrong")

@@ -37,7 +37,9 @@ name, or the path to a meta.json file. For example:
 import os
 import sys
 import shutil
+import tarfile
 from os.path import join
+from tempfile import TemporaryDirectory
 
 from accepts import accepts
 
@@ -47,28 +49,39 @@ from scan_for_updates import download_pkg_info, gap_exec
 from utils import notice, warning, error, normalize_pkg_name, archive_name, metadata, sha256
 
 
+def validate_tarball(filename):
+    with tarfile.open(filename) as tf:
+        names = tf.getnames()
+        if len(names) == 0:
+            error("tarball is empty")
 
-def unpack_archive(archive_dir, unpack_dir, pkg_name):
-    archive_fname = join(archive_dir, archive_name(pkg_name))
-    if not os.path.exists(unpack_dir):
-        os.mkdir(unpack_dir)
-    notice("unpacking {} into {} ...".format(archive_fname, unpack_dir))
-    shutil.unpack_archive(archive_fname, unpack_dir)
+        # no entry may contain ".."
+        first = next(filter(lambda n: ".." in n, names), None)
+        if first != None:
+            error("tarball has bad entry {}".format(first))
 
-def unpacked_archive_name(unpack_dir, pkg_name):
-    for x in os.listdir(unpack_dir):
-        if len(x) >= len(pkg_name) and x[: len(pkg_name)].lower() == pkg_name:
-            return join(unpack_dir, x)
-    warning("{}: couldn't determine the unpacked archive directory!")
+        # get the basedir (all entries are supposed to be contained in that)
+        basedir = names[0].split('/')[0]
+
+        # all entries must either be equal to basedir or start with basedir+'/'
+        first = next(filter(lambda n: basedir != n.split('/')[0], names), None)
+        if first != None:
+            error("tarball has entry {} outside of basedir {}".format(first, basedir))
+
+        # must have a PackageInfo.g
+        if not os.path.join(basedir, 'PackageInfo.g') in names:
+            error("tarball is missing PackageInfo.g")
+
+        return basedir
 
 
-def validate_package(archive_dir, unpack_dir, pkg_name):
+def validate_package(archive_fname, pkgdir, pkg_name):
     pkg_json = metadata(pkg_name)
 
-    pkg_info_name = join(
-        unpacked_archive_name(unpack_dir, pkg_name), "PackageInfo.g"
-    )
+    pkg_info_name = join(pkgdir, "PackageInfo.g")
 
+    # verify the SHA256 for the PackageInfo.g that we recorded as PackageInfoSHA256
+    # matches what is in the tarball
     if pkg_json["PackageInfoSHA256"] != sha256(pkg_info_name):
         error(
             "{0}/meta.yml:PackageInfoSHA256 is not the SHA256 of {1}".format(
@@ -76,46 +89,33 @@ def validate_package(archive_dir, unpack_dir, pkg_name):
             )
         )
 
-    packed_name = join(archive_dir, archive_name(pkg_name))
-
-    if pkg_json["ArchiveSHA256"] != sha256(packed_name):
+    if pkg_json["ArchiveSHA256"] != sha256(archive_fname):
         error(
             "{0}/meta.yml:ArchiveSHA256 is not the SHA256 of {1}".format(
                 pkg_name, packed_name
             )
         )
 
-    fname = join("packages", pkg_name, "meta.json.old")
-    if not os.path.exists(fname):
-        notice("{0} is not present, new package!".format(fname))
 
-    # TODO: check SHA256 hashes for PackageinfoURL and archive are the same.
-
-
-def main(pkg_name):
-    unpack_dir = "_unpacked_archives"
+def main(pkgs):
     archive_dir = "_archives"
+    dir_of_this_file = os.path.dirname(os.path.realpath(__file__))
 
-    download_archive(archive_dir, pkg_name)
-    unpack_archive(archive_dir, unpack_dir, pkg_name)
-
-    if validate_package(archive_dir, unpack_dir, pkg_name):
-        dir_of_this_file = os.path.dirname(os.path.realpath(__file__))
-        unpacked_name = unpacked_archive_name(unpack_dir, pkg_name)
-        if (
-            gap_exec(
-                r"ValidatePackagesArchive(\"{}\", \"{}\");".format(
-                    unpacked_name, pkg_name
-                ),
-                gap="gap {}/validate_package.g".format(dir_of_this_file),
-            )
-            != 0
-        ):
-            error("{}: validation FAILED!".format(pkg_name))
-        else:
-            notice("{}: validated ok!".format(pkg_name))
+    with TemporaryDirectory() as tempdir:
+        for pkg_name in pkgs:
+            archive_fname = download_archive(archive_dir, pkg_name)
+            pkgdir = join(tempdir, validate_tarball(archive_fname))
+            shutil.unpack_archive(archive_fname, tempdir)
+            validate_package(archive_fname, pkgdir, pkg_name)
+            result = gap_exec(
+                    r"ValidatePackagesArchive(\"{}\", \"{}\");".format(pkgdir, pkg_name),
+                    args="{}/validate_package.g".format(dir_of_this_file),
+                )
+            if result != 0:
+                error("{}: FAILED".format(pkg_name))
+            else:
+                notice("{}: PASSED".format(pkg_name))
 
 
 if __name__ == "__main__":
-    for i in range(1, len(sys.argv)):
-        main(normalize_pkg_name(sys.argv[i]))
+    main([normalize_pkg_name(x) for x in sys.argv[1:]])
