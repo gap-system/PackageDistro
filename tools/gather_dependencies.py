@@ -35,6 +35,10 @@ ubtunu_deps = {
 'ringsforhomalg': [ 'singular' ],
 'singular': [ 'singular' ],
 'zeromqinterface': [ 'libzmq3-dev' ],
+
+# HACK for ModulePresentationsForCAP until there is a proper fix, see
+# <https://github.com/homalg-project/homalg_project/issues/465#issuecomment-1068653563>
+'modulepresentationsforcap': [ 'singular' ],
 }
 
 @accepts(str, set)
