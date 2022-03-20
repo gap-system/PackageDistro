@@ -1,3 +1,8 @@
+#
+# This workflow is run regularly and scans for package updates, by
+# downloading the file specified by the `PackageInfoURL` in each package
+# and comparing it against what was there already.
+#
 name: "Scan for updates"
 
 on:
@@ -9,27 +14,20 @@ jobs:
   scan-for-updates:
     name: "Scan for package updates"
     runs-on: ubuntu-latest
-    # FIXME: containers don't seem to work :-(
-    # container: ghcr.io/gap-system/gap-docker-master:master
     outputs:
       matrix: ${{ steps.get-names.outputs.matrix }}
     steps:
       - uses: actions/checkout@v2
 
-      - name: "Setup _archives symlink"
-        run: mkdir -p ~/_archives && ln -s ~/_archives
-
+      # Cache the package archives we download across runs of this job
+      # to speed up things considerably
       - name: "Cache archives"
         uses: actions/cache@v2
         with:
-          path: ~/_archives
+          path: _archives
           key: archives-${{ hashFiles('**/meta.json') }}
           restore-keys: |
             archives-
-
-      - name: "Install package distribution tools"
-        run: |
-          python -m pip install -r tools/requirements.txt
 
       # Setup ccache, to speed up repeated compilation of the same binaries
       # (i.e., GAP and the packages)
@@ -45,15 +43,13 @@ jobs:
           GAP_PKGS_TO_CLONE: 'json'
           GAP_PKGS_TO_BUILD: 'json'
 
-      - name: "Symlink GAP into PATH"
-        run: |
-          ln -s $HOME/gap/bin/gap.sh /usr/local/bin/gap
+      - name: "Install prerequisites for package distribution tools"
+        run: python -m pip install -r tools/requirements.txt
 
       - name: "Scan for updates"
-        run: |
-          tools/scan_for_updates.py
-          git status -s
+        run: tools/scan_for_updates.py
 
+      # remove archives we don't need anymore; this reduces the size of the caches
       - name: "Cleanup archives"
         run: tools/cleanup_archives.py
 
@@ -63,6 +59,8 @@ jobs:
           name: metadata
           path: packages
 
+      # The following builds a job matrix; we lunch a copy of the "create-pull-request"
+      # for each package whose meta.json was modified by `scan_for_updates.py`
       - name: "Creates jobs for modified packages"
         id: get-names
         run: |
