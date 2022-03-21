@@ -2,13 +2,13 @@
   "AbstractHTML": "The LPRES Package defines new GAP objects to work with L-presented groups, namely groups given by a finite generating set and a possibly-infinite set of relations given as iterates of finitely many seed relations by a finite set of endomorphisms. The package implements nilpotent quotient, Todd-Coxeter and Reidemeister-Schreier algorithms for L-presented groups.",
   "AcceptDate": "09/2018",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "595115fe5fe62574a4304647deeb3e4b375d8223392cb7de2531eeb5b847aca6",
-  "ArchiveURL": "https://github.com/gap-packages/lpres/releases/download/v1.0.1/lpres-1.0.1",
+  "ArchiveSHA256": "11b6644650459cccbe45ebcd791c5e8c713843604ae0b622a19a17b8d486b5c2",
+  "ArchiveURL": "https://github.com/gap-packages/lpres/releases/download/v1.0.3/lpres-1.0.3",
   "Autoload": false,
   "AvailabilityTest": null,
-  "BannerString": "Loading lpres 1.0.1 ...\n",
+  "BannerString": "Loading lpres 1.0.3 ...\n",
   "CommunicatedBy": "Alexander Konovalov (St Andrews)",
-  "Date": "14/11/2018",
+  "Date": "20/03/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.9",
@@ -56,6 +56,7 @@
     "computational",
     "parallel computing"
   ],
+  "License": "GPL-2.0-or-later",
   "PackageDoc": [
     {
       "ArchiveURLSubset": [
@@ -68,7 +69,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "e84acdd294753edb4247823c8595f4866890fa1388dd14c4b80e7840ddff08ac",
+  "PackageInfoSHA256": "b76bced985076763ddf459da8f3c37229f9b8b9bc63a05d0dbee5f867346550e",
   "PackageInfoURL": "https://gap-packages.github.io/lpres/PackageInfo.g",
   "PackageName": "lpres",
   "PackageWWWHome": "https://gap-packages.github.io/lpres",
@@ -82,13 +83,13 @@
     {
       "Email": "laurent.bartholdi@gmail.com",
       "FirstNames": "Laurent",
-      "Institution": "Georg-August Universität zu Göttingen",
+      "Institution": "Universität des Saarlandes",
       "IsAuthor": false,
       "IsMaintainer": true,
       "LastName": "Bartholdi",
-      "Place": "Göttingen",
-      "PostalAddress": "Mathematisches Institut\nBunsenstraße 3-5\nD-37073 Göttingen\nGermany",
-      "WWWHome": "http://www.uni-math.gwdg.de/laurent"
+      "Place": "Saarbrücken",
+      "PostalAddress": "FR Mathematik+Informatik\nUniversität des Saarlandes\nD-66041 Saarbrücken\nGermany",
+      "WWWHome": "https://www.math.uni-sb.de/ag/bartholdi"
     }
   ],
   "README_URL": "https://gap-packages.github.io/lpres/README.md",
@@ -99,5 +100,5 @@
   "Status": "accepted",
   "Subtitle": "Nilpotent Quotients of L-Presented Groups",
   "TestFile": "tst/testall.g",
-  "Version": "1.0.1"
+  "Version": "1.0.3"
 }
