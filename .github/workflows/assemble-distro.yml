@@ -25,7 +25,7 @@ on:
 # only run at most one instances of this workflow at a time for each branch
 # resp. tag. Starting a new one cancels previously running ones.
 concurrency:
-  group: assemble-pkgdist
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
