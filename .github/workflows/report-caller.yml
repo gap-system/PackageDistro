@@ -1,7 +1,6 @@
-name: "Test all packages"
+name: "Test report.yml"
 
 on:
-  workflow_dispatch:
   workflow_call:
     outputs:
       test-status:
@@ -20,5 +19,5 @@ jobs:
       - name: "Output test-status"
         id: test-status
         run: |
-          TEST_STATUS=$(cat test-status.json | jq -aRs)
+          TEST_STATUS=$(cat test-status.json | jq -aR)
           echo "::set-output name=test-status::$TEST_STATUS"
