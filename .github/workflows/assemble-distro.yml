@@ -63,13 +63,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: "Setup _archives symlink"
-        run: mkdir -p ~/_archives && ln -s ~/_archives
-
+      # Cache the package archives we download across runs of this job
+      # to speed up things considerably
       - name: "Cache archives"
         uses: actions/cache@v2
         with:
-          path: ~/_archives
+          path: _archives
           key: archives-${{ hashFiles('packages/*/meta.json') }}
           restore-keys: |
             archives-

@@ -30,7 +30,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: _archives
-          key: archives-${{ hashFiles('**/meta.json') }}
+          key: archives-${{ hashFiles('packages/*/meta.json') }}
           restore-keys: |
             archives-
 
