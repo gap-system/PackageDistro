@@ -355,5 +355,5 @@ jobs:
       - name: "Output test-status"
         id: test-status
         run: |
-          TEST_STATUS=$(cat test-status.json)
+          TEST_STATUS=$(cat test-status.json | jq -aRs)
           echo "::set-output name=test-status::$TEST_STATUS"
