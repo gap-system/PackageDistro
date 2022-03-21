@@ -41,14 +41,19 @@ jobs:
       - name: "Generate report"
         id: report
         run: |
+          # Generate id for test-status
+          ROOT="data/reports"
           JSON='${{ env.test-status }}'
           HASH=$(jq -r '.hash_short' <<< ${JSON})
           DATE=$(jq -r '.date' <<< ${JSON})
           DATE=$(echo $DATE | sed 's/ /-/g' | cut -d '.' -f1)
           DIR_REL="manual/${DATE}-${HASH}"
-          DIR="data/reports/${DIR_REL}"
+          DIR="${ROOT}/${DIR_REL}"
+          JSON=$(echo ${JSON} | jq '.id |= ["${DIR_REL}"] + .')
+          # Write test-status
           mkdir -p ${DIR}
           jq <<< ${JSON} > "${DIR}/test-status.json"
+          # Generate report
           python tools/generate_report.py ${DIR_REL}
 
       - name: "Push report"
