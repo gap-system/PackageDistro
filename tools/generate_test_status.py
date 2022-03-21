@@ -39,34 +39,34 @@ if num_args > 4: hash_short = sys.argv[4]
 
 ################################################################################
 # Collect the job-status of each package from _reports/
-FILES = []
-for FILE in glob.glob('_reports/**/*.json', recursive=True):
-    FILES.append(FILE)
+files = []
+for file in glob.glob('_reports/**/*.json', recursive=True):
+    files.append(file)
 
-FILES.sort()
+files.sort()
 
-PKG_STATUS = {}
+pkgs = {}
 
-for FILE in FILES:
-    with open(FILE, 'r', encoding='utf-8', errors='ignore') as f:
+for file in files:
+    with open(file, 'r', encoding='utf-8', errors='ignore') as f:
         data = json.load(f)
 
-    PKG_STATUS[os.path.splitext(os.path.basename(FILE))[0]] = data
+    pkgs[os.path.splitext(os.path.basename(file))[0]] = data
 
 
 ################################################################################
 # Generate main test-status.json
 
 # General Information
-REPORT = {}
-REPORT['repo'] = repo
-REPORT['workflow'] = repo+'/actions/runs/'+runID
-REPORT['hash'] = hash
-REPORT['hash_short'] = hash_short
-REPORT['date'] = str(datetime.now())
+report = {}
+report['repo'] = repo
+report['workflow'] = repo+'/actions/runs/'+runID
+report['hash'] = hash
+report['hash_short'] = hash_short
+report['date'] = str(datetime.now())
 
 # Package Information
-for pkg, data in PKG_STATUS.items():
+for pkg, data in pkgs.items():
     with open(os.path.join('packages', pkg, 'meta.json'), 'r') as f:
         meta = json.load(f)
     data['version'] = meta['Version']
@@ -86,25 +86,25 @@ for pkg, data in PKG_STATUS.items():
     else: # all are 'success'
         data['status'] = 'success'
 
-REPORT['pkgs'] = PKG_STATUS
+report['pkgs'] = pkgs
 
 # Summary Information
-REPORT['total'] = 0
-REPORT['success'] = 0
-REPORT['failure'] = 0
-REPORT['skipped'] = 0
+report['total'] = 0
+report['success'] = 0
+report['failure'] = 0
+report['skipped'] = 0
 
-for pkg, data in PKG_STATUS.items():
-    REPORT['total'] += 1
+for pkg, data in pkgs.items():
+    report['total'] += 1
     status = data['status']
     if status == 'success':
-        REPORT['success'] += 1
+        report['success'] += 1
     elif status == 'failure':
-        REPORT['failure'] += 1
+        report['failure'] += 1
     elif status == 'skipped':
-        REPORT['skipped'] += 1
+        report['skipped'] += 1
     else:
         warning('Unknown job status detected for pkg \"'+pkg+'\"')
 
 with open('test-status.json', 'w') as f:
-    json.dump(REPORT, f, ensure_ascii=False, indent=2)
+    json.dump(report, f, ensure_ascii=False, indent=2)
