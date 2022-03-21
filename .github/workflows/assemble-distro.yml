@@ -16,6 +16,8 @@ name: "Assemble the package distribution"
 on:
   workflow_dispatch:  # manual trigger for debugging
   push:
+    paths:
+      - 'packages/*/meta.json'
     branches:
       - main
     tags:
@@ -29,36 +31,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  find-modified:
-    name: "Check if any packages were modified"
-    runs-on: ubuntu-latest
-    outputs:
-      modified: ${{ steps.find-modified.outputs.modified }}
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-
-      - name: "Check if any packages were modified"
-        id: find-modified
-        run: |
-          # if no meta.json file was modified, and the trigger was a push to
-          # main, then skip all remaining steps (this situation happens if e.g.
-          # the workflow YAML files or README.md are updated)
-          modified=$(git diff --name-only --no-renames ${{ github.event.before }} -- packages/*/meta.json)
-          echo "modified:"
-          echo "$modified"
-          if [[ -n "$modified" ]]; then
-              echo "::set-output name=modified::true"
-          elif [[ ${{ github.event_name }} == 'workflow_dispatch' ]]; then
-              echo "workflow_dispatch, forcing modified=true"
-              echo "::set-output name=modified::true"
-          fi
-
   assemble:
     name: "Assemble the package distribution"
-    if: ${{ needs.find-modified.outputs.modified != '' }}
-    needs: find-modified
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
