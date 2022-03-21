@@ -2,12 +2,12 @@
   "AbstractHTML": "The <span class=\"pkgname\">Automata</span> package, as its name suggests, is package with algorithms to deal with automata.",
   "AcceptDate": "09/2004",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSHA256": "89db068eea7acccf3a9a52ebdcc8d12fc9f320f5451c16b0c4b6a76dade28b29",
-  "ArchiveURL": "https://github.com/gap-packages/automata/releases/download/v1.14/automata-1.14",
+  "ArchiveSHA256": "0098035c11d4583055cdc391f6b08aa2603ed3259f605fe5cc5c4ed8adb7b3a7",
+  "ArchiveURL": "https://github.com/gap-packages/automata/releases/download/v1.15/automata-1.15",
   "Autoload": false,
   "AvailabilityTest": null,
   "CommunicatedBy": "Edmund Robertson (St. Andrews)",
-  "Date": "26/09/2018",
+  "Date": "20/03/2022",
   "Dependencies": {
     "GAP": ">=4.8",
     "NeededOtherPackages": [],
@@ -23,6 +23,7 @@
     "Automata",
     "Rational Expressions"
   ],
+  "License": "GPL-2.0-or-later",
   "PackageDoc": [
     {
       "ArchiveURLSubset": [
@@ -35,7 +36,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "9f6c8e4c4153d3b31733e297fa6b30bda79058c8474694f662eaf6db4be64aaa",
+  "PackageInfoSHA256": "72b37e0910f3654cb740b6f094049790001592beae46dfc8eac14b3f138fc4df",
   "PackageInfoURL": "https://gap-packages.github.io/automata/PackageInfo.g",
   "PackageName": "Automata",
   "PackageWWWHome": "https://gap-packages.github.io/automata/",
@@ -49,7 +50,7 @@
       "LastName": "Delgado",
       "Place": "Porto",
       "PostalAddress": "Departamento de Matemática - Faculdade de Ciências\nPorto\nPortugal",
-      "WWWHome": "http://www.fc.up.pt/cmup/mdelgado/"
+      "WWWHome": "https://cmup.fc.up.pt/cmup/mdelgado/"
     },
     {
       "Email": "steve.linton@st-andrews.ac.uk",
@@ -78,5 +79,5 @@
   "Status": "accepted",
   "Subtitle": "A package on automata",
   "TestFile": "tst/testall.g",
-  "Version": "1.14"
+  "Version": "1.15"
 }
