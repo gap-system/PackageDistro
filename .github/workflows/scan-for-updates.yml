@@ -3,6 +3,11 @@
 # downloading the file specified by the `PackageInfoURL` in each package
 # and comparing it against what was there already.
 #
+# Then for each package where a diff is found, a new `CI` job is created,
+# see `create-pull-request` below, which creates a pull request updating
+# the package. Note that we perform no validation of the update here;
+# that is a task for the GItHub workflow in `pull-request.yml`.
+#
 name: "Scan for updates"
 
 on:
@@ -31,7 +36,7 @@ jobs:
 
       # Setup ccache, to speed up repeated compilation of the same binaries
       # (i.e., GAP and the packages)
-      - name: Setup ccache
+      - name: "Setup ccache"
         uses: Chocobo1/setup-ccache-action@v1
         with:
           update_packager_index: false
@@ -65,7 +70,6 @@ jobs:
         id: get-names
         run: |
             modified=$(git diff --name-only --no-renames --diff-filter=M -- packages/*/meta.json)
-
             MATRIX="{\"package\":["
             for PKG in ${modified}; do
               PKG=${PKG%"/meta.json"}

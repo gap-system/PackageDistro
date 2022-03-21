@@ -1,5 +1,6 @@
 #
-# This workflow tests the Python scripts in the 'tools' directory
+# This workflow is run for pull requests the modify the `tools` directory
+# and runs tests for the Python scripts in that directory
 #
 name: "Test Python tools"
 

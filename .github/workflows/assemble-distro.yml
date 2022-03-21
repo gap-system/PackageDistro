@@ -1,8 +1,16 @@
-# This action is invoked when new changes are pushed to the `main` branch,
-# or new tags are created. It then assembles the package distribution
-# tarballs, and uploads it to the given tag, or (in the case of pushes to
-# `main`) to the tag `latest` (this tag then is also changed to point to
-# the new HEAD of `main`)
+#
+# This workflow is invoked when new changes are pushed to the `main` branch,
+# or when new tags are created. It then assembles the package distribution
+# tarballs, and uploads them to the given tag, or (in the case of pushes to
+# `main`) to the tag `latest`; the `latest` tag then is also changed to point
+# to the new HEAD of `main`.
+#
+# The purpose of this is that on the one hand, for a GAP releases such as
+# 4.12.0, the corresponding package distribution is fixed and available from a
+# matching tag, e.g. `v4.12.0`. On the other hand, for daily testing of GAP
+# development versions and the package distribution, the `latest` tag can be
+# used to get a snapshot of the package distribution as it is at the moment.
+#
 name: "Assemble the package distribution"
 
 on:
@@ -14,6 +22,8 @@ on:
       - v[1-9]+.[0-9]+
       - v[1-9]+.[0-9]+.[0-9]+
 
+# only run at most one instances of this workflow at a time for each branch
+# resp. tag. Starting a new one cancels previously running ones.
 concurrency:
   group: assemble-pkgdist
   cancel-in-progress: true

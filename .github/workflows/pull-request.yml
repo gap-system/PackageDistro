@@ -1,4 +1,15 @@
-name: "Test pull requests"
+#
+# This workflow is run for pull requests the modify the `packages` directory.
+# It works in two stages: first it determines the list of added, modified or
+# removed packages; for each added or modified package, it executes the
+# `validate_package.py` script to check for issues with the metadata or
+# tarball. Provided these initial tests pass, the second stage consists of
+# invoking a separate workflow which runs tests for all packages in the
+# package distribution as they would appear when the PR under review would be
+# merged. This is used to determine whether any package tests change from PASS
+# to FAIl or vice versa.
+#
+name: "PR"
 
 on:
   workflow_dispatch:  # manual trigger for debugging
@@ -19,6 +30,8 @@ jobs:
     outputs:
       modified: ${{ steps.modified.outputs.modified }}
     steps:
+      # clone with depth 0, so that we can determine what was changed
+      # TODO: isn't depth 1 sufficient?
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
@@ -29,7 +42,7 @@ jobs:
 
       # Setup ccache, to speed up repeated compilation of the same binaries
       # (i.e., GAP and the packages)
-      - name: Setup ccache
+      - name: "Setup ccache"
         uses: Chocobo1/setup-ccache-action@v1
         with:
           update_packager_index: false
@@ -68,7 +81,7 @@ jobs:
         run: tools/validate_package.py ${modified}
 
   call-test-all:
-    name: "Test packages"
+    name: "pkgs"
     needs: detect-changes
     if: ${{ needs.detect-changes.outputs.modified == 'true' }}
     uses: ./.github/workflows/test-all.yml
