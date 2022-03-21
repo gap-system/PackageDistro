@@ -1,4 +1,4 @@
 {
   "status_default": "success",
-  "status_only_needed": "failure"
+  "status_only_needed": "success"
 }
