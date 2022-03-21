@@ -34,9 +34,9 @@ jobs:
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
           git fetch
           git branch --track data origin/data
-          git worktree add data origin/data
+          git worktree add data data
           git branch --track gh-pages origin/gh-pages
-          git worktree add gh-pages origin/gh-pages
+          git worktree add gh-pages gh-pages
 
       - name: "Generate report"
         id: report
@@ -59,8 +59,8 @@ jobs:
           cd data
           git add -A
           git commit -m "Automated report"
-          git push origin HEAD:data
+          git push
           cd ../gh-pages
           git add -A
           git commit -m "Automated redirect"
-          git push origin HEAD:gh-pages
+          git push
