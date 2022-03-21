@@ -98,8 +98,7 @@ with open(dir_report+'/report.md', 'w') as f:
 
     ############################################################################
     # New Packages
-    pkgs_new = [pkg for pkg in pkgs.keys() if
-        not pkg in last_pkgs.keys()]
+    pkgs_new = pkgs.keys() - last_pkgs.keys()
 
     report_diff['new'] = len(pkgs_new)
     if len(pkgs_new) > 0:
@@ -110,8 +109,7 @@ with open(dir_report+'/report.md', 'w') as f:
 
     ############################################################################
     # Removed Packages
-    pkgs_removed = [pkg for pkg in last_pkgs.keys() if
-        not pkg in pkgs.keys()]
+    pkgs_removed = last_pkgs.keys() - pkgs.keys()
 
     report_diff['removed'] = len(pkgs_removed)
     if len(pkgs_removed) > 0:
