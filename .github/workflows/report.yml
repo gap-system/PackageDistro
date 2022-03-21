@@ -54,7 +54,7 @@ jobs:
           mkdir -p ${DIR}
           jq <<< ${JSON} > "${DIR}/test-status.json"
           # Generate report
-          python tools/generate_report.py ${DIR_REL}
+          python tools/generate_report.py ${DIR_REL} latest True
 
       - name: "Push report"
         id: push-report
