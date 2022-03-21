@@ -66,7 +66,7 @@ if os.path.isfile(last_report_path):
     with open(last_report_path, 'r') as f:
         last_report = json.load(f)
 else: # deal with the first run of this script
-    last_report = {'pkgs': {}, 'hash': 'Unknown', 'id': 'NULL'}
+    last_report = {'pkgs': {}, 'id': 'NULL'}
 
 repo = report['repo']
 
