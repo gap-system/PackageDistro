@@ -37,8 +37,7 @@ jobs:
           fetch-depth: 0
 
       - name: "Install package distribution tools"
-        run: |
-          python -m pip install -r tools/requirements.txt
+        run: python -m pip install -r tools/requirements.txt
 
       # Setup ccache, to speed up repeated compilation of the same binaries
       # (i.e., GAP and the packages)
@@ -53,12 +52,6 @@ jobs:
           GAP_BOOTSTRAP: 'minimal'
           GAP_PKGS_TO_CLONE: 'json'
           GAP_PKGS_TO_BUILD: 'json'
-
-      - name: "Determine what was removed"
-        run: |
-            deleted=$(git diff --name-only --no-renames --diff-filter=D ${{ github.event.pull_request.base.sha }} -- packages/*/meta.json)
-            echo "Deleted packages: ${deleted}"
-            # TODO: removing packages should block auto-merging
 
       - name: "Determine what was added or modified"
         id: modified
