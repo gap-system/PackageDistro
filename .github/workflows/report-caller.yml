@@ -1,4 +1,4 @@
-name: "Test report.yml"
+name: "Helper for testing report.yml"
 
 on:
   workflow_call:
