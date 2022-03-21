@@ -54,7 +54,7 @@ jobs:
           mkdir -p ${DIR}
           jq <<< ${JSON} > "${DIR}/test-status.json"
           # Generate report
-          python tools/generate_report.py ${DIR_REL} latest False
+          python tools/generate_report.py ${DIR_REL} latest True
 
       - name: "Push report"
         id: push-report
@@ -65,6 +65,7 @@ jobs:
           git add -A
           git commit -m "Automated report"
           git push
+          # CAUTION: Use this only if generate report overwrites latest!
           cd ../gh-pages
           git add -A
           git commit -m "Automated redirect"
