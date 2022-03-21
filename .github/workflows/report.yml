@@ -49,7 +49,7 @@ jobs:
           DATE=$(echo $DATE | sed 's/ /-/g' | cut -d '.' -f1)
           DIR_REL="manual/${DATE}-${HASH}"
           DIR="${ROOT}/${DIR_REL}"
-          JSON=$(echo ${JSON} | jq --argjson id "$DIR_REL" '.id |= $id + .')
+          JSON=$(echo ${JSON} | jq --arg id $DIR_REL '.id |= $id + .')
           # Write test-status
           mkdir -p ${DIR}
           jq <<< ${JSON} > "${DIR}/test-status.json"
