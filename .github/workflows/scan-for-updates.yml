@@ -58,12 +58,6 @@ jobs:
       - name: "Cleanup archives"
         run: tools/cleanup_archives.py
 
-      - name: "Upload metadata as artifact for pull request jobs"
-        uses: actions/upload-artifact@v2
-        with:
-          name: metadata
-          path: packages
-
       # The following builds a job matrix; we lunch a copy of the "create-pull-request"
       # for each package whose meta.json was modified by `scan_for_updates.py`
       - name: "Creates jobs for modified packages"
@@ -79,6 +73,13 @@ jobs:
             done
             MATRIX="${MATRIX}]}"
             echo "::set-output name=matrix::$MATRIX"
+            tar cvf modified.tar.gz $modified
+
+      - name: "Upload metadata as artifact for pull request jobs"
+        uses: actions/upload-artifact@v2
+        with:
+          name: metadata
+          path: modified.tar.gz
 
   create-pull-request:
     name: "Create pull request for ${{ matrix.package }}"
@@ -95,10 +96,10 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: metadata
-          path: packages
 
       - name: "Extract package version"
         run: |
+          tar xvf modified.tar.gz
           pkg_version=$(jq -r '.Version' < packages/${{ matrix.package }}/meta.json)
           echo "PKG_VERSION=$pkg_version" >> $GITHUB_ENV
 
