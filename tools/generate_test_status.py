@@ -28,7 +28,7 @@ from datetime import datetime
 num_args = len(sys.argv)
 
 if num_args > 5:
-    error('Unknown number of arguments')
+    error('Too many arguments')
 
 repo = runID = hash = hash_short ='Unknown'
 
