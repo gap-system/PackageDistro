@@ -349,11 +349,5 @@ jobs:
           python -m pip install -r tools/requirements.txt
 
       - name: "Generate test-status.json"
-        id: report
-        run: python tools/generate_test_status.py ${{ github.repository }} "$GITHUB_RUN_ID" "$GITHUB_SHA" $(git rev-parse --short "$GITHUB_SHA")
-
-      - name: "Output test-status"
         id: test-status
-        run: |
-          TEST_STATUS=$(cat test-status.json | jq -aRs)
-          echo "::set-output name=test-status::$TEST_STATUS"
+        run: python tools/generate_test_status.py ${{ github.repository }} "$GITHUB_RUN_ID" "$GITHUB_SHA" $(git rev-parse --short "$GITHUB_SHA")

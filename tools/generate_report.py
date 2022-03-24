@@ -14,13 +14,10 @@
 
 """
 This script compares the current test-status.json with a previous version,
-generates a main report.md along with
-    a test-status-diff.json,
-    a html-redirect, and
-    a badge.
+and generates a main report.md along with a test-status-diff.json.
 """
 
-from utils import warning, error, symlink, string_to_bool
+from utils import error
 
 import sys
 import os
@@ -30,18 +27,16 @@ import json
 # Arguments and Paths
 num_args = len(sys.argv)
 
-if num_args <= 1 or num_args > 4:
+if num_args <= 1 or num_args > 3:
     error('Unknown number of arguments')
 
 # relative paths to report directories from root
 root = 'data/reports'
 os.makedirs(root, exist_ok = True)
 dir_last_report_rel = 'latest'
-override_last = False
 
 if num_args > 1: dir_report_rel = sys.argv[1]
 if num_args > 2: dir_last_report_rel = sys.argv[2]
-if num_args > 3: override_last = string_to_bool(sys.argv[3])
 
 dir_report = os.path.realpath(os.path.join(root, dir_report_rel))
 dir_last_report_symbolic = os.path.join(root, dir_last_report_rel)
@@ -49,13 +44,6 @@ dir_last_report = os.path.realpath(dir_last_report_symbolic)
 
 report_path = os.path.join(dir_report, 'test-status.json')
 last_report_path = os.path.join(dir_last_report, 'test-status.json')
-
-if override_last:
-    dir_badge = os.path.join('data/badges', dir_last_report_rel)
-    os.makedirs(dir_badge, exist_ok = True)
-
-    dir_redirect = os.path.join('gh-pages', dir_last_report_rel)
-    os.makedirs(dir_redirect, exist_ok = True)
 
 ################################################################################
 # Read current and previous test-status
@@ -165,40 +153,3 @@ with open(dir_report+'/report.md', 'w') as f:
 # Write test-status-diff.json
 with open(dir_report+'/test-status-diff.json', 'w') as f:
     json.dump(report_diff, f, ensure_ascii=False, indent=2)
-
-################################################################################
-# Update Latest
-if override_last:
-    symlink(dir_report, dir_last_report_symbolic, overwrite=True)
-
-    ############################################################################
-    # Generate html redirect
-    with open(os.path.join(dir_redirect, 'redirect.html'), 'w') as f:
-        f.write('''
-        <!DOCTYPE html>
-        <meta charset="utf-8">
-        <title>Redirecting to latest report</title>
-        <meta http-equiv="refresh" content="0; URL=%s">
-        <link rel="canonical" href="%s">
-        ''' % (repo+'/blob/'+dir_report+'/report.md', repo+'/'+dir_report+'/report.md'))
-
-    ############################################################################
-    # Generate badge
-    relativeFailures = 1 - report['success'] / report['total']
-    if relativeFailures > 0.05:
-        color = 'critical'
-    elif relativeFailures > 0:
-        color = 'important'
-    else:
-        color = 'success'
-
-    badge = {
-        'schemaVersion' : 1,
-        'label': 'Tests',
-        'message': '%d/%d passing' % (report['success'], report['total']),
-        'color': color,
-        'namedLogo': "github"
-    }
-
-    with open(os.path.join(dir_badge, 'badge.json'), 'w') as f:
-        json.dump(badge, f, ensure_ascii=False, indent=2)
