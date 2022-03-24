@@ -128,11 +128,3 @@ def symlink(target, link_name, overwrite=False):
         if os.path.islink(temp_link_name):
             os.remove(temp_link_name)
         raise
-
-def string_to_bool(string):
-    if string.lower().strip() in ['1', 'true']:
-        return True
-    elif string.lower().strip() in ['0', 'false']:
-        return False
-    else:
-        error("Unknown string representation of bool")
