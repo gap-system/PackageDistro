@@ -2,11 +2,18 @@ name: "Test all packages"
 
 on:
   workflow_dispatch:
+    inputs:
+      which-gap:
+        description: 'Either a GAP branch name or a GAP version'
+        required: true
+        type: string
+        default: master # or 4.11.1 or ...
   workflow_call:
-    outputs:
-      test-status:
-        description: "The test-status report"
-        value: ${{ jobs.report.outputs.test-status }}
+    inputs:
+      which-gap:
+        required: true
+        type: string
+        default: master # or 4.11.1 or ...
 
 jobs:
   build:
@@ -57,8 +64,19 @@ jobs:
       # TOOD: gap should come from a container
       - name: "Install GAP"
         run: |
-          git clone --depth=2 -b master https://github.com/gap-system/gap.git $HOME/gap
+          echo "::group::fetch"
+          whichgap="${{ github.event.inputs.which-gap || inputs.which-gap }}"
+          if [[ "${whichgap}" == 4.* ]]; then
+            # assume it is a tag
+            wget --quiet https://github.com/gap-system/gap/releases/download/v${whichgap}/gap-${whichgap}-core.tar.gz
+            tar xf gap-${whichgap}-core.tar.gz
+            rm gap-${whichgap}-core.tar.gz
+            mv gap-${whichgap} $HOME/gap
+          else
+            git clone --depth=2 -b ${whichgap} https://github.com/gap-system/gap.git $HOME/gap
+          fi
           cd $HOME/gap
+          echo "::endgroup::"
 
           echo "::group::autogen"
           ./autogen.sh
