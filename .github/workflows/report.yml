@@ -1,8 +1,21 @@
 name: "Test generation of comparison reports"
 
 on:
+  workflow_call:
+    inputs:
+      which-gap:
+        description: 'Which Gap version'
+        default: 'master'
+        required: false
+        type: string
+
   workflow_dispatch:
-  push:
+    inputs:
+      which-gap:
+        description: 'Which Gap version'
+        default: 'master'
+        required: false
+        type: string
 
 jobs:
   report:
@@ -47,26 +60,15 @@ jobs:
           DIR="${ROOT}/${DIR_REL}"
           JSON=$(echo ${JSON} | jq --arg id $DIR_REL '.id |= $id + .')
           # Write test-status
+          echo "::set-output name=dir::${DIR}"
           mkdir -p ${DIR}
           jq <<< ${JSON} > "${DIR}/test-status.json"
           # Generate report
-          python tools/generate_report.py ${DIR_REL} latest
+          python tools/generate_report.py ${DIR_REL} latest-${{ github.event.inputs.which-gap }}
 
-      # - name: "Update latest report"
-      #   run: |
-      #     python tools/update_latest_report.py ${DIR_REL} latest
-
-      - name: "Push report"
-        id: push-report
-        run: |
-          git config --global user.name 'github-actions'
-          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          cd data
-          git add -A
-          git commit -m "Automated report"
-          git push
-          # # CAUTION: Use this only if generate report overwrites latest!
-          # cd ../gh-pages
-          # git add -A
-          # git commit -m "Automated redirect"
-          # git push
+      - name: "Upload report as artifact"
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: "report-${{ github.event.inputs.which-gap }}"
+          path: "${{ steps.report.outputs.dir }}"
