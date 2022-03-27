@@ -1,11 +1,10 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">QPA</span> package provides data structures                    and algorithms for doing computations with finite dimensional quotients                    of path algebras, and finitely generated modules over such algebras. The                    current version of the QPA package has data structures for quivers,                    quotients of path algebras, and modules, homomorphisms and complexes of                    modules over quotients of path algebras.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "f44a1101e867543c3a5ff01c98099ef80da33fd55679ce40f3a264a183fac321",
-  "ArchiveURL": "https://folk.ntnu.no/oyvinso/QPA/qpa-1.32",
-  "Autoload": false,
+  "ArchiveSHA256": "0cd9cf875397ded239d38540f3e46bd11ae61187b1aed5848b015254ab0d8fdd",
+  "ArchiveURL": "https://folk.ntnu.no/oyvinso/QPA/qpa-1.33",
   "AvailabilityTest": null,
-  "Date": "04/03/2021",
+  "Date": "24/03/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.5",
@@ -36,7 +35,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "881654954810284bef80f5fceeab399cd30d40647eab6f27d0dc74dbb97b8ad9",
+  "PackageInfoSHA256": "3ac9e4f4bea95476de828af09bd29e10dfa72814eebdd05828eb4ab50b83918f",
   "PackageInfoURL": "https://folk.ntnu.no/oyvinso/QPA/PackageInfo.g",
   "PackageName": "QPA",
   "PackageWWWHome": "https://folk.ntnu.no/oyvinso/QPA/",
@@ -72,5 +71,5 @@
   "Status": "deposited",
   "Subtitle": "Quivers and Path Algebras",
   "TestFile": "tst/testall.g",
-  "Version": "1.32"
+  "Version": "1.33"
 }
