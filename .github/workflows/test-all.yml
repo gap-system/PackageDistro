@@ -144,7 +144,7 @@ jobs:
       - name: "Upload GAP with packages as artifact"
         uses: actions/upload-artifact@v2
         with:
-          name: gap
+          name: gap-${{ github.event.inputs.which-gap || inputs.which-gap }}
           path: /home/runner/gap.tar.zst
 
       - name: "Creates jobs for all packages"
@@ -195,7 +195,7 @@ jobs:
       - name: "Download GAP from previous job"
         uses: actions/download-artifact@v2
         with:
-          name: gap
+          name: gap-${{ github.event.inputs.which-gap || inputs.which-gap }}
 
       - name: "Extract GAP artifact"
         run: |
