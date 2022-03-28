@@ -66,7 +66,7 @@ report['hash'] = hash
 report['hash_short'] = hash_short
 date = str(datetime.now()).split('.')[0]
 report['date'] = date
-report['id'] = os.path.join(which_gap, "%s-%s", (date.replace(' ','-'), hash_short))
+report['id'] = os.path.join(which_gap, "%s-%s" % (date.replace(' ','-'), hash_short))
 
 # Path
 root = 'data/reports'
