@@ -33,7 +33,7 @@ if num_args <= 1 or num_args > 3:
 # relative paths to report directories from root
 root = 'data/reports'
 os.makedirs(root, exist_ok = True)
-dir_last_report_rel = 'latest'
+dir_last_report_rel = 'latest-master'
 
 if num_args > 1: dir_report_rel = sys.argv[1]
 if num_args > 2: dir_last_report_rel = sys.argv[2]
