@@ -36,7 +36,12 @@ jobs:
 
       - name: "Generate test-status.json"
         id: test-status
-        run: python tools/generate_test_status.py ${{ github.repository }} "$GITHUB_RUN_ID" "$GITHUB_SHA" $(git rev-parse --short "$GITHUB_SHA") ${{github.event.inputs.which-gap}}
+        run: |
+          ROOT='data/reports'
+          DIR_REL=$(python tools/generate_test_status.py ${{ github.repository }} "$GITHUB_RUN_ID" "$GITHUB_SHA" $(git rev-parse --short "$GITHUB_SHA") ${{github.event.inputs.which-gap}})
+          DIR="${ROOT}/${DIR_REL}"
+          echo "::set-output name=dir::${DIR}"
+          echo "::set-output name=dir-rel::${DIR_REL}"
 
       - name: "Download latest report"
         run: |
@@ -55,10 +60,10 @@ jobs:
       - name: "Generate report"
         id: report
         run: |
-          python tools/generate_report.py ${DIR_REL} latest-${{ github.event.inputs.which-gap }}
+          python tools/generate_report.py ${{ steps.test-status.outputs.dir-rel }} latest-${{ github.event.inputs.which-gap }}
 
       - name: "Upload report as artifact"
         uses: actions/upload-artifact@v2
         with:
           name: "report-${{ github.event.inputs.which-gap }}"
-          path: "${{ steps.report.outputs.dir }}"
+          path: "${{ steps.test-status.outputs.dir }}"
