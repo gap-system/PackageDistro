@@ -139,7 +139,7 @@ with open(dir_report+'/report.md', 'w') as f:
         if len(pkgs_filtered) > 0:
             f.write('## %s\n\n' % status_header)
             f.write('%d package(s) %s tests only on the current version.' % (len(pkgs_filtered), status_msg))
-            f.write('<details> <summary>Click to expand!</summary>\n\n')
+            f.write('<details> <summary>Click to show package(s)!</summary>\n\n')
             for pkg in pkgs_filtered:
                 version = pkgs[pkg]['version']
                 last_status = last_pkgs[pkg]['status']
@@ -159,7 +159,7 @@ with open(dir_report+'/report.md', 'w') as f:
         if len(pkgs_filtered) > 0:
             f.write('## %s\n\n' % status_header)
             f.write('%d package(s) %s tests also on the previous version.' % (len(pkgs_filtered), status_msg))
-            f.write('<details> <summary>Click to expand!</summary>\n\n')
+            f.write('<details> <summary>Click to show package(s)!</summary>\n\n')
             for pkg in pkgs_filtered:
                 version = pkgs[pkg]['version']
                 f.write('- %s %s <br>\n' % (pkg, version))
