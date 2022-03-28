@@ -36,7 +36,7 @@ jobs:
 
       - name: "Generate test-status.json"
         id: test-status
-        run: python tools/generate_test_status.py ${{ github.repository }} "$GITHUB_RUN_ID" "$GITHUB_SHA" $(git rev-parse --short "$GITHUB_SHA")
+        run: python tools/generate_test_status.py ${{ github.repository }} "$GITHUB_RUN_ID" "$GITHUB_SHA" $(git rev-parse --short "$GITHUB_SHA") ${{github.event.inputs.which-gap}}
 
       - name: "Download latest report"
         run: |
@@ -55,20 +55,6 @@ jobs:
       - name: "Generate report"
         id: report
         run: |
-          # Generate id for test-status
-          ROOT="data/reports"
-          JSON=$(cat test-status.json)
-          HASH=$(jq -r '.hash_short' <<< ${JSON})
-          DATE=$(jq -r '.date' <<< ${JSON})
-          DATE=$(echo $DATE | sed 's/ /-/g' | cut -d '.' -f1)
-          DIR_REL="${{ github.event.inputs.which-gap }}/${DATE}-${HASH}"
-          DIR="${ROOT}/${DIR_REL}"
-          JSON=$(echo ${JSON} | jq --arg id $DIR_REL '.id |= $id + .')
-          # Write test-status
-          echo "::set-output name=dir::${DIR}"
-          mkdir -p ${DIR}
-          jq <<< ${JSON} > "${DIR}/test-status.json"
-          # Generate report
           python tools/generate_report.py ${DIR_REL} latest-${{ github.event.inputs.which-gap }}
 
       - name: "Upload report as artifact"

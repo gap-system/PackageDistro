@@ -12,7 +12,8 @@
 
 """
 This script collects the job-status of each package from _reports/
-and generates a main test-status.json
+and generates a main test-status.json.
+The file is written into data/reports/{{which_gap}}/{{date}}-{{hash_short}}.
 """
 
 from utils import error, warning
@@ -27,15 +28,16 @@ from datetime import datetime
 # Arguments
 num_args = len(sys.argv)
 
-if num_args > 5:
+if num_args > 6:
     error('Too many arguments')
 
-repo = runID = hash = hash_short ='Unknown'
+repo = runID = hash = hash_short = which_gap = 'Unknown'
 
 if num_args > 1: repo = 'https://github.com/'+sys.argv[1]
 if num_args > 2: runID = sys.argv[2]
 if num_args > 3: hash = sys.argv[3]
 if num_args > 4: hash_short = sys.argv[4]
+if num_args > 5: which_gap = sys.argv[5]
 
 ################################################################################
 # Collect the job-status of each package from _reports/
@@ -53,7 +55,6 @@ for file in files:
 
     pkgs[os.path.splitext(os.path.basename(file))[0]] = data
 
-
 ################################################################################
 # Generate main test-status.json
 
@@ -63,12 +64,20 @@ report['repo'] = repo
 report['workflow'] = repo+'/actions/runs/'+runID
 report['hash'] = hash
 report['hash_short'] = hash_short
-report['date'] = str(datetime.now())
+date = str(datetime.now()).split('.')[0]
+report['date'] = date
+report['id'] = os.path.join(which_gap, "%s-%s", (date.replace(' ','-'), hash_short))
+
+# Path
+root = 'data/reports'
+dir_test_status = os.path.join(root, report['id'])
+os.makedirs(dir_test_status, exist_ok = True)
 
 # Package Information
 for pkg, data in pkgs.items():
     with open(os.path.join('packages', pkg, 'meta.json'), 'r') as f:
         meta = json.load(f)
+
     data['version'] = meta['Version']
     data['archive_url'] = meta['ArchiveURL']
     data['archive_sha256'] = meta['ArchiveSHA256']
@@ -106,5 +115,5 @@ for pkg, data in pkgs.items():
     else:
         warning('Unknown job status detected for pkg \"'+pkg+'\"')
 
-with open('test-status.json', 'w') as f:
+with open(os.path.join(dir_test_status, 'test-status.json'), 'w') as f:
     json.dump(report, f, ensure_ascii=False, indent=2)
