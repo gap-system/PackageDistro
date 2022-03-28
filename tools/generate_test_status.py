@@ -13,7 +13,11 @@
 """
 This script collects the job-status of each package from _reports/
 and generates a main test-status.json.
-The file is written into data/reports/{{which_gap}}/{{date}}-{{hash_short}}.
+
+The file is written into data/reports/{{id}} where
+id={{which_gap}}/{{date}}-{{hash_short}}.
+
+Prints {{id}} to terminal.
 """
 
 from utils import error, warning

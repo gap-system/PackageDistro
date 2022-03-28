@@ -38,7 +38,6 @@ jobs:
       - name: "Download latest report"
         run: |
           ROOT="data/reports"
-          mkdir -p ${ROOT}
           DIR_SYM_REL=latest-${{ github.event.inputs.which-gap }}
           DIR_SYM="${ROOT}/${DIR_SYM_REL}"
           # wget downloads the symbolic link as file!
