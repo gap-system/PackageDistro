@@ -41,12 +41,16 @@ jobs:
       - name: "Download latest report"
         run: |
           ROOT="data/reports"
+          mkdir -p ${ROOT}
           DIR_SYM_REL=latest-${{ github.event.inputs.which-gap }}
           DIR_SYM="${ROOT}/${DIR_SYM_REL}"
-          wget -O _symlink "https://raw.githubusercontent.com/${{ github.repository }}/${DIR_SYM}"
-          DIR=$(cat _symlink)
+          # wget downloads the symbolic link as file!
+          wget -O ${DIR_SYM} "https://raw.githubusercontent.com/${{ github.repository }}/${DIR_SYM}"
+          DIR=$(cat ${DIR_SYM})
+          rm ${DIR_SYM}
+          ln -s ${DIR} ${DIR_SYM}
           DIR=${DIR#/home/runner/work/PackageDistro/PackageDistro/}
-          wget -r -np -P ${DIR} "https://raw.githubusercontent.com/${{ github.repository }}/${DIR}/test-status.json"
+          wget -P ${DIR} "https://raw.githubusercontent.com/${{ github.repository }}/${DIR}/test-status.json"
 
       - name: "Generate report"
         id: report
