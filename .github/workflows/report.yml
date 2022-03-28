@@ -36,17 +36,22 @@ jobs:
           echo "::set-output name=dir-rel::${DIR_REL}"
 
       - name: "Download latest report"
+        id: download-latest-report
         run: |
           ROOT="data/reports"
           DIR_SYM_REL=latest-${{ github.event.inputs.which-gap }}
           DIR_SYM="${ROOT}/${DIR_SYM_REL}"
-          # wget downloads the symbolic link as file!
-          wget -O ${DIR_SYM} "https://raw.githubusercontent.com/${{ github.repository }}/${DIR_SYM}"
-          DIR=$(cat ${DIR_SYM})
-          rm ${DIR_SYM}
-          ln -s ${DIR} ${DIR_SYM}
-          DIR=${DIR#/home/runner/work/PackageDistro/PackageDistro/}
-          wget -P ${DIR} "https://raw.githubusercontent.com/${{ github.repository }}/${DIR}/test-status.json"
+          URL_SYM="https://raw.githubusercontent.com/${{ github.repository }}/${DIR_SYM}"
+          if curl --head --fail --silent "${URL_SYM}" 2>/dev/null; then
+            # wget downloads the symbolic link as file!
+            wget -O ${DIR_SYM} ${URL_SYM}
+            DIR=$(cat ${DIR_SYM})
+            rm ${DIR_SYM}
+            ln -s ${DIR} ${DIR_SYM}
+            DIR=${DIR#/home/runner/work/PackageDistro/PackageDistro/}
+            URL="https://raw.githubusercontent.com/${{ github.repository }}/${DIR}/test-status.json"
+            wget -P ${DIR} ${URL}
+          fi
 
       - name: "Generate report"
         id: report
