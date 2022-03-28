@@ -196,18 +196,9 @@ jobs:
             for PKG in packages/${{ github.event.inputs.pkg-test-glob || inputs.pkg-test-glob }}/meta.json; do
               PKG=${PKG%"/meta.json"}
               PKG=${PKG#"packages/"}
-              if [[ ${PKG} == anupq ]]; then
-                break # FIXME: HACK for faster testing, remove before merge
-              fi
-              # skip packages without a TestFile
-              if ! jq -e -r '.TestFile' < packages/${PKG}/meta.json > /dev/null ; then
-                echo "Skipping ${PKG}"
-                continue
-              fi
-              if [[ ${PKG} == xgap ]]; then
-                # skip xgap: no X11 headers, and no means to test it
-                continue
-              fi
+              # if [[ ${PKG} == anupq ]]; then
+              #   break # FIXME: HACK for faster testing, remove before merge
+              # fi
               MATRIX="${MATRIX}\"${PKG}\","
             done
             MATRIX="${MATRIX}]}"
@@ -256,8 +247,23 @@ jobs:
             echo "No required binary depedencies to be installed"
           fi
 
+      - name: "Check for a TestFile"
+        id: run-tests
+        run: |
+          PKG=${{ matrix.package }}
+          if ! jq -e -r '.TestFile' < packages/${PKG}/meta.json > /dev/null ; then
+            # Skip packages without a TestFile
+            echo "::set-output name=run-tests::false"
+          elif [[ ${PKG} == xgap ]]; then
+            # skip xgap: no X11 headers, and no means to test it
+            echo "::set-output name=run-tests::false"
+          else
+            echo "::set-output name=run-tests::true"
+          fi
+
       - name: "Run tests"
         timeout-minutes: 10
+        if: ${{ steps.run-tests.outputs.run-tests }} == 'true'
         id: tests-default
         run: |
           PKG=${{ matrix.package }}
@@ -272,8 +278,8 @@ jobs:
 
       - name: "Run tests with OnlyNeeded"
         timeout-minutes: 10
+        if: ${{ steps.run-tests.outputs.run-tests }} == 'true'
         id: tests-only-needed
-        if: ${{ always() }}
         run: |
           PKG=${{ matrix.package }}
           gap -A --quitonbreak -r -c "
