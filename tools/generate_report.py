@@ -116,6 +116,8 @@ with open(dir_report+'/report.md', 'w') as f:
             status = pkgs[pkg]['status']
             f.write('- %s %s : %s <br>\n' % (pkg, version, status))
 
+        f.write('\n')
+
     ############################################################################
     # Removed Packages
     report_diff['removed'] = len(pkgs_removed)
@@ -125,6 +127,8 @@ with open(dir_report+'/report.md', 'w') as f:
             version = last_pkgs[pkg]['version']
             status = last_pkgs[pkg]['status']
             f.write('- %s %s : %s <br>\n' % (pkg, version, status))
+
+        f.write('\n')
 
     ############################################################################
     # Changed Status Packages
