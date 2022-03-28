@@ -28,16 +28,15 @@ from datetime import datetime
 # Arguments
 num_args = len(sys.argv)
 
-if num_args > 6:
+if num_args > 5:
     error('Too many arguments')
 
-repo = runID = hash = hash_short = which_gap = 'Unknown'
+repo = runID = hash = which_gap = 'Unknown'
 
 if num_args > 1: repo = 'https://github.com/'+sys.argv[1]
 if num_args > 2: runID = sys.argv[2]
 if num_args > 3: hash = sys.argv[3]
-if num_args > 4: hash_short = sys.argv[4]
-if num_args > 5: which_gap = sys.argv[5]
+if num_args > 4: which_gap = sys.argv[4]
 
 ################################################################################
 # Collect the job-status of each package from _reports/
@@ -63,10 +62,9 @@ report = {}
 report['repo'] = repo
 report['workflow'] = repo+'/actions/runs/'+runID
 report['hash'] = hash
-report['hash_short'] = hash_short
 date = str(datetime.now()).split('.')[0]
 report['date'] = date
-report['id'] = os.path.join(which_gap, "%s-%s" % (date.replace(' ','-'), hash_short))
+report['id'] = os.path.join(which_gap, "%s-%s" % (date.replace(' ','-'), hash[:8]))
 
 # Path
 root = 'data/reports'

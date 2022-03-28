@@ -9,14 +9,6 @@ on:
         required: false
         type: string
 
-  workflow_dispatch:
-    inputs:
-      which-gap:
-        description: 'Which Gap version'
-        default: 'master'
-        required: false
-        type: string
-
 jobs:
   report:
     name: "Report"
@@ -38,7 +30,7 @@ jobs:
         id: test-status
         run: |
           ROOT='data/reports'
-          DIR_REL=$(python tools/generate_test_status.py ${{ github.repository }} "$GITHUB_RUN_ID" "$GITHUB_SHA" $(git rev-parse --short "$GITHUB_SHA") ${{github.event.inputs.which-gap}})
+          DIR_REL=$(python tools/generate_test_status.py ${{ github.repository }} "$GITHUB_RUN_ID" "$GITHUB_SHA" ${{github.event.inputs.which-gap}})
           DIR="${ROOT}/${DIR_REL}"
           echo "::set-output name=dir::${DIR}"
           echo "::set-output name=dir-rel::${DIR_REL}"

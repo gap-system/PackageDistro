@@ -15,7 +15,6 @@
 """
 This script compares the current test-status.json with a previous version,
 and generates a main report.md along with a test-status-diff.json.
-We assume that the test-status.json contains an id (relative path to root).
 """
 
 from utils import error
