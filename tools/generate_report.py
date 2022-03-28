@@ -113,8 +113,9 @@ with open(dir_report+'/report.md', 'w') as f:
     if len(pkgs_new) > 0:
         f.write('## New Packages\n\n')
         for pkg in pkgs_new:
+            version = pkgs[pkg]['version']
             status = pkgs[pkg]['status']
-            f.write('- %s : %s <br>\n' % (pkg, status))
+            f.write('- %s %s : %s <br>\n' % (pkg, version, status))
 
     ############################################################################
     # Removed Packages
@@ -122,8 +123,9 @@ with open(dir_report+'/report.md', 'w') as f:
     if len(pkgs_removed) > 0:
         f.write('## Removed Packages\n\n')
         for pkg in pkgs_removed:
+            version = last_pkgs[pkg]['version']
             status = last_pkgs[pkg]['status']
-            f.write('- %s : %s <br>\n' % (pkg, status))
+            f.write('- %s %s : %s <br>\n' % (pkg, version, status))
 
     ############################################################################
     # Changed Status Packages
