@@ -256,7 +256,7 @@ jobs:
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
-          name: "reports-${{ matrix.package }}"
+          name: "reports-${{ github.event.inputs.which-gap || inputs.which-gap }}-${{ matrix.package }}"
           path: "${{ matrix.package }}.json"
 
   report:
@@ -276,7 +276,7 @@ jobs:
       - name: "Download every job status"
         uses: elonh/download-artifact-regexp@master # FIXME/TODO: Switch to actions/download-artifact once they officially support wildcards, see https://github.com/actions/download-artifact/issues/6
         with:
-          pattern: reports-*
+          pattern: reports-${{ github.event.inputs.which-gap || inputs.which-gap }}-*
           path: _reports
 
       # warning/error in utils.py throw a syntax error with default version of python
