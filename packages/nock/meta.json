@@ -2,12 +2,19 @@
   "AbstractHTML": "The <span class=\"pkgname\">NoCK</span> package    is used for computing Tolzanos's obstruction    for compact Clifford-Klein forms",
   "AcceptDate": "07/2019",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "e163197e5d837f2f2abbbc12b293b127316b13b3f5562b2850781345f7421f9a",
-  "ArchiveURL": "https://github.com/pjastr/NoCK/releases/download/v1.4/NoCK-1.4",
+  "ArchiveSHA256": "69023293e9abc695f15c2740df5902ba6e95d53bd3441b9c3fe25c410c207fc6",
+  "ArchiveURL": "https://github.com/gap-packages/NoCK/releases/download/v1.5/NoCK-1.5",
+  "AutoDoc": {
+    "TitlePage": {
+      "Abstract": "\n        In this package we develop functions for an algorithm designed\n        to find homogeneous spaces of semisimple non-compact Lie groups\n        which do not admit compact Clifford-Klein forms.\n        ",
+      "Acknowledgements": "\n        We thank Willem de Graaf for his help in getting some literature sources.\n        ",
+      "Copyright": "\n        NoCK Package is free software;  you can redistribute it and/or modify it under the terms of the\n        <URL Text=\"GNU General Public License\">https://www.fsf.org/licenses/gpl.html</URL>\n        as published by the Free Software Foundation; either version 2 of the License,\n        or (at your option) any later version.\n        "
+    }
+  },
   "AvailabilityTest": null,
-  "BannerString": "----------------------------------------------------------------\nNoCK Package 1.4\nby Maciej Bocheński, Piotr Jastrzębski, Anna Szczepkowska, Aleksy Tralle, Artur Woike.\n----------------------------------------------------------------\n",
+  "BannerString": "----------------------------------------------------------------\nNoCK Package 1.5\nby Maciej Bocheński, Piotr Jastrzębski, Anna Szczepkowska, Aleksy Tralle, Artur Woike.\n----------------------------------------------------------------\n",
   "CommunicatedBy": "Leonard Soicher (QMUL)",
-  "Date": "22/10/2019",
+  "Date": "30/03/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.8",
@@ -28,11 +35,12 @@
       ]
     ]
   },
-  "IssueTrackerURL": "https://github.com/pjastr/NoCK/issues",
+  "IssueTrackerURL": "https://github.com/gap-packages/NoCK/issues",
   "Keywords": [
     "real lie algebras",
     "clifford-klein forms"
   ],
+  "License": "GPL-2.0-or-later",
   "PackageDoc": [
     {
       "ArchiveURLSubset": [
@@ -40,15 +48,15 @@
       ],
       "BookName": "NoCK",
       "HTMLStart": "doc/chap0.html",
-      "LongTitle": "NoCK/Computing obstruction for compact Clifford-Klein forms",
+      "LongTitle": "Computing obstruction for the existence of compact Clifford-Klein form",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "00ea24968142e9941e3e121f7a005205d7e7e0a244f79a28951c59b11c1ad622",
-  "PackageInfoURL": "https://pjastr.github.io/NoCK/PackageInfo.g",
+  "PackageInfoSHA256": "01a6022c745122acc85d996783842fc6b9ce6573e3b0258928e56dbed6f31574",
+  "PackageInfoURL": "https://gap-packages.github.io/NoCK/PackageInfo.g",
   "PackageName": "NoCK",
-  "PackageWWWHome": "https://pjastr.github.io/NoCK",
+  "PackageWWWHome": "https://gap-packages.github.io/NoCK",
   "Persons": [
     {
       "Email": "mabo@matman.uwm.edu.pl",
@@ -97,16 +105,23 @@
       "LastName": "Woike",
       "Place": "Olsztyn, Poland",
       "WWWHome": "http://wmii.uwm.edu.pl/~awoike"
+    },
+    {
+      "Email": "support@gap-system.org",
+      "FirstNames": "The",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "GAP Team"
     }
   ],
-  "README_URL": "https://pjastr.github.io/NoCK/README.md",
+  "README_URL": "https://gap-packages.github.io/NoCK/README.md",
   "SourceRepository": {
     "Type": "git",
-    "URL": "https://github.com/pjastr/NoCK"
+    "URL": "https://github.com/gap-packages/NoCK"
   },
   "Status": "accepted",
-  "Subtitle": "NoCK-Package for computing obstruction for compact Clifford-Klein forms.",
+  "Subtitle": "Computing obstruction for the existence of compact Clifford-Klein form",
   "SupportEmail": "piojas@matman.uwm.edu.pl",
   "TestFile": "tst/testall.g",
-  "Version": "1.4"
+  "Version": "1.5"
 }
