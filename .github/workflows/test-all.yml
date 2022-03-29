@@ -158,6 +158,16 @@ jobs:
           # skip xgap: no X11 headers, and no means to test it
           rm -rf xgap*
 
+          # HACK/WORKAROUND: atlasrep's TestFile sets an exit code but does not
+          # actually exit, thus we can't properly detect whether it passed or
+          # failed (and count that as a failur). So we hack around that...
+          echo "QUIT;" >> atlasrep*/tst/testauto.g
+
+          # HACK/WORKAROUND: ctbllib's TestFile sets an exit code but does not
+          # actually exit, thus we can't properly detect whether it passed or
+          # failed (and count that as a failur). So we hack around that...
+          echo "QUIT;" >> ctbllib*/tst/testauto.g
+
           MAKEFLAGS=-j3 ../bin/BuildPackages.sh --strict ${{ github.event.inputs.pkg-build-glob || inputs.pkg-build-glob }}
 
       # TODO: the following is disabled because right now it FAILS due to IsSymmetric
