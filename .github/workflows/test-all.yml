@@ -170,12 +170,13 @@ jobs:
 
           MAKEFLAGS=-j3 ../bin/BuildPackages.sh --strict ${{ github.event.inputs.pkg-build-glob || inputs.pkg-build-glob }}
 
-      # TODO: the following is disabled because right now it FAILS due to IsSymmetric
-      # conflicting between LAGUNA and numericalsgps (authors are already informed,
-      # solution is being worked on)
-      #- name: "Test LoadAllPackages"
-      #  run: |
-      #    gap --quitonbreak -r -c "SetInfoLevel(InfoPackageLoading, PACKAGE_DEBUG);LoadAllPackages();QUIT;"
+      - name: "Test LoadAllPackages"
+        run: |
+          gap -A --quitonbreak -r -c "
+                SetInfoLevel(InfoPackageLoading, PACKAGE_DEBUG);
+                LoadAllPackages();
+                QUIT;
+                "
 
       - name: "Create tarball"
         run: |
