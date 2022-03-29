@@ -22,7 +22,9 @@ from accepts import accepts
 
 from utils import normalize_pkg_name, metadata
 
-# TODO: support other distros?
+# The following maps names of GAP packages to lists of Ubuntu package names.
+# The Ubuntu packages should be installed in order to build and/or use the GAP
+# package
 ubtunu_deps = {
 '4ti2interface': [ '4ti2' ],
 'alnuth': [ 'pari-gp' ],
