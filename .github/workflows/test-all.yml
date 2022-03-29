@@ -219,7 +219,7 @@ jobs:
         id: tests-default
         run: |
           PKG=${{ matrix.package }}
-          gap -A --quitonbreak -r -c "
+          gap --quitonbreak -r -c "
                 SetInfoLevel(InfoPackageLoading, PACKAGE_DEBUG);
                 LoadPackage(\"$PKG\");
                 SetInfoLevel(InfoPackageLoading, PACKAGE_WARNING);
