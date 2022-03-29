@@ -1,11 +1,11 @@
 {
   "AbstractHTML": "The <b>Digraphs</b> package is a <b>GAP</b> package for digraphs and multidigraphs.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "d3f68a1bf765610b44a6da27d1c61d404d4075789fd18df950454ed9798573d9",
-  "ArchiveURL": "https://github.com/digraphs/Digraphs/releases/download/v1.5.0/digraphs-1.5.0",
+  "ArchiveSHA256": "11ce45de7126372189fe9e8f9d3de848199ea1c5064c2f3612ddc3df7ad0ef51",
+  "ArchiveURL": "https://github.com/digraphs/Digraphs/releases/download/v1.5.1/digraphs-1.5.1",
   "Autoload": false,
   "AvailabilityTest": null,
-  "Date": "27/10/2021",
+  "Date": "29/03/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10.0",
@@ -54,7 +54,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "95a109df953e22dfd07c382ef0f7927dfea90e1b1ce40d59178ed8c045a3fb72",
+  "PackageInfoSHA256": "b258ed914d47d81da44b326e098941516dcdad656d4d129801d0f4bef6bc6991",
   "PackageInfoURL": "https://digraphs.github.io/Digraphs/PackageInfo.g",
   "PackageName": "Digraphs",
   "PackageWWWHome": "https://digraphs.github.io/Digraphs",
@@ -294,5 +294,5 @@
   "Status": "deposited",
   "Subtitle": "Graphs, digraphs, and multidigraphs in GAP",
   "TestFile": "tst/teststandard.g",
-  "Version": "1.5.0"
+  "Version": "1.5.1"
 }
