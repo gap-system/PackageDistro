@@ -1,4 +1,14 @@
-name: "Test all packages"
+#
+# This workflow is run either by a manual workflow dispatch, or
+# as part of a pull request check.
+#
+# It builds a version of GAP (which one depends on its inputs), then builds
+# all packages (resp. all matching some glob), then runs the tests of all
+# packages (resp. all matching some glob) with a testfile. Finally the various
+# test results are aggregated into a JSON file which other workflows can
+# process.
+#
+name: "Test packages"
 
 on:
   workflow_dispatch:
@@ -8,12 +18,33 @@ on:
         required: true
         type: string
         default: master # or 4.11.1 or ...
+      pkg-build-glob:
+        description: 'Only build packages matching the given glob'
+        required: false
+        type: string
+        default: "*"
+      pkg-test-glob:
+        description: 'Only test packages matching the given glob'
+        required: false
+        type: string
+        default: "*"
   workflow_call:
     inputs:
       which-gap:
+        description: 'Either a GAP branch name or a GAP version'
         required: true
         type: string
         default: master # or 4.11.1 or ...
+      pkg-build-glob:
+        description: 'Only build packages matching the given glob'
+        required: false
+        type: string
+        default: "*"
+      pkg-test-glob:
+        description: 'Only test packages matching the given glob'
+        required: false
+        type: string
+        default: "*"
 
 jobs:
   build:
@@ -127,7 +158,7 @@ jobs:
           # skip xgap: no X11 headers, and no means to test it
           rm -rf xgap*
 
-          MAKEFLAGS=-j3 ../bin/BuildPackages.sh --strict
+          MAKEFLAGS=-j3 ../bin/BuildPackages.sh --strict ${{ github.event.inputs.pkg-build-glob || inputs.pkg-build-glob }}
 
       # TODO: the following is disabled because right now it FAILS due to IsSymmetric
       # conflicting between LAGUNA and numericalsgps (authors are already informed,
@@ -147,11 +178,11 @@ jobs:
           name: gap-${{ github.event.inputs.which-gap || inputs.which-gap }}
           path: /home/runner/gap.tar.zst
 
-      - name: "Creates jobs for all packages"
+      - name: "Creates jobs for matching packages"
         id: get-names
         run: |
             MATRIX="{\"package\":["
-            for PKG in packages/*/meta.json; do
+            for PKG in packages/${{ github.event.inputs.pkg-test-glob || inputs.pkg-test-glob }}/meta.json; do
               PKG=${PKG%"/meta.json"}
               PKG=${PKG#"packages/"}
               # if [[ ${PKG} == anupq ]]; then
