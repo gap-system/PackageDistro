@@ -1,13 +1,40 @@
 name: "Test generation of comparison reports"
 
 on:
+  workflow_dispatch:
+    inputs:
+      which-gap:
+        description: 'Either a GAP branch name or a GAP version'
+        required: true
+        type: string
+        default: master # or 4.11.1 or ...
+      pkg-build-glob:
+        description: 'Only build packages matching the given glob'
+        required: false
+        type: string
+        default: "*"
+      pkg-test-glob:
+        description: 'Only test packages matching the given glob'
+        required: false
+        type: string
+        default: "*"
   workflow_call:
     inputs:
       which-gap:
-        description: 'Which GAP version'
-        default: 'master'
+        description: 'Either a GAP branch name or a GAP version'
+        required: true
+        type: string
+        default: master # or 4.11.1 or ...
+      pkg-build-glob:
+        description: 'Only build packages matching the given glob'
         required: false
         type: string
+        default: "*"
+      pkg-test-glob:
+        description: 'Only test packages matching the given glob'
+        required: false
+        type: string
+        default: "*"
 
 jobs:
   report:
