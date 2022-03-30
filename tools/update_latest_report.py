@@ -91,3 +91,4 @@ badge = {
 
 with open(os.path.join(dir_badge, 'badge.json'), 'w') as f:
     json.dump(badge, f, ensure_ascii=False, indent=2)
+    f.write("\n")
