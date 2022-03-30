@@ -193,23 +193,24 @@ jobs:
         id: get-names
         run: |
             MATRIX="{\"package\":["
+            SKIPPED=""
             for PKG in packages/${{ github.event.inputs.pkg-test-glob || inputs.pkg-test-glob }}/meta.json; do
               PKG=${PKG%"/meta.json"}
               PKG=${PKG#"packages/"}
-              if [[ ${PKG} == autodoc ]]; then
-                break # FIXME: HACK for faster testing, remove before merge
-              fi
+              # if [[ ${PKG} == autodoc ]]; then
+              #   break # FIXME: HACK for faster testing, remove before merge
+              # fi
               if ! jq -e -r '.TestFile' < packages/${PKG}/meta.json > /dev/null ; then
                 echo "Skip package without a TestFile"
-                SKIPPED="${SKIPPED}\"${PKG}\","
+                SKIPPED="${SKIPPED}\"${PKG}\" "
               elif [[ ${PKG} == xgap ]]; then
                 echo "Skip xgap: no X11 headers, and no means to test it"
-                SKIPPED="${SKIPPED}\"${PKG}\","
+                SKIPPED="${SKIPPED}\"${PKG}\" "
               elif [[ ${PKG} == polycyclic ]]; then
                 # HACK FIXME TODO: skip polycyclic for now
                 echo "Skip polycycylic tests for now, as they run in an infinite (?) loop"
                 echo "Re-enable them once there is a new polycyclic release"
-                SKIPPED="${SKIPPED}\"${PKG}\","
+                SKIPPED="${SKIPPED}\"${PKG}\" "
               else
                 MATRIX="${MATRIX}\"${PKG}\","
               fi
@@ -354,8 +355,7 @@ jobs:
           python-version: 3.7
 
       - name: "Install package distribution tools"
-        run: |
-          python -m pip install -r tools/requirements.txt
+        run: python -m pip install -r tools/requirements.txt
 
       - name: "Generate test-status.json"
         id: test-status
@@ -388,8 +388,7 @@ jobs:
 
       - name: "Generate report"
         id: report
-        run: |
-          python tools/generate_report.py ${{ steps.test-status.outputs.dir-rel }} latest-${{ github.event.inputs.which-gap }}
+        run: python tools/generate_report.py ${{ steps.test-status.outputs.dir-rel }} latest-${{ github.event.inputs.which-gap }}
 
       - name: "Upload report as artifact"
         uses: actions/upload-artifact@v2
