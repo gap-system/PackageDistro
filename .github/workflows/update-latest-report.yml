@@ -65,8 +65,8 @@ jobs:
           cd data
           git add -A
           git commit -m "Automated report"
-          git push
+          git pull --rebase && git push
           cd ../gh-pages
           git add -A
           git commit -m "Automated redirect"
-          git push
+          git pull --rebase && git push
