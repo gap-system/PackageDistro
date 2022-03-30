@@ -373,9 +373,12 @@ jobs:
           DIR_SYM_REL=latest-${{ github.event.inputs.which-gap }}
           DIR_SYM="${ROOT}/${DIR_SYM_REL}"
           URL_SYM="https://raw.githubusercontent.com/${{ github.repository }}/${DIR_SYM}"
-          # Check if file at url exists with curl
+          # Check if file at url exists,
+          # so we do not run into errors for the first run of the script
+          # (when the first report is created and thus no latest report is available)
           if wget -q --method=HEAD "${URL_SYM}"; then
-            # wget downloads the symbolic link as a plain file,
+            # wget downloads the "symbolic link" as a plain file
+            # containing as content the path that the symlink points to,
             # so we need to convert this into a real symbolic link.
             wget -O ${DIR_SYM} ${URL_SYM}
             DIR=$(cat ${DIR_SYM})
