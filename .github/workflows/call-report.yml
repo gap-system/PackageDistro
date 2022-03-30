@@ -14,7 +14,7 @@ jobs:
     name: "Call report.yml"
     uses: ./.github/workflows/report.yml
     with:
-      which-gap: ${{ github.event.inputs.which-gap }}
+      which-gap: ${{ github.event.inputs.which-gap || inputs.which-gap }}
 
   update-latest:
     name: "Upload report"
@@ -29,7 +29,7 @@ jobs:
       - name: "Download report"
         uses: actions/download-artifact@v3
         with:
-          name: report-${{ github.event.inputs.which-gap }}
+          name: report-${{ github.event.inputs.which-gap || inputs.which-gap }}
           path: _report
 
       - name: "Create data and gh-pages worktree"
@@ -48,7 +48,7 @@ jobs:
           DIR="${ROOT}/${DIR_REL}"
           mkdir -p ${DIR}
           mv _report/* ${DIR}
-          python tools/update_latest_report.py ${DIR_REL} latest-${{ github.event.inputs.which-gap }}
+          python tools/update_latest_report.py ${DIR_REL} latest-${{ github.event.inputs.which-gap || inputs.which-gap }}
 
       - name: "Push report"
         id: push-report
