@@ -375,8 +375,9 @@ jobs:
             # wget downloads the "symbolic link" as a plain file
             # containing as content the path that the symlink points to,
             # so we need to convert this into a real symbolic link.
-            DIR=$(wget -O - ${URL_SYM})
-            ln -s ${DIR} ${DIR_SYM}
+            DIR_REL=$(wget -O - ${URL_SYM})
+            DIR="${ROOT}/${DIR_REL}"
+            ln -s ${DIR_REL} ${DIR_SYM}
             URL="https://raw.githubusercontent.com/${{ github.repository }}/${DIR}/test-status.json"
             wget -P ${DIR} ${URL}
           fi
