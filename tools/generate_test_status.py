@@ -119,5 +119,6 @@ for pkg, data in pkgs.items():
 
 with open(os.path.join(dir_test_status, 'test-status.json'), 'w') as f:
     json.dump(report, f, ensure_ascii=False, indent=2)
+    f.write("\n")
 
 print(report['id'])

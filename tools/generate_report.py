@@ -171,3 +171,4 @@ with open(dir_report+'/report.md', 'w') as f:
 # Write test-status-diff.json
 with open(dir_report+'/test-status-diff.json', 'w') as f:
     json.dump(report_diff, f, ensure_ascii=False, indent=2)
+    f.write("\n")
