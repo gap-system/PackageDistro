@@ -2,8 +2,8 @@
 # This workflow is run either by a manual workflow dispatch, or
 # as part of a daily build.
 #
-# It runs the test suite for all packages and generates a package
-# evaluation report by calling the test-all YML file.
+# We assume that we have run the test suite for all packages and
+# generated a report by calling the test-all YML file beforehand.
 # The report is uploaded to the data branch on the repository
 # and the symlink pointing to the latest report is updated there.
 # In addition, the badge for the latest workflow is generated and
@@ -14,13 +14,6 @@
 name: "Update latest package evaluation report"
 
 on:
-  workflow_dispatch:
-    inputs:
-      which-gap:
-        description: 'Either a GAP branch name or a GAP version'
-        required: true
-        type: string
-        default: master # or 4.11.1 or ...
   workflow_call:
     inputs:
       which-gap:
@@ -30,16 +23,9 @@ on:
         default: master # or 4.11.1 or ...
 
 jobs:
-  test-all:
-    name: "Test packages and generate report"
-    uses: ./.github/workflows/test-all.yml
-    with:
-      which-gap: ${{ github.event.inputs.which-gap || inputs.which-gap }}
-
   update-latest:
     name: "Upload report"
     runs-on: ubuntu-latest
-    needs: test-all
     steps:
       - uses: actions/checkout@v2
 

@@ -1,0 +1,24 @@
+name: "Test packages and update latest report"
+
+on:
+  workflow_dispatch:
+    inputs:
+      which-gap:
+        description: 'Either a GAP branch name or a GAP version'
+        required: true
+        type: string
+        default: master # or 4.11.1 or ...
+
+jobs:
+  test-all:
+      name: "Test packages and generate report"
+      uses: ./.github/workflows/test-all.yml
+      with:
+        which-gap: ${{ github.event.inputs.which-gap }}
+
+  update-latest:
+    name: "Upload report"
+    needs: test-all
+    uses: ./.github/workflows/update-latest-report.yml
+    with:
+      which-gap: ${{ github.event.inputs.which-gap }}
