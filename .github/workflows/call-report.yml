@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       which-gap:
-        description: 'Which Gap version'
+        description: 'Which GAP version'
         default: 'master'
         required: false
         type: string
