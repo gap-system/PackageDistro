@@ -59,8 +59,9 @@ jobs:
       - name: "Push report"
         id: push-report
         run: |
-          git config --global user.name 'GAP Package Distribution Bot'
-          git config --global user.email 'support@gap-system.org'
+          git config --global user.name 'gap-package-distribution-bot'
+          # https://api.github.com/users/gap-package-distribution-bot%5Bbot%5D
+          git config --global user.email '100730870+gap-package-distribution-bot[bot]@users.noreply.github.com'
           cd data
           git add -A
           git commit -m "Automated report"
