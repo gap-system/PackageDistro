@@ -42,8 +42,8 @@ jobs:
     uses: ./.github/workflows/report.yml
     with:
       which-gap: ${{ github.event.inputs.which-gap || inputs.which-gap }}
-      pkg-build-glob: ${{github.event.inputs.pkg-build-glob || inputs.pkg-build-glob}}
-      pkg-test-glob: ${{github.event.inputs.pkg-test-glob || inputs.pkg-test-glob}}
+      pkg-build-glob: ${{ github.event.inputs.pkg-build-glob || inputs.pkg-build-glob }}
+      pkg-test-glob: ${{ github.event.inputs.pkg-test-glob || inputs.pkg-test-glob }}
 
   update-latest:
     name: "Upload report"
