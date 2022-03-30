@@ -5,6 +5,11 @@ contains the metadata of all the GAP packages in the distribution. We also
 upload snapshots the package distribution tarballs to appropriate release tags
 on this repository.
 
+## High-level status dashboard
+
+| Test            | GAP master |
+|:---------------:|:----------:|
+| Released packages | [![Tests](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/FriedrichRober/PackageDistro/data/badges/latest-master/badge.json)](https://FriedrichRober.github.io/PackageDistro/latest-master/redirect.html) |
 
 ## Metadata
 
