@@ -8,7 +8,7 @@
 # test results are aggregated into a JSON file which other workflows can
 # process.
 #
-name: "Test packages"
+name: "Test packages and generate report"
 
 on:
   workflow_dispatch:
