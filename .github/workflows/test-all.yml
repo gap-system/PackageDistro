@@ -200,7 +200,7 @@ jobs:
             for PKG in packages/${{ github.event.inputs.pkg-test-glob || inputs.pkg-test-glob }}/meta.json; do
               PKG=${PKG%"/meta.json"}
               PKG=${PKG#"packages/"}
-              if [[ ${PKG} == autodoc ]]; then
+              if [[ ${PKG} == alnuth ]]; then
                 break # HACK FIXME TODO: faster tests, remove before merge
               fi
               if ! jq -e -r '.TestFile' < packages/${PKG}/meta.json > /dev/null ; then
