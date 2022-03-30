@@ -11,7 +11,7 @@
 # MARKDOWN file and a summary of the changes as a test-status-diff JSON file
 # which other workflows can process. Both files are uploaded as artifacts.
 #
-name: "Test packages and generate report"
+name: "Test packages"
 
 on:
   workflow_dispatch:
