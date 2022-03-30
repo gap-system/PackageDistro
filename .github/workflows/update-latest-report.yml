@@ -3,7 +3,7 @@
 # as part of a daily build.
 #
 # We assume that we have run the test suite for all packages and
-# generated a report by calling the test-all YML file beforehand.
+# generated a report by calling the test-all YML workflow beforehand.
 # The report is uploaded to the data branch on the repository
 # and the symlink pointing to the latest report is updated there.
 # In addition, the badge for the latest workflow is generated and
@@ -14,7 +14,7 @@
 # TODO: Create a Slack notification if a package is failing only
 #       on the current run.
 #
-name: "Update latest package evaluation report"
+name: "Update latest report"
 
 on:
   workflow_call:
