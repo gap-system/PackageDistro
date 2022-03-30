@@ -329,7 +329,7 @@ jobs:
           path: "${{ matrix.package }}.json"
 
   report:
-    name: "Report"
+    name: "Generate report"
     needs: test-package
     if: always()
     runs-on: ubuntu-latest
