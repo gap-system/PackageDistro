@@ -1,3 +1,16 @@
+#
+# This workflow is run either by a manual workflow dispatch, or
+# as part of a daily build.
+#
+# It runs the test suite for all packages and generates a package
+# evaluation report by calling the test-all YML file.
+# The report is uploaded to the data branch on the repository
+# and the symlink pointing to the latest report is updated there.
+# In addition, the badge for the latest workflow is generated and
+# is uploaded to the data branch as well. Finally, the html
+# redirect pointing to the latest report is updated and uploaded
+# to the gh-pages branch on the repository.
+#
 name: "Update Latest Report"
 
 on:

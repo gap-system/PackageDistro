@@ -4,9 +4,12 @@
 #
 # It builds a version of GAP (which one depends on its inputs), then builds
 # all packages (resp. all matching some glob), then runs the tests of all
-# packages (resp. all matching some glob) with a testfile. Finally the various
-# test results are aggregated into a JSON file which other workflows can
-# process.
+# packages (resp. all matching some glob) with a testfile. The various
+# test results are aggregated into a test-status JSON file and is uploaded
+# as an artifact. Finally, the test results are compared against the latest
+# "official" test run. A human-readable comparison report is generated as a
+# MARKDOWN file and a summary of the changes as a test-status-diff JSON file
+# which other workflows can process. Both files are uploaded as artifacts.
 #
 name: "Test packages and generate report"
 
