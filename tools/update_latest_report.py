@@ -72,7 +72,7 @@ with open(os.path.join(dir_redirect, 'redirect.html'), 'w') as f:
     ''' % (repo+'/blob/'+dir_report+'/report.md', repo+'/'+dir_report+'/report.md'))
 
 ############################################################################
-# Generate badge
+# Generate badge, see https://shields.io/endpoint
 relativeFailures = 1 - report['success'] / report['total']
 if relativeFailures > 0.05:
     color = 'critical'
