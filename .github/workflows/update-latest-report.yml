@@ -11,7 +11,7 @@
 # redirect pointing to the latest report is updated and uploaded
 # to the gh-pages branch on the repository.
 #
-name: "Update Latest Report"
+name: "Update latest package evaluation report"
 
 on:
   workflow_dispatch:
