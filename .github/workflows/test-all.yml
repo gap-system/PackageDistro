@@ -201,14 +201,14 @@ jobs:
                 break # HACK FIXME TODO: faster tests, remove before merge
               fi
               if ! jq -e -r '.TestFile' < packages/${PKG}/meta.json > /dev/null ; then
-                echo "Skip package without a TestFile"
+                echo "Skip ${PKG}: no TestFile"
                 SKIPPED="${SKIPPED}${PKG} "
               elif [[ ${PKG} == xgap ]]; then
                 echo "Skip xgap: no X11 headers, and no means to test it"
                 SKIPPED="${SKIPPED}${PKG} "
               elif [[ ${PKG} == polycyclic ]]; then
                 # HACK FIXME TODO: skip polycyclic for now
-                echo "Skip polycycylic tests for now, as they run in an infinite (?) loop"
+                echo "Skip polycyclic tests for now, as they run in an infinite (?) loop"
                 echo "Re-enable them once there is a new polycyclic release"
                 SKIPPED="${SKIPPED}${PKG} "
               else
