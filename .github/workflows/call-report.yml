@@ -23,12 +23,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      # warning/error in utils.py throw a syntax error with default version of python
-      - name: "Set up Python 3.7"
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.7
-
       - name: "Install package distribution tools"
         run: python -m pip install -r tools/requirements.txt
 
