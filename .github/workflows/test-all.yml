@@ -199,10 +199,34 @@ jobs:
               if [[ ${PKG} == autodoc ]]; then
                 break # FIXME: HACK for faster testing, remove before merge
               fi
-              MATRIX="${MATRIX}\"${PKG}\","
+              if ! jq -e -r '.TestFile' < packages/${PKG}/meta.json > /dev/null ; then
+                echo "Skip package without a TestFile"
+                SKIPPED="${SKIPPED}\"${PKG}\","
+              elif [[ ${PKG} == xgap ]]; then
+                echo "Skip xgap: no X11 headers, and no means to test it"
+                SKIPPED="${SKIPPED}\"${PKG}\","
+              elif [[ ${PKG} == polycyclic ]]; then
+                # HACK FIXME TODO: skip polycyclic for now
+                echo "Skip polycycylic tests for now, as they run in an infinite (?) loop"
+                echo "Re-enable them once there is a new polycyclic release"
+                SKIPPED="${SKIPPED}\"${PKG}\","
+              else
+                MATRIX="${MATRIX}\"${PKG}\","
+              fi
             done
             MATRIX="${MATRIX}]}"
             echo "::set-output name=matrix::$MATRIX"
+            mkdir -p test-status-skipped
+            for PKG in ${SKIPPED}; do
+              echo "{\"status_skipped\": \"skipped\"}" > test-status-skipped/${PKG}.json
+            done
+
+      - name: "Upload skipped job status as artifact"
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: "test-status-${{ github.event.inputs.which-gap }}-skipped"
+          path: "test-status-skipped/*.json"
 
   test-package:
     name: "${{ matrix.package }}"
@@ -241,28 +265,8 @@ jobs:
             echo "No required binary depedencies to be installed"
           fi
 
-      - name: "Check if tests should be skipped"
-        id: checks
-        run: |
-          PKG=${{ matrix.package }}
-          if ! jq -e -r '.TestFile' < packages/${PKG}/meta.json > /dev/null ; then
-            echo "Skip package without a TestFile"
-            echo "::set-output name=should-run-tests::false"
-          elif [[ ${PKG} == xgap ]]; then
-            echo "Skip xgap: no X11 headers, and no means to test it"
-            echo "::set-output name=should-run-tests::false"
-          elif [[ ${PKG} == polycyclic ]]; then
-            # HACK FIXME TODO: skip polycyclic for now
-            echo "Skip polycycylic tests for now, as they run in an infinite (?) loop"
-            echo "Re-enable them once there is a new polycyclic release"
-            echo "::set-output name=should-run-tests::false"
-          else
-            echo "::set-output name=should-run-tests::true"
-          fi
-
       - name: "Run tests"
         timeout-minutes: 10
-        if: steps.checks.outputs.should-run-tests == 'true'
         id: tests-default
         run: |
           PKG=${{ matrix.package }}
@@ -277,7 +281,7 @@ jobs:
 
       - name: "Run tests with OnlyNeeded"
         timeout-minutes: 10
-        if: steps.checks.outputs.should-run-tests == 'true'
+        if: always()
         id: tests-only-needed
         run: |
           PKG=${{ matrix.package }}
