@@ -377,7 +377,7 @@ jobs:
           # Check if file at url exists,
           # so we do not run into errors for the first run of the script
           # (when the first report is created and thus no latest report is available)
-          if wget -q --method=HEAD "${URL_SYM}"; then
+          if wget --spider "${URL_SYM}"; then
             # wget downloads the "symbolic link" as a plain file
             # containing as content the path that the symlink points to,
             # so we need to convert this into a real symbolic link.
