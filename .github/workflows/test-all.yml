@@ -196,9 +196,9 @@ jobs:
             for PKG in packages/${{ github.event.inputs.pkg-test-glob || inputs.pkg-test-glob }}/meta.json; do
               PKG=${PKG%"/meta.json"}
               PKG=${PKG#"packages/"}
-              # if [[ ${PKG} == anupq ]]; then
-              #   break # FIXME: HACK for faster testing, remove before merge
-              # fi
+              if [[ ${PKG} == autodoc ]]; then
+                break # FIXME: HACK for faster testing, remove before merge
+              fi
               MATRIX="${MATRIX}\"${PKG}\","
             done
             MATRIX="${MATRIX}]}"
@@ -218,12 +218,6 @@ jobs:
       - name: "Install package distribution tools"
         run: |
           python -m pip install -r tools/requirements.txt
-          if [[ ${{ matrix.package }} == polycyclic ]]; then
-            # HACK FIXME TODO: skip polycyclic for now
-            echo "SKIPPING polycycylic tests for now, as they run in an infinite (?) loop"
-            echo "Re-enable them once there is a new polycyclic release"
-            exit 1
-          fi
 
       - name: "Download GAP from previous job"
         uses: actions/download-artifact@v2
@@ -247,23 +241,28 @@ jobs:
             echo "No required binary depedencies to be installed"
           fi
 
-      - name: "Check for a TestFile"
-        id: run-tests
+      - name: "Check if tests should be skipped"
+        id: checks
         run: |
           PKG=${{ matrix.package }}
           if ! jq -e -r '.TestFile' < packages/${PKG}/meta.json > /dev/null ; then
-            # Skip packages without a TestFile
-            echo "::set-output name=run-tests::false"
+            echo "Skip package without a TestFile"
+            echo "::set-output name=should-run-tests::false"
           elif [[ ${PKG} == xgap ]]; then
-            # skip xgap: no X11 headers, and no means to test it
-            echo "::set-output name=run-tests::false"
+            echo "Skip xgap: no X11 headers, and no means to test it"
+            echo "::set-output name=should-run-tests::false"
+          elif [[ ${PKG} == polycyclic ]]; then
+            # HACK FIXME TODO: skip polycyclic for now
+            echo "Skip polycycylic tests for now, as they run in an infinite (?) loop"
+            echo "Re-enable them once there is a new polycyclic release"
+            echo "::set-output name=should-run-tests::false"
           else
-            echo "::set-output name=run-tests::true"
+            echo "::set-output name=should-run-tests::true"
           fi
 
       - name: "Run tests"
         timeout-minutes: 10
-        if: ${{ steps.run-tests.outputs.run-tests }} == 'true'
+        if: steps.checks.outputs.should-run-tests == 'true'
         id: tests-default
         run: |
           PKG=${{ matrix.package }}
@@ -278,7 +277,7 @@ jobs:
 
       - name: "Run tests with OnlyNeeded"
         timeout-minutes: 10
-        if: ${{ steps.run-tests.outputs.run-tests }} == 'true'
+        if: steps.checks.outputs.should-run-tests == 'true'
         id: tests-only-needed
         run: |
           PKG=${{ matrix.package }}
@@ -309,7 +308,7 @@ jobs:
       # https://docs.github.com/en/actions/learn-github-actions/contexts#steps-context
       # steps.<id>.outcome possible values are success, failure, cancelled, or skipped.
       - name: "Create job status json-file"
-        if: ${{ always() }}
+        if: always()
         run: |
           PKG="${{ matrix.package }}"
           STATUS_DEFAULT="${{ steps.tests-default.outcome }}"
@@ -318,7 +317,7 @@ jobs:
           cat ${PKG}.json
 
       - name: "Upload job status as artifact"
-        if: ${{ always() }}
+        if: always()
         uses: actions/upload-artifact@v2
         with:
           name: "test-status-${{ matrix.package }}"
@@ -327,7 +326,7 @@ jobs:
   report:
     name: "Report"
     needs: test-package
-    if: ${{ always() }}
+    if: always()
     runs-on: ubuntu-latest
     outputs:
       test-status: ${{ steps.test-status.outputs.test-status }}
@@ -356,4 +355,38 @@ jobs:
 
       - name: "Generate test-status.json"
         id: test-status
-        run: python tools/generate_test_status.py ${{ github.repository }} "$GITHUB_RUN_ID" "$GITHUB_SHA" $(git rev-parse --short "$GITHUB_SHA")
+        run: |
+          ROOT='data/reports'
+          DIR_REL=$(python tools/generate_test_status.py ${{ github.repository }} "$GITHUB_RUN_ID" "$GITHUB_SHA" ${{github.event.inputs.which-gap}})
+          DIR="${ROOT}/${DIR_REL}"
+          echo "::set-output name=dir::${DIR}"
+          echo "::set-output name=dir-rel::${DIR_REL}"
+
+      - name: "Download latest report"
+        id: download-latest-report
+        run: |
+          ROOT="data/reports"
+          DIR_SYM_REL=latest-${{ github.event.inputs.which-gap }}
+          DIR_SYM="${ROOT}/${DIR_SYM_REL}"
+          URL_SYM="https://raw.githubusercontent.com/${{ github.repository }}/${DIR_SYM}"
+          if curl --head --fail --silent "${URL_SYM}" 2>/dev/null; then
+            # wget downloads the symbolic link as file!
+            wget -O ${DIR_SYM} ${URL_SYM}
+            DIR=$(cat ${DIR_SYM})
+            rm ${DIR_SYM}
+            ln -s ${DIR} ${DIR_SYM}
+            DIR=${DIR#/home/runner/work/PackageDistro/PackageDistro/}
+            URL="https://raw.githubusercontent.com/${{ github.repository }}/${DIR}/test-status.json"
+            wget -P ${DIR} ${URL}
+          fi
+
+      - name: "Generate report"
+        id: report
+        run: |
+          python tools/generate_report.py ${{ steps.test-status.outputs.dir-rel }} latest-${{ github.event.inputs.which-gap }}
+
+      - name: "Upload report as artifact"
+        uses: actions/upload-artifact@v2
+        with:
+          name: "report-${{ github.event.inputs.which-gap }}"
+          path: "${{ steps.test-status.outputs.dir }}"
