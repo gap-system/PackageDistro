@@ -38,7 +38,7 @@ dir_last_report_rel = 'latest-master'
 if num_args > 1: dir_report_rel = sys.argv[1]
 if num_args > 2: dir_last_report_rel = sys.argv[2]
 
-dir_report = os.path.realpath(os.path.join(root, dir_report_rel))
+dir_report = os.path.join(root, dir_report_rel)
 dir_last_report_symbolic = os.path.join(root, dir_last_report_rel)
 
 report_path = os.path.join(dir_report, 'test-status.json')

@@ -377,7 +377,6 @@ jobs:
             # so we need to convert this into a real symbolic link.
             DIR=$(wget -O - ${URL_SYM})
             ln -s ${DIR} ${DIR_SYM}
-            DIR=${DIR#/home/runner/work/PackageDistro/PackageDistro/}
             URL="https://raw.githubusercontent.com/${{ github.repository }}/${DIR}/test-status.json"
             wget -P ${DIR} ${URL}
           fi
