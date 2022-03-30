@@ -58,7 +58,7 @@ repo = report['repo']
 
 ################################################################################
 # Update symlink
-symlink(dir_report, dir_last_report_symbolic, overwrite=True)
+symlink(dir_report_rel, dir_last_report_symbolic, overwrite=True)
 
 ############################################################################
 # Generate html redirect
