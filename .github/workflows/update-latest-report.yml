@@ -11,6 +11,9 @@
 # redirect pointing to the latest report is updated and uploaded
 # to the gh-pages branch on the repository.
 #
+# TODO: Create a Slack notification if a package is failing only
+#       on the current run.
+#
 name: "Update latest package evaluation report"
 
 on:

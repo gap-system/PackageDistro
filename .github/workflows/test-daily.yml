@@ -1,19 +1,17 @@
 #
-# This workflow is run either by a manual workflow dispatch, or
-# as part of a pull request check.
+# This workflow is run regularly and tests the official package distribution
+# by calling the test-all and update-latest-report YML workflows.
 #
-# It tests the official package distribution by calling
-# the test-all and update-latest-report YML files.
-#
-name: "Test release"
+name: "Daily tests"
 
 on:
+  workflow_dispatch: # for debugging
   schedule:
     - cron:  '00 2 * * *'
-  workflow_dispatch:
 
 
 jobs:
+  # master
   test-all-master:
     name: "Test packages"
     uses: ./.github/workflows/test-all.yml
@@ -28,6 +26,7 @@ jobs:
     with:
       which-gap: master
 
+  # 4.11.1
   test-all-4-11-1:
       name: "Test packages"
       uses: ./.github/workflows/test-all.yml
