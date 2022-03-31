@@ -52,20 +52,15 @@ def download_pkg_info(pkg_name: str) -> str:
     return response.content
 
 
-def gap_exec(commands: str, args="") -> int:
-
+def gap_exec(commands: str, args="") -> tuple[int, bytes]:
     with subprocess.Popen(
-        r'echo "{}"'.format(commands),
+        "gap -A -b --quitonbreak -q " + args,
+        stdin=subprocess.PIPE,
         stdout=subprocess.PIPE,
         shell=True,
-    ) as cmd:
-        with subprocess.Popen(
-            "gap -A -b --quitonbreak -q " + args,
-            stdin=cmd.stdout,
-            shell=True,
-        ) as GAP:
-            GAP.wait()
-            return GAP.returncode
+    ) as GAP:
+        out, err = GAP.communicate(input=commands.encode('utf-8'))
+        return GAP.returncode, out
 
 
 def scan_for_one_update(pkginfos_dir: str, pkg_name: str) -> None:
@@ -99,9 +94,9 @@ def scan_for_updates(pkginfos_dir = pkginfos_dir, disable_threads = False):
 
 def output_json(updated_pkgs, pkginfos_dir = pkginfos_dir):
     dir_of_this_file = os.path.dirname(os.path.realpath(__file__))
-    str = '\\", \\"'.join(updated_pkgs)
-    result = gap_exec(
-            r"OutputJson([\"{}\"], \"{}\");".format(str, pkginfos_dir),
+    str = '", "'.join(updated_pkgs)
+    result, _ = gap_exec(
+            'OutputJson(["{}"], "{}");'.format(str, pkginfos_dir),
             args="{}/pkginfo_to_json.g".format(dir_of_this_file),
         )
     if result != 0:
