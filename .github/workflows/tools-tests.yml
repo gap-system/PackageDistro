@@ -6,6 +6,11 @@ name: "Test Python tools"
 
 on:
   workflow_dispatch:  # manual trigger for debugging
+  push:
+    paths:
+      - 'tools/*'
+    branches:
+      - main
   pull_request:
     paths:
       - 'tools/*'
