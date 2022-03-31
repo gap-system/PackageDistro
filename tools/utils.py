@@ -16,6 +16,7 @@ import requests
 from accepts import accepts
 from os.path import join
 
+from typing import NoReturn
 
 # print notices in green
 def notice(msg):
@@ -28,7 +29,7 @@ def warning(msg):
 
 
 # print error in red and exit
-def error(msg):
+def error(msg) -> NoReturn: 
     print("\033[31m" + msg + "\033[0m", file = sys.stderr)
     sys.exit(1)
 
