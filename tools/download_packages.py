@@ -56,12 +56,6 @@ def download_archive(  # pylint: disable=inconsistent-return-statements
         os.mkdir(archive_dir)
 
     archive_fname = join(archive_dir, archive_name(pkg_name))
-    archive_ext = archive_fname.split(".")
-    if archive_ext[-1] == "gz" or archive_ext[-1] == "bz2":
-        archive_ext = "." + ".".join(archive_ext[-2:])
-    else:
-        assert archive_ext[-1] == "zip"
-        archive_ext = ".zip"
 
     if os.path.exists(archive_fname) and os.path.isfile(archive_fname):
         pkg_json = metadata(pkg_name)
