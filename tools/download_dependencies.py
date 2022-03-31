@@ -19,15 +19,12 @@ This script downloads the dependencies of the command line arguments.
 import os
 import sys
 
-from accepts import accepts
-
 from download_packages import download_archive
 from validate_package import unpack_archive
 
 from utils import error, normalize_pkg_name, metadata, metadata_fname
 
 # TODO allow downloading of SuggestedPackages too
-@accepts(str, set)
 def download_dependencies(pkg_name: str, seen: set) -> None:
     pkg_json = metadata(pkg_name)
     seen.add(pkg_name)

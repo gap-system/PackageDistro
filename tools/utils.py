@@ -13,7 +13,6 @@ import os
 import sys
 import requests
 
-from accepts import accepts
 from os.path import join
 
 from typing import NoReturn
@@ -37,7 +36,6 @@ def all_packages():
     pkgs = sorted(os.listdir(os.path.join(os.getcwd(), "packages")))
     return [d for d in pkgs if os.path.isfile(metadata_fname(d))]
 
-@accepts(str)
 def sha256(fname: str) -> str:
     hash_archive = hashlib.sha256()
     with open(fname, "rb") as f:
@@ -45,7 +43,6 @@ def sha256(fname: str) -> str:
             hash_archive.update(chunk)
     return hash_archive.hexdigest()
 
-@accepts(str, str)
 def download(url: str, dst: str) -> None:
     """Download the file at the given URL `url` to the file with path `dst`."""
     response = requests.get(url, stream=True)
@@ -54,7 +51,6 @@ def download(url: str, dst: str) -> None:
             if chunk:
                 f.write(chunk)
 
-@accepts(str)
 def normalize_pkg_name(pkg_name: str) -> str:
     suffix = "/meta.json"
     prefix = "packages/"
@@ -64,11 +60,9 @@ def normalize_pkg_name(pkg_name: str) -> str:
         pkg_name = pkg_name[:-len(suffix)]
     return pkg_name
 
-@accepts(str)
 def metadata_fname(pkg_name: str) -> str:
     return os.path.join("packages", pkg_name, "meta.json")
 
-@accepts(str)
 def metadata(pkg_name: str) -> dict:
     fname = metadata_fname(pkg_name)
     pkg_json = {}
@@ -83,7 +77,6 @@ def metadata(pkg_name: str) -> dict:
     return pkg_json
 
 
-@accepts(str)
 def archive_name(pkg_name: str) -> str:
     pkg_json = metadata(pkg_name)
     return (
@@ -92,7 +85,6 @@ def archive_name(pkg_name: str) -> str:
     )
 
 
-@accepts(str)
 def archive_url(pkg_name: str) -> str:
     pkg_json = metadata(pkg_name)
     return pkg_json["ArchiveURL"] + pkg_json["ArchiveFormats"].split(" ")[0]

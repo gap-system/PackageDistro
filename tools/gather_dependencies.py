@@ -18,8 +18,6 @@ on the command line.
 import os
 import sys
 
-from accepts import accepts
-
 from utils import normalize_pkg_name, metadata
 
 # The following maps names of GAP packages to lists of Ubuntu package names.
@@ -43,7 +41,6 @@ ubtunu_deps = {
 'modulepresentationsforcap': [ 'singular' ],
 }
 
-@accepts(str, set)
 def gather_dependencies(pkg_name: str, seen: set) -> None:
     try:
         pkg_json = metadata(pkg_name)
