@@ -23,6 +23,8 @@ import glob
 import json
 from datetime import datetime
 
+from typing import Any
+
 ################################################################################
 # Arguments
 num_args = len(sys.argv)
@@ -58,7 +60,7 @@ for FILE in FILES:
 # Generate main test-status.json
 
 # General Information
-REPORT = {}
+REPORT: dict[str,Any] = {}
 REPORT['repo'] = repo
 REPORT['workflow'] = repo+'/actions/runs/'+runID
 REPORT['hash'] = hash
