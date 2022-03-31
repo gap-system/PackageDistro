@@ -11,6 +11,7 @@ import hashlib
 import json
 import os
 import sys
+import requests
 
 from accepts import accepts
 from os.path import join
@@ -39,9 +40,18 @@ def all_packages():
 def sha256(fname: str) -> str:
     hash_archive = hashlib.sha256()
     with open(fname, "rb") as f:
-        for chunk in iter(lambda: f.read(1024), b""):
+        for chunk in iter(lambda: f.read(16384), b""):
             hash_archive.update(chunk)
     return hash_archive.hexdigest()
+
+@accepts(str, str)
+def download(url: str, dst: str) -> None:
+    """Download the file at the given URL `url` to the file with path `dst`."""
+    response = requests.get(url, stream=True)
+    with open(dst, "wb") as f:
+        for chunk in response.raw.stream(16384, decode_content=False):
+            if chunk:
+                f.write(chunk)
 
 @accepts(str)
 def normalize_pkg_name(pkg_name: str) -> str:
