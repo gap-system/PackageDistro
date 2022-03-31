@@ -35,10 +35,12 @@ from download_packages import download_archive
 
 from utils import notice, error, warning, all_packages, metadata, metadata_fname, sha256, archive_name
 
+from typing import Optional
+
 archive_dir = "_archives"
 pkginfos_dir = "_pkginfos"
 
-def download_pkg_info(pkg_name: str) -> str:
+def download_pkg_info(pkg_name: str) -> Optional[bytes]:
     pkg_json = metadata(pkg_name)
     url = pkg_json["PackageInfoURL"]
     response = requests.get(url)
@@ -48,7 +50,7 @@ def download_pkg_info(pkg_name: str) -> str:
                 url, response.status_code
             )
         )
-        return False
+        return None
     return response.content
 
 
@@ -68,7 +70,7 @@ def gap_exec(commands: str, args="") -> int:
             return GAP.returncode
 
 
-def scan_for_one_update(pkginfos_dir: str, pkg_name: str) -> None:
+def scan_for_one_update(pkginfos_dir: str, pkg_name: str) -> Optional[str]:
     pkg_json = metadata(pkg_name)
     try:
         hash_distro = pkg_json["PackageInfoSHA256"]
@@ -76,14 +78,15 @@ def scan_for_one_update(pkginfos_dir: str, pkg_name: str) -> None:
         notice(pkg_name + ': missing key "PackageInfoSHA256"')
         hash_distro = 0
     pkg_info = download_pkg_info(pkg_name)
-    if not pkg_info:
-        return
+    if not isinstance(pkg_info, bytes):
+        return None
     hash_url = hashlib.sha256(pkg_info).hexdigest()
     if hash_url != hash_distro:
         notice(pkg_name + ": detected different sha256 hash of PackageInfo.g")
         with open(join(pkginfos_dir, pkg_name + ".g"), "wb") as f:
             f.write(pkg_info)
         return pkg_name
+    return None
 
 
 def scan_for_updates(pkginfos_dir = pkginfos_dir, disable_threads = False):
