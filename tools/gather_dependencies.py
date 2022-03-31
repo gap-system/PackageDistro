@@ -41,7 +41,7 @@ ubtunu_deps = {
 'modulepresentationsforcap': [ 'singular' ],
 }
 
-def gather_dependencies(pkg_name: str, seen: set) -> None:
+def gather_dependencies(pkg_name: str, seen: set) -> set:
     try:
         pkg_json = metadata(pkg_name)
     except:
@@ -60,7 +60,7 @@ def gather_dependencies(pkg_name: str, seen: set) -> None:
     return deps
 
 def main(pkgs) -> None:
-    seen = set()
+    seen: set[str] = set()
     deps = set()
     for pkg in pkgs:
         deps |= gather_dependencies(normalize_pkg_name(pkg), seen)
