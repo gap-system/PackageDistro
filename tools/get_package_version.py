@@ -18,11 +18,8 @@ version as stored in meta.json.
 import os
 import sys
 
-from accepts import accepts
-
 from utils import normalize_pkg_name, metadata
 
-@accepts(str)
 def get_version(pkg_name: str) -> str:
     pkg_json = metadata(pkg_name)
     return pkg_json["Version"]

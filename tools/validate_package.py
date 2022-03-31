@@ -41,8 +41,6 @@ import tarfile
 from os.path import join
 from tempfile import TemporaryDirectory
 
-from accepts import accepts
-
 from download_packages import download_archive
 from scan_for_updates import download_pkg_info, gap_exec
 

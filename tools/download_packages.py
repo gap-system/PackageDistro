@@ -41,12 +41,10 @@ import sys
 from os.path import join
 
 import requests
-from accepts import accepts
 
 from utils import error, notice, normalize_pkg_name, archive_name, archive_url, metadata, sha256
 
 
-@accepts(str, str, int)
 def download_archive(  # pylint: disable=inconsistent-return-statements
     archive_dir: str, pkg_name: str, tries=5
 ) -> str:
