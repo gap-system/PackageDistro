@@ -105,8 +105,8 @@ def main(pkgs):
             pkgdir = join(tempdir, validate_tarball(archive_fname))
             shutil.unpack_archive(archive_fname, tempdir)
             validate_package(archive_fname, pkgdir, pkg_name)
-            result = gap_exec(
-                    r"ValidatePackagesArchive(\"{}\", \"{}\");".format(pkgdir, pkg_name),
+            result, _ = gap_exec(
+                    "ValidatePackagesArchive(\"{}\", \"{}\");".format(pkgdir, pkg_name),
                     args="{}/validate_package.g".format(dir_of_this_file),
                 )
             if result != 0:
