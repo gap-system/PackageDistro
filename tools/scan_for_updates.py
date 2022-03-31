@@ -29,7 +29,6 @@ import os
 import requests
 import subprocess
 from os.path import join
-from accepts import accepts
 from multiprocessing.pool import ThreadPool
 
 from download_packages import download_archive
@@ -39,7 +38,6 @@ from utils import notice, error, warning, all_packages, metadata, metadata_fname
 archive_dir = "_archives"
 pkginfos_dir = "_pkginfos"
 
-@accepts(str)
 def download_pkg_info(pkg_name: str) -> str:
     pkg_json = metadata(pkg_name)
     url = pkg_json["PackageInfoURL"]
@@ -54,7 +52,6 @@ def download_pkg_info(pkg_name: str) -> str:
     return response.content
 
 
-@accepts(str, str)
 def gap_exec(commands: str, args="") -> int:
 
     with subprocess.Popen(
@@ -71,7 +68,6 @@ def gap_exec(commands: str, args="") -> int:
             return GAP.returncode
 
 
-@accepts(str, str)
 def scan_for_one_update(pkginfos_dir: str, pkg_name: str) -> None:
     pkg_json = metadata(pkg_name)
     try:
@@ -106,7 +102,7 @@ def output_json(updated_pkgs, pkginfos_dir = pkginfos_dir):
     str = '\\", \\"'.join(updated_pkgs)
     result = gap_exec(
             r"OutputJson([\"{}\"], \"{}\");".format(str, pkginfos_dir),
-            args="{}/scan_for_updates.g".format(dir_of_this_file),
+            args="{}/pkginfo_to_json.g".format(dir_of_this_file),
         )
     if result != 0:
         error("Something went wrong")

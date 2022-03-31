@@ -11,11 +11,12 @@ import hashlib
 import json
 import os
 import sys
+import requests
 import tempfile
 
-from accepts import accepts
 from os.path import join
 
+from typing import NoReturn
 
 # print notices in green
 def notice(msg):
@@ -28,7 +29,7 @@ def warning(msg):
 
 
 # print error in red and exit
-def error(msg):
+def error(msg) -> NoReturn: 
     print("\033[31m" + msg + "\033[0m", file = sys.stderr)
     sys.exit(1)
 
@@ -36,32 +37,33 @@ def all_packages():
     pkgs = sorted(os.listdir(os.path.join(os.getcwd(), "packages")))
     return [d for d in pkgs if os.path.isfile(metadata_fname(d))]
 
-@accepts(str)
 def sha256(fname: str) -> str:
     hash_archive = hashlib.sha256()
     with open(fname, "rb") as f:
-        for chunk in iter(lambda: f.read(1024), b""):
+        for chunk in iter(lambda: f.read(16384), b""):
             hash_archive.update(chunk)
     return hash_archive.hexdigest()
 
-@accepts(str)
+def download(url: str, dst: str) -> None:
+    """Download the file at the given URL `url` to the file with path `dst`."""
+    response = requests.get(url, stream=True)
+    with open(dst, "wb") as f:
+        for chunk in response.raw.stream(16384, decode_content=False):
+            if chunk:
+                f.write(chunk)
+
 def normalize_pkg_name(pkg_name: str) -> str:
     suffix = "/meta.json"
     prefix = "packages/"
-    if pkg_name.endswith(suffix) and pkg_name.startswith(prefix):
-        return pkg_name[len(prefix):-len(suffix)]
-    elif pkg_name.endswith(suffix):
-        return pkg_name[:-len(suffix)]
-    elif pkg_name.startswith(prefix):
-        return pkg_name[len(prefix):]
-    else:
-        return pkg_name
+    if pkg_name.startswith(prefix):
+        pkg_name = pkg_name[len(prefix):]
+    if pkg_name.endswith(suffix):
+        pkg_name = pkg_name[:-len(suffix)]
+    return pkg_name
 
-@accepts(str)
 def metadata_fname(pkg_name: str) -> str:
     return os.path.join("packages", pkg_name, "meta.json")
 
-@accepts(str)
 def metadata(pkg_name: str) -> dict:
     fname = metadata_fname(pkg_name)
     pkg_json = {}
@@ -70,13 +72,12 @@ def metadata(pkg_name: str) -> dict:
         with open(fname, "r", encoding="utf-8") as f:
             pkg_json = json.load(f)
     except (OSError, IOError):
-        error("file {} not found".format(pkg_name, fname))
+        error("file {} not found".format(fname))
     except json.JSONDecodeError as e:
-        error("invalid json in {}\n{}".format(pkg_name, fname, e.msg))
+        error("invalid json in {}\n{}".format(fname, e.msg))
     return pkg_json
 
 
-@accepts(str)
 def archive_name(pkg_name: str) -> str:
     pkg_json = metadata(pkg_name)
     return (
@@ -85,7 +86,6 @@ def archive_name(pkg_name: str) -> str:
     )
 
 
-@accepts(str)
 def archive_url(pkg_name: str) -> str:
     pkg_json = metadata(pkg_name)
     return pkg_json["ArchiveURL"] + pkg_json["ArchiveFormats"].split(" ")[0]
