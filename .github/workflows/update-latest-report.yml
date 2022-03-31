@@ -1,0 +1,75 @@
+#
+# This workflow is run either by a manual workflow dispatch, or
+# as part of a daily build.
+#
+# We assume that we have run the test suite for all packages and
+# generated a report by calling the test-all YML workflow beforehand.
+# The report is uploaded to the data branch on the repository
+# and the symlink pointing to the latest report is updated there.
+# In addition, the badge for the latest workflow is generated and
+# is uploaded to the data branch as well. Finally, the html
+# redirect pointing to the latest report is updated and uploaded
+# to the gh-pages branch on the repository.
+#
+# TODO: Create a Slack notification if a package is failing only
+#       on the current run.
+#
+name: "Update latest report"
+
+on:
+  workflow_call:
+    inputs:
+      which-gap:
+        description: 'Either a GAP branch name or a GAP version'
+        required: true
+        type: string
+        default: master # or 4.11.1 or ...
+
+jobs:
+  update-latest:
+    name: "Upload report"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: "Install package distribution tools"
+        run: python -m pip install -r tools/requirements.txt
+
+      - name: "Download report"
+        uses: actions/download-artifact@v3
+        with:
+          name: report-${{ github.event.inputs.which-gap || inputs.which-gap }}
+          path: _report
+
+      - name: "Create data and gh-pages worktree"
+        run: |
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
+          git fetch
+          git branch --track data origin/data
+          git worktree add data data
+          git branch --track gh-pages origin/gh-pages
+          git worktree add gh-pages gh-pages
+
+      - name: "Update latest report"
+        run: |
+          ROOT="data/reports"
+          DIR_REL=$(jq -r '.id' < '_report/test-status.json')
+          DIR="${ROOT}/${DIR_REL}"
+          mkdir -p ${DIR}
+          mv _report/* ${DIR}
+          python tools/update_latest_report.py ${DIR_REL} latest-${{ github.event.inputs.which-gap || inputs.which-gap }}
+
+      - name: "Push report"
+        id: push-report
+        run: |
+          git config --global user.name 'gap-package-distribution-bot'
+          # https://api.github.com/users/gap-package-distribution-bot%5Bbot%5D
+          git config --global user.email '100730870+gap-package-distribution-bot[bot]@users.noreply.github.com'
+          cd data
+          git add -A
+          git commit -m "Automated report"
+          git pull --rebase && git push
+          cd ../gh-pages
+          git add -A
+          git commit -m "Automated redirect"
+          git pull --rebase && git push

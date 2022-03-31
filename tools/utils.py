@@ -12,6 +12,7 @@ import json
 import os
 import sys
 import requests
+import tempfile
 
 from os.path import join
 
@@ -88,3 +89,42 @@ def archive_name(pkg_name: str) -> str:
 def archive_url(pkg_name: str) -> str:
     pkg_json = metadata(pkg_name)
     return pkg_json["ArchiveURL"] + pkg_json["ArchiveFormats"].split(" ")[0]
+
+# https://stackoverflow.com/questions/8299386/modifying-a-symlink-in-python/55742015#55742015
+def symlink(target, link_name, overwrite=False):
+    '''
+    Create a symbolic link named link_name pointing to target.
+    If link_name exists then FileExistsError is raised, unless overwrite=True.
+    When trying to overwrite a directory, IsADirectoryError is raised.
+    '''
+
+    if not overwrite:
+        os.symlink(target, link_name)
+        return
+
+    # os.replace() may fail if files are on different filesystems
+    link_dir = os.path.dirname(link_name)
+
+    # Create link to target with temporary filename
+    while True:
+        temp_link_name = tempfile.mktemp(dir=link_dir)
+
+        # os.* functions mimic as closely as possible system functions
+        # The POSIX symlink() returns EEXIST if link_name already exists
+        # https://pubs.opengroup.org/onlinepubs/9699919799/functions/symlink.html
+        try:
+            os.symlink(target, temp_link_name)
+            break
+        except FileExistsError:
+            pass
+
+    # Replace link_name with temp_link_name
+    try:
+        # Pre-empt os.replace on a directory with a nicer message
+        if not os.path.islink(link_name) and os.path.isdir(link_name):
+            raise IsADirectoryError(f"Cannot symlink over existing directory: '{link_name}'")
+        os.replace(temp_link_name, link_name)
+    except:
+        if os.path.islink(temp_link_name):
+            os.remove(temp_link_name)
+        raise

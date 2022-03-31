@@ -117,7 +117,8 @@ jobs:
       - uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ steps.generate-token.outputs.token }}
-          author: "GAP Package Distribution Bot <support@gap-system.org>"
+          # https://api.github.com/users/gap-package-distribution-bot%5Bbot%5D
+          author: "gap-package-distribution-bot <100730870+gap-package-distribution-bot[bot]@users.noreply.github.com>"
           add-paths: packages/${{ matrix.package }}
           commit-message: "[${{ matrix.package }}] Update to ${{ env.PKG_VERSION }}"
           body: ""

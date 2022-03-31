@@ -12,7 +12,12 @@
 
 """
 This script collects the job-status of each package from _reports/
-and generates a main test-status.json
+and generates a main test-status.json.
+
+The file is written into data/reports/{{id}} where
+id={{which_gap}}/{{date}}-{{hash_short}}.
+
+Prints {{id}} to terminal.
 """
 
 from utils import error, warning
@@ -32,45 +37,51 @@ num_args = len(sys.argv)
 if num_args > 5:
     error('Too many arguments')
 
-repo = runID = hash = hash_short ='Unknown'
+repo = runID = hash = which_gap = 'Unknown'
 
 if num_args > 1: repo = 'https://github.com/'+sys.argv[1]
 if num_args > 2: runID = sys.argv[2]
 if num_args > 3: hash = sys.argv[3]
-if num_args > 4: hash_short = sys.argv[4]
+if num_args > 4: which_gap = sys.argv[4]
 
 ################################################################################
 # Collect the job-status of each package from _reports/
-FILES = []
-for FILE in glob.glob('_reports/**/*.json', recursive=True):
-    FILES.append(FILE)
+files = []
+for file in glob.glob('_reports/**/*.json', recursive=True):
+    files.append(file)
 
-FILES.sort()
+files.sort()
 
-PKG_STATUS = {}
+pkgs = {}
 
-for FILE in FILES:
-    with open(FILE, 'r', encoding='utf-8', errors='ignore') as f:
+for file in files:
+    with open(file, 'r', encoding='utf-8', errors='ignore') as f:
         data = json.load(f)
 
-    PKG_STATUS[os.path.splitext(os.path.basename(FILE))[0]] = data
-
+    pkgs[os.path.splitext(os.path.basename(file))[0]] = data
 
 ################################################################################
 # Generate main test-status.json
 
 # General Information
-REPORT: dict[str,Any] = {}
-REPORT['repo'] = repo
-REPORT['workflow'] = repo+'/actions/runs/'+runID
-REPORT['hash'] = hash
-REPORT['hash_short'] = hash_short
-REPORT['date'] = str(datetime.now())
+report: dict[str,Any] = {}
+report['repo'] = repo
+report['workflow'] = repo+'/actions/runs/'+runID
+report['hash'] = hash
+date = str(datetime.now()).split('.')[0]
+report['date'] = date
+report['id'] = os.path.join(which_gap, "%s-%s" % (date.replace(' ','-'), hash[:8]))
+
+# Path
+root = 'data/reports'
+dir_test_status = os.path.join(root, report['id'])
+os.makedirs(dir_test_status, exist_ok = True)
 
 # Package Information
-for pkg, data in PKG_STATUS.items():
+for pkg, data in pkgs.items():
     with open(os.path.join('packages', pkg, 'meta.json'), 'r') as f:
         meta = json.load(f)
+
     data['version'] = meta['Version']
     data['archive_url'] = meta['ArchiveURL']
     data['archive_sha256'] = meta['ArchiveSHA256']
@@ -88,25 +99,28 @@ for pkg, data in PKG_STATUS.items():
     else: # all are 'success'
         data['status'] = 'success'
 
-REPORT['pkgs'] = PKG_STATUS
+report['pkgs'] = pkgs
 
 # Summary Information
-REPORT['total'] = 0
-REPORT['success'] = 0
-REPORT['failure'] = 0
-REPORT['skipped'] = 0
+report['total'] = 0
+report['success'] = 0
+report['failure'] = 0
+report['skipped'] = 0
 
-for pkg, data in PKG_STATUS.items():
-    REPORT['total'] += 1
+for pkg, data in pkgs.items():
+    report['total'] += 1
     status = data['status']
     if status == 'success':
-        REPORT['success'] += 1
+        report['success'] += 1
     elif status == 'failure':
-        REPORT['failure'] += 1
+        report['failure'] += 1
     elif status == 'skipped':
-        REPORT['skipped'] += 1
+        report['skipped'] += 1
     else:
         warning('Unknown job status detected for pkg \"'+pkg+'\"')
 
-with open('test-status.json', 'w') as f:
-    json.dump(REPORT, f, ensure_ascii=False, indent=2)
+with open(os.path.join(dir_test_status, 'test-status.json'), 'w') as f:
+    json.dump(report, f, ensure_ascii=False, indent=2)
+    f.write("\n")
+
+print(report['id'])

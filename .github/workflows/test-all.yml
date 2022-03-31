@@ -4,9 +4,12 @@
 #
 # It builds a version of GAP (which one depends on its inputs), then builds
 # all packages (resp. all matching some glob), then runs the tests of all
-# packages (resp. all matching some glob) with a testfile. Finally the various
-# test results are aggregated into a JSON file which other workflows can
-# process.
+# packages (resp. all matching some glob) with a testfile. The various
+# test results are aggregated into a test-status JSON file and is uploaded
+# as an artifact. Finally, the test results are compared against the latest
+# "official" test run. A human-readable comparison report is generated as a
+# MARKDOWN file and a summary of the changes as a test-status-diff JSON file
+# which other workflows can process. Both files are uploaded as artifacts.
 #
 name: "Test packages"
 
@@ -188,25 +191,38 @@ jobs:
         id: get-names
         run: |
             MATRIX="{\"package\":["
+            SKIPPED=""
             for PKG in packages/${{ github.event.inputs.pkg-test-glob || inputs.pkg-test-glob }}/meta.json; do
               PKG=${PKG%"/meta.json"}
               PKG=${PKG#"packages/"}
-              # if [[ ${PKG} == anupq ]]; then
-              #   break # FIXME: HACK for faster testing, remove before merge
-              # fi
-              # skip packages without a TestFile
               if ! jq -e -r '.TestFile' < packages/${PKG}/meta.json > /dev/null ; then
-                echo "Skipping ${PKG}"
-                continue
+                echo "Skip ${PKG}: no TestFile"
+                SKIPPED="${SKIPPED}${PKG} "
+              elif [[ ${PKG} == xgap ]]; then
+                echo "Skip xgap: no X11 headers, and no means to test it"
+                SKIPPED="${SKIPPED}${PKG} "
+              elif [[ ${PKG} == polycyclic ]]; then
+                # HACK FIXME TODO: skip polycyclic for now
+                echo "Skip polycyclic tests for now, as they run in an infinite (?) loop"
+                echo "Re-enable them once there is a new polycyclic release"
+                SKIPPED="${SKIPPED}${PKG} "
+              else
+                MATRIX="${MATRIX}\"${PKG}\","
               fi
-              if [[ ${PKG} == xgap ]]; then
-                # skip xgap: no X11 headers, and no means to test it
-                continue
-              fi
-              MATRIX="${MATRIX}\"${PKG}\","
             done
             MATRIX="${MATRIX}]}"
             echo "::set-output name=matrix::$MATRIX"
+            mkdir -p test-status-skipped
+            for PKG in ${SKIPPED}; do
+              echo "{\"status_skipped\": \"skipped\"}" > test-status-skipped/${PKG}.json
+            done
+
+      - name: "Upload skipped job status as artifact"
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: "test-status-${{ github.event.inputs.which-gap || inputs.which-gap }}-skipped"
+          path: "test-status-skipped/*.json"
 
   test-package:
     name: "${{ matrix.package }}"
@@ -222,12 +238,6 @@ jobs:
       - name: "Install package distribution tools"
         run: |
           python -m pip install -r tools/requirements.txt
-          if [[ ${{ matrix.package }} == polycyclic ]]; then
-            # HACK FIXME TODO: skip polycyclic for now
-            echo "SKIPPING polycycylic tests for now, as they run in an infinite (?) loop"
-            echo "Re-enable them once there is a new polycyclic release"
-            exit 1
-          fi
 
       - name: "Download GAP from previous job"
         uses: actions/download-artifact@v2
@@ -267,8 +277,8 @@ jobs:
 
       - name: "Run tests with OnlyNeeded"
         timeout-minutes: 10
+        if: always()
         id: tests-only-needed
-        if: ${{ always() }}
         run: |
           PKG=${{ matrix.package }}
           gap -A --quitonbreak -r -c "
@@ -298,7 +308,7 @@ jobs:
       # https://docs.github.com/en/actions/learn-github-actions/contexts#steps-context
       # steps.<id>.outcome possible values are success, failure, cancelled, or skipped.
       - name: "Create job status json-file"
-        if: ${{ always() }}
+        if: always()
         run: |
           PKG="${{ matrix.package }}"
           STATUS_DEFAULT="${{ steps.tests-default.outcome }}"
@@ -307,16 +317,16 @@ jobs:
           cat ${PKG}.json
 
       - name: "Upload job status as artifact"
-        if: ${{ always() }}
+        if: always()
         uses: actions/upload-artifact@v2
         with:
-          name: "reports-${{ matrix.package }}"
+          name: "test-status-${{ github.event.inputs.which-gap || inputs.which-gap }}-${{ matrix.package }}"
           path: "${{ matrix.package }}.json"
 
   report:
-    name: "Report"
+    name: "Generate report"
     needs: test-package
-    if: ${{ always() }}
+    if: always()
     runs-on: ubuntu-latest
     outputs:
       test-status: ${{ steps.test-status.outputs.test-status }}
@@ -330,25 +340,49 @@ jobs:
       - name: "Download every job status"
         uses: elonh/download-artifact-regexp@master # FIXME/TODO: Switch to actions/download-artifact once they officially support wildcards, see https://github.com/actions/download-artifact/issues/6
         with:
-          pattern: reports-*
+          pattern: test-status-${{ github.event.inputs.which-gap || inputs.which-gap }}-*
           path: _reports
 
-      # warning/error in utils.py throw a syntax error with default version of python
-      - name: "Set up Python 3.7"
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.7
-
       - name: "Install package distribution tools"
-        run: |
-          python -m pip install -r tools/requirements.txt
+        run: python -m pip install -r tools/requirements.txt
 
       - name: "Generate test-status.json"
-        id: report
-        run: python tools/generate_test_status.py ${{ github.repository }} "$GITHUB_RUN_ID" "$GITHUB_SHA" $(git rev-parse --short "$GITHUB_SHA")
-
-      - name: "Output test-status"
         id: test-status
         run: |
-          TEST_STATUS=$(cat test-status.json)
-          echo "::set-output name=test-status::$TEST_STATUS"
+          ROOT='data/reports'
+          # relative path (with respect to ROOT) to generated test-status.json, i.e. the "id" entry of the json-file.
+          DIR_REL=$(python tools/generate_test_status.py ${{ github.repository }} "$GITHUB_RUN_ID" "$GITHUB_SHA" ${{ github.event.inputs.which-gap || inputs.which-gap }})
+          DIR="${ROOT}/${DIR_REL}"
+          echo "::set-output name=dir::${DIR}"
+          echo "::set-output name=dir-rel::${DIR_REL}"
+
+      - name: "Download latest report"
+        id: download-latest-report
+        run: |
+          ROOT="data/reports"
+          DIR_SYM_REL=latest-${{ github.event.inputs.which-gap || inputs.which-gap }}
+          DIR_SYM="${ROOT}/${DIR_SYM_REL}"
+          URL_SYM="https://raw.githubusercontent.com/${{ github.repository }}/${DIR_SYM}"
+          # Check if file at url exists,
+          # so we do not run into errors for the first run of the script
+          # (when the first report is created and thus no latest report is available)
+          if wget --spider "${URL_SYM}"; then
+            # wget downloads the "symbolic link" as a plain file
+            # containing as content the path that the symlink points to,
+            # so we need to convert this into a real symbolic link.
+            DIR_REL=$(wget -O - ${URL_SYM})
+            DIR="${ROOT}/${DIR_REL}"
+            ln -s ${DIR_REL} ${DIR_SYM}
+            URL="https://raw.githubusercontent.com/${{ github.repository }}/${DIR}/test-status.json"
+            wget -P ${DIR} ${URL}
+          fi
+
+      - name: "Generate report"
+        id: report
+        run: python tools/generate_report.py ${{ steps.test-status.outputs.dir-rel }} latest-${{ github.event.inputs.which-gap || inputs.which-gap }}
+
+      - name: "Upload report as artifact"
+        uses: actions/upload-artifact@v2
+        with:
+          name: "report-${{ github.event.inputs.which-gap || inputs.which-gap }}"
+          path: "${{ steps.test-status.outputs.dir }}"

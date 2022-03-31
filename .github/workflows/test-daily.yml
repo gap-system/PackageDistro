@@ -1,0 +1,42 @@
+#
+# This workflow is run regularly and tests the official package distribution
+# by calling the test-all and update-latest-report YML workflows.
+#
+name: "Daily tests"
+
+on:
+  workflow_dispatch: # for debugging
+  schedule:
+    - cron:  '00 2 * * *'
+
+
+jobs:
+  # master
+  test-all-master:
+    name: "Test packages"
+    uses: ./.github/workflows/test-all.yml
+    with:
+      which-gap: master
+
+  update-latest-master:
+    name: "Upload report"
+    needs: test-all-master
+    if: always()
+    uses: ./.github/workflows/update-latest-report.yml
+    with:
+      which-gap: master
+
+  # 4.11.1
+  test-all-4-11-1:
+      name: "Test packages"
+      uses: ./.github/workflows/test-all.yml
+      with:
+        which-gap: 4.11.1
+
+  update-latest-4-11:
+    name: "Upload report"
+    needs: test-all-4-11-1
+    if: always()
+    uses: ./.github/workflows/update-latest-report.yml
+    with:
+      which-gap: 4.11.1
