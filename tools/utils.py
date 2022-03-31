@@ -47,14 +47,11 @@ def sha256(fname: str) -> str:
 def normalize_pkg_name(pkg_name: str) -> str:
     suffix = "/meta.json"
     prefix = "packages/"
-    if pkg_name.endswith(suffix) and pkg_name.startswith(prefix):
-        return pkg_name[len(prefix):-len(suffix)]
-    elif pkg_name.endswith(suffix):
-        return pkg_name[:-len(suffix)]
-    elif pkg_name.startswith(prefix):
-        return pkg_name[len(prefix):]
-    else:
-        return pkg_name
+    if pkg_name.startswith(prefix):
+        pkg_name = pkg_name[len(prefix):]
+    if pkg_name.endswith(suffix):
+        pkg_name = pkg_name[:-len(suffix)]
+    return pkg_name
 
 @accepts(str)
 def metadata_fname(pkg_name: str) -> str:
