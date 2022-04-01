@@ -88,3 +88,47 @@ jobs:
     uses: ./.github/workflows/test-all.yml
     with:
       which-gap: '4.11.1'
+
+  status-comment:
+    name: "Create or update PR comment"
+    needs: test-all-master # TODO: also handle test-all-release
+    steps:
+      - name: "Download report"
+        uses: actions/download-artifact@v3
+        with:
+          name: report-master
+          path: _report
+
+      - name: "Find Comment"
+        uses: peter-evans/find-comment@v2
+        id: fc
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          #comment-author: "gap-package-distribution-bot <100730870+gap-package-distribution-bot[bot]@users.noreply.github.com>"
+          body-includes: "Package Evaluation Report"
+
+      # We set up a GitHub App in order to ensure that workflows are run on the PRs
+      # created by us, following the instructions here:
+      # <https://github.com/peter-evans/create-pull-request/blob/main/docs/concepts-guidelines.md#authenticating-with-github-app-generated-tokens>
+      # The bot can also be set up for personal forks of this repository, for testing
+      # and debugging, see <https://github.com/apps/gap-package-distribution-bot>.
+      - uses: tibdex/github-app-token@v1
+        id: generate-token
+        with:
+          app_id: ${{ secrets.APP_ID }}
+          private_key: ${{ secrets.APP_PRIVATE_KEY }}
+
+      # TODO: extra work is needed to make the following work with pull requests
+      # that come from forks of this repository.
+      - name: "Create or update comment"
+        uses: peter-evans/create-or-update-comment@v2
+        with:
+          token: ${{ steps.generate-token.outputs.token }}
+          comment-id: ${{ steps.fc.outputs.comment-id }}
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            # Package Evaluation Report
+            
+            TODO: this really should be including the ACTUAL report,
+            though I'll figure out how to do that that latter
+          edit-mode: replace

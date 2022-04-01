@@ -30,7 +30,7 @@ on:
         description: 'Only test packages matching the given glob'
         required: false
         type: string
-        default: "*"
+        default: "c*"
   workflow_call:
     inputs:
       which-gap:
@@ -47,7 +47,7 @@ on:
         description: 'Only test packages matching the given glob'
         required: false
         type: string
-        default: "*"
+        default: "c*"
 
 jobs:
   build:
