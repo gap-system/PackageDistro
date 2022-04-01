@@ -44,7 +44,6 @@ from tempfile import TemporaryDirectory
 from typing import List
 
 from download_packages import download_archive
-from scan_for_updates import download_pkg_info
 
 import utils
 from utils import notice, warning, error, normalize_pkg_name, archive_name, metadata, sha256
