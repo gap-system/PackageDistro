@@ -45,8 +45,8 @@ jobs:
         uses: gap-actions/setup-gap@v2
         with:
           GAP_BOOTSTRAP: 'minimal'
-          GAP_PKGS_TO_CLONE: 'json'
-          GAP_PKGS_TO_BUILD: 'json'
+          GAP_PKGS_TO_CLONE: 'crypting json'
+          GAP_PKGS_TO_BUILD: 'crypting json'
 
       - name: "Install prerequisites for package distribution tools"
         run: python -m pip install -r tools/requirements.txt
