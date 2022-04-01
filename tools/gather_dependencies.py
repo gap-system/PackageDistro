@@ -17,6 +17,7 @@ on the command line.
 
 import os
 import sys
+from typing import Set
 
 from utils import normalize_pkg_name, metadata
 
@@ -60,7 +61,7 @@ def gather_dependencies(pkg_name: str, seen: set) -> set:
     return deps
 
 def main(pkgs) -> None:
-    seen: set[str] = set()
+    seen: Set[str] = set()
     deps = set()
     for pkg in pkgs:
         deps |= gather_dependencies(normalize_pkg_name(pkg), seen)

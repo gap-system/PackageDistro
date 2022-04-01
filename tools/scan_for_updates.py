@@ -35,7 +35,7 @@ from download_packages import download_archive
 
 from utils import notice, error, warning, all_packages, metadata, metadata_fname, sha256, archive_name
 
-from typing import Optional
+from typing import Dict, Optional, Tuple
 
 archive_dir = "_archives"
 pkginfos_dir = "_pkginfos"
@@ -54,7 +54,7 @@ def download_pkg_info(pkg_name: str) -> Optional[bytes]:
     return response.content
 
 
-def gap_exec(commands: str, args="") -> tuple[int, bytes]:
+def gap_exec(commands: str, args="") -> Tuple[int, bytes]:
     with subprocess.Popen(
         "gap -A -b --quitonbreak -q " + args,
         stdin=subprocess.PIPE,

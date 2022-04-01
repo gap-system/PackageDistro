@@ -28,7 +28,7 @@ import glob
 import json
 from datetime import datetime
 
-from typing import Any
+from typing import Any, Dict
 
 ################################################################################
 # Arguments
@@ -64,7 +64,7 @@ for file in files:
 # Generate main test-status.json
 
 # General Information
-report: dict[str,Any] = {}
+report: Dict[str,Any] = {}
 report['repo'] = repo
 report['workflow'] = repo+'/actions/runs/'+runID
 report['hash'] = hash
