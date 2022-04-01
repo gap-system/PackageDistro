@@ -42,8 +42,9 @@ from os.path import join
 from tempfile import TemporaryDirectory
 
 from download_packages import download_archive
-from scan_for_updates import download_pkg_info, gap_exec
+from scan_for_updates import download_pkg_info
 
+import utils
 from utils import notice, warning, error, normalize_pkg_name, archive_name, metadata, sha256
 
 
@@ -105,7 +106,7 @@ def main(pkgs):
             pkgdir = join(tempdir, validate_tarball(archive_fname))
             shutil.unpack_archive(archive_fname, tempdir)
             validate_package(archive_fname, pkgdir, pkg_name)
-            result, _ = gap_exec(
+            result, _ = utils.gap_exec(
                     "ValidatePackagesArchive(\"{}\", \"{}\");".format(pkgdir, pkg_name),
                     args="{}/validate_package.g".format(dir_of_this_file),
                 )
