@@ -19,14 +19,13 @@ sys.path.insert(
 
 from scan_for_updates import (
     download_pkg_info,
-    gap_exec,
     main,
     output_json,
     scan_for_one_update,
     scan_for_updates,
-    sha256,
 )
 
+from utils import gap_exec, sha256
 
 @pytest.fixture
 def ensure_in_tests_dir():

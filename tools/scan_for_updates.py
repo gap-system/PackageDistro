@@ -27,15 +27,15 @@ import hashlib
 import json
 import os
 import requests
-import subprocess
 from os.path import join
 from multiprocessing.pool import ThreadPool
 
 from download_packages import download_archive
 
+import utils
 from utils import notice, error, warning, all_packages, metadata, metadata_fname, sha256, archive_name
 
-from typing import Dict, Optional, Tuple
+from typing import Dict, Optional
 
 archive_dir = "_archives"
 pkginfos_dir = "_pkginfos"
@@ -52,17 +52,6 @@ def download_pkg_info(pkg_name: str) -> Optional[bytes]:
         )
         return None
     return response.content
-
-
-def gap_exec(commands: str, args="") -> Tuple[int, bytes]:
-    with subprocess.Popen(
-        "gap -A -b --quitonbreak -q " + args,
-        stdin=subprocess.PIPE,
-        stdout=subprocess.PIPE,
-        shell=True,
-    ) as GAP:
-        out, err = GAP.communicate(input=commands.encode('utf-8'))
-        return GAP.returncode, out
 
 
 def scan_for_one_update(pkginfos_dir: str, pkg_name: str) -> Optional[str]:
@@ -98,7 +87,7 @@ def scan_for_updates(pkginfos_dir = pkginfos_dir, disable_threads = False):
 def output_json(updated_pkgs, pkginfos_dir = pkginfos_dir):
     dir_of_this_file = os.path.dirname(os.path.realpath(__file__))
     str = '", "'.join(updated_pkgs)
-    result, _ = gap_exec(
+    result, _ = utils.gap_exec(
             'OutputJson(["{}"], "{}");'.format(str, pkginfos_dir),
             args="{}/pkginfo_to_json.g".format(dir_of_this_file),
         )

@@ -10,13 +10,14 @@
 import hashlib
 import json
 import os
-import sys
 import requests
+import subprocess
+import sys
 import tempfile
 
 from os.path import join
 
-from typing import NoReturn
+from typing import NoReturn, Tuple
 
 # print notices in green
 def notice(msg):
@@ -128,3 +129,14 @@ def symlink(target, link_name, overwrite=False):
         if os.path.islink(temp_link_name):
             os.remove(temp_link_name)
         raise
+
+
+def gap_exec(commands: str, args: str = "") -> Tuple[int, bytes]:
+    with subprocess.Popen(
+        "gap -A -b --quitonbreak -q " + args,
+        stdin=subprocess.PIPE,
+        stdout=subprocess.PIPE,
+        shell=True,
+    ) as GAP:
+        out, err = GAP.communicate(input=commands.encode('utf-8'))
+        return GAP.returncode, out
