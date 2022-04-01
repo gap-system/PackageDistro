@@ -28,7 +28,7 @@ jobs:
           python -m pip install pytest mock
 
       - name: Validate types
-        run: python -m mypy tools/*.py
+        run: python -m mypy --disallow-untyped-calls --disallow-untyped-defs tools/*.py
 
       - name: Run tests
         run: python -m pytest tools/tests/test*.py -vv
