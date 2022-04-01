@@ -161,6 +161,12 @@ jobs:
           # skip xgap: no X11 headers, and no means to test it
           rm -rf xgap*
 
+          # HACK/WORKAROUND: excise march=native from configure
+          perl -pi -e 's;\bCXXFLAGS=-march=native;;' digraphs/configure
+          perl -pi -e 's;\bCXXFLAGS=-march=native;;' semigroups/configure
+          perl -pi -e 's;as_fn_append CXXFLAGS " -march=native";;' digraphs/configure
+          perl -pi -e 's;as_fn_append CXXFLAGS " -march=native";;' semigroups/configure
+
           # HACK/WORKAROUND: ctbllib's TestFile sets an exit code but does not
           # actually exit, thus we can't properly detect whether it passed or
           # failed (and count that as a failur). So we hack around that...
