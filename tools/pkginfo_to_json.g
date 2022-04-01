@@ -9,6 +9,7 @@
 ##
 
 LoadPackage("json");
+LoadPackage("crypting");
 
 InstallMethod(RecNames, [IsRecord and IsInternalRep], x -> AsSSortedList(REC_NAMES(x)));
 
@@ -27,28 +28,32 @@ function(o, x)
     PrintTo(o, "null");
 end);
 
-OutputJson := function(updated_pkgs, pkginfos_dir)
-  local pkginfo, pkginfo_rec, pkgname, json_fname;
+HexSHA256String := function(str)
+    local sha, i;
+    sha := List(SHA256String(str), HexStringInt);
+    for i in [1..8] do
+        while Length(sha[i]) < 8 do
+            Add(sha[i], '0', 1);
+        od;
+    od;
+    return LowercaseString(Concatenation(sha));
+end;
 
-  if not IsString(pkginfos_dir) or not IsDirectoryPath(pkginfos_dir) then
-    Error(StringFormatted("the directory {} does not exist", pkginfos_dir));
-  fi;
-
-  pkginfos_dir := Directory(pkginfos_dir);
-
-  for pkgname in updated_pkgs do
-    pkginfo := Filename(pkginfos_dir, Concatenation(pkgname, ".g"));
-    pkginfo_rec := PackageInfoRec(pkginfo);
-    Assert(0, pkgname = LowercaseString(pkginfo_rec.PackageName));
-    json_fname := Concatenation("packages/", pkgname, "/meta.json");
-    if not IsExistingFile(json_fname) then
-      PrintFormatted("{1} does not exist, skipping!\n", json_fname);
-      continue;
+# This function takes a list of paths to PackageInfo.g files, parses
+# each of them, and finally prints everything in JSON format to stdout.
+OutputJson := function(pkginfo_paths)
+  local fname, pkginfo, pkginfos_list, out;
+  pkginfos_list := [];
+  for fname in pkginfo_paths do
+    pkginfo := PackageInfoRec(fname);
+    pkginfo.PackageInfoSHA256 := HexSHA256String(StringFile(fname));
+    if IsBound(pkginfo.PackageDoc) and not IsList(pkginfo.PackageDoc) then
+      pkginfo.PackageDoc := [pkginfo.PackageDoc];
     fi;
-    PrintFormatted("updating {}\n", json_fname);
-    if IsBound(pkginfo_rec.PackageDoc) and not IsList(pkginfo_rec.PackageDoc) then
-      pkginfo_rec.PackageDoc := [pkginfo_rec.PackageDoc];
-    fi;
-    FileString(json_fname, GapToJsonString(pkginfo_rec));
+    Add(pkginfos_list, pkginfo);
   od;
+  out := OutputTextUser();
+  SetPrintFormattingStatus(out, false);
+  PrintTo(out, GapToJsonString(pkginfos_list));
+  CloseStream(out);
 end;
