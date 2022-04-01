@@ -25,7 +25,7 @@ from scan_for_updates import (
     scan_for_updates,
 )
 
-from utils import gap_exec, sha256
+from utils import gap_exec, metadata, sha256
 
 @pytest.fixture
 def ensure_in_tests_dir():
@@ -56,15 +56,15 @@ def test_sha256(ensure_in_tests_dir):
 
 
 def test_download_pkg_info(ensure_in_tests_dir):
-    assert download_pkg_info("aclib")
+    assert download_pkg_info(metadata("aclib")["PackageInfoURL"])
 
     with pytest.raises(SystemExit) as e:
-        download_pkg_info("badjson")
+        download_pkg_info(metadata("badjson")["PackageInfoURL"])
     assert e.type == SystemExit
     assert e.value.code == 1
 
     # Intentionally messed up the url field
-    assert not download_pkg_info("toricvarieties")
+    assert not download_pkg_info(metadata("toricvarieties")["PackageInfoURL"])
 
 
 def test_exec_gap(ensure_in_tests_dir):
