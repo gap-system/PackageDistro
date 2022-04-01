@@ -94,7 +94,7 @@ def validate_package(archive_fname: str, pkgdir: str, pkg_name: str) -> None:
     if pkg_json["ArchiveSHA256"] != sha256(archive_fname):
         error(
             "{0}/meta.yml:ArchiveSHA256 is not the SHA256 of {1}".format(
-                pkg_name, packed_name
+                pkg_name, archive_fname
             )
         )
 
