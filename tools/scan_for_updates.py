@@ -34,12 +34,22 @@ from multiprocessing.pool import ThreadPool
 from download_packages import download_archive
 
 import utils
-from utils import notice, error, warning, all_packages, metadata, metadata_fname, sha256, normalize_pkg_name
+from utils import (
+    notice,
+    error,
+    warning,
+    all_packages,
+    metadata,
+    metadata_fname,
+    sha256,
+    normalize_pkg_name,
+)
 
 from typing import Any, Dict, List, Optional
 
 archive_dir = "_archives"
 pkginfos_dir = "_pkginfos"
+
 
 def download_pkg_info(url: str) -> Optional[bytes]:
     response = requests.get(url)
@@ -73,18 +83,24 @@ def scan_for_one_update(pkginfos_dir: str, pkg_name: str) -> Optional[str]:
     return None
 
 
-def scan_for_updates(pkg_names: List[str], pkginfos_dir: str = pkginfos_dir, disable_threads: bool = False) -> list:
+def scan_for_updates(
+    pkg_names: List[str],
+    pkginfos_dir: str = pkginfos_dir,
+    disable_threads: bool = False,
+) -> list:
     if not os.path.exists(pkginfos_dir):
         os.mkdir(pkginfos_dir)
     assert os.path.isdir(pkginfos_dir)
     if disable_threads:
         result = [scan_for_one_update(pkginfos_dir, x) for x in pkg_names]
-    else: 
-        result = ThreadPool(5).map(lambda x: scan_for_one_update(pkginfos_dir, x), pkg_names)
+    else:
+        result = ThreadPool(5).map(
+            lambda x: scan_for_one_update(pkginfos_dir, x), pkg_names
+        )
     return sorted([x for x in result if x != None])
 
 
-def parse_pkginfo_files(pkginfo_paths: List[str]) -> List[Dict[str,Any]]:
+def parse_pkginfo_files(pkginfo_paths: List[str]) -> List[Dict[str, Any]]:
     if len(pkginfo_paths) == 0:
         return []
     # get the path of this Python script, so that we can compute the path of
@@ -92,15 +108,15 @@ def parse_pkginfo_files(pkginfo_paths: List[str]) -> List[Dict[str,Any]]:
     dir_of_this_file = os.path.dirname(os.path.realpath(__file__))
     str = '", "'.join(pkginfo_paths)
     result, output = utils.gap_exec(
-            'OutputJson(["{}"]);'.format(str),
-            args="{}/pkginfo_to_json.g".format(dir_of_this_file),
-        )
+        'OutputJson(["{}"]);'.format(str),
+        args="{}/pkginfo_to_json.g".format(dir_of_this_file),
+    )
     if result != 0:
         error("Something went wrong")
     return json.loads(output)
 
 
-def archive_url(pkg_json: Dict[str,Any]) -> str:
+def archive_url(pkg_json: Dict[str, Any]) -> str:
     return pkg_json["ArchiveURL"] + pkg_json["ArchiveFormats"].split(" ")[0]
 
 
@@ -120,6 +136,7 @@ def import_packages(pkginfo_paths: List[str]) -> None:
         with open(pkg_json_file, "w", encoding="utf-8") as f:
             json.dump(pkg_json, f, indent=2, ensure_ascii=False, sort_keys=True)
             f.write("\n")
+
 
 def main(pkg_names: List[str]) -> None:
     print("Scanning for updates...")

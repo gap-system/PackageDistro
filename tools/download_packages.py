@@ -44,7 +44,15 @@ from typing import List
 
 import requests
 
-from utils import error, notice, normalize_pkg_name, archive_name, archive_url, metadata, sha256
+from utils import (
+    error,
+    notice,
+    normalize_pkg_name,
+    archive_name,
+    archive_url,
+    metadata,
+    sha256,
+)
 
 
 def download_archive(  # pylint: disable=inconsistent-return-statements
@@ -61,7 +69,11 @@ def download_archive(  # pylint: disable=inconsistent-return-statements
         pkg_json = metadata(pkg_name)
         archive_sha = sha256(archive_fname)
         if "ArchiveSHA256" in pkg_json and pkg_json["ArchiveSHA256"] != archive_sha:
-            notice("{} already exists, but has SHA256 {}, expected {}".format(archive_fname, archive_sha, pkg_json["ArchiveSHA256"]))
+            notice(
+                "{} already exists, but has SHA256 {}, expected {}".format(
+                    archive_fname, archive_sha, pkg_json["ArchiveSHA256"]
+                )
+            )
             os.remove(archive_fname)
         else:
             notice("{} already exists, not downloading again".format(archive_fname))
