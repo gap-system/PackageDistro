@@ -293,6 +293,10 @@ jobs:
                 # WORKAROUNDS for various packages which need additional packages
                 if pkgname = \"agt\" then
                   LoadPackage(\"grape\" : OnlyNeeded);
+                elif pkgname = \"ctbllib\" then
+                  LoadPackage(\"browse\" : OnlyNeeded);
+                  LoadPackage(\"tomlib\" : OnlyNeeded);
+                  LoadPackage(\"spinsym\" : OnlyNeeded);
                 elif pkgname = \"guarana\" then
                   LoadPackage(\"nq\" : OnlyNeeded);
                 elif pkgname = \"sglppow\" then
