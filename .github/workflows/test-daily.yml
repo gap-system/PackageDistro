@@ -13,13 +13,13 @@ on:
 jobs:
   # master
   test-all-master:
-    name: "Test packages"
+    name: "master"
     uses: ./.github/workflows/test-all.yml
     with:
       which-gap: master
 
   update-latest-master:
-    name: "Upload report"
+    name: "Upload master report"
     needs: test-all-master
     if: always()
     uses: ./.github/workflows/update-latest-report.yml
@@ -28,13 +28,13 @@ jobs:
 
   # 4.11.1
   test-all-4-11-1:
-      name: "Test packages"
+      name: "4.11.1"
       uses: ./.github/workflows/test-all.yml
       with:
         which-gap: 4.11.1
 
   update-latest-4-11:
-    name: "Upload report"
+    name: "Upload 4.11.1 report"
     needs: test-all-4-11-1
     if: always()
     uses: ./.github/workflows/update-latest-report.yml
