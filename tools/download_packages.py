@@ -40,13 +40,15 @@ import os
 import sys
 from os.path import join
 
+from typing import List
+
 import requests
 
 from utils import error, notice, normalize_pkg_name, archive_name, archive_url, metadata, sha256
 
 
 def download_archive(  # pylint: disable=inconsistent-return-statements
-    archive_dir: str, pkg_name: str, tries=5
+    archive_dir: str, pkg_name: str, tries: int = 5
 ) -> str:
     """Returns the full archive name (including archive_dir) for the downloaded
     archive of the package `pkg_name`"""
@@ -81,7 +83,7 @@ def download_archive(  # pylint: disable=inconsistent-return-statements
     error("  failed to download archive {}".format(archive_fname))
 
 
-def main(pkg_names) -> None:
+def main(pkg_names: List[str]) -> None:
     archive_dir = "_archives"
     for pkg_name in pkg_names:
         download_archive(archive_dir, normalize_pkg_name(pkg_name))

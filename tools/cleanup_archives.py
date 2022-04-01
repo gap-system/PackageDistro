@@ -13,7 +13,7 @@ import os
 from utils import all_packages, archive_name
 
 # remove unused files from _archives
-def cleanup_archives():
+def cleanup_archives() -> None:
     archive_dir = "_archives"
     pkgs = all_packages()
     needed_archives = set([archive_name(p) for p in pkgs])

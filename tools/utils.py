@@ -17,24 +17,24 @@ import tempfile
 
 from os.path import join
 
-from typing import NoReturn, Tuple
+from typing import Any, Dict, List, NoReturn, Tuple
 
 # print notices in green
-def notice(msg):
+def notice(msg: str) -> None:
     print("\033[32m" + msg + "\033[0m")
 
 
 # print warnings in yellow
-def warning(msg):
+def warning(msg: str) -> None:
     print("\033[33m" + msg + "\033[0m", file = sys.stderr)
 
 
 # print error in red and exit
-def error(msg) -> NoReturn: 
+def error(msg: str) -> NoReturn: 
     print("\033[31m" + msg + "\033[0m", file = sys.stderr)
     sys.exit(1)
 
-def all_packages():
+def all_packages() -> List[str]:
     pkgs = sorted(os.listdir(os.path.join(os.getcwd(), "packages")))
     return [d for d in pkgs if os.path.isfile(metadata_fname(d))]
 
@@ -65,7 +65,7 @@ def normalize_pkg_name(pkg_name: str) -> str:
 def metadata_fname(pkg_name: str) -> str:
     return os.path.join("packages", pkg_name, "meta.json")
 
-def metadata(pkg_name: str) -> dict:
+def metadata(pkg_name: str) -> Dict[str, Any]:
     fname = metadata_fname(pkg_name)
     pkg_json = {}
 
@@ -92,7 +92,7 @@ def archive_url(pkg_name: str) -> str:
     return pkg_json["ArchiveURL"] + pkg_json["ArchiveFormats"].split(" ")[0]
 
 # https://stackoverflow.com/questions/8299386/modifying-a-symlink-in-python/55742015#55742015
-def symlink(target, link_name, overwrite=False):
+def symlink(target: str, link_name: str, overwrite: bool = False) -> None:
     '''
     Create a symbolic link named link_name pointing to target.
     If link_name exists then FileExistsError is raised, unless overwrite=True.

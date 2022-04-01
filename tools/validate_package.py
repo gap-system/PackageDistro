@@ -41,6 +41,8 @@ import tarfile
 from os.path import join
 from tempfile import TemporaryDirectory
 
+from typing import List
+
 from download_packages import download_archive
 from scan_for_updates import download_pkg_info
 
@@ -48,7 +50,7 @@ import utils
 from utils import notice, warning, error, normalize_pkg_name, archive_name, metadata, sha256
 
 
-def validate_tarball(filename):
+def validate_tarball(filename: str) -> str:
     with tarfile.open(filename) as tf:
         names = tf.getnames()
         if len(names) == 0:
@@ -63,7 +65,8 @@ def validate_tarball(filename):
         basedir = names[0].split('/')[0]
 
         # all entries must either be equal to basedir or start with basedir+'/'
-        first = next(filter(lambda n: basedir != n.split('/')[0], names), None)
+        badentries = filter(lambda n: basedir != n.split('/')[0], names)
+        first = next(badentries, None)
         if first != None:
             error("tarball has entry {} outside of basedir {}".format(first, basedir))
 
@@ -74,7 +77,7 @@ def validate_tarball(filename):
         return basedir
 
 
-def validate_package(archive_fname, pkgdir, pkg_name):
+def validate_package(archive_fname: str, pkgdir: str, pkg_name: str) -> None:
     pkg_json = metadata(pkg_name)
 
     pkg_info_name = join(pkgdir, "PackageInfo.g")
@@ -96,7 +99,7 @@ def validate_package(archive_fname, pkgdir, pkg_name):
         )
 
 
-def main(pkgs):
+def main(pkgs: List[str]) -> None:
     archive_dir = "_archives"
     dir_of_this_file = os.path.dirname(os.path.realpath(__file__))
 

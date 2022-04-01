@@ -20,18 +20,19 @@ from download_packages import download_archive
 
 from utils import error, normalize_pkg_name, metadata, sha256, all_packages
 
+from typing import Any, Dict, List, Optional
 
-def write_sha256(filename):
+def write_sha256(filename: str) -> None:
     with open(filename + ".sha256", "w") as f:
         f.write(sha256(filename))
 
-def make_package_info_json(pkgs):
+def make_package_info_json(pkgs: List[str]) -> Dict[str, Any]:
     package_info = dict()
     for p in pkgs:
         package_info[p] = metadata(p)
     return package_info
 
-def make_packages_tar_gz(tarname, archive_dir, release_dir, pkgs):
+def make_packages_tar_gz(tarname: str, archive_dir: str, release_dir: str, pkgs: List[str]) -> None:
     # Check archive files are up to date
     archive_list = {}
     for p in pkgs:
@@ -61,7 +62,7 @@ def make_packages_tar_gz(tarname, archive_dir, release_dir, pkgs):
         subprocess.run(["tar", "czf", full_tarname, "-C", tempdir, "."])
         write_sha256(full_tarname)
 
-def main():
+def main() -> None:
     archive_dir = "_archives"
     release_dir = "_releases"
 
