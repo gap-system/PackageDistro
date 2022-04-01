@@ -73,7 +73,7 @@ with open(os.path.join(dir_redirect, 'redirect.html'), 'w') as f:
 
 ############################################################################
 # Generate badge, see https://shields.io/endpoint
-relativeFailures = 1 - report['success'] / report['total']
+relativeFailures = report['failure'] / (report['failure'] + report['success'])
 if relativeFailures > 0.05:
     color = 'critical'
 elif relativeFailures > 0:
@@ -84,7 +84,7 @@ else:
 badge = {
     'schemaVersion' : 1,
     'label': 'Tests',
-    'message': '%d/%d passing' % (report['success'], report['total']),
+    'message': '%s pass, %s fail, %s skip' % (report['success'], report['failure'], report['skipped']),
     'color': color,
     'namedLogo': "github"
 }
