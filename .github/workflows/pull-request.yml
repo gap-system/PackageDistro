@@ -91,6 +91,7 @@ jobs:
 
   status-comment:
     name: "Create or update PR comment"
+    runs-on: ubuntu-latest
     needs: test-all-master # TODO: also handle test-all-release
     steps:
       - name: "Download report"
