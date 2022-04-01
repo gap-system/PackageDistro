@@ -25,22 +25,22 @@ from utils import normalize_pkg_name, metadata
 # The Ubuntu packages should be installed in order to build and/or use the GAP
 # package
 ubtunu_deps = {
-'4ti2interface': [ '4ti2' ],
-'alnuth': [ 'pari-gp' ],
-'browse': [ 'libncurses5-dev' ],
-'cddinterface': [ 'libcdd-dev' ],
-'curlinterface': [ 'libcurl4-openssl-dev' ],
-'float': [ 'libmpc-dev', 'libmpfi-dev', 'libmpfr-dev' ],
-'normalizinterface': [ 'libnormaliz-dev' ],
-'polymaking': [ 'polymake' ],
-'ringsforhomalg': [ 'singular' ],
-'singular': [ 'singular' ],
-'zeromqinterface': [ 'libzmq3-dev' ],
-
-# HACK for ModulePresentationsForCAP until there is a proper fix, see
-# <https://github.com/homalg-project/homalg_project/issues/465#issuecomment-1068653563>
-'modulepresentationsforcap': [ 'singular' ],
+    "4ti2interface": ["4ti2"],
+    "alnuth": ["pari-gp"],
+    "browse": ["libncurses5-dev"],
+    "cddinterface": ["libcdd-dev"],
+    "curlinterface": ["libcurl4-openssl-dev"],
+    "float": ["libmpc-dev", "libmpfi-dev", "libmpfr-dev"],
+    "normalizinterface": ["libnormaliz-dev"],
+    "polymaking": ["polymake"],
+    "ringsforhomalg": ["singular"],
+    "singular": ["singular"],
+    "zeromqinterface": ["libzmq3-dev"],
+    # HACK for ModulePresentationsForCAP until there is a proper fix, see
+    # <https://github.com/homalg-project/homalg_project/issues/465#issuecomment-1068653563>
+    "modulepresentationsforcap": ["singular"],
 }
+
 
 def gather_dependencies(pkg_name: str, seen: set) -> set:
     try:
@@ -59,6 +59,7 @@ def gather_dependencies(pkg_name: str, seen: set) -> set:
         if not pkg in seen:
             deps |= gather_dependencies(pkg, seen)
     return deps
+
 
 def main(pkgs: List[str]) -> None:
     seen: Set[str] = set()

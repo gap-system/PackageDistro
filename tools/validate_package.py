@@ -46,7 +46,15 @@ from typing import List
 from download_packages import download_archive
 
 import utils
-from utils import notice, warning, error, normalize_pkg_name, archive_name, metadata, sha256
+from utils import (
+    notice,
+    warning,
+    error,
+    normalize_pkg_name,
+    archive_name,
+    metadata,
+    sha256,
+)
 
 
 def validate_tarball(filename: str) -> str:
@@ -61,16 +69,16 @@ def validate_tarball(filename: str) -> str:
             error("tarball has bad entry {}".format(first))
 
         # get the basedir (all entries are supposed to be contained in that)
-        basedir = names[0].split('/')[0]
+        basedir = names[0].split("/")[0]
 
         # all entries must either be equal to basedir or start with basedir+'/'
-        badentries = filter(lambda n: basedir != n.split('/')[0], names)
+        badentries = filter(lambda n: basedir != n.split("/")[0], names)
         first = next(badentries, None)
         if first != None:
             error("tarball has entry {} outside of basedir {}".format(first, basedir))
 
         # must have a PackageInfo.g
-        if not os.path.join(basedir, 'PackageInfo.g') in names:
+        if not os.path.join(basedir, "PackageInfo.g") in names:
             error("tarball is missing PackageInfo.g")
 
         return basedir
@@ -109,9 +117,9 @@ def main(pkgs: List[str]) -> None:
             shutil.unpack_archive(archive_fname, tempdir)
             validate_package(archive_fname, pkgdir, pkg_name)
             result, _ = utils.gap_exec(
-                    "ValidatePackagesArchive(\"{}\", \"{}\");".format(pkgdir, pkg_name),
-                    args="{}/validate_package.g".format(dir_of_this_file),
-                )
+                'ValidatePackagesArchive("{}", "{}");'.format(pkgdir, pkg_name),
+                args="{}/validate_package.g".format(dir_of_this_file),
+            )
             if result != 0:
                 error("{}: FAILED".format(pkg_name))
             else:

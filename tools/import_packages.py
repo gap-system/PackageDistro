@@ -18,6 +18,7 @@ from typing import List
 from utils import download
 from scan_for_updates import import_packages
 
+
 def main(pkgs: List[str]) -> None:
     # each argument should either be...
     #  - the URL of a a PackageInfo.g file
@@ -32,6 +33,7 @@ def main(pkgs: List[str]) -> None:
         else:
             pkginfo_paths.append(p)
     import_packages(pkginfo_paths)
+
 
 if __name__ == "__main__":
     main(sys.argv[1:])

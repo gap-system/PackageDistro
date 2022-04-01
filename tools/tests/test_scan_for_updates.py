@@ -26,6 +26,7 @@ from scan_for_updates import (
 
 from utils import gap_exec, metadata, sha256
 
+
 @pytest.fixture
 def ensure_in_tests_dir():
     os.chdir(os.path.dirname(os.path.realpath(__file__)))
@@ -69,8 +70,8 @@ def test_download_pkg_info(ensure_in_tests_dir):
 def test_exec_gap(ensure_in_tests_dir):
     if shutil.which("gap") == None:
         return
-    assert gap_exec("FORCE_QUIT_GAP(0);") == (0, b'')
-    assert gap_exec("FORCE_QUIT_GAP(1);") == (1, b'')
+    assert gap_exec("FORCE_QUIT_GAP(0);") == (0, b"")
+    assert gap_exec("FORCE_QUIT_GAP(1);") == (1, b"")
 
 
 def test_scan_for_one_update(ensure_in_tests_dir, tmpdir):

@@ -23,5 +23,6 @@ def cleanup_archives() -> None:
         print("removing", path)
         os.remove(path)
 
+
 if __name__ == "__main__":
     cleanup_archives()

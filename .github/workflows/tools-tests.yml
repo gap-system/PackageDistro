@@ -25,7 +25,10 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install -r tools/requirements.txt
-          python -m pip install pytest mock
+          python -m pip install pytest mock black
+
+      - name: Check code formatting
+        run: python -m black --check tools
 
       - name: Validate types
         run: python -m mypy --disallow-untyped-calls --disallow-untyped-defs tools/*.py
