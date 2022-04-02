@@ -88,6 +88,13 @@ def validate_tarball(filename: str) -> str:
 def validate_package(archive_fname: str, pkgdir: str, pkg_name: str) -> None:
     pkg_json = metadata(pkg_name)
 
+    # validate Status
+    status = pkg_json["Status"]
+    if not status in ["accepted", "deposited"]:
+        error(
+            "{}:Status is {}, should be accepted or deposited".format(pkg_name, status)
+        )
+
     # validate PackageInfoURL
     data = download_to_memory(pkg_json["PackageInfoURL"])
     if data == None:
