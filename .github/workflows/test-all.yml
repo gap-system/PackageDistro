@@ -291,7 +291,7 @@ jobs:
                 pkgname := \"$PKG\";
                 SetInfoLevel(InfoPackageLoading, PACKAGE_DEBUG);
                 LoadPackage(pkgname);
-                SetInfoLevel(InfoPackageLoading, PACKAGE_WARNING);
+                SetInfoLevel(InfoPackageLoading, PACKAGE_ERROR);
                 res:=TestPackage(pkgname);
                 FORCE_QUIT_GAP(res);
                 "
@@ -324,7 +324,7 @@ jobs:
 
                 SetInfoLevel(InfoPackageLoading, PACKAGE_DEBUG);
                 LoadPackage(pkgname : OnlyNeeded);
-                SetInfoLevel(InfoPackageLoading, PACKAGE_WARNING);
+                SetInfoLevel(InfoPackageLoading, PACKAGE_ERROR);
 
                 res:=TestPackage(pkgname);
                 FORCE_QUIT_GAP(res);
