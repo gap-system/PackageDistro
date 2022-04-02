@@ -51,7 +51,7 @@ archive_dir = "_archives"
 pkginfos_dir = "_pkginfos"
 
 
-def download_pkg_info(url: str) -> Optional[bytes]:
+def download_to_memory(url: str) -> Optional[bytes]:
     response = requests.get(url)
     if response.status_code != 200:
         warning(
@@ -70,7 +70,7 @@ def scan_for_one_update(pkginfos_dir: str, pkg_name: str) -> Optional[str]:
     except KeyError:
         notice(pkg_name + ': missing key "PackageInfoSHA256"')
         hash_distro = 0
-    pkg_info = download_pkg_info(pkg_json["PackageInfoURL"])
+    pkg_info = download_to_memory(pkg_json["PackageInfoURL"])
     if not isinstance(pkg_info, bytes):
         return None
     hash_url = hashlib.sha256(pkg_info).hexdigest()

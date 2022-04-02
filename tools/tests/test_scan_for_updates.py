@@ -18,7 +18,7 @@ sys.path.insert(
 )
 
 from scan_for_updates import (
-    download_pkg_info,
+    download_to_memory,
     main,
     scan_for_one_update,
     scan_for_updates,
@@ -55,16 +55,16 @@ def test_sha256(ensure_in_tests_dir):
     )
 
 
-def test_download_pkg_info(ensure_in_tests_dir):
-    assert download_pkg_info(metadata("aclib")["PackageInfoURL"])
+def test_download_to_memory(ensure_in_tests_dir):
+    assert download_to_memory(metadata("aclib")["PackageInfoURL"])
 
     with pytest.raises(SystemExit) as e:
-        download_pkg_info(metadata("badjson")["PackageInfoURL"])
+        download_to_memory(metadata("badjson")["PackageInfoURL"])
     assert e.type == SystemExit
     assert e.value.code == 1
 
     # Intentionally messed up the url field
-    assert not download_pkg_info(metadata("toricvarieties")["PackageInfoURL"])
+    assert not download_to_memory(metadata("toricvarieties")["PackageInfoURL"])
 
 
 def test_exec_gap(ensure_in_tests_dir):
