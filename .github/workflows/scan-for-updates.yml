@@ -48,7 +48,7 @@ jobs:
         with:
           update_packager_index: false
           ccache_options: |
-              compiler_check = %compiler% -v ; tools/compiler_arch.sh %compiler%
+              compiler_check = %compiler% -v ; ${{ env.PWD }}/tools/compiler_arch.sh %compiler%
 
       - name: "Install GAP"
         uses: gap-actions/setup-gap@v2

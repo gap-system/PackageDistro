@@ -102,7 +102,7 @@ jobs:
         with:
           update_packager_index: false
           ccache_options: |
-              compiler_check = %compiler% -v ; tools/compiler_arch.sh %compiler%
+              compiler_check = %compiler% -v ; ${{ env.PWD }}/tools/compiler_arch.sh %compiler%
 
       # TOOD: gap should come from a container
       - name: "Install GAP"
