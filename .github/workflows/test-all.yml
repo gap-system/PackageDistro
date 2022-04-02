@@ -251,6 +251,12 @@ jobs:
         run: |
           python -m pip install -r tools/requirements.txt
 
+      # the following step is useful for debugging
+      - name: "Determine system architecture for -march=native"
+        run: |
+          echo "cc -march=native: $(tools/compiler_arch.sh cc)"
+          echo "c++ -march=native: $(tools/compiler_arch.sh c++)"
+
       - name: "Download GAP from previous job"
         uses: actions/download-artifact@v2
         with:
