@@ -2,16 +2,21 @@
   "AbstractHTML": "<span class=\"pkgname\">UGALY</span> (Universal Groups Acting LocallY) is a <span class=\"pkgname\">GAP</span> package that provides methods to create, analyse and find local actions of generalised universal groups acting on locally finite regular trees, following Burger-Mozes and Tornier.",
   "AcceptDate": "07/2021",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "773d7fa993aaa872850ef24b936352b21cc652c9f0f59f19a8d6f6d6dd944093",
-  "ArchiveURL": "https://github.com/gap-packages/UGALY/releases/download/v4.0.1/UGALY-4.0.1",
+  "ArchiveSHA256": "bbb01b709fdaf9562d96857fa13c480dea1747b2d39e51c1cb388fd9c0e51772",
+  "ArchiveURL": "https://github.com/gap-packages/UGALY/releases/download/v4.0.2/UGALY-4.0.2",
   "AvailabilityTest": null,
-  "BannerString": "\nVersion 4.0.1\n __  __     ______     ______     __         __  __    \n/\\ \\/\\ \\   /\\  ___\\   /\\  __ \\   /\\ \\       /\\ \\_\\ \\   \n\\ \\ \\_\\ \\  \\ \\ \\__ \\  \\ \\  __ \\  \\ \\ \\____  \\ \\____ \\  by Khalil Hannouch\n \\ \\_____\\  \\ \\_____\\  \\ \\_\\ \\_\\  \\ \\_____\\  \\/\\_____\\   and Stephan Tornier\n  \\/_____/   \\/_____/   \\/_/\\/_/   \\/_____/   \\/_____/ \n                                                       \n Universal      Groups      Acting        LocallY    \n",
+  "BannerString": "\nVersion 4.0.2\n __  __     ______     ______     __         __  __    \n/\\ \\/\\ \\   /\\  ___\\   /\\  __ \\   /\\ \\       /\\ \\_\\ \\   \n\\ \\ \\_\\ \\  \\ \\ \\__ \\  \\ \\  __ \\  \\ \\ \\____  \\ \\____ \\  by Khalil Hannouch\n \\ \\_____\\  \\ \\_____\\  \\ \\_\\ \\_\\  \\ \\_____\\  \\/\\_____\\   and Stephan Tornier\n  \\/_____/   \\/_____/   \\/_/\\/_/   \\/_____/   \\/_____/ \n                                                       \n Universal      Groups      Acting        LocallY    \n",
   "CommunicatedBy": "Laurent Bartholdi (Göttingen)",
-  "Date": "07/02/2022",
+  "Date": "02/04/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.10.2",
-    "NeededOtherPackages": [],
+    "NeededOtherPackages": [
+      [
+        "fga",
+        ">= 1.0"
+      ]
+    ],
     "SuggestedOtherPackages": []
   },
   "IssueTrackerURL": "https://github.com/gap-packages/UGALY/issues",
@@ -36,7 +41,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "4526cf6deb1e0937a0affda389857a6e575c342f2e6a2a1a238d17e8968a6584",
+  "PackageInfoSHA256": "95472b7e90689536999d2a71c0648a27c3eed1e9d4dccb8581b8e37b72d60741",
   "PackageInfoURL": "https://gap-packages.github.io/UGALY/PackageInfo.g",
   "PackageName": "UGALY",
   "PackageWWWHome": "https://gap-packages.github.io/UGALY",
@@ -72,5 +77,5 @@
   "Status": "accepted",
   "Subtitle": "Universal Groups Acting LocallY",
   "TestFile": "tst/testall.g",
-  "Version": "4.0.1"
+  "Version": "4.0.2"
 }
