@@ -44,6 +44,7 @@ from tempfile import TemporaryDirectory
 from typing import List
 
 from download_packages import download_archive
+from scan_for_updates import download_to_memory
 
 import utils
 from utils import (
@@ -87,10 +88,19 @@ def validate_tarball(filename: str) -> str:
 def validate_package(archive_fname: str, pkgdir: str, pkg_name: str) -> None:
     pkg_json = metadata(pkg_name)
 
-    pkg_info_name = join(pkgdir, "PackageInfo.g")
+    # validate PackageInfoURL
+    data = download_to_memory(pkg_json["PackageInfoURL"])
+    if data == None:
+        error("PackageInfoURL is invalid")
+
+    # validate README_URL
+    data = download_to_memory(pkg_json["README_URL"])
+    if data == None:
+        error("README_URL is invalid")
 
     # verify the SHA256 for the PackageInfo.g that we recorded as PackageInfoSHA256
     # matches what is in the tarball
+    pkg_info_name = join(pkgdir, "PackageInfo.g")
     if pkg_json["PackageInfoSHA256"] != sha256(pkg_info_name):
         error(
             "{0}/meta.yml:PackageInfoSHA256 is not the SHA256 of {1}".format(
@@ -98,6 +108,7 @@ def validate_package(archive_fname: str, pkgdir: str, pkg_name: str) -> None:
             )
         )
 
+    # verify the SHA256 for archive that we recorded as ArchiveSHA256
     if pkg_json["ArchiveSHA256"] != sha256(archive_fname):
         error(
             "{0}/meta.yml:ArchiveSHA256 is not the SHA256 of {1}".format(
