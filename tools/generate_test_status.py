@@ -20,7 +20,7 @@ id={{which_gap}}/{{date}}-{{hash_short}}.
 Prints {{id}} to terminal.
 """
 
-from utils import error, warning
+from utils import error, warning, metadata
 
 import sys
 import os
@@ -83,12 +83,11 @@ os.makedirs(dir_test_status, exist_ok=True)
 
 # Package Information
 for pkg, data in pkgs.items():
-    with open(os.path.join("packages", pkg, "meta.json"), "r") as f:
-        meta = json.load(f)
+    pkg_json = metadata(pkg)
 
-    data["version"] = meta["Version"]
-    data["archive_url"] = meta["ArchiveURL"]
-    data["archive_sha256"] = meta["ArchiveSHA256"]
+    data["version"] = pkg_json["Version"]
+    data["archive_url"] = pkg_json["ArchiveURL"]
+    data["archive_sha256"] = pkg_json["ArchiveSHA256"]
 
     # Get maximum of each status via the hierarchy 'failure' > 'cancelled' = 'skipped' > 'success'.
     # For safety, check if status is always known.
