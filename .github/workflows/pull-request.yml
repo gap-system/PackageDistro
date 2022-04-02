@@ -45,6 +45,7 @@ jobs:
           cc -v
           echo "c++ -march=native: $(tools/compiler_arch.sh c++)"
           c++ -v
+          echo "$PWD/tools" >> $GITHUB_PATH
 
       # Setup ccache, to speed up repeated compilation of the same binaries
       # (i.e., GAP and the packages)
@@ -53,7 +54,7 @@ jobs:
         with:
           update_packager_index: false
           ccache_options: |
-              compiler_check = %compiler% -v ; ${{ env.PWD }}/tools/compiler_arch.sh %compiler%
+              compiler_check = %compiler% -v ; compiler_arch.sh %compiler%
 
       - name: "Install GAP"
         uses: gap-actions/setup-gap@4e865453a9185dfd6d47cdd97e5ce011bee37e9a
