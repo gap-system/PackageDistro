@@ -88,6 +88,12 @@ jobs:
       - name: "Cleanup archives"
         run: tools/cleanup_archives.py
 
+      # the following step is useful for debugging
+      - name: "Determine system architecture for -march=native"
+        run: |
+          echo "cc -march=native: $(tools/compiler_arch.sh cc)"
+          echo "c++ -march=native: $(tools/compiler_arch.sh c++)"
+
       # Setup ccache, to speed up repeated compilation of the same binaries
       # (i.e., GAP and the packages)
       - name: "Setup ccache"
