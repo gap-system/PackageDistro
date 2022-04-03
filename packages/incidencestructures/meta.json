@@ -1,0 +1,66 @@
+{
+  "AbstractHTML": "",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSHA256": "bb7f872d20d325b673742a57d4a7fb75a76b09b22b109856e49f8d13aab3ce21",
+  "ArchiveURL": "https://github.com/nagygp/IncidenceStructures/releases/download/v0.3/IncidenceStructures-0.3",
+  "AvailabilityTest": null,
+  "Date": "05/11/2020",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">= 4.9",
+    "NeededOtherPackages": [
+      [
+        "BlissInterface",
+        ">=0.2"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "IssueTrackerURL": "https://github.com/nagygp/IncidenceStructures/issues",
+  "Keywords": [
+    "incidence",
+    "incidence structure",
+    "design",
+    "Steiner system",
+    "finite geometry"
+  ],
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "IncidenceStructures",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "GAP implementation of abstract incidence structures",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSHA256": "8837c06f1863e7fef7615305211965959f474a29f7860c98b193e2b1ba5f372b",
+  "PackageInfoURL": "https://nagygp.github.io/IncidenceStructures/PackageInfo.g",
+  "PackageName": "IncidenceStructures",
+  "PackageWWWHome": "https://nagygp.github.io/IncidenceStructures/",
+  "Persons": [
+    {
+      "Email": "nagyg@math.bme.hu",
+      "FirstNames": "Gábor P.",
+      "Institution": "Budapest University of Technology and Economics",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Nagy",
+      "Place": "Budapest",
+      "PostalAddress": "Department of Algebra, Budapest University of Technology\nEgry József utca 1\nH-1111 Budapest (Hungary)",
+      "WWWHome": "https://algebra.math.bme.hu/nagy-gabor"
+    }
+  ],
+  "README_URL": "https://nagygp.github.io/IncidenceStructures/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/nagygp/IncidenceStructures"
+  },
+  "Status": "dev",
+  "Subtitle": "GAP implementation of abstract incidence structures",
+  "TestFile": "tst/testall.g",
+  "Version": "0.3"
+}
