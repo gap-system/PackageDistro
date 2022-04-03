@@ -12,6 +12,12 @@ name: "Scan for updates"
 
 on:
   workflow_dispatch:  # for debugging
+    inputs:
+      pkginfo_urls:
+        description: 'A space separated list of PackageInfo.g URLs'
+        required: false
+        type: string
+        default: ''
   schedule:
     - cron: '3 * * * *' # Every hours at 3 past
 
@@ -60,6 +66,11 @@ jobs:
       - name: "Scan for updates"
         run: tools/scan_for_updates.py
 
+      - name: "Import user specified packages"
+        run: |
+          tools/import_packages.py ${{ github.event.inputs.pkginfo_urls }}
+          git add packages/
+
       # remove archives we don't need anymore; this reduces the size of the caches
       - name: "Cleanup archives"
         run: tools/cleanup_archives.py
@@ -69,7 +80,7 @@ jobs:
       - name: "Creates jobs for modified packages"
         id: get-names
         run: |
-            modified=$(git diff --name-only --no-renames --diff-filter=M -- packages/*/meta.json)
+            modified=$(git diff --name-only --no-renames --staged --diff-filter=AM -- packages/*/meta.json)
             MATRIX="{\"package\":["
             for PKG in ${modified}; do
               PKG=${PKG%"/meta.json"}
@@ -107,7 +118,13 @@ jobs:
         run: |
           tar xvf modified.tar.gz
           pkg_version=$(jq -r '.Version' < packages/${{ matrix.package }}/meta.json)
-          echo "PKG_VERSION=$pkg_version" >> $GITHUB_ENV
+          if git ls-files | fgrep -q packages/${{ matrix.package }}/meta.json ; then
+            echo "PR_TITLE=[${{ matrix.package }}] Update to ${pkg_version}" >> $GITHUB_ENV
+            echo "PR_LABEL=package update" >> $GITHUB_ENV
+          else
+            echo "PR_TITLE=[${{ matrix.package }}] New package, version ${pkg_version}" >> $GITHUB_ENV
+            echo "PR_LABEL=new package" >> $GITHUB_ENV
+          fi
 
       # We set up a GitHub App in order to ensure that workflows are run on the PRs
       # created by us, following the instructions here:
@@ -126,10 +143,11 @@ jobs:
           # https://api.github.com/users/gap-package-distribution-bot%5Bbot%5D
           author: "gap-package-distribution-bot <100730870+gap-package-distribution-bot[bot]@users.noreply.github.com>"
           add-paths: packages/${{ matrix.package }}
-          commit-message: "[${{ matrix.package }}] Update to ${{ env.PKG_VERSION }}"
+          commit-message: "${{ env.PR_TITLE }}"
           body: ""
           branch: automatic/${{ matrix.package }}
           delete-branch: true
-          title: "[${{ matrix.package }}] Update to ${{ env.PKG_VERSION }}"
+          title: "${{ env.PR_TITLE }}"
           labels: |
             automated pr
+            ${{ env.PR_LABEL }}
