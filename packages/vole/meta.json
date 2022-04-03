@@ -1,0 +1,144 @@
+{
+  "AbstractHTML": "\n<B>Vole</B> is a <B>GAP</B> package that implements\ngraph backtracking, which can be used to solve many problems in finite\npermutation groups, such as subgroup intersections, normalisers,\nset stabilisers, and canonical images of groups.",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSHA256": "c1208eeff1aa1443338d0a8a4020d7c7f590ebf3124756abf8fb40a857ff0f71",
+  "ArchiveURL": "https://github.com/peal/vole/releases/download/v0.5.3/vole-0.5.3",
+  "AutoDoc": {
+    "TitlePage": {
+      "Abstract": "\n<B>Vole</B> is a <B>GAP</B> package that implements\ngraph backtracking, which can be used to solve many problems in finite\npermutation groups, such as subgroup intersections, normalisers,\nset stabilisers, and canonical images of groups.",
+      "Acknowledgements": "The authors would like to thank the <URL><LinkText>Royal Society</LinkText><Link>https://royalsociety.org</Link></URL> (grant codes <B>RGF\\EA\\181005</B> and <B>URF\\R\\180015</B>) for their financial support at the time that &Vole; was created.",
+      "Copyright": "&copyright; &VoleYear; by Christopher Jefferson, Mun See Chang, and Wilf A. Wilson.<P/>&Vole; is licensed under the Mozilla Public License, version 2.0."
+    }
+  },
+  "AvailabilityTest": null,
+  "Date": "21/12/2021",
+  "Dependencies": {
+    "ExternalConditions": [
+      "To compile Vole, Rust needs to be installed and available."
+    ],
+    "GAP": ">= 4.11.0",
+    "NeededOtherPackages": [
+      [
+        "BacktrackKit",
+        ">= 0.6.1"
+      ],
+      [
+        "Digraphs",
+        ">= 1.1.1"
+      ],
+      [
+        "GraphBacktracking",
+        ">= 0.5.2"
+      ],
+      [
+        "IO",
+        ">= 4.7.0"
+      ],
+      [
+        "json",
+        ">= 2.0.1"
+      ],
+      [
+        "datastructures",
+        ">= 0.2.6"
+      ]
+    ],
+    "SuggestedOtherPackages": [
+      [
+        "AutoDoc",
+        ">= 2019.09.04"
+      ],
+      [
+        "ferret",
+        ">= 1.0.2"
+      ],
+      [
+        "QuickCheck",
+        ">= 0.1"
+      ],
+      [
+        "OrbitalGraphs",
+        ">= 0.1"
+      ]
+    ]
+  },
+  "IssueTrackerURL": "https://github.com/peal/vole/issues",
+  "Keywords": [
+    "permutation group",
+    "backtrack",
+    "search",
+    "backtracking",
+    "graph",
+    "digraph",
+    "normaliser",
+    "normalizer",
+    "stabiliser",
+    "stabilizer",
+    "group",
+    "subgroup",
+    "intersection",
+    "conjugacy",
+    "coset",
+    "transporter"
+  ],
+  "License": "MPL-2.0",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "Vole",
+      "HTMLStart": "doc/chap0_mj.html",
+      "LongTitle": "Vole organises lengthy explorations: Backtrack search in permutation groups with graphs",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSHA256": "39acdb870e3326459a773e244e175da9bf1095eb4c5f2384572bf28e9965d807",
+  "PackageInfoURL": "https://peal.github.io/vole/PackageInfo.g",
+  "PackageName": "Vole",
+  "PackageWWWHome": "https://peal.github.io/vole",
+  "Persons": [
+    {
+      "Email": "msc2@st-andrews.ac.uk",
+      "FirstNames": "Mun See",
+      "Institution": "University of St Andrews",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Chang",
+      "Place": "St Andrews",
+      "PostalAddress": "School of Computer Science, University of St Andrews, St Andrews, Fife, KY16 9SX, Scotland"
+    },
+    {
+      "Email": "caj21@st-andrews.ac.uk",
+      "FirstNames": "Christopher",
+      "Institution": "University of St Andrews",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Jefferson",
+      "Place": "St Andrews",
+      "PostalAddress": "School of Computer Science, University of St Andrews, St Andrews, Fife, KY16 9SX, Scotland",
+      "WWWHome": "https://caj.host.cs.st-andrews.ac.uk"
+    },
+    {
+      "Email": "gap@wilf-wilson.net",
+      "FirstNames": "Wilf A.",
+      "Institution": "University of St Andrews",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Wilson",
+      "Place": "St Andrews",
+      "PostalAddress": "School of Computer Science, University of St Andrews, St Andrews, Fife, KY16 9SX, Scotland",
+      "WWWHome": "https://wilf.me"
+    }
+  ],
+  "README_URL": "https://peal.github.io/vole/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/peal/vole"
+  },
+  "Status": "dev",
+  "Subtitle": "Vole organises lengthy explorations: Backtrack search in permutation groups with graphs",
+  "TestFile": "tst/testall.g",
+  "Version": "0.5.3"
+}
