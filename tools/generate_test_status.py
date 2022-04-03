@@ -74,6 +74,7 @@ report["workflow"] = repo + "/actions/runs/" + runID
 report["hash"] = hash
 date = str(datetime.now()).split(".")[0]
 report["date"] = date
+report["gap_version"] = which_gap
 report["id"] = os.path.join(which_gap, "%s-%s" % (date.replace(" ", "-"), hash[:8]))
 
 # Path
