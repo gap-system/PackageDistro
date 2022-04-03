@@ -1,0 +1,36 @@
+name: "HACK"
+
+on:
+  workflow_dispatch:  # manual trigger for debugging
+  pull_request:
+
+jobs:
+  some-job:
+    name: "Detect affected packages"
+    runs-on: ubuntu-latest
+    outputs:
+      modified: ${{ steps.modified.outputs.modified }}
+    steps:
+      - name: "Hack 1"
+        run: |
+          echo "${{ jobs.some-job }}"
+
+      - name: "Hack 2"
+        if: always()
+        run: |
+          echo "${{ jobs.some-job.run_url }}"
+
+      - name: "Hack 3"
+        if: always()
+        run: |
+          echo "${{ github.run_id }}"
+
+      - name: "Hack 4"
+        if: always()
+        run: |
+          echo "${{ github.run_url }}"
+
+      - name: "Hack 5"
+        if: always()
+        run: |
+          echo "${{ github }}"
