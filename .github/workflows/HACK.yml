@@ -11,12 +11,12 @@ jobs:
     steps:
       - name: "Hack 1"
         run: |
-          echo "${{ jobs.some-job }}"
+          echo "${{ github.jobs.some-job }}"
 
       - name: "Hack 2"
         if: always()
         run: |
-          echo "${{ jobs.some-job.run_url }}"
+          echo "${{ github.jobs.some-job.run_url }}"
 
       - name: "Hack 3"
         if: always()
