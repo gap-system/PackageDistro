@@ -67,9 +67,9 @@ jobs:
           git config --global user.email '100730870+gap-package-distribution-bot[bot]@users.noreply.github.com'
           cd data
           git add -A
-          git commit -m "Automated report"
+          git commit -m "Automated report for ${{ github.event.inputs.which-gap || inputs.which-gap }}"
           git pull --rebase && git push
           cd ../gh-pages
           git add -A
-          git commit -m "Automated redirect"
+          git commit -m "Automated redirect for ${{ github.event.inputs.which-gap || inputs.which-gap }}"
           git pull --rebase && git push

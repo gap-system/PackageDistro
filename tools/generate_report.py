@@ -101,7 +101,7 @@ for status in status_list:
 with open(dir_report + "/report.md", "w") as f:
     ############################################################################
     # Header
-    f.write("# Package Evaluation Report\n\n")
+    f.write("# Package Evaluation Report for GAP `%s`\n\n" % report["gap_version"])
     f.write("## Job Properties\n\n")
     f.write(
         "*Testing:* [%s](%s) vs [%s](%s)\n\n"
