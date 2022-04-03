@@ -70,16 +70,14 @@ def download_archive(  # pylint: disable=inconsistent-return-statements
         archive_sha = sha256(archive_fname)
         if "ArchiveSHA256" in pkg_json and pkg_json["ArchiveSHA256"] != archive_sha:
             notice(
-                "{} already exists, but has SHA256 {}, expected {}".format(
-                    archive_fname, archive_sha, pkg_json["ArchiveSHA256"]
-                )
+                f'{archive_fname} has SHA256 {archive_sha}, expected {pkg_json["ArchiveSHA256"]}'
             )
             os.remove(archive_fname)
         else:
-            notice("{} already exists, not downloading again".format(archive_fname))
+            notice(f"{archive_fname} already exists, not downloading again")
             return archive_fname
     url = archive_url(pkg_name)
-    notice("downloading {} to {}".format(url, archive_fname))
+    notice(f"downloading {url} to {archive_fname}")
 
     for i in range(tries):
         try:
@@ -90,9 +88,9 @@ def download_archive(  # pylint: disable=inconsistent-return-statements
                         f.write(chunk)
             return archive_fname
         except requests.RequestException:
-            notice("  attempt {}/{} failed".format(i + 1, tries))
+            notice(f"  attempt {i+1}/{tries} failed")
 
-    error("  failed to download archive {}".format(archive_fname))
+    error(f"  failed to download archive {archive_fname}")
 
 
 def main(pkg_names: List[str]) -> None:

@@ -55,9 +55,7 @@ def download_to_memory(url: str) -> Optional[bytes]:
     response = requests.get(url)
     if response.status_code != 200:
         warning(
-            "error trying to download {}, status code {}, skipping!".format(
-                url, response.status_code
-            )
+            f"error trying to download {url}, status code {response.status_code}, skipping!"
         )
         return None
     return response.content
@@ -108,8 +106,8 @@ def parse_pkginfo_files(pkginfo_paths: List[str]) -> List[Dict[str, Any]]:
     dir_of_this_file = os.path.dirname(os.path.realpath(__file__))
     str = '", "'.join(pkginfo_paths)
     result, output = utils.gap_exec(
-        'OutputJson(["{}"]);'.format(str),
-        args="{}/pkginfo_to_json.g".format(dir_of_this_file),
+        f'OutputJson(["{str}"]);',
+        args=f"{dir_of_this_file}/pkginfo_to_json.g",
     )
     if result != 0:
         error("Something went wrong")
@@ -130,7 +128,7 @@ def import_packages(pkginfo_paths: List[str]) -> None:
 
         pkgname = pkg_json["PackageName"].lower()
         pkg_json_file = metadata_fname(pkgname)
-        notice("update {0}".format(pkg_json_file))
+        notice(f"update {pkg_json_file}")
         if not os.path.exists(os.path.dirname(pkg_json_file)):
             os.mkdir(os.path.dirname(pkg_json_file))
         with open(pkg_json_file, "w", encoding="utf-8") as f:
