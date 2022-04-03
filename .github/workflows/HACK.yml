@@ -9,26 +9,16 @@ jobs:
     name: "This is a test job"
     runs-on: ubuntu-latest
     steps:
-      - name: "Hack 1"
-        run: |
-          echo "${{ github.jobs.some-job }}"
-
-      - name: "Hack 2"
-        if: always()
-        run: |
-          echo "${{ github.jobs.some-job.run_url }}"
-
-      - name: "Hack 3"
-        if: always()
-        run: |
-          echo "${{ github.run_id }}"
-
-      - name: "Hack 4"
-        if: always()
-        run: |
-          echo "${{ github.run_url }}"
-
-      - name: "Hack 5"
-        if: always()
-        run: |
-          echo "${{ github }}"
+      - name: Dump GitHub context
+        id: github_context_step
+        run: echo '${{ toJSON(github) }}'
+      - name: Dump job context
+        run: echo '${{ toJSON(job) }}'
+      - name: Dump steps context
+        run: echo '${{ toJSON(steps) }}'
+      - name: Dump runner context
+        run: echo '${{ toJSON(runner) }}'
+      - name: Dump strategy context
+        run: echo '${{ toJSON(strategy) }}'
+      - name: Dump matrix context
+        run: echo '${{ toJSON(matrix) }}'
