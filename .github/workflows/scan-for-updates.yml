@@ -12,6 +12,12 @@ name: "Scan for updates"
 
 on:
   workflow_dispatch:  # for debugging
+    inputs:
+      pkginfo_urls:
+        description: 'A space separate list of PackageInfo.g URLs'
+        required: false
+        type: string
+        default: ''
   schedule:
     - cron: '3 * * * *' # Every hours at 3 past
 
@@ -60,6 +66,11 @@ jobs:
       - name: "Scan for updates"
         run: tools/scan_for_updates.py
 
+      - name: "Import user specified packages"
+        run: |
+          tools/import_packages.py ${{ github.event.inputs.pkginfo_urls }}
+          git add packages/
+
       # remove archives we don't need anymore; this reduces the size of the caches
       - name: "Cleanup archives"
         run: tools/cleanup_archives.py
@@ -69,7 +80,7 @@ jobs:
       - name: "Creates jobs for modified packages"
         id: get-names
         run: |
-            modified=$(git diff --name-only --no-renames --diff-filter=M -- packages/*/meta.json)
+            modified=$(git diff --name-only --no-renames --staged --diff-filter=AM -- packages/*/meta.json)
             MATRIX="{\"package\":["
             for PKG in ${modified}; do
               PKG=${PKG%"/meta.json"}
