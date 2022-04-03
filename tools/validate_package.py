@@ -67,7 +67,7 @@ def validate_tarball(filename: str) -> str:
         # no entry may contain ".."
         first = next(filter(lambda n: ".." in n, names), None)
         if first != None:
-            error("tarball has bad entry {}".format(first))
+            error(f"tarball has bad entry {first}")
 
         # get the basedir (all entries are supposed to be contained in that)
         basedir = names[0].split("/")[0]
@@ -76,7 +76,7 @@ def validate_tarball(filename: str) -> str:
         badentries = filter(lambda n: basedir != n.split("/")[0], names)
         first = next(badentries, None)
         if first != None:
-            error("tarball has entry {} outside of basedir {}".format(first, basedir))
+            error(f"tarball has entry {first} outside of basedir {basedir}")
 
         # must have a PackageInfo.g
         if not os.path.join(basedir, "PackageInfo.g") in names:
@@ -91,9 +91,7 @@ def validate_package(archive_fname: str, pkgdir: str, pkg_name: str) -> None:
     # validate Status
     status = pkg_json["Status"]
     if not status in ["accepted", "deposited"]:
-        error(
-            "{}:Status is {}, should be accepted or deposited".format(pkg_name, status)
-        )
+        error(f"{pkg_name}: Status is {status}, should be 'accepted' or 'deposited'")
 
     # validate PackageInfoURL
     data = download_to_memory(pkg_json["PackageInfoURL"])
@@ -109,19 +107,11 @@ def validate_package(archive_fname: str, pkgdir: str, pkg_name: str) -> None:
     # matches what is in the tarball
     pkg_info_name = join(pkgdir, "PackageInfo.g")
     if pkg_json["PackageInfoSHA256"] != sha256(pkg_info_name):
-        error(
-            "{0}/meta.yml:PackageInfoSHA256 is not the SHA256 of {1}".format(
-                pkg_name, pkg_info_name
-            )
-        )
+        error(f"{pkg_name}: PackageInfoSHA256 is not the SHA256 of {pkg_info_name}")
 
     # verify the SHA256 for archive that we recorded as ArchiveSHA256
     if pkg_json["ArchiveSHA256"] != sha256(archive_fname):
-        error(
-            "{0}/meta.yml:ArchiveSHA256 is not the SHA256 of {1}".format(
-                pkg_name, archive_fname
-            )
-        )
+        error(f"{pkg_name}: ArchiveSHA256 is not the SHA256 of {archive_fname}")
 
 
 def main(pkgs: List[str]) -> None:
@@ -135,13 +125,13 @@ def main(pkgs: List[str]) -> None:
             shutil.unpack_archive(archive_fname, tempdir)
             validate_package(archive_fname, pkgdir, pkg_name)
             result, _ = utils.gap_exec(
-                'ValidatePackagesArchive("{}", "{}");'.format(pkgdir, pkg_name),
-                args="{}/validate_package.g".format(dir_of_this_file),
+                f'ValidatePackagesArchive("{pkgdir}", "{pkg_name}");',
+                args=f"{dir_of_this_file}/validate_package.g",
             )
             if result != 0:
-                error("{}: FAILED".format(pkg_name))
+                error(f"{pkg_name}: FAILED")
             else:
-                notice("{}: PASSED".format(pkg_name))
+                notice(f"{pkg_name}: PASSED")
 
 
 if __name__ == "__main__":

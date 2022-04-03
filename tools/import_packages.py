@@ -27,7 +27,7 @@ def main(pkgs: List[str]) -> None:
     for p in pkgs:
         if p.startswith("http://") or p.startswith("https://"):
             t = tempfile.mktemp(suffix=".g", prefix="pkginfo")
-            print("downloading {} to tempfile {}".format(p, t))
+            print(f"downloading {p} to tempfile {t}")
             download(p, t)
             pkginfo_paths.append(t)
         else:
