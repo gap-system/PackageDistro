@@ -179,7 +179,11 @@ with open(dir_report + "/report.md", "w") as f:
                 run = pkgs[pkg]["workflow_run"]
                 last_status = last_pkgs[pkg]["status"]
                 last_version = last_pkgs[pkg]["version"]
-                last_run = last_pkgs[pkg]["workflow_run"]
+                # HACK/FIXME/TODO: Remove if after first run
+                if "workflow_run" in last_pkgs[pkg]:
+                    last_run = last_pkgs[pkg]["workflow_run"]
+                else:
+                    last_run = "None"
                 f.write(
                     f"- {pkg} {version} [({status})]({run}) vs {pkg} {last_version} [({last_status})]({last_run}) <br>\n"
                 )
