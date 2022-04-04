@@ -65,15 +65,15 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      # The name of this job is hardcoded in {NAME}.
+      # If we change the `name` of this job in this YML file,
+      # or use a different prefix from a caller (like `test-all-and-report.yml`),
+      # then we need to adjust {NAME} in this step too.
       - name: Get job id (integer)
         id: get-job-id
         run: |
           DATA=${{ toJSON(steps.get-jobs.outputs.data) }}
           echo -e $DATA > _tmp.json
-          # Names are hardcoded.
-          # Thus if we change names of jobs, or use different names from our callers
-          # (like in `test-all-and-report.yml`), we need to adjust the names there too.
-          echo "inputs=\"${{inputs.which-gap}}\""
           if [ "${{inputs.which-gap}}" != "" ]; then
             NAME="${{inputs.which-gap}} / Build GAP and packages"
           else
@@ -276,6 +276,32 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - uses: octokit/request-action@v2.x
+        id: get-jobs
+        with:
+          route: GET /repos/${{ github.repository }}/actions/runs/${{ github.run_id}}/jobs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # The name of this job is hardcoded in {NAME}.
+      # If we change the `name` of this job in this YML file,
+      # or use a different prefix from a caller (like `test-all-and-report.yml`),
+      # then we need to adjust {NAME} in this step too.
+      - name: Get job id (integer)
+        id: get-job-id
+        run: |
+          DATA=${{ toJSON(steps.get-jobs.outputs.data) }}
+          echo -e $DATA > _tmp.json
+          if [ "${{inputs.which-gap}}" != "" ]; then
+            NAME="${{inputs.which-gap}} / ${{ matrix.package }}"
+          else
+            NAME="${{ matrix.package }}"
+          fi
+          ID=$(jq --arg name "$NAME" -r '.jobs | .[] | select(.name == $name) | .id' _tmp.json);
+          echo "name : $NAME"
+          echo "id : $ID"
+          echo "::set-output name=id::$ID"
+
       - name: "Install package distribution tools"
         run: |
           python -m pip install -r tools/requirements.txt
@@ -355,31 +381,6 @@ jobs:
                 res:=TestPackage(pkgname);
                 FORCE_QUIT_GAP(res);
                 "
-
-      - uses: octokit/request-action@v2.x
-        id: get-jobs
-        with:
-          route: GET /repos/${{ github.repository }}/actions/runs/${{ github.run_id}}/jobs
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Get job id (integer)
-        id: get-job-id
-        run: |
-          DATA=${{ toJSON(steps.get-jobs.outputs.data) }}
-          echo -e $DATA > _tmp.json
-          # Names are hardcoded.
-          # Thus if we change names of jobs, or use different names from our callers
-          # (like in `test-all-and-report.yml`), we need to adjust the names there too.
-          if [ "${{inputs.which-gap}}" != "" ]; then
-            NAME="${{inputs.which-gap}} / ${{ matrix.package }}"
-          else
-            NAME="${{ matrix.package }}"
-          fi
-          ID=$(jq --arg name "$NAME" -r '.jobs | .[] | select(.name == $name) | .id' _tmp.json);
-          echo "name : $NAME"
-          echo "id : $ID"
-          echo "::set-output name=id::$ID"
 
       # https://docs.github.com/en/actions/learn-github-actions/contexts#steps-context
       # steps.<id>.outcome possible values are success, failure, cancelled, or skipped.
