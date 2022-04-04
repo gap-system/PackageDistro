@@ -215,6 +215,7 @@ jobs:
           DATA=${{ toJSON(steps.get-jobs.outputs.data) }}
           echo -e $DATA > _tmp.json
           ID=$(jq --arg name "${{ github.job }}" -r '.jobs | .[] | select(.name == "$name") | .id' _tmp.json);
+          echo $ID
           echo "::set-output name=id::$ID"
 
       - name: "Creates jobs for matching packages"
@@ -358,6 +359,7 @@ jobs:
           DATA=${{ toJSON(steps.get-jobs.outputs.data) }}
           echo -e $DATA > _tmp.json
           ID=$(jq --arg name "${{ github.job }}" -r '.jobs | .[] | select(.name == "$name") | .id' _tmp.json);
+          echo $ID
           echo "::set-output name=id::$ID"
 
       # https://docs.github.com/en/actions/learn-github-actions/contexts#steps-context
