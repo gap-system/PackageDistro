@@ -1,14 +1,28 @@
 #
-# This workflow is run regularly and tests the official package distribution
-# by calling the test-all and update-latest-report YML workflows.
+# This workflow is run regularly and tests the official package distribution,
+# then uploads status reports, by calling the test-all update-latest-report
+# YML workflows.
 #
-name: "Daily tests"
+# It is also run when the package definitions in the `main` branch are
+# updated.
+#
+name: "Test all and report status"
 
 on:
   workflow_dispatch: # for debugging
+  push:
+    paths:
+      - 'packages/*/meta.json'
+    branches:
+      - main
   schedule:
     - cron:  '00 2 * * *'
 
+# only run at most one instances of this workflow at a time for each branch
+# resp. tag. Starting a new one cancels previously running ones.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   # master
