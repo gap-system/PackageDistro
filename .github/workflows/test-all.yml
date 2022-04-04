@@ -58,6 +58,32 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - uses: octokit/request-action@v2.x
+        id: get-jobs
+        with:
+          route: GET /repos/${{ github.repository }}/actions/runs/${{ github.run_id}}/jobs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get job id (integer)
+        id: get-job-id
+        run: |
+          DATA=${{ toJSON(steps.get-jobs.outputs.data) }}
+          echo -e $DATA > _tmp.json
+          # Names are hardcoded.
+          # Thus if we change names of jobs, or use different names from our callers
+          # (like in `test-all-and-report.yml`), we need to adjust the names there too.
+          echo "inputs=\"${{inputs.which-gap}}\""
+          if [ "${{inputs.which-gap}}" != "" ]; then
+            NAME="${{inputs.which-gap}} / Build GAP and packages"
+          else
+            NAME="Build GAP and packages"
+          fi
+          ID=$(jq --arg name "$NAME" -r '.jobs | .[] | select(.name == $name) | .id' _tmp.json);
+          echo "name : $NAME"
+          echo "id : $ID"
+          echo "::set-output name=id::$ID"
+
       # Cache the package archives we download across runs of this job
       # to speed up things considerably
       - name: "Cache archives"
@@ -202,22 +228,6 @@ jobs:
           name: gap-${{ github.event.inputs.which-gap || inputs.which-gap }}
           path: /home/runner/gap.tar.zst
 
-      - uses: octokit/request-action@v2.x
-        id: get-jobs
-        with:
-          route: GET /repos/${{ github.repository }}/actions/runs/${{ github.run_id}}/jobs
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Get job id (integer)
-        id: get-job-id
-        run: |
-          DATA=${{ toJSON(steps.get-jobs.outputs.data) }}
-          echo -e $DATA > _tmp.json
-          ID=$(jq --arg name "${{ github.job }}" -r '.jobs | .[] | select(.name == "$name") | .id' _tmp.json);
-          echo $ID
-          echo "::set-output name=id::$ID"
-
       - name: "Creates jobs for matching packages"
         id: get-names
         run: |
@@ -358,8 +368,17 @@ jobs:
         run: |
           DATA=${{ toJSON(steps.get-jobs.outputs.data) }}
           echo -e $DATA > _tmp.json
-          ID=$(jq --arg name "${{ github.job }}" -r '.jobs | .[] | select(.name == "$name") | .id' _tmp.json);
-          echo $ID
+          # Names are hardcoded.
+          # Thus if we change names of jobs, or use different names from our callers
+          # (like in `test-all-and-report.yml`), we need to adjust the names there too.
+          if [ "${{inputs.which-gap}}" != "" ]; then
+            NAME="${{inputs.which-gap}} / ${{ matrix.package }}"
+          else
+            NAME="${{ matrix.package }}"
+          fi
+          ID=$(jq --arg name "$NAME" -r '.jobs | .[] | select(.name == $name) | .id' _tmp.json);
+          echo "name : $NAME"
+          echo "id : $ID"
           echo "::set-output name=id::$ID"
 
       # https://docs.github.com/en/actions/learn-github-actions/contexts#steps-context
