@@ -202,6 +202,21 @@ jobs:
           name: gap-${{ github.event.inputs.which-gap || inputs.which-gap }}
           path: /home/runner/gap.tar.zst
 
+      - uses: octokit/request-action@v2.x
+        id: get-jobs
+        with:
+          route: GET /repos/${{ github.repository }}/actions/runs/${{ github.run_id}}/jobs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get job id (integer)
+        id: get-job-id
+        run: |
+          DATA=${{ toJSON(steps.get-jobs.outputs.data) }}
+          echo -e $DATA > _tmp.json
+          ID=$(jq --arg name "${{ github.job }}" -r '.jobs | .[] | select(.name == "$name") | .id' _tmp.json);
+          echo "::set-output name=id::$ID"
+
       - name: "Creates jobs for matching packages"
         id: get-names
         run: |
@@ -229,7 +244,7 @@ jobs:
             echo "::set-output name=matrix::$MATRIX"
             mkdir -p test-status-skipped
             for PKG in ${SKIPPED}; do
-              echo "{\"status_skipped\": \"skipped\"}" > test-status-skipped/${PKG}.json
+              echo "{\"status_skipped\": \"skipped\", \"job_id\": \"${{ steps.get-job-id.outputs.id }}\"}" > test-status-skipped/${PKG}.json
             done
 
       - name: "Upload skipped job status as artifact"
@@ -330,6 +345,21 @@ jobs:
                 FORCE_QUIT_GAP(res);
                 "
 
+      - uses: octokit/request-action@v2.x
+        id: get-jobs
+        with:
+          route: GET /repos/${{ github.repository }}/actions/runs/${{ github.run_id}}/jobs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get job id (integer)
+        id: get-job-id
+        run: |
+          DATA=${{ toJSON(steps.get-jobs.outputs.data) }}
+          echo -e $DATA > _tmp.json
+          ID=$(jq --arg name "${{ github.job }}" -r '.jobs | .[] | select(.name == "$name") | .id' _tmp.json);
+          echo "::set-output name=id::$ID"
+
       # https://docs.github.com/en/actions/learn-github-actions/contexts#steps-context
       # steps.<id>.outcome possible values are success, failure, cancelled, or skipped.
       - name: "Create job status json-file"
@@ -338,7 +368,7 @@ jobs:
           PKG="${{ matrix.package }}"
           STATUS_DEFAULT="${{ steps.tests-default.outcome }}"
           STATUS_ONLY_NEEDED="${{ steps.tests-only-needed.outcome }}"
-          echo "{\"status_default\": \"$STATUS_DEFAULT\", \"status_only_needed\": \"$STATUS_ONLY_NEEDED\"}" > ${PKG}.json
+          echo "{\"status_default\": \"$STATUS_DEFAULT\", \"status_only_needed\": \"$STATUS_ONLY_NEEDED\", \"job_id\": \"${{ steps.get-job-id.outputs.id }}\"}" > ${PKG}.json
           cat ${PKG}.json
 
       - name: "Upload job status as artifact"
