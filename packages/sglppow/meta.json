@@ -2,12 +2,12 @@
   "AbstractHTML": "",
   "AcceptDate": "08/2016",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "8d3ede9b8681dd73b0a6e55437aab4dadfed21e497d2ac2732be4861d23aad26",
-  "ArchiveURL": "https://github.com/gap-packages/sglppow/releases/download/v2.1/sglppow-2.1",
+  "ArchiveSHA256": "764cf4b88f41a895fc61268d18a2c6cbe725f8b7a70762c6915a7fd16ba26ceb",
+  "ArchiveURL": "https://github.com/gap-packages/sglppow/releases/download/v2.2/sglppow-2.2",
   "AvailabilityTest": null,
-  "BannerString": "----------------------------------------------------------------\nLoading SglPPow 2.1\nby Michael Vaughan-Lee and Bettina Eick \n----------------------------------------------------------------\n",
+  "BannerString": "----------------------------------------------------------------\nLoading SglPPow 2.2\nby Michael Vaughan-Lee and Bettina Eick \n----------------------------------------------------------------\n",
   "CommunicatedBy": "Leonard Soicher (QMUL)",
-  "Date": "08/03/2018",
+  "Date": "05/04/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.7",
@@ -29,6 +29,7 @@
     "",
     ""
   ],
+  "License": "Artistic-2.0",
   "PackageDoc": [
     {
       "ArchiveURLSubset": [
@@ -41,7 +42,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "bf98dffe271f28370aa39e40992012ebf4d5d5595308d801425a69931ae9fbef",
+  "PackageInfoSHA256": "c6b418dc530e56dd70447d77c542ab8235b8ca053939fa025f7dd4fe7aee0077",
   "PackageInfoURL": "https://gap-packages.github.io/sglppow/PackageInfo.g",
   "PackageName": "SglPPow",
   "PackageWWWHome": "https://gap-packages.github.io/sglppow/",
@@ -54,7 +55,7 @@
       "IsMaintainer": true,
       "LastName": "Vaughan-Lee",
       "Place": "Oxford",
-      "WWWHome": "http://users.ox.ac.uk/~vlee"
+      "WWWHome": "https://users.ox.ac.uk/~vlee"
     },
     {
       "Email": "beick@tu-bs.de",
@@ -64,10 +65,10 @@
       "IsMaintainer": true,
       "LastName": "Eick",
       "Place": "Braunschweig",
-      "WWWHome": "http://www.icm.tu-bs.de/~beick"
+      "WWWHome": "http://www.iaa.tu-bs.de/beick"
     }
   ],
-  "README_URL": "https://gap-packages.github.io/sglppow/README",
+  "README_URL": "https://gap-packages.github.io/sglppow/README.md",
   "SourceRepository": {
     "Type": "git",
     "URL": "https://github.com/gap-packages/sglppow"
@@ -75,5 +76,5 @@
   "Status": "accepted",
   "Subtitle": "Database of groups of prime-power order for some prime-powers",
   "TestFile": "tst/testall.g",
-  "Version": "2.1"
+  "Version": "2.2"
 }
