@@ -149,12 +149,3 @@ def gap_exec(commands: str, args: str = "") -> Tuple[int, bytes]:
     ) as GAP:
         out, err = GAP.communicate(input=commands.encode("utf-8"))
         return GAP.returncode, out
-
-
-def to_bool(test: str) -> bool:
-    if test.lower()[0] == "t":
-        return True
-    elif test.lower()[0] == "f":
-        return False
-    else:
-        error("Unknown boolean value")

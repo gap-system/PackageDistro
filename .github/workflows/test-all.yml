@@ -337,13 +337,13 @@ jobs:
         run: |
           # Is this a workflow_call?
           if [ "${{inputs.which-gap}}" != "" ]; then
-            IS_WORKFLOW_CALL="True"
+            JOB_NAME_PREFIX="${{inputs.which-gap}} / "
           else
-            IS_WORKFLOW_CALL="False"
+            JOB_NAME_PREFIX=""
           fi
           ROOT='data/reports'
           # relative path (with respect to ROOT) to generated test-status.json, i.e. the "id" entry of the json-file.
-          DIR_REL=$(python tools/generate_test_status.py ${{secrets.GITHUB_TOKEN}} ${{ github.repository }} "$GITHUB_RUN_ID" "$GITHUB_SHA" ${{ github.event.inputs.which-gap || inputs.which-gap }} "$IS_WORKFLOW_CALL")
+          DIR_REL=$(python tools/generate_test_status.py ${{secrets.GITHUB_TOKEN}} ${{ github.repository }} "$GITHUB_RUN_ID" "$GITHUB_SHA" ${{ github.event.inputs.which-gap || inputs.which-gap }} "$JOB_NAME_PREFIX")
           DIR="${ROOT}/${DIR_REL}"
           echo "::set-output name=dir::${DIR}"
           echo "::set-output name=dir-rel::${DIR_REL}"

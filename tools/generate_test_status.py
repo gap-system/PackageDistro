@@ -48,7 +48,7 @@ repo = sys.argv[2]
 run_id = sys.argv[3]
 hash = sys.argv[4]
 which_gap = sys.argv[5]
-is_workflow_call = to_bool(sys.argv[6])
+job_name_prefix = sys.argv[6]
 
 ################################################################################
 # Collect names of all packages
@@ -77,11 +77,7 @@ while "next" in res.links.keys():
     jobs.extend(res.json()["jobs"])
 
 # direct link for skipped packages
-if is_workflow_call:
-    name = f"{which_gap} / Build GAP and packages"
-else:
-    name = "Build GAP and packages"
-
+name = f"{job_name_prefix}Build GAP and packages"
 for job in jobs:
     if job["name"] == name:
         skipped_run = job["html_url"]
@@ -89,12 +85,7 @@ for job in jobs:
 
 # Search for each package job name in the list of jobs
 for pkg, data in pkgs.items():
-    # if pkg was tested
-    if is_workflow_call:
-        name = f"{which_gap} / {pkg}"
-    else:
-        name = f"{pkg}"
-
+    name = f"{job_name_prefix}{pkg}"
     for job in jobs:
         if job["name"] == name:
             # https://docs.github.com/en/actions/learn-github-actions/contexts#steps-context
