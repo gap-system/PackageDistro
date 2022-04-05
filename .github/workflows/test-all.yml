@@ -58,6 +58,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      # Retrieve additional meta data about this workflow run via the REST API.
+      # We use this to figure out the numeric ids of all jobs, which we need
+      # to generate direct links to jobs in the final status report.
       - uses: octokit/request-action@v2.x
         id: get-jobs
         with:
