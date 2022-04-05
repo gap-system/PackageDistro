@@ -10,7 +10,6 @@
 import hashlib
 import json
 import os
-from xmlrpc.client import Boolean
 import requests
 import subprocess
 import sys
