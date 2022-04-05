@@ -127,24 +127,28 @@ with open(dir_report + "/report.md", "w") as f:
     report_diff["new"] = len(pkgs_new)
     if len(pkgs_new) > 0:
         f.write("## New Packages\n\n")
+        f.write("<details> <summary>Click to show package(s)!</summary>\n\n")
         for pkg in pkgs_new:
             version = pkgs[pkg]["version"]
             status = pkgs[pkg]["status"]
-            f.write(f"- {pkg} {version} : {status} <br>\n")
+            run = pkgs[pkg]["workflow_run"]
+            f.write(f"- {pkg} {version} [({status})]({run}) <br>\n")
 
-        f.write("\n")
+        f.write("</details>\n\n")
 
     ############################################################################
     # Removed Packages
     report_diff["removed"] = len(pkgs_removed)
     if len(pkgs_removed) > 0:
         f.write("## Removed Packages\n\n")
+        f.write("<details> <summary>Click to show package(s)!</summary>\n\n")
         for pkg in pkgs_removed:
             version = last_pkgs[pkg]["version"]
             status = last_pkgs[pkg]["status"]
-            f.write(f"- {pkg} {version} : {status} <br>\n")
+            run = last_pkgs[pkg]["workflow_run"]
+            f.write(f"- {pkg} {version} [({status})]({run}) <br>\n")
 
-        f.write("\n")
+        f.write("</details>\n\n")
 
     ############################################################################
     # Changed Status Packages
@@ -172,10 +176,16 @@ with open(dir_report + "/report.md", "w") as f:
             f.write("<details> <summary>Click to show package(s)!</summary>\n\n")
             for pkg in pkgs_filtered:
                 version = pkgs[pkg]["version"]
+                run = pkgs[pkg]["workflow_run"]
                 last_status = last_pkgs[pkg]["status"]
                 last_version = last_pkgs[pkg]["version"]
+                # HACK/FIXME/TODO: Remove if after first run
+                if "workflow_run" in last_pkgs[pkg]:
+                    last_run = last_pkgs[pkg]["workflow_run"]
+                else:
+                    last_run = "None"
                 f.write(
-                    f"- {pkg} {version} vs {pkg} {last_version} ({last_status}) <br>\n"
+                    f"- {pkg} {version} [({status})]({run}) vs {pkg} {last_version} [({last_status})]({last_run}) <br>\n"
                 )
             f.write("</details>\n\n")
 
@@ -197,7 +207,8 @@ with open(dir_report + "/report.md", "w") as f:
             f.write("<details> <summary>Click to show package(s)!</summary>\n\n")
             for pkg in pkgs_filtered:
                 version = pkgs[pkg]["version"]
-                f.write(f"- {pkg} {version} <br>\n")
+                run = pkgs[pkg]["workflow_run"]
+                f.write(f"- {pkg} {version} [({status})]({run})<br>\n")
             f.write("</details>\n\n")
 
 # Write test-status-diff.json

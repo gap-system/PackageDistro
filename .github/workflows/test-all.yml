@@ -227,17 +227,6 @@ jobs:
             done
             MATRIX="${MATRIX}]}"
             echo "::set-output name=matrix::$MATRIX"
-            mkdir -p test-status-skipped
-            for PKG in ${SKIPPED}; do
-              echo "{\"status_skipped\": \"skipped\"}" > test-status-skipped/${PKG}.json
-            done
-
-      - name: "Upload skipped job status as artifact"
-        if: always()
-        uses: actions/upload-artifact@v2
-        with:
-          name: "test-status-${{ github.event.inputs.which-gap || inputs.which-gap }}-skipped"
-          path: "test-status-skipped/*.json"
 
   test-package:
     name: "${{ matrix.package }}"
@@ -330,24 +319,6 @@ jobs:
                 FORCE_QUIT_GAP(res);
                 "
 
-      # https://docs.github.com/en/actions/learn-github-actions/contexts#steps-context
-      # steps.<id>.outcome possible values are success, failure, cancelled, or skipped.
-      - name: "Create job status json-file"
-        if: always()
-        run: |
-          PKG="${{ matrix.package }}"
-          STATUS_DEFAULT="${{ steps.tests-default.outcome }}"
-          STATUS_ONLY_NEEDED="${{ steps.tests-only-needed.outcome }}"
-          echo "{\"status_default\": \"$STATUS_DEFAULT\", \"status_only_needed\": \"$STATUS_ONLY_NEEDED\"}" > ${PKG}.json
-          cat ${PKG}.json
-
-      - name: "Upload job status as artifact"
-        if: always()
-        uses: actions/upload-artifact@v2
-        with:
-          name: "test-status-${{ github.event.inputs.which-gap || inputs.which-gap }}-${{ matrix.package }}"
-          path: "${{ matrix.package }}.json"
-
   report:
     name: "Generate report"
     needs: test-package
@@ -358,25 +329,21 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: "Create _reports directory"
-        run: |
-          mkdir -p _reports
-
-      - name: "Download every job status"
-        uses: elonh/download-artifact-regexp@master # FIXME/TODO: Switch to actions/download-artifact once they officially support wildcards, see https://github.com/actions/download-artifact/issues/6
-        with:
-          pattern: test-status-${{ github.event.inputs.which-gap || inputs.which-gap }}-*
-          path: _reports
-
       - name: "Install package distribution tools"
         run: python -m pip install -r tools/requirements.txt
 
       - name: "Generate test-status.json"
         id: test-status
         run: |
+          # Is this a workflow_call?
+          if [ "${{inputs.which-gap}}" != "" ]; then
+            JOB_NAME_PREFIX="${{inputs.which-gap}} / "
+          else
+            JOB_NAME_PREFIX=""
+          fi
           ROOT='data/reports'
           # relative path (with respect to ROOT) to generated test-status.json, i.e. the "id" entry of the json-file.
-          DIR_REL=$(python tools/generate_test_status.py ${{ github.repository }} "$GITHUB_RUN_ID" "$GITHUB_SHA" ${{ github.event.inputs.which-gap || inputs.which-gap }})
+          DIR_REL=$(python tools/generate_test_status.py ${{secrets.GITHUB_TOKEN}} ${{ github.repository }} "$GITHUB_RUN_ID" "$GITHUB_SHA" ${{ github.event.inputs.which-gap || inputs.which-gap }} "$JOB_NAME_PREFIX")
           DIR="${ROOT}/${DIR_REL}"
           echo "::set-output name=dir::${DIR}"
           echo "::set-output name=dir-rel::${DIR_REL}"
