@@ -63,11 +63,12 @@ for file in files:
     pkgs[normalize_pkg_name(file)] = {}
 
 ################################################################################
-# Collect job information for all packages:
+# Collect job information for all packages
+#
 # Retrieve additional meta data about this workflow run via the REST API.
 # We use this to figure out the status of all jobs
-# as well as the numeric ids of all jobs, which we need
-# to generate direct links to jobs in the final status report.
+# as well as the direct links to jobs in the final status report.
+
 # https://stackoverflow.com/questions/33878019/how-to-get-data-from-all-pages-in-github-api-with-python
 url = f"https://api.github.com/repos/{repo}/actions/runs/{run_id}/jobs?simple=yes&per_page=100&page=1"
 res = requests.get(url, headers={"Authorization": git_token})
@@ -92,14 +93,14 @@ name = f"{job_name_prefix}Build GAP and packages"
 job = jobs_dict[name]
 skipped_run = job["workflow_run"]
 
-# Search for each package job name in jobs_dict
+# Add status and direct link to workflow for all packages
 for pkg, data in pkgs.items():
     name = f"{job_name_prefix}{pkg}"
     if name in jobs_names:
         job = jobs_dict[name]
         # https://docs.github.com/en/actions/learn-github-actions/contexts#steps-context
         # Possible values for conclusion are success, failure, cancelled, or skipped.
-        # We treat cancelled the same way as skipped
+        # We treat cancelled the same way as skipped.
         status = job["status"]
         if status == "failure":
             data["status"] = "failure"
