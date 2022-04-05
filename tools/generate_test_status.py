@@ -89,7 +89,7 @@ for pkg, data in pkgs.items():
     data["archive_url"] = pkg_json["ArchiveURL"]
     data["archive_sha256"] = pkg_json["ArchiveSHA256"]
     data["workflow_run"] = os.path.join(
-        repo, "runs", pkg_json["job_id"], "?check_suite_focus=true"
+        repo, "runs", data["job_id"], "?check_suite_focus=true"
     )
 
     # Get maximum of each status via the hierarchy 'failure' > 'cancelled' = 'skipped' > 'success'.
