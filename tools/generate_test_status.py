@@ -71,39 +71,45 @@ for file in files:
 # https://stackoverflow.com/questions/33878019/how-to-get-data-from-all-pages-in-github-api-with-python
 url = f"https://api.github.com/repos/{repo}/actions/runs/{run_id}/jobs?simple=yes&per_page=100&page=1"
 res = requests.get(url, headers={"Authorization": git_token})
-jobs = res.json()["jobs"]
+jobs_list = res.json()["jobs"]
 while "next" in res.links.keys():
     res = requests.get(res.links["next"]["url"], headers={"Authorization": git_token})
-    jobs.extend(res.json()["jobs"])
+    jobs_list.extend(res.json()["jobs"])
 
-# direct link for skipped packages
+# Turn list of jobs into a dictionary containing only the relevant data
+jobs_dict: Dict[str, Any] = {}
+for job in jobs_list:
+    jobs_dict[job["name"]] = {
+        "status": job["conclusion"],
+        "workflow_run": job["html_url"],
+    }
+jobs_names = jobs_dict.keys()
+
+# Direct link to job that constructs the test matrix.
+# This is used for skipped packages
+# that were not included in the test matrix.
 name = f"{job_name_prefix}Build GAP and packages"
-for job in jobs:
-    if job["name"] == name:
-        skipped_run = job["html_url"]
-    break
+job = jobs_dict[name]
+skipped_run = job["workflow_run"]
 
-# Search for each package job name in the list of jobs
+# Search for each package job name in jobs_dict
 for pkg, data in pkgs.items():
     name = f"{job_name_prefix}{pkg}"
-    for job in jobs:
-        if job["name"] == name:
-            # https://docs.github.com/en/actions/learn-github-actions/contexts#steps-context
-            # Possible values for conclusion are success, failure, cancelled, or skipped.
-            # We treat cancelled the same way as skipped
-            status = job["conclusion"]
-            if status == "failure":
-                data["status"] = "failure"
-            elif status == "success":
-                data["status"] = "success"
-            else:  # cancelled or skipped
-                data["status"] = "skipped"
+    if name in jobs_names:
+        job = jobs_dict[name]
+        # https://docs.github.com/en/actions/learn-github-actions/contexts#steps-context
+        # Possible values for conclusion are success, failure, cancelled, or skipped.
+        # We treat cancelled the same way as skipped
+        status = job["status"]
+        if status == "failure":
+            data["status"] = "failure"
+        elif status == "success":
+            data["status"] = "success"
+        else:  # cancelled or skipped
+            data["status"] = "skipped"
 
-            data["workflow_run"] = job["html_url"]
-            break
-
-    # if pkg was skipped
-    if not "status" in data.keys():
+        data["workflow_run"] = job["workflow_run"]
+    else: # if pkg was skipped
         data["status"] = "skipped"
         data["workflow_run"] = skipped_run
 
