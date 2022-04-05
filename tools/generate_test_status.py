@@ -25,7 +25,7 @@ Prints {{id}} to terminal.
 # or use a different prefix from a caller (like the test-all-and-report YML file),
 # then we need to adjust the hardcoded names in this python script.
 
-from utils import error, warning, to_bool, normalize_pkg_name, metadata
+from utils import error, warning, normalize_pkg_name, metadata
 
 import sys
 import os
@@ -109,7 +109,7 @@ for pkg, data in pkgs.items():
             data["status"] = "skipped"
 
         data["workflow_run"] = job["workflow_run"]
-    else: # if pkg was skipped
+    else:  # if pkg was skipped
         data["status"] = "skipped"
         data["workflow_run"] = skipped_run
 
