@@ -32,6 +32,7 @@ import os
 import glob
 import json
 from datetime import datetime
+import requests
 
 from typing import Any, Dict
 
@@ -39,58 +40,60 @@ from typing import Any, Dict
 # Arguments
 num_args = len(sys.argv)
 
-if num_args > 6:
-    error("Too many arguments")
+if num_args != 7:
+    error("Unknown number of arguments")
 
-repo = runID = hash = which_gap = "Unknown"
-is_workflow_call = False
-
-if num_args > 1:
-    repo = "https://github.com/" + sys.argv[1]
-if num_args > 2:
-    runID = sys.argv[2]
-if num_args > 3:
-    hash = sys.argv[3]
-if num_args > 4:
-    which_gap = sys.argv[4]
-if num_args > 5:
-    is_workflow_call = to_bool(sys.argv[5])
+git_token = sys.argv[1]
+repo = sys.argv[2]
+run_id = sys.argv[3]
+hash = sys.argv[4]
+which_gap = sys.argv[5]
+is_workflow_call = to_bool(sys.argv[6])
 
 ################################################################################
 # Collect names of all packages
 files = []
-for file in glob.glob("packages/*/meta.json", recursive=True):
+for file in glob.glob("packages/*/meta.json"):
     files.append(file)
 
 files.sort()
-pkgs = {}
+pkgs: Dict[str, Any] = {}
 
 for file in files:
     pkgs[normalize_pkg_name(file)] = {}
 
 ################################################################################
-# Collect job information for all packages
-with open("jobs.json", "r", encoding="utf-8", error="ignore") as f:
-    jobs = json.load(f)["jobs"]
+# Collect job information for all packages:
+# Retrieve additional meta data about this workflow run via the REST API.
+# We use this to figure out the status of all jobs
+# as well as the numeric ids of all jobs, which we need
+# to generate direct links to jobs in the final status report.
+# https://stackoverflow.com/questions/33878019/how-to-get-data-from-all-pages-in-github-api-with-python
+url = f"https://api.github.com/repos/{repo}/actions/runs/{run_id}/jobs?simple=yes&per_page=100&page=1"
+res = requests.get(url, headers={"Authorization": git_token})
+jobs = res.json()["jobs"]
+while "next" in res.links.keys():
+    res = requests.get(res.links["next"]["url"], headers={"Authorization": git_token})
+    jobs.extend(res.json()["jobs"])
 
-# job_id for skipped packages
+# direct link for skipped packages
 if is_workflow_call:
-    name=f"{which_gap} / Build GAP and packages"
+    name = f"{which_gap} / Build GAP and packages"
 else:
-    name="Build GAP and packages"
+    name = "Build GAP and packages"
 
 for job in jobs:
     if job["name"] == name:
-        skipped_job_id = job["id"]
+        skipped_run = job["html_url"]
     break
 
 # Search for each package job name in the list of jobs
 for pkg, data in pkgs.items():
     # if pkg was tested
     if is_workflow_call:
-        name=f"{which_gap} / {pkg}"
+        name = f"{which_gap} / {pkg}"
     else:
-        name="{pkg}"
+        name = f"{pkg}"
 
     for job in jobs:
         if job["name"] == name:
@@ -102,25 +105,24 @@ for pkg, data in pkgs.items():
                 data["status"] = "failure"
             elif status == "success":
                 data["status"] = "success"
-            else: # cancelled or skipped
+            else:  # cancelled or skipped
                 data["status"] = "skipped"
 
-            # numerical job id
-            data["job_id"] = job["id"]
+            data["workflow_run"] = job["html_url"]
             break
 
     # if pkg was skipped
     if not "status" in data.keys():
         data["status"] = "skipped"
-        data["job_id"] = skipped_job_id
+        data["workflow_run"] = skipped_run
 
 ################################################################################
 # Generate main test-status.json
 
 # General Information
 report: Dict[str, Any] = {}
-report["repo"] = repo
-report["workflow"] = repo + "/actions/runs/" + runID
+report["repo"] = os.path.join("https://github.com", repo)
+report["workflow"] = os.path.join("https://github.com", repo, "actions", "runs", run_id)
 report["hash"] = hash
 date = str(datetime.now()).split(".")[0]
 report["date"] = date
@@ -134,10 +136,6 @@ os.makedirs(dir_test_status, exist_ok=True)
 # Package Information
 for pkg, data in pkgs.items():
     pkg_json = metadata(pkg)
-
-    data["workflow_run"] = os.path.join(
-        repo, "runs", data["job_id"], "?check_suite_focus=true"
-    )
     data["version"] = pkg_json["Version"]
     data["archive_url"] = pkg_json["ArchiveURL"]
     data["archive_sha256"] = pkg_json["ArchiveSHA256"]
