@@ -20,7 +20,12 @@ id={{which_gap}}/{{date}}-{{hash_short}}.
 Prints {{id}} to terminal.
 """
 
-from utils import error, warning, metadata
+# The name of a job is HARDCODED.
+# If we change the name of a job in the test-all YML file,
+# or use a different prefix from a caller (like the test-all-and-report YML file),
+# then we need to adjust the hardcoded names in this python script.
+
+from utils import error, warning, to_bool, normalize_pkg_name, metadata
 
 import sys
 import os
@@ -34,10 +39,11 @@ from typing import Any, Dict
 # Arguments
 num_args = len(sys.argv)
 
-if num_args > 5:
+if num_args > 6:
     error("Too many arguments")
 
 repo = runID = hash = which_gap = "Unknown"
+is_workflow_call = False
 
 if num_args > 1:
     repo = "https://github.com/" + sys.argv[1]
@@ -47,22 +53,66 @@ if num_args > 3:
     hash = sys.argv[3]
 if num_args > 4:
     which_gap = sys.argv[4]
+if num_args > 5:
+    is_workflow_call = to_bool(sys.argv[5])
 
 ################################################################################
-# Collect the job-status of each package from _reports/
+# Collect names of all packages
 files = []
-for file in glob.glob("_reports/**/*.json", recursive=True):
+for file in glob.glob("packages/*/meta.json", recursive=True):
     files.append(file)
 
 files.sort()
-
 pkgs = {}
 
 for file in files:
-    with open(file, "r", encoding="utf-8", errors="ignore") as f:
-        data = json.load(f)
+    pkgs[normalize_pkg_name(file)] = {}
 
-    pkgs[os.path.splitext(os.path.basename(file))[0]] = data
+################################################################################
+# Collect job information for all packages
+with open("jobs.json", "r", encoding="utf-8", error="ignore") as f:
+    jobs = json.load(f)["jobs"]
+
+# job_id for skipped packages
+if is_workflow_call:
+    name=f"{which_gap} / Build GAP and packages"
+else:
+    name="Build GAP and packages"
+
+for job in jobs:
+    if job["name"] == name:
+        skipped_job_id = job["id"]
+    break
+
+# Search for each package job name in the list of jobs
+for pkg, data in pkgs.items():
+    # if pkg was tested
+    if is_workflow_call:
+        name=f"{which_gap} / {pkg}"
+    else:
+        name="{pkg}"
+
+    for job in jobs:
+        if job["name"] == name:
+            # https://docs.github.com/en/actions/learn-github-actions/contexts#steps-context
+            # Possible values for conclusion are success, failure, cancelled, or skipped.
+            # We treat cancelled the same way as skipped
+            status = job["conclusion"]
+            if status == "failure":
+                data["status"] = "failure"
+            elif status == "success":
+                data["status"] = "success"
+            else: # cancelled or skipped
+                data["status"] = "skipped"
+
+            # numerical job id
+            data["job_id"] = job["id"]
+            break
+
+    # if pkg was skipped
+    if not "status" in data.keys():
+        data["status"] = "skipped"
+        data["job_id"] = skipped_job_id
 
 ################################################################################
 # Generate main test-status.json
@@ -85,29 +135,12 @@ os.makedirs(dir_test_status, exist_ok=True)
 for pkg, data in pkgs.items():
     pkg_json = metadata(pkg)
 
-    data["version"] = pkg_json["Version"]
-    data["archive_url"] = pkg_json["ArchiveURL"]
-    data["archive_sha256"] = pkg_json["ArchiveSHA256"]
     data["workflow_run"] = os.path.join(
         repo, "runs", data["job_id"], "?check_suite_focus=true"
     )
-
-    # Get maximum of each status via the hierarchy 'failure' > 'cancelled' = 'skipped' > 'success'.
-    # For safety, check if status is always known.
-    status_list = [value for key, value in data.items() if key.startswith("status_")]
-    unknown_status_list = [
-        status
-        for status in status_list
-        if not status in ["failure", "cancelled", "skipped", "success"]
-    ]
-    if len(unknown_status_list) > 0:
-        data["status"] = "unknown"
-    elif "failure" in status_list:
-        data["status"] = "failure"
-    elif "cancelled" in status_list or "skipped" in status_list:
-        data["status"] = "skipped"
-    else:  # all are 'success'
-        data["status"] = "success"
+    data["version"] = pkg_json["Version"]
+    data["archive_url"] = pkg_json["ArchiveURL"]
+    data["archive_sha256"] = pkg_json["ArchiveSHA256"]
 
 report["pkgs"] = pkgs
 
@@ -133,4 +166,5 @@ with open(os.path.join(dir_test_status, "test-status.json"), "w") as f:
     json.dump(report, f, ensure_ascii=False, indent=2)
     f.write("\n")
 
+# Print id to terminal
 print(report["id"])
