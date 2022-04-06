@@ -240,8 +240,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: "Install package distribution tools"
-        run: |
-          python -m pip install -r tools/requirements.txt
+        run: python -m pip install -r tools/requirements.txt
 
       # the following step is useful for debugging
       - name: "Determine system architecture for -march=native"
@@ -343,7 +342,7 @@ jobs:
           fi
           ROOT='data/reports'
           # relative path (with respect to ROOT) to generated test-status.json, i.e. the "id" entry of the json-file.
-          DIR_REL=$(python tools/generate_test_status.py ${{secrets.GITHUB_TOKEN}} ${{ github.repository }} "$GITHUB_RUN_ID" "$GITHUB_SHA" ${{ github.event.inputs.which-gap || inputs.which-gap }} "$JOB_NAME_PREFIX")
+          DIR_REL=$(tools/generate_test_status.py ${{secrets.GITHUB_TOKEN}} ${{ github.repository }} "$GITHUB_RUN_ID" "$GITHUB_SHA" ${{ github.event.inputs.which-gap || inputs.which-gap }} "$JOB_NAME_PREFIX")
           DIR="${ROOT}/${DIR_REL}"
           echo "::set-output name=dir::${DIR}"
           echo "::set-output name=dir-rel::${DIR_REL}"
@@ -371,7 +370,7 @@ jobs:
 
       - name: "Generate report"
         id: report
-        run: python tools/generate_report.py ${{ steps.test-status.outputs.dir-rel }} latest-${{ github.event.inputs.which-gap || inputs.which-gap }}
+        run: tools/generate_report.py ${{ steps.test-status.outputs.dir-rel }} latest-${{ github.event.inputs.which-gap || inputs.which-gap }}
 
       - name: "Upload report as artifact"
         uses: actions/upload-artifact@v2

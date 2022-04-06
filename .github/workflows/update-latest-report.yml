@@ -57,7 +57,7 @@ jobs:
           DIR="${ROOT}/${DIR_REL}"
           mkdir -p ${DIR}
           mv _report/* ${DIR}
-          python tools/update_latest_report.py ${DIR_REL} latest-${{ github.event.inputs.which-gap || inputs.which-gap }}
+          tools/update_latest_report.py ${DIR_REL} latest-${{ github.event.inputs.which-gap || inputs.which-gap }}
 
       - name: "Push report"
         id: push-report
