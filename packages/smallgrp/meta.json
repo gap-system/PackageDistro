@@ -2,11 +2,11 @@
   "AbstractHTML": "The <span class=\"smallgrp\">SmallGrp</span> package provides the library of groups of certain \"small\" orders. The groups are sorted by their orders and they are listed up to isomorphism; that is, for each of the available orders a complete and irredundant list of isomorphism type representatives of groups is given.",
   "AcceptDate": "02/2002",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "d4421c00150ac6a651ea4d6af931435226e05ffc2d4713997319e09686f55035",
-  "ArchiveURL": "https://github.com/gap-packages/SmallGrp/releases/download/v1.4.2/SmallGrp-1.4.2",
+  "ArchiveSHA256": "b00bdac056972db6b96bab38204d97a3fda0956e93dedba2b025ffef5818bd39",
+  "ArchiveURL": "https://github.com/gap-packages/SmallGrp/releases/download/v1.5/SmallGrp-1.5",
   "AvailabilityTest": null,
   "CommunicatedBy": "Mike Newman (Canberra)",
-  "Date": "18/12/2020",
+  "Date": "06/04/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.9",
@@ -32,7 +32,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "9575e0c09ad8c51b7e4f71f2be418dfe5659afada826392aae3c05d3264921c0",
+  "PackageInfoSHA256": "48ae955833e98943b4d48b02f3f02f87bc0f1a003661bfe4bc1631dcbd5f72e9",
   "PackageInfoURL": "https://gap-packages.github.io/smallgrp/PackageInfo.g",
   "PackageName": "SmallGrp",
   "PackageWWWHome": "https://gap-packages.github.io/smallgrp/",
@@ -63,14 +63,18 @@
       "LastName": "O'Brien",
       "Place": "Auckland",
       "PostalAddress": "Department of Mathematics\nUniversity of Auckland\nPrivate Bag 92019\n Auckland\n New Zealand",
-      "WWWHome": "http://www.math.auckland.ac.nz/~obrien"
+      "WWWHome": "https://www.math.auckland.ac.nz/~obrien"
     },
     {
-      "Email": "support@gap-system.org",
-      "FirstNames": "The",
+      "Email": "horn@mathematik.uni-kl.de",
+      "FirstNames": "Max",
+      "Institution": "TU Kaiserslautern",
       "IsAuthor": false,
       "IsMaintainer": true,
-      "LastName": "GAP Team"
+      "LastName": "Horn",
+      "Place": "Kaiserslautern, Germany",
+      "PostalAddress": "Fachbereich Mathematik\nTU Kaiserslautern\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
+      "WWWHome": "https://www.quendi.de/math"
     }
   ],
   "README_URL": "https://gap-packages.github.io/smallgrp/README.md",
@@ -81,5 +85,5 @@
   "Status": "accepted",
   "Subtitle": "The GAP Small Groups Library",
   "TestFile": "tst/testall.g",
-  "Version": "1.4.2"
+  "Version": "1.5"
 }
