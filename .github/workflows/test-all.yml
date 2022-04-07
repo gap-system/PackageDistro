@@ -51,6 +51,8 @@ on:
 
 jobs:
   build:
+    # If you change this name, you must adjust the corresponding name
+    # in tools/generate_test_status.py
     name: "Build GAP and packages"
     runs-on: ubuntu-latest
     outputs:
@@ -229,6 +231,8 @@ jobs:
             echo "::set-output name=matrix::$MATRIX"
 
   test-package:
+    # If you change this name, you must adjust the corresponding name
+    # in tools/generate_test_status.py
     name: "${{ matrix.package }}"
     if: ${{ needs.build.outputs.matrix != '{"package":[]}' }}
     needs: build
