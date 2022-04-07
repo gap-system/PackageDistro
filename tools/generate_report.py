@@ -190,7 +190,7 @@ with open(dir_report + "/report.md", "w") as f:
     for status, status_msg, status_header in [
         ("failure", "failed", ":exclamation: Packages still failing"),
         ("success", "succeeded", ":heavy_check_mark: Packages still succeeding"),
-        ("skipped", "skipped", ":heavy_minus_sign: Packages that still skipped"),
+        ("skipped", "skipped", ":heavy_minus_sign: Packages that were skipped"),
     ]:
 
         pkgs_filtered = pkgs_same[status]
