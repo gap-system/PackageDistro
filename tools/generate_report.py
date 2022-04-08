@@ -17,11 +17,14 @@ This script compares the current test-status.json with a previous version,
 and generates a main report.md along with a test-status-diff.json.
 """
 
-from utils import error
-
-import sys
-import os
+import io
 import json
+import os
+import sys
+
+from typing import Any, Dict, List
+
+from utils import error
 
 ################################################################################
 # Arguments and Paths
@@ -98,6 +101,19 @@ for status in status_list:
         and pkgs[pkg]["status"] == status
     ]
 
+
+def write_details_list(
+    f: io.TextIOWrapper, pkgnames: List[str], pkgs: Dict[str, Any]
+) -> None:
+    f.write("<details><summary>Click to show package(s)!</summary>\n\n")
+    for pkg in pkgnames:
+        version = pkgs[pkg]["version"]
+        status = pkgs[pkg]["status"]
+        run = pkgs[pkg]["workflow_run"]
+        f.write(f"- {pkg} {version} [({status})]({run})\n")
+    f.write("</details>\n\n")
+
+
 with open(dir_report + "/report.md", "w") as f:
     ############################################################################
     # Header
@@ -127,28 +143,14 @@ with open(dir_report + "/report.md", "w") as f:
     report_diff["new"] = len(pkgs_new)
     if len(pkgs_new) > 0:
         f.write("## New Packages\n\n")
-        f.write("<details> <summary>Click to show package(s)!</summary>\n\n")
-        for pkg in pkgs_new:
-            version = pkgs[pkg]["version"]
-            status = pkgs[pkg]["status"]
-            run = pkgs[pkg]["workflow_run"]
-            f.write(f"- {pkg} {version} [({status})]({run}) <br>\n")
-
-        f.write("</details>\n\n")
+        write_details_list(f, pkgs_new, pkgs)
 
     ############################################################################
     # Removed Packages
     report_diff["removed"] = len(pkgs_removed)
     if len(pkgs_removed) > 0:
         f.write("## Removed Packages\n\n")
-        f.write("<details> <summary>Click to show package(s)!</summary>\n\n")
-        for pkg in pkgs_removed:
-            version = last_pkgs[pkg]["version"]
-            status = last_pkgs[pkg]["status"]
-            run = last_pkgs[pkg]["workflow_run"]
-            f.write(f"- {pkg} {version} [({status})]({run}) <br>\n")
-
-        f.write("</details>\n\n")
+        write_details_list(f, pkgs_removed, last_pkgs)
 
     ############################################################################
     # Changed Status Packages
@@ -171,7 +173,7 @@ with open(dir_report + "/report.md", "w") as f:
         if len(pkgs_filtered) > 0:
             f.write(f"## {status_header}\n\n")
             f.write(
-                f"{len(pkgs_filtered)} package(s) {status_msg} tests only on the current version."
+                f"{len(pkgs_filtered)} package(s) {status_msg} tests only on the current version.\n"
             )
             f.write("<details> <summary>Click to show package(s)!</summary>\n\n")
             for pkg in pkgs_filtered:
@@ -190,7 +192,7 @@ with open(dir_report + "/report.md", "w") as f:
     for status, status_msg, status_header in [
         ("failure", "failed", ":exclamation: Packages still failing"),
         ("success", "succeeded", ":heavy_check_mark: Packages still succeeding"),
-        ("skipped", "skipped", ":heavy_minus_sign: Packages that still skipped"),
+        ("skipped", "skipped", ":heavy_minus_sign: Packages that were skipped"),
     ]:
 
         pkgs_filtered = pkgs_same[status]
@@ -198,14 +200,9 @@ with open(dir_report + "/report.md", "w") as f:
         if len(pkgs_filtered) > 0:
             f.write(f"## {status_header}\n\n")
             f.write(
-                f"{len(pkgs_filtered)} package(s) {status_msg} tests also on the previous version."
+                f"{len(pkgs_filtered)} package(s) {status_msg} tests also on the previous version.\n"
             )
-            f.write("<details> <summary>Click to show package(s)!</summary>\n\n")
-            for pkg in pkgs_filtered:
-                version = pkgs[pkg]["version"]
-                run = pkgs[pkg]["workflow_run"]
-                f.write(f"- {pkg} {version} [({status})]({run})<br>\n")
-            f.write("</details>\n\n")
+            write_details_list(f, pkgs_new, pkgs)
 
 # Write test-status-diff.json
 with open(dir_report + "/test-status-diff.json", "w") as f:
