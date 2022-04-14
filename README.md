@@ -1,6 +1,6 @@
-# PackageDistro
+# The GAP package distribution
 
-The GAP package distribution is managed via this repository: this repository
+The GAP package distribution is managed via this repository: specifically, it
 contains the metadata of all the GAP packages in the distribution. We also
 upload snapshots the package distribution tarballs to appropriate release tags
 on this repository.
@@ -11,7 +11,79 @@ on this repository.
 |:---------------:|:----------:|:----------:|
 | Released packages | [![Tests](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gap-system/PackageDistro/data/badges/latest-master/badge.json)](https://gap-system.github.io/PackageDistro/latest-master/redirect.html) | [![Tests](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gap-system/PackageDistro/data/badges/latest-4.11.1/badge.json)](https://gap-system.github.io/PackageDistro/latest-4.11.1/redirect.html) |
 
-## Metadata
+
+## Instructions for package authors
+
+### How to submit package updates
+
+We automatically detect package updates provided these rules are followed:
+1. The `PackageInfoURL` in the `PackageInfo.g` file of the current version of
+   your package in the package distribution is valid and points to a copy of
+   that file from the new version of your package.
+2. In that new `PackageInfo.g`, the `ArchiveURL` is valid (i.e. when one adds
+   a file extension from `ArchiveFormats` it points to an archive containing
+   your package).
+
+We scan all of `PackageInfoURL` urls once every hour for updates. When a new
+version is detected this way, the package is downloaded and a new pull request
+for the update is opened on this repository. A bunch of CI tests are then
+started. Assuming they pass, a human will merge that PR, which means your
+update is accepted. If a problem is detected, we will instead contact you to
+discuss how to resolve it.
+
+
+### How to submit a new package
+
+There are several options how to do this.
+
+1. Submit an issue to this repository, requesting that your package be added.
+   Make sure to include a link to the `PackageInfo.g` file of your package.
+   Note that such requests are visible to the anyone watching this repository.
+
+2. Send an email to <support@gap-system.org>, requesting that your package be added.
+   Make sure to include a link to the `PackageInfo.g` file of your package.
+   Note that such requests are visible to only
+
+3. Open a pull request to this repository manually: first run the script
+   `tools/import_packages.py URL_OF_PACKAGEINFO_G` with a list of one or more
+   URLs of PackageInfo.g files for the packages to be added. The script will
+   download and parse each of them
+
+In either case, we will evaluate your request and will inform you about the
+outcome of that (which may be: accept, accept after modifications, reject).
+
+
+## Instructions for maintainers of the package distribution
+
+### Adding a new package
+
+_**WARNING:** The following instructions are only about the technical aspects
+of adding a new package. In general we may also want to impose other requirements
+for adding new packages to the distribution._
+
+People who have write access to this repository should add new packages by
+creating a pull request for each new package. One way to do that is manually,
+as described above. Alternatively, this can be achieved via a GitHub workflow
+as follows:
+
+1. Go to <https://github.com/gap-system/PackageDistro/actions/workflows/scan-for-updates.yml>
+2. Click "Run workflow" once to open a popup menu. There is a field there accepting
+   a space separated list of `PackageInfo.g` URLs. Do so.
+3. Click on the new green "Run workflow" button to actually trigger the workflow
+4. You can now follow this action, it should only fun for about 5 minutes, and will
+   create a new pull request for each package you listed.
+
+Once the PR is created, a bunch of CI tests are started. Once they are completed,
+a report is added to the PR which indicates whether the new package breaks something
+in GAP or other packages, and whether its tests pass. If all looks good, the
+PR may be merged by any maintainer.
+
+
+## How everything works
+
+The following is an overview of the internals of how everything works.
+
+### Metadata
 
 For each package in the GAP package distribution, there is a subdirectory of
 the `packages` directory whose name equals that of the package with all
@@ -43,17 +115,17 @@ For example, the SHA256 in this excerpt of a `meta.json` file refers to the
     "ArchiveURL": "https://github.com/homalg-project/ToricVarieties_project/releases/download/2022-03-04/ToricVarieties",
 
 
+### GitHub Workflows
 
-## Workflows
-
-All of this is driven by several GitHub Workflows  which automate most of the
-maintenance on the GAP package distribution. For details on how they operate,
-have a look at the `.yml` files in `.github/workflows`.
+All of this is driven by several [GitHub Workflows](https://docs.github.com/en/actions)
+which automate most of the maintenance on the GAP package distribution. For
+details on how they operate, have a look at the `.yml` files in
+`.github/workflows`.
 
 These workflows are in parts implemented by calling scripts in the `tools` directory.
 
 
-## Scripts
+## Requirements
 
 The scripts in the `tools` directory are written in Python 3 or GAP. For the Python
 scripts, you must make sure their prerequisites are installed, e.g. by invoking the
@@ -61,15 +133,16 @@ following command once from the root of this repository:
 
     python -m pip install -r tools/requirements.txt
 
-For information about what each script does, please consult its source,
-which should have comments explaining what it does and how to invoke it.
+For information about what each script does, please consult its source, which
+should have comments explaining what it does and how to invoke it.
 
 
 ## Other directories
 
-The various scripts use a bunch of auxiliary directories to store and exchange data:
+The various scripts create and/oruse a bunch of auxiliary directories to store
+and exchange data:
 
 - `_archives` is used to store copies of all package archives
 - `_pkginfos` stores copies of the `PackageInfo.g` 
-- `_releases`
-- `_unpacked_archives`
+- `_releases`: TODO
+- `_unpacked_archives`: TODO
