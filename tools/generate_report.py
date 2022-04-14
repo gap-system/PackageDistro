@@ -202,7 +202,7 @@ with open(dir_report + "/report.md", "w") as f:
             f.write(
                 f"{len(pkgs_filtered)} package(s) {status_msg} tests also on the previous version.\n"
             )
-            write_details_list(f, pkgs_new, pkgs)
+            write_details_list(f, pkgs_filtered, pkgs)
 
 # Write test-status-diff.json
 with open(dir_report + "/test-status-diff.json", "w") as f:
