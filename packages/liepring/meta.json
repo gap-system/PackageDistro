@@ -2,12 +2,12 @@
   "AbstractHTML": "",
   "AcceptDate": "09/2014",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "cb6b9db59bd749d7585e9c02fae792be7d77f7a0c4345af88d515ceb530cd6d9",
-  "ArchiveURL": "https://github.com/gap-packages/liepring/releases/download/v1.9.2/liepring-1.9.2",
+  "ArchiveSHA256": "e98e56d696f45571c906ea94bfe6152a1b039ad3d1036c84cad42d0106992033",
+  "ArchiveURL": "https://github.com/gap-packages/liepring/releases/download/v2.6/liepring-2.6",
   "AvailabilityTest": null,
-  "BannerString": "----------------------------------------------------------------\nLoading  LiePRing 1.9.2\nby Michael Vaughan-Lee and Bettina Eick \n----------------------------------------------------------------\n",
+  "BannerString": "----------------------------------------------------------------\nLoading  LiePRing 2.6\nby Bettina Eick and Michael Vaughan-Lee \n----------------------------------------------------------------\n",
   "CommunicatedBy": "Leonard Soicher (London)",
-  "Date": "11/10/2018",
+  "Date": "11/04/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": "4.8",
@@ -15,6 +15,10 @@
       [
         "LieRing",
         ">=2.1"
+      ],
+      [
+        "Singular",
+        ">=10"
       ]
     ],
     "SuggestedOtherPackages": []
@@ -25,6 +29,7 @@
     "",
     ""
   ],
+  "License": "GPL-2.0-or-later",
   "PackageDoc": [
     {
       "ArchiveURLSubset": [
@@ -37,30 +42,28 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "06f4857ebd9aabe8fbfad79578a857302d0d01a11f7a67c2a6889fedf555a2bc",
+  "PackageInfoSHA256": "20aca781f7a6dda8ea956e17c711b2e0089561baac640f58ed22c818f346a479",
   "PackageInfoURL": "https://gap-packages.github.io/liepring/PackageInfo.g",
   "PackageName": "LiePRing",
   "PackageWWWHome": "https://gap-packages.github.io/liepring/",
   "Persons": [
     {
-      "Email": "michael.vaughan-lee@chch.ox.ac.uk",
-      "FirstNames": "Michael",
-      "Institution": "Oxford University",
-      "IsAuthor": true,
-      "IsMaintainer": true,
-      "LastName": "Vaughan-Lee",
-      "Place": "Oxford",
-      "WWWHome": "http://users.ox.ac.uk/~vlee"
-    },
-    {
       "Email": "beick@tu-bs.de",
       "FirstNames": "Bettina",
-      "Institution": "TU Braunschweig",
       "IsAuthor": true,
       "IsMaintainer": true,
       "LastName": "Eick",
-      "Place": "Braunschweig",
+      "Place": "TU Braunschweig",
       "WWWHome": "http://www.icm.tu-bs.de/~beick"
+    },
+    {
+      "Email": "michael.vaughan-lee@chch.ox.ac.uk",
+      "FirstNames": "Michael",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Vaughan-Lee",
+      "WWWHome": "http://users.ox.ac.uk/~vlee",
+      "place": "Oxford"
     }
   ],
   "README_URL": "https://gap-packages.github.io/liepring/README.md",
@@ -71,5 +74,5 @@
   "Status": "accepted",
   "Subtitle": "Database and algorithms for Lie p-rings",
   "TestFile": "tst/testall.g",
-  "Version": "1.9.2"
+  "Version": "2.6"
 }
