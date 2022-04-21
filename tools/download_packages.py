@@ -82,6 +82,9 @@ def download_archive(  # pylint: disable=inconsistent-return-statements
     for i in range(tries):
         try:
             response = requests.get(url, stream=True)
+            if response.status_code != 200:
+                notice(f"exited with HTTP status {response.status_code}")
+                break
             with open(archive_fname, "wb") as f:
                 for chunk in response.raw.stream(1024, decode_content=False):
                     if chunk:
