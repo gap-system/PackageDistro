@@ -139,12 +139,13 @@ jobs:
         run: |
           mkdir -p $HOME/gap/pkg
           cd $HOME/gap/pkg
-          #tar xvf $HOME/packages.tar.gz
           for f in $GITHUB_WORKSPACE/_archives/* ; do
+            echo "::group::$(basename $f)"
+            ls -l $f
             case "$f" in
               *.tar.*)
                 echo "Extracting $f"
-                tar xf "$f"
+                tar -xvf "$f"
               ;;
               *.zip)
                 echo "Extracting $f"
@@ -154,6 +155,7 @@ jobs:
                 echo "Skipping $f"
               ;;
             esac
+            echo "::endgroup::"
           done
 
       - name: "Build packages"
