@@ -42,9 +42,8 @@ from os.path import join
 
 from typing import List
 
-import requests
-
 from utils import (
+    download,
     error,
     notice,
     normalize_pkg_name,
@@ -55,9 +54,7 @@ from utils import (
 )
 
 
-def download_archive(  # pylint: disable=inconsistent-return-statements
-    archive_dir: str, pkg_name: str, tries: int = 5
-) -> str:
+def download_archive(archive_dir: str, pkg_name: str) -> str:
     """Returns the full archive name (including archive_dir) for the downloaded
     archive of the package `pkg_name`"""
     if not os.path.exists(archive_dir):
@@ -78,22 +75,8 @@ def download_archive(  # pylint: disable=inconsistent-return-statements
             return archive_fname
     url = archive_url(pkg_json)
     notice(f"downloading {url} to {archive_fname}")
-
-    for i in range(tries):
-        try:
-            response = requests.get(url, stream=True)
-            if response.status_code != 200:
-                notice(f"exited with HTTP status {response.status_code}")
-                break
-            with open(archive_fname, "wb") as f:
-                for chunk in response.raw.stream(1024, decode_content=False):
-                    if chunk:
-                        f.write(chunk)
-            return archive_fname
-        except requests.RequestException:
-            notice(f"  attempt {i+1}/{tries} failed")
-
-    error(f"  failed to download archive {archive_fname}")
+    download(url, archive_fname)
+    return archive_fname
 
 
 def main(pkg_names: List[str]) -> None:
