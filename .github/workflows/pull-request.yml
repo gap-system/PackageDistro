@@ -59,25 +59,24 @@ jobs:
           GAP_PKGS_TO_CLONE: 'json'
           GAP_PKGS_TO_BUILD: 'json'
 
-      - name: "Determine what was added or modified"
+      - name: "Determine what was added or modified, validate"
         id: modified
         run: |
             modified=$(git diff --name-only --no-renames --diff-filter=AM ${{ github.event.pull_request.base.sha }} -- packages/*/meta.json)
-            echo "Add or updated packages: ${modified}"
+            echo "Added or updated packages: ${modified}"
             if [[ -n "${modified}" ]]; then
               echo "::set-output name=modified::true"
             else
               echo "::set-output name=modified::false"
             fi
 
-      - name: "Obtain copy of old metadata, if any"
-        run: |
+            echo "Obtain copies of old metadata, if any..."
             for PKG in ${modified}; do
               git cat-file blob ${{ github.event.pull_request.base.sha }}:$PKG > $PKG.old || :
             done
 
-      - name: "Validate metadata"
-        run: tools/validate_package.py ${modified}
+            echo "Validate metadata..."
+            tools/validate_package.py ${modified}
 
   test-all-master:
     name: "master"
