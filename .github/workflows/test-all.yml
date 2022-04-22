@@ -187,11 +187,13 @@ jobs:
 
           MAKEFLAGS=-j3 ../bin/BuildPackages.sh --strict ${{ github.event.inputs.pkg-build-glob || inputs.pkg-build-glob }}
 
-      - name: "Test LoadAllPackages"
+      - name: "Test LoadAllPackages + GAP test suite"
         run: |
           gap -A --quitonbreak -r -c "
                 SetInfoLevel(InfoPackageLoading, PACKAGE_DEBUG);
                 LoadAllPackages();
+                SetInfoLevel(InfoPackageLoading, PACKAGE_ERROR);
+                ReadGapRoot(\"tst/testinstall.g\");
                 QUIT;
                 "
 
