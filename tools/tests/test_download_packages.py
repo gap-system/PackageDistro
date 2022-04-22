@@ -109,10 +109,9 @@ def test_download_archive(ensure_in_tests_dir, tmpdir):
     with mock.patch(
         "requests.get", side_effect=RequestException("Failed Request")
     ) as mock_request_post:
-        with pytest.raises(SystemExit) as e:
+        with pytest.raises(RequestException) as e:
             download_archive(str(tmpdir), "toricvarieties")
-        assert e.type == SystemExit
-        assert e.value.code == 1
+        assert e.type == RequestException
 
     download_archive(str(tmpdir), "aclib")
     assert exists(join(str(tmpdir), archive_name("aclib")))

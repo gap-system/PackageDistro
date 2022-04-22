@@ -31,10 +31,9 @@ import sys
 from os.path import join
 from multiprocessing.pool import ThreadPool
 
-from download_packages import download_archive
-
 import utils
 from utils import (
+    download_to_memory,
     notice,
     error,
     warning,
@@ -52,29 +51,21 @@ archive_dir = "_archives"
 pkginfos_dir = "_pkginfos"
 
 
-def download_to_memory(url: str) -> Optional[bytes]:
-    response = requests.get(url)
-    if response.status_code != 200:
-        warning(
-            f"error trying to download {url}, status code {response.status_code}, skipping!"
-        )
-        return None
-    return response.content
-
-
 def scan_for_one_update(pkginfos_dir: str, pkg_name: str) -> Optional[str]:
     pkg_json = metadata(pkg_name)
     try:
         hash_distro = pkg_json["PackageInfoSHA256"]
     except KeyError:
-        notice(pkg_name + ': missing key "PackageInfoSHA256"')
+        notice(f'{pkg_name}: missing key "PackageInfoSHA256"')
         hash_distro = 0
-    pkg_info = download_to_memory(pkg_json["PackageInfoURL"])
-    if not isinstance(pkg_info, bytes):
+    try:
+        pkg_info = download_to_memory(pkg_json["PackageInfoURL"])
+    except requests.RequestException as e:
+        warning(f"{pkg_name}: {e}")
         return None
     hash_url = hashlib.sha256(pkg_info).hexdigest()
     if hash_url != hash_distro:
-        notice(pkg_name + ": detected different sha256 hash of PackageInfo.g")
+        notice(f"{pkg_name}: detected different sha256 hash of PackageInfo.g")
         fname = join(pkginfos_dir, pkg_name + ".g")
         with open(fname, "wb") as f:
             f.write(pkg_info)
