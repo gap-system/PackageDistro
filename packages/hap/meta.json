@@ -2,21 +2,21 @@
   "AbstractHTML": "This package provides some functions for group cohomology and algebraic topology. ",
   "AcceptDate": "03/2006",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "aed8beda581d648a69ebcc2c64d22382fc9ef5f2dcc324b290410212175977cc",
-  "ArchiveURL": "https://github.com/gap-packages/hap/releases/download/v1.38/hap-1.38",
+  "ArchiveSHA256": "1d6d6997cb9c0e125bf97bde4380c8d44ab9d0671901ca1bb1450a56df13679c",
+  "ArchiveURL": "https://github.com/gap-packages/hap/releases/download/v1.39/hap-1.39",
   "AvailabilityTest": null,
-  "BannerString": "Loading HAP 1.38 ...\n",
+  "BannerString": "Loading HAP 1.39 ...\n",
   "CommunicatedBy": "Derek Holt (Warwick)",
-  "Date": "09/03/2022",
+  "Date": "20/04/2022",
   "Dependencies": {
     "ExternalConditions": [
       [
         "Some optional functions require Polymake software",
-        "http://polymake.org/doku.php"
+        "https://polymake.org/doku.php"
       ],
       [
         "Some optional functions require Graphviz software",
-        "http://www.graphviz.org/"
+        "https://www.graphviz.org/"
       ],
       [
         "Some optional functions require Asymptote software",
@@ -125,7 +125,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "22f90d0fdc45c088019e0b4447f6af0d66cca5087a31d88d8c53939aab2882ba",
+  "PackageInfoSHA256": "ad24aab6759f4c46ff0144fcb357c11020d6ea6db6c735a793f784b3243e9568",
   "PackageInfoURL": "https://gap-packages.github.io/hap/PackageInfo.g",
   "PackageName": "HAP",
   "PackageWWWHome": "https://gap-packages.github.io/hap",
@@ -139,7 +139,7 @@
       "LastName": "Ellis",
       "Place": "Galway",
       "PostalAddress": "Graham Ellis\nMathematics Department\nNUI Galway\nGalway\nIreland",
-      "WWWHome": "http://hamilton.nuigalway.ie"
+      "WWWHome": "https://www.nuigalway.ie/our-research/people/mathematics-statistics-and-applied-mathematics/grahamellis/"
     }
   ],
   "README_URL": "https://gap-packages.github.io/hap/README.md",
@@ -150,5 +150,5 @@
   "Status": "accepted",
   "Subtitle": "Homological Algebra Programming",
   "TestFile": "tst/testall.g",
-  "Version": "1.38"
+  "Version": "1.39"
 }
