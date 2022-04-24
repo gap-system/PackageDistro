@@ -2,13 +2,13 @@
   "AbstractHTML": "<span class=\"pkgname\">GUAVA</span> is a <span class=\"pkgname\">GAP</span> package for computing with codes. <span class=\"pkgname\">GUAVA</span> can construct unrestricted (non-linear), linear and cyclic codes; transform one code into another (for example by puncturing); construct a new code from two other codes (using direct sums for example); perform decoding/error-correction; and can calculate important data of codes (such as the minumim distance or covering radius) quickly. Limited ability to compute algebraic geometric codes.",
   "AcceptDate": "02/2003",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "340ed435a1a7f18b15e839ad432d2bffeff5a0b6a3e9e4cf005879263e284380",
-  "ArchiveURL": "https://github.com/gap-packages/guava/releases/download/v3.15/guava-3.15",
+  "ArchiveSHA256": "42682d4d533cb21df66a2e132c70fc249f3d65379a577ba75ea093afee804394",
+  "ArchiveURL": "https://github.com/gap-packages/guava/releases/download/v3.16/guava-3.16",
   "Autoload": false,
   "AvailabilityTest": null,
-  "BannerString": "\n   ____                          |\n  /            \\           /   --+--  Version 3.15\n /      |    | |\\\\        //|    |\n|    _  |    | | \\\\      // |     the GUAVA Group\n|     \\ |    | |--\\\\    //--|     \n \\     ||    | |   \\\\  //   |     \n  \\___/  \\___/ |    \\\\//    |      \n                                  \n\n",
+  "BannerString": "\n   ____                          |\n  /            \\           /   --+--  Version 3.16\n /      |    | |\\\\        //|    |\n|    _  |    | | \\\\      // |     the GUAVA Group\n|     \\ |    | |--\\\\    //--|     \n \\     ||    | |   \\\\  //   |     \n  \\___/  \\___/ |    \\\\//    |      \n                                  \n\n",
   "CommunicatedBy": "Charles Wright (Eugene)",
-  "Date": "13/04/2019",
+  "Date": "24/04/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.8.0",
@@ -37,6 +37,7 @@
     "weight distribution",
     "automorphism group of code"
   ],
+  "License": "GPL-2.0-or-later",
   "PackageDoc": [
     {
       "ArchiveURLSubset": [
@@ -51,7 +52,7 @@
       "Subtitle": "error-correcting codes computations"
     }
   ],
-  "PackageInfoSHA256": "0120feb6e4be410d1566dec7abdf7a2ecde54d3d44df3358481a05b79e7acd38",
+  "PackageInfoSHA256": "9f0f8b52d4dc28361f2dcdde9e6a0ee6187ded15d73248fd633a2ccedc28a202",
   "PackageInfoURL": "https://gap-packages.github.io/guava/PackageInfo.g",
   "PackageName": "GUAVA",
   "PackageWWWHome": "https://gap-packages.github.io/guava",
@@ -159,5 +160,5 @@
   "Status": "accepted",
   "Subtitle": "a GAP package for computing with error-correcting codes",
   "TestFile": "tst/guava.tst",
-  "Version": "3.15"
+  "Version": "3.16"
 }
