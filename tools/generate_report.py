@@ -77,16 +77,16 @@ report_diff["skipped"] = report["skipped"]
 # Package Dictionaries
 pkgs = report["pkgs"]
 last_pkgs = last_report["pkgs"]
-pkgs_new = pkgs.keys() - last_pkgs.keys()
-pkgs_removed = last_pkgs.keys() - pkgs.keys()
+pkgs_new = sorted(pkgs.keys() - last_pkgs.keys())
+pkgs_removed = sorted(last_pkgs.keys() - pkgs.keys())
 status_list = ["failure", "success", "skipped"]
 
 pkgs_changed = {}
 for status in status_list:
     pkgs_changed[status] = [
         pkg
-        for pkg in pkgs.keys()
-        if pkg in last_pkgs.keys()
+        for pkg in sorted(pkgs.keys())
+        if pkg in sorted(last_pkgs.keys())
         and pkgs[pkg]["status"] != last_pkgs[pkg]["status"]
         and pkgs[pkg]["status"] == status
     ]
@@ -95,8 +95,8 @@ pkgs_same = {}
 for status in status_list:
     pkgs_same[status] = [
         pkg
-        for pkg in pkgs.keys()
-        if pkg in last_pkgs.keys()
+        for pkg in sorted(pkgs.keys())
+        if pkg in sorted(last_pkgs.keys())
         and pkgs[pkg]["status"] == last_pkgs[pkg]["status"]
         and pkgs[pkg]["status"] == status
     ]
