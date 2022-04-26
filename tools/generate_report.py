@@ -77,15 +77,15 @@ report_diff["skipped"] = report["skipped"]
 # Package Dictionaries
 pkgs = report["pkgs"]
 last_pkgs = last_report["pkgs"]
-pkgs_new = sorted(pkgs.keys() - last_pkgs.keys())
-pkgs_removed = sorted(last_pkgs.keys() - pkgs.keys())
+pkgs_new = pkgs.keys() - last_pkgs.keys()
+pkgs_removed = last_pkgs.keys() - pkgs.keys()
 status_list = ["failure", "success", "skipped"]
 
 pkgs_changed = {}
 for status in status_list:
     pkgs_changed[status] = [
         pkg
-        for pkg in sorted(pkgs.keys())
+        for pkg in pkgs.keys()
         if pkg in last_pkgs.keys()
         and pkgs[pkg]["status"] != last_pkgs[pkg]["status"]
         and pkgs[pkg]["status"] == status
@@ -95,7 +95,7 @@ pkgs_same = {}
 for status in status_list:
     pkgs_same[status] = [
         pkg
-        for pkg in sorted(pkgs.keys())
+        for pkg in pkgs.keys()
         if pkg in last_pkgs.keys()
         and pkgs[pkg]["status"] == last_pkgs[pkg]["status"]
         and pkgs[pkg]["status"] == status
@@ -106,7 +106,7 @@ def write_details_list(
     f: io.TextIOWrapper, pkgnames: List[str], pkgs: Dict[str, Any]
 ) -> None:
     f.write("<details><summary>Click to show package(s)!</summary>\n\n")
-    for pkg in pkgnames:
+    for pkg in sorted(pkgnames):
         version = pkgs[pkg]["version"]
         status = pkgs[pkg]["status"]
         run = pkgs[pkg]["workflow_run"]
@@ -176,7 +176,7 @@ with open(dir_report + "/report.md", "w") as f:
                 f"{len(pkgs_filtered)} package(s) {status_msg} tests only on the current version.\n"
             )
             f.write("<details> <summary>Click to show package(s)!</summary>\n\n")
-            for pkg in pkgs_filtered:
+            for pkg in sorted(pkgs_filtered):
                 version = pkgs[pkg]["version"]
                 run = pkgs[pkg]["workflow_run"]
                 last_status = last_pkgs[pkg]["status"]
