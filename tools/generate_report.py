@@ -86,7 +86,7 @@ for status in status_list:
     pkgs_changed[status] = [
         pkg
         for pkg in sorted(pkgs.keys())
-        if pkg in sorted(last_pkgs.keys())
+        if pkg in last_pkgs.keys()
         and pkgs[pkg]["status"] != last_pkgs[pkg]["status"]
         and pkgs[pkg]["status"] == status
     ]
@@ -96,7 +96,7 @@ for status in status_list:
     pkgs_same[status] = [
         pkg
         for pkg in sorted(pkgs.keys())
-        if pkg in sorted(last_pkgs.keys())
+        if pkg in last_pkgs.keys()
         and pkgs[pkg]["status"] == last_pkgs[pkg]["status"]
         and pkgs[pkg]["status"] == status
     ]
