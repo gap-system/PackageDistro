@@ -106,7 +106,7 @@ def write_details_list(
     f: io.TextIOWrapper, pkgnames: List[str], pkgs: Dict[str, Any]
 ) -> None:
     f.write("<details><summary>Click to show package(s)!</summary>\n\n")
-    for pkg in pkgnames:
+    for pkg in sorted(pkgnames):
         version = pkgs[pkg]["version"]
         status = pkgs[pkg]["status"]
         run = pkgs[pkg]["workflow_run"]
@@ -176,7 +176,7 @@ with open(dir_report + "/report.md", "w") as f:
                 f"{len(pkgs_filtered)} package(s) {status_msg} tests only on the current version.\n"
             )
             f.write("<details> <summary>Click to show package(s)!</summary>\n\n")
-            for pkg in pkgs_filtered:
+            for pkg in sorted(pkgs_filtered):
                 version = pkgs[pkg]["version"]
                 run = pkgs[pkg]["workflow_run"]
                 last_status = last_pkgs[pkg]["status"]
