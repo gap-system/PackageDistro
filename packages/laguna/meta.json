@@ -2,11 +2,11 @@
   "AbstractHTML": "The <span class=\"pkgname\">LAGUNA</span> package replaces the <span class=\"pkgname\">LAG</span> package and provides functionality for calculation of the normalized unit group of the modular group algebra of the finite p-group and for investigation of Lie algebra associated with group algebras and other associative algebras.",
   "AcceptDate": "06/2003",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "625c1a9ad78292f2ca401dc164d1e81e832815fcb0a83bee54cbfaa12c7a93a7",
-  "ArchiveURL": "https://github.com/gap-packages/laguna/releases/download/v3.9.4/laguna-3.9.4",
+  "ArchiveSHA256": "bba2a2354c548685e0085a385d6027927add32014c28ca5e3127539b68cd87bf",
+  "ArchiveURL": "https://github.com/gap-packages/laguna/releases/download/v3.9.5/laguna-3.9.5",
   "AvailabilityTest": null,
   "CommunicatedBy": "Herbert Pahlings (Aachen)",
-  "Date": "23/02/2022",
+  "Date": "27/04/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.9",
@@ -43,7 +43,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "ed7c58723e8d514583ab3b53b4714a19e716897e96087e376b8974c28694bfa3",
+  "PackageInfoSHA256": "42197cdfb0a0324dd9d5721dd56182ab9da154e64bea0dd7a90da04550a42f91",
   "PackageInfoURL": "https://gap-packages.github.io/laguna/PackageInfo.g",
   "PackageName": "LAGUNA",
   "PackageWWWHome": "https://gap-packages.github.io/laguna",
@@ -59,15 +59,15 @@
       "PostalAddress": "Institute of Mathematics and Informatics\nUniversity of Debrecen\nP.O.Box 12, Debrecen\nH-4010 Hungary"
     },
     {
-      "Email": "alexander.konovalov@st-andrews.ac.uk",
-      "FirstNames": "Alexander",
+      "Email": "obk1@st-andrews.ac.uk",
+      "FirstNames": "Olexandr",
       "Institution": "University of St Andrews",
       "IsAuthor": true,
       "IsMaintainer": true,
       "LastName": "Konovalov",
       "Place": "St Andrews",
       "PostalAddress": "School of Computer Science\nUniversity of St Andrews\nJack Cole Building, North Haugh,\nSt Andrews, Fife, KY16 9SX, Scotland",
-      "WWWHome": "https://alexk.host.cs.st-andrews.ac.uk"
+      "WWWHome": "https://alex-konovalov.github.io/"
     },
     {
       "FirstNames": "Richard",
@@ -95,5 +95,5 @@
   "Status": "accepted",
   "Subtitle": "Lie AlGebras and UNits of group Algebras",
   "TestFile": "tst/testall.g",
-  "Version": "3.9.4"
+  "Version": "3.9.5"
 }
