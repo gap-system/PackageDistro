@@ -1,14 +1,19 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">YangBaxter</span> package provides functionality to construct classical and skew braces. It also includes a database of classical and skew braces of small orders.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "02bd961572ac154a7e4833809523a283955ca54aacee078e71a475b21e03787e",
-  "ArchiveURL": "https://github.com/gap-packages/YangBaxter/releases/download/v0.9.0/YangBaxter-0.9.0",
+  "ArchiveSHA256": "b71f751c9a0322b494a62c1b3c97677deebe7abbb05ede554554bebc6f1f6616",
+  "ArchiveURL": "https://github.com/gap-packages/YangBaxter/releases/download/v0.10.0/YangBaxter-0.10.0",
   "AvailabilityTest": null,
-  "Date": "08/11/2019",
+  "Date": "29/04/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.9",
-    "NeededOtherPackages": [],
+    "NeededOtherPackages": [
+      [
+        "cryst",
+        ">=4.0"
+      ]
+    ],
     "SuggestedOtherPackages": []
   },
   "IssueTrackerURL": "https://github.com/gap-packages/YangBaxter/issues",
@@ -33,32 +38,32 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "00a26c77dbc9312015f1a979e09b2e69a38f1c19e47e6f188ea242955689c958",
+  "PackageInfoSHA256": "b8f7c439b6a2f27ce50bfd6874fe2c5355b21169449fa6661849da49deaf28a6",
   "PackageInfoURL": "https://gap-packages.github.io/YangBaxter/PackageInfo.g",
   "PackageName": "YangBaxter",
   "PackageWWWHome": "https://gap-packages.github.io/YangBaxter",
   "Persons": [
     {
-      "Email": "lvendramin@dm.uba.ar",
+      "Email": "Leandro.Vendramin@vub.be",
       "FirstNames": "Leandro",
-      "Institution": "UBA",
+      "Institution": "Vrije Universiteit Brussel",
       "IsAuthor": true,
       "IsMaintainer": true,
       "LastName": "Vendramin",
-      "Place": "Buenos Aires",
-      "PostalAddress": "Departamento de matem'atica, FCEN, UBA\nCiudad Universitaria, Pab. 1\nBuenos Aires, Argentina",
-      "WWWHome": "http://mate.dm.uba.ar/~lvendram"
+      "Place": "Brussels",
+      "PostalAddress": "Vrije Universiteit Brussel\nFaculty of Sciences\nDepartment of Mathematics and Data Science\nPleinlaan 2, B-1050\nBrussel, Belgium",
+      "WWWHome": "https://vendramin.github.io/"
     },
     {
-      "Email": "alexander.konovalov@st-andrews.ac.uk",
-      "FirstNames": "Alexander",
+      "Email": "obk1@st-andrews.ac.uk",
+      "FirstNames": "Olexandr",
       "Institution": "University of St Andrews",
       "IsAuthor": true,
       "IsMaintainer": true,
       "LastName": "Konovalov",
       "Place": "St Andrews",
       "PostalAddress": "School of Computer Science\nUniversity of St Andrews\nJack Cole Building, North Haugh,\nSt Andrews, Fife, KY16 9SX, Scotland",
-      "WWWHome": "https://alexk.host.cs.st-andrews.ac.uk/"
+      "WWWHome": "https://alex-konovalov.github.io/"
     }
   ],
   "README_URL": "https://gap-packages.github.io/YangBaxter/README.md",
@@ -69,5 +74,5 @@
   "Status": "deposited",
   "Subtitle": "Combinatorial Solutions for the Yang-Baxter equation",
   "TestFile": "tst/testall.g",
-  "Version": "0.9.0"
+  "Version": "0.10.0"
 }
