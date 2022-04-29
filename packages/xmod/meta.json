@@ -2,8 +2,8 @@
   "AbstractHTML": "The <span class=\"pkgname\">XMod</span> package provides a collection   of functions for computing with crossed modules and cat1-groups, their derivations and sections, morphisms of these structures, and higher-dimensional generalisations.",
   "AcceptDate": "12/1996",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "24662eee3288725884451d955f27b1256f3abf1472e4331632075935b35606b1",
-  "ArchiveURL": "https://github.com/gap-packages/xmod/releases/download/v2.86/XMod-2.86",
+  "ArchiveSHA256": "502884be429e43ceb868481e1ca7bbbab3f1490474eb374e37939f5b1eb71c30",
+  "ArchiveURL": "https://github.com/gap-packages/xmod/releases/download/v2.88/XMod-2.88",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "The &XMod; package provides functions for computation with\n<List>\n  <Item>\n  finite crossed modules of groups and cat1-groups, \n  and morphisms of these structures; \n  </Item>\n  <Item>\n  finite pre-crossed modules, pre-cat1-groups,   and their Peiffer quotients;\n  </Item>\n  <Item>\n  isoclinism classes of groups and crossed modules; \n  </Item>\n  <Item>\n  derivations of crossed modules and sections of cat1-groups; \n  </Item>\n  <Item>\n  crossed squares and their morphisms,   including the actor crossed square of a crossed module; \n  </Item>\n  <Item>\n  crossed modules of finite groupoids (experimental version). \n  </Item>\n</List>\n<P/>\n&XMod; was originally implemented in 1996 using the &GAP;3 language, when the second author was studying for a Ph.D. <Cite Key='A1'/> at Bangor.\n<P/>\nIn April 2002 the first and third parts were converted to &GAP;4, the pre-structures were added, and version 2.001 was released. \nThe final two parts, covering derivations, sections and actors, were included in the January 2004 release 2.002 for &GAP; 4.4.\n<P/>\nIn October 2015 functions for computing isoclinism classes of crossed modules, written by Alper Odaba&#x15f; and Enver Uslu, were added.\nThese are contained in Chapter <Ref Chap='chap-isclnc' />, and are described in detail in the paper <Cite Key='IOU1' />.\n<P/>\nBug reports, suggestions and comments are, of course, welcome. Please submit an issue at <URL>https://github.com/gap-packages/xmod/issues/</URL> or send an email to the first author at <Email>c.d.wensley@bangor.ac.uk</Email>. \n<P/>\n",
@@ -13,16 +13,16 @@
   },
   "Autoload": false,
   "AvailabilityTest": null,
-  "BannerString": "Loading XMod 2.86 (methods for crossed modules and cat1-groups)\nby Chris Wensley (https://github.com/cdwensley),\n with contributions from:\n    Murat Alp (muratalp@nigde.edu.tr),\n    Alper Odabas (aodabas@ogu.edu.tr),\nand Enver Uslu.\n-----------------------------------------------------------------------------\n",
+  "BannerString": "Loading XMod 2.88 (methods for crossed modules and cat1-groups)\nby Chris Wensley (https://github.com/cdwensley),\n with contributions from:\n    Murat Alp (muratalp@nigde.edu.tr),\n    Alper Odabas (aodabas@ogu.edu.tr),\nand Enver Uslu.\n-----------------------------------------------------------------------------\n",
   "CommunicatedBy": "Derek Holt (Warwick)",
-  "Date": "14/03/2022",
+  "Date": "28/04/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.11.0",
     "NeededOtherPackages": [
       [
         "utils",
-        ">= 0.69"
+        ">= 0.71"
       ],
       [
         "groupoids",
@@ -75,7 +75,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "d63dd0e6ac7a7551c1450d16602dedc4ad3c3731db61f8c17d4a918a93e193c1",
+  "PackageInfoSHA256": "bd0043826a64cffd766933a199296e7cd96c99c5c4a0eea869b270303e67c428",
   "PackageInfoURL": "https://gap-packages.github.io/xmod/PackageInfo.g",
   "PackageName": "XMod",
   "PackageWWWHome": "https://gap-packages.github.io/xmod/",
@@ -127,5 +127,5 @@
   "Subtitle": "Crossed Modules and Cat1-Groups",
   "SupportEmail": "c.d.wensley@bangor.ac.uk",
   "TestFile": "tst/testall.g",
-  "Version": "2.86"
+  "Version": "2.88"
 }
