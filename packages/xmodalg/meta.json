@@ -2,27 +2,27 @@
   "AbstractHTML": "The <span class=\"pkgname\">XModAlg</span> package provides a collection of functions for computing with crossed modules and cat1-algebras and morphisms of these structures.",
   "AcceptDate": "",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "a03c598a5d0b973d2c767a02016b526806c4af2eb986ae3ca80c892f320fca39",
-  "ArchiveURL": "https://github.com/gap-packages/xmodalg/releases/download/v1.18/XModAlg-1.18",
+  "ArchiveSHA256": "f4c50f821ffca691b346f6f6172ddbb6f038c70abadce9dad923615df4f8ba08",
+  "ArchiveURL": "https://github.com/gap-packages/xmodalg/releases/download/v1.22/XModAlg-1.22",
   "AutoDoc": {
     "TitlePage": {
-      "Abstract": "The &XModAlg; package provides functions for computation with crossed modules of commutative algebras and cat<M>^{1}</M>-algebras.<P/>\nBug reports, suggestions and comments are, of course, welcome. Please submit an issue on GitHub at <URL>http://github.com/gap-packages/xmodalg/issues/</URL> or contact the second author at <Email>aodabas@ogu.edu.tr</Email>. \n<P/>\n",
-      "Acknowledgements": "This documentation was prepared with the &GAPDoc; <Cite Key='GAPDoc'/> and &AutoDoc; <Cite Key='AutoDoc'/> packages.<P/>\nThe procedure used to produce new releases uses the package <Package>GitHubPagesForGAP</Package> <Cite Key='GitHubPagesForGAP' /> and the package <Package>ReleaseTools</Package>.<P/>\nBoth authors are very grateful to Chris Wensley (<URL>http://pages.bangor.ac.uk/~mas023/</URL>) for helpful suggestions.<P/>\nThis work was partially supported by T&#220;B&#304;TAK (The Scientific and Technical Research Council of Turkey), project number 107T542.<P/>",
-      "Copyright": "&copyright; 2014-2020, Zekeriya Arvasi and Alper Odabas. <P/>\nThe &XModAlg; package is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\n"
+      "Abstract": "The &XModAlg; package provides functions for computation with crossed modules of commutative algebras and cat<M>^{1}</M>-algebras.<P/>\nBug reports, suggestions and comments are, of course, welcome. Please submit an issue on GitHub at <URL>https://github.com/gap-packages/xmodalg/issues/</URL> or contact the second author at <Email>aodabas@ogu.edu.tr</Email>. \n<P/>\n",
+      "Acknowledgements": "This documentation was prepared with the &GAPDoc; <Cite Key='GAPDoc'/> and &AutoDoc; <Cite Key='AutoDoc'/> packages.<P/>\nThe procedure used to produce new releases uses the package <Package>GitHubPagesForGAP</Package> <Cite Key='GitHubPagesForGAP' /> and the package <Package>ReleaseTools</Package>.<P/>\nBoth authors are very grateful to Chris Wensley (<URL>https://github.com/cdwensley</URL>) for helpful suggestions.<P/>\nThis work was partially supported by T&#220;B&#304;TAK (The Scientific and Technical Research Council of Turkey), project number 107T542.<P/>",
+      "Copyright": "&copyright; 2014-2022, Zekeriya Arvasi and Alper Odabas. <P/>\nThe &XModAlg; package is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\n"
     }
   },
   "Autoload": false,
   "AvailabilityTest": null,
-  "BannerString": "-----------------------------------------------------------------------------\nLoading XModAlg 1.18 (17/11/2020) for GAP 4.11 \nMethods for crossed modules of commutative algebras and cat1-algebras\nby Zekeriya Arvasi (zarvasi@ogu.edu.tr) and Alper Odabas (aodabas@ogu.edu.tr).\n-----------------------------------------------------------------------------\n",
+  "BannerString": "-----------------------------------------------------------------------------\nLoading XModAlg 1.22 (29/04/2022) for GAP 4.11 \nMethods for crossed modules of commutative algebras and cat1-algebras\nby Zekeriya Arvasi (zarvasi@ogu.edu.tr) and Alper Odabas (aodabas@ogu.edu.tr).\n-----------------------------------------------------------------------------\n",
   "CommunicatedBy": "",
-  "Date": "17/11/2020",
+  "Date": "29/04/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.11.0",
     "NeededOtherPackages": [
       [
         "XMod",
-        ">=2.82"
+        ">=2.87"
       ],
       [
         "LAGUNA",
@@ -50,7 +50,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "a36613c4a9556330f8bdbc3fb76c0d7692ea914363caf14cf7051d83374fcb1f",
+  "PackageInfoSHA256": "285c76c11f6e1d79ccf3b635fbe93561db01dc76bb58d8bbf547d6b88916dc34",
   "PackageInfoURL": "https://gap-packages.github.io/xmodalg/PackageInfo.g",
   "PackageName": "XModAlg",
   "PackageWWWHome": "https://gap-packages.github.io/xmodalg/",
@@ -85,5 +85,5 @@
   "Subtitle": "Crossed Modules and Cat1-Algebras",
   "SupportEmail": "aodabas@ogu.edu.tr",
   "TestFile": "tst/testall.g",
-  "Version": "1.18"
+  "Version": "1.22"
 }
