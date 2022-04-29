@@ -2,12 +2,12 @@
   "AbstractHTML": "This package provides an <a href=\"http://www.openmath.org/\">OpenMath</a> phrasebook for <span class=\"pkgname\">GAP</span>. This package allows <span class=\"pkgname\">GAP</span> users to import and export mathematical objects encoded in OpenMath, for the purpose of exchanging them with other applications that are OpenMath enabled.",
   "AcceptDate": "08/2010",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "514df449620c61ae20de9416d9ede3eff45402df13961b1df81c4d5619c02982",
-  "ArchiveURL": "https://github.com/gap-packages/openmath/releases/download/v11.5.0/OpenMath-11.5.0",
+  "ArchiveSHA256": "0bd9be052a487635cd2a45f4579136a05073247014b692db65e6dbe8de79b0fb",
+  "ArchiveURL": "https://github.com/gap-packages/openmath/releases/download/v11.5.1/OpenMath-11.5.1",
   "Autoload": false,
   "AvailabilityTest": null,
   "CommunicatedBy": "David Joyner (Annapolis)",
-  "Date": "09/02/2020",
+  "Date": "29/04/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": " >= 4.9.0",
@@ -41,7 +41,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "4c4e243ece76f62c31cc1d4aec053745eff9eb5eb0b854825ac1021abc321c7b",
+  "PackageInfoSHA256": "416c4d33519981082a34e6ead4d6f285a3c902afb9a2ed839ef191fdbc93eee0",
   "PackageInfoURL": "https://gap-packages.github.io/openmath/PackageInfo.g",
   "PackageName": "OpenMath",
   "PackageWWWHome": "https://gap-packages.github.io/openmath",
@@ -53,15 +53,15 @@
       "LastName": "Costantini"
     },
     {
-      "Email": "alexander.konovalov@st-andrews.ac.uk",
-      "FirstNames": "Alexander",
+      "Email": "obk1@st-andrews.ac.uk",
+      "FirstNames": "Olexandr",
       "Institution": "University of St Andrews",
       "IsAuthor": true,
       "IsMaintainer": true,
       "LastName": "Konovalov",
       "Place": "St Andrews",
       "PostalAddress": "School of Computer Science\nUniversity of St Andrews\nJack Cole Building, North Haugh,\nSt Andrews, Fife, KY16 9SX, Scotland",
-      "WWWHome": "http://blogs.cs.st-andrews.ac.uk/alexk/"
+      "WWWHome": "https://alex-konovalov.github.io/"
     },
     {
       "Email": "lmn27@cam.ac.uk",
@@ -91,5 +91,5 @@
   "Status": "accepted",
   "Subtitle": "OpenMath functionality in GAP",
   "TestFile": "tst/testall.g",
-  "Version": "11.5.0"
+  "Version": "11.5.1"
 }
