@@ -1,16 +1,16 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">Example</span> package, as its name suggests,    is an example of how to create a <span class=\"pkgname\">GAP</span>    package. It has little functionality except for being a package.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "32bac55515484ed7b164cebe00406a8e76dd7680b0c9c220a095254961061649",
-  "ArchiveURL": "https://github.com/gap-packages/example/releases/download/v4.3.0/Example-4.3.0",
+  "ArchiveSHA256": "5f5987ef271ff08682d08fbac734d338ae2a2090f1872fa1045840e2eeaea53b",
+  "ArchiveURL": "https://github.com/gap-packages/example/releases/download/v4.3.1/Example-4.3.1",
   "AutoDoc": {
     "TitlePage": {
       "Acknowledgements": "\n      We appreciate very much all past and future comments, suggestions and\n      contributions to this package and its documentation provided by &GAP;\n      users and developers.\n      ",
-      "Copyright": "\n      <Index>License</Index>\n      &copyright; 1997-2012 by Werner Nickel, Greg Gamble and Alexander Konovalov<P/>\n      &Example; package is free software;\n      you can redistribute it and/or modify it under the terms of the\n      <URL Text=\"GNU General Public License\">http://www.fsf.org/licenses/gpl.html</URL>\n      as published by the Free Software Foundation; either version 2 of the License,\n      or (at your option) any later version.\n      "
+      "Copyright": "\n      <Index>License</Index>\n      &copyright; 1997-2022 by Werner Nickel, Greg Gamble and Olexandr Konovalov<P/>\n      &Example; package is free software;\n      you can redistribute it and/or modify it under the terms of the\n      <URL Text=\"GNU General Public License\">http://www.fsf.org/licenses/gpl.html</URL>\n      as published by the Free Software Foundation; either version 2 of the License,\n      or (at your option) any later version.\n      "
     }
   },
   "AvailabilityTest": null,
-  "Date": "22/02/2021",
+  "Date": "29/04/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": "4.10",
@@ -40,7 +40,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "efede0a1d082d5e6055c3f0ab6c7587a88e76e35b4087c92204fb0e6ec6f095c",
+  "PackageInfoSHA256": "c98170472e681146ed4ed32914242b9fd7649075447a91c08cfe5089d385105c",
   "PackageInfoURL": "https://gap-packages.github.io/example/PackageInfo.g",
   "PackageName": "Example",
   "PackageWWWHome": "https://gap-packages.github.io/example",
@@ -64,15 +64,15 @@
       "WWWHome": "http://www.math.rwth-aachen.de/~Greg.Gamble"
     },
     {
-      "Email": "alexander.konovalov@st-andrews.ac.uk",
-      "FirstNames": "Alexander",
+      "Email": "obk1@st-andrews.ac.uk",
+      "FirstNames": "Olexandr",
       "Institution": "University of St Andrews",
       "IsAuthor": true,
       "IsMaintainer": true,
       "LastName": "Konovalov",
       "Place": "St Andrews",
       "PostalAddress": "School of Computer Science\nUniversity of St Andrews\nJack Cole Building, North Haugh,\nSt Andrews, Fife, KY16 9SX, Scotland",
-      "WWWHome": "http://www.cs.st-andrews.ac.uk/~alexk/"
+      "WWWHome": "https://alex-konovalov.github.io/"
     }
   ],
   "README_URL": "https://gap-packages.github.io/example/README.md",
@@ -82,7 +82,7 @@
   },
   "Status": "deposited",
   "Subtitle": "Example/Template of a GAP Package",
-  "SupportEmail": "alexander.konovalov@st-andrews.ac.uk",
+  "SupportEmail": "obk1@st-andrews.ac.uk",
   "TestFile": "tst/testall.g",
-  "Version": "4.3.0"
+  "Version": "4.3.1"
 }
