@@ -86,7 +86,7 @@ def generate_redirect(
 # Generate badge, see https://shields.io/endpoint
 def generate_badge(report: Dict[str, Any], dir_last_report_rel: str) -> None:
     relativeFailures = report["failure"] / (report["failure"] + report["success"])
-    if relativeFailures > 0.05:
+    if relativeFailures > 0.08:
         color = "critical"
     elif relativeFailures > 0:
         color = "important"
