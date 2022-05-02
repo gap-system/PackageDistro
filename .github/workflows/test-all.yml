@@ -274,6 +274,7 @@ jobs:
 
       - name: "Install binary package dependencies"
         run: |
+          sudo apt-get update
           deps=$(tools/gather_dependencies.py ${{ matrix.package }})
           if [[ -n "$deps" ]]; then
             echo "Installing required binary depedencies: $deps"
