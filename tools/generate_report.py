@@ -105,13 +105,16 @@ for status in status_list:
 def write_details_list(
     f: io.TextIOWrapper, pkgnames: List[str], pkgs: Dict[str, Any]
 ) -> None:
-    f.write("<details><summary>Click to show package(s)!</summary>\n\n")
+    if len(pkgnames) > 2:
+        f.write("<details><summary>Click to show packages!</summary>\n")
     for pkg in sorted(pkgnames):
         version = pkgs[pkg]["version"]
         status = pkgs[pkg]["status"]
         run = pkgs[pkg]["workflow_run"]
         f.write(f"- {pkg} {version} [({status})]({run})\n")
-    f.write("</details>\n\n")
+    if len(pkgnames) > 2:
+        f.write("</details>\n")
+    f.write("\n")
 
 
 with open(dir_report + "/report.md", "w") as f:
@@ -175,7 +178,8 @@ with open(dir_report + "/report.md", "w") as f:
             f.write(
                 f"{len(pkgs_filtered)} package(s) {status_msg} tests only on the current version.\n"
             )
-            f.write("<details> <summary>Click to show package(s)!</summary>\n\n")
+            if len(pkgs_filtered) > 2:
+                f.write("<details><summary>Click to show packages!</summary>\n")
             for pkg in sorted(pkgs_filtered):
                 version = pkgs[pkg]["version"]
                 run = pkgs[pkg]["workflow_run"]
@@ -185,7 +189,9 @@ with open(dir_report + "/report.md", "w") as f:
                 f.write(
                     f"- {pkg} {version} [({status})]({run}) vs {pkg} {last_version} [({last_status})]({last_run}) <br>\n"
                 )
-            f.write("</details>\n\n")
+            if len(pkgs_filtered) > 2:
+                f.write("</details>\n")
+            f.write("\n")
 
     ############################################################################
     # Same Status Packages
