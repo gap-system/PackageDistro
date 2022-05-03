@@ -106,7 +106,9 @@ def write_details_list(
     f: io.TextIOWrapper, pkgnames: List[str], pkgs: Dict[str, Any]
 ) -> None:
     if len(pkgnames) > 2:
-        f.write("<details><summary>Click to show packages!</summary>\n")
+        # the extra newline after </summary> is needed so that GitHub's MarkDown
+        # renderer converts the Markdown list afterwards into HTML
+        f.write("<details><summary>Click to show packages!</summary>\n\n")
     for pkg in sorted(pkgnames):
         version = pkgs[pkg]["version"]
         status = pkgs[pkg]["status"]
@@ -179,7 +181,7 @@ with open(dir_report + "/report.md", "w") as f:
                 f"{len(pkgs_filtered)} package(s) {status_msg} tests only on the current version.\n"
             )
             if len(pkgs_filtered) > 2:
-                f.write("<details><summary>Click to show packages!</summary>\n")
+                f.write("<details><summary>Click to show packages!</summary>\n\n")
             for pkg in sorted(pkgs_filtered):
                 version = pkgs[pkg]["version"]
                 run = pkgs[pkg]["workflow_run"]
@@ -187,7 +189,7 @@ with open(dir_report + "/report.md", "w") as f:
                 last_version = last_pkgs[pkg]["version"]
                 last_run = last_pkgs[pkg]["workflow_run"]
                 f.write(
-                    f"- {pkg} {version} [({status})]({run}) vs {pkg} {last_version} [({last_status})]({last_run}) <br>\n"
+                    f"- {pkg} {version} [({status})]({run}) vs {pkg} {last_version} [({last_status})]({last_run})\n"
                 )
             if len(pkgs_filtered) > 2:
                 f.write("</details>\n")
