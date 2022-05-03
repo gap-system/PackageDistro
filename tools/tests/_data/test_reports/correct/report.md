@@ -22,24 +22,25 @@ In total, 13 packages were tested, out of which 6 succeeded, 5 failed and 2 were
 ## :exclamation: :exclamation: Packages now failing
 
 2 package(s) failed tests only on the current version.
-- boogle 8.2 [(failure)](https://github.com/gap-system/PackageDistro/runs/{CURRENT_RUN_ID_BOOGLE}?check_suite_focus=true) vs boogle 8.2 [(success)](https://github.com/gap-system/PackageDistro/runs/{PREVIOUS_RUN_ID_BOOGLE}?check_suite_focus=true) <br>
-- zork 1.18 [(failure)](https://github.com/gap-system/PackageDistro/runs/{CURRENT_RUN_ID_ZORK}?check_suite_focus=true) vs zork 1.17 [(skipped)](https://github.com/gap-system/PackageDistro/runs/{PREVIOUS_RUN_ID_ZORK}?check_suite_focus=true) <br>
+- boogle 8.2 [(failure)](https://github.com/gap-system/PackageDistro/runs/{CURRENT_RUN_ID_BOOGLE}?check_suite_focus=true) vs boogle 8.2 [(success)](https://github.com/gap-system/PackageDistro/runs/{PREVIOUS_RUN_ID_BOOGLE}?check_suite_focus=true)
+- zork 1.18 [(failure)](https://github.com/gap-system/PackageDistro/runs/{CURRENT_RUN_ID_ZORK}?check_suite_focus=true) vs zork 1.17 [(skipped)](https://github.com/gap-system/PackageDistro/runs/{PREVIOUS_RUN_ID_ZORK}?check_suite_focus=true)
 
 ## :heavy_check_mark: :heavy_check_mark: Packages now succeeding
 
 2 package(s) succeeded tests only on the current version.
-- baz 2.3 [(success)](https://github.com/gap-system/PackageDistro/runs/{CURRENT_RUN_ID_BAZ}?check_suite_focus=true) vs baz 2.3 [(failure)](https://github.com/gap-system/PackageDistro/runs/{PREVIOUS_RUN_ID_BAZ}?check_suite_focus=true) <br>
-- gork 4.2 [(success)](https://github.com/gap-system/PackageDistro/runs/{CURRENT_RUN_ID_GORK}?check_suite_focus=true) vs gork 4.2 [(skipped)](https://github.com/gap-system/PackageDistro/runs/{PREVIOUS_RUN_ID_GORK}?check_suite_focus=true) <br>
+- baz 2.3 [(success)](https://github.com/gap-system/PackageDistro/runs/{CURRENT_RUN_ID_BAZ}?check_suite_focus=true) vs baz 2.3 [(failure)](https://github.com/gap-system/PackageDistro/runs/{PREVIOUS_RUN_ID_BAZ}?check_suite_focus=true)
+- gork 4.2 [(success)](https://github.com/gap-system/PackageDistro/runs/{CURRENT_RUN_ID_GORK}?check_suite_focus=true) vs gork 4.2 [(skipped)](https://github.com/gap-system/PackageDistro/runs/{PREVIOUS_RUN_ID_GORK}?check_suite_focus=true)
 
 ## :heavy_multiplication_x: :heavy_multiplication_x: Packages that now skipped
 
 1 package(s) skipped tests only on the current version.
-- eggs 5.1.3 [(skipped)](https://github.com/gap-system/PackageDistro/runs/{CURRENT_RUN_ID_EGGS}?check_suite_focus=true) vs eggs 5.1.2 [(failure)](https://github.com/gap-system/PackageDistro/runs/{CURRENT_RUN_ID_EGGS}?check_suite_focus=true) <br>
+- eggs 5.1.3 [(skipped)](https://github.com/gap-system/PackageDistro/runs/{CURRENT_RUN_ID_EGGS}?check_suite_focus=true) vs eggs 5.1.2 [(failure)](https://github.com/gap-system/PackageDistro/runs/{CURRENT_RUN_ID_EGGS}?check_suite_focus=true)
 
 ## :exclamation: Packages still failing
 
 3 package(s) failed tests also on the previous version.
 <details><summary>Click to show packages!</summary>
+
 - bar 1.0 [(failure)](https://github.com/gap-system/PackageDistro/runs/{CURRENT_RUN_ID_BAR}?check_suite_focus=true)
 - foo 0.5 [(failure)](https://github.com/gap-system/PackageDistro/runs/{CURRENT_RUN_ID_FOO}?check_suite_focus=true)
 - quux 1.1 [(failure)](https://github.com/gap-system/PackageDistro/runs/{CURRENT_RUN_ID_QUUX}?check_suite_focus=true)
