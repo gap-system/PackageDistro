@@ -20,7 +20,7 @@ We automatically detect package updates provided these rules are followed:
 1. The `PackageInfoURL` in the `PackageInfo.g` file of the current version of
    your package in the package distribution is valid and points to a copy of
    that file from the new version of your package.
-2. In that new `PackageInfo.g`, the `ArchiveURL` is valid (i.e. when one adds
+2. In this `PackageInfo.g` file, the `ArchiveURL` is valid (i.e. when one adds
    a file extension from `ArchiveFormats` it points to an archive containing
    your package).
 
@@ -42,7 +42,8 @@ There are several options how to do this.
 
 2. Send an email to <support@gap-system.org>, requesting that your package be added.
    Make sure to include a link to the `PackageInfo.g` file of your package.
-   Note that such requests are visible to only
+   Note that such requests are visible to only to a small group of people listed
+   [on this web page](https://www.gap-system.org/Contacts/People/supportgroup.html).
 
 3. Open a pull request to this repository manually: first run the script
    `tools/import_packages.py URL_OF_PACKAGEINFO_G` with a list of one or more
