@@ -80,7 +80,7 @@ as follows:
 2. Click "Run workflow" once to open a popup menu. There is a field there accepting
    a space separated list of `PackageInfo.g` URLs. Do so.
 3. Click on the new green "Run workflow" button to actually trigger the workflow
-4. You can now follow this action, it should only fun for about 5 minutes, and will
+4. You can now follow this action, it should only run for about 5 minutes, and will
    create a new pull request for each package you listed.
 
 Once the PR is created, a bunch of CI tests are started. Once they are completed,
