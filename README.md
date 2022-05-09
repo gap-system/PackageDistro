@@ -35,8 +35,8 @@ In the event that your package is to be moved to a new website, there are two wa
 to go about this that ensure we will still be able to pick up updates:
 1. If you still have access to the old location, simply upload the new `PackageInfo.g`
    file (containing the new URLs and of course also a new version number) in both
-   the old and the new location. The system then will as usually automatically detect it up and once the update
-   the update on the new URL, and once the update is accepted and merged, the system
+   the old and the new location. The system then will as usually automatically detect it,
+   and once the update is accepted and merged, the system
    will use only the new `PackageInfoURL`.
 2. If this is not possible, you can also submit the update as if it was a new package,
    using one of the options listed in the next section.
