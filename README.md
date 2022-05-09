@@ -24,13 +24,22 @@ We automatically detect package updates provided these rules are followed:
    a file extension from `ArchiveFormats` it points to an archive containing
    your package).
 
-We scan all of `PackageInfoURL` urls once every hour for updates. When a new
+We scan the `PackageInfoURL` for all packages in the distribution once every hour for updates. When a new
 version is detected this way, the package is downloaded and a new pull request
 for the update is opened on this repository. A bunch of CI tests are then
 started. Assuming they pass, a human will merge that PR, which means your
 update is accepted. If a problem is detected, we will instead contact you to
 discuss how to resolve it.
 
+In the event that your package is to be moved to a new website, there are two ways
+to go about this that ensure we will still be able to pick up updates:
+1. If you still have access to the old location, simply upload the new `PackageInfo.g`
+   file (containing the new URLs and of course also a new version number) in both
+   the old and the new location. The system then will as usually automatically detect it,
+   and once the update is accepted and merged, the system
+   will use only the new `PackageInfoURL`.
+2. If this is not possible, you can also submit the update as if it was a new package,
+   using one of the options listed in the next section.
 
 ### How to submit a new package
 
