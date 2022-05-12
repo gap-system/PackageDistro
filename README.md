@@ -2,7 +2,7 @@
 
 The GAP package distribution is managed via this repository: specifically, it
 contains the metadata of all the GAP packages in the distribution. We also
-upload snapshots the package distribution tarballs to appropriate release tags
+upload snapshots of the package distribution to appropriate release tags
 on this repository.
 
 ## High-level status dashboard
