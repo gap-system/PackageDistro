@@ -39,6 +39,7 @@ from utils import (
     error,
     warning,
     all_packages,
+    archive_url,
     metadata,
     metadata_fname,
     sha256,
@@ -112,10 +113,6 @@ def parse_pkginfo_files(pkginfo_paths: List[str]) -> List[Dict[str, Any]]:
     if result != 0:
         error("Something went wrong")
     return json.loads(output)
-
-
-def archive_url(pkg_json: Dict[str, Any]) -> str:
-    return pkg_json["ArchiveURL"] + pkg_json["ArchiveFormats"].split(" ")[0]
 
 
 def import_packages(pkginfo_paths: List[str]) -> None:
