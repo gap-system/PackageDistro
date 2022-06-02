@@ -126,6 +126,15 @@ jobs:
             echo "PR_LABEL=new package" >> $GITHUB_ENV
           fi
 
+      - name: "Prepare PR body text"
+        id: get-pr-body
+        run: |
+          body=$(tools/make_pr_body.py ${{ matrix.package }})
+          body="${body//'%'/'%25'}"
+          body="${body//$'\n'/'%0A'}"
+          body="${body//$'\r'/'%0D'}"
+          echo ::set-output name=body::$body
+
       # We set up a GitHub App in order to ensure that workflows are run on the PRs
       # created by us, following the instructions here:
       # <https://github.com/peter-evans/create-pull-request/blob/main/docs/concepts-guidelines.md#authenticating-with-github-app-generated-tokens>
@@ -137,14 +146,14 @@ jobs:
           app_id: ${{ secrets.APP_ID }}
           private_key: ${{ secrets.APP_PRIVATE_KEY }}
 
-      - uses: peter-evans/create-pull-request@v3
+      - uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ steps.generate-token.outputs.token }}
           # https://api.github.com/users/gap-package-distribution-bot%5Bbot%5D
           author: "gap-package-distribution-bot <100730870+gap-package-distribution-bot[bot]@users.noreply.github.com>"
           add-paths: packages/${{ matrix.package }}
           commit-message: "${{ env.PR_TITLE }}"
-          body: ""
+          body: ${{ steps.get-pr-body.outputs.body }}
           branch: automatic/${{ matrix.package }}
           delete-branch: true
           title: "${{ env.PR_TITLE }}"
