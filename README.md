@@ -146,6 +146,12 @@ following command once from the root of this repository:
 For information about what each script does, please consult its source, which
 should have comments explaining what it does and how to invoke it.
 
+If you need to make changes to the Python code, note that we are using the
+[`black`](https://github.com/psf/black) code formatter. Pull requests modifying
+or adding Python code must run `black` on all Python files in order to pass the
+test suite and be merged.
+
+
 
 ## Other directories
 
