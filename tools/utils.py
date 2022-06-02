@@ -92,8 +92,7 @@ def archive_name(pkg_name: str) -> str:
     )
 
 
-def archive_url(pkg_name: str) -> str:
-    pkg_json = metadata(pkg_name)
+def archive_url(pkg_json: Dict[str, Any]) -> str:
     return pkg_json["ArchiveURL"] + pkg_json["ArchiveFormats"].split(" ")[0]
 
 

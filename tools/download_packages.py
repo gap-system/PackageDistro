@@ -63,10 +63,10 @@ def download_archive(  # pylint: disable=inconsistent-return-statements
     if not os.path.exists(archive_dir):
         os.mkdir(archive_dir)
 
+    pkg_json = metadata(pkg_name)
     archive_fname = join(archive_dir, archive_name(pkg_name))
 
     if os.path.exists(archive_fname) and os.path.isfile(archive_fname):
-        pkg_json = metadata(pkg_name)
         archive_sha = sha256(archive_fname)
         if "ArchiveSHA256" in pkg_json and pkg_json["ArchiveSHA256"] != archive_sha:
             notice(
@@ -76,7 +76,7 @@ def download_archive(  # pylint: disable=inconsistent-return-statements
         else:
             notice(f"{archive_fname} already exists, not downloading again")
             return archive_fname
-    url = archive_url(pkg_name)
+    url = archive_url(pkg_json)
     notice(f"downloading {url} to {archive_fname}")
 
     for i in range(tries):

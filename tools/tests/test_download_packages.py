@@ -83,24 +83,24 @@ def test_archive_name(ensure_in_tests_dir):
 
 def test_archive_url():
     assert (
-        archive_url("aclib")
+        archive_url(metadata("aclib"))
         == "https://github.com/gap-packages/aclib/releases/download/v1.3.2/aclib-1.3.2.tar.gz"
     )
 
     assert (
-        archive_url("toricvarieties")
+        archive_url(metadata("toricvarieties"))
         == "https://github.com/homalg-project/ToricVarieties_project/releases/download/2021-11-17/ToricVarieties.zip"
     )
 
     # Non-existent file
     with pytest.raises(SystemExit) as e:
-        meta = archive_url("bananas")
+        meta = archive_url(metadata("bananas"))
     assert e.type == SystemExit
     assert e.value.code == 1
 
     # Bad json
     with pytest.raises(SystemExit) as e:
-        meta = archive_url("badjson")
+        meta = archive_url(metadata("badjson"))
     assert e.type == SystemExit
     assert e.value.code == 1
 
