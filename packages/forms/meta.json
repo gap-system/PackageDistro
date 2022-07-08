@@ -2,12 +2,17 @@
   "AbstractHTML": "This package can be used for work with sesquilinear and quadratic forms on finite vector spaces; objects that are used to describe polar spaces and classical groups.",
   "AcceptDate": "03/2009",
   "ArchiveFormats": ".tar.gz .zip .tar.bz2",
-  "ArchiveSHA256": "748aff55d88a5333117283c6797452bbb4d52148e7d3a21286229b03bb0c907f",
-  "ArchiveURL": "https://github.com/gap-packages/forms/releases/download/v1.2.7/forms-1.2.7",
+  "ArchiveSHA256": "9e84445aedf69e9a8a55b800bb5ce77695b8bb4e53691673612e376f13068805",
+  "ArchiveURL": "https://github.com/gap-packages/forms/releases/download/v1.2.8/forms-1.2.8",
+  "AutoDoc": {
+    "TitlePage": {
+      "Copyright": "&copyright; 2015-2022 by the authors<P/>\n\nThis package may be distributed under the terms and conditions of the GNU Public License Version 2 or (at your option) any later version.\n"
+    }
+  },
   "AvailabilityTest": null,
-  "BannerString": "---------------------------------------------------------------------\nLoading 'Forms' 1.2.7 (02/03/2022)\nby John Bamberg (http://school.maths.uwa.edu.au/~bamberg/)\n   Jan De Beule (http://www.debeule.eu)\nFor help, type: ?Forms \n---------------------------------------------------------------------\n",
+  "BannerString": "---------------------------------------------------------------------\nLoading 'Forms' 1.2.8 (09/07/2022)\nby John Bamberg (http://school.maths.uwa.edu.au/~bamberg/)\n   Jan De Beule (http://www.debeule.eu)\nFor help, type: ?Forms \n---------------------------------------------------------------------\n",
   "CommunicatedBy": "Leonard Soicher (London)",
-  "Date": "02/03/2022",
+  "Date": "09/07/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.9",
@@ -27,13 +32,13 @@
         "doc"
       ],
       "BookName": "Forms",
-      "HTMLStart": "doc/chap0.html",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "Forms - Sesquilinear and Quadratic",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "e36cd6786369713e139832abe3e90f64f27dc38d12dd0f19185e3b9ecadf3c32",
+  "PackageInfoSHA256": "c378493be6c0b3b03e6797d904f5ee240daa76e59e5b4e3b5fe1b54c75663125",
   "PackageInfoURL": "https://gap-packages.github.io/forms/PackageInfo.g",
   "PackageName": "Forms",
   "PackageWWWHome": "https://gap-packages.github.io/forms",
@@ -59,6 +64,17 @@
       "Place": "Brussels",
       "PostalAddress": "Department of Mathematics and Data Science\nVrije Universiteit Brussel\nPleinlaan 2\nB-1050 Brussel\nBelgium",
       "WWWHome": "http://www.debeule.eu"
+    },
+    {
+      "Email": "horn@mathematik.uni-kl.de",
+      "FirstNames": "Max",
+      "Institution": "TU Kaiserslautern",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "Horn",
+      "Place": "Kaiserslautern, Germany",
+      "PostalAddress": "Fachbereich Mathematik\nTU Kaiserslautern\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
+      "WWWHome": "https://www.quendi.de/math"
     }
   ],
   "README_URL": "https://gap-packages.github.io/forms/README",
@@ -69,5 +85,5 @@
   "Status": "accepted",
   "Subtitle": "Sesquilinear and Quadratic",
   "TestFile": "tst/testall.g",
-  "Version": "1.2.7"
+  "Version": "1.2.8"
 }
