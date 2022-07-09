@@ -31,7 +31,7 @@ ubtunu_deps = {
     "cddinterface": ["libcdd-dev"],
     "curlinterface": ["libcurl4-openssl-dev"],
     "float": ["libmpc-dev", "libmpfi-dev", "libmpfr-dev"],
-    "normalizinterface": ["libnormaliz-dev"],
+    "normalizinterface": ["libeantic-dev", "libflint-arb-dev", "libflint-dev"],
     "polymaking": ["polymake"],
     "ringsforhomalg": ["singular"],
     "singular": ["singular"],
