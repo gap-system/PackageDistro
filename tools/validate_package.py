@@ -91,7 +91,7 @@ def validate_package(archive_fname: str, pkgdir: str, pkg_name: str) -> None:
     # validate Status
     status = pkg_json["Status"]
     if not status in ["accepted", "deposited"]:
-        error(f"{pkg_name}: Status is {status}, should be 'accepted' or 'deposited'")
+        warning(f"{pkg_name}: Status is {status}, should be 'accepted' or 'deposited'")
 
     # validate PackageInfoURL
     data = download_to_memory(pkg_json["PackageInfoURL"])
