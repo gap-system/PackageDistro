@@ -44,10 +44,10 @@ from tempfile import TemporaryDirectory
 from typing import List
 
 from download_packages import download_archive
-from scan_for_updates import download_to_memory
 
 import utils
 from utils import (
+    download_to_memory,
     notice,
     warning,
     error,
@@ -93,15 +93,17 @@ def validate_package(archive_fname: str, pkgdir: str, pkg_name: str) -> None:
     if not status in ["accepted", "deposited"]:
         warning(f"{pkg_name}: Status is {status}, should be 'accepted' or 'deposited'")
 
-    # validate PackageInfoURL
+    # validate PackageInfoURL (download_to_memory raises an exception if download fails)
     data = download_to_memory(pkg_json["PackageInfoURL"])
-    if data == None:
-        error("PackageInfoURL is invalid")
+    # We deliberately do not compare the SHA256 of `data` against PackageInfoSHA256
+    # as it may be that a different version of the package was released in the meantime
 
-    # validate README_URL
+    # validate README_URL (download_to_memory raises an exception if download fails)
     data = download_to_memory(pkg_json["README_URL"])
-    if data == None:
-        error("README_URL is invalid")
+    # We could compare the SHA256 of `data` against the README in the package archive,
+    # but this is really unimportant, so it's simpler for everyone to just let mistakes
+    # here slide (there is an argument to be made that we should just drop README_URL
+    # completely anyway)
 
     # verify the SHA256 for the PackageInfo.g that we recorded as PackageInfoSHA256
     # matches what is in the tarball
@@ -120,18 +122,20 @@ def main(pkgs: List[str]) -> None:
 
     with TemporaryDirectory() as tempdir:
         for pkg_name in pkgs:
-            archive_fname = download_archive(archive_dir, pkg_name)
-            pkgdir = join(tempdir, validate_tarball(archive_fname))
-            shutil.unpack_archive(archive_fname, tempdir)
-            validate_package(archive_fname, pkgdir, pkg_name)
-            result, _ = utils.gap_exec(
-                f'ValidatePackagesArchive("{pkgdir}", "{pkg_name}");',
-                args=f"{dir_of_this_file}/validate_package.g",
-            )
-            if result != 0:
-                error(f"{pkg_name}: FAILED")
-            else:
-                notice(f"{pkg_name}: PASSED")
+            try:
+                archive_fname = download_archive(archive_dir, pkg_name)
+                pkgdir = join(tempdir, validate_tarball(archive_fname))
+                shutil.unpack_archive(archive_fname, tempdir)
+                validate_package(archive_fname, pkgdir, pkg_name)
+                result, _ = utils.gap_exec(
+                    f'ValidatePackagesArchive("{pkgdir}", "{pkg_name}");',
+                    args=f"{dir_of_this_file}/validate_package.g",
+                )
+                if result != 0:
+                    error(f"{pkg_name}: FAILED: ValidatePackagesArchive failed")
+            except Exception as e:
+                error(f"{pkg_name}: FAILED: {e}")
+            notice(f"{pkg_name}: PASSED")
 
 
 if __name__ == "__main__":

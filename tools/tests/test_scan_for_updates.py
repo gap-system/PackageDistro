@@ -10,6 +10,7 @@ import os
 import shutil
 import sys
 from os.path import exists, join
+import requests
 
 import pytest
 
@@ -18,13 +19,12 @@ sys.path.insert(
 )
 
 from scan_for_updates import (
-    download_to_memory,
     main,
     scan_for_one_update,
     scan_for_updates,
 )
 
-from utils import gap_exec, metadata, sha256
+from utils import download_to_memory, gap_exec, metadata, sha256
 
 
 @pytest.fixture
@@ -56,15 +56,12 @@ def test_sha256(ensure_in_tests_dir):
 
 
 def test_download_to_memory(ensure_in_tests_dir):
-    assert download_to_memory(metadata("aclib")["PackageInfoURL"])
+    assert download_to_memory("https://gap-packages.github.io/aclib/PackageInfo.g")
 
-    with pytest.raises(SystemExit) as e:
-        download_to_memory(metadata("badjson")["PackageInfoURL"])
-    assert e.type == SystemExit
-    assert e.value.code == 1
-
-    # Intentionally messed up the url field
-    assert not download_to_memory(metadata("toricvarieties")["PackageInfoURL"])
+    with pytest.raises(requests.HTTPError) as e:
+        download_to_memory("https://gap-packages.github.io/BADURL.bad.bad")
+    assert e.type == requests.HTTPError
+    assert e.value.response.status_code == 404
 
 
 def test_exec_gap(ensure_in_tests_dir):

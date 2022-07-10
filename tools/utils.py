@@ -51,10 +51,17 @@ def sha256(fname: str) -> str:
 def download(url: str, dst: str) -> None:
     """Download the file at the given URL `url` to the file with path `dst`."""
     response = requests.get(url, stream=True)
+    response.raise_for_status()  # raise a meaningful (?) exception if there was e.g. a 404 error
     with open(dst, "wb") as f:
         for chunk in response.raw.stream(16384, decode_content=False):
             if chunk:
                 f.write(chunk)
+
+
+def download_to_memory(url: str) -> bytes:
+    response = requests.get(url)
+    response.raise_for_status()
+    return response.content
 
 
 def normalize_pkg_name(pkg_name: str) -> str:
