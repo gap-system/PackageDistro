@@ -27,6 +27,7 @@ jobs:
   detect-changes:
     name: "Detect affected packages"
     runs-on: ubuntu-latest
+    if: ${{ !contains( github.event.pull_request.labels.*.name, 'skip tests') }}
     outputs:
       modified: ${{ steps.modified.outputs.modified }}
     steps:
