@@ -2,12 +2,12 @@
   "AbstractHTML": "This package provides some functions for group cohomology and algebraic topology. ",
   "AcceptDate": "03/2006",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "333721ee47570973d79ff66da1fef09e662494d51abada62f54bb789753407da",
-  "ArchiveURL": "https://github.com/gap-packages/hap/releases/download/v1.44/hap-1.44",
+  "ArchiveSHA256": "a30b740329ef71e8ea19315f8728f4eab067a5581520fc39b8fa4c2c239fc897",
+  "ArchiveURL": "https://github.com/gap-packages/hap/releases/download/v1.46/hap-1.46",
   "AvailabilityTest": null,
-  "BannerString": "Loading HAP 1.44 ...\n",
+  "BannerString": "Loading HAP 1.46 ...\n",
   "CommunicatedBy": "Derek Holt (Warwick)",
-  "Date": "06/07/2022",
+  "Date": "25/07/2022",
   "Dependencies": {
     "ExternalConditions": [
       [
@@ -125,7 +125,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "4615fd5b630c6e0405d86bc61341efc5fdd4a1c1caab59366a303ffed62644e4",
+  "PackageInfoSHA256": "816fc3bbe36e911288c662c958595acb20331d2039798c3b29659f71a11b3b3b",
   "PackageInfoURL": "https://gap-packages.github.io/hap/PackageInfo.g",
   "PackageName": "HAP",
   "PackageWWWHome": "https://gap-packages.github.io/hap",
@@ -150,5 +150,5 @@
   "Status": "accepted",
   "Subtitle": "Homological Algebra Programming",
   "TestFile": "tst/testall.g",
-  "Version": "1.44"
+  "Version": "1.46"
 }
