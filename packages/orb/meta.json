@@ -1,15 +1,15 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">orb</span> package is about enumerating orbits in various ways.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "5d44d52cf7ae7ab6ad1208d6ed563f3dc73df10e31a71024a1f9b7ba7dd71427",
-  "ArchiveURL": "https://github.com/gap-packages/orb/releases/download/v4.8.4/orb-4.8.4",
+  "ArchiveSHA256": "1c88a8ee980cdfd135c83eac9ebf8f35a2961eee3fb7e97d229e595831a0a6db",
+  "ArchiveURL": "https://github.com/gap-packages/orb/releases/download/v4.8.5/orb-4.8.5",
   "AutoDoc": {
     "TitlePage": {
-      "Copyright": "&copyright; 2005-2014 by Jürgen Müller, Max Neunhöffer and Felix Noeske<P/>\n\nThis program is free software: you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation, either version 3 of the License, or\n(at your option) any later version.\n\nThis program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License\nalong with this program.  If not, see\n<URL><Link>http://www.gnu.org/licenses/</Link></URL>.\n"
+      "Copyright": "&copyright; 2005-2014 by Jürgen Müller, Max Neunhöffer and Felix Noeske<P/>\n\nThis program is free software: you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation, either version 3 of the License, or\n(at your option) any later version.\n\nThis program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License\nalong with this program.  If not, see\n<URL><Link>https://www.gnu.org/licenses/</Link></URL>.\n"
     }
   },
   "AvailabilityTest": null,
-  "Date": "07/09/2021",
+  "Date": "25/07/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.9",
@@ -35,13 +35,13 @@
         "doc"
       ],
       "BookName": "orb",
-      "HTMLStart": "doc/chap0.html",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "Methods to enumerate orbits",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "4837adc8c9c88e0ba77fe9ba5bc8ee163a14511192d162b1dfc9d6f0fa18aa49",
+  "PackageInfoSHA256": "d44771dbb50ab9555719b8f754509239627ff0421c336dc3610a31657a26241c",
   "PackageInfoURL": "https://gap-packages.github.io/orb/PackageInfo.g",
   "PackageName": "orb",
   "PackageWWWHome": "https://gap-packages.github.io/orb",
@@ -97,5 +97,5 @@
   "Status": "deposited",
   "Subtitle": "Methods to enumerate orbits",
   "TestFile": "tst/testall.g",
-  "Version": "4.8.4"
+  "Version": "4.8.5"
 }
