@@ -2,22 +2,22 @@
   "AbstractHTML": "This package provides a catalog of crystallographic groups of dimensions 2, 3, and 4 which covers most of the data contained in the book <em>Crystallographic groups of four-dimensional space</em> by H. Brown, R. B&uuml;low, J. Neub&uuml;ser, H. Wondratschek, and H. Zassenhaus (John Wiley, New York, 1978). Methods for the computation with these groups are provided by the package <span class=\"pkgname\">Cryst</span>, which must be installed as well.",
   "AcceptDate": "02/2000",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "2326a766b328dbf006d84aecf96788724eb225b873d6a174e01fd0c79b576873",
-  "ArchiveURL": "https://www.math.uni-bielefeld.de/~gaehler/gap45/CrystCat/crystcat-1.1.9",
+  "ArchiveSHA256": "0e2e568ed054c83312e56b52da26955742034814c85609eb69524a1154d8f2bc",
+  "ArchiveURL": "https://www.math.uni-bielefeld.de/~gaehler/gap/CrystCat/crystcat-1.1.10",
   "AvailabilityTest": null,
   "BinaryFiles": [
     "doc/manual.pdf",
     "doc/manual.dvi"
   ],
   "CommunicatedBy": "Herbert Pahlings (Aachen)",
-  "Date": "28/05/2019",
+  "Date": "29/07/2022",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">=4.5",
+    "GAP": ">=4.11",
     "NeededOtherPackages": [
       [
         "Cryst",
-        ">=4.1.8"
+        ">=4.1.24"
       ]
     ],
     "SuggestedOtherPackages": []
@@ -34,7 +34,6 @@
         "doc",
         "htm"
       ],
-      "Autoload": true,
       "BookName": "CrystCat",
       "HTMLStart": "htm/chapters.htm",
       "LongTitle": "The crystallographic groups catalog",
@@ -42,10 +41,10 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "cb968f2020adb668794993b0e3a7e648af82562ed80be3c391c86a77ff956071",
-  "PackageInfoURL": "https://www.math.uni-bielefeld.de/~gaehler/gap45/CrystCat/PackageInfo.g",
+  "PackageInfoSHA256": "a6593bc65416e1c5dfa0f5985897870bead2d9741470c52780a902929952bff9",
+  "PackageInfoURL": "https://www.math.uni-bielefeld.de/~gaehler/gap/CrystCat/PackageInfo.g",
   "PackageName": "CrystCat",
-  "PackageWWWHome": "https://www.math.uni-bielefeld.de/~gaehler/gap45/packages.php",
+  "PackageWWWHome": "https://www.math.uni-bielefeld.de/~gaehler/gap/packages.php",
   "Persons": [
     {
       "Email": "Volkmar.Felsch@math.rwth-aachen.de",
@@ -68,7 +67,7 @@
       "WWWHome": "https://www.math.uni-bielefeld.de/~gaehler/"
     }
   ],
-  "README_URL": "https://www.math.uni-bielefeld.de/~gaehler/gap45/CrystCat/README.crystcat",
+  "README_URL": "https://www.math.uni-bielefeld.de/~gaehler/gap/CrystCat/README.crystcat",
   "SourceRepository": {
     "Type": "git",
     "URL": "https://github.com/gap-packages/crystcat"
@@ -77,5 +76,5 @@
   "Subtitle": "The crystallographic groups catalog",
   "SupportEmail": "gaehler@math.uni-bielefeld.de",
   "TestFile": "tst/testall.g",
-  "Version": "1.1.9"
+  "Version": "1.1.10"
 }
