@@ -1,9 +1,9 @@
 {
-  "AbstractHTML": "This package provides implementations of algorithms and methods for computation in certain infinite permutation groups. For an abstract, see <a href = \"https://gap-packages.github.io/rcwa/\">here</a>.",
+  "AbstractHTML": "This package provides implementations of algorithms and methods for computation in certain infinite permutation groups.",
   "AcceptDate": "04/2005",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "79d6edc596e784585a54c6318df1f0260a27652d97da5d74a0ea4a25b4dae371",
-  "ArchiveURL": "https://github.com/gap-packages/rcwa/releases/download/v4.6.4/rcwa-4.6.4",
+  "ArchiveSHA256": "1941aa4df9f03582a59fdcb32058cc63a219f3ba6bfed1615facd703f135f537",
+  "ArchiveURL": "https://github.com/gap-packages/rcwa/releases/download/v4.7.0/rcwa-4.7.0",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "<#Include SYSTEM \"abstract.xml\">",
@@ -12,9 +12,9 @@
     }
   },
   "AvailabilityTest": null,
-  "BannerString": "\nLoading RCWA 4.6.4 ([R]esidue-[C]lass-[W]ise [A]ffine groups)\n  by Stefan Kohl, stefan@mcs.st-and.ac.uk.\nSee ?RCWA:About for information about the package.\n\n",
+  "BannerString": "\nLoading RCWA 4.7.0 ([R]esidue-[C]lass-[W]ise [A]ffine groups)\n  by Stefan Kohl, sk239@st-andrews.ac.uk.\nSee ?RCWA:About for information about the package.\n\n",
   "CommunicatedBy": "Bettina Eick (Braunschweig)",
-  "Date": "24/03/2019",
+  "Date": "29/07/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.9.1",
@@ -64,19 +64,19 @@
       ],
       "Autoload": true,
       "BookName": "RCWA",
-      "HTMLStart": "doc/chap0.html",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "[R]esidue-[C]lass-[W]ise [A]ffine groups",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "3d924d40560b670275dbedadbf00bdc58bd64bcd72159159c958b743f30afb7b",
+  "PackageInfoSHA256": "affd5bfb2323c3cf4f0419beb8636a59d380d1be6ce24e21d62ab7fb24b7c359",
   "PackageInfoURL": "https://gap-packages.github.io/rcwa/PackageInfo.g",
   "PackageName": "RCWA",
   "PackageWWWHome": "https://gap-packages.github.io/rcwa/",
   "Persons": [
     {
-      "Email": "stefan@mcs.st-and.ac.uk",
+      "Email": "sk239@st-andrews.ac.uk",
       "FirstNames": "Stefan",
       "IsAuthor": true,
       "IsMaintainer": true,
@@ -92,5 +92,5 @@
   "Status": "accepted",
   "Subtitle": "Residue-Class-Wise Affine Groups",
   "TestFile": "tst/testall.g",
-  "Version": "4.6.4"
+  "Version": "4.7.0"
 }
