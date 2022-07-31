@@ -2,19 +2,19 @@
   "AbstractHTML": "The LOOPS package provides researchers in nonassociative algebra with a computational tool that integrates standard notions of loop theory with libraries of loops and group-theoretical algorithms of GAP. The package also expands GAP toward nonassociative structures.",
   "AcceptDate": "05/2015",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "497e42c4bdb587ff0be28a2ce75bbc58bbd95d98c7b8a5943a3e9b7f1405589c",
-  "ArchiveURL": "https://github.com/gap-packages/loops/releases/download/v3.4.1/loops-3.4.1",
+  "ArchiveSHA256": "91ffce0806518776f0d91164bb4a7bc2d613388762fc664bcdf304e576de35f2",
+  "ArchiveURL": "https://github.com/gap-packages/loops/releases/download/v3.4.2/loops-3.4.2",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "The LOOPS package provides researchers in nonassociative algebra with a computational tool that integrates standard notions of loop theory with libraries of loops and group-theoretical algorithms of GAP. The package also expands GAP toward nonassociative structures.",
-      "Acknowledgements": "\nWe thank the following people for sending us remarks and comments, and\nfor suggesting new functionality of the package: Muniru Asiru, Bjoern\nAssmann, Andreas Distler, Ale&#353; Dr&#225;pal, Graham Ellis, Steve\nFlammia, Kenneth W. Johnson, Michael K. Kinyon, Alexander Konovalov,\nFrank L&#252;beck, Jonathan D.H. Smith, David Stanovsk&#253; and Glen\nWhitney.\n\n<P/>The library of Moufang loops of order 243 was generated from data\nprovided by Michael C. Slattery and Ashley L. Zenisek. The library of\nright conjugacy closed loops of order less than 28 was generated from\ndata provided by Katharina Artic. The library of right Bruck loops of\norder 27, 81 was obtained jointly with Izabella Stuhl.\n\n<P/>Gábor P. Nagy was supported by OTKA grants F042959 and T043758, and\nPetr Vojtěchovský was supported by the 2006 and 2016 University of\nDenver PROF grants and the Simons Foundation Collaboration Grant 210176.\n",
+      "Acknowledgements": "\nWe thank the following people for sending us remarks and comments, and\nfor suggesting new functionality of the package: Muniru Asiru, Bjoern\nAssmann, Andreas Distler, Ale&#353; Dr&#225;pal, Graham Ellis, Steve\nFlammia, Kenneth W. Johnson, Michael K. Kinyon, Olexandr Konovalov,\nFrank L&#252;beck, Jonathan D.H. Smith, David Stanovsk&#253; and Glen\nWhitney.\n\n<P/>The library of Moufang loops of order 243 was generated from data\nprovided by Michael C. Slattery and Ashley L. Zenisek. The library of\nright conjugacy closed loops of order less than 28 was generated from\ndata provided by Katharina Artic. The library of right Bruck loops of\norder 27, 81 was obtained jointly with Izabella Stuhl.\n\n<P/>Gábor P. Nagy was supported by OTKA grants F042959 and T043758, and\nPetr Vojtěchovský was supported by the 2006 and 2016 University of\nDenver PROF grants and the Simons Foundation Collaboration Grant 210176.\n",
       "Copyright": "\n<Index>License</Index>\n&copyright; 2005-2017 Gábor P. Nagy and Petr Vojtěchovský.<P/>\nThe &LOOPS; package is free software;\nyou can redistribute it and/or modify it under the terms of the\n<URL Text=\"GNU General Public License\">https://www.fsf.org/licenses/gpl.html</URL>\nas published by the Free Software Foundation; either version 2 of the License,\nor (at your option) any later version.\n",
       "Title": "The LOOPS Package"
     }
   },
   "AvailabilityTest": null,
   "CommunicatedBy": "Leonard Soicher (QMUL)",
-  "Date": "06/11/2018",
+  "Date": "31/07/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.8",
@@ -37,6 +37,7 @@
     "isomorphism of loops",
     "isotopism of loops"
   ],
+  "License": "GPL-2.0-or-later",
   "PackageDoc": [
     {
       "ArchiveURLSubset": [
@@ -50,14 +51,14 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "7bc269e88e99b0deb4eab4b6a9e12792076ab5279dfb4fdc79f9649f77cb0265",
+  "PackageInfoSHA256": "847e45081bd4b408f4e6eff492303b07f6b4164dac1548db7f58c1ab07846381",
   "PackageInfoURL": "https://gap-packages.github.io/loops/PackageInfo.g",
   "PackageName": "loops",
   "PackageWWWHome": "https://gap-packages.github.io/loops/",
   "Persons": [
     {
       "Email": "nagyg@math.u-szeged.hu",
-      "FirstNames": "Gábor",
+      "FirstNames": "Gábor Péter",
       "Institution": "University of Szeged",
       "IsAuthor": true,
       "IsMaintainer": true,
@@ -86,5 +87,5 @@
   "Status": "accepted",
   "Subtitle": "Computing with quasigroups and loops in GAP",
   "TestFile": "tst/testall.g",
-  "Version": "3.4.1"
+  "Version": "3.4.2"
 }
