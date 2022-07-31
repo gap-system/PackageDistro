@@ -1,15 +1,15 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">genss</span> package implements the    randomised Schreier-Sims algorithm to compute a stabiliser chain    and a base and strong generating set for arbitrary finite groups.",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSHA256": "7d8bc57b4552d692e74beefe3e3524016e8b5bf70d96bcc6ece9881cf986fe3a",
-  "ArchiveURL": "https://github.com/gap-packages/genss/releases/download/v1.6.6/genss-1.6.6",
+  "ArchiveSHA256": "25c70472201532665751b548d6395e57351e7c10ac2660807b954fdd792e4257",
+  "ArchiveURL": "https://github.com/gap-packages/genss/releases/download/v1.6.7/genss-1.6.7",
   "AutoDoc": {
     "TitlePage": {
       "Copyright": "&copyright; 2006-2014 by Max Neunhöffer and Felix Noeske<P/>\n\nThis package may be distributed under the terms and conditions of the\nGNU Public License Version 3 or higher.\n"
     }
   },
   "AvailabilityTest": null,
-  "Date": "18/07/2018",
+  "Date": "31/07/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.9",
@@ -43,13 +43,13 @@
         "doc"
       ],
       "BookName": "genss",
-      "HTMLStart": "doc/chap0.html",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "Generic Schreier-Sims",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "2de9844a1b5d1fcd33871f4568b56c31fad8f3a7b6bd54f6014b67e3778db5b7",
+  "PackageInfoSHA256": "fd50ff75ede969616e8fd408d062d3982dd8a0f670c2ecfd1ceee9488961d9fe",
   "PackageInfoURL": "https://gap-packages.github.io/genss/PackageInfo.g",
   "PackageName": "genss",
   "PackageWWWHome": "https://gap-packages.github.io/genss",
@@ -75,14 +75,14 @@
       "WWWHome": "http://www.math.rwth-aachen.de/~Felix.Noeske"
     },
     {
-      "Email": "max.horn@uni-siegen.de",
+      "Email": "horn@mathematik.uni-kl.de",
       "FirstNames": "Max",
-      "Institution": "Universität Siegen",
+      "Institution": "TU Kaiserslautern",
       "IsAuthor": false,
       "IsMaintainer": true,
       "LastName": "Horn",
-      "Place": "Siegen",
-      "PostalAddress": "Department Mathematik\nUniversität Siegen\nWalter-Flex-Straße 3\n57072 Siegen\nGermany",
+      "Place": "Kaiserslautern, Germany",
+      "PostalAddress": "Fachbereich Mathematik\nTU Kaiserslautern\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
       "WWWHome": "https://www.quendi.de/math"
     }
   ],
@@ -94,5 +94,5 @@
   "Status": "deposited",
   "Subtitle": "Generic Schreier-Sims",
   "TestFile": "tst/testall.g",
-  "Version": "1.6.6"
+  "Version": "1.6.7"
 }
