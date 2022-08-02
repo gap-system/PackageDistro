@@ -1,8 +1,8 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">Utils</span> package provides a collection   of utility functions gleaned from many packages.",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "20a7c53a3b446615992c3e9fa355bb01a5d000c82ba3cd823a8298b1a25b4a53",
-  "ArchiveURL": "https://github.com/gap-packages/utils/releases/download/v0.74/utils-0.74",
+  "ArchiveSHA256": "f216e4d3ce6803d78c1191fa08d1e780bfd5faa89eb65579bcffbb6cf2718983",
+  "ArchiveURL": "https://github.com/gap-packages/utils/releases/download/v0.75/utils-0.75",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "The &Utils; package provides a space for utility functions in a variety of &GAP; packages to be collected together into a single package.  In this way it is hoped that they will become more visible to package authors.\n<P/>\nAny package author who transfers a function to &Utils; will become an author of &Utils;.\n<P/>\nIf deemed appropriate, functions may also be transferred from the main library.\n<P/>\nBug reports, suggestions and comments are, of course, welcome.\nPlease contact the last author at <Email>c.d.wensley@bangor.ac.uk</Email> or submit an issue at the GitHub repository <URL>https://github.com/gap-packages/utils/issues/</URL>.\n",
@@ -12,8 +12,8 @@
   },
   "Autoload": false,
   "AvailabilityTest": null,
-  "BannerString": "Loading Utils 0.74 for GAP 4.11 - a collection of utility functions.\n",
-  "Date": "09/07/2022",
+  "BannerString": "Loading Utils 0.75 for GAP 4.12 - a collection of utility functions.\n",
+  "Date": "02/08/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10.1",
@@ -49,7 +49,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "33179ded06d484ead26a3a4b59b72635da9dd8503857d5a6dc4e4db42331e8ca",
+  "PackageInfoSHA256": "a376e8f6e6d8dd4721901cbbacdf65214ee592a95ab770dd0ca45678e3ca441c",
   "PackageInfoURL": "https://gap-packages.github.io/utils/PackageInfo.g",
   "PackageName": "utils",
   "PackageWWWHome": "https://gap-packages.github.io/utils",
@@ -125,5 +125,5 @@
   "Status": "deposited",
   "Subtitle": "Utility functions in GAP",
   "TestFile": "tst/testall.g",
-  "Version": "0.74"
+  "Version": "0.75"
 }
