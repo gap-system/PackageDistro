@@ -1,15 +1,15 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">matgrp</span> package provides an interface to the solvable radical functionality for matrix groups, building on constructive recognition.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "f852faae6606d40e004127c50021e0759ff31e770f78d527bb3277e7430bf2b5",
-  "ArchiveURL": "http://www.math.colostate.edu/~hulpke/matgrp/matgrp0.64",
+  "ArchiveSHA256": "4f773cadc9548553fbe3429acbda4a82b9e0eb110e11888663d5ca2079a7862f",
+  "ArchiveURL": "http://www.math.colostate.edu/~hulpke/matgrp/matgrp0.70",
   "Autoload": false,
   "AvailabilityTest": null,
   "BannerString": "Matrix Group Interface routines by A. Hulpke\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n",
-  "Date": "25/08/2020",
+  "Date": "01/03/2022",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">=4.7",
+    "GAP": ">=4.12",
     "NeededOtherPackages": [
       [
         "recog",
@@ -55,7 +55,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "32daa40880e032ab48776fe3410288a9ace920d4804d4b47bc98324d8f28bfc5",
+  "PackageInfoSHA256": "b6d3cd7842a16d169b582226e04141b395a6ca6e167c9aeef5a6fd7297398d28",
   "PackageInfoURL": "http://www.math.colostate.edu/~hulpke/matgrp/PackageInfo.g",
   "PackageName": "matgrp",
   "PackageWWWHome": "http://www.math.colostate.edu/~hulpke/matgrp",
@@ -79,5 +79,5 @@
   "Status": "deposited",
   "Subtitle": "Matric Group Interface Routines",
   "TestFile": "tst/testall.g",
-  "Version": "0.64"
+  "Version": "0.70"
 }
