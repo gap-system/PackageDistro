@@ -1,0 +1,58 @@
+{
+  "AbstractHTML": "",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSHA256": "6383af43e49cf0242a31c55bdfeb6a28206ed0d754b66f7e20d23f5f873dd3be",
+  "ArchiveURL": "https://www.math.rwth-aachen.de/~Frank.Luebeck/gap/StandardFF//StandardFF-0.9.1",
+  "AvailabilityTest": null,
+  "Date": "05/07/2022",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">= 4.12",
+    "NeededOtherPackages": [
+      [
+        "GAPDoc",
+        ">= 1.6.5"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "IssueTrackerURL": "https://github.com/frankluebeck/StandardFF",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "StandardFF",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "Standard finite fields and cyclic generators",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSHA256": "818d14f704f45f30183d9bd2316617e42656eb9340edbb159020e1e0aafbfef0",
+  "PackageInfoURL": "https://www.math.rwth-aachen.de/~Frank.Luebeck/gap/StandardFF/PackageInfo.g",
+  "PackageName": "StandardFF",
+  "PackageWWWHome": "https://www.math.rwth-aachen.de/~Frank.Luebeck/gap/StandardFF/",
+  "Persons": [
+    {
+      "Email": "Frank.Luebeck@Math.RWTH-Aachen.De",
+      "FirstNames": "Frank",
+      "Institution": "Lehrstuhl für Algebra und Zahlentheorie, RWTH Aachen",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Lübeck",
+      "Place": "Aachen",
+      "PostalAddress": "Dr.Frank Lübeck\nLehrstuhl für Algebra und Zahlentheorie\nRWTH Aachen\nPontdriesch 14/16\n52062 Aachen\nGERMANY\n",
+      "WWWHome": "https://www.math.rwth-aachen.de/~Frank.Luebeck/"
+    }
+  ],
+  "README_URL": "https://www.math.rwth-aachen.de/~Frank.Luebeck/gap/StandardFF/README.txt",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/frankluebeck/StandardFF"
+  },
+  "Status": "dev",
+  "Subtitle": "Standard finite fields and cyclic generators",
+  "TestFile": "tst/testall.g",
+  "Version": "0.9.1"
+}
