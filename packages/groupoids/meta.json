@@ -2,8 +2,8 @@
   "AbstractHTML": "The groupoids package provides a collection of functions for computing with finite groupoids, graph of groups, and graphs of groupoids. These are based on the more basic structures of magmas with objects and their mappings. It provides functions for normal forms of elements in Free Products with Amalgamation and in HNN extensions. Up until April 2017 this package was named Gpd.",
   "AcceptDate": "05/2015",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "40c1e8e88a7dcc3c4c831ae80ad39e35fe44825a2dd39a18c62218726c07a010",
-  "ArchiveURL": "https://github.com/gap-packages/groupoids/releases/download/v1.69/groupoids-1.69",
+  "ArchiveSHA256": "8b0e54a55ffaa80c432bb14e3f5c6638b71e92a549d535cd8c4749c5bc2b2c84",
+  "ArchiveURL": "https://github.com/gap-packages/groupoids/releases/download/v1.71/groupoids-1.71",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "The &groupoids; package provides functions for computation with\ngroupoids (categories with every arrow invertible) and their morphisms; for graphs of groups, and graphs of groupoids.\nThe most basic structure introduced is that of <E>magma with objects</E>, followed by <E>semigroup with objects</E>, then <E>monoid with objects</E> and finally <E>groupoid</E> which is a <E>group with objects</E>.\n <P/>It provides normal forms for Free Products with Amalgamation and for HNN-extensions when the initial groups have rewrite systems and the subgroups have finite index. This is described in Section <Ref Sect=\"sec-gphgps\"/>. It is planned to move this section to a new package <Package>Rewriting</Package> in time for version 4.11 of &GAP;.\n<P/>The &groupoids; package was originally implemented in 2000 (as <Package>GraphGpd</Package>) when the first author was studying for a Ph.D. in Bangor.\n <P/>The package was then renamed <Package>Gpd</Package> and version 1.07 was released in July 2011, ready for &GAP; 4.5.\n <P/><Package>Gpd</Package> became an accepted &GAP; package in May 2015.\n <P/>In April 2017 the package was renamed again, as <Package>groupoids</Package>.\n <P/>Recent versions implement many of the constructions described in the paper <Cite Key='AlWe' /> for automorphisms of groupoids.\n <P/>Bug reports, comments, suggestions for additional features, and offers to implement some of these, will all be very welcome.\n <P/>Please submit any issues at <URL>https://github.com/gap-packages/groupoids/issues/</URL> or send an email to the second author at <Email>c.d.wensley@bangor.ac.uk</Email>.\n <P/>",
@@ -13,9 +13,9 @@
   },
   "Autoload": false,
   "AvailabilityTest": null,
-  "BannerString": "Loading groupoids 1.69 (algorithms for finite groupoids)\nby Emma Moore and Chris Wensley (http://pages.bangor.ac.uk/~mas023/)\n--------------------------------------------------------------------\n",
+  "BannerString": "Loading groupoids 1.71 (algorithms for finite groupoids)\nby Emma Moore and Chris Wensley (https://github.com/cdwensley)\n--------------------------------------------------------------\n",
   "CommunicatedBy": "Derek Holt (Warwick)",
-  "Date": "15/11/2021",
+  "Date": "07/08/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10.1",
@@ -34,7 +34,7 @@
       ],
       [
         "utils",
-        ">= 0.63"
+        ">= 0.76"
       ]
     ],
     "SuggestedOtherPackages": [
@@ -61,13 +61,13 @@
       ],
       "Autoload": true,
       "BookName": "groupoids",
-      "HTMLStart": "doc/chap0.html",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "Finite Groupoids and Graphs of Groups",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "9eafb6e8b9aab6b606b9a9fc2d487eb4d6350689224dc28025318429b0cae7e0",
+  "PackageInfoSHA256": "df813e1f664962779ec98981b745138e9332ffc9f52231d32eae6b42b0db2ed5",
   "PackageInfoURL": "https://gap-packages.github.io/groupoids/PackageInfo.g",
   "PackageName": "groupoids",
   "PackageWWWHome": "https://gap-packages.github.io/groupoids/",
@@ -99,5 +99,5 @@
   "Subtitle": "Calculations with finite groupoids and their homomorphisms",
   "SupportEmail": "c.d.wensley@bangor.ac.uk",
   "TestFile": "tst/testall.g",
-  "Version": "1.69"
+  "Version": "1.71"
 }
