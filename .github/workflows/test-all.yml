@@ -270,6 +270,13 @@ jobs:
           PKG=${{ matrix.package }}
           gap --quitonbreak -r -c "
                 pkgname := \"$PKG\";
+
+                # WORKAROUNDS for various packages which need additional packages
+                if pkgname = \"yangbaxter\" then
+                  # avoid 'does not perform well for such groups' messages
+                  SetInfoLevel(InfoPerformance, 0);
+                fi;
+
                 SetInfoLevel(InfoPackageLoading, PACKAGE_DEBUG);
                 LoadPackage(pkgname);
                 SetInfoLevel(InfoPackageLoading, PACKAGE_ERROR);
@@ -301,6 +308,8 @@ jobs:
                   LoadPackage(\"fga\" : OnlyNeeded);
                 elif pkgname = \"yangbaxter\" then
                   LoadPackage(\"cryst\" : OnlyNeeded);
+                  # avoid 'does not perform well for such groups' messages
+                  SetInfoLevel(InfoPerformance, 0);
                 fi;
 
                 SetInfoLevel(InfoPackageLoading, PACKAGE_DEBUG);
