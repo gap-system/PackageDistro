@@ -2,8 +2,8 @@
   "AbstractHTML": "",
   "AcceptDate": "10/2004",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "eda37e5e285866c52784cdc3b185d5e1eaf9d8278880cfa79ae0c3acd2e07486",
-  "ArchiveURL": "https://github.com/gap-packages/sophus/releases/download/v1.26/sophus-1.26",
+  "ArchiveSHA256": "cd7f173d7122b1e72a1f8ae3131e7685cd586dd362bd7efd21fe542fac5411c3",
+  "ArchiveURL": "https://github.com/gap-packages/sophus/releases/download/v1.27/sophus-1.27",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "\n&Sophus; is a GAP4 package to compute with nilpotent\nLie algebras over finite prime fields. In particular, the package can be\nused to compute certain central extensions and the automorphism group\nof such Lie algebras. &Sophus; also enables its user to test\nisomorphism between two nilpotent Lie algebras. The author of the\npackage used it to construct all Lie algebras of dimension at most 9\nover <Math>\\mathbb F_2</Math>.\n",
@@ -13,7 +13,7 @@
   },
   "AvailabilityTest": null,
   "CommunicatedBy": "Olexandr Konovalov (Zaporizhzhia)",
-  "Date": "05/08/2022",
+  "Date": "09/08/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.8",
@@ -43,7 +43,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "2581ff02dae322da7a9c950e9c3df6d037a9ebeb36996732ae9b058f780f1bfd",
+  "PackageInfoSHA256": "82d4f4767c590341108445e2a5bb5e4c5c0523d11ce32c0b6ddbe53a949004ff",
   "PackageInfoURL": "https://gap-packages.github.io/sophus/PackageInfo.g",
   "PackageName": "Sophus",
   "PackageWWWHome": "https://gap-packages.github.io/sophus/",
@@ -75,5 +75,5 @@
   "Status": "accepted",
   "Subtitle": "Computing in nilpotent Lie algebras",
   "TestFile": "tst/testall.g",
-  "Version": "1.26"
+  "Version": "1.27"
 }
