@@ -304,6 +304,8 @@ jobs:
                   LoadPackage(\"nq\" : OnlyNeeded);
                 elif pkgname = \"sglppow\" then
                   LoadPackage(\"liepring\" : OnlyNeeded);
+                elif pkgname = \"standardff\" then
+                  LoadPackage(\"factint\" : OnlyNeeded);
                 elif pkgname = \"ugaly\" then
                   LoadPackage(\"fga\" : OnlyNeeded);
                 elif pkgname = \"yangbaxter\" then
