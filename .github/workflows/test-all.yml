@@ -271,15 +271,16 @@ jobs:
           gap --quitonbreak -r -c "
                 pkgname := \"$PKG\";
 
+                SetInfoLevel(InfoPackageLoading, PACKAGE_DEBUG);
+                LoadPackage(pkgname);
+                SetInfoLevel(InfoPackageLoading, PACKAGE_ERROR);
+
                 # WORKAROUNDS for various packages which need additional packages
                 if pkgname = \"yangbaxter\" then
                   # avoid 'does not perform well for such groups' messages
                   SetInfoLevel(InfoPerformance, 0);
                 fi;
 
-                SetInfoLevel(InfoPackageLoading, PACKAGE_DEBUG);
-                LoadPackage(pkgname);
-                SetInfoLevel(InfoPackageLoading, PACKAGE_ERROR);
                 res:=TestPackage(pkgname);
                 FORCE_QUIT_GAP(res);
                 "
@@ -293,7 +294,11 @@ jobs:
           gap -A --quitonbreak -r -c "
                 pkgname := \"$PKG\";
 
-                # WORKAROUNDS for various packages which need additional packages
+                SetInfoLevel(InfoPackageLoading, PACKAGE_DEBUG);
+                LoadPackage(pkgname : OnlyNeeded);
+                SetInfoLevel(InfoPackageLoading, PACKAGE_ERROR);
+
+                # WORKAROUNDS for various packages whose tests need additional packages
                 if pkgname = \"agt\" then
                   LoadPackage(\"grape\" : OnlyNeeded);
                 elif pkgname = \"ctbllib\" then
@@ -311,10 +316,6 @@ jobs:
                   # avoid 'does not perform well for such groups' messages
                   SetInfoLevel(InfoPerformance, 0);
                 fi;
-
-                SetInfoLevel(InfoPackageLoading, PACKAGE_DEBUG);
-                LoadPackage(pkgname : OnlyNeeded);
-                SetInfoLevel(InfoPackageLoading, PACKAGE_ERROR);
 
                 res:=TestPackage(pkgname);
                 FORCE_QUIT_GAP(res);
