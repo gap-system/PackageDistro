@@ -9,12 +9,14 @@
 ##
 ##  SPDX-License-Identifier: GPL-2.0-or-later
 ##
+import glob
+import gzip
 import json
+import os
 import shutil
 import subprocess
 import sys
-import os
-import gzip
+
 from tempfile import TemporaryDirectory
 from download_packages import download_archive
 
@@ -68,6 +70,23 @@ def make_packages_tar_gz(
                     os.path.join(unpack, pkg_name), os.path.join(tempdir, pkg_name)
                 )
             os.rmdir(unpack)
+
+        # cleanup step: remove all PACKAGE/doc/*.aux etc. etc. files
+        for ext in [
+            "aux",
+            "bbl",
+            "blg",
+            "brf",
+            "idx",
+            "ilg",
+            "ind",
+            "log",
+            "out",
+            "pnr",
+            "toc",
+        ]:
+            for f in glob.glob(f"{tempdir}/*/doc/*.{ext}"):
+                os.remove(f)
 
         full_tarname = os.path.join(release_dir, tarname)
         print("Creating final tarball: ", full_tarname)
