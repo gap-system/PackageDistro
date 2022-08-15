@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "053630c7102eeabe2ada21e1ea563dc519a0233a23737692abb17b7f825e7c77",
-  "ArchiveURL": "https://github.com/gap-packages/curlInterface/releases/download/v2.2.2/curlInterface-2.2.2",
+  "ArchiveSHA256": "98cf35028461bb471af3afa5ca4742fac6f87252a9ac0f605a39ba5a774e9069",
+  "ArchiveURL": "https://github.com/gap-packages/curlInterface/releases/download/v2.2.3/curlInterface-2.2.3",
   "AvailabilityTest": null,
-  "Date": "22/02/2022",
+  "Date": "15/08/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.9",
@@ -24,13 +24,13 @@
         "doc"
       ],
       "BookName": "curl",
-      "HTMLStart": "doc/chap0.html",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "Simple Web Access",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "ec906ea13126720d34162313c1884d0f946aacd73cc09e04c529d863d9961980",
+  "PackageInfoSHA256": "0f225a63fc2944531a0f97d266ee4d42bc4323d565a2fa851ca1ed850f2547f0",
   "PackageInfoURL": "https://gap-packages.github.io/curlInterface/PackageInfo.g",
   "PackageName": "curlInterface",
   "PackageWWWHome": "https://gap-packages.github.io/curlInterface/",
@@ -52,10 +52,10 @@
       "Institution": "University of St Andrews",
       "IsAuthor": true,
       "IsMaintainer": true,
-      "LastName": "Torpey",
+      "LastName": "Young",
       "Place": "St Andrews",
       "PostalAddress": "School of Computer Science\nUniversity of St Andrews\nJack Cole Building, North Haugh\nSt Andrews, Fife, KY16 9SX\nUnited Kingdom",
-      "WWWHome": "http://www-groups.mcs.st-andrews.ac.uk/~mct25/"
+      "WWWHome": "http://mct25.host.cs.st-andrews.ac.uk/"
     }
   ],
   "README_URL": "https://gap-packages.github.io/curlInterface/README.md",
@@ -66,5 +66,5 @@
   "Status": "deposited",
   "Subtitle": "Simple Web Access",
   "TestFile": "tst/testall.g",
-  "Version": "2.2.2"
+  "Version": "2.2.3"
 }
