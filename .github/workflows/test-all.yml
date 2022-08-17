@@ -302,6 +302,8 @@ jobs:
                   LoadPackage(\"browse\" : OnlyNeeded);
                   LoadPackage(\"tomlib\" : OnlyNeeded);
                   LoadPackage(\"spinsym\" : OnlyNeeded);
+                elif pkgname = \"gapdoc\" then
+                  LoadPackage(\"browse\" : OnlyNeeded);
                 elif pkgname = \"guarana\" then
                   LoadPackage(\"nq\" : OnlyNeeded);
                 elif pkgname = \"hap\" then

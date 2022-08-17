@@ -31,6 +31,12 @@ ubtunu_deps = {
     "cddinterface": ["libcdd-dev"],
     "curlinterface": ["libcurl4-openssl-dev"],
     "float": ["libmpc-dev", "libmpfi-dev", "libmpfr-dev"],
+    "gapdoc": [
+        "texlive-latex-base",
+        "texlive-latex-recommended",
+        "texlive-latex-extra",
+        "texlive-fonts-recommended",
+    ],
     "localizeringforhomalg": ["singular"],
     "normalizinterface": ["libeantic-dev", "libflint-arb-dev", "libflint-dev"],
     "polymaking": ["polymake"],
