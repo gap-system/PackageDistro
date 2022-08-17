@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "label": "Tests",
-  "message": "133 pass, 4 fail, 17 skip",
+  "message": "135 pass, 3 fail, 16 skip",
   "color": "important",
   "namedLogo": "github"
 }
