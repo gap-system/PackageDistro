@@ -42,19 +42,19 @@ jobs:
     with:
       which-gap: master
 
-  # 4.11.1
-  test-all-4-11-1:
-    # If you change this name, you must adjust the corresponding prefix
-    # in the step of test-all.yml that calls tools/generate_test_status.py
-    name: "4.11.1"
-    uses: ./.github/workflows/test-all.yml
-    with:
-      which-gap: 4.11.1
-
-  update-latest-4-11:
-    name: "Upload 4.11.1 report"
-    needs: test-all-4-11-1
-    if: always()
-    uses: ./.github/workflows/update-latest-report.yml
-    with:
-      which-gap: 4.11.1
+  # 4.12.0
+  #test-all-release:
+  #  # If you change this name, you must adjust the corresponding prefix
+  #  # in the step of test-all.yml that calls tools/generate_test_status.py
+  #  name: "4.12.0"
+  #  uses: ./.github/workflows/test-all.yml
+  #  with:
+  #    which-gap: 4.12.0
+#
+  #update-latest-release:
+  #  name: "Upload 4.12.0 report"
+  #  needs: test-all-release
+  #  if: always()
+  #  uses: ./.github/workflows/update-latest-report.yml
+  #  with:
+  #    which-gap: 4.12.0

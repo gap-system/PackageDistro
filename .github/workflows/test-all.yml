@@ -181,9 +181,6 @@ jobs:
 
       - name: "Test LoadAllPackages + GAP test suite"
         run: |
-          # WORKAROUND: one test file in GAP 4.11.1 errors due to a SmallGroups bugfix;
-          # we simply remove it if present
-          rm -f $HOME/gap/tst/testinstall/small_groups.tst
           gap -A --quitonbreak -r -c "
                 SetInfoLevel(InfoPackageLoading, PACKAGE_DEBUG);
                 LoadAllPackages();
