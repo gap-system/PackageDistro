@@ -21,6 +21,11 @@ on:
         required: true
         type: string
         default: master # or 4.11.1 or ...
+      which-gap-repo:
+        description: 'URL of any fork of the GAP repository'
+        required: false
+        type: string
+        default: https://github.com/gap-system/gap.git
       pkg-build-glob:
         description: 'Only build packages matching the given glob'
         required: false
@@ -38,6 +43,11 @@ on:
         required: true
         type: string
         default: master # or 4.11.1 or ...
+      which-gap-repo:
+        description: 'URL of any fork of the GAP repository'
+        required: false
+        type: string
+        default: https://github.com/gap-system/gap.git
       pkg-build-glob:
         description: 'Only build packages matching the given glob'
         required: false
@@ -109,6 +119,7 @@ jobs:
         run: |
           echo "::group::fetch"
           whichgap="${{ github.event.inputs.which-gap || inputs.which-gap }}"
+          whichgaprepo="${{ github.event.inputs.which-gap-repo || inputs.which-gap-repo }}"
           if [[ "${whichgap}" == 4.* ]]; then
             # assume it is a tag
             wget --quiet https://github.com/gap-system/gap/releases/download/v${whichgap}/gap-${whichgap}-core.tar.gz
@@ -116,7 +127,7 @@ jobs:
             rm gap-${whichgap}-core.tar.gz
             mv gap-${whichgap} $HOME/gap
           else
-            git clone --depth=2 -b ${whichgap} https://github.com/gap-system/gap.git $HOME/gap
+            git clone --depth=2 -b ${whichgap} ${whichgaprepo} $HOME/gap
           fi
           cd $HOME/gap
           echo "::endgroup::"
