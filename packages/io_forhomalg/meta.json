@@ -1,8 +1,8 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">IO_ForHomalg</span> package launches the command-line-interface of an external computer algebra system and connects it to <span class=\"pkgname\">homalg</span> using an Input/Output stream",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "2cea494b79730eeffb2da3a95d08f089f6d993805c7757c3cb13360b5102ce88",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/IO_ForHomalg-2022.08-02/IO_ForHomalg-2022.08-02",
+  "ArchiveSHA256": "70b155479e6571e33c1ac1ff57611e21a5c1421f16b5ed67fe6abb1ccab1ae0c",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/IO_ForHomalg-2022.08-03/IO_ForHomalg-2022.08-03",
   "AutoDoc": {
     "TitlePage": {
       "Copyright": "&copyright; 2007-2015 by Thomas Bächler, Mohamed Barakat, Max Neunhöffer, and Daniel Robertz.\n\nThis package may be distributed under the terms and conditions of the GNU Public License Version 2 or (at your option) any later version.\n"
@@ -48,7 +48,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "bc63752ca6438fd86839935c631405f1816d458910f18ad49ece788b4f69ee45",
+  "PackageInfoSHA256": "cee7bbe2b767cd0c0e5ca5930129e3da21660f745e825f607f9651f7428f1f17",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/IO_ForHomalg/PackageInfo.g",
   "PackageName": "IO_ForHomalg",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/IO_ForHomalg",
@@ -117,5 +117,5 @@
   "Status": "deposited",
   "Subtitle": "IO capabilities for the homalg project",
   "TestFile": "tst/testall.g",
-  "Version": "2022.08-02"
+  "Version": "2022.08-03"
 }
