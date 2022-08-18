@@ -85,3 +85,14 @@ jobs:
             _releases/packages-required.tar.gz.sha256
             _releases/package-infos.json.gz
             _releases/package-infos.json.gz.sha256
+
+      - name: "Update tag"
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.git.updateRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: "tags/latest",
+              sha: context.sha
+            })
