@@ -311,6 +311,8 @@ jobs:
                   # so we cheat and load it early
                   SetInfoLevel(InfoPackageLoading, PACKAGE_DEBUG);
                   LoadPackage(\"hap\");
+                elif pkgname = \"packagemanager\" then
+                  LoadPackage(\"curlinterface\" : OnlyNeeded);
                 elif pkgname = \"sglppow\" then
                   LoadPackage(\"liepring\" : OnlyNeeded);
                 elif pkgname = \"standardff\" then
