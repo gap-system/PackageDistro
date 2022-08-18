@@ -200,7 +200,7 @@ jobs:
           name: gap-${{ github.event.inputs.which-gap || inputs.which-gap }}
           path: /home/runner/gap.tar.zst
 
-      - name: "Creates jobs for matching packages"
+      - name: "Create jobs for matching packages"
         id: get-names
         run: |
             MATRIX="{\"package\":["

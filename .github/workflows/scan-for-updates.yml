@@ -77,7 +77,7 @@ jobs:
 
       # The following builds a job matrix; we lunch a copy of the "create-pull-request"
       # for each package whose meta.json was modified by `scan_for_updates.py`
-      - name: "Creates jobs for modified packages"
+      - name: "Create jobs for modified packages"
         id: get-names
         run: |
             modified=$(git diff --name-only --no-renames --staged --diff-filter=AM -- packages/*/meta.json)
@@ -89,7 +89,9 @@ jobs:
               MATRIX="${MATRIX}\"${PKG}\","
             done
             MATRIX="${MATRIX}]}"
-            echo "::set-output name=matrix::$MATRIX"
+            # HACK: add 'LICENSE' to the files in the archive, to avoid
+            # creating an empty archive when there are no modified files
+            echo "::set-output name=matrix::$MATRIX" LICENSE
             tar cvf modified.tar.gz $modified
 
       - name: "Upload metadata as artifact for pull request jobs"
