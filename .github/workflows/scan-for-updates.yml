@@ -90,10 +90,9 @@ jobs:
             tar cvf modified.tar.gz $modified LICENSE
 
             # create the actual build matrix
-            MATRIX="{\"package\":["
-            for PKG in ${modified}; do
-              PKG=${PKG%"/meta.json"}
-              PKG=${PKG#"packages/"}
+            jobnames=$(tools/group_packages.py $modified)
+            MATRIX="{\"package_or_group\":["
+            for PKG in ${jobnames}; do
               echo "${PKG}"
               MATRIX="${MATRIX}\"${PKG}\","
             done
@@ -107,8 +106,8 @@ jobs:
           path: modified.tar.gz
 
   create-pull-request:
-    name: "Create pull request for ${{ matrix.package }}"
-    if: ${{ needs.scan-for-updates.outputs.matrix != '{"package":[]}' }}
+    name: "Create pull request for ${{ matrix.package_or_group }}"
+    if: ${{ needs.scan-for-updates.outputs.matrix != '{"package_or_group":[]}' }}
     needs: scan-for-updates
     runs-on: ubuntu-latest
     strategy:
@@ -122,26 +121,13 @@ jobs:
         with:
           name: metadata
 
-      - name: "Extract package version"
+      - name: "Prepare pull request"
         run: |
           tar xvf modified.tar.gz
-          pkg_version=$(jq -r '.Version' < packages/${{ matrix.package }}/meta.json)
-          if git ls-files | fgrep -q packages/${{ matrix.package }}/meta.json ; then
-            echo "PR_TITLE=[${{ matrix.package }}] Update to ${pkg_version}" >> $GITHUB_ENV
-            echo "PR_LABEL=package update" >> $GITHUB_ENV
-          else
-            echo "PR_TITLE=[${{ matrix.package }}] New package, version ${pkg_version}" >> $GITHUB_ENV
-            echo "PR_LABEL=new package" >> $GITHUB_ENV
-          fi
+          # detect all added or modified files in the `packages` directory
+          modified=$(git diff --name-only --no-renames --staged --diff-filter=AM -- packages/*/meta.json)
 
-      - name: "Prepare PR body text"
-        id: get-pr-body
-        run: |
-          body=$(tools/make_pr_body.py ${{ matrix.package }})
-          body="${body//'%'/'%25'}"
-          body="${body//$'\n'/'%0A'}"
-          body="${body//$'\r'/'%0D'}"
-          echo ::set-output name=body::$body
+          tools/prepare_pr.py ${{ matrix.package_or_group }} $modified >> $GITHUB_ENV
 
       # We set up a GitHub App in order to ensure that workflows are run on the PRs
       # created by us, following the instructions here:
@@ -159,10 +145,10 @@ jobs:
           token: ${{ steps.generate-token.outputs.token }}
           # https://api.github.com/users/gap-package-distribution-bot%5Bbot%5D
           author: "gap-package-distribution-bot <100730870+gap-package-distribution-bot[bot]@users.noreply.github.com>"
-          add-paths: packages/${{ matrix.package }}
+          add-paths: ${{ env.PR_FILES }}
           commit-message: "${{ env.PR_TITLE }}"
-          body: ${{ steps.get-pr-body.outputs.body }}
-          branch: automatic/${{ matrix.package }}
+          body: ${{ env.PR_BODY }}
+          branch: automatic/${{ matrix.package_or_group }}
           delete-branch: true
           title: "${{ env.PR_TITLE }}"
           labels: |
