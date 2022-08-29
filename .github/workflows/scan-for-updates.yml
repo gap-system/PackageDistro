@@ -126,6 +126,7 @@ jobs:
           set -x
           tar xvf modified.tar.gz
           # detect all added or modified files in the `packages` directory
+          git add packages/
           modified=$(git diff --name-only --no-renames --staged --diff-filter=AM -- packages/*/meta.json)
           echo "modified = $modified"
           tools/prepare_pr.py ${{ matrix.package_or_group }} $modified >> $GITHUB_ENV
