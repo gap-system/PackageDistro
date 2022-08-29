@@ -31,20 +31,24 @@ from typing import Any, Dict, List
 import utils
 import group_packages
 
+
 def escape_for_github(s: str) -> str:
     s = s.replace("%", "%25")
     s = s.replace("\n", "%0A")
     s = s.replace("\r", "%0D")
     return s
 
+
 def infostr_for_package(pkg_json: Dict[str, Any]) -> str:
-    s = textwrap.dedent(f"""\
-    Relevant links for {pkg_json['PackageName']} {pkg_json['Version']}:
-    - [website]({pkg_json["PackageWWWHome"]})
-    - [`PackageInfo.g`]({pkg_json["PackageInfoURL"]})
-    - [`README`]({pkg_json["README_URL"]})
-    - [source archive]({utils.archive_url(pkg_json)})
-    """)
+    s = textwrap.dedent(
+        f"""\
+        Relevant links for {pkg_json['PackageName']} {pkg_json['Version']}:
+        - [website]({pkg_json["PackageWWWHome"]})
+        - [`PackageInfo.g`]({pkg_json["PackageInfoURL"]})
+        - [`README`]({pkg_json["README_URL"]})
+        - [source archive]({utils.archive_url(pkg_json)})
+        """
+    )
     if "IssueTrackerURL" in pkg_json:
         s += f"""- [issue tracker]({pkg_json["IssueTrackerURL"]})""" + "\n"
     # TODO: for groups, we only need to print the source repository once...
@@ -52,17 +56,21 @@ def infostr_for_package(pkg_json: Dict[str, Any]) -> str:
         s += f"""- [source repository]({pkg_json["SourceRepository"]["URL"]})""" + "\n"
     return s
 
+
 def is_new_package(pkg_name: str) -> bool:
     utils.warning(f"TODO: check if {pkg_name} is new")
     # git ls-files | fgrep -q packages/${{ matrix.package }}/meta.json
     return False
 
+
 def main(pkg_or_group_name: str, modified: List[str]) -> None:
     # select all entries of `modified` in the given group
-    modified = [x for x in modified if group_packages.name_or_group(x) == pkg_or_group_name]
+    modified = [
+        x for x in modified if group_packages.name_or_group(x) == pkg_or_group_name
+    ]
     if len(modified) == 0:
         utils.error(f"no modified files belong to {pkg_or_group_name}")
- 
+
     mod_json = map(utils.metadata, modified)
     body = "\n".join(map(infostr_for_package, mod_json))
     if len(modified) == 1:
@@ -84,14 +92,14 @@ def main(pkg_or_group_name: str, modified: List[str]) -> None:
     # generate multiline environment variable using "heredoc" syntax, as per
     # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
     # TODO: make the delimiter random, for security reasons
-    delim="EOF"
+    delim = "EOF"
     print(f"PR_BODY<<{delim}")
     print(body)
     print(delim)
 
+
 if __name__ == "__main__":
     main(sys.argv[1], map(utils.normalize_pkg_name, sys.argv[2:]))
-
 
 
 """
