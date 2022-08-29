@@ -77,10 +77,10 @@ def main(pkg_or_group_name: str, modified: List[str]) -> None:
             title = f"[{pkg_or_group_name}] New package, version {version}"
             label = "new package"
         else:
-            title = f"[{pkg_or_group_name}] Update to version {version}"
+            title = f"[{pkg_or_group_name}] Update to {version}"
             label = "package update"
     else:
-        title = f"[{pkg_or_group_name}] Updates"
+        title = f"[{pkg_or_group_name}] Updates to several packages"
         label = "package update"
 
     print(f"PR_TITLE={title}")
