@@ -80,8 +80,14 @@ def main(pkg_or_group_name: str, modified: List[str]) -> None:
 
     print(f"PR_TITLE={title}")
     print(f"PR_LABEL={label}")
-    #print(body) # DEBUG
-    print(f"PR_BODY={escape_for_github(body)}")
+
+    # generate multiline environment variable using "heredoc" syntax, as per
+    # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
+    # TODO: make the delimiter random, for security reasons
+    delim="EOF"
+    print(f"PR_BODY<<{delim}")
+    print(body)
+    print(delim)
 
 if __name__ == "__main__":
     main(sys.argv[1], map(utils.normalize_pkg_name, sys.argv[2:]))
