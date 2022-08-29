@@ -23,6 +23,8 @@ variables. The data in these definitions is used to set up a pull request
 by the `scan-for-updates.yml` GitHub workflow.
 """
 
+import random
+import string
 import sys
 import textwrap
 
@@ -32,11 +34,9 @@ import utils
 import group_packages
 
 
-def escape_for_github(s: str) -> str:
-    s = s.replace("%", "%25")
-    s = s.replace("\n", "%0A")
-    s = s.replace("\r", "%0D")
-    return s
+def randomword(length):
+    letters = string.ascii_lowercase
+    return "".join(random.choice(letters) for i in range(length))
 
 
 def infostr_for_package(pkg_json: Dict[str, Any]) -> str:
@@ -91,8 +91,8 @@ def main(pkg_or_group_name: str, modified: List[str]) -> None:
 
     # generate multiline environment variable using "heredoc" syntax, as per
     # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
-    # TODO: make the delimiter random, for security reasons
-    delim = "EOF"
+    # we use a random delimiter for security reasons, to avoid injection attacks
+    delim = randomword(10)
     print(f"PR_BODY<<{delim}")
     print(body)
     print(delim)
@@ -100,21 +100,3 @@ def main(pkg_or_group_name: str, modified: List[str]) -> None:
 
 if __name__ == "__main__":
     main(sys.argv[1], map(utils.normalize_pkg_name, sys.argv[2:]))
-
-
-"""
-TODO: for a group, we should figure out all 
-
-      - name: "Extract package version"
-        run: |
-          tar xvf modified.tar.gz
-          pkg_version=$(jq -r '.Version' < packages/${{ matrix.package }}/meta.json)
-          if git ls-files | fgrep -q packages/${{ matrix.package }}/meta.json ; then
-            echo "PR_TITLE=[${{ matrix.package }}] Update to ${pkg_version}" >> $GITHUB_ENV
-            echo "PR_LABEL=package update" >> $GITHUB_ENV
-          else
-            echo "PR_TITLE=[${{ matrix.package }}] New package, version ${pkg_version}" >> $GITHUB_ENV
-            echo "PR_LABEL=new package" >> $GITHUB_ENV
-          fi
-
-"""
