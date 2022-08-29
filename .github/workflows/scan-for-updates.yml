@@ -69,18 +69,26 @@ jobs:
       - name: "Import user specified packages"
         run: |
           tools/import_packages.py ${{ github.event.inputs.pkginfo_urls }}
-          git add packages/
 
       # remove archives we don't need anymore; this reduces the size of the caches
       - name: "Cleanup archives"
         run: tools/cleanup_archives.py
 
-      # The following builds a job matrix; we lunch a copy of the "create-pull-request"
-      # for each package whose meta.json was modified by `scan_for_updates.py`
+      # The following builds a job matrix; we launch a copy of the "create-pull-request"
+      # for each package whose meta.json was modified or added
       - name: "Create jobs for modified packages"
         id: get-names
         run: |
-            modified=$(git diff --name-only --no-renames --staged --diff-filter=AM -- packages/*/meta.json)
+            # detect all added or modified files in the `packages` directory
+            modified=$(git status --porcelain -uall -- packages/*/meta.json | cut -c4-)
+
+            # create an archive of the added or modified files, to be uploaded as an
+            # artifact in the next step, and for use by subsequent jobs
+            # HACK: add 'LICENSE' to the files in the archive, to avoid
+            # creating an empty archive when there are no modified files
+            tar cvf modified.tar.gz $modified LICENSE
+
+            # create the actual build matrix
             MATRIX="{\"package\":["
             for PKG in ${modified}; do
               PKG=${PKG%"/meta.json"}
@@ -89,10 +97,7 @@ jobs:
               MATRIX="${MATRIX}\"${PKG}\","
             done
             MATRIX="${MATRIX}]}"
-            # HACK: add 'LICENSE' to the files in the archive, to avoid
-            # creating an empty archive when there are no modified files
             echo "::set-output name=matrix::$MATRIX"
-            tar cvf modified.tar.gz $modified LICENSE
 
       - name: "Upload metadata as artifact for pull request jobs"
         uses: actions/upload-artifact@v2
