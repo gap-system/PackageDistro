@@ -1,13 +1,13 @@
 {
   "AbstractHTML": "The <span class='pkgname'>NConvex</span> package is a GAP package.   Its aim is to carry out polyhedral constructions and computations,  namely computing properties and attributes of cones, polyhedrons, polytopes and fans.",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "8fd3a79428ab800c6068028103f1aefdc5a38477ece79393073e81abcbd3b67f",
-  "ArchiveURL": "https://github.com/homalg-project/NConvex/releases/download/v2020.11-04/NConvex-2020.11-04",
+  "ArchiveSHA256": "70e3f841cd0936d370ba34d31c46eeab17247acb04a9cf18c3d4e62feb6d15f9",
+  "ArchiveURL": "https://github.com/homalg-project/NConvex/releases/download/v2022.08-01/NConvex-2022.08-01",
   "AvailabilityTest": null,
-  "Date": "04/11/2020",
+  "Date": "23/08/2022",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">= 4.9",
+    "GAP": ">= 4.11.1",
     "NeededOtherPackages": [
       [
         "AutoDoc",
@@ -54,15 +54,15 @@
       ],
       "BookName": "NConvex",
       "HTMLStart": "doc/chap0.html",
-      "LongTitle": "A Gap package to perform polyhedral computations",
+      "LongTitle": "Gap package for polyhedral computations",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "410cb5f7db28d67d6cb4e29e75029ef5d30a0ef81543fc1da4e52e0b169348c1",
+  "PackageInfoSHA256": "b7a9164ba8235d3c836485838587f27931b4eaed39b850c01bf116db2149b51a",
   "PackageInfoURL": "https://homalg-project.github.io/NConvex/PackageInfo.g",
   "PackageName": "NConvex",
-  "PackageWWWHome": "https://homalg-project.github.io/NConvex",
+  "PackageWWWHome": "https://homalg-project.github.io/pkg/NConvex",
   "Persons": [
     {
       "Email": "kamal.saleh@uni-siegen.de",
@@ -93,7 +93,7 @@
     "URL": "https://github.com/homalg-project/NConvex"
   },
   "Status": "deposited",
-  "Subtitle": "A Gap package to perform polyhedral computations",
+  "Subtitle": "Gap package for polyhedral computations",
   "TestFile": "tst/testall.g",
-  "Version": "2020.11-04"
+  "Version": "2022.08-01"
 }
