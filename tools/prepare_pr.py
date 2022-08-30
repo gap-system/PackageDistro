@@ -55,10 +55,10 @@ def is_new_package(pkg_name: str) -> bool:
     )
     if result.returncode != 0:
         utils.error("git status returned an error")
-    return result.stdout[0] == "?"
+    return result.stdout.startswith("?")
 
 
-def main(pkg_or_group_name: str, modmap: map[str]) -> None:
+def main(pkg_or_group_name: str, modmap: List[str]) -> None:
     # select all entries of `modified` in the given group
     modified = [
         x for x in modmap if group_packages.name_or_group(x) == pkg_or_group_name
@@ -120,4 +120,4 @@ def main(pkg_or_group_name: str, modmap: map[str]) -> None:
 
 
 if __name__ == "__main__":
-    main(sys.argv[1], map(utils.normalize_pkg_name, sys.argv[2:]))
+    main(sys.argv[1], [utils.normalize_pkg_name(x) for x in sys.argv[2:]])
