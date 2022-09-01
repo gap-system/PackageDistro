@@ -40,6 +40,10 @@ groups = {
 }
 
 
+def is_group(pkg_or_group_name: str) -> bool:
+    return pkg_or_group_name in groups.values()
+
+
 def name_or_group(pkg_name: str) -> str:
     pkg_json = metadata(pkg_name)
     if "SourceRepository" in pkg_json:

@@ -73,17 +73,21 @@ def main(pkg_or_group_name: str, modmap: List[str]) -> None:
     pkg_json = utils.metadata(modified[0])
 
     # generate PR title and secondary label
+    label = "package update"
+    title = f"[{pkg_or_group_name}] "
     if len(modified) == 1:
         version = pkg_json["Version"]
         if is_new_package(modified[0]):
-            title = f"[{pkg_or_group_name}] New package, version {version}"
+            title += f"New package, version {version}"
             label = "new package"
         else:
-            title = f"[{pkg_or_group_name}] Update to {version}"
+            if group_packages.is_group(pkg_or_group_name):
+                title += f"Update {pkg_json['PackageName']} to {version}"
+            else:
+                title += f"Update to {version}"
             label = "package update"
     else:
-        title = f"[{pkg_or_group_name}] Updates for several packages"
-        label = "package update"
+        title += "Updates for several packages"
 
     print(f"PR_TITLE={title}")
     print(f"PR_LABEL={label}")
