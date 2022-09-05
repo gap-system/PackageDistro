@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">Francy</span> package allows to use graphics in GAP.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "3ccbc422990d203592767eea64b4ed916b0a23efd456274a1ba53580d10abe86",
-  "ArchiveURL": "https://github.com/gap-packages/francy/releases/download/v1.2.4/francy-1.2.4",
+  "ArchiveSHA256": "da7a3c4ed3e53b97292f1cc179de046d6fac588dda62e1a454767f0cce9719c5",
+  "ArchiveURL": "https://github.com/gap-packages/francy/releases/download/v1.2.5/francy-1.2.5",
   "AvailabilityTest": null,
-  "Date": "17/05/2019",
+  "Date": "05/09/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10",
@@ -40,13 +40,13 @@
         "doc"
       ],
       "BookName": "Francy",
-      "HTMLStart": "doc/chap0.html",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "FRANCY - A Framework for Interactive Discrete Mathematics",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "fa39785e3bcac0f8ff5c40ee5b2dc662b7a67c1aa92f12d2f8133c10d36cc705",
+  "PackageInfoSHA256": "9df3a316fb9348c7f70a242e4d1b99d34ca8cc03d3b38d48dc20e9b2a0f04d70",
   "PackageInfoURL": "https://gap-packages.github.io/francy/PackageInfo.g",
   "PackageName": "Francy",
   "PackageWWWHome": "https://gap-packages.github.io/francy",
@@ -71,5 +71,5 @@
   "Status": "deposited",
   "Subtitle": "Framework for Interactive Discrete Mathematics",
   "TestFile": "tst/testall.g",
-  "Version": "1.2.4"
+  "Version": "1.2.5"
 }
