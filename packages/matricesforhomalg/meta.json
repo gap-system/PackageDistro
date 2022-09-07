@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">MatricesForHomalg</span> package provides lazy evaluated matrices with clever operations for the homalg project",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "50d8e81208fab4c7d399b0da6851cfa7b4e5620b6e73fdd6b1074d0035da818a",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/MatricesForHomalg-2022.08-04/MatricesForHomalg-2022.08-04",
+  "ArchiveSHA256": "e719e8e66a9d0455381c749b4030762b3627550a7ba136cf283088fa15bd40f6",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/MatricesForHomalg-2022.09-01/MatricesForHomalg-2022.09-01",
   "AvailabilityTest": null,
-  "Date": "23/08/2022",
+  "Date": "06/09/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.11.1",
@@ -48,7 +48,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "45e882d21dfea2329428382439c86a7c45dd32f2b99c39891e3f6170d4fd2208",
+  "PackageInfoSHA256": "99066aa531f38fe6bb8f7d9d81616a8eff25290096c3a91418f2aabc45792c66",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/MatricesForHomalg/PackageInfo.g",
   "PackageName": "MatricesForHomalg",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/MatricesForHomalg",
@@ -106,5 +106,5 @@
   "Status": "deposited",
   "Subtitle": "Matrices for the homalg project",
   "TestFile": "tst/testall.g",
-  "Version": "2022.08-04"
+  "Version": "2022.09-01"
 }
