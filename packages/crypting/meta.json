@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">crypting</span> package provides some cryptographic primitives so that the <span class=\"pkgname\">JupyterKernel</span> package works.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "bff8574fdf257f4058b90505712db9d6ee48db554c7f6bf83a4c832a32de4db1",
-  "ArchiveURL": "https://github.com/gap-packages/crypting/releases/download/v0.10/crypting-0.10",
+  "ArchiveSHA256": "8c3c8398b955352c5fee76a897d4325445b607ff4ac784ea19c2e3fb6ef5969c",
+  "ArchiveURL": "https://github.com/gap-packages/crypting/releases/download/v0.10.2/crypting-0.10.2",
   "AvailabilityTest": null,
-  "Date": "28/10/2019",
+  "Date": "09/09/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.10",
@@ -25,13 +25,13 @@
         "doc"
       ],
       "BookName": "crypting",
-      "HTMLStart": "doc/chap0.html",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "Hashes and Crypto in GAP",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "5a267c1481a389af30403a8026b364e26f3ba3478abbb203a69c65d861ccf70e",
+  "PackageInfoSHA256": "67326cbc65181fda8530071771591b15dc31618862879bcb18543c6bab59572c",
   "PackageInfoURL": "https://gap-packages.github.io/crypting/PackageInfo.g",
   "PackageName": "crypting",
   "PackageWWWHome": "https://gap-packages.github.io/crypting/",
@@ -61,5 +61,5 @@
   "Status": "deposited",
   "Subtitle": "Hashes and Crypto in GAP",
   "TestFile": "tst/testall.g",
-  "Version": "0.10"
+  "Version": "0.10.2"
 }
