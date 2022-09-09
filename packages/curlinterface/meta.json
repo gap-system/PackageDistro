@@ -1,10 +1,11 @@
 {
   "AbstractHTML": "",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "98cf35028461bb471af3afa5ca4742fac6f87252a9ac0f605a39ba5a774e9069",
-  "ArchiveURL": "https://github.com/gap-packages/curlInterface/releases/download/v2.2.3/curlInterface-2.2.3",
+  "ArchiveSHA256": "886456bee936007299e4e2987aa39c4ed782e6aafda48f06bab0f80db77e24e2",
+  "ArchiveURL": "https://github.com/gap-packages/curlInterface/releases/download/v2.3.0/curlInterface-2.3.0",
   "AvailabilityTest": null,
-  "Date": "15/08/2022",
+  "BannerFunction": null,
+  "Date": "09/09/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.9",
@@ -30,7 +31,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "0f225a63fc2944531a0f97d266ee4d42bc4323d565a2fa851ca1ed850f2547f0",
+  "PackageInfoSHA256": "298033b673c85fc2185e047ec862e11b282887f4340ddc1b816cc6b4f38f34c3",
   "PackageInfoURL": "https://gap-packages.github.io/curlInterface/PackageInfo.g",
   "PackageName": "curlInterface",
   "PackageWWWHome": "https://gap-packages.github.io/curlInterface/",
@@ -45,6 +46,17 @@
       "Place": "St Andrews",
       "PostalAddress": "School of Computer Science\nUniversity of St Andrews\nJack Cole Building, North Haugh\nSt Andrews, Fife, KY16 9SX\nUnited Kingdom",
       "WWWHome": "http://caj.host.cs.st-andrews.ac.uk/"
+    },
+    {
+      "Email": "horn@mathematik.uni-kl.de",
+      "FirstNames": "Max",
+      "Institution": "TU Kaiserslautern",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "Horn",
+      "Place": "Kaiserslautern, Germany",
+      "PostalAddress": "Fachbereich Mathematik\nTU Kaiserslautern\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
+      "WWWHome": "https://www.quendi.de/math"
     },
     {
       "Email": "mct25@st-andrews.ac.uk",
@@ -66,5 +78,5 @@
   "Status": "deposited",
   "Subtitle": "Simple Web Access",
   "TestFile": "tst/testall.g",
-  "Version": "2.2.3"
+  "Version": "2.3.0"
 }
