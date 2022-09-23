@@ -2,11 +2,11 @@
   "AbstractHTML": "The <span class=\"pkgname\">kbmag</span> package is a       <span class=\"pkgname\">GAP</span> interface to some `C' programs   for running the Knuth-Bendix completion program on finite semigroup,   monoid or group presentations, and for attempting to compute automatic   structures of finitely presented groups",
   "AcceptDate": "07/2003",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "e3db7d425617981ce1ea7b0c0935a50c437d41c6d562b97615ce09b21923dc84",
-  "ArchiveURL": "https://github.com/gap-packages/kbmag/releases/download/v1.5.9/kbmag-1.5.9",
+  "ArchiveSHA256": "99e32540a97a65c1577e8a3b0ef19e067b464b2517df3a78311a2a7fffd9f9e6",
+  "ArchiveURL": "https://github.com/gap-packages/kbmag/releases/download/v1.5.10/kbmag-1.5.10",
   "AutoDoc": {
     "TitlePage": {
-      "Abstract": "The &KBMAG; package is a &GAP; interface to some `C' programs for running the Knuth-Bendix completion program on finite semigroup, monoid or group presentations, and for attempting to compute  automatic structures of finitely presented groups.<P/>Bug reports, comments, suggestions for additional features, and offers to implement some of these, will all be very welcome.<P/>Please submit any issues at <File>https://github.com/gap-packages/kbmag/issues/</File>.<P/>",
+      "Abstract": "The &KBMAG; package is a &GAP; interface to some `C' programs for running the Knuth-Bendix completion program on finite semigroup, monoid or group presentations, and for attempting to compute  automatic structures of finitely presented groups.<P/>Bug reports, comments, suggestions for additional features, and offers to implement some of these, will all be very welcome.<P/>Please submit any issues at <URL>https://github.com/gap-packages/kbmag/issues/</URL>.<P/>",
       "Acknowledgements": "This documentation was prepared with the &GAPDoc; <Cite Key='GAPDoc'/> and &AutoDoc; <Cite Key='AutoDoc'/> packages.<P/>\nThe procedure used to produce new releases uses the package <Package>GitHubPagesForGAP</Package> <Cite Key='GitHubPagesForGAP' /> and the package <Package>ReleaseTools</Package>.<P/>",
       "Copyright": "&copyright; 1997 by Derek Holt<P/>\n\nThis package may be distributed under the terms and conditions of the GNU Public License Version 2.\n"
     }
@@ -14,7 +14,7 @@
   "Autoload": false,
   "AvailabilityTest": null,
   "CommunicatedBy": "Charles Wright (Oregon)",
-  "Date": "07/07/2019",
+  "Date": "23/09/2022",
   "Dependencies": {
     "ExternalConditions": [
       "Unix only"
@@ -36,13 +36,13 @@
       ],
       "Autoload": true,
       "BookName": "kbmag",
-      "HTMLStart": "doc/chap0.html",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "Knuth-Bendix on Monoids and Automatic Groups",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "efcedfa84e9e63b2f9590eb7ae28aa71e6ff7e76483633a057d39049a4e4c807",
+  "PackageInfoSHA256": "a060ba748ada67e1637e4e4a600811939839e3c7fc21ea46f317f426724200c3",
   "PackageInfoURL": "https://gap-packages.github.io/kbmag/PackageInfo.g",
   "PackageName": "kbmag",
   "PackageWWWHome": "https://gap-packages.github.io/kbmag",
@@ -72,5 +72,5 @@
   "Status": "accepted",
   "Subtitle": "Knuth-Bendix on Monoids and Automatic Groups",
   "TestFile": "tst/testall.g",
-  "Version": "1.5.9"
+  "Version": "1.5.10"
 }
