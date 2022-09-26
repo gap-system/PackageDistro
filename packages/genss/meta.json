@@ -1,15 +1,15 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">genss</span> package implements the    randomised Schreier-Sims algorithm to compute a stabiliser chain    and a base and strong generating set for arbitrary finite groups.",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSHA256": "25c70472201532665751b548d6395e57351e7c10ac2660807b954fdd792e4257",
-  "ArchiveURL": "https://github.com/gap-packages/genss/releases/download/v1.6.7/genss-1.6.7",
+  "ArchiveSHA256": "5878d828a1fd442bbc97703c738c0ee690d7822765ba603a36eed00de317177f",
+  "ArchiveURL": "https://github.com/gap-packages/genss/releases/download/v1.6.8/genss-1.6.8",
   "AutoDoc": {
     "TitlePage": {
       "Copyright": "&copyright; 2006-2014 by Max Neunhöffer and Felix Noeske<P/>\n\nThis package may be distributed under the terms and conditions of the\nGNU Public License Version 3 or higher.\n"
     }
   },
   "AvailabilityTest": null,
-  "Date": "31/07/2022",
+  "Date": "26/09/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.9",
@@ -49,7 +49,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "fd50ff75ede969616e8fd408d062d3982dd8a0f670c2ecfd1ceee9488961d9fe",
+  "PackageInfoSHA256": "ca2a789e93e0bd87c1d7c5bbaed6b3a4db45f5a847e269ae88b15ab4a6c98324",
   "PackageInfoURL": "https://gap-packages.github.io/genss/PackageInfo.g",
   "PackageName": "genss",
   "PackageWWWHome": "https://gap-packages.github.io/genss",
@@ -94,5 +94,5 @@
   "Status": "deposited",
   "Subtitle": "Generic Schreier-Sims",
   "TestFile": "tst/testall.g",
-  "Version": "1.6.7"
+  "Version": "1.6.8"
 }
