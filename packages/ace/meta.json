@@ -2,12 +2,12 @@
   "AbstractHTML": "The <span class=\"pkgname\">ACE</span> package provides both an    interactive and non-interactive interface with the Todd-Coxeter coset   enumeration functions of the ACE (Advanced Coset Enumerator) C program.",
   "AcceptDate": "04/2001",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "0d2b81d9044f5df309fc4839a2333d85d759017338f3bb06300da47baefa5972",
-  "ArchiveURL": "https://github.com/gap-packages/ace/releases/download/v5.6/ace-5.6",
+  "ArchiveSHA256": "17b8e969a20a1c1bb0dae75ead60dd463b41a59e688d913e30999b2f2248b7f7",
+  "ArchiveURL": "https://github.com/gap-packages/ace/releases/download/v5.6.1/ace-5.6.1",
   "AvailabilityTest": null,
-  "BannerString": "---------------------------------------------------------------------------\nLoading    ACE (Advanced Coset Enumerator) 5.6\nGAP code by Greg Gamble <Greg.Gamble@uwa.edu.au> (address for correspondence)\n       Alexander Hulpke (https://www.math.colostate.edu/~hulpke)\n           [uses ACE binary (C code program) version: 3.001]\nC code by  George Havas (http://staff.itee.uq.edu.au/havas)\n           Colin Ramsay <cram@itee.uq.edu.au>\nCo-maintainer: Max Horn <horn@mathematik.uni-kl.de>\n\n                 For help, type: ?ACE\n---------------------------------------------------------------------------\n",
+  "BannerString": "---------------------------------------------------------------------------\nLoading    ACE (Advanced Coset Enumerator) 5.6.1\nGAP code by Greg Gamble <Greg.Gamble@uwa.edu.au> (address for correspondence)\n       Alexander Hulpke (https://www.math.colostate.edu/~hulpke)\n           [uses ACE binary (C code program) version: 3.001]\nC code by  George Havas (http://staff.itee.uq.edu.au/havas)\n           Colin Ramsay <cram@itee.uq.edu.au>\nCo-maintainer: Max Horn <horn@mathematik.uni-kl.de>\n\n                 For help, type: ?ACE\n---------------------------------------------------------------------------\n",
   "CommunicatedBy": "Joachim Neubüser (Aachen)",
-  "Date": "15/09/2022",
+  "Date": "26/09/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.7",
@@ -38,7 +38,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "59510397e28cd5353b47acb8cb74ecf5f6dd4ffab59370864aac3d5d26377c8a",
+  "PackageInfoSHA256": "c9c3f79fb93b2a2e8e04d73bb68441db6dd009fd0e9852ba70c10fc3669b71f0",
   "PackageInfoURL": "https://gap-packages.github.io/ace/PackageInfo.g",
   "PackageName": "ACE",
   "PackageWWWHome": "https://gap-packages.github.io/ace",
@@ -106,5 +106,5 @@
   "Status": "accepted",
   "Subtitle": "Advanced Coset Enumerator",
   "TestFile": "tst/aceds.tst",
-  "Version": "5.6"
+  "Version": "5.6.1"
 }
