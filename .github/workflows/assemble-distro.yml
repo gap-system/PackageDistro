@@ -35,12 +35,12 @@ jobs:
     name: "Assemble the package distribution"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       # Cache the package archives we download across runs of this job
       # to speed up things considerably
       - name: "Cache archives"
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: _archives
           key: archives-${{ hashFiles('packages/*/meta.json') }}
