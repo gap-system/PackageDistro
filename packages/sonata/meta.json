@@ -2,12 +2,12 @@
   "AbstractHTML": "The <span class=\"pkgname\">SONATA</span> package provides methods for     the construction and analysis of finite nearrings.",
   "AcceptDate": "04/2003",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "5f739973e1fb8b699083445ff743ad62f18d09a1158df2dff95879312229ab8f",
-  "ArchiveURL": "https://github.com/gap-packages/sonata/releases/download/v2.9.4/sonata-2.9.4",
+  "ArchiveSHA256": "78df73483c5b1d49d55ee151666ec4d02c0f00959281e7f53c2b6c0a0e89376e",
+  "ArchiveURL": "https://github.com/gap-packages/sonata/releases/download/v2.9.5/sonata-2.9.5",
   "AvailabilityTest": null,
-  "BannerString": "\n  ___________________________________________________________________________\n /        ___\n||       /   \\                 /\\    Version 2.9.4\n||      ||   ||  |\\    |      /  \\               /\\       Erhard Aichinger\n \\___   ||   ||  |\\\\   |     /____\\_____________/__\\      Franz Binder\n     \\  ||   ||  | \\\\  |    /      \\     ||    /    \\     Juergen Ecker\n     ||  \\___/   |  \\\\ |   /        \\    ||   /      \\    Peter Mayr\n     ||          |   \\\\|  /          \\   ||               Christof Noebauer\n \\___/           |    \\|                 ||\n\n System    Of   Nearrings     And      Their Applications\n Info: https://gap-packages.github.io/sonata/\n\n",
+  "BannerString": "\n  ___________________________________________________________________________\n /        ___\n||       /   \\                 /\\    Version 2.9.5\n||      ||   ||  |\\    |      /  \\               /\\       Erhard Aichinger\n \\___   ||   ||  |\\\\   |     /____\\_____________/__\\      Franz Binder\n     \\  ||   ||  | \\\\  |    /      \\     ||    /    \\     Juergen Ecker\n     ||  \\___/   |  \\\\ |   /        \\    ||   /      \\    Peter Mayr\n     ||          |   \\\\|  /          \\   ||               Christof Noebauer\n \\___/           |    \\|                 ||\n\n System    Of   Nearrings     And      Their Applications\n Info: https://gap-packages.github.io/sonata/\n\n",
   "CommunicatedBy": "Charles R.B. Wright (Univ. of Oregon)",
-  "Date": "20/04/2022",
+  "Date": "14/10/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.9",
@@ -53,7 +53,7 @@
       "SixFile": "doc/tut/manual.six"
     }
   ],
-  "PackageInfoSHA256": "75e737925d6a65e9e2513a8d5cf4aebc8140686d271870338942a794a4dea8c9",
+  "PackageInfoSHA256": "e27941b7cc5e8ce32b72e6165a22a0666175d6dda6cf9b610d1a126a81c39136",
   "PackageInfoURL": "https://gap-packages.github.io/sonata/PackageInfo.g",
   "PackageName": "SONATA",
   "PackageWWWHome": "https://gap-packages.github.io/sonata/",
@@ -116,5 +116,5 @@
   "Status": "accepted",
   "Subtitle": "System of nearrings and their applications",
   "TestFile": "tst/testall.g",
-  "Version": "2.9.4"
+  "Version": "2.9.5"
 }
