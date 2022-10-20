@@ -66,9 +66,9 @@ jobs:
             modified=$(git diff --name-only --no-renames --diff-filter=AM ${{ github.event.pull_request.base.sha }} -- packages/*/meta.json)
             echo "Added or updated packages: ${modified}"
             if [[ -n "${modified}" ]]; then
-              echo "::set-output name=modified::true"
+              echo "modified=true" >> $GITHUB_OUTPUT
             else
-              echo "::set-output name=modified::false"
+              echo "modified=false" >> $GITHUB_OUTPUT
             fi
 
             echo "Obtain copies of old metadata, if any..."
@@ -114,7 +114,7 @@ jobs:
           body="${body//'%'/'%25'}"
           body="${body//$'\n'/'%0A'}"
           body="${body//$'\r'/'%0D'}"
-          echo "::set-output name=body::$body"
+          echo "body=$body" >> $GITHUB_OUTPUT
 
       - name: "Find Comment"
         uses: peter-evans/find-comment@v2
