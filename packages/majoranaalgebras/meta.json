@@ -1,15 +1,15 @@
 {
-  "AbstractHTML": "MajoranaAlgebras is a package for constructing Majorana representations of finite groups. It also offers some functions to calculate with a constructed Majorana representation. The main constructive functions use the algorithm described in the preprint Constructing Majorana Representations (https://arxiv.org/abs/1803.10723) by Markus Pfeiffer and Madeleine Whybrow.",
+  "AbstractHTML": "MajoranaAlgebras is a package for constructing Majorana\nrepresentations of finite groups. It also offers some functions to calculate\nwith a constructed Majorana representation. The main constructive functions\nuse the algorithm described in the preprint Constructing Majorana\nRepresentations (https://arxiv.org/abs/1803.10723) by Markus Pfeiffer and\nMadeleine Whybrow.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "60782dc0c9bcd573674a41678425da09fbe0f4c5e17d4282b972ba6460913987",
-  "ArchiveURL": "https://github.com/MWhybrow92/MajoranaAlgebras/releases/download/v1.4/MajoranaAlgebras-1.4",
+  "ArchiveSHA256": "bd6c1796e2457c3fb9d894a0acd4649b25306b92229040da5ab0efd69e486aa6",
+  "ArchiveURL": "https://github.com/gap-packages/MajoranaAlgebras/releases/download/v1.5/MajoranaAlgebras-1.5",
   "AutoDoc": {
     "TitlePage": {
-      "Copyright": "&copyright; 2018 by Markus Pfeiffer and Madeleine Whybrow<P/>\n&MajoranaAlgebras; package is free software;\nyou can redistribute it and/or modify it under the terms of the\n<URL Text=\"GNU General Public License\">http://www.fsf.org/licenses/gpl.html</URL>\nas published by the Free Software Foundation; either version 2 of the License,\nor (at your option) any later version."
+      "Copyright": "&copyright; 2018 by Markus Pfeiffer and Madeleine Whybrow<P/>\n&MajoranaAlgebras; package is free software;\nyou can redistribute it and/or modify it under the terms of the\n<URL Text=\"GNU General Public License\">https://www.fsf.org/licenses/gpl.html</URL>\nas published by the Free Software Foundation; either version 2 of the License,\nor (at your option) any later version."
     }
   },
   "AvailabilityTest": null,
-  "Date": "06/12/2018",
+  "Date": "20/10/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.8",
@@ -38,37 +38,35 @@
       ]
     ]
   },
-  "IssueTrackerURL": "https://github.com/MWhybrow92/MajoranaAlgebras/issues",
+  "IssueTrackerURL": "https://github.com/gap-packages/MajoranaAlgebras/issues",
   "Keywords": [
     "Majorana algebras",
     "axial algebras"
   ],
+  "License": "GPL-2.0-or-later",
   "PackageDoc": [
     {
       "ArchiveURLSubset": [
         "doc"
       ],
       "BookName": "MajoranaAlgebras",
-      "HTMLStart": "doc/chap0.html",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "A package for constructing Majorana algebras and representations.",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "512c3931e56f945384ad4251d51736f8930fd21c758a0853a7a7488f2688be59",
-  "PackageInfoURL": "https://MWhybrow92.github.io/MajoranaAlgebras/PackageInfo.g",
+  "PackageInfoSHA256": "00444b9506785df429bb48ce79c8c05692a021db75b17ac0a2858f8d4c19f933",
+  "PackageInfoURL": "https://gap-packages.github.io/MajoranaAlgebras/PackageInfo.g",
   "PackageName": "MajoranaAlgebras",
-  "PackageWWWHome": "https://MWhybrow92.github.io/MajoranaAlgebras/",
+  "PackageWWWHome": "https://gap-packages.github.io/MajoranaAlgebras/",
   "Persons": [
     {
       "Email": "markus.pfeiffer@st-andrews.ac.uk",
       "FirstNames": "Markus",
-      "Institution": "University of St Andrews",
       "IsAuthor": true,
-      "IsMaintainer": true,
+      "IsMaintainer": false,
       "LastName": "Pfeiffer",
-      "Place": "St Andrews, UK",
-      "PostalAddress": "School of Computer Science, University of St Andrews, North Haugh, KY16 9SX",
       "WWWHome": "https://markusp.morphism.de/"
     },
     {
@@ -76,21 +74,27 @@
       "FirstNames": "Madeleine",
       "Institution": "Imperial College London",
       "IsAuthor": true,
-      "IsMaintainer": true,
+      "IsMaintainer": false,
       "LastName": "Whybrow",
       "Place": "London, UK",
       "PostalAddress": "Department of Mathematics, Imperial College, South Kensington, SW7 2AZ",
-      "WWWHome": "https://www.madeleinewhybrow.wordpress.com"
+      "WWWHome": "https://madeleinewhybrow.wordpress.com"
+    },
+    {
+      "Email": "support@gap-system.org",
+      "FirstNames": "The",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "GAP Team"
     }
   ],
-  "README_URL": "https://MWhybrow92.github.io/MajoranaAlgebras/README.md",
+  "README_URL": "https://gap-packages.github.io/MajoranaAlgebras/README.md",
   "SourceRepository": {
     "Type": "git",
-    "URL": "https://github.com/MWhybrow92/MajoranaAlgebras"
+    "URL": "https://github.com/gap-packages/MajoranaAlgebras"
   },
-  "Status": "dev",
+  "Status": "deposited",
   "Subtitle": "A package for constructing Majorana algebras and representations",
-  "SupportEmail": "mlw10@ic.ac.uk",
   "TestFile": "tst/testall.g",
-  "Version": "1.4"
+  "Version": "1.5"
 }
