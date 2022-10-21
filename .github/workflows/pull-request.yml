@@ -110,11 +110,9 @@ jobs:
       - name: "Prepare report.md"
         id: get-comment-body
         run: |
-          body="$(cat _report/report.md)"
-          body="${body//'%'/'%25'}"
-          body="${body//$'\n'/'%0A'}"
-          body="${body//$'\r'/'%0D'}"
-          echo "body=$body" >> $GITHUB_OUTPUT
+          echo "body<<EOF1234567890EOF" >> $GITHUB_OUTPUT
+          cat _report/report.md >> $GITHUB_OUTPUT
+          echo "EOF1234567890EOF" >> $GITHUB_OUTPUT
 
       - name: "Find Comment"
         uses: peter-evans/find-comment@v2
