@@ -23,7 +23,7 @@ on:
         description: 'Either a GAP branch name or a GAP version'
         required: true
         type: string
-        default: master # or 4.11.1 or ...
+        default: master  # or 4.11.1 or ...
 
 jobs:
   update-latest:

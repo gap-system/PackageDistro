@@ -16,7 +16,7 @@ on:
     branches:
       - main
   schedule:
-    - cron:  '00 2 * * *'
+    - cron: '00 2 * * *'
 
 # only run at most one instances of this workflow at a time for each branch
 # resp. tag. Starting a new one cancels previously running ones.
