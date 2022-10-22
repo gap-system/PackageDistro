@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">AGT</span> package provides functionality to      inspect combinatorial and algebraic properties of graphs in GRAPE format.      It also provides a library  strongly regular graphs on at most 40 vertices,     and several graph constructions",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "d7d5564328eceadb2420524fdb7d4c8f1261e95490950858f31dcca89b8675ae",
-  "ArchiveURL": "https://github.com/gap-packages/AGT/releases/download/v0.2/AGT-0.2",
+  "ArchiveSHA256": "545ef18a1c1c2215cdd5546813eb36bcf38176dcbd7edc45f2cd2f598e95bc5a",
+  "ArchiveURL": "https://github.com/gap-packages/AGT/releases/download/v0.3/AGT-0.3",
   "AvailabilityTest": null,
-  "Date": "02/03/2020",
+  "Date": "22/10/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.10",
@@ -44,19 +44,19 @@
         "doc"
       ],
       "BookName": "agt",
-      "HTMLStart": "doc/chap0.html",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "Algebraic Graph Theory",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "101d52564de1a1f4f6663829aa1f12f28a444c9e72cd3361f777b1cc67adb59e",
+  "PackageInfoSHA256": "86cf3aa43d9242772221abfd31240b424f17ffb3501e38cdf085086a55fdad46",
   "PackageInfoURL": "https://gap-packages.github.io/agt/PackageInfo.g",
   "PackageName": "AGT",
   "PackageWWWHome": "https://gap-packages.github.io/agt",
   "Persons": [
     {
-      "Email": "r.evans@qmul.ac.uk",
+      "Email": "rhysjevans00@gmail.com",
       "FirstNames": "Rhys J.",
       "Institution": "School of Mathematical Sciences, Queen Mary University of London",
       "IsAuthor": true,
@@ -64,7 +64,7 @@
       "LastName": "Evans",
       "Place": "London",
       "PostalAddress": "Mile End Road, London, E14NS",
-      "WWWHome": "https://www.qmul.ac.uk/maths/profiles/evansr.html"
+      "WWWHome": "https://rhysje00.github.io/"
     }
   ],
   "README_URL": "https://gap-packages.github.io/agt/README.md",
@@ -72,9 +72,9 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/AGT"
   },
-  "Status": "other",
+  "Status": "deposited",
   "Subtitle": "Algebraic Graph Theory",
-  "SupportEmail": "r.evans@qmul.ac.uk",
+  "SupportEmail": "rhysjevans00@gmail.com",
   "TestFile": "tst/testall.g",
-  "Version": "0.2"
+  "Version": "0.3"
 }
