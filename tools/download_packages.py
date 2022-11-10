@@ -71,7 +71,7 @@ def download_archive(archive_dir: str, pkg_name: str) -> str:
             )
             os.remove(archive_fname)
         else:
-            notice(f"{archive_fname} already exists, not downloading again")
+            print(f"{archive_fname} already exists, not downloading again")
             return archive_fname
     url = archive_url(pkg_json)
     notice(f"downloading {url} to {archive_fname}")
