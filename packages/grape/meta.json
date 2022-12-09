@@ -2,17 +2,16 @@
   "AbstractHTML": "<span class=\"pkgname\">GRAPE</span> is a package for computing with graphs and groups, and is primarily designed for constructing and analysing graphs related to groups, finite geometries, and designs.",
   "AcceptDate": "07/1993",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "affc932da0887aba1aa27e22e82f48908b8065ecf5e3c79952b4867743f6f413",
-  "ArchiveURL": "https://github.com/gap-packages/grape/releases/download/v4.8.5/grape-4.8.5",
+  "ArchiveSHA256": "78d7739c7b84702f93b71bda9b38ce704e5ea37040550541a6f615c542c7ae2f",
+  "ArchiveURL": "https://github.com/gap-packages/grape/releases/download/v4.9.0/grape-4.9.0",
   "AvailabilityTest": null,
   "BinaryFiles": [
     "doc/manual.dvi",
     "doc/manual.pdf",
-    "nauty22/nug.pdf",
-    "bin/i686-pc-cygwin-gcc-default32/dreadnautB.exe"
+    "nauty2_8_6/nug28.pdf"
   ],
   "CommunicatedBy": "Leonard Soicher (QMUL)",
-  "Date": "26/03/2021",
+  "Date": "09/12/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.11",
@@ -25,6 +24,7 @@
     "geometry",
     "design"
   ],
+  "License": "Apache-2.0 AND GPL-2.0-or-later",
   "PackageDoc": [
     {
       "ArchiveURLSubset": [
@@ -39,7 +39,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "d648c98cc6232a63d61823850815fe31908618b25bbe6c59f354c392b5e92c5c",
+  "PackageInfoSHA256": "57bf98a073812614d00034643324da7b7ddb48bebaffc1d8a2e1c02d17b3b423",
   "PackageInfoURL": "https://gap-packages.github.io/grape/PackageInfo.g",
   "PackageName": "GRAPE",
   "PackageWWWHome": "https://gap-packages.github.io/grape",
@@ -51,8 +51,8 @@
       "IsAuthor": true,
       "IsMaintainer": true,
       "LastName": "Soicher",
-      "Place": "London",
-      "WWWHome": "http://www.maths.qmul.ac.uk/~lsoicher/"
+      "Place": "London, UK",
+      "WWWHome": "https://webspace.maths.qmul.ac.uk/l.h.soicher/"
     }
   ],
   "README_URL": "https://gap-packages.github.io/grape/README.md",
@@ -63,5 +63,5 @@
   "Status": "accepted",
   "Subtitle": "GRaph Algorithms using PErmutation groups",
   "TestFile": "tst/testall.g",
-  "Version": "4.8.5"
+  "Version": "4.9.0"
 }
