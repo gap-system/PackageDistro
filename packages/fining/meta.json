@@ -2,21 +2,21 @@
   "AbstractHTML": "<span class=\"pkgname\">FinInG</span> is a package for computation in Finite Incidence Geometry. It provides users with the basic tools to work in  various areas of finite geometry from the realms of projective spaces to the flat  lands of generalised polygons. The algebraic power of GAP is employed, particularly  in its facility with matrix and permutation groups.",
   "AcceptDate": "11/2017",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSHA256": "aa542b5e9032eb79204d4a8697704960726debee027e0bcc397c2bb77539c530",
-  "ArchiveURL": "https://github.com/gap-packages/FinInG/releases/download/v1.5.1/fining-1.5.1",
+  "ArchiveSHA256": "d79d6fae5b4698a5ca0e7d323f2fc99f189de4cb55f6388a6b8b00b634d83ae2",
+  "ArchiveURL": "https://github.com/gap-packages/FinInG/releases/download/v1.5.2/fining-1.5.2",
   "AutoDoc": {
     "MainPage": false,
     "TitlePage": false,
     "entities": {
-      "DATE": "21/09/2022",
-      "VERSION": "1.5.1",
+      "DATE": "10/12/2022",
+      "VERSION": "1.5.2",
       "YEAR": "2022"
     }
   },
   "AvailabilityTest": null,
-  "BannerString": "-------------------------------------------------------------------------------\n         ______________       ________      _________   __________ __          \n         ___  ____/__(_)__________  _/________  ____/   __<  /_  // /          \n         __  /_   __  /__  __ __  / __  __   / __     __  /_  // /_          \n         _  __/   _  / _  / / /_/ /  _  / / / /_/ /     _  /_/__  __/          \n         /_/      /_/  /_/ /_//___/  /_/ /_/____/      /_/_(_)/_/             \n-------------------------------------------------------------------------------\nLoading  FinInG 1.5.1 (Finite Incidence Geometry) \nby John Bamberg (http://school.maths.uwa.edu.au/~bamberg/)\n   Anton Betten (http://www.math.colostate.edu/~betten)\n   Philippe Cara (http://homepages.vub.ac.be/~pcara)\n   Jan De Beule (http://www.debeule.eu)\n   Michel Lavrauw (http://people.sabanciuniv.edu/~mlavrauw/)\n   Max Neunhoeffer (http://www-groups.mcs.st-and.ac.uk/~neunhoef/)\nFor help, type: ?FinInG \n---------------------------------------------------------------------\n",
+  "BannerString": "-------------------------------------------------------------------------------\n         ______________       ________      _________   __________ __          \n         ___  ____/__(_)__________  _/________  ____/   __<  /_  // /          \n         __  /_   __  /__  __ __  / __  __   / __     __  /_  // /_          \n         _  __/   _  / _  / / /_/ /  _  / / / /_/ /     _  /_/__  __/          \n         /_/      /_/  /_/ /_//___/  /_/ /_/____/      /_/_(_)/_/             \n-------------------------------------------------------------------------------\nLoading  FinInG 1.5.2 (Finite Incidence Geometry) \nby John Bamberg (http://school.maths.uwa.edu.au/~bamberg/)\n   Anton Betten (http://www.math.colostate.edu/~betten)\n   Philippe Cara (http://homepages.vub.ac.be/~pcara)\n   Jan De Beule (http://www.debeule.eu)\n   Michel Lavrauw (http://people.sabanciuniv.edu/~mlavrauw/)\n   Max Neunhoeffer (http://www-groups.mcs.st-and.ac.uk/~neunhoef/)\nFor help, type: ?FinInG \n---------------------------------------------------------------------\n",
   "CommunicatedBy": "Olexandr Konovalov (St Andrews)",
-  "Date": "21/09/2022",
+  "Date": "10/12/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10",
@@ -67,7 +67,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "62819c61a10db2aa0716fa3d39a6648c54af49bd2d5440dde4429914642160d8",
+  "PackageInfoSHA256": "6799274e6c5b74e7cd0f4f37e1ab8549613a67c8ba456adffcee97624d65351a",
   "PackageInfoURL": "https://gap-packages.github.io/FinInG/PackageInfo.g",
   "PackageName": "FinInG",
   "PackageWWWHome": "https://gap-packages.github.io/FinInG",
@@ -158,5 +158,5 @@
   "Status": "accepted",
   "Subtitle": "Finite Incidence Geometry",
   "TestFile": "tst/testall.g",
-  "Version": "1.5.1"
+  "Version": "1.5.2"
 }
