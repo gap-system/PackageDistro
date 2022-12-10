@@ -2,18 +2,18 @@
   "AbstractHTML": "This package implements the <a href=\"https://www.openmath.org/standard/scscp/\">Symbolic Computation Software Composability Protocol</a> for the GAP system.",
   "AcceptDate": "08/2010",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "f316ff03a19ad4cc2982e9126e5facf5e296b25250e99cc3c5eddca2b9b5c5ff",
-  "ArchiveURL": "https://github.com/gap-packages/scscp/releases/download/v2.3.1/SCSCP-2.3.1",
+  "ArchiveSHA256": "c35a318f7350d6ddfb373214e845f1260edbf421f21bd4aa7625f603fc3b0633",
+  "ArchiveURL": "https://github.com/gap-packages/scscp/releases/download/v2.4.0/SCSCP-2.4.0",
   "Autoload": false,
   "AvailabilityTest": null,
   "BinaryFiles": [
     "demo/maple2gap.mw"
   ],
   "CommunicatedBy": "David Joyner (Annapolis)",
-  "Date": "22/01/2020",
+  "Date": "10/12/2022",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">=4.9",
+    "GAP": ">=4.10",
     "NeededOtherPackages": [
       [
         "GAPDoc",
@@ -46,27 +46,27 @@
       ],
       "Autoload": true,
       "BookName": "SCSCP",
-      "HTMLStart": "doc/chap0.html",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "Symbolic Computation Software Composability Protocol",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "18d259d37acdc5b518fd618c9379f793ce5bb3529cc728496b85a3d1cda29d83",
+  "PackageInfoSHA256": "984246970e6f37872b658166f2c98db3a8c4a6b8a3a7a2c3606233fc4c5c40b3",
   "PackageInfoURL": "https://gap-packages.github.io/scscp/PackageInfo.g",
   "PackageName": "SCSCP",
   "PackageWWWHome": "https://gap-packages.github.io/scscp",
   "Persons": [
     {
-      "Email": "alexander.konovalov@st-andrews.ac.uk",
-      "FirstNames": "Alexander",
+      "Email": "obk1@st-andrews.ac.uk",
+      "FirstNames": "Olexandr",
       "Institution": "University of St Andrews",
       "IsAuthor": true,
       "IsMaintainer": true,
       "LastName": "Konovalov",
       "Place": "St Andrews",
       "PostalAddress": "School of Computer Science\nUniversity of St Andrews\nJack Cole Building, North Haugh,\nSt Andrews, Fife, KY16 9SX, Scotland",
-      "WWWHome": "http://www.cs.st-andrews.ac.uk/~alexk/"
+      "WWWHome": "https://alex-konovalov.github.io/"
     },
     {
       "Email": "sal@cs.st-and.ac.uk",
@@ -88,5 +88,5 @@
   "Status": "accepted",
   "Subtitle": "Symbolic Computation Software Composability Protocol in GAP",
   "TestFile": "tst/offline.tst",
-  "Version": "2.3.1"
+  "Version": "2.4.0"
 }
