@@ -82,6 +82,13 @@ def validate_tarball(filename: str) -> str:
         if not os.path.join(basedir, "PackageInfo.g") in names:
             error("tarball is missing PackageInfo.g")
 
+        # must not contain symlinks (these often cause trouble on Windows).
+        # TODO: if anyone ever really needs symlinks, then at the very least
+        # we should prevent symlinks pointing outside the package directory.
+        symlinks = [x for x in tf.getnames() if tf.getmember(x).issym()]
+        if len(symlinks) > 0:
+            error(f"tarball contains symlinks: {symlinks}")
+
         return basedir
 
 
