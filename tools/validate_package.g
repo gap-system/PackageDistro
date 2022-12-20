@@ -138,6 +138,16 @@ ValidatePackagesArchive := function(unpacked_dir, pkgnames)
         continue;
       fi;
 
+      # TODO: remove the code below once GAP's ValidatePackageInfo starts to
+      # require a License to be present in the package info record
+      if not IsBound(pkginfo_record.License) then
+        PrintToFormatted("*errout*",
+                         "\033[33m{}: missing License field, FAILED!\n\033[0m",
+                         pkgname);
+        nr_failures := nr_failures + 1;
+        continue;
+      fi;
+
       if json_old <> fail and
          not ComparePkgInfoDates(json_old.Date, pkginfo_record.Date) then
         PrintToFormatted("*errout*",
