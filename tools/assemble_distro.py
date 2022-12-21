@@ -11,11 +11,13 @@
 ##
 import glob
 import gzip
+import io
 import json
 import os
 import shutil
 import subprocess
 import sys
+import typing
 
 from tempfile import TemporaryDirectory
 from download_packages import download_archive
@@ -128,8 +130,14 @@ def main() -> None:
     # Make package-infos.json
     package_info = make_package_info_json(pkgs)
     package_infos_file = os.path.join(release_dir, "package-infos.json.gz")
-    with gzip.open(package_infos_file, "wt", encoding="utf-8") as f:
-        json.dump(package_info, f, indent=4)
+
+    # create a GzipFile with mtime=0 to ensure reproducibility: re-running this
+    # script should result in an identical .gz file (with same SHA256 checksum)
+    binary_file = gzip.GzipFile(package_infos_file, "w", 9, mtime=0)
+    # the next line is needed to make mypy happy, see <https://stackoverflow.com/a/58407810/928031>
+    binary_file_for_mypy = typing.cast(typing.IO[bytes], binary_file)
+    f = io.TextIOWrapper(binary_file_for_mypy, "utf-8", None, None)
+    json.dump(package_info, f, indent=4)
     write_sha256(package_infos_file)
 
 
