@@ -88,6 +88,15 @@ def make_packages_tar_gz(
             for f in glob.glob(f"{tempdir}/*/doc/*.{ext}"):
                 os.remove(f)
 
+        # WORKAROUND: remove any symlinks. Actually we reject package updates with
+        # symlinks, but there is one package (AGT) which currently ships a broken
+        # symlink
+        for subdir, dirs, files in os.walk(tempdir):
+            for file in files:
+                filepath = os.path.join(subdir, file)
+                if os.path.islink(filepath):
+                    os.unlink(filepath)
+
         full_tarname = os.path.join(release_dir, tarname)
         print("Creating final tarball: ", full_tarname)
         subprocess.run(["tar", "czf", full_tarname, "-C", tempdir, "."])
