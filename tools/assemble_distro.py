@@ -138,6 +138,7 @@ def main() -> None:
     binary_file_for_mypy = typing.cast(typing.IO[bytes], binary_file)
     f = io.TextIOWrapper(binary_file_for_mypy, "utf-8", None, None)
     json.dump(package_info, f, indent=4)
+    f.close()
     write_sha256(package_infos_file)
 
 
