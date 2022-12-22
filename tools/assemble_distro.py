@@ -139,6 +139,7 @@ def main() -> None:
     f = io.TextIOWrapper(binary_file_for_mypy, "utf-8", None, None)
     json.dump(package_info, f, indent=4)
     f.close()
+    binary_file.close()
     write_sha256(package_infos_file)
 
 
