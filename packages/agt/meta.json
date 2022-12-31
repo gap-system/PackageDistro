@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">AGT</span> package provides functionality to      inspect combinatorial and algebraic properties of graphs in GRAPE format.      It also provides a library  strongly regular graphs on at most 40 vertices,     and several graph constructions",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "545ef18a1c1c2215cdd5546813eb36bcf38176dcbd7edc45f2cd2f598e95bc5a",
-  "ArchiveURL": "https://github.com/gap-packages/AGT/releases/download/v0.3/AGT-0.3",
+  "ArchiveSHA256": "289f2519e158d3e5473ead800355f6751413d75dbe5afe817bb9076604d3ce34",
+  "ArchiveURL": "https://github.com/gap-packages/AGT/releases/download/v0.3.1/AGT-0.3.1",
   "AvailabilityTest": null,
-  "Date": "22/10/2022",
+  "Date": "31/12/2022",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.10",
@@ -50,7 +50,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "86cf3aa43d9242772221abfd31240b424f17ffb3501e38cdf085086a55fdad46",
+  "PackageInfoSHA256": "e70f10d85bd6e96613e120b0d0c0069d12fe8bc626f3463e6bf21c1324780442",
   "PackageInfoURL": "https://gap-packages.github.io/agt/PackageInfo.g",
   "PackageName": "AGT",
   "PackageWWWHome": "https://gap-packages.github.io/agt",
@@ -76,5 +76,5 @@
   "Subtitle": "Algebraic Graph Theory",
   "SupportEmail": "rhysjevans00@gmail.com",
   "TestFile": "tst/testall.g",
-  "Version": "0.3"
+  "Version": "0.3.1"
 }
