@@ -2,8 +2,8 @@
   "AbstractHTML": "The <span class=\"pkgname\">kbmag</span> package is a       <span class=\"pkgname\">GAP</span> interface to some `C' programs   for running the Knuth-Bendix completion program on finite semigroup,   monoid or group presentations, and for attempting to compute automatic   structures of finitely presented groups",
   "AcceptDate": "07/2003",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "99e32540a97a65c1577e8a3b0ef19e067b464b2517df3a78311a2a7fffd9f9e6",
-  "ArchiveURL": "https://github.com/gap-packages/kbmag/releases/download/v1.5.10/kbmag-1.5.10",
+  "ArchiveSHA256": "3112924625b3b2b5d0ae1a84fe7babccaaa900b0044dca37fbf33f8b3f455682",
+  "ArchiveURL": "https://github.com/gap-packages/kbmag/releases/download/v1.5.11/kbmag-1.5.11",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "The &KBMAG; package is a &GAP; interface to some `C' programs for running the Knuth-Bendix completion program on finite semigroup, monoid or group presentations, and for attempting to compute  automatic structures of finitely presented groups.<P/>Bug reports, comments, suggestions for additional features, and offers to implement some of these, will all be very welcome.<P/>Please submit any issues at <URL>https://github.com/gap-packages/kbmag/issues/</URL>.<P/>",
@@ -14,7 +14,7 @@
   "Autoload": false,
   "AvailabilityTest": null,
   "CommunicatedBy": "Charles Wright (Oregon)",
-  "Date": "23/09/2022",
+  "Date": "03/01/2023",
   "Dependencies": {
     "ExternalConditions": [
       "Unix only"
@@ -42,7 +42,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "a060ba748ada67e1637e4e4a600811939839e3c7fc21ea46f317f426724200c3",
+  "PackageInfoSHA256": "cace7d9560e58fd1abfc941cd3937175e43f18495e4dd66f4851a6268f85dba9",
   "PackageInfoURL": "https://gap-packages.github.io/kbmag/PackageInfo.g",
   "PackageName": "kbmag",
   "PackageWWWHome": "https://gap-packages.github.io/kbmag",
@@ -72,5 +72,5 @@
   "Status": "accepted",
   "Subtitle": "Knuth-Bendix on Monoids and Automatic Groups",
   "TestFile": "tst/testall.g",
-  "Version": "1.5.10"
+  "Version": "1.5.11"
 }
