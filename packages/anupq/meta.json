@@ -2,8 +2,8 @@
   "AbstractHTML": "The <span class=\"pkgname\">ANUPQ</span> package provides an interactive    interface to the p-quotient, p-group generation and standard presentation    algorithms of the ANU pq C program.",
   "AcceptDate": "04/2002",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSHA256": "9df9f662c4df3b32916c61e0becd2d04162b75150368b2dadc50f1c432ca8579",
-  "ArchiveURL": "https://github.com/gap-packages/anupq/releases/download/v3.2.6/anupq-3.2.6",
+  "ArchiveSHA256": "8276e5191308d3a96c968bde53eed2d0a5af3de374d5f82bd378aa608f5e3e23",
+  "ArchiveURL": "https://github.com/gap-packages/anupq/releases/download/v3.3.0/anupq-3.3.0",
   "AutoDoc": {
     "TitlePage": {
       "Copyright": "\n      &copyright; 2001-2016 by Greg Gamble<P/>\n      &copyright; 2001-2005 by Werner Nickel<P/>\n      &copyright; 1995-2001 by Eamon O'Brien<P/>\n\n      The &GAP; package &ANUPQ; is licensed under the <URL Text=\"Artistic License 2.0\">https://opensource.org/licenses/artistic-license-2.0</URL>.\n      "
@@ -12,7 +12,7 @@
   "AvailabilityTest": null,
   "BannerFunction": null,
   "CommunicatedBy": "Charles Wright (Eugene)",
-  "Date": "07/03/2022",
+  "Date": "05/01/2023",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.9",
@@ -38,13 +38,13 @@
         "doc"
       ],
       "BookName": "ANUPQ",
-      "HTMLStart": "doc/chap0.html",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "ANU p-Quotient",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "7a4aad3b14a78000226f9c861d44c9305ddb6e1c33d1dfd3b0f33f7d6ad4c655",
+  "PackageInfoSHA256": "0bbb5cd158e8004574d58642cf9a74ff3506bd2bddaa2bdcb1b37cca7a19da78",
   "PackageInfoURL": "https://gap-packages.github.io/anupq/PackageInfo.g",
   "PackageName": "ANUPQ",
   "PackageWWWHome": "https://gap-packages.github.io/anupq/",
@@ -98,5 +98,5 @@
   "Status": "accepted",
   "Subtitle": "ANU p-Quotient",
   "TestFile": "tst/testinstall.g",
-  "Version": "3.2.6"
+  "Version": "3.3.0"
 }
