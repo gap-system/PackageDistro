@@ -22,7 +22,7 @@ on:
       - main
     tags:
       - v[1-9]+.[0-9]+
-      - v[1-9]+.[0-9]+.[0-9]+
+      - v[1-9]+.[0-9]+.[0-9]+*
 
 # only run at most one instances of this workflow at a time for each branch
 # resp. tag. Starting a new one cancels previously running ones.
