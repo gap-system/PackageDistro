@@ -85,6 +85,7 @@ jobs:
             _releases/packages-required.tar.gz.sha256
             _releases/package-infos.json.gz
             _releases/package-infos.json.gz.sha256
+            _releases/pkglist.csv
 
       - name: "Update tag"
         uses: actions/github-script@v6

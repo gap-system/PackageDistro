@@ -32,7 +32,7 @@ def write_sha256(filename: str) -> None:
         f.write(sha256(filename))
 
 
-def make_package_info_json(pkgs: List[str]) -> Dict[str, Any]:
+def collect_package_info(pkgs: List[str]) -> Dict[str, Any]:
     package_info = dict()
     for p in pkgs:
         package_info[p] = metadata(p)
@@ -128,7 +128,7 @@ def main() -> None:
     )
 
     # Make package-infos.json
-    package_info = make_package_info_json(pkgs)
+    package_info = collect_package_info(pkgs)
     package_infos_file = os.path.join(release_dir, "package-infos.json.gz")
 
     # create a GzipFile with mtime=0 to ensure reproducibility: re-running this
@@ -141,6 +141,17 @@ def main() -> None:
     f.close()
     binary_file.close()
     write_sha256(package_infos_file)
+
+    # also generate simple package list for PackageManager, see
+    # https://github.com/gap-packages/PackageManager/issues/112
+    pkglist = os.path.join(release_dir, "pkglist.csv")
+    with open(pkglist, "w") as f:
+        for pkg in pkgs:
+            meta = package_info[pkg]
+            f.write(meta["PackageName"])
+            f.write("\t")
+            f.write(meta["PackageInfoURL"])
+            f.write("\n")
 
 
 if __name__ == "__main__":
