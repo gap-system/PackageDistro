@@ -1,19 +1,19 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">Utils</span> package provides a collection   of utility functions gleaned from many packages.",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "5a3de5269a8febc626a643558f31ca53548b2e5952838465a740c30ec5ce836f",
-  "ArchiveURL": "https://github.com/gap-packages/utils/releases/download/v0.81/utils-0.81",
+  "ArchiveSHA256": "f5107f037bc473672f6393ec5795cdeecfdaea6be89a91f82101ac80feaa32e8",
+  "ArchiveURL": "https://github.com/gap-packages/utils/releases/download/v0.82/utils-0.82",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "The &Utils; package provides a space for utility functions in a variety of &GAP; packages to be collected together into a single package.  In this way it is hoped that they will become more visible to package authors.\n<P/>\nAny package author who transfers a function to &Utils; will become an author of &Utils;.\n<P/>\nIf deemed appropriate, functions may also be transferred from the main library.\n<P/>\nBug reports, suggestions and comments are, of course, welcome.\nPlease contact the last author at <Email>c.d.wensley@bangor.ac.uk</Email> or submit an issue at the GitHub repository <URL>https://github.com/gap-packages/utils/issues/</URL>.\n",
       "Acknowledgements": "This documentation was prepared using the &GAPDoc; <Cite Key='GAPDoc'/> and &AutoDoc; <Cite Key='AutoDoc'/> packages.<P/>\nThe procedure used to produce new releases uses the package <Package>GitHubPagesForGAP</Package> <Cite Key='GitHubPagesForGAP' /> and the package <Package>ReleaseTools</Package>.<P/>",
-      "Copyright": "&copyright; 2015-2022, The GAP Group. <P/>\nThe &Utils; package is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\n"
+      "Copyright": "&copyright; 2015-2023, The GAP Group. <P/>\nThe &Utils; package is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\n"
     }
   },
   "Autoload": false,
   "AvailabilityTest": null,
-  "BannerString": "Loading Utils 0.81 for GAP 4.12.1 - a collection of utility functions.\n",
-  "Date": "04/12/2022",
+  "BannerString": "Loading Utils 0.82 for GAP 4.12.1 - a collection of utility functions.\n",
+  "Date": "09/02/2023",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10.1",
@@ -41,7 +41,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "5344e1430d8b54a0836c980f8b495280211cbc277d97c8490e5746f8a04c581f",
+  "PackageInfoSHA256": "94fbc6e5f053c02f53cec8deaa97968d5f349e3ade7b63a7882655807a58463c",
   "PackageInfoURL": "https://gap-packages.github.io/utils/PackageInfo.g",
   "PackageName": "utils",
   "PackageWWWHome": "https://gap-packages.github.io/utils",
@@ -107,13 +107,13 @@
       "WWWHome": "https://www.math.rwth-aachen.de/~Frank.Luebeck"
     },
     {
-      "Email": "c.d.wensley@bangor.ac.uk",
+      "Email": "cdwensley.maths@btinternet.com",
       "FirstNames": "Chris",
-      "Institution": "Bangor University",
+      "Institution": "",
       "IsAuthor": true,
       "IsMaintainer": true,
       "LastName": "Wensley",
-      "Place": "Bangor",
+      "Place": "Llanfairfechan",
       "WWWHome": "https://github.com/cdwensley"
     }
   ],
@@ -125,5 +125,5 @@
   "Status": "deposited",
   "Subtitle": "Utility functions in GAP",
   "TestFile": "tst/testall.g",
-  "Version": "0.81"
+  "Version": "0.82"
 }
