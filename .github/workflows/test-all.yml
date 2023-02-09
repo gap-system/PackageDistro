@@ -328,8 +328,6 @@ jobs:
                   # so we cheat and load it early
                   SetInfoLevel(InfoPackageLoading, PACKAGE_DEBUG);
                   LoadPackage(\"hap\");
-                elif pkgname = \"packagemanager\" then
-                  QUIT_GAP(true); # HACK: workaround for weird failures
                 elif pkgname = \"sglppow\" then
                   LoadPackage(\"liepring\" : OnlyNeeded);
                 elif pkgname = \"standardff\" then
