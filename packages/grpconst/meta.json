@@ -2,11 +2,11 @@
   "AbstractHTML": "The <span class=\"pkgname\">GrpConst</span> package contains methods to construct up to isomorphism the groups of a given order. The FrattiniExtensionMethod constructs all soluble groups of a given order. On request it gives only those that are (or are not) nilpotent or supersolvable or that do (or do not) have normal Sylow subgroups for some given set of primes. The CyclicSplitExtensionMethod constructs all groups having a normal Sylow subgroup for orders of the type p^n *q. The method relies on the availability of a list of all groups of order p^n. The UpwardsExtensions algorithm takes as input a permutation group G and a positive integer s and returns a list of permutation groups, one for each extension of G by a soluble group of order a divisor of s. This method can used to construct the non-solvable groups of a given order by taking the perfect groups of certain orders as input for G. The programs in this package have been used to construct a large part of the Small Groups library.",
   "AcceptDate": "07/1999",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "5116367669dd022d2f288217ed5d491cfe392e5b55c3decc929372211374ca28",
-  "ArchiveURL": "https://github.com/gap-packages/grpconst/releases/download/v2.6.3/grpconst-2.6.3",
+  "ArchiveSHA256": "b5e425406db8a75c465f4d25cc572c9e5bd998b9f970c8258d567cd9004268da",
+  "ArchiveURL": "https://github.com/gap-packages/grpconst/releases/download/v2.6.4/grpconst-2.6.4",
   "AvailabilityTest": null,
   "CommunicatedBy": "Charles Wright (Eugene)",
-  "Date": "14/11/2022",
+  "Date": "10/02/2023",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.7",
@@ -18,6 +18,10 @@
       [
         "irredsol",
         ">=1.2"
+      ],
+      [
+        "smallgrp",
+        ">=1.4"
       ]
     ],
     "SuggestedOtherPackages": []
@@ -44,7 +48,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "77d1de78ff64cb7d2d1903d688e7b92e94995b0bde731658158ed6dc1720daf4",
+  "PackageInfoSHA256": "85386a2e949799c0acfa1ac65fbf1d9d59476720b78a6625a72dab7eca903ac7",
   "PackageInfoURL": "https://gap-packages.github.io/grpconst/PackageInfo.g",
   "PackageName": "GrpConst",
   "PackageWWWHome": "https://gap-packages.github.io/grpconst/",
@@ -87,5 +91,5 @@
   "Status": "accepted",
   "Subtitle": "Constructing the Groups of a Given Order",
   "TestFile": "tst/testall.g",
-  "Version": "2.6.3"
+  "Version": "2.6.4"
 }
