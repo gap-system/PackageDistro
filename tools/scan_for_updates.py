@@ -115,7 +115,7 @@ def import_packages(pkginfo_paths: List[str]) -> None:
             utils.download(url, archive_fname)
             pkg_json["ArchiveSHA256"] = sha256(archive_fname)
         except requests.RequestException as e:
-            warning(f"{pkg_name}: {e}")
+            warning(f"{url}: {e}")
             pkg_json["ArchiveSHA256"] = "FAIL"
 
         pkgname = pkg_json["PackageName"].lower()
