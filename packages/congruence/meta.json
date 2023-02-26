@@ -2,11 +2,11 @@
   "AbstractHTML": "The <span class=\"pkgname\">Congruence </span> package provides functions to construct several types of canonical congruence subgroups in SL_2(Z), and also intersections of a finite number of such subgroups. Furthermore, it implements the algorithm for generating Farey symbols for congruence subgroups and using them to produce a system of independent generators for these subgroups",
   "AcceptDate": "09/2014",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "fe4d24dda39e6bccc170a6d55e690bc22b30e457101221f452a3cd7a48a05627",
-  "ArchiveURL": "https://github.com/gap-packages/congruence/releases/download/v1.2.4/congruence-1.2.4",
+  "ArchiveSHA256": "61c0cb9119d265dded0986f97563b4763ec9f729d9439e3d89d968c4448ec736",
+  "ArchiveURL": "https://github.com/gap-packages/congruence/releases/download/v1.2.5/congruence-1.2.5",
   "AvailabilityTest": null,
   "CommunicatedBy": "Graham Ellis (Galway)",
-  "Date": "27/04/2022",
+  "Date": "25/02/2023",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.8",
@@ -31,13 +31,13 @@
       ],
       "Autoload": true,
       "BookName": "Congruence",
-      "HTMLStart": "doc/chap0.html",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "Congruence subgroups of SL(2,Integers)",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "a6f2b4cb16ecbac8b879a4f0f7ec660cc70655cb6cb36968ed7d6882dbddf694",
+  "PackageInfoSHA256": "a029ea2fff574690ff39079a103424c134a600e04d8834518e5f8a9655b2e954",
   "PackageInfoURL": "https://gap-packages.github.io/congruence/PackageInfo.g",
   "PackageName": "Congruence",
   "PackageWWWHome": "https://gap-packages.github.io/congruence",
@@ -73,7 +73,7 @@
       "LastName": "Konovalov",
       "Place": "St Andrews",
       "PostalAddress": "School of Computer Science\nUniversity of St Andrews\nJack Cole Building, North Haugh,\nSt Andrews, Fife, KY16 9SX, Scotland",
-      "WWWHome": "https://alex-konovalov.github.io/"
+      "WWWHome": "https://olexandr-konovalov.github.io/"
     },
     {
       "Email": "verrill@math.lsu.edu",
@@ -95,5 +95,5 @@
   "Status": "accepted",
   "Subtitle": "Congruence subgroups of SL(2,Integers)",
   "TestFile": "tst/testall.g",
-  "Version": "1.2.4"
+  "Version": "1.2.5"
 }
