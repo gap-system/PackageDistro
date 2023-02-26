@@ -2,12 +2,12 @@
   "AbstractHTML": "This package provides an <a href=\"http://www.openmath.org/\">OpenMath</a> phrasebook for <span class=\"pkgname\">GAP</span>. This package allows <span class=\"pkgname\">GAP</span> users to import and export mathematical objects encoded in OpenMath, for the purpose of exchanging them with other applications that are OpenMath enabled.",
   "AcceptDate": "08/2010",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "bb13f5fe0440c40d563fd82374a29b5f52df6babe7bd88d17dd37295a1544007",
-  "ArchiveURL": "https://github.com/gap-packages/openmath/releases/download/v11.5.2/OpenMath-11.5.2",
+  "ArchiveSHA256": "e282626bbb3e93883ba047e7751f67bcc67179318ab2031693d1f4d179c1823a",
+  "ArchiveURL": "https://github.com/gap-packages/openmath/releases/download/v11.5.3/OpenMath-11.5.3",
   "Autoload": false,
   "AvailabilityTest": null,
   "CommunicatedBy": "David Joyner (Annapolis)",
-  "Date": "06/12/2022",
+  "Date": "25/02/2023",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": " >= 4.9.0",
@@ -41,7 +41,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "f85d92e2fa80ff19f2e435f79eb3e9bb92e88a11a56b5aaabc053be6708124ab",
+  "PackageInfoSHA256": "fb8de563a40eb4d580146d4a55151f732f5b08db66a6c31d86882e28d35c43c2",
   "PackageInfoURL": "https://gap-packages.github.io/openmath/PackageInfo.g",
   "PackageName": "OpenMath",
   "PackageWWWHome": "https://gap-packages.github.io/openmath",
@@ -61,7 +61,7 @@
       "LastName": "Konovalov",
       "Place": "St Andrews",
       "PostalAddress": "School of Computer Science\nUniversity of St Andrews\nJack Cole Building, North Haugh,\nSt Andrews, Fife, KY16 9SX, Scotland",
-      "WWWHome": "https://alex-konovalov.github.io/"
+      "WWWHome": "https://olexandr-konovalov.github.io/"
     },
     {
       "Email": "lmn27@cam.ac.uk",
@@ -91,5 +91,5 @@
   "Status": "accepted",
   "Subtitle": "OpenMath functionality in GAP",
   "TestFile": "tst/testall.g",
-  "Version": "11.5.2"
+  "Version": "11.5.3"
 }
