@@ -2,11 +2,11 @@
   "AbstractHTML": "The <span class=\"pkgname\">LAGUNA</span> package replaces the <span class=\"pkgname\">LAG</span> package and provides functionality for calculation of the normalized unit group of the modular group algebra of the finite p-group and for investigation of Lie algebra associated with group algebras and other associative algebras.",
   "AcceptDate": "06/2003",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "bba2a2354c548685e0085a385d6027927add32014c28ca5e3127539b68cd87bf",
-  "ArchiveURL": "https://github.com/gap-packages/laguna/releases/download/v3.9.5/laguna-3.9.5",
+  "ArchiveSHA256": "5712ef79a455df34286c620a2363389834dc3a6f728ba4c8c3d750a7257225f8",
+  "ArchiveURL": "https://github.com/gap-packages/laguna/releases/download/v3.9.6/laguna-3.9.6",
   "AvailabilityTest": null,
   "CommunicatedBy": "Herbert Pahlings (Aachen)",
-  "Date": "27/04/2022",
+  "Date": "25/02/2023",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.9",
@@ -37,13 +37,13 @@
         "doc"
       ],
       "BookName": "LAGUNA",
-      "HTMLStart": "doc/chap0.html",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "Lie AlGebras and UNits of group Algebras",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "42197cdfb0a0324dd9d5721dd56182ab9da154e64bea0dd7a90da04550a42f91",
+  "PackageInfoSHA256": "e2ab9a92bc43ef8f723afc74a18b02f5e4d856543b99cf7be9090d34402034b7",
   "PackageInfoURL": "https://gap-packages.github.io/laguna/PackageInfo.g",
   "PackageName": "LAGUNA",
   "PackageWWWHome": "https://gap-packages.github.io/laguna",
@@ -67,7 +67,7 @@
       "LastName": "Konovalov",
       "Place": "St Andrews",
       "PostalAddress": "School of Computer Science\nUniversity of St Andrews\nJack Cole Building, North Haugh,\nSt Andrews, Fife, KY16 9SX, Scotland",
-      "WWWHome": "https://alex-konovalov.github.io/"
+      "WWWHome": "https://olexandr-konovalov.github.io/"
     },
     {
       "FirstNames": "Richard",
@@ -95,5 +95,5 @@
   "Status": "accepted",
   "Subtitle": "Lie AlGebras and UNits of group Algebras",
   "TestFile": "tst/testall.g",
-  "Version": "3.9.5"
+  "Version": "3.9.6"
 }
