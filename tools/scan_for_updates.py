@@ -109,12 +109,16 @@ def parse_pkginfo_files(pkginfo_paths: List[str]) -> List[Dict[str, Any]]:
 def import_packages(pkginfo_paths: List[str]) -> None:
     pkginfos = parse_pkginfo_files(pkginfo_paths)
     for pkg_json in pkginfos:
+        pkgname = pkg_json["PackageName"].lower()
         url = archive_url(pkg_json)
         archive_fname = join(archive_dir, url.split("/")[-1])
-        utils.download(url, archive_fname)
-        pkg_json["ArchiveSHA256"] = sha256(archive_fname)
+        try:
+            utils.download(url, archive_fname)
+            pkg_json["ArchiveSHA256"] = sha256(archive_fname)
+        except requests.RequestException as e:
+            warning(f"{pkgname}: {e}")
+            pkg_json["ArchiveSHA256"] = "FAIL"
 
-        pkgname = pkg_json["PackageName"].lower()
         pkg_json_file = metadata_fname(pkgname)
         notice(f"update {pkg_json_file}")
         if not os.path.exists(os.path.dirname(pkg_json_file)):
