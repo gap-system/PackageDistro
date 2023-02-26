@@ -111,8 +111,14 @@ def import_packages(pkginfo_paths: List[str]) -> None:
     for pkg_json in pkginfos:
         url = archive_url(pkg_json)
         archive_fname = join(archive_dir, url.split("/")[-1])
-        utils.download(url, archive_fname)
-        pkg_json["ArchiveSHA256"] = sha256(archive_fname)
+        try:
+1])
+            utils.download(url, archive_fname)
+1])
+            pkg_json["ArchiveSHA256"] = sha256(archive_fname)
+        except requests.RequestException as e:
+            warning(f"{pkg_name}: {e}")
+            pkg_json["ArchiveSHA256"] = "FAIL"
 
         pkgname = pkg_json["PackageName"].lower()
         pkg_json_file = metadata_fname(pkgname)
