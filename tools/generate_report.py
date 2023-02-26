@@ -172,7 +172,6 @@ with open(dir_report + "/report.md", "w") as f:
             ":heavy_multiplication_x: :heavy_multiplication_x: Packages that now skipped",
         ),
     ]:
-
         pkgs_filtered = pkgs_changed[status]
         report_diff[status + "_changed"] = len(pkgs_filtered)
         if len(pkgs_filtered) > 0:
@@ -202,7 +201,6 @@ with open(dir_report + "/report.md", "w") as f:
         ("success", "succeeded", ":heavy_check_mark: Packages still succeeding"),
         ("skipped", "skipped", ":heavy_minus_sign: Packages that were skipped"),
     ]:
-
         pkgs_filtered = pkgs_same[status]
         report_diff[status + "_same"] = len(pkgs_filtered)
         if len(pkgs_filtered) > 0:

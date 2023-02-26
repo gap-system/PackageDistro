@@ -55,6 +55,7 @@ with open(report_path, "r") as f:
 dir_last_report_symbolic = os.path.join(root, dir_last_report_rel)
 symlink(dir_report_rel, dir_last_report_symbolic, overwrite=True)
 
+
 ################################################################################
 # Generate html redirect
 def generate_redirect(

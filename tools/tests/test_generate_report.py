@@ -9,6 +9,7 @@ This module contains some tests for the generate_report.py script
 import os
 import shutil
 
+
 # Copy {file} from {root}/tools/tests/_data/{id} into directory {root}/data/{id}
 # Returns destination folder of copied file
 def copy_files(root, id, file):
