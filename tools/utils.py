@@ -19,6 +19,7 @@ from os.path import join
 
 from typing import Any, Dict, List, NoReturn, Tuple
 
+
 # print notices in green
 def notice(msg: str) -> None:
     print("\033[32m" + msg + "\033[0m")
