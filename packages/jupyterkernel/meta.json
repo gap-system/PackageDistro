@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">JupyterKernel</span> package provides a so-called kernel for the Jupyter interactive document system.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "e3f7d2ab9d50bdaff6071bd478b6631495e2e46e79ac3328cd064d724a76bedc",
-  "ArchiveURL": "https://github.com/gap-packages/JupyterKernel/releases/download/v1.4.1/JupyterKernel-1.4.1",
+  "ArchiveSHA256": "228dbee41c6280471275e0cf1db517fef499579357f62a4cf4fde0e53f5dcd5c",
+  "ArchiveURL": "https://github.com/gap-packages/JupyterKernel/releases/download/v1.5.0/JupyterKernel-1.5.0",
   "AvailabilityTest": null,
-  "Date": "01/09/2021",
+  "Date": "25/02/2023",
   "Dependencies": {
     "ExternalConditions": [
       [
@@ -53,13 +53,13 @@
         "doc"
       ],
       "BookName": "JupyterKernel",
-      "HTMLStart": "doc/chap0.html",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "Jupyter kernel written in GAP",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "1e3e1fbfa33c2eeb535516623c4454d6ef818771cfc5a46c852a461f4e12ac11",
+  "PackageInfoSHA256": "4ac2caa1ca82a83c52a65791f8c11a2d70e59d044f2eee2d3bf19c057b9b960c",
   "PackageInfoURL": "https://gap-packages.github.io/JupyterKernel/PackageInfo.g",
   "PackageName": "JupyterKernel",
   "PackageWWWHome": "https://gap-packages.github.io/JupyterKernel/",
@@ -83,7 +83,18 @@
       "IsMaintainer": false,
       "LastName": "Martins",
       "Place": "Lisbon, PT",
-      "WWWHome": "http://github.com/mcmartins"
+      "WWWHome": "https://github.com/mcmartins"
+    },
+    {
+      "Email": "obk1@st-andrews.ac.uk",
+      "FirstNames": "Olexandr",
+      "Institution": "University of St Andrews",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "Konovalov",
+      "Place": "St Andrews",
+      "PostalAddress": "School of Computer Science\nUniversity of St Andrews\nJack Cole Building, North Haugh,\nSt Andrews, Fife, KY16 9SX, Scotland",
+      "WWWHome": "https://olexandr-konovalov.github.io/"
     },
     {
       "Email": "support@gap-system.org",
@@ -123,12 +134,6 @@
       "LastName": "Isuru"
     },
     {
-      "FirstNames": "Alexander",
-      "IsAuthor": false,
-      "IsMaintainer": false,
-      "LastName": "Konovalov"
-    },
-    {
       "FirstNames": "Zachariah",
       "IsAuthor": false,
       "IsMaintainer": false,
@@ -149,5 +154,5 @@
   "Status": "deposited",
   "Subtitle": "Jupyter kernel written in GAP",
   "TestFile": "tst/testinstall.g",
-  "Version": "1.4.1"
+  "Version": "1.5.0"
 }
