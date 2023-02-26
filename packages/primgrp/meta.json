@@ -1,17 +1,17 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">PrimGrp</span> package provides the library   of primitive permutation groups which includes, up to permutation isomorphism   (i.e., up to conjugacy in the corresponding symmetric group), all primitive   permutation groups of degree &lt; 4096.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "bf3c180c450429b2119f0662a635377c701c618c245b0683075e6b70d17b5030",
-  "ArchiveURL": "https://github.com/gap-packages/primgrp/releases/download/v3.4.3/primgrp-3.4.3",
+  "ArchiveSHA256": "9d6fde0fa4658100f662c364f77c9fd67b1699e9f3dbb60306ed357cc5837cff",
+  "ArchiveURL": "https://github.com/gap-packages/primgrp/releases/download/v3.4.4/primgrp-3.4.4",
   "AutoDoc": {
     "entities": {
-      "RELEASEDATE": "10 December 2022",
-      "RELEASEYEAR": "2022",
-      "VERSION": "3.4.3"
+      "RELEASEDATE": "25 February 2023",
+      "RELEASEYEAR": "2023",
+      "VERSION": "3.4.4"
     }
   },
   "AvailabilityTest": null,
-  "Date": "10/12/2022",
+  "Date": "25/02/2023",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": "4.10.0",
@@ -40,7 +40,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "9ab9a1ca8d0d8eaf50df317b73d84f44fe132d1455973a0bd39788367280b42a",
+  "PackageInfoSHA256": "37e2123ad03819d361a3d573d2bbbd5101317bd2cf2915fac63d45e6deb75ebc",
   "PackageInfoURL": "https://gap-packages.github.io/primgrp/PackageInfo.g",
   "PackageName": "PrimGrp",
   "PackageWWWHome": "https://gap-packages.github.io/primgrp/",
@@ -64,7 +64,7 @@
       "LastName": "Konovalov",
       "Place": "St Andrews",
       "PostalAddress": "School of Computer Science\nUniversity of St Andrews\nJack Cole Building, North Haugh,\nSt Andrews, Fife, KY16 9SX, Scotland",
-      "WWWHome": "https://alex-konovalov.github.io/"
+      "WWWHome": "https://olexandr-konovalov.github.io/"
     },
     {
       "Email": "colva.roney-dougal@st-andrews.ac.uk",
@@ -95,5 +95,5 @@
   "Status": "deposited",
   "Subtitle": "GAP Primitive Permutation Groups Library",
   "TestFile": "tst/testall.g",
-  "Version": "3.4.3"
+  "Version": "3.4.4"
 }
