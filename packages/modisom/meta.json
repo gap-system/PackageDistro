@@ -2,13 +2,13 @@
   "AbstractHTML": "The <span class=\"pkgname\">ModIsom</span> package contains various methods for computing with nilpotent associative algebras. In particular, it contains a method to determine the automorphism group and to test isomorphis of such algebras over finite fields and of modular group algebras of finite p-groups, and it contains a nilpotent quotient algorithm for finitely presented associative algebras and a method to determine Kurosh algebras.",
   "AcceptDate": "11/2013",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "c002326f89ddbd5bc77d8aaca7fca1ca5b3947092c3961c1a04b2b24e2ee0446",
-  "ArchiveURL": "https://github.com/gap-packages/modisom/releases/download/v2.5.3/modisom-2.5.3",
+  "ArchiveSHA256": "0f805c55a1c67807d7300271e423aae258be49a9948944c018063d418557922b",
+  "ArchiveURL": "https://github.com/gap-packages/modisom/releases/download/v2.5.4/modisom-2.5.4",
   "Autoload": false,
   "AvailabilityTest": null,
-  "BannerString": "Loading ModIsom 2.5.3... \n",
+  "BannerString": "Loading ModIsom 2.5.4... \n",
   "CommunicatedBy": "Olexandr Konovalov (St Andrews)",
-  "Date": "09/08/2022",
+  "Date": "27/02/2023",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.7",
@@ -44,7 +44,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "db224bdf645c00427ea249fe15a16719e789bd298e6cce3bc0527e3c213eeeb8",
+  "PackageInfoSHA256": "9a0f7a6b8f9d18755bad521113246b577175991e2868bbee9b9561853917349b",
   "PackageInfoURL": "https://gap-packages.github.io/modisom/PackageInfo.g",
   "PackageName": "ModIsom",
   "PackageWWWHome": "https://gap-packages.github.io/modisom/",
@@ -69,7 +69,7 @@
       "LastName": "Konovalov",
       "Place": "St Andrews",
       "PostalAddress": "School of Computer Science\nUniversity of St Andrews\nJack Cole Building, North Haugh,\nSt Andrews, Fife, KY16 9SX, Scotland",
-      "WWWHome": "https://alex-konovalov.github.io/"
+      "WWWHome": "https://olexandr-konovalov.github.io/"
     }
   ],
   "README_URL": "https://gap-packages.github.io/modisom/README.md",
@@ -80,5 +80,5 @@
   "Status": "accepted",
   "Subtitle": "Computing automorphisms and checking isomorphisms for modular group algebras of finite p-groups",
   "TestFile": "tst/testall.g",
-  "Version": "2.5.3"
+  "Version": "2.5.4"
 }
