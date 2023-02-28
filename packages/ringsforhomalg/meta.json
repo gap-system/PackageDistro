@@ -1,15 +1,15 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">RingsForHomalg</span> package provides small dictionaries for  <span class=\"pkgname\">homalg</span> to speak (as much as needed of) the languages  of Singular, Macaulay2, MAGMA, Sage, and Maple",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "0bf0dfeac43a08273c47a48629739817152cfd076bdd5ee2609e6c9caf9876a3",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/RingsForHomalg-2023.02-03/RingsForHomalg-2023.02-03",
+  "ArchiveSHA256": "946fccded21521cb53302dc37cc8ccf13af3cfa7867480faa9496653985f544a",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/RingsForHomalg-2023.02-05/RingsForHomalg-2023.02-05",
   "AutoDoc": {
     "TitlePage": {
       "Copyright": "&copyright; 2007-2015 by Mohamed Barakat, Simon Görtzen, Markus Kirschmer, Markus Lange-Hegermann, Oleksandr Motsak, Max Neunhöffer, Daniel Robertz, and Hans Schönemann.\n\nThis package may be distributed under the terms and conditions of the GNU Public License Version 2 or (at your option) any later version.\n"
     }
   },
   "AvailabilityTest": null,
-  "Date": "26/02/2023",
+  "Date": "2023-02-28",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12.1",
@@ -53,7 +53,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "01e6d30e13ea976ad7cabad6148025ec8525662a252b0cb255ec41e7b901079f",
+  "PackageInfoSHA256": "ea69824c16e1d96c2861234b74d5057c17038d5b55317ece07b943f0e16c338a",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/RingsForHomalg/PackageInfo.g",
   "PackageName": "RingsForHomalg",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/RingsForHomalg",
@@ -176,5 +176,5 @@
   "Status": "deposited",
   "Subtitle": "Dictionaries of external rings",
   "TestFile": "tst/testall.g",
-  "Version": "2023.02-03"
+  "Version": "2023.02-05"
 }
