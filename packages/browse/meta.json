@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "The <span class='pkgname'>Browse</span> package provides three levels of functionality</p><ul><li>A <span class='pkgname'>GAP</span> interface to the C-library <a href='http://www.gnu.org/software/ncurses/ncurses.html'>ncurses</a>.</li><li>A generic function for interactive browsing through two-dimensional arrays of data.</li><li>Several applications of the first two, e.g., a method for browsing character tables, browsing through the content of some data collections, or some games.</li></ul><p>",
   "ArchiveFormats": ".tar.bz2",
-  "ArchiveSHA256": "0592d84b6f1f77cb8ecb403ba7fe2227240a6fafa566bd71168265aa925de8f9",
-  "ArchiveURL": "https://www.math.rwth-aachen.de/~Browse/Browse-1.8.20",
+  "ArchiveSHA256": "3305f92e78598b1ffeef373c707921c32f8250858108c248caeef4b8fc874960",
+  "ArchiveURL": "https://www.math.rwth-aachen.de/~Browse/Browse-1.8.21",
   "AvailabilityTest": null,
-  "Date": "18/01/2023",
+  "Date": "01/03/2023",
   "Dependencies": {
     "ExternalConditions": [
       "C-compiler",
@@ -28,6 +28,35 @@
       ]
     ]
   },
+  "Extensions": [
+    {
+      "filename": "app/io_only.g",
+      "needed": [
+        [
+          "IO",
+          ""
+        ]
+      ]
+    },
+    {
+      "filename": "app/tmdbattr.g",
+      "needed": [
+        [
+          "TomLib",
+          ">= 1.2.0"
+        ]
+      ]
+    },
+    {
+      "filename": "app/atlasrep_only.g",
+      "needed": [
+        [
+          "AtlasRep",
+          ">= 1.5.0"
+        ]
+      ]
+    }
+  ],
   "Keywords": [
     "Browse",
     "ncurses"
@@ -46,7 +75,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "978303462ae09d715b60d4386bd1177726c1a68cd47e01440e0c642bac0088cf",
+  "PackageInfoSHA256": "36908ceb4e0fe4dce5c71ea845785965895656f53fdd5fbc1c09aa13fea3d45f",
   "PackageInfoURL": "https://www.math.rwth-aachen.de/~Browse/PackageInfo.g",
   "PackageName": "Browse",
   "PackageWWWHome": "https://www.math.rwth-aachen.de/~Browse",
@@ -77,5 +106,5 @@
   "README_URL": "https://www.math.rwth-aachen.de/~Browse/README",
   "Status": "deposited",
   "Subtitle": "browsing applications and ncurses interface",
-  "Version": "1.8.20"
+  "Version": "1.8.21"
 }
