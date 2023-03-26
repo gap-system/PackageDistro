@@ -37,10 +37,10 @@ on:
         type: string
         default: "*"
       # see https://github.com/marketplace/actions/debugging-with-tmate
-      debug_enabled:
-        description: 'Run the build with tmate debugging enabled'
-        type: boolean
-        default: false
+      #debug_enabled:
+      #  description: 'Run the build with tmate debugging enabled'
+      #  type: boolean
+      #  default: false
   workflow_call:
     inputs:
       which-gap:
@@ -276,9 +276,9 @@ jobs:
             echo "No required binary depedencies to be installed"
           fi
 
-      - name: "Setup tmate session"
-        uses: mxschmitt/action-tmate@v3
-        if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.debug_enabled }}
+      #- name: "Setup tmate session"
+      #  uses: mxschmitt/action-tmate@v3
+      #  if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.debug_enabled }}
 
       - name: "Run tests"
         timeout-minutes: 10
