@@ -40,6 +40,7 @@ on:
       debug_enabled:
         description: 'Run the build with tmate debugging enabled'
         type: boolean
+        default: false
   workflow_call:
     inputs:
       which-gap:
