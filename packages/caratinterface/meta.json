@@ -2,8 +2,8 @@
   "AbstractHTML": "This package provides <span class=\"pkgname\">GAP</span> interface routines to some of the stand-alone programs of <a href=\"https://lbfm-rwth.github.io/carat\">CARAT</a>, a package for the computation with crystallographic groups. CARAT is to a large extent complementary to the <span class=\"pkgname\">GAP</span> package <span class=\"pkgname\">Cryst</span>. In particular, it provides routines for the computation of normalizers and conjugators of finite unimodular groups in GL(n,Z), and routines for the computation of Bravais groups, which are all missing in <span class=\"pkgname\">Cryst</span>. A catalog of Bravais groups up to dimension 6 is also provided.",
   "AcceptDate": "02/2000",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "4f3c843f64175706ece12b826b970465d3e2bd9afc153f75603948ef7f05dd9e",
-  "ArchiveURL": "https://www.math.uni-bielefeld.de/~gaehler/gap/CaratInterface/CaratInterface-2.3.4",
+  "ArchiveSHA256": "57ffe40972ba581c3fcc12d6d4581c72472deea3bd6bccb5bb3b256e5e9dd48e",
+  "ArchiveURL": "https://www.math.uni-bielefeld.de/~gaehler/gap/CaratInterface/CaratInterface-2.3.5",
   "AvailabilityTest": null,
   "BinaryFiles": [
     "doc/manual.pdf",
@@ -11,11 +11,16 @@
     "carat.tgz"
   ],
   "CommunicatedBy": "Herbert Pahlings (Aachen)",
-  "Date": "29/07/2022",
+  "Date": "03/04/2023",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.11.1",
-    "NeededOtherPackages": [],
+    "NeededOtherPackages": [
+      [
+        "IO",
+        ">=4.8.0"
+      ]
+    ],
     "SuggestedOtherPackages": [
       [
         "Cryst",
@@ -43,7 +48,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "baf85aef95082cea9e147dc9b31bc1a523d2336a706a14d5ec4e50d215f977d6",
+  "PackageInfoSHA256": "c99223c35815588a85fd7d1ae9530e75fca33c256293e4dd2d9d799fbeee64f8",
   "PackageInfoURL": "https://www.math.uni-bielefeld.de/~gaehler/gap/CaratInterface/PackageInfo.g",
   "PackageName": "CaratInterface",
   "PackageWWWHome": "https://www.math.uni-bielefeld.de/~gaehler/gap/packages.php",
@@ -68,5 +73,5 @@
   "Subtitle": "Interface to CARAT, a crystallographic groups package",
   "SupportEmail": "gaehler@math.uni-bielefeld.de",
   "TestFile": "tst/testall.g",
-  "Version": "2.3.4"
+  "Version": "2.3.5"
 }
