@@ -2,59 +2,69 @@
   "AbstractHTML": "The <span class=\"pkgname\">FGA</span> package installs methods for    computations with finitely generated subgroups of free groups and    provides a presentation for their automorphism groups.",
   "AcceptDate": "05/2005",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "7c9e01ead442441bdf5635ebb9ccf1b75fa9eceae52b4c7957afb54ab9a23507",
-  "ArchiveURL": "http://www.icm.tu-bs.de/ag_algebra/software/FGA/FGA-1.4.0",
-  "Autoload": true,
+  "ArchiveSHA256": "da426e208afbec533db2a5e3c5370756309b7735e4306d2ddf2bf35b5afb8592",
+  "ArchiveURL": "https://github.com/gap-packages/fga/releases/download/v1.5.0/fga-1.5.0",
+  "AutoDoc": {
+    "TitlePage": {
+      "TitleComment": "<E>Note:</E> This version of FGA is a fork of the original FGA, maintained by the GAP Team."
+    }
+  },
   "AvailabilityTest": null,
   "CommunicatedBy": "Edmund Robertson (St. Andrews)",
-  "Date": "23/03/2018",
+  "Date": "04/04/2023",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.8",
     "NeededOtherPackages": [],
     "SuggestedOtherPackages": []
   },
-  "IssueTrackerURL": "https://github.com/chsievers/fga/issues",
+  "IssueTrackerURL": "https://github.com/gap-packages/fga/issues",
   "Keywords": [
     "free groups",
     "inverse finite automata",
     "basic coset enumeration",
     "finite presentation of the automorphism group of a free group"
   ],
+  "License": "GPL-2.0-or-later",
   "PackageDoc": [
     {
       "ArchiveURLSubset": [
-        "doc",
-        "htm"
+        "doc"
       ],
-      "Autoload": true,
       "BookName": "FGA",
-      "HTMLStart": "htm/chapters.htm",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "Free Group Algorithms",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "34422dc7f3806a56b8c87710eb58d8c06eff7f4d3ed624116becd0113e58e888",
-  "PackageInfoURL": "http://www.icm.tu-bs.de/ag_algebra/software/FGA/PackageInfo.g",
+  "PackageInfoSHA256": "7f282ebdafc00c4ce470aa31b2d4d6477589e0deda5cf374aa59615d97d127a1",
+  "PackageInfoURL": "https://gap-packages.github.io/fga/PackageInfo.g",
   "PackageName": "FGA",
-  "PackageWWWHome": "http://www.icm.tu-bs.de/ag_algebra/software/FGA/",
+  "PackageWWWHome": "https://gap-packages.github.io/fga/",
   "Persons": [
     {
       "Email": "c.sievers@tu-bs.de",
       "FirstNames": "Christian",
       "IsAuthor": true,
-      "IsMaintainer": true,
+      "IsMaintainer": false,
       "LastName": "Sievers"
+    },
+    {
+      "Email": "support@gap-system.org",
+      "FirstNames": "The",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "GAP Team"
     }
   ],
-  "README_URL": "http://www.icm.tu-bs.de/ag_algebra/software/FGA/README",
+  "README_URL": "https://gap-packages.github.io/fga/README.md",
   "SourceRepository": {
     "Type": "git",
-    "URL": "https://github.com/chsievers/fga"
+    "URL": "https://github.com/gap-packages/fga"
   },
   "Status": "accepted",
   "Subtitle": "Free Group Algorithms",
   "TestFile": "tst/testall.g",
-  "Version": "1.4.0"
+  "Version": "1.5.0"
 }
