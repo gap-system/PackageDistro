@@ -1,11 +1,11 @@
 {
   "AbstractHTML": "The <b>Digraphs</b> package is a <b>GAP</b> package for digraphs and multidigraphs.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "f5297d8aadd7ea7496725ec60591c515110b93d35fd74cd7c7aecac5a7578089",
-  "ArchiveURL": "https://github.com/digraphs/Digraphs/releases/download/v1.6.1/digraphs-1.6.1",
+  "ArchiveSHA256": "744dfcaa0d16e8aafd21d7e7bd60fcee8c3b77000b19550917bf95d327c7c00b",
+  "ArchiveURL": "https://github.com/digraphs/Digraphs/releases/download/v1.6.2/digraphs-1.6.2",
   "Autoload": false,
   "AvailabilityTest": null,
-  "Date": "06/12/2022",
+  "Date": "05/04/2023",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10.0",
@@ -54,7 +54,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "eca946cd88073e085997c3130fe12dd63a19eed3bc6dd59a31f226a6bc61b9eb",
+  "PackageInfoSHA256": "be83c399715015a4fad6045857d6ea2f5cb8ec803c09b0cb62234844bbe07c18",
   "PackageInfoURL": "https://digraphs.github.io/Digraphs/PackageInfo.g",
   "PackageName": "Digraphs",
   "PackageWWWHome": "https://digraphs.github.io/Digraphs",
@@ -221,7 +221,7 @@
       "LastName": "Konovalov",
       "Place": "St Andrews",
       "PostalAddress": "Jack Cole Building, North Haugh, St Andrews, Fife, KY16 9SX, Scotland",
-      "WWWHome": "https://www.st-andrews.ac.uk/computer-science/people/obk1/"
+      "WWWHome": "https://olexandr-konovalov.github.io/"
     },
     {
       "Email": "ahwl1@st-andrews.ac.uk",
@@ -360,5 +360,5 @@
   "Status": "deposited",
   "Subtitle": "Graphs, digraphs, and multidigraphs in GAP",
   "TestFile": "tst/teststandard.g",
-  "Version": "1.6.1"
+  "Version": "1.6.2"
 }
