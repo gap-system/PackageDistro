@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">Francy</span> package allows to use graphics in GAP.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "da7a3c4ed3e53b97292f1cc179de046d6fac588dda62e1a454767f0cce9719c5",
-  "ArchiveURL": "https://github.com/gap-packages/francy/releases/download/v1.2.5/francy-1.2.5",
+  "ArchiveSHA256": "405d71537bede7165468a5aae7d6eca708ca2308e0c977d2461040a7e37842e0",
+  "ArchiveURL": "https://github.com/gap-packages/francy/releases/download/v2.0.3/francy-2.0.3",
   "AvailabilityTest": null,
-  "Date": "05/09/2022",
+  "Date": "16/04/2023",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10",
@@ -18,13 +18,17 @@
         ">= 2.0.0"
       ],
       [
+        "uuid",
+        ">= 0.7"
+      ],
+      [
         "JupyterKernel",
-        ">= 1.0"
+        ">= 1.4.1"
       ]
     ],
     "SuggestedOtherPackages": []
   },
-  "IssueTrackerURL": "https://github.com/gap-packages/Francy/issues",
+  "IssueTrackerURL": "https://github.com/gap-packages/francy/issues",
   "Keywords": [
     "Jupyter",
     "User Interface",
@@ -46,30 +50,30 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "9df3a316fb9348c7f70a242e4d1b99d34ca8cc03d3b38d48dc20e9b2a0f04d70",
+  "PackageInfoSHA256": "9d818fe7944d78483549a4a2c275a50f812eb74bd463053a75b91e79dcc3a2fc",
   "PackageInfoURL": "https://gap-packages.github.io/francy/PackageInfo.g",
-  "PackageName": "Francy",
+  "PackageName": "francy",
   "PackageWWWHome": "https://gap-packages.github.io/francy",
   "Persons": [
     {
       "Email": "manuelmachadomartins@gmail.com",
       "FirstNames": "Manuel",
-      "Institution": "Departamento de Ciências e Tecnologia da Universidade Aberta\nLisboa, Portugal\nFaculdade de Ciências e Tecnologia da Universidade de Coimbra\nCoimbra, Portugal",
+      "Institution": "Departamento de Ciências e Tecnologia da Universidade Aberta\nLisboa, Portugal",
       "IsAuthor": true,
       "IsMaintainer": true,
       "LastName": "Martins",
-      "Place": "Lisbon, Coimbra - PT",
-      "PostalAddress": "Departamento de Ciências e Tecnologia da Universidade Aberta\nLisboa, Portugal\nFaculdade de Ciências e Tecnologia da Universidade de Coimbra\nCoimbra, Portugal",
+      "Place": "Lisbon - PT",
+      "PostalAddress": "Departamento de Ciências e Tecnologia da Universidade Aberta\nLisboa, Portugal",
       "WWWHome": "http://github.com/mcmartins"
     }
   ],
   "README_URL": "https://gap-packages.github.io/francy/README.md",
   "SourceRepository": {
     "Type": "git",
-    "URL": "https://github.com/gap-packages/Francy"
+    "URL": "https://github.com/gap-packages/francy"
   },
   "Status": "deposited",
   "Subtitle": "Framework for Interactive Discrete Mathematics",
   "TestFile": "tst/testall.g",
-  "Version": "1.2.5"
+  "Version": "2.0.3"
 }
