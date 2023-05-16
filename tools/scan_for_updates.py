@@ -26,26 +26,25 @@ and do the following:
 import hashlib
 import json
 import os
-import requests
 import sys
-from os.path import join
 from multiprocessing.pool import ThreadPool
+from os.path import join
+from typing import Any, Dict, List, Optional
 
+import requests
 import utils
 from utils import (
-    download_to_memory,
-    notice,
-    error,
-    warning,
     all_packages,
     archive_url,
+    download_to_memory,
+    error,
     metadata,
     metadata_fname,
-    sha256,
     normalize_pkg_name,
+    notice,
+    sha256,
+    warning,
 )
-
-from typing import Any, Dict, List, Optional
 
 archive_dir = "_archives"
 pkginfos_dir = "_pkginfos"

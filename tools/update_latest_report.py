@@ -17,13 +17,12 @@ This script updates the latest symlink for the report,
 and generates a html-redirect along with a badge.
 """
 
-from utils import error, symlink
-
-import sys
-import os
 import json
-
+import os
+import sys
 from typing import Any, Dict
+
+from utils import error, symlink
 
 ################################################################################
 # Arguments and Paths

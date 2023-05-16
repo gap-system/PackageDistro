@@ -19,7 +19,7 @@ import os
 import sys
 from typing import List, Set
 
-from utils import normalize_pkg_name, metadata
+from utils import metadata, normalize_pkg_name
 
 # The following maps names of GAP packages to lists of Ubuntu package names.
 # The Ubuntu packages should be installed in order to build and/or use the GAP

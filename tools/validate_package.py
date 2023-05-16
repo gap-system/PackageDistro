@@ -35,26 +35,24 @@ name, or the path to a meta.json file. For example:
 """
 
 import os
-import sys
 import shutil
+import sys
 import tarfile
 from os.path import join
 from tempfile import TemporaryDirectory
-
 from typing import List
 
-from download_packages import download_archive
-
 import utils
+from download_packages import download_archive
 from utils import (
-    download_to_memory,
-    notice,
-    warning,
-    error,
-    normalize_pkg_name,
     archive_name,
+    download_to_memory,
+    error,
     metadata,
+    normalize_pkg_name,
+    notice,
     sha256,
+    warning,
 )
 
 

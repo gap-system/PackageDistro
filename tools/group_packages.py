@@ -25,10 +25,9 @@ by this script.
 """
 
 import sys
-
 from typing import List, Set
 
-from utils import normalize_pkg_name, metadata
+from utils import metadata, normalize_pkg_name
 
 """
 This dictionary maps source repository URLs to group names.

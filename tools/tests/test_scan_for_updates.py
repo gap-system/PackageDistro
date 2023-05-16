@@ -10,20 +10,15 @@ import os
 import shutil
 import sys
 from os.path import exists, join
-import requests
 
 import pytest
+import requests
 
 sys.path.insert(
     0, "/".join(os.path.dirname(os.path.realpath(__file__)).split("/")[:-1])
 )
 
-from scan_for_updates import (
-    main,
-    scan_for_one_update,
-    scan_for_updates,
-)
-
+from scan_for_updates import main, scan_for_one_update, scan_for_updates
 from utils import download_to_memory, gap_exec, metadata, sha256
 
 

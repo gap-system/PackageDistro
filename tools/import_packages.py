@@ -12,11 +12,10 @@
 
 import sys
 import tempfile
-
 from typing import List
 
-from utils import download
 from scan_for_updates import import_packages
+from utils import download
 
 
 def main(pkgs: List[str]) -> None:
