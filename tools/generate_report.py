@@ -21,7 +21,6 @@ import io
 import json
 import os
 import sys
-
 from typing import Any, Dict, List
 
 from utils import error

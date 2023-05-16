@@ -18,13 +18,11 @@ import shutil
 import subprocess
 import sys
 import typing
-
 from tempfile import TemporaryDirectory
-from download_packages import download_archive
-
-from utils import error, normalize_pkg_name, metadata, sha256, all_packages
-
 from typing import Any, Dict, List, Optional
+
+from download_packages import download_archive
+from utils import all_packages, error, metadata, normalize_pkg_name, sha256
 
 
 def write_sha256(filename: str) -> None:

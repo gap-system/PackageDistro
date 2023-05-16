@@ -10,14 +10,13 @@
 import hashlib
 import json
 import os
-import requests
 import subprocess
 import sys
 import tempfile
-
 from os.path import join
-
 from typing import Any, Dict, List, NoReturn, Tuple
+
+import requests
 
 
 # print notices in green

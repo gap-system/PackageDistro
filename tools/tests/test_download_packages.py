@@ -21,17 +21,10 @@ sys.path.insert(
 )
 
 
-from download_packages import (
-    download_archive,
-    main,
-)
+from download_packages import download_archive, main
 
 # TODO: move the tests for these functions to their own test file?
-from utils import (
-    archive_name,
-    archive_url,
-    metadata,
-)
+from utils import archive_name, archive_url, metadata
 
 
 @pytest.fixture

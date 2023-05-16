@@ -26,11 +26,10 @@ import random
 import string
 import subprocess
 import sys
-
 from typing import Any, Dict, List
 
-import utils
 import group_packages
+import utils
 
 
 def randomword(length: int) -> str:

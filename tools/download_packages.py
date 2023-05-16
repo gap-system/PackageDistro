@@ -39,17 +39,16 @@ Usage:
 import os
 import sys
 from os.path import join
-
 from typing import List
 
 from utils import (
-    download,
-    error,
-    notice,
-    normalize_pkg_name,
     archive_name,
     archive_url,
+    download,
+    error,
     metadata,
+    normalize_pkg_name,
+    notice,
     sha256,
 )
 

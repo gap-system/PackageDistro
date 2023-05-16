@@ -25,16 +25,15 @@ Prints {{id}} to terminal.
 # or use a different prefix from a caller (like the test-all-and-report YML file),
 # then we need to adjust the hardcoded names in this python script.
 
-from utils import error, warning, normalize_pkg_name, metadata
-
-import sys
-import os
 import glob
 import json
+import os
+import sys
 from datetime import datetime
-import requests
-
 from typing import Any, Dict
+
+import requests
+from utils import error, metadata, normalize_pkg_name, warning
 
 ################################################################################
 # Arguments
