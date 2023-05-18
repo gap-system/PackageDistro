@@ -2,11 +2,11 @@
   "AbstractHTML": "<span class=\"pkgname\">Wedderga</span> is the package to compute the simple components of the Wedderburn decomposition of semisimple group algebras of finite groups over finite fields and over subfields of finite cyclotomic extensions of the rationals. It also contains functions that produce the primitive central idempotents of semisimple group algebras and functions for computing Schur indices. Other functions of <span class=\"pkgname\">Wedderga</span> allow one to construct crossed products over a group with coefficients in an associative ring with identity and the multiplication determined by a given action and twisting.",
   "AcceptDate": "01/2008",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "5251aac91715c30f0b63de79ffd3198ddc3fb300deccaf4af8f05d86ba41f1f6",
-  "ArchiveURL": "https://github.com/gap-packages/wedderga/releases/download/v4.10.3/wedderga-4.10.3",
+  "ArchiveSHA256": "bd94f3c7db8acbd6ac3c956c28a79e2a9fe5c9776073f9ed8a9206037419d56e",
+  "ArchiveURL": "https://github.com/gap-packages/wedderga/releases/download/v4.10.4/wedderga-4.10.4",
   "AvailabilityTest": null,
   "CommunicatedBy": "Gerhard Hiss (Aachen)",
-  "Date": "25/02/2023",
+  "Date": "18/05/2023",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.8",
@@ -48,7 +48,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "c3426f005072dda070023eb70b582086089cdfcebe32afdb7c60fcfa492355cd",
+  "PackageInfoSHA256": "4fb7244387517ff719a12a57916662a25c0aed26817347f59d675e2ab976f965",
   "PackageInfoURL": "https://gap-packages.github.io/wedderga/PackageInfo.g",
   "PackageName": "Wedderga",
   "PackageWWWHome": "https://gap-packages.github.io/wedderga",
@@ -95,14 +95,14 @@
       "WWWHome": "https://olexandr-konovalov.github.io/"
     },
     {
-      "Email": "sugandha@iisermohali.ac.in",
+      "Email": "msugandha@ma.iitr.ac.in",
       "FirstNames": "Sugandha",
-      "Institution": "Indian Institute of Science Education and Research Mohali",
+      "Institution": "Indian Institute of Technology Roorkee",
       "IsAuthor": true,
       "IsMaintainer": true,
       "LastName": "Maheshwary",
-      "Place": "Mohali",
-      "PostalAddress": "Department of Mathematical Sciences\nIISER Mohali\nKnowledge city, \nSector 81, \n SAS Nagar, Manauli, \n PO 140306, India"
+      "Place": "Roorkee",
+      "PostalAddress": "Department of Mathematics\nIndian Institute of Technology Roorkee\nRoorkee, Uttarakhand 247667, India"
     },
     {
       "Email": "gabriela.olteanu@econ.ubbcluj.ro",
@@ -156,5 +156,5 @@
   "Status": "accepted",
   "Subtitle": "Wedderburn Decomposition of Group Algebras",
   "TestFile": "tst/testall.g",
-  "Version": "4.10.3"
+  "Version": "4.10.4"
 }
