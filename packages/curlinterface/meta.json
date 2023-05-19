@@ -1,11 +1,11 @@
 {
   "AbstractHTML": "",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "bdce5de61d50cd21ecd7c3267e5e9df2b604b99ec8add824a7e64ccc3a907a97",
-  "ArchiveURL": "https://github.com/gap-packages/curlInterface/releases/download/v2.3.1/curlInterface-2.3.1",
+  "ArchiveSHA256": "3009a3259ec2f21487d4f669d84090beaadf3f91b7822d467617803549bca882",
+  "ArchiveURL": "https://github.com/gap-packages/curlInterface/releases/download/v2.3.2/curlInterface-2.3.2",
   "AvailabilityTest": null,
   "BannerFunction": null,
-  "Date": "25/09/2022",
+  "Date": "19/05/2023",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.9",
@@ -31,7 +31,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "23fb45d4fc6ce0a64c2c194bc7af50f01d70057e10867dd68807e0fb812a0748",
+  "PackageInfoSHA256": "e5f26b6fd17a4d05e49c11c62eb7b1d789d1b44d6e7da4eb5e3b25880f0228fa",
   "PackageInfoURL": "https://gap-packages.github.io/curlInterface/PackageInfo.g",
   "PackageName": "curlInterface",
   "PackageWWWHome": "https://gap-packages.github.io/curlInterface/",
@@ -48,14 +48,14 @@
       "WWWHome": "http://caj.host.cs.st-andrews.ac.uk/"
     },
     {
-      "Email": "horn@mathematik.uni-kl.de",
+      "Email": "mhorn@rptu.de",
       "FirstNames": "Max",
-      "Institution": "TU Kaiserslautern",
+      "Institution": "RPTU Kaiserslautern-Landau",
       "IsAuthor": false,
       "IsMaintainer": true,
       "LastName": "Horn",
       "Place": "Kaiserslautern, Germany",
-      "PostalAddress": "Fachbereich Mathematik\nTU Kaiserslautern\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
+      "PostalAddress": "Fachbereich Mathematik\nRPTU Kaiserslautern-Landau\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
       "WWWHome": "https://www.quendi.de/math"
     },
     {
@@ -78,5 +78,5 @@
   "Status": "deposited",
   "Subtitle": "Simple Web Access",
   "TestFile": "tst/testall.g",
-  "Version": "2.3.1"
+  "Version": "2.3.2"
 }
