@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "<span class=\"pkgname\">ModulePresentationsForCAP</span> provides the category of finitely presented modules over a computable ring.",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "a69428f6add1e9d63faadf751b7679de084330e150e66ebc4ae1b583ee39aa84",
-  "ArchiveURL": "https://github.com/homalg-project/CAP_project/releases/download/ModulePresentationsForCAP-2023.05-01/ModulePresentationsForCAP-2023.05-01",
+  "ArchiveSHA256": "a61486778885fba9824bb8acf03c29bf110b1df0bcb85241ebe8c6ddbe6d9b1b",
+  "ArchiveURL": "https://github.com/homalg-project/CAP_project/releases/download/ModulePresentationsForCAP-2023.06-01/ModulePresentationsForCAP-2023.06-01",
   "AvailabilityTest": null,
-  "Date": "2023-05-02",
+  "Date": "2023-06-05",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12.1",
@@ -47,7 +47,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "7137aa4ccd5ae18cba6ecf69abdda2b5e0e1687fef5c4dd49bc916bf1e5a580b",
+  "PackageInfoSHA256": "9cf8467434b80b1dc4952d8f1bc68c4b118ff03586ebd5e347a4ad690e20ed42",
   "PackageInfoURL": "https://homalg-project.github.io/CAP_project/ModulePresentationsForCAP/PackageInfo.g",
   "PackageName": "ModulePresentationsForCAP",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/ModulePresentationsForCAP",
@@ -83,5 +83,5 @@
   "Status": "deposited",
   "Subtitle": "Category R-pres for CAP",
   "TestFile": "tst/testall.g",
-  "Version": "2023.05-01"
+  "Version": "2023.06-01"
 }
