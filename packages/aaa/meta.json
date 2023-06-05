@@ -1,0 +1,95 @@
+{
+  "AbstractHTML": "",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSHA256": "f556bc1178001d8e2e7b8a6c15fc1b88b48c029bd8fbc0400ba755526145d07e",
+  "ArchiveURL": "https://github.com/gap-packages/aaa/releases/download/v0.1.0/aaa-0.1.0",
+  "AvailabilityTest": null,
+  "Date": "09/02/2022",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">=4.8.0",
+    "NeededOtherPackages": [
+      [
+        "automata",
+        ">=0.0.0"
+      ],
+      [
+        "digraphs",
+        ">=0.15.0"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "IssueTrackerURL": "https://github.com/gap-packages/aaa/issues",
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "aaa",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "implements algorithms for asynchronous transducers",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSHA256": "8fce76081fd3637f4dbec02a7f4ab80ad8025b87c09a8174fa5458fa4515cdfb",
+  "PackageInfoURL": "https://gap-packages.github.io/aaa/PackageInfo.g",
+  "PackageName": "aaa",
+  "PackageWWWHome": "https://gap-packages.github.io/aaa",
+  "Persons": [
+    {
+      "Email": "[cb211@st-andrews.ac.uk]",
+      "FirstNames": "Collin",
+      "Institution": "[University of St Andrews]",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Bleak",
+      "Place": "[St Andrews]",
+      "PostalAddress": "[Mathematical Institute, North Haugh, St Andrews, Fife, KY16 9SS, Scotland]",
+      "WWWHome": "http://www-groups.mcs.st-andrews.ac.uk/~collin/"
+    },
+    {
+      "Email": "Y",
+      "FirstNames": "Luke",
+      "Institution": "University of St Andrews",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Elliott",
+      "Place": "St Andrews",
+      "PostalAddress": "Mathematical Institute, North Haugh, St Andrews, Fife, KY16 9SS, Scotland",
+      "WWWHome": "https://le27.github.io/Luke-Elliott/"
+    },
+    {
+      "Email": "[ffb3@st-andrews.ac.uk]",
+      "FirstNames": "Fernando",
+      "Institution": "[University of St Andrews]",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Flores Brito",
+      "Place": "[St Andrews]",
+      "PostalAddress": "[Mathematical Institute, North Haugh, St Andrews, Fife, KY16 9SS, Scotland]"
+    },
+    {
+      "Email": "[feyisayo.olukoya@abdn.ac.uk]",
+      "FirstNames": "Feyisayo",
+      "Institution": "[University of Aberdeen]",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Olukoya",
+      "Place": "[Aberdeen]",
+      "PostalAddress": "[Institute of Mathematics, Aberdeen, AB24 3UE, UK]",
+      "WWWHome": "https://www.abdn.ac.uk/ncs/departments/mathematics/profiles/feyisayo.olukoya/"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/aaa/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/aaa"
+  },
+  "Status": "dev",
+  "Subtitle": "Algorithms for Asynchronous Transducers",
+  "TestFile": "tst/testall.g",
+  "Version": "0.1.0"
+}
