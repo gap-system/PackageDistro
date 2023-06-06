@@ -1,0 +1,69 @@
+{
+  "AbstractHTML": "The <span class=\"pkgname\">SOTGrps</span> package contains methods to construct up to isomorphism the groups of a small order type.",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSHA256": "baf18b0965d8b1242c8fab1983729182cf66ac3635a4f993298052a8323e140a",
+  "ArchiveURL": "https://github.com/gap-packages/sotgrps/releases/download/v1.1/SOTGrps-1.1",
+  "AvailabilityTest": null,
+  "Date": "06/06/2023",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">=4.10",
+    "NeededOtherPackages": [],
+    "SuggestedOtherPackages": []
+  },
+  "IssueTrackerURL": "https://github.com/gap-packages/sotgrps/issues",
+  "Keywords": [
+    "construction of finite groups",
+    "identification of finite groups"
+  ],
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "SOTGrps",
+      "HTMLStart": "doc/chap0_mj.html",
+      "LongTitle": "Constructing and identifying groups of small order type",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSHA256": "d9d058b1cd5b9852c0d09579a35e593c1d2baa6f3fc8a93c91a055306c177c52",
+  "PackageInfoURL": "https://gap-packages.github.io/sotgrps//PackageInfo.g",
+  "PackageName": "SOTGrps",
+  "PackageWWWHome": "https://gap-packages.github.io/sotgrps/",
+  "Persons": [
+    {
+      "Email": "xpan.eileen@gmail.com",
+      "FirstNames": "Eileen",
+      "Institution": "Monash University",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Pan",
+      "Place": "Melbourne",
+      "PostalAddress": "School of MathematicsMonash University\nVIC 3800\nMelbourne, Australia",
+      "WWWHome": "https://xpan-eileen.github.io/about/"
+    },
+    {
+      "Email": "mhorn@rptu.de",
+      "FirstNames": "Max",
+      "Institution": "RPTU Kaiserslautern-Landau",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "Horn",
+      "Place": "Kaiserslautern, Germany",
+      "PostalAddress": "Fachbereich Mathematik\nRPTU Kaiserslautern-Landau\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
+      "WWWHome": "https://www.quendi.de/math"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/sotgrps//README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/sotgrps"
+  },
+  "Status": "other",
+  "Subtitle": "Constructing and identifying groups of small order type",
+  "TestFile": "tst/testall.g",
+  "Version": "1.1"
+}
