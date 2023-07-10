@@ -42,6 +42,7 @@ ubtunu_deps = {
     "polymaking": ["polymake"],
     "ringsforhomalg": ["singular"],
     "singular": ["singular"],
+    "typeset": ["graphviz", "texlive", "preview-latex-style", "dot2tex"],
     "zeromqinterface": ["libzmq3-dev"],
 }
 
