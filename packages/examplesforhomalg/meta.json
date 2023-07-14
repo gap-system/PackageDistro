@@ -1,15 +1,15 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">ExamplesForHomalg</span> package provides example scripts for the <span class=\"pkgname\">homalg</span> package that can be used with several computer algebra systems",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "91ce9d3aef07d1daa382e335d4eee7ba687263aa0b15182152ff932002319abc",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/ExamplesForHomalg-2023.02-04/ExamplesForHomalg-2023.02-04",
+  "ArchiveSHA256": "681c5f3f4c5469e82bd6423f4555013d18dcbc3e1ef2d0509bcc7ce53f66e0c6",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/ExamplesForHomalg-2023.07-01/ExamplesForHomalg-2023.07-01",
   "AutoDoc": {
     "TitlePage": {
       "Copyright": "&copyright; 2008-2015 by Mohamed Barakat, Simon Goertzen, Markus Lange-Hegermann\n\nThis package may be distributed under the terms and conditions of the GNU Public License Version 2 or (at your option) any later version.\n"
     }
   },
   "AvailabilityTest": null,
-  "Date": "2023-02-28",
+  "Date": "2023-07-12",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12.1",
@@ -63,7 +63,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "b689fd77ae55426b7dc253a43be7379667d90b27ef670457ed2df4ec0ded00d9",
+  "PackageInfoSHA256": "3fc15eca436af3423d2afdff90c9db31a7a601e9eac69a723251e3b608d79e4d",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/ExamplesForHomalg/PackageInfo.g",
   "PackageName": "ExamplesForHomalg",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/ExamplesForHomalg",
@@ -110,5 +110,5 @@
   "Status": "deposited",
   "Subtitle": "Examples for the GAP Package homalg",
   "TestFile": "tst/testall.g",
-  "Version": "2023.02-04"
+  "Version": "2023.07-01"
 }
