@@ -2,21 +2,21 @@
   "AbstractHTML": "<span class=\"pkgname\">FinInG</span> is a package for computation in Finite Incidence Geometry. It provides users with the basic tools to work in  various areas of finite geometry from the realms of projective spaces to the flat  lands of generalised polygons. The algebraic power of GAP is employed, particularly  in its facility with matrix and permutation groups.",
   "AcceptDate": "11/2017",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSHA256": "e6238e26d9ff1e2d157e49bb310c6954996673e1e1990f9beded0c72d6cf977c",
-  "ArchiveURL": "https://github.com/gap-packages/FinInG/releases/download/v1.5.5/fining-1.5.5",
+  "ArchiveSHA256": "844d76472a13458c508d76e185b275158d16ae89a26cc0fe795d7e3946e1c321",
+  "ArchiveURL": "https://github.com/gap-packages/FinInG/releases/download/v1.5.6/fining-1.5.6",
   "AutoDoc": {
     "MainPage": false,
     "TitlePage": false,
     "entities": {
-      "DATE": "09/02/2023",
-      "VERSION": "1.5.5",
+      "DATE": "27/07/2023",
+      "VERSION": "1.5.6",
       "YEAR": "2023"
     }
   },
   "AvailabilityTest": null,
-  "BannerString": "---------------------------------------------------------------------\n             ______________       ________      _________            \n             ___  ____/__(_)__________  _/________  ____/            \n             __  /_   __  /__  __ __  / __  __   / __              \n             _  __/   _  / _  / / /_/ /  _  / / / /_/ /              \n             /_/      /_/  /_/ /_//___/  /_/ /_/____/               \n---------------------------------------------------------------------\nLoading  FinInG 1.5.5 (Finite Incidence Geometry) \nby John Bamberg (http://school.maths.uwa.edu.au/~bamberg/)\n   Anton Betten (http://www.math.colostate.edu/~betten)\n   Philippe Cara (http://homepages.vub.ac.be/~pcara)\n   Jan De Beule (http://www.debeule.eu)\n   Michel Lavrauw (http://people.sabanciuniv.edu/~mlavrauw/)\n   Max Neunhoeffer (http://www-groups.mcs.st-and.ac.uk/~neunhoef/)\nFor help, type: ?FinInG \n---------------------------------------------------------------------\n",
+  "BannerString": "---------------------------------------------------------------------\n             ______________       ________      _________            \n             ___  ____/__(_)__________  _/________  ____/            \n             __  /_   __  /__  __ __  / __  __   / __              \n             _  __/   _  / _  / / /_/ /  _  / / / /_/ /              \n             /_/      /_/  /_/ /_//___/  /_/ /_/____/               \n---------------------------------------------------------------------\nLoading  FinInG 1.5.6 (Finite Incidence Geometry) \nby John Bamberg (http://school.maths.uwa.edu.au/~bamberg/)\n   Anton Betten (http://www.math.colostate.edu/~betten)\n   Philippe Cara (http://homepages.vub.ac.be/~pcara)\n   Jan De Beule (http://www.debeule.eu)\n   Michel Lavrauw (http://people.sabanciuniv.edu/~mlavrauw/)\n   Max Neunhoeffer (http://www-groups.mcs.st-and.ac.uk/~neunhoef/)\nFor help, type: ?FinInG \n---------------------------------------------------------------------\n",
   "CommunicatedBy": "Olexandr Konovalov (St Andrews)",
-  "Date": "09/02/2023",
+  "Date": "27/07/2023",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10",
@@ -67,7 +67,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "b7084ae422f995e8953daeaeeaac73b26b3b4e8403a1be2d3f8124e9addd9435",
+  "PackageInfoSHA256": "cbc41697ba2c0dc9011442dc72f9b955209ea0fcf0f9c40a0839eda99ca5e1bc",
   "PackageInfoURL": "https://gap-packages.github.io/FinInG/PackageInfo.g",
   "PackageName": "FinInG",
   "PackageWWWHome": "https://gap-packages.github.io/FinInG",
@@ -139,14 +139,14 @@
       "WWWHome": "http://www-groups.mcs.st-and.ac.uk/~neunhoef/"
     },
     {
-      "Email": "horn@mathematik.uni-kl.de",
+      "Email": "mhorn@rptu.de",
       "FirstNames": "Max",
-      "Institution": "TU Kaiserslautern",
+      "Institution": "RPTU Kaiserslautern-Landau",
       "IsAuthor": false,
       "IsMaintainer": true,
       "LastName": "Horn",
       "Place": "Kaiserslautern, Germany",
-      "PostalAddress": "Fachbereich Mathematik\nTU Kaiserslautern\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
+      "PostalAddress": "Fachbereich Mathematik\nRPTU Kaiserslautern-Landau\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
       "WWWHome": "https://www.quendi.de/math"
     }
   ],
@@ -158,5 +158,5 @@
   "Status": "accepted",
   "Subtitle": "Finite Incidence Geometry",
   "TestFile": "tst/testall.g",
-  "Version": "1.5.5"
+  "Version": "1.5.6"
 }
