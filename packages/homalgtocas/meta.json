@@ -1,8 +1,8 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">HomalgToCAS</span> package provides the first layer of abstraction  needed for <span class=\"pkgname\">homalg</span> to access external computer algebra systems",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "20755bb10a12441974bef871105534976fd5c9c6ea6f6543c1e7c72e68b30dbe",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/HomalgToCAS-2023.02-04/HomalgToCAS-2023.02-04",
+  "ArchiveSHA256": "af1be9946857e52362bd03f0885ad574d763ea17677b9ad7487ef7a0460db17e",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/HomalgToCAS-2023.08-01/HomalgToCAS-2023.08-01",
   "AutoDoc": {
     "TitlePage": {
       "Acknowledgements": "\n             We are very much indebted to Max Neunhöffer who provided the first\n             piece of code around which the package &IO_ForHomalg; was built. The\n             package &HomalgToCAS; provides a further abstraction layer preparing\n             the communication.\n                    ",
@@ -10,14 +10,14 @@
     }
   },
   "AvailabilityTest": null,
-  "Date": "2023-02-28",
+  "Date": "2023-08-23",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12.1",
     "NeededOtherPackages": [
       [
         "MatricesForHomalg",
-        ">= 2019.09.01"
+        ">= 2023.08-01"
       ],
       [
         "GAPDoc",
@@ -54,7 +54,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "78f837c67de4949cb81c93acaa447facc31a24e8f50417c60cd54387a889ee71",
+  "PackageInfoSHA256": "ca4ce69d0e8d93b2f9d3ef94e003ad89d324e4ad4c4005478e19db6cb30c02bf",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/HomalgToCAS/PackageInfo.g",
   "PackageName": "HomalgToCAS",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/HomalgToCAS",
@@ -145,5 +145,5 @@
   "Status": "deposited",
   "Subtitle": "A window to the outer world",
   "TestFile": "tst/testall.g",
-  "Version": "2023.02-04"
+  "Version": "2023.08-01"
 }
