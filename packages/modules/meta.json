@@ -1,8 +1,8 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">Modules</span> package provides ring independent homological algebra functionality for the abelian category of finitely presented modules over computable rings",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "823cc5b290b17d42a256d26230f360fe672180ea15cb2e4e324556cc7405a424",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/Modules-2023.02-04/Modules-2023.02-04",
+  "ArchiveSHA256": "696d9f42968f64f5af82f570666ae5382b88ab4408e066f1c4a7818f8c329398",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/Modules-2023.08-01/Modules-2023.08-01",
   "AutoDoc": {
     "TitlePage": {
       "Acknowledgements": "We are very much indebted to Alban Quadrat.",
@@ -10,14 +10,14 @@
     }
   },
   "AvailabilityTest": null,
-  "Date": "2023-02-28",
+  "Date": "2023-08-23",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12.1",
     "NeededOtherPackages": [
       [
         "MatricesForHomalg",
-        ">=2022.02-01"
+        ">=2023.08-01"
       ],
       [
         "ToolsForHomalg",
@@ -29,7 +29,7 @@
       ],
       [
         "GaussForHomalg",
-        ">=2019.09.01"
+        ">=2023.08-01"
       ],
       [
         "GAPDoc",
@@ -59,7 +59,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "0e3e1cd791c617407fdfa2291433c7409ea7d06c3094895e914d1f2b5fbc4ed3",
+  "PackageInfoSHA256": "7ea82211709286cccb2d4fc9fcc5172c490a21c526652ca51cf128cdc17496e4",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/Modules/PackageInfo.g",
   "PackageName": "Modules",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/Modules",
@@ -138,5 +138,5 @@
   "Status": "deposited",
   "Subtitle": "A homalg based package for the Abelian category of finitely presented modules over computable rings",
   "TestFile": "tst/testall.g",
-  "Version": "2023.02-04"
+  "Version": "2023.08-01"
 }
