@@ -2,8 +2,8 @@
   "AbstractHTML": "The Kan package provides functions for the computation of normal forms   of representatives of double cosets of finitely presented groups.",
   "AcceptDate": "05/2015",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "68703368ddd4be7c2d8e1537d2d472d23553d01592ba571caba209b4cae48043",
-  "ArchiveURL": "https://github.com/gap-packages/kan/releases/download/v1.35/kan-1.35",
+  "ArchiveSHA256": "b7128b48eb07344a9c15038698b1a3d233292cc156a43cbcd44c852ee7f7810e",
+  "ArchiveURL": "https://github.com/gap-packages/kan/releases/download/v1.36/kan-1.36",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "&Kan; is a &GAP; package originally implemented in 1996 using the &GAP; 3 language, to compute induced actions of categories, when the first author was studying for a Ph.D. in Bangor.\n<P/>\nThis reduced version only provides functions for the computation of normal forms of representatives of double cosets of finitely presented groups.\n<P/>\n&Kan; became an accepted &GAP; package in May 2015.\n<P/>\nBug reports, suggestions and comments are, of course, welcome.\nPlease contact the last author at <Email>c.d.wensley@bangor.ac.uk</Email> or submit an issue at the GitHub repository <URL>https://github.com/gap-packages/kan/issues/</URL>.\n",
@@ -13,9 +13,9 @@
   },
   "Autoload": false,
   "AvailabilityTest": null,
-  "BannerString": "Loading Kan 1.35 (computing with Kan extensions)\nby Anne Heyworth and Chris Wensley (https://github.com/cdwensley)\n-----------------------------------------------------------------------\n",
+  "BannerString": "Loading Kan 1.36 (computing with Kan extensions)\nby Anne Heyworth and Chris Wensley (https://github.com/cdwensley)\n-----------------------------------------------------------------------\n",
   "CommunicatedBy": "Leonard Soicher (QMUL)",
-  "Date": "09/02/2023",
+  "Date": "16/08/2023",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.11.0",
@@ -50,7 +50,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "0fa69cb994ef2c13fc3e160e0029be5c52e4c91cf40538d781afe776db753585",
+  "PackageInfoSHA256": "e17f62c4d595dd56a3ad5761e00a5c6ecaa91ee209152b0c68dff9bd7c466b05",
   "PackageInfoURL": "https://gap-packages.github.io/kan/PackageInfo.g",
   "PackageName": "kan",
   "PackageWWWHome": "https://gap-packages.github.io/kan/",
@@ -79,5 +79,5 @@
   "Status": "accepted",
   "Subtitle": "including double coset rewriting systems",
   "TestFile": "tst/testall.g",
-  "Version": "1.35"
+  "Version": "1.36"
 }
