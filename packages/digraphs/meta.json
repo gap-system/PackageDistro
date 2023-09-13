@@ -1,11 +1,11 @@
 {
   "AbstractHTML": "The <b>Digraphs</b> package is a <b>GAP</b> package for digraphs and multidigraphs.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "744dfcaa0d16e8aafd21d7e7bd60fcee8c3b77000b19550917bf95d327c7c00b",
-  "ArchiveURL": "https://github.com/digraphs/Digraphs/releases/download/v1.6.2/digraphs-1.6.2",
+  "ArchiveSHA256": "f466c16162324bc9ab128abefa272102c10ca503f196d0d6c0fa74f988630647",
+  "ArchiveURL": "https://github.com/digraphs/Digraphs/releases/download/v1.6.3/digraphs-1.6.3",
   "Autoload": false,
   "AvailabilityTest": null,
-  "Date": "05/04/2023",
+  "Date": "13/09/2023",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10.0",
@@ -54,7 +54,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "be83c399715015a4fad6045857d6ea2f5cb8ec803c09b0cb62234844bbe07c18",
+  "PackageInfoSHA256": "fc2c2cda3b179bbbe5897941dd9b6798ad469dc4a5cc3a54345f30816f4c154e",
   "PackageInfoURL": "https://digraphs.github.io/Digraphs/PackageInfo.g",
   "PackageName": "Digraphs",
   "PackageWWWHome": "https://digraphs.github.io/Digraphs",
@@ -136,7 +136,7 @@
       "Email": "je53@st-andrews.ac.uk",
       "FirstNames": "Joe",
       "Institution": "University of St Andrews",
-      "IsAuthor": true,
+      "IsAuthor": false,
       "IsMaintainer": false,
       "LastName": "Edwards",
       "Place": "St Andrews",
@@ -315,7 +315,7 @@
       "Email": "mt200@st-andrews.ac.uk",
       "FirstNames": "Maria",
       "Institution": "University of St Andrews",
-      "IsAuthor": true,
+      "IsAuthor": false,
       "IsMaintainer": false,
       "LastName": "Tsalakou",
       "Place": "St Andrews",
@@ -360,5 +360,5 @@
   "Status": "deposited",
   "Subtitle": "Graphs, digraphs, and multidigraphs in GAP",
   "TestFile": "tst/teststandard.g",
-  "Version": "1.6.2"
+  "Version": "1.6.3"
 }
