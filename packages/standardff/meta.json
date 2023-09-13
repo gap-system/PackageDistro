@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "a4066f06249f73fe864afcb4a448adae99a9bb259b5abb5cbbe16f114d3e44b0",
-  "ArchiveURL": "https://www.math.rwth-aachen.de/~Frank.Luebeck/gap/StandardFF//StandardFF-0.9.4",
+  "ArchiveSHA256": "7e9ffeb9dbe0ddab862a524b1379c09732ef7b40bea2b04ce01db3fb9c27e28e",
+  "ArchiveURL": "https://www.math.rwth-aachen.de/~Frank.Luebeck/gap/StandardFF//StandardFF-1.0",
   "AvailabilityTest": null,
-  "Date": "15/08/2022",
+  "Date": "13/09/2023",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12",
@@ -26,6 +26,7 @@
     ]
   },
   "IssueTrackerURL": "https://github.com/frankluebeck/StandardFF",
+  "License": "GPL-3.0-or-later",
   "PackageDoc": [
     {
       "ArchiveURLSubset": [
@@ -38,7 +39,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "47705907a2f91a93e5e76b0bbb09ca370a22b6af6cd846f5edca757f8e164eeb",
+  "PackageInfoSHA256": "f5594c8255228ed2226c609f6415ff79b30530d10bfb7e33619f484d1691f813",
   "PackageInfoURL": "https://www.math.rwth-aachen.de/~Frank.Luebeck/gap/StandardFF/PackageInfo.g",
   "PackageName": "StandardFF",
   "PackageWWWHome": "https://www.math.rwth-aachen.de/~Frank.Luebeck/gap/StandardFF/",
@@ -60,8 +61,8 @@
     "Type": "git",
     "URL": "https://github.com/frankluebeck/StandardFF"
   },
-  "Status": "dev",
+  "Status": "deposited",
   "Subtitle": "Standard finite fields and cyclic generators",
   "TestFile": "tst/testall.g",
-  "Version": "0.9.4"
+  "Version": "1.0"
 }
