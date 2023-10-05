@@ -1,22 +1,22 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">ExamplesForHomalg</span> package provides example scripts for the <span class=\"pkgname\">homalg</span> package that can be used with several computer algebra systems",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "03bfeb2c31e89a8baa1c36948cf04d704069c15c7390d8c292e389caf1844175",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/ExamplesForHomalg-2023.08-02/ExamplesForHomalg-2023.08-02",
+  "ArchiveSHA256": "a0e2898b9fd8df8bd3597574eba31d7eec9d38b41d0579dfce778d311903d764",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/ExamplesForHomalg-2023.10-01/ExamplesForHomalg-2023.10-01",
   "AutoDoc": {
     "TitlePage": {
       "Copyright": "&copyright; 2008-2015 by Mohamed Barakat, Simon Goertzen, Markus Lange-Hegermann\n\nThis package may be distributed under the terms and conditions of the GNU Public License Version 2 or (at your option) any later version.\n"
     }
   },
   "AvailabilityTest": null,
-  "Date": "2023-09-01",
+  "Date": "2023-10-05",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12.1",
     "NeededOtherPackages": [
       [
         "MatricesForHomalg",
-        ">= 2023.08-01"
+        ">= 2023.10-01"
       ],
       [
         "HomalgToCAS",
@@ -24,11 +24,11 @@
       ],
       [
         "RingsForHomalg",
-        ">= 2023.08-01"
+        ">= 2023.09-01"
       ],
       [
         "Modules",
-        ">= 2023.08-01"
+        ">= 2023.10-01"
       ],
       [
         "homalg",
@@ -63,7 +63,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "c5fa679799e0c42bfbe778fedd1a670d8ac14c110cabf8e5d05abb5ae1442667",
+  "PackageInfoSHA256": "fa0c759cf430240175a650f1aee1dbd5ac451f7da41aed4e972deda5af66b947",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/ExamplesForHomalg/PackageInfo.g",
   "PackageName": "ExamplesForHomalg",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/ExamplesForHomalg",
@@ -110,5 +110,5 @@
   "Status": "deposited",
   "Subtitle": "Examples for the GAP Package homalg",
   "TestFile": "tst/testall.g",
-  "Version": "2023.08-02"
+  "Version": "2023.10-01"
 }
