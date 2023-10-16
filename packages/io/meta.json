@@ -1,15 +1,15 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">IO</span> package, as its name suggests,    provides bindings for <span class=\"pkgname\">GAP</span> to the lower    levels of Input/Output functionality in the C library.",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSHA256": "9088704a5f3ba2ea5c54190f274189dd144dd6a866dc9b4981de247a7d5009a7",
-  "ArchiveURL": "https://github.com/gap-packages/io/releases/download/v4.8.1/io-4.8.1",
+  "ArchiveSHA256": "858bccff87fc149a5db66af49e9b071f397c3fe8840d6f972f0b24f81b59f69d",
+  "ArchiveURL": "https://github.com/gap-packages/io/releases/download/v4.8.2/io-4.8.2",
   "AutoDoc": {
     "TitlePage": {
       "Copyright": "&copyright; 2005-2014 by Max Neunhöffer<P/>\n\nThis package may be distributed under the terms and conditions of the\nGNU Public License Version 3 or later (at your convenience).\n"
     }
   },
   "AvailabilityTest": null,
-  "Date": "03/02/2023",
+  "Date": "16/10/2023",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.11",
@@ -45,7 +45,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "fa1ff4e6c5cf558d86340a24101ae28e8e7cfec93c48e2f7a6879993e895b70c",
+  "PackageInfoSHA256": "a5c0af659b88ebdd43de681a31b3e13557136a412d310ec2cbcc6cd7decb12ec",
   "PackageInfoURL": "https://gap-packages.github.io/io/PackageInfo.g",
   "PackageName": "IO",
   "PackageWWWHome": "https://gap-packages.github.io/io",
@@ -58,15 +58,15 @@
       "LastName": "Neunhöffer"
     },
     {
-      "Email": "horn@mathematik.uni-kl.de",
+      "Email": "mhorn@rptu.de",
       "FirstNames": "Max",
       "GitHubUsername": "fingolfin",
-      "Institution": "TU Kaiserslautern",
+      "Institution": "RPTU Kaiserslautern-Landau",
       "IsAuthor": false,
       "IsMaintainer": true,
       "LastName": "Horn",
       "Place": "Kaiserslautern, Germany",
-      "PostalAddress": "Fachbereich Mathematik\nTU Kaiserslautern\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
+      "PostalAddress": "Fachbereich Mathematik\nRPTU Kaiserslautern-Landau\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
       "WWWHome": "https://www.quendi.de/math"
     }
   ],
@@ -78,5 +78,5 @@
   "Status": "deposited",
   "Subtitle": "Bindings for low level C library I/O routines",
   "TestFile": "tst/testall.g",
-  "Version": "4.8.1"
+  "Version": "4.8.2"
 }
