@@ -119,7 +119,6 @@ jobs:
         with:
           update_packager_index: false
 
-      # TOOD: gap should come from a container
       - name: "Install GAP"
         run: |
           echo "::group::fetch"
@@ -150,7 +149,7 @@ jobs:
           echo "::endgroup::"
 
           # put GAP into PATH
-          ln -s $HOME/gap/bin/gap.sh /usr/local/bin/gap
+          ln -s $HOME/gap/gap /usr/local/bin/gap
 
       - name: "Extract packages"
         run: |
@@ -262,7 +261,7 @@ jobs:
         run: |
           cd $HOME
           tar xvf $GITHUB_WORKSPACE/gap.tar.zst
-          ln -s $HOME/gap/bin/gap.sh /usr/local/bin/gap
+          ln -s $HOME/gap/gap /usr/local/bin/gap
           cd $GITHUB_WORKSPACE
 
       - name: "Install binary package dependencies"
