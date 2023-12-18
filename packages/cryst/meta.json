@@ -2,15 +2,15 @@
   "AbstractHTML": "This package, previously known as <span class=\"pkgname\">CrystGAP</span>, provides a rich set of methods for the computation with affine crystallographic groups, in particular space groups. Affine crystallographic groups are fully supported both in representations acting from the right or from the left, the latter one being preferred by crystallographers. Functions to determine representatives of all space group types of a given dimension are also provided. Where necessary, <span class=\"pkgname\">Cryst</span> can also make use of functionality provided by the package <span class=\"pkgname\">CaratInterface</span>.",
   "AcceptDate": "02/2000",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "219ec446912a780f367def71e5b1e715e2ee850df08ebdd75d2f1cbb59947b00",
-  "ArchiveURL": "https://www.math.uni-bielefeld.de/~gaehler/gap/Cryst/cryst-4.1.26",
+  "ArchiveSHA256": "f9beb977b9b032b9757c06d0054f2884a10831aaaafcf916e5419cedc93d6a50",
+  "ArchiveURL": "https://www.math.uni-bielefeld.de/~gaehler/gap/Cryst/cryst-4.1.27",
   "AvailabilityTest": null,
   "BinaryFiles": [
     "doc/manual.pdf",
     "doc/manual.dvi"
   ],
   "CommunicatedBy": "Herbert Pahlings (Aachen)",
-  "Date": "03/04/2023",
+  "Date": "18/12/2023",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.11",
@@ -61,7 +61,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "584cf1b141caff5e6694a8618cb89070f950741b7ac1be53039f075542e036c1",
+  "PackageInfoSHA256": "dbc38896dce163e5a17641c71f896094937302c768fd033279acb5ba663556bb",
   "PackageInfoURL": "https://www.math.uni-bielefeld.de/~gaehler/gap/Cryst/PackageInfo.g",
   "PackageName": "Cryst",
   "PackageWWWHome": "https://www.math.uni-bielefeld.de/~gaehler/gap/packages.php",
@@ -90,12 +90,9 @@
     {
       "Email": "nickel@mathematik.tu-darmstadt.de",
       "FirstNames": "Werner",
-      "Institution": "Fachbereich 4, AG 2, TU Darmstadt",
       "IsAuthor": true,
-      "IsMaintainer": true,
-      "LastName": "Nickel",
-      "Place": "Darmstadt",
-      "WWWHome": "http://www.mathematik.tu-darmstadt.de/~nickel/"
+      "IsMaintainer": false,
+      "LastName": "Nickel"
     }
   ],
   "README_URL": "https://www.math.uni-bielefeld.de/~gaehler/gap/Cryst/README.cryst",
@@ -107,5 +104,5 @@
   "Subtitle": "Computing with crystallographic groups",
   "SupportEmail": "gaehler@math.uni-bielefeld.de",
   "TestFile": "tst/testall.g",
-  "Version": "4.1.26"
+  "Version": "4.1.27"
 }
