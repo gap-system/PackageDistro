@@ -1,0 +1,16 @@
+{
+  "current": "4.12.1/2023-12-20-02:30:12-776b0943",
+  "last": "4.12.1/2023-12-19-02:49:32-776b0943",
+  "total": 156,
+  "failure": 1,
+  "success": 151,
+  "skipped": 4,
+  "new": 0,
+  "removed": 0,
+  "failure_changed": 0,
+  "success_changed": 0,
+  "skipped_changed": 0,
+  "failure_same": 1,
+  "success_same": 151,
+  "skipped_same": 4
+}
