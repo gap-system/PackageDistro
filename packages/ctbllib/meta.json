@@ -1,10 +1,76 @@
 {
   "AbstractHTML": "The package contains the <span class=\"pkgname\">GAP</span> Character Table Library.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "0c311ad73c0fad339da8ec2ce0458d93567c4afcf22effffccd6a619988ae19a",
-  "ArchiveURL": "https://www.math.rwth-aachen.de/~Thomas.Breuer/ctbllib/ctbllib-1.3.6",
+  "ArchiveSHA256": "f8e7e3a4a57fd0709a69d5da085b46d60ad69498f206f130466eec590c4db14b",
+  "ArchiveURL": "https://www.math.rwth-aachen.de/~Thomas.Breuer/ctbllib/ctbllib-1.3.7",
   "AvailabilityTest": null,
-  "Date": "16/05/2023",
+  "Date": "01/01/2024",
+  "Dates_all": [
+    [
+      "21/01/2002",
+      "1.0"
+    ],
+    [
+      "18/11/2003",
+      "1.1.0"
+    ],
+    [
+      "20/11/2003",
+      "1.1.1"
+    ],
+    [
+      "27/11/2003",
+      "1.1.2"
+    ],
+    [
+      "31/03/2004",
+      "1.1.3"
+    ],
+    [
+      "07/05/2012",
+      "1.2.0"
+    ],
+    [
+      "30/05/2012",
+      "1.2.1"
+    ],
+    [
+      "07/03/2013",
+      "1.2.2"
+    ],
+    [
+      "30/12/2019",
+      "1.3.0"
+    ],
+    [
+      "08/04/2020",
+      "1.3.1"
+    ],
+    [
+      "28/03/2021",
+      "1.3.2"
+    ],
+    [
+      "02/01/2022",
+      "1.3.3"
+    ],
+    [
+      "26/04/2022",
+      "1.3.4"
+    ],
+    [
+      "07/03/2023",
+      "1.3.5"
+    ],
+    [
+      "16/05/2023",
+      "1.3.6"
+    ],
+    [
+      "01/01/2024",
+      "1.3.7"
+    ]
+  ],
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.11.0",
@@ -143,7 +209,7 @@
       "SixFile": "doc2/manual.six"
     }
   ],
-  "PackageInfoSHA256": "deb41873e74ff482161f674129246cd5d9e63c30737ffbd16928fa0bf0aa8385",
+  "PackageInfoSHA256": "10b1c0ee07ac98fa7fd9f852cee256db91b109e1d50aeed210ae6317117f75f3",
   "PackageInfoURL": "https://www.math.rwth-aachen.de/~Thomas.Breuer/ctbllib/PackageInfo.g",
   "PackageName": "CTblLib",
   "PackageWWWHome": "https://www.math.rwth-aachen.de/~Thomas.Breuer/ctbllib",
@@ -164,5 +230,5 @@
   "Status": "deposited",
   "Subtitle": "The GAP Character Table Library",
   "TestFile": "tst/testauto.g",
-  "Version": "1.3.6"
+  "Version": "1.3.7"
 }
