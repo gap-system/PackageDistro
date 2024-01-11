@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "<span class=\"pkgname\">LinearAlgebraForCAP</span> provides a skeletal model of the category of finite dimensional vector spaces over a computable field.",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "8c24ae9c4e715017fba576409db56f7d62cf33212d8f49ca208049ffa05ff202",
-  "ArchiveURL": "https://github.com/homalg-project/CAP_project/releases/download/LinearAlgebraForCAP-2023.12-05/LinearAlgebraForCAP-2023.12-05",
+  "ArchiveSHA256": "f5eed49a20f11479412652c93d985681be14a24cce3876698117b94062d70e46",
+  "ArchiveURL": "https://github.com/homalg-project/CAP_project/releases/download/LinearAlgebraForCAP-2024.01-02/LinearAlgebraForCAP-2024.01-02",
   "AvailabilityTest": null,
-  "Date": "2023-12-13",
+  "Date": "2024-01-11",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12.1",
@@ -51,7 +51,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "c2505363aab9e4fd5b4303ca1a7af36a92883026abc131b17d6a331ee4c9ce33",
+  "PackageInfoSHA256": "a0c174190e2c400b17543f5e18072bc36cd9ae705f62fbdd195347de24c7b4db",
   "PackageInfoURL": "https://homalg-project.github.io/CAP_project/LinearAlgebraForCAP/PackageInfo.g",
   "PackageName": "LinearAlgebraForCAP",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/LinearAlgebraForCAP",
@@ -77,6 +77,17 @@
       "Place": "Siegen",
       "PostalAddress": "Department Mathematik\nUniversität Siegen\nWalter-Flex-Straße 3\n57068 Siegen\nGermany",
       "WWWHome": "https://sebastianpos.github.io"
+    },
+    {
+      "Email": "fabian.zickgraf@uni-siegen.de",
+      "FirstNames": "Fabian",
+      "Institution": "University of Siegen",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Zickgraf",
+      "Place": "Siegen",
+      "PostalAddress": "Walter-Flex-Str. 3\n57068 Siegen\nGermany",
+      "WWWHome": "https://github.com/zickgraf/"
     }
   ],
   "README_URL": "https://homalg-project.github.io/CAP_project/LinearAlgebraForCAP/README.md",
@@ -87,5 +98,5 @@
   "Status": "deposited",
   "Subtitle": "Category of Matrices over a Field for CAP",
   "TestFile": "tst/testall.g",
-  "Version": "2023.12-05"
+  "Version": "2024.01-02"
 }
