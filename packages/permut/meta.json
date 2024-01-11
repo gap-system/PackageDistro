@@ -2,11 +2,11 @@
   "AbstractHTML": "This package provides functions for computing with permutability in finite groups.",
   "AcceptDate": "04/2014",
   "ArchiveFormats": ".tar.gz .tar.bz2 .zip",
-  "ArchiveSHA256": "568a27986066c2a389e6647b72c6987fd5fc4ff66aa3fdb99bf3d164e770273d",
-  "ArchiveURL": "https://github.com/gap-packages/permut/releases/download/v2.0.4/permut-2.0.4",
+  "ArchiveSHA256": "f1ae109af1e6e58675f26c963012ac495b9368e2dd095a93d7b7c2115f1ce98f",
+  "ArchiveURL": "https://github.com/gap-packages/permut/releases/download/v2.0.5/permut-2.0.5",
   "AvailabilityTest": null,
   "CommunicatedBy": "Alice Niemeyer (Perth)",
-  "Date": "27/03/2022",
+  "Date": "11/01/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": "4.7.4",
@@ -36,13 +36,13 @@
         "doc"
       ],
       "BookName": "PERMUT",
-      "HTMLStart": "doc/chap0.html",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "PERMUT: A package to deal with permutability in finite groups",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "7cd2b0da536675a6228cd198f044db992fc9e2e187c0e03116c7b31500ec3f8c",
+  "PackageInfoSHA256": "d97282482768ac4d527a33022e2fe3e7bcbda8e9b45bef211d8bea4e1394c766",
   "PackageInfoURL": "https://gap-packages.github.io/permut/PackageInfo.g",
   "PackageName": "permut",
   "PackageWWWHome": "https://gap-packages.github.io/permut/",
@@ -50,33 +50,33 @@
     {
       "Email": "Adolfo.Ballester@uv.es",
       "FirstNames": "Adolfo",
-      "Institution": "Departament de Matem\\`atiques, Universitat de Val\\`encia",
+      "Institution": "Departament de Matemàtiques, Universitat de València",
       "IsAuthor": true,
       "IsMaintainer": false,
       "LastName": "Ballester-Bolinches",
-      "Place": "Burjassot, Val\\`encia",
-      "PostalAddress": "Adolfo Ballester-Bolinches\nDepartament de Matem\\`atiques\nUniversitat de Val\\`encia\nDr.\\ Moliner, 50\n46100 Burjassot, Val\\`encia, Spain"
+      "Place": "Burjassot, València",
+      "PostalAddress": "Departament de Matemàtiques\nUniversitat de València\nDr. Moliner, 50\n46100 Burjassot, València, Spain"
     },
     {
       "Email": "Enric.Cosme@uv.es",
       "FirstNames": "Enric",
-      "Institution": "Departament de Matem\\`atiques, Universitat de Val\\`encia",
+      "Institution": "Departament de Matemàtiques, Universitat de València",
       "IsAuthor": true,
       "IsMaintainer": false,
       "LastName": "Cosme-Llópez",
-      "Place": "Burjassot, Val\\`encia",
-      "PostalAddress": "Enric Cosme-Ll\\'opez\nDepartament de Matem\\`atiques\nUniversitat de Val\\`encia\nDr.\\ Moliner, 50\n46100 Burjassot, Val\\`encia, Spain",
+      "Place": "Burjassot, València",
+      "PostalAddress": "Departament de Matemàtiques\nUniversitat de València\nDr. Moliner, 50\n46100 Burjassot, València, Spain",
       "WWWHome": "https://www.uv.es/coslloen"
     },
     {
       "Email": "Ramon.Esteban@uv.es",
       "FirstNames": "Ramón",
-      "Institution": "Departament de Matem\\`atiques, Universitat de Val\\`encia",
+      "Institution": "Departament de Matemàtiques, Universitat de València",
       "IsAuthor": true,
       "IsMaintainer": true,
       "LastName": "Esteban-Romero",
-      "Place": "Burjassot, Val\\`encia",
-      "PostalAddres": "Ramon Esteban-Romero\nDepartament de Matem\\`atiques\nUniversitat de Val\\`encia\nDr.\\ Moliner, 50\n46100 Burjassot, Val\\`encia, Spain\n",
+      "Place": "Burjassot, València",
+      "PostalAddres": "Departament de Matemàtiques\nUniversitat de València\nDr. Moliner, 50\n46100 Burjassot, València, Spain\n",
       "WWWHome": "https://www.uv.es/estebanr"
     }
   ],
@@ -89,5 +89,5 @@
   "Subtitle": "A package to deal with permutability in finite groups",
   "SupportEmail": "Ramon.Esteban@uv.es",
   "TestFile": "tst/testall.g",
-  "Version": "2.0.4"
+  "Version": "2.0.5"
 }
