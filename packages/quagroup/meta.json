@@ -2,18 +2,18 @@
   "AbstractHTML": "The package <span class=\"pkgname\">QuaGroup</span> contains                  functionality for working with quantized enveloping algebras                 of finite-dimensional semisimple Lie algebras.",
   "AcceptDate": "10/2003",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "b0ae5089e42d19be4c15e7422d3d4c94c0e79c533511a67b50ddc33630b12b56",
-  "ArchiveURL": "https://github.com/gap-packages/quagroup/releases/download/v1.8.3/quagroup-1.8.3",
+  "ArchiveSHA256": "05c31c30ece36dbc97649307cba58d74c764b0c849e27b9b4fc60cee00ea54d3",
+  "ArchiveURL": "https://github.com/gap-packages/quagroup/releases/download/v1.8.4/quagroup-1.8.4",
   "AutoDoc": {
     "TitlePage": {
       "Copyright": "&copyright; 2002 Willem A. de Graaf",
-      "Version": "Version 1.8.3"
+      "Version": "Version 1.8.4"
     }
   },
   "AvailabilityTest": null,
-  "BannerString": "     |                                                                 \n     |          QuaGroup 1.8.3\n     |                                                                 \n-----------     A package for dealing with quantized enveloping algebras\n     |                                                                 \n     |          Willem de Graaf                                        \n     |          degraaf@science.unitn.it                               \n\n",
+  "BannerString": "     |                                                                 \n     |          QuaGroup 1.8.4\n     |                                                                 \n-----------     A package for dealing with quantized enveloping algebras\n     |                                                                 \n     |          Willem de Graaf                                        \n     |          degraaf@science.unitn.it                               \n\n",
   "CommunicatedBy": "Gerhard Hiss (Aachen)",
-  "Date": "10/02/2022",
+  "Date": "11/01/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.8",
@@ -32,13 +32,13 @@
       ],
       "Autoload": true,
       "BookName": "QuaGroup",
-      "HTMLStart": "doc/chap0.html",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "Computations with quantum groups",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "60a64b30fda25d9cf0edaa0014eceb164ffe7be6d50ad017262959070a5631ff",
+  "PackageInfoSHA256": "d81c34dcd077f78ed9703deb00972e3d2373ed084562e5d2666aa4d5b2e9a42e",
   "PackageInfoURL": "https://gap-packages.github.io/quagroup/PackageInfo.g",
   "PackageName": "QuaGroup",
   "PackageWWWHome": "https://gap-packages.github.io/quagroup/",
@@ -69,5 +69,5 @@
   "Status": "accepted",
   "Subtitle": "Computations with quantum groups",
   "TestFile": "tst/testall.g",
-  "Version": "1.8.3"
+  "Version": "1.8.4"
 }
