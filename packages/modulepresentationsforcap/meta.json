@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "<span class=\"pkgname\">ModulePresentationsForCAP</span> provides the category of finitely presented modules over a computable ring.",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "e1bba4a1d544cf6281a8f6aecb747406c0fe11cfea88df4928eb44d564e058a7",
-  "ArchiveURL": "https://github.com/homalg-project/CAP_project/releases/download/ModulePresentationsForCAP-2023.10-01/ModulePresentationsForCAP-2023.10-01",
+  "ArchiveSHA256": "852a334a1fc456b76022860a542aef044e4b9aad8aedb125041a1e3a88ca9500",
+  "ArchiveURL": "https://github.com/homalg-project/CAP_project/releases/download/ModulePresentationsForCAP-2024.01-01/ModulePresentationsForCAP-2024.01-01",
   "AvailabilityTest": null,
-  "Date": "2023-10-10",
+  "Date": "2024-01-11",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12.1",
@@ -47,7 +47,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "27d4c7bd390c66f9f99c683c34d29e06a70aa1cafbb41e4acbebcc2ceb975e9c",
+  "PackageInfoSHA256": "d4b279b9c0b6c15398a043792a725ae964a99e01b1bc3307948231160e444874",
   "PackageInfoURL": "https://homalg-project.github.io/CAP_project/ModulePresentationsForCAP/PackageInfo.g",
   "PackageName": "ModulePresentationsForCAP",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/ModulePresentationsForCAP",
@@ -73,6 +73,17 @@
       "Place": "Siegen",
       "PostalAddress": "Department Mathematik\nUniversität Siegen\nWalter-Flex-Straße 3\n57068 Siegen\nGermany",
       "WWWHome": "https://sebastianpos.github.io"
+    },
+    {
+      "Email": "fabian.zickgraf@uni-siegen.de",
+      "FirstNames": "Fabian",
+      "Institution": "University of Siegen",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Zickgraf",
+      "Place": "Siegen",
+      "PostalAddress": "Walter-Flex-Str. 3\n57068 Siegen\nGermany",
+      "WWWHome": "https://github.com/zickgraf/"
     }
   ],
   "README_URL": "https://homalg-project.github.io/CAP_project/ModulePresentationsForCAP/README.md",
@@ -83,5 +94,5 @@
   "Status": "deposited",
   "Subtitle": "Category R-pres for CAP",
   "TestFile": "tst/testall.g",
-  "Version": "2023.10-01"
+  "Version": "2024.01-01"
 }
