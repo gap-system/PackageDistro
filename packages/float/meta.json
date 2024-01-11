@@ -1,12 +1,12 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">float</span> package allows                     GAP to manipulate floating-point numbers with arbitrary                     precision. It is based on MPFR, MPFI, MPC, CXSC, FPLLL",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "a0afd65441844ba3a02670f6057d79c3aba77b9a5d0ec6861e215a33bd2b9405",
-  "ArchiveURL": "https://github.com/gap-packages/float/releases/download/v1.0.3/float-1.0.3",
+  "ArchiveSHA256": "dcdca5c2cb6428cf7d257e2ef71ec98f2b3eb62d3b2907fda416ac9ecf65e63e",
+  "ArchiveURL": "https://github.com/gap-packages/float/releases/download/v1.0.4/float-1.0.4",
   "AvailabilityTest": null,
   "BannerFunction": null,
-  "BannerString": "float 1.0.3 with modules [?] ...\n",
-  "Date": "15/02/2022",
+  "BannerString": "float 1.0.4 with modules [?] ...\n",
+  "Date": "11/01/2024",
   "Dependencies": {
     "ExternalConditions": [
       "GAP compiled with GMP support"
@@ -31,13 +31,13 @@
         "doc"
       ],
       "BookName": "float",
-      "HTMLStart": "doc/chap0.html",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "Floating-point numbers",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "ba852d7aeb2a214ccb89bff9fa2c7fe4c7b6f27d4acecbdac6f31a9cd85ed5bc",
+  "PackageInfoSHA256": "dcd031447be38973d4dcc44b9daabb4c2d31a8d02350f4594a9b1215b016ea09",
   "PackageInfoURL": "https://gap-packages.github.io/float/PackageInfo.g",
   "PackageName": "float",
   "PackageWWWHome": "https://gap-packages.github.io/float/",
@@ -62,5 +62,5 @@
   "Status": "deposited",
   "Subtitle": "Integration of mpfr, mpfi, mpc, fplll and cxsc in GAP",
   "TestFile": "tst/testall.g",
-  "Version": "1.0.3"
+  "Version": "1.0.4"
 }
