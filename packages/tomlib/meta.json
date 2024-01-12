@@ -1,8 +1,8 @@
 {
   "AbstractHTML": "The package contains the <span class=\"pkgname\">GAP</span> Library of Tables of Marks",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "6f1df43c3790f81868fe674deb4bbd96ddeb06520d07f493ccf993b4abf3a60b",
-  "ArchiveURL": "https://github.com/gap-packages/tomlib/releases/download/v1.2.9/tomlib-1.2.9",
+  "ArchiveSHA256": "ceb474c3c8a8dc94331b05e410e926fb9aba197d4d8e163a20aaddd1a48bebda",
+  "ArchiveURL": "https://github.com/gap-packages/tomlib/releases/download/v1.2.11/tomlib-1.2.11",
   "AutoDoc": {
     "TitlePage": {
       "Acknowledgements": "\n            This documentation was prepared with the <Package>GAPDoc</Package>\n            package by Frank Lübeck and Max Neunhöffer.\n            ",
@@ -10,7 +10,7 @@
     }
   },
   "AvailabilityTest": null,
-  "Date": "23/10/2019",
+  "Date": "12/01/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.4",
@@ -44,13 +44,13 @@
         "htm"
       ],
       "BookName": "TomLib",
-      "HTMLStart": "doc/chap0.html",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "The GAP Library of Tables of Marks",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "fa72f9827cfb2552bbc95d36e54a0dd5dc6969673751e74c1be81d6cc7120386",
+  "PackageInfoSHA256": "c5a90be24c7431c7e3750c465bf989146bada24932596a8e78b8b17aa4359639",
   "PackageInfoURL": "https://gap-packages.github.io/tomlib/PackageInfo.g",
   "PackageName": "TomLib",
   "PackageWWWHome": "https://gap-packages.github.io/tomlib",
@@ -89,5 +89,5 @@
   "Status": "deposited",
   "Subtitle": "The GAP Library of Tables of Marks",
   "TestFile": "tst/testall.g",
-  "Version": "1.2.9"
+  "Version": "1.2.11"
 }
