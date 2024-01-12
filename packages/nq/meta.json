@@ -2,8 +2,8 @@
   "AbstractHTML": "This package provides access to the ANU nilpotent quotient program for computing nilpotent factor groups of finitely presented groups.",
   "AcceptDate": "01/2003",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSHA256": "95c2a3e7425784fbc1db6fb5c9a60b8ed22cfb9df4866023d5b653ed5d7b4a32",
-  "ArchiveURL": "https://github.com/gap-packages/nq/releases/download/v2.5.10/nq-2.5.10",
+  "ArchiveSHA256": "6a8ad97023d90564d789be55b12bbc68d26a3714126f46bc75b415eec8f0f406",
+  "ArchiveURL": "https://github.com/gap-packages/nq/releases/download/v2.5.11/nq-2.5.11",
   "AutoDoc": {
     "TitlePage": {
       "Acknowledgements": "\n            The author of ANU NQ is Werner Nickel.\n\n            <P/>The development of this program was started while the\n            author was supported by an Australian National University PhD\n            scholarship and an Overseas Postgraduate Research Scholarship.\n\n            <P/>Further development of this program was done with support from the\n            DFG-Schwerpunkt-Projekt <Q>Algorithmische Zahlentheorie und Algebra</Q>.\n\n            <P/>Since then, maintenance of ANU NQ has been taken over by Max Horn. All\n            credit for creating ANU NQ still goes to Werner Nickel as sole author.\n            However, bug reports and other inquiries should be sent to Max Horn.\n\n            <P/>The following are the original acknowledgements by Werner Nickel.\n\n            <P/>Over the years a number of people have made useful suggestions\n            that found their way into the code:  Mike Newman, Michael\n            Vaughan-Lee, Joachim Neubüser, Charles Sims.\n\n            <P/>Thanks to Volkmar Felsch and Joachim Neubüser for their careful\n            examination of the package prior to its release for GAP 4.\n\n            <P/>This documentation was prepared with the <Package>GAPDoc</Package>\n            package by Frank Lübeck and Max Neunhöffer.",
@@ -11,9 +11,9 @@
     }
   },
   "AvailabilityTest": null,
-  "BannerString": "Loading nq 2.5.10 (Nilpotent Quotient Algorithm)\n  by Werner Nickel\n  maintained by Max Horn (mhorn@rptu.de)\n",
+  "BannerString": "Loading nq 2.5.11 (Nilpotent Quotient Algorithm)\n  by Werner Nickel\n  maintained by Max Horn (mhorn@rptu.de)\n",
   "CommunicatedBy": "Joachim Neubüser (RWTH Aachen)",
-  "Date": "27/03/2023",
+  "Date": "12/01/2024",
   "Dependencies": {
     "ExternalConditions": [
       "needs a UNIX system with C-compiler",
@@ -55,7 +55,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "33cd87eb8f741f58f913a66fc1de58ff4ac8dba309ed50d799a5a1fd8150bf3e",
+  "PackageInfoSHA256": "e5e3370aa823163909a5130f1d803f43051e606305915718bcf7a363e5af5264",
   "PackageInfoURL": "https://gap-packages.github.io/nq/PackageInfo.g",
   "PackageName": "nq",
   "PackageWWWHome": "https://gap-packages.github.io/nq/",
@@ -87,5 +87,5 @@
   "Status": "accepted",
   "Subtitle": "Nilpotent Quotients of Finitely Presented Groups",
   "TestFile": "tst/testall.g",
-  "Version": "2.5.10"
+  "Version": "2.5.11"
 }
