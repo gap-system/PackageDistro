@@ -1,0 +1,63 @@
+{
+  "AbstractHTML": "",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSHA256": "0a62b994386cf7ce5f71048a36eab5be61a0cc9ad5896bf55a2cf3ddb066927a",
+  "ArchiveURL": "https://github.com/gap-packages/typeset/releases/download/v1.2.0/typeset-1.2.0",
+  "AvailabilityTest": null,
+  "Date": "16/01/2024",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">= 4.11",
+    "NeededOtherPackages": [],
+    "SuggestedOtherPackages": [
+      [
+        "digraphs",
+        ">=1.5.0"
+      ]
+    ]
+  },
+  "IssueTrackerURL": "https://github.com/gap-packages/typeset/issues",
+  "Keywords": [
+    "latex",
+    "typesetting",
+    "markdown"
+  ],
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "typeset",
+      "HTMLStart": "doc/chap0_mj.html",
+      "LongTitle": "Automatic typesetting framework for common GAP objects, with LaTeX generation",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSHA256": "e89805b74ca7a14d685a7ceee2818dca8923bdb8cc124dbba96a5be830191efd",
+  "PackageInfoURL": "https://gap-packages.github.io/typeset/PackageInfo.g",
+  "PackageName": "typeset",
+  "PackageWWWHome": "https://gap-packages.github.io/typeset/",
+  "Persons": [
+    {
+      "Email": "zachariah.newbery@gmail.com",
+      "FirstNames": "Zachariah",
+      "Institution": "University of St. Andrews",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Newbery",
+      "Place": "St. Andrews",
+      "WWWHome": "https://zachnewbery.com"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/typeset/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/typeset"
+  },
+  "Status": "dev",
+  "Subtitle": "Automatic typesetting framework for common GAP objects, with LaTeX generation",
+  "TestFile": "tst/testall.g",
+  "Version": "1.2.0"
+}
