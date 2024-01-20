@@ -1,0 +1,98 @@
+{
+  "AbstractHTML": "The GAP package <code>QDistRnd</code> \nimplements a probabilistic algorithm for finding the \nminimum distance of a quantum code linear over a finite\nfield GF(<var>q</var>).\n",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSHA256": "2d10050e145d9dbe39a1dbee84323ba2f65e8fe63b071623fb0095bab2541bfb",
+  "ArchiveURL": "https://github.com/QEC-pages/QDistRnd/releases/download/v0.9.2/qdistrnd-0.9.2",
+  "AutoDoc": {
+    "TitlePage": {
+      "Acknowledgements": "\n      We appreciate very much all past and future comments, suggestions and \n      contributions to this package and its documentation provided by &GAP;\n      users and developers.\n            ",
+      "Copyright": "\n      <Index>License</Index>                                    \n      &copyright; 2021 by Leonid P. Pryadko and Vadim A. Shabashov<P/>    \n      &QDistRnd; package is free software;  \n      you can redistribute it and/or modify it under the terms of the\n      <URL Text=\"GNU General Public License\">https://www.fsf.org/licenses/gpl.html</URL>\n      as published by the Free Software Foundation; either version 2 of the License,\n      or (at your option) any later version.\n      "
+    }
+  },
+  "AvailabilityTest": null,
+  "Date": "19/01/2024",
+  "Dependencies": {
+    "GAP": "4.11",
+    "NeededOtherPackages": [
+      [
+        "GAPDoc",
+        "1.5"
+      ],
+      [
+        "AutoDoc",
+        "1.5"
+      ],
+      [
+        "Guava",
+        "3.14"
+      ]
+    ]
+  },
+  "IssueTrackerURL": "https://github.com/QEC-pages/QDistRnd/issues",
+  "Keywords": [
+    "QECC",
+    "quantum code",
+    "stabilizer code",
+    "quantum error correcting code",
+    "distance"
+  ],
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "QDistRnd",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "Calculate the distance of a q-ary quantum stabilizer code",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSHA256": "6a33ebe21566f0d3ee60f8c8eeaa9c057c4eb2ae7a46fc967d0310d3a29884a1",
+  "PackageInfoURL": "https://QEC-pages.github.io/QDistRnd/PackageInfo.g",
+  "PackageName": "QDistRnd",
+  "PackageWWWHome": "https://QEC-pages.github.io/QDistRnd",
+  "Persons": [
+    {
+      "Email": "leonid.pryadko@gmail.com",
+      "FirstNames": "Leonid P.",
+      "Institution": "University of California, Riverside",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Pryadko",
+      "Place": "UCR",
+      "PostalAddress": "Leonid Pryadko\nDepartment of Physics &amp; Astronomy\nUniversity of California\nRiverside, CA 92521\nUSA",
+      "WWWHome": "http://faculty.ucr.edu/~leonid"
+    },
+    {
+      "Email": "vadim.art.shabashov@gmail.com",
+      "FirstNames": "Vadim A.",
+      "Institution": "ITMO University",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Shabashov",
+      "PostalAddress": "Vadim Shabashov\nThe Department of Physics &amp; Engineering\nITMO University\nSt. Petersburg, 197101\nRussia",
+      "WWWHome": "https://sites.google.com/view/vadim-shabashov/"
+    },
+    {
+      "Email": "kozin.valera@gmail.com",
+      "FirstNames": "Valerii K.",
+      "Institution": "ITMO University",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "Kozin",
+      "PostalAddress": "Valerii Kozin\nThe Department of Physics &amp; Engineering\nITMO University\nSt. Petersburg, 197101\nRussia"
+    }
+  ],
+  "README_URL": "https://QEC-pages.github.io/QDistRnd/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/QEC-pages/QDistRnd"
+  },
+  "Status": "other",
+  "Subtitle": "Calculate the distance of a q-ary quantum stabilizer code",
+  "SupportEmail": "leonid.pryadko@gmail.com",
+  "TestFile": "tst/testall.g",
+  "Version": "0.9.2"
+}
