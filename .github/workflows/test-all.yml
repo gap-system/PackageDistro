@@ -322,10 +322,9 @@ jobs:
                 elif pkgname = \"guarana\" then
                   LoadPackage(\"nq\" : OnlyNeeded);
                 elif pkgname = \"hap\" then
-                  # hap really needs all (?) its optional dependencies in its tests
-                  # so we cheat and load it early
-                  SetInfoLevel(InfoPackageLoading, PACKAGE_DEBUG);
-                  LoadPackage(\"hap\");
+                  # hap really needs all (?) its optional dependencies in its tests,
+                  # so we don't attempt to run them with 'OnlyNeeded'
+                  QUIT_GAP(true);
                 elif pkgname = \"sglppow\" then
                   LoadPackage(\"liepring\" : OnlyNeeded);
                 elif pkgname = \"standardff\" then
