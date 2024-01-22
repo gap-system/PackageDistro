@@ -199,12 +199,10 @@ jobs:
           cd $HOME
           tar --exclude-vcs --exclude=build --exclude=.libs -cf gap.tar.zst gap
 
-      - name: "Compute suitable artifact name suffix"
+      - name: "Compute suitable artifact basename"
         id: get-artifact-name
         run: |
           echo "artifact=${{ github.event.inputs.which-gap || inputs.which-gap }}" | sed -e 's;/;-;g'  >> $GITHUB_OUTPUT
-          echo "GITHUB_OUTPUT = $GITHUB_OUTPUT"
-          cat $GITHUB_OUTPUT
 
       - name: "Upload GAP with packages as artifact"
         uses: actions/upload-artifact@v3
@@ -346,7 +344,7 @@ jobs:
 
   report:
     name: "Generate report"
-    needs: test-package
+    needs: [build, test-package]
     if: always()
     runs-on: ubuntu-20.04
     outputs:
