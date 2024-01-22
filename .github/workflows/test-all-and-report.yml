@@ -46,15 +46,15 @@ jobs:
   test-all-release:
     # If you change this name, you must adjust the corresponding prefix
     # in the step of test-all.yml that calls tools/generate_test_status.py
-    name: "4.12.1"
+    name: "4.12.2"
     uses: ./.github/workflows/test-all.yml
     with:
-      which-gap: 4.12.1
+      which-gap: 4.12.2
 
   update-latest-release:
-    name: "Upload 4.12.1 report"
+    name: "Upload 4.12.2 report"
     needs: test-all-release
     if: always()
     uses: ./.github/workflows/update-latest-report.yml
     with:
-      which-gap: 4.12.1
+      which-gap: 4.12.2
