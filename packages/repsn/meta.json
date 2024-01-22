@@ -2,8 +2,8 @@
   "AbstractHTML": "The package provides <span class=\"pkgname\">GAP</span> functions for computing characteristic zero matrix representations of finite groups.",
   "AcceptDate": "05/2004",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "5ba662f381594a7e8450309e2aab3b8545548e69f2d744c29ae911c0d843d7e1",
-  "ArchiveURL": "https://github.com/gap-packages/repsn/releases/download/v3.1.1/repsn-3.1.1",
+  "ArchiveSHA256": "48f354e5e06e38c23c47bb6f87df9d15238f9943b1bc3115429484b676ff288c",
+  "ArchiveURL": "https://github.com/gap-packages/repsn/releases/download/v3.1.2/repsn-3.1.2",
   "AutoDoc": {
     "TitlePage": {
       "Acknowledgements": "\n<P/>The first version of this package was obtained during my Ph.D.\nstudies at Carleton University. I would like to express deep gratitude\nto my supervisor Professor John D. Dixon whose guidance and support were\ncrucial for the successful completion of this project. I also thank\nProfessor Charles Wright and referees for pointing out some important\ncomments to improve <Package>Repsn</Package>.\n\n<P/>This documentation was prepared with the <Package>GAPDoc</Package>\npackage by Frank Lübeck and Max Neunhöffer.\n"
@@ -11,7 +11,7 @@
   },
   "AvailabilityTest": null,
   "CommunicatedBy": "Charles Wright (Eugene)",
-  "Date": "20/03/2023",
+  "Date": "22/01/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.8",
@@ -38,7 +38,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "b2af1d7b3a3e2f5c3f859b337818ebb919f93855c36b6acd4f86292b15de3fd5",
+  "PackageInfoSHA256": "e419bef0e521e372d98d8aacaabe0a8e2a6f55a48d65f56131cbb325d7399c40",
   "PackageInfoURL": "https://gap-packages.github.io/repsn/PackageInfo.g",
   "PackageName": "Repsn",
   "PackageWWWHome": "https://gap-packages.github.io/repsn/",
@@ -70,5 +70,5 @@
   "Status": "accepted",
   "Subtitle": "Constructing representations of finite groups",
   "TestFile": "tst/testall.g",
-  "Version": "3.1.1"
+  "Version": "3.1.2"
 }
