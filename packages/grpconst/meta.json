@@ -2,11 +2,11 @@
   "AbstractHTML": "The <span class=\"pkgname\">GrpConst</span> package contains methods to construct up to isomorphism the groups of a given order. The FrattiniExtensionMethod constructs all soluble groups of a given order. On request it gives only those that are (or are not) nilpotent or supersolvable or that do (or do not) have normal Sylow subgroups for some given set of primes. The CyclicSplitExtensionMethod constructs all groups having a normal Sylow subgroup for orders of the type p^n *q. The method relies on the availability of a list of all groups of order p^n. The UpwardsExtensions algorithm takes as input a permutation group G and a positive integer s and returns a list of permutation groups, one for each extension of G by a soluble group of order a divisor of s. This method can used to construct the non-solvable groups of a given order by taking the perfect groups of certain orders as input for G. The programs in this package have been used to construct a large part of the Small Groups library.",
   "AcceptDate": "07/1999",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "b5e425406db8a75c465f4d25cc572c9e5bd998b9f970c8258d567cd9004268da",
-  "ArchiveURL": "https://github.com/gap-packages/grpconst/releases/download/v2.6.4/grpconst-2.6.4",
+  "ArchiveSHA256": "683bf2e3245b3a83bdb189ccb20327eaec7ca4ac116ea9d45a39167be73dd9eb",
+  "ArchiveURL": "https://github.com/gap-packages/grpconst/releases/download/v2.6.5/grpconst-2.6.5",
   "AvailabilityTest": null,
   "CommunicatedBy": "Charles Wright (Eugene)",
-  "Date": "10/02/2023",
+  "Date": "22/01/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.7",
@@ -48,7 +48,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "85386a2e949799c0acfa1ac65fbf1d9d59476720b78a6625a72dab7eca903ac7",
+  "PackageInfoSHA256": "9d9393836924c4ade03cfc3be796642f018173b09f707ca18eef2a3f22b01f4d",
   "PackageInfoURL": "https://gap-packages.github.io/grpconst/PackageInfo.g",
   "PackageName": "GrpConst",
   "PackageWWWHome": "https://gap-packages.github.io/grpconst/",
@@ -72,14 +72,14 @@
       "WWWHome": "http://www.iaa.tu-bs.de/beick"
     },
     {
-      "Email": "horn@mathematik.uni-kl.de",
+      "Email": "mhorn@rptu.de",
       "FirstNames": "Max",
-      "Institution": "TU Kaiserslautern",
+      "Institution": "RPTU Kaiserslautern-Landau",
       "IsAuthor": false,
       "IsMaintainer": true,
       "LastName": "Horn",
       "Place": "Kaiserslautern, Germany",
-      "PostalAddress": "Fachbereich Mathematik\nTU Kaiserslautern\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
+      "PostalAddress": "Fachbereich Mathematik\nRPTU Kaiserslautern-Landau\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
       "WWWHome": "https://www.quendi.de/math"
     }
   ],
@@ -91,5 +91,5 @@
   "Status": "accepted",
   "Subtitle": "Constructing the Groups of a Given Order",
   "TestFile": "tst/testall.g",
-  "Version": "2.6.4"
+  "Version": "2.6.5"
 }
