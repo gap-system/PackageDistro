@@ -5,4 +5,4 @@ layout: default
 
 - [Click here for the latest report on `master`](latest-master/redirect.html)
 
-- [Click here for the latest report on `4.12.1`](latest-4.12.1/redirect.html)
+- [Click here for the latest report on `4.12.2`](latest-4.12.2/redirect.html)
