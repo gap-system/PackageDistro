@@ -2,20 +2,20 @@
   "AbstractHTML": "The Kan package provides functions for the computation of normal forms   of representatives of double cosets of finitely presented groups.",
   "AcceptDate": "05/2015",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "b7128b48eb07344a9c15038698b1a3d233292cc156a43cbcd44c852ee7f7810e",
-  "ArchiveURL": "https://github.com/gap-packages/kan/releases/download/v1.36/kan-1.36",
+  "ArchiveSHA256": "45ae9ae7c11fa200bf4538636f2ba71e9e7065d3e040ce49c8eea2ed7339421b",
+  "ArchiveURL": "https://github.com/gap-packages/kan/releases/download/v1.37/kan-1.37",
   "AutoDoc": {
     "TitlePage": {
-      "Abstract": "&Kan; is a &GAP; package originally implemented in 1996 using the &GAP; 3 language, to compute induced actions of categories, when the first author was studying for a Ph.D. in Bangor.\n<P/>\nThis reduced version only provides functions for the computation of normal forms of representatives of double cosets of finitely presented groups.\n<P/>\n&Kan; became an accepted &GAP; package in May 2015.\n<P/>\nBug reports, suggestions and comments are, of course, welcome.\nPlease contact the last author at <Email>c.d.wensley@bangor.ac.uk</Email> or submit an issue at the GitHub repository <URL>https://github.com/gap-packages/kan/issues/</URL>.\n",
+      "Abstract": "&Kan; is a &GAP; package originally implemented in 1996 using the &GAP; 3 language, to compute induced actions of categories, when the first author was studying for a Ph.D. in Bangor.\n<P/>\nThis reduced version only provides functions for the computation of normal forms of representatives of double cosets of finitely presented groups.\n<P/>\n&Kan; became an accepted &GAP; package in May 2015.\n<P/>\nBug reports, suggestions and comments are, of course, welcome.\nPlease contact the last author at <Email>cdwensley.maths@btinternet.com</Email> or submit an issue at the GitHub repository <URL>https://github.com/gap-packages/kan/issues/</URL>.\n",
       "Acknowledgements": "This documentation was prepared using the &GAPDoc; <Cite Key='GAPDoc'/> and &AutoDoc; <Cite Key='AutoDoc'/> packages.<P/>\nThe procedure used to produce new releases uses the package <Package>GitHubPagesForGAP</Package> <Cite Key='GitHubPagesForGAP' /> and the package <Package>ReleaseTools</Package>.<P/>",
-      "Copyright": "&copyright; 1996-2023 Anne Heyworth and Chris Wensley<P/>\nThe &Kan; package is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\n"
+      "Copyright": "&copyright; 1996-2024 Anne Heyworth and Chris Wensley<P/>\nThe &Kan; package is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\n"
     }
   },
   "Autoload": false,
   "AvailabilityTest": null,
-  "BannerString": "Loading Kan 1.36 (computing with Kan extensions)\nby Anne Heyworth and Chris Wensley (https://github.com/cdwensley)\n-----------------------------------------------------------------------\n",
+  "BannerString": "Loading Kan 1.37 (computing with Kan extensions)\nby Anne Heyworth and Chris Wensley (https://github.com/cdwensley)\n-----------------------------------------------------------------------\n",
   "CommunicatedBy": "Leonard Soicher (QMUL)",
-  "Date": "16/08/2023",
+  "Date": "23/01/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.11.0",
@@ -50,7 +50,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "e17f62c4d595dd56a3ad5761e00a5c6ecaa91ee209152b0c68dff9bd7c466b05",
+  "PackageInfoSHA256": "3903b2bff48152c88e55418ae9b11b2c9a02e6a71784416b0f8ecfdc80be471e",
   "PackageInfoURL": "https://gap-packages.github.io/kan/PackageInfo.g",
   "PackageName": "kan",
   "PackageWWWHome": "https://gap-packages.github.io/kan/",
@@ -79,5 +79,5 @@
   "Status": "accepted",
   "Subtitle": "including double coset rewriting systems",
   "TestFile": "tst/testall.g",
-  "Version": "1.36"
+  "Version": "1.37"
 }
