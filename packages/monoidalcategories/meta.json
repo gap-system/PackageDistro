@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "c92c3e17062b59cc179e790e742734e55a409127cc0d0fd8bfedba76513d11a7",
-  "ArchiveURL": "https://github.com/homalg-project/CAP_project/releases/download/MonoidalCategories-2024.01-06/MonoidalCategories-2024.01-06",
+  "ArchiveSHA256": "5eb1e446b222e8c0dec45b47baf60fcea729d8c0350ef1d0225da13ce375cb3b",
+  "ArchiveURL": "https://github.com/homalg-project/CAP_project/releases/download/MonoidalCategories-2024.01-08/MonoidalCategories-2024.01-08",
   "AvailabilityTest": null,
-  "Date": "2024-01-22",
+  "Date": "2024-01-24",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12.1",
@@ -41,7 +41,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "6ca12896419fe83a51c1f0863022e2c6431fa1eb1da856b61e221d24973b8a4c",
+  "PackageInfoSHA256": "a620374d65649478e099546a0897ef7bd03b99539c8cf68656af3824c197a0ca",
   "PackageInfoURL": "https://homalg-project.github.io/CAP_project/MonoidalCategories/PackageInfo.g",
   "PackageName": "MonoidalCategories",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/MonoidalCategories",
@@ -110,5 +110,5 @@
   "Status": "deposited",
   "Subtitle": "Monoidal and monoidal (co)closed categories",
   "TestFile": "tst/testall.g",
-  "Version": "2024.01-06"
+  "Version": "2024.01-08"
 }
