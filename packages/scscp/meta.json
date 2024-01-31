@@ -2,15 +2,15 @@
   "AbstractHTML": "This package implements the <a href=\"https://www.openmath.org/standard/scscp/\">Symbolic Computation Software Composability Protocol</a> for the GAP system.",
   "AcceptDate": "08/2010",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "217286b65a5ac88f04fcfef7eff888403c4d67531710abca2976b7da3cbd3dee",
-  "ArchiveURL": "https://github.com/gap-packages/scscp/releases/download/v2.4.1/SCSCP-2.4.1",
+  "ArchiveSHA256": "f777279affbc44fb5437612d50d835478c4c037b204c4457e799a6087b79484f",
+  "ArchiveURL": "https://github.com/gap-packages/scscp/releases/download/v2.4.2/SCSCP-2.4.2",
   "Autoload": false,
   "AvailabilityTest": null,
   "BinaryFiles": [
     "demo/maple2gap.mw"
   ],
   "CommunicatedBy": "David Joyner (Annapolis)",
-  "Date": "25/02/2023",
+  "Date": "31/01/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10",
@@ -52,7 +52,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "b1daa6b7535bf1d546005a85c0f7dc7c9db8c75279d006651a4e5be94d009a1c",
+  "PackageInfoSHA256": "8c84bbc4fe473661cd37de758f67602c2766abc98a3691a7a9e9d8b26698cebf",
   "PackageInfoURL": "https://gap-packages.github.io/scscp/PackageInfo.g",
   "PackageName": "SCSCP",
   "PackageWWWHome": "https://gap-packages.github.io/scscp",
@@ -78,6 +78,13 @@
       "Place": "St Andrews",
       "PostalAddress": "School of Computer Science\nUniversity of St Andrews\nJack Cole Building, North Haugh,\nSt Andrews, Fife, KY16 9SX, Scotland",
       "WWWHome": "http://www.cs.st-and.ac.uk/~sal/"
+    },
+    {
+      "Email": "support@gap-system.org",
+      "FirstNames": "The",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "GAP Team"
     }
   ],
   "README_URL": "https://gap-packages.github.io/scscp/README.md",
@@ -88,5 +95,5 @@
   "Status": "accepted",
   "Subtitle": "Symbolic Computation Software Composability Protocol in GAP",
   "TestFile": "tst/offline.tst",
-  "Version": "2.4.1"
+  "Version": "2.4.2"
 }
