@@ -1,16 +1,16 @@
 {
   "AbstractHTML": "The GAP package <code>QDistRnd</code> \nimplements a probabilistic algorithm for finding the \nminimum distance of a quantum code linear over a finite\nfield GF(<var>q</var>).\n",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "2d10050e145d9dbe39a1dbee84323ba2f65e8fe63b071623fb0095bab2541bfb",
-  "ArchiveURL": "https://github.com/QEC-pages/QDistRnd/releases/download/v0.9.2/qdistrnd-0.9.2",
+  "ArchiveSHA256": "e9cd5d64b79a5fee4479ef77dfee02446bb6136f29f2206e5c00e36c2e9c1c19",
+  "ArchiveURL": "https://github.com/QEC-pages/QDistRnd/releases/download/v0.9.3/qdistrnd-0.9.3",
   "AutoDoc": {
     "TitlePage": {
       "Acknowledgements": "\n      We appreciate very much all past and future comments, suggestions and \n      contributions to this package and its documentation provided by &GAP;\n      users and developers.\n            ",
-      "Copyright": "\n      <Index>License</Index>                                    \n      &copyright; 2021 by Leonid P. Pryadko and Vadim A. Shabashov<P/>    \n      &QDistRnd; package is free software;  \n      you can redistribute it and/or modify it under the terms of the\n      <URL Text=\"GNU General Public License\">https://www.fsf.org/licenses/gpl.html</URL>\n      as published by the Free Software Foundation; either version 2 of the License,\n      or (at your option) any later version.\n      "
+      "Copyright": "\n      <Index>License</Index>                                    \n      &copyright; 2021--2024 by Leonid P. Pryadko and Vadim A. Shabashov<P/>    \n      &QDistRnd; package is free software;  \n      you can redistribute it and/or modify it under the terms of the\n      <URL Text=\"GNU General Public License\">https://www.fsf.org/licenses/gpl.html</URL>\n      as published by the Free Software Foundation; either version 2 of the License,\n      or (at your option) any later version.\n      "
     }
   },
   "AvailabilityTest": null,
-  "Date": "19/01/2024",
+  "Date": "06/02/2024",
   "Dependencies": {
     "GAP": "4.11",
     "NeededOtherPackages": [
@@ -49,7 +49,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "6a33ebe21566f0d3ee60f8c8eeaa9c057c4eb2ae7a46fc967d0310d3a29884a1",
+  "PackageInfoSHA256": "0b4b79be5a34523945e2d1b9f02c6d281018791caa30b3d013f53ae6a4d5aa07",
   "PackageInfoURL": "https://QEC-pages.github.io/QDistRnd/PackageInfo.g",
   "PackageName": "QDistRnd",
   "PackageWWWHome": "https://QEC-pages.github.io/QDistRnd",
@@ -62,7 +62,7 @@
       "IsMaintainer": true,
       "LastName": "Pryadko",
       "Place": "UCR",
-      "PostalAddress": "Leonid Pryadko\nDepartment of Physics &amp; Astronomy\nUniversity of California\nRiverside, CA 92521\nUSA",
+      "PostalAddress": "Department of Physics &amp; Astronomy\nUniversity of California\nRiverside, CA 92521\nUSA",
       "WWWHome": "http://faculty.ucr.edu/~leonid"
     },
     {
@@ -72,7 +72,7 @@
       "IsAuthor": true,
       "IsMaintainer": true,
       "LastName": "Shabashov",
-      "PostalAddress": "Vadim Shabashov\nThe Department of Physics &amp; Engineering\nITMO University\nSt. Petersburg, 197101\nRussia",
+      "PostalAddress": "The Department of Physics &amp; Engineering\nITMO University\nSt. Petersburg, 197101\nRussia",
       "WWWHome": "https://sites.google.com/view/vadim-shabashov/"
     },
     {
@@ -82,7 +82,7 @@
       "IsAuthor": false,
       "IsMaintainer": true,
       "LastName": "Kozin",
-      "PostalAddress": "Valerii Kozin\nThe Department of Physics &amp; Engineering\nITMO University\nSt. Petersburg, 197101\nRussia"
+      "PostalAddress": "Department of Physics, University of Basel\nKlingelbergstrasse 82, CH-4056 Basel,\nSwitzerland"
     }
   ],
   "README_URL": "https://QEC-pages.github.io/QDistRnd/README.md",
@@ -94,5 +94,5 @@
   "Subtitle": "Calculate the distance of a q-ary quantum stabilizer code",
   "SupportEmail": "leonid.pryadko@gmail.com",
   "TestFile": "tst/testall.g",
-  "Version": "0.9.2"
+  "Version": "0.9.3"
 }
