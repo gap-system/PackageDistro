@@ -2,11 +2,11 @@
   "AbstractHTML": "The <span class=\"pkgname\">XGAP</span> package allows to use graphics in GAP.",
   "AcceptDate": "07/1999",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "4c5157785d68b562a29d97c1e63ceaefd34e02500a3ff38f0ef90c94fd1ebfea",
-  "ArchiveURL": "https://github.com/gap-packages/xgap/releases/download/v4.31/xgap-4.31",
+  "ArchiveSHA256": "87d9a0d10f602f7a58a2b1d162b2c18ee2f648421bf0d7cfd60d4239944a336c",
+  "ArchiveURL": "https://github.com/gap-packages/xgap/releases/download/v4.32/xgap-4.32",
   "AvailabilityTest": null,
   "CommunicatedBy": "Gerhard Hiß (Aachen)",
-  "Date": "17/02/2022",
+  "Date": "08/02/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.7",
@@ -29,7 +29,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "4678ab7da4df43a833df4c96d925f5290e99e1145a2ebb27d4a83af4e735d721",
+  "PackageInfoSHA256": "3a094d47f67c0de717c8ff13cb1f8dfd30ce241d6a3d85bffa2ab706b978a24d",
   "PackageInfoURL": "https://gap-packages.github.io/xgap/PackageInfo.g",
   "PackageName": "XGAP",
   "PackageWWWHome": "https://gap-packages.github.io/xgap",
@@ -43,14 +43,14 @@
       "WWWHome": "http://celler.de/"
     },
     {
-      "Email": "horn@mathematik.uni-kl.de",
+      "Email": "mhorn@rptu.de",
       "FirstNames": "Max",
-      "Institution": "TU Kaiserslautern",
+      "Institution": "RPTU Kaiserslautern-Landau",
       "IsAuthor": false,
       "IsMaintainer": true,
       "LastName": "Horn",
       "Place": "Kaiserslautern, Germany",
-      "PostalAddress": "Fachbereich Mathematik\nTU Kaiserslautern\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
+      "PostalAddress": "Fachbereich Mathematik\nRPTU Kaiserslautern-Landau\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
       "WWWHome": "https://www.quendi.de/math"
     },
     {
@@ -71,5 +71,5 @@
   "Status": "accepted",
   "Subtitle": "a graphical user interface for GAP",
   "TestFile": "tst/testall.g",
-  "Version": "4.31"
+  "Version": "4.32"
 }
