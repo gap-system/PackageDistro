@@ -1,11 +1,11 @@
 {
   "AbstractHTML": "The <b>Digraphs</b> package is a <b>GAP</b> package for digraphs and multidigraphs.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "f466c16162324bc9ab128abefa272102c10ca503f196d0d6c0fa74f988630647",
-  "ArchiveURL": "https://github.com/digraphs/Digraphs/releases/download/v1.6.3/digraphs-1.6.3",
+  "ArchiveSHA256": "d173f337a89378949a1539883fb74cb30148f55893b0a3dc006974ac389fe848",
+  "ArchiveURL": "https://github.com/digraphs/Digraphs/releases/download/v1.7.0/digraphs-1.7.0",
   "Autoload": false,
   "AvailabilityTest": null,
-  "Date": "13/09/2023",
+  "Date": "14/02/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10.0",
@@ -54,7 +54,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "fc2c2cda3b179bbbe5897941dd9b6798ad469dc4a5cc3a54345f30816f4c154e",
+  "PackageInfoSHA256": "8ccd0a22a673cc296aea6fd7c7d788f9657e498e59148ad5ceaef85f79214225",
   "PackageInfoURL": "https://digraphs.github.io/Digraphs/PackageInfo.g",
   "PackageName": "Digraphs",
   "PackageWWWHome": "https://digraphs.github.io/Digraphs",
@@ -103,6 +103,12 @@
       "IsAuthor": false,
       "IsMaintainer": false,
       "LastName": "Campbell"
+    },
+    {
+      "FirstNames": "Raiyan",
+      "IsAuthor": false,
+      "IsMaintainer": false,
+      "LastName": "Chowdhury"
     },
     {
       "Email": "rc234@st-andrews.ac.uk",
@@ -245,6 +251,14 @@
       "WWWHome": "https://jdbm.me"
     },
     {
+      "Email": "michael@orlitzky.com",
+      "FirstNames": "Michael",
+      "IsAuthor": false,
+      "IsMaintainer": false,
+      "LastName": "Orlitzky",
+      "WWWHome": "https://michael.orlitzky.com/"
+    },
+    {
       "Email": "markus.pfeiffer@morphism.de",
       "FirstNames": "Markus",
       "IsAuthor": false,
@@ -360,5 +374,5 @@
   "Status": "deposited",
   "Subtitle": "Graphs, digraphs, and multidigraphs in GAP",
   "TestFile": "tst/teststandard.g",
-  "Version": "1.6.3"
+  "Version": "1.7.0"
 }
