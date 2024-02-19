@@ -2,11 +2,11 @@
   "AbstractHTML": "<span class=\"pkgname\">Wedderga</span> is the package to compute the simple components of the Wedderburn decomposition of semisimple group algebras of finite groups over finite fields and over subfields of finite cyclotomic extensions of the rationals. It also contains functions that produce the primitive central idempotents of semisimple group algebras and functions for computing Schur indices. Other functions of <span class=\"pkgname\">Wedderga</span> allow one to construct crossed products over a group with coefficients in an associative ring with identity and the multiplication determined by a given action and twisting.",
   "AcceptDate": "01/2008",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "bd94f3c7db8acbd6ac3c956c28a79e2a9fe5c9776073f9ed8a9206037419d56e",
-  "ArchiveURL": "https://github.com/gap-packages/wedderga/releases/download/v4.10.4/wedderga-4.10.4",
+  "ArchiveSHA256": "37f2c8772d13dc1a5a5acb88dbc065e41c21d4f4dd22b66f9c409b5353fbf250",
+  "ArchiveURL": "https://github.com/gap-packages/wedderga/releases/download/v4.10.5/wedderga-4.10.5",
   "AvailabilityTest": null,
   "CommunicatedBy": "Gerhard Hiss (Aachen)",
-  "Date": "18/05/2023",
+  "Date": "19/02/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.8",
@@ -48,7 +48,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "4fb7244387517ff719a12a57916662a25c0aed26817347f59d675e2ab976f965",
+  "PackageInfoSHA256": "ddf85951995c1c2c84ab3d7d0bb3f887c3721917293cd08e18c9ec9d5756f911",
   "PackageInfoURL": "https://gap-packages.github.io/wedderga/PackageInfo.g",
   "PackageName": "Wedderga",
   "PackageWWWHome": "https://gap-packages.github.io/wedderga",
@@ -156,5 +156,5 @@
   "Status": "accepted",
   "Subtitle": "Wedderburn Decomposition of Group Algebras",
   "TestFile": "tst/testall.g",
-  "Version": "4.10.4"
+  "Version": "4.10.5"
 }
