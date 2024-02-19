@@ -1,11 +1,11 @@
 {
   "AbstractHTML": "The <b>Digraphs</b> package is a <b>GAP</b> package for digraphs and multidigraphs.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "d173f337a89378949a1539883fb74cb30148f55893b0a3dc006974ac389fe848",
-  "ArchiveURL": "https://github.com/digraphs/Digraphs/releases/download/v1.7.0/digraphs-1.7.0",
+  "ArchiveSHA256": "58331be5192d23f0af617822cedd77b0f613e7db7aba345d6d9eec226c4b8514",
+  "ArchiveURL": "https://github.com/digraphs/Digraphs/releases/download/v1.7.1/digraphs-1.7.1",
   "Autoload": false,
   "AvailabilityTest": null,
-  "Date": "14/02/2024",
+  "Date": "19/02/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10.0",
@@ -54,7 +54,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "8ccd0a22a673cc296aea6fd7c7d788f9657e498e59148ad5ceaef85f79214225",
+  "PackageInfoSHA256": "66c321cf6d100399c489c232552fe706175d0e65a281463e06115de1aa597751",
   "PackageInfoURL": "https://digraphs.github.io/Digraphs/PackageInfo.g",
   "PackageName": "Digraphs",
   "PackageWWWHome": "https://digraphs.github.io/Digraphs",
@@ -364,6 +364,13 @@
       "Place": "St Andrews",
       "PostalAddress": "Jack Cole Building, North Haugh, St Andrews, Fife, KY16 9SX, Scotland",
       "WWWHome": "https://mct25.host.cs.st-andrews.ac.uk"
+    },
+    {
+      "Email": "f.zickgraf@dashdos.com",
+      "FirstNames": "Fabian",
+      "IsAuthor": false,
+      "IsMaintainer": false,
+      "LastName": "Zickgraf"
     }
   ],
   "README_URL": "https://digraphs.github.io/Digraphs/README.md",
@@ -374,5 +381,5 @@
   "Status": "deposited",
   "Subtitle": "Graphs, digraphs, and multidigraphs in GAP",
   "TestFile": "tst/teststandard.g",
-  "Version": "1.7.0"
+  "Version": "1.7.1"
 }
