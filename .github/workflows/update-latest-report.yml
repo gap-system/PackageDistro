@@ -30,13 +30,13 @@ jobs:
     name: "Upload report"
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: "Install package distribution tools"
         run: python -m pip install -r tools/requirements.txt
 
       - name: "Download report"
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: report-${{ github.event.inputs.which-gap || inputs.which-gap }}
           path: _report

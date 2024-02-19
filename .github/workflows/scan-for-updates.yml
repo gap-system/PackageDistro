@@ -28,12 +28,12 @@ jobs:
     outputs:
       matrix: ${{ steps.get-names.outputs.matrix }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       # Cache the package archives we download across runs of this job
       # to speed up things considerably
       - name: "Cache archives"
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: _archives
           key: archives-${{ hashFiles('packages/*/meta.json') }}
@@ -99,7 +99,7 @@ jobs:
             echo "matrix=$MATRIX" >> $GITHUB_OUTPUT
 
       - name: "Upload metadata as artifact for pull request jobs"
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: metadata
           path: modified.tar.gz
@@ -113,10 +113,10 @@ jobs:
       fail-fast: false
       matrix: ${{ fromJSON(needs.scan-for-updates.outputs.matrix) }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: "Download metadata from previous job"
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: metadata
 
