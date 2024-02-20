@@ -2,11 +2,11 @@
   "AbstractHTML": "This package provides functions for computing with formations of finite solvable groups.",
   "AcceptDate": "12/2000",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "49e13347e5f8cb292e6d1b7b2b399a162aeca6c388ab132750d5558536d61015",
-  "ArchiveURL": "https://github.com/gap-packages/format/releases/download/v1.4.3/format-1.4.3",
+  "ArchiveSHA256": "443804dc4cb11c23f496508378bce4940a9b748812e62c03ecacdc538afca477",
+  "ArchiveURL": "https://github.com/gap-packages/format/releases/download/v1.4.4/format-1.4.4",
   "AvailabilityTest": null,
   "CommunicatedBy": "Joachim Neubüser (Aachen)",
-  "Date": "28/01/2020",
+  "Date": "09/01/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.5",
@@ -34,7 +34,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "5b4c676b91cfdd68c96d63dbc46b36a0f437c5dabbbb2063dc9a5abe578ebcc5",
+  "PackageInfoSHA256": "93acf98bf900e8cde7ef8a29cefb0d89729ea321d9b74df22dfe2b39b69bc36b",
   "PackageInfoURL": "https://gap-packages.github.io/format/PackageInfo.g",
   "PackageName": "FORMAT",
   "PackageWWWHome": "https://gap-packages.github.io/format/",
@@ -58,7 +58,7 @@
       "IsMaintainer": false,
       "LastName": "Wright",
       "Place": "Eugene",
-      "WWWHome": "http://www.uoregon.edu/~wright"
+      "WWWHome": "https://pages.uoregon.edu/wright/"
     },
     {
       "Email": "support@gap-system.org",
@@ -76,5 +76,5 @@
   "Status": "accepted",
   "Subtitle": "Computing with formations of finite solvable groups.",
   "TestFile": "tst/testall.g",
-  "Version": "1.4.3"
+  "Version": "1.4.4"
 }
