@@ -1,0 +1,16 @@
+{
+  "current": "master/2024-02-21-02:40:39-8022e7de",
+  "last": "master/2024-02-21-00:52:10-8022e7de",
+  "total": 158,
+  "failure": 4,
+  "success": 150,
+  "skipped": 4,
+  "new": 0,
+  "removed": 0,
+  "failure_changed": 0,
+  "success_changed": 0,
+  "skipped_changed": 0,
+  "failure_same": 4,
+  "success_same": 150,
+  "skipped_same": 4
+}
