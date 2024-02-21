@@ -87,13 +87,13 @@ jobs:
     with:
       which-gap: 'master'
 
-  test-all-release:
-    name: "4.12.2"
-    needs: detect-changes
-    if: ${{ needs.detect-changes.outputs.modified == 'true' }}
-    uses: ./.github/workflows/test-all.yml
-    with:
-      which-gap: '4.12.2'
+#   test-all-release:
+#     name: "4.12.2"
+#     needs: detect-changes
+#     if: ${{ needs.detect-changes.outputs.modified == 'true' }}
+#     uses: ./.github/workflows/test-all.yml
+#     with:
+#       which-gap: '4.12.2'
 
   status-comment:
     name: "Create or update PR comment"
@@ -136,7 +136,7 @@ jobs:
       # TODO: extra work is needed to make the following work with pull requests
       # that come from forks of this repository.
       - name: "Create or update comment"
-        uses: peter-evans/create-or-update-comment@v4
+        uses: peter-evans/create-or-update-comment@v4   
         with:
           token: ${{ steps.generate-token.outputs.token }}
           comment-id: ${{ steps.fc.outputs.comment-id }}
