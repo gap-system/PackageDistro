@@ -2,18 +2,18 @@
   "AbstractHTML": "This package contains a definition of a structure for <span class='pkgname'>GAP</span> (package) documentation, based on XML. It also contains  conversion programs for producing text-, PDF- or HTML-versions of such documents, with hyperlinks if possible.",
   "AcceptDate": "10/2006",
   "ArchiveFormats": ".tar.bz2 .tar.gz -win.zip",
-  "ArchiveSHA256": "59cf2a880a51984f238aa04fb1a1bcdbdd78c55901d83dd4b33a2c5c0328794c",
-  "ArchiveURL": "http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/GAPDoc-1.6.6",
+  "ArchiveSHA256": "74287a47e7d5927c7f4bff08aa2349d8b2fa695f7fb87f829b5fcae4cba11d39",
+  "ArchiveURL": "https://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/GAPDoc-1.6.7",
   "AvailabilityTest": null,
   "CommunicatedBy": "Steve Linton (St Andrews)",
-  "Date": "01/07/2022",
+  "Date": "21/02/2024",
   "Dependencies": {
     "ExternalConditions": [
       "(La)TeX installation for converting documents to PDF",
       "BibTeX installation to produce unified labels for refs",
       "xmllint for optional XML validation"
     ],
-    "GAP": "4.7.6",
+    "GAP": "4.11.0",
     "NeededOtherPackages": [],
     "SuggestedOtherPackages": [
       [
@@ -58,10 +58,10 @@
       "SixFile": "example/manual.six"
     }
   ],
-  "PackageInfoSHA256": "37b07d6785ea9fb468037b7a605b711d527ea912882c80c98a5a92849e33d7c6",
-  "PackageInfoURL": "http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/PackageInfo.g",
+  "PackageInfoSHA256": "480cd51e1646d5c106d0cb99e77150e983ca70b9af8dd213492a73a9cde60c4a",
+  "PackageInfoURL": "https://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/PackageInfo.g",
   "PackageName": "GAPDoc",
-  "PackageWWWHome": "http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc",
+  "PackageWWWHome": "https://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc",
   "Persons": [
     {
       "Email": "Frank.Luebeck@Math.RWTH-Aachen.De",
@@ -72,7 +72,7 @@
       "LastName": "Lübeck",
       "Place": "Aachen",
       "PostalAddress": "Dr. Frank Lübeck\nLehrstuhl für Algebra und Zahlentheorie\nRWTH Aachen\nPontdriesch 14/16\n52062 Aachen\nGERMANY\n",
-      "WWWHome": "http://www.math.rwth-aachen.de/~Frank.Luebeck"
+      "WWWHome": "https://www.math.rwth-aachen.de/~Frank.Luebeck"
     },
     {
       "FirstNames": "Max",
@@ -81,7 +81,7 @@
       "LastName": "Neunhöffer"
     }
   ],
-  "README_URL": "http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/README.txt",
+  "README_URL": "https://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/README.txt",
   "SourceRepository": {
     "Type": "git",
     "URL": "https://github.com/frankluebeck/GAPDoc"
@@ -89,5 +89,5 @@
   "Status": "accepted",
   "Subtitle": "A Meta Package for GAP Documentation",
   "TestFile": "tst/test.tst",
-  "Version": "1.6.6"
+  "Version": "1.6.7"
 }
