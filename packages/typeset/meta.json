@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "0a706852645915f8ac328553de18a21a30f5501acc8c11e733a59eda1b8e3bb2",
-  "ArchiveURL": "https://github.com/gap-packages/typeset/releases/download/v1.2.0/typeset-1.2.0",
+  "ArchiveSHA256": "cbceb7c4ce567a5a1fb9e86c4a2f1890d52cb3a5f349a88e13af3e8bb7a708ef",
+  "ArchiveURL": "https://github.com/gap-packages/typeset/releases/download/v1.2.2/typeset-1.2.2",
   "AvailabilityTest": null,
-  "Date": "05/02/2024",
+  "Date": "01/03/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.11",
@@ -35,7 +35,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "9f6075ec07d15d309a49739e8a3ae375ef13518ecc87337e166e828e21d13180",
+  "PackageInfoSHA256": "7f0fde22856a5b965f69f56c1830433eaa3acbc0eeacc1fc43176dcc326a3dd4",
   "PackageInfoURL": "https://gap-packages.github.io/typeset/PackageInfo.g",
   "PackageName": "typeset",
   "PackageWWWHome": "https://gap-packages.github.io/typeset/",
@@ -56,8 +56,8 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/typeset"
   },
-  "Status": "dev",
+  "Status": "deposited",
   "Subtitle": "Automatic typesetting framework for common GAP objects, with LaTeX generation",
   "TestFile": "tst/testall.g",
-  "Version": "1.2.0"
+  "Version": "1.2.2"
 }
