@@ -1,8 +1,8 @@
 {
   "AbstractHTML": "\n          The Semigroups package is a GAP package for semigroups, and monoids.\n          There are particularly efficient methods for finitely presented\n          semigroups and monoids, and for semigroups and monoids consisting of\n          transformations, partial permutations, bipartitions, partitioned\n          binary relations, subsemigroups of regular Rees 0-matrix semigroups,\n          and matrices of various semirings including boolean matrices,\n          matrices over finite fields, and certain tropical matrices.\n\n          Semigroups contains efficient methods for creating semigroups,\n          monoids, and inverse semigroups and monoids, calculating their\n          Green's structure, ideals, size, elements, group of units, small\n          generating sets, testing membership, finding the inverses of a\n          regular element, factorizing elements over the generators, and so on.\n          It is possible to test if a semigroup satisfies a particular\n          property, such as if it is regular, simple, inverse, completely\n          regular, and a large number of further properties.\n\n          There are methods for finding presentations for a semigroup, the\n          congruences of a semigroup, the maximal subsemigroups of a finite\n          semigroup, smaller degree partial permutation representations, and\n          the character tables of inverse semigroups. There are functions for\n          producing pictures of the Green's structure of a semigroup, and for\n          drawing graphical representations of certain types of elements.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "e4ce0262777186fc5a337711c9d7803abfce292f3fe3f9b8e3b968bfd3720a0b",
-  "ArchiveURL": "https://github.com/semigroups/Semigroups/releases/download/v5.3.6/semigroups-5.3.6",
+  "ArchiveSHA256": "aee9864514d6910127e13de31bd2fd3744101b00ce6950ffdeca079cfa088216",
+  "ArchiveURL": "https://github.com/semigroups/Semigroups/releases/download/v5.3.7/semigroups-5.3.7",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "\n          The Semigroups package is a GAP package for semigroups, and monoids.\n          There are particularly efficient methods for finitely presented\n          semigroups and monoids, and for semigroups and monoids consisting of\n          transformations, partial permutations, bipartitions, partitioned\n          binary relations, subsemigroups of regular Rees 0-matrix semigroups,\n          and matrices of various semirings including boolean matrices,\n          matrices over finite fields, and certain tropical matrices.\n\n          Semigroups contains efficient methods for creating semigroups,\n          monoids, and inverse semigroups and monoids, calculating their\n          Green's structure, ideals, size, elements, group of units, small\n          generating sets, testing membership, finding the inverses of a\n          regular element, factorizing elements over the generators, and so on.\n          It is possible to test if a semigroup satisfies a particular\n          property, such as if it is regular, simple, inverse, completely\n          regular, and a large number of further properties.\n\n          There are methods for finding presentations for a semigroup, the\n          congruences of a semigroup, the maximal subsemigroups of a finite\n          semigroup, smaller degree partial permutation representations, and\n          the character tables of inverse semigroups. There are functions for\n          producing pictures of the Green's structure of a semigroup, and for\n          drawing graphical representations of certain types of elements.",
@@ -12,8 +12,8 @@
   },
   "Autoload": false,
   "AvailabilityTest": null,
-  "BannerString": "-----------------------------------------------------------------------------\nLoading  Semigroups 5.3.6\nby James Mitchell (https://jdbm.me)\nwith contributions by:\n     Marina Anagnostopoulou-Merkouri (https://github.com/marinaanagno),\n     Thomas Breuer (https://www.math.rwth-aachen.de/~Thomas.Breuer/),\n     Stuart Burrell (https://stuartburrell.github.io),\n     Reinis Cirpons (https://reinisc.id.lv/),\n     Tom Conti-Leslie (https://tomcontileslie.com/),\n     Joe Edwards (https://github.com/Joseph-Edwards),\n     Attila Egri-Nagy (http://www.egri-nagy.hu),\n     Luke Elliott (https://le27.github.io/Luke-Elliott/),\n     Fernando Flores Brito (https://github.com/ffloresbrito),\n     Nick Ham (https://n-ham.github.io),\n     Robert Hancock (https://sites.google.com/view/robert-hancock/),\n     Max Horn (https://www.quendi.de/math),\n     Christopher Jefferson (https://caj.host.cs.st-andrews.ac.uk/),\n     Julius Jonusas (http://julius.jonusas.work),\n     Chinmaya Nagpal,\n     Olexandr Konovalov (https://olexandr-konovalov.github.io/),\n     Artemis Konstantinidi,\n     Dima V. Pasechnik (http://users.ox.ac.uk/~coml0531/),\n     Markus Pfeiffer (https://www.morphism.de/~markusp/),\n     Christopher Russell,\n     Jack Schmidt (https://www.ms.uky.edu/~jack/),\n     Sergio Siccha,\n     Finn Smith (https://flsmith.github.io/),\n     Ben Spiers,\n     Nicolas Thiéry (https://nicolas.thiery.name/),\n     Maria Tsalakou (https://mariatsalakou.github.io/),\n     Chris Wensley,\n     Murray Whyte,\n     Wilf A. Wilson (https://wilf.me),\n     Michael Young (https://mtorpey.github.io/),\n and Fabian Zickgraf.\n-----------------------------------------------------------------------------\n",
-  "Date": "19/02/2024",
+  "BannerString": "-----------------------------------------------------------------------------\nLoading  Semigroups 5.3.7\nby James Mitchell (https://jdbm.me)\nwith contributions by:\n     Marina Anagnostopoulou-Merkouri (https://github.com/marinaanagno),\n     Thomas Breuer (https://www.math.rwth-aachen.de/~Thomas.Breuer/),\n     Stuart Burrell (https://stuartburrell.github.io),\n     Reinis Cirpons (https://reinisc.id.lv/),\n     Tom Conti-Leslie (https://tomcontileslie.com/),\n     Joseph Edwards (https://github.com/Joseph-Edwards),\n     Attila Egri-Nagy (http://www.egri-nagy.hu),\n     Luke Elliott (https://le27.github.io/Luke-Elliott/),\n     Fernando Flores Brito (https://github.com/ffloresbrito),\n     Nick Ham (https://n-ham.github.io),\n     Robert Hancock (https://sites.google.com/view/robert-hancock/),\n     Max Horn (https://www.quendi.de/math),\n     Christopher Jefferson (https://caj.host.cs.st-andrews.ac.uk/),\n     Julius Jonusas (http://julius.jonusas.work),\n     Chinmaya Nagpal,\n     Olexandr Konovalov (https://olexandr-konovalov.github.io/),\n     Artemis Konstantinidi,\n     Dima V. Pasechnik (http://users.ox.ac.uk/~coml0531/),\n     Markus Pfeiffer (https://www.morphism.de/~markusp/),\n     Christopher Russell,\n     Jack Schmidt (https://www.ms.uky.edu/~jack/),\n     Sergio Siccha,\n     Finn Smith (https://flsmith.github.io/),\n     Ben Spiers,\n     Nicolas Thiéry (https://nicolas.thiery.name/),\n     Maria Tsalakou (https://mariatsalakou.github.io/),\n     Chris Wensley,\n     Murray Whyte,\n     Wilf A. Wilson (https://wilf.me),\n     Michael Young (https://mtorpey.github.io/),\n and Fabian Zickgraf.\n-----------------------------------------------------------------------------\n",
+  "Date": "11/03/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.12.0",
@@ -79,7 +79,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "280f7f7a5ac7315b34f9a9e5bda5a6743d2908dd7b5d245f68f028d74dc94d77",
+  "PackageInfoSHA256": "168fbfd1ad8c5c9ace5abf2f3cfbf2f835166b002f30a6966b313ac23cc98574",
   "PackageInfoURL": "https://semigroups.github.io/Semigroups/PackageInfo.g",
   "PackageName": "Semigroups",
   "PackageWWWHome": "https://semigroups.github.io/Semigroups",
@@ -142,8 +142,8 @@
       "WWWHome": "https://tomcontileslie.com/"
     },
     {
-      "Email": "je53@st-andrews.ac.uk",
-      "FirstNames": "Joe",
+      "Email": "jde1@st-andrews.ac.uk",
+      "FirstNames": "Joseph",
       "Institution": "University of St Andrews",
       "IsAuthor": true,
       "IsMaintainer": false,
@@ -392,5 +392,5 @@
   "Status": "deposited",
   "Subtitle": "A package for semigroups and monoids",
   "TestFile": "tst/teststandard.g",
-  "Version": "5.3.6"
+  "Version": "5.3.7"
 }
