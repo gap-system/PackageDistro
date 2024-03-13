@@ -1,0 +1,49 @@
+{
+  "AbstractHTML": "",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSHA256": "d0fbdfecfbbd0106e715ac56cbdb6b745bdaafb9798794ca6e605a961e73d5a0",
+  "ArchiveURL": "https://github.com/gap-packages/LINS/releases/download/v0.7/LINS-0.7",
+  "AvailabilityTest": null,
+  "Date": "13/03/2024",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">= 4.12",
+    "NeededOtherPackages": [],
+    "SuggestedOtherPackages": []
+  },
+  "IssueTrackerURL": "https://github.com/gap-packages/LINS/issues",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "LINS",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "provides an algorithm for computing the normal subgroups of a finitely presented group up to some given index bound.",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSHA256": "6039d412c6e0235c8a4ad13d27fa20a6f5681833dcc46cbc3193f3d9711781ed",
+  "PackageInfoURL": "https://gap-packages.github.io/LINS/PackageInfo.g",
+  "PackageName": "LINS",
+  "PackageWWWHome": "https://gap-packages.github.io/LINS/",
+  "Persons": [
+    {
+      "Email": "friedrich.rober@rwth-aachen.de",
+      "FirstNames": "Friedrich",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Rober"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/LINS/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/LINS"
+  },
+  "Status": "dev",
+  "Subtitle": "provides an algorithm for computing the normal subgroups of a finitely presented group up to some given index bound.",
+  "TestFile": "tst/testall.g",
+  "Version": "0.7"
+}
