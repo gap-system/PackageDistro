@@ -93,11 +93,6 @@ def validate_tarball(filename: str) -> str:
 def validate_package(archive_fname: str, pkgdir: str, pkg_name: str) -> None:
     pkg_json = metadata(pkg_name)
 
-    # validate Status
-    status = pkg_json["Status"]
-    if not status in ["accepted", "deposited"]:
-        warning(f"{pkg_name}: Status is {status}, should be 'accepted' or 'deposited'")
-
     # validate PackageInfoURL (download_to_memory raises an exception if download fails)
     data = download_to_memory(pkg_json["PackageInfoURL"])
     # We deliberately do not compare the SHA256 of `data` against PackageInfoSHA256
