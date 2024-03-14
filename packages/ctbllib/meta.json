@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "The package contains the <span class=\"pkgname\">GAP</span> Character Table Library.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "52f51ca36e35f5013c432348fa6876b9d440461e46fecc7db5e907242377aa89",
-  "ArchiveURL": "https://www.math.rwth-aachen.de/~Thomas.Breuer/ctbllib/ctbllib-1.3.8",
+  "ArchiveSHA256": "0e676abee52f460f6e4cc24d2d42aa6e75839ce69596f1786e4eece33fb9187f",
+  "ArchiveURL": "https://www.math.rwth-aachen.de/~Thomas.Breuer/ctbllib/ctbllib-1.3.9",
   "AvailabilityTest": null,
-  "Date": "13/03/2024",
+  "Date": "14/03/2024",
   "Dates_all": [
     [
       "21/01/2002",
@@ -73,6 +73,10 @@
     [
       "13/03/2024",
       "1.3.8"
+    ],
+    [
+      "14/03/2024",
+      "1.3.9"
     ]
   ],
   "Dependencies": {
@@ -213,7 +217,7 @@
       "SixFile": "doc2/manual.six"
     }
   ],
-  "PackageInfoSHA256": "20bb0d2ae0e4f2f49b89381da30f7add2dc90eff973511bc85fafa3e2cf5fb8a",
+  "PackageInfoSHA256": "340f1a4e311409f24df247a4dbc0498b85ad3cad74f838a781d41b67d014687b",
   "PackageInfoURL": "https://www.math.rwth-aachen.de/~Thomas.Breuer/ctbllib/PackageInfo.g",
   "PackageName": "CTblLib",
   "PackageWWWHome": "https://www.math.rwth-aachen.de/~Thomas.Breuer/ctbllib",
@@ -234,5 +238,5 @@
   "Status": "deposited",
   "Subtitle": "The GAP Character Table Library",
   "TestFile": "tst/testauto.g",
-  "Version": "1.3.8"
+  "Version": "1.3.9"
 }
