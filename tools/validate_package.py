@@ -127,7 +127,7 @@ def main(pkgs: List[str]) -> None:
                 pkgdir = join(tempdir, validate_tarball(archive_fname))
                 shutil.unpack_archive(archive_fname, tempdir)
                 validate_package(archive_fname, pkgdir, pkg_name)
-                result, _ = utils.gap_exec(
+                result = utils.gap_exec2(
                     f'ValidatePackagesArchive("{pkgdir}", "{pkg_name}");',
                     args=f"{dir_of_this_file}/validate_package.g",
                 )

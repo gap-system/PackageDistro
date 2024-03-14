@@ -154,3 +154,13 @@ def gap_exec(commands: str, args: str = "") -> Tuple[int, bytes]:
     ) as GAP:
         out, err = GAP.communicate(input=commands.encode("utf-8"))
         return GAP.returncode, out
+
+
+def gap_exec2(commands: str, args: str = "") -> Tuple[int, bytes]:
+    with subprocess.Popen(
+        "gap -A -b --quitonbreak -q " + args,
+        stdin=subprocess.PIPE,
+        shell=True,
+    ) as GAP:
+        GAP.communicate(input=commands.encode("utf-8"))
+        return GAP.returncode
