@@ -1,21 +1,21 @@
 {
-  "AbstractHTML": "<span class=\"pkgname\">HeLP</span> is a package to compute constraints on partial augmentations of torsion units in integral group rings using a method developed by Luthar, Passi and Hertweck.  The package can be employed to verify the Zassenhaus Conjecture and the Prime Graph Question for finite groups, once characters are known. It uses an interface to the software package 4ti2 to solve integral linear inequalities.",
+  "AbstractHTML": "<span class=\"pkgname\">HeLP</span> is a package to compute constraints on partial augmentations of torsion units in integral group rings using a method developed by Luthar, Passi and Hertweck.  The package can be employed to verify the Zassenhaus Conjecture, the Prime Graph Question, the Spectrum Problem and the Kimmerle Problem for finite groups, once characters are known. It uses an interface to the software package 4ti2 to solve integral linear inequalities or alternatively Normaliz.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "f650a53ac7840a7cb6e7a3616bc25ae0459b281bbf87426898567209245e26a8",
-  "ArchiveURL": "https://github.com/gap-packages/HeLP/releases/download/v3.5/HeLP-3.5",
+  "ArchiveSHA256": "49a8533b98030a1feea6c8e02601e5219a51a37c85bebd06d3cdd2ca951b7f86",
+  "ArchiveURL": "https://github.com/gap-packages/HeLP/releases/download/v4.0/HeLP-4.0",
   "AutoDoc": {
     "TitlePage": {
       "Acknowledgements": "The authors are grateful to Sebastian Gutsche, Christof Söger and Max Horn for endowing GAP\nwith a 4ti2-Interface and a normaliz-Interface.\nWe also would like to thank Gutsche and Söger for many very helpful discussions.\nWe also want to give credits to the developers of the softwares 4ti2 and normaliz.\nThanks go to David Avis for writing lrslib and answering our questions about it.\nWe moreover thank Wolfgang Kimmerle for introducing us to the beautiful world of group rings.\nThe development of this package was partially supported by the Research Foundation Flanders \n(FWO - Vlaanderen) and the DFG priority program SPP 1489 Algorithmic and Experimental Methods in Algebra, Geometry, and Number Theory.\n",
-      "Copyright": "&copyright; 2017 by Andreas Bächle and Leo Margolis<P/>\n\nThis package is free software and may be distributed under the terms and conditions of the\nGNU Public License Version 2, or (at your option) any later version.\n"
+      "Copyright": "&copyright; 2017 by Andreas Bächle and Leo Margolis<P/>\n\nThis package is free software and may be distributed under the terms and conditions of the\nGNU Public License Version 2.\n"
     }
   },
   "AvailabilityTest": null,
-  "Date": "20/12/2019",
+  "Date": "29/02/2024",
   "Dependencies": {
     "ExternalConditions": [
       [
         "zsolve",
-        "http://www.4ti2.de"
+        "https://4ti2.github.io"
       ]
     ],
     "GAP": ">=4.8.2",
@@ -25,23 +25,20 @@
         ">=4.2"
       ],
       [
-        "4ti2Interface",
-        ">= 2015.04.29"
-      ],
-      [
         "CTblLib",
         ">= 1.2.2"
-      ],
+      ]
+    ],
+    "SuggestedOtherPackages": [
       [
-        "atlasrep",
-        ">= 1.5"
+        "4ti2Interface",
+        ">= 2015.04.29"
       ],
       [
         "NormalizInterface",
         ">= 0.9.6"
       ]
-    ],
-    "SuggestedOtherPackages": []
+    ]
   },
   "IssueTrackerURL": "https://github.com/gap-packages/HeLP/issues",
   "Keywords": [
@@ -49,7 +46,9 @@
     "torsion units",
     "rational conjugacy",
     "Zassenhaus Conjecture",
-    "Prime Graph Question"
+    "Prime Graph Question",
+    "Spectrum Problem",
+    "Kimmerle Problem"
   ],
   "License": "GPL-2.0-or-later",
   "PackageDoc": [
@@ -59,38 +58,37 @@
       ],
       "Autoload": false,
       "BookName": "HeLP",
-      "HTMLStart": "doc/chap0.html",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "Hertweck-Luthar-Passi method.",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "f9948bddfd40eb2a1fd2ac9f7b760f488dc2ee68e52adf04353fc88b8c7a9d93",
+  "PackageInfoSHA256": "a53a6b3417f276bc1afb2529a70503a268a6a08c54ddde94a56abd9ebcf03a4c",
   "PackageInfoURL": "https://gap-packages.github.io/HeLP/PackageInfo.g",
   "PackageName": "HeLP",
   "PackageWWWHome": "https://gap-packages.github.io/HeLP",
   "Persons": [
     {
-      "Email": "ABachle@vub.ac.be",
+      "Email": "ABachle@gmx.net",
       "FirstNames": "Andreas",
       "Institution": "Vrije Universiteit Brussel",
       "IsAuthor": true,
       "IsMaintainer": true,
       "LastName": "Bächle",
       "Place": "Brussels",
-      "PostalAddress": "Vrije Universiteit Brussel\nVakgroep Wiskunde\nPleinlaan 2\n1050 Brussels\nBelgium",
-      "WWWHome": "http://homepages.vub.ac.be/~abachle/"
+      "PostalAddress": "Vrije Universiteit Brussel\nVakgroep Wiskunde\nPleinlaan 2\n1050 Brussels\nBelgium"
     },
     {
-      "Email": "Leo.Margolis@vub.be",
+      "Email": "Leo.Margolis@uam.es",
       "FirstNames": "Leo",
-      "Institution": "Vrije Universiteit Brussel",
+      "Institution": "Universidad Autonoma de Madrid",
       "IsAuthor": true,
       "IsMaintainer": true,
       "LastName": "Margolis",
-      "Place": "Brussels",
-      "PostalAddress": "Vrije Universiteit Brussel\nVakgroep Wiskunde\nPleinlaan 2\n1050 Brussels\nBelgium",
-      "WWWHome": "http://homepages.vub.ac.be/~lmargoli/"
+      "Place": "Madrid",
+      "PostalAddress": "Universidad Autonoma de Madrid\nCampus Cantoblanco\nFacultad de Ciencias\nDepartamento de Matematicas\n28049 Madrid\nSpain",
+      "WWWHome": "https://margollo.github.io"
     }
   ],
   "README_URL": "https://gap-packages.github.io/HeLP/README",
@@ -101,5 +99,5 @@
   "Status": "deposited",
   "Subtitle": "Hertweck-Luthar-Passi method.",
   "TestFile": "tst/testall.g",
-  "Version": "3.5"
+  "Version": "4.0"
 }
