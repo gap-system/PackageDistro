@@ -2,17 +2,17 @@
   "AbstractHTML": "This package can be used for work with sesquilinear and quadratic forms on finite vector spaces; objects that are used to describe polar spaces and classical groups.",
   "AcceptDate": "03/2009",
   "ArchiveFormats": ".tar.gz .zip .tar.bz2",
-  "ArchiveSHA256": "0a6ba64420b61101e91d5fe9481b358f210ee96193364c81e83704ec73809b5f",
-  "ArchiveURL": "https://github.com/gap-packages/forms/releases/download/v1.2.9/forms-1.2.9",
+  "ArchiveSHA256": "ccda22ea4c367e926b1d9c21d421991d787694a324a2ff190945ce4babed5223",
+  "ArchiveURL": "https://github.com/gap-packages/forms/releases/download/v1.2.11/forms-1.2.11",
   "AutoDoc": {
     "TitlePage": {
-      "Copyright": "&copyright; 2015-2022 by the authors<P/>\n\nThis package may be distributed under the terms and conditions of the GNU Public License Version 2 or (at your option) any later version.\n"
+      "Copyright": "&copyright; 2015-2024 by the authors<P/>\n\nThis package may be distributed under the terms and conditions of the GNU Public License Version 2 or (at your option) any later version.\n"
     }
   },
   "AvailabilityTest": null,
-  "BannerString": "---------------------------------------------------------------------\nLoading 'Forms' 1.2.9 (14/10/2022)\nby John Bamberg (http://school.maths.uwa.edu.au/~bamberg/)\n   Jan De Beule (http://www.debeule.eu)\nFor help, type: ?Forms \n---------------------------------------------------------------------\n",
+  "BannerString": "---------------------------------------------------------------------\nLoading 'Forms' 1.2.11 (05/04/2024)\nby John Bamberg (http://school.maths.uwa.edu.au/~bamberg/)\n   Jan De Beule (http://www.debeule.eu)\nFor help, type: ?Forms \n---------------------------------------------------------------------\n",
   "CommunicatedBy": "Leonard Soicher (London)",
-  "Date": "14/10/2022",
+  "Date": "05/04/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.9",
@@ -38,7 +38,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "616eae04ef47bf03e02d0e8785a8ff420ca88813a46164765c6c397b00cac369",
+  "PackageInfoSHA256": "9142b26cc6adbe68719a960df45384faa001dd6cb07c48d12a3aaeffe4030fa8",
   "PackageInfoURL": "https://gap-packages.github.io/forms/PackageInfo.g",
   "PackageName": "Forms",
   "PackageWWWHome": "https://gap-packages.github.io/forms",
@@ -66,14 +66,14 @@
       "WWWHome": "http://www.debeule.eu"
     },
     {
-      "Email": "horn@mathematik.uni-kl.de",
+      "Email": "mhorn@rptu.de",
       "FirstNames": "Max",
-      "Institution": "TU Kaiserslautern",
+      "Institution": "RPTU Kaiserslautern-Landau",
       "IsAuthor": false,
       "IsMaintainer": true,
       "LastName": "Horn",
       "Place": "Kaiserslautern, Germany",
-      "PostalAddress": "Fachbereich Mathematik\nTU Kaiserslautern\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
+      "PostalAddress": "Fachbereich Mathematik\nRPTU Kaiserslautern-Landau\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
       "WWWHome": "https://www.quendi.de/math"
     }
   ],
@@ -85,5 +85,5 @@
   "Status": "accepted",
   "Subtitle": "Sesquilinear and Quadratic",
   "TestFile": "tst/testall.g",
-  "Version": "1.2.9"
+  "Version": "1.2.11"
 }
