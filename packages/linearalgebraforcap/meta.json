@@ -1,13 +1,13 @@
 {
   "AbstractHTML": "<span class=\"pkgname\">LinearAlgebraForCAP</span> provides a skeletal model of the category of finite dimensional vector spaces over a computable field.",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "e76f4bb9cc6ce663f68282b8a8635d93cee0ac54baa99a0a044b9a9ed79f46f4",
-  "ArchiveURL": "https://github.com/homalg-project/CAP_project/releases/download/LinearAlgebraForCAP-2024.02-02/LinearAlgebraForCAP-2024.02-02",
+  "ArchiveSHA256": "e2b634b9048ac2d502f6e0d38b917802580b1d917b77c85cb8f2ab18283293f5",
+  "ArchiveURL": "https://github.com/homalg-project/CAP_project/releases/download/LinearAlgebraForCAP-2024.04-02/LinearAlgebraForCAP-2024.04-02",
   "AvailabilityTest": null,
-  "Date": "2024-02-07",
+  "Date": "2024-04-08",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">= 4.12.1",
+    "GAP": ">= 4.13.0",
     "NeededOtherPackages": [
       [
         "ToolsForHomalg",
@@ -29,14 +29,19 @@
         "MonoidalCategories",
         ">= 2024.02-02"
       ]
-    ],
-    "SuggestedOtherPackages": [
-      [
-        "FreydCategoriesForCAP",
-        ">= 2024.01-04"
-      ]
     ]
   },
+  "Extensions": [
+    {
+      "filename": "gap/MatrixCategoryAsCategoryOfRows.gi",
+      "needed": [
+        [
+          "FreydCategoriesForCAP",
+          ">= 2024.01-04"
+        ]
+      ]
+    }
+  ],
   "IssueTrackerURL": "https://github.com/homalg-project/CAP_project/issues",
   "License": "GPL-2.0-or-later",
   "PackageDoc": [
@@ -51,7 +56,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "03ffdb6f2c07dd99af2af477dcbb574968576d6ca639e9b67208bba3ae0dfea2",
+  "PackageInfoSHA256": "4262bb3fb41095862d46e3b083698411ddc4ce23f302e1e68832ca483337f613",
   "PackageInfoURL": "https://homalg-project.github.io/CAP_project/LinearAlgebraForCAP/PackageInfo.g",
   "PackageName": "LinearAlgebraForCAP",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/LinearAlgebraForCAP",
@@ -98,5 +103,5 @@
   "Status": "deposited",
   "Subtitle": "Category of Matrices over a Field for CAP",
   "TestFile": "tst/testall.g",
-  "Version": "2024.02-02"
+  "Version": "2024.04-02"
 }
