@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "94c9f9fcf0631d053f4d297c9d7cb42f7d704e1897ee5f48bfb183715b6c8a1a",
-  "ArchiveURL": "https://github.com/gap-packages/json/releases/download/v2.2.0/json-2.2.0",
+  "ArchiveSHA256": "4fea71cb3f494f9e9e5c710ad6b662d0cbbcbfbef3bf01209104bd690ca44092",
+  "ArchiveURL": "https://github.com/gap-packages/json/releases/download/v2.2.1/json-2.2.1",
   "AvailabilityTest": null,
-  "Date": "22/01/2024",
+  "Date": "24/04/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12",
@@ -30,7 +30,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "578dc8f936e5f9ba5a63a0fe78e1f1fb2dc58e4cd298e210e1a301adceab2923",
+  "PackageInfoSHA256": "ed1bd164583f2a221c19e68b84377de603f105db4a2e8603ce905999d791b56f",
   "PackageInfoURL": "https://gap-packages.github.io/json/PackageInfo.g",
   "PackageName": "json",
   "PackageWWWHome": "https://gap-packages.github.io/json/",
@@ -44,7 +44,7 @@
       "LastName": "Jefferson",
       "Place": "St Andrews",
       "PostalAddress": "St Andrews\nScotland\nUK",
-      "WWWHome": "http://caj.host.cs.st-andrews.ac.uk/"
+      "WWWHome": "https://heather.cafe/"
     }
   ],
   "README_URL": "https://gap-packages.github.io/json/README",
@@ -55,5 +55,5 @@
   "Status": "deposited",
   "Subtitle": "Reading and Writing JSON",
   "TestFile": "tst/testall.g",
-  "Version": "2.2.0"
+  "Version": "2.2.1"
 }
