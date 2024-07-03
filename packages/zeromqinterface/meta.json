@@ -1,8 +1,8 @@
 {
   "AbstractHTML": "",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "db39cb43e639c6f62bc9391b62a73e4050ebe71b1ca96879f4a8bdbd080b4b77",
-  "ArchiveURL": "https://github.com/gap-packages/ZeroMQInterface/releases/download/v0.14/ZeroMQInterface-0.14",
+  "ArchiveSHA256": "85d41e243ade6f868ca5fcb2b55619437b66248a194404d01fa693b3cc21945c",
+  "ArchiveURL": "https://github.com/gap-packages/ZeroMQInterface/releases/download/v0.15/ZeroMQInterface-0.15",
   "AutoDoc": {
     "TitlePage": {
       "Acknowledgements": "We appreciate very much all past and future comments, suggestions and \ncontributions to this package and its documentation provided by &GAP; \nusers and developers.",
@@ -10,7 +10,7 @@
     }
   },
   "AvailabilityTest": null,
-  "Date": "29/07/2022",
+  "Date": "01/07/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.9",
@@ -41,7 +41,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "c39d003b528c8656ad20fe090f5d9a6cae299ca3a74f5e7f3079e0c7ded7d12d",
+  "PackageInfoSHA256": "0cbcde9ab6fd8fa58d448de29730bde5240a30a8ae25bd28d13b2aac156a1b7e",
   "PackageInfoURL": "https://gap-packages.github.io/ZeroMQInterface/PackageInfo.g",
   "PackageName": "ZeroMQInterface",
   "PackageWWWHome": "https://gap-packages.github.io/ZeroMQInterface/",
@@ -84,5 +84,5 @@
   "Status": "deposited",
   "Subtitle": "ZeroMQ bindings for GAP",
   "TestFile": "tst/testall.g",
-  "Version": "0.14"
+  "Version": "0.15"
 }
