@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "<span class=\"pkgname\">CAP</span> (Categories, Algorithms, Programming) is a package for category theory.\nIt facilitates the implementation of specific instances of categories\nand provides a language for writing generic categorical algorithms.",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "5f5b4abdc01c4e88352ef41ec086eb7917f5c4555bf25fa08ad6066d233e20d8",
-  "ArchiveURL": "https://github.com/homalg-project/CAP_project/releases/download/CAP-2024.06-05/CAP-2024.06-05",
+  "ArchiveSHA256": "6586b174998c2b399cd7dfadee953d6e9d5880ac84b0c0f820af3dd28681f1a2",
+  "ArchiveURL": "https://github.com/homalg-project/CAP_project/releases/download/CAP-2024.07-01/CAP-2024.07-01",
   "AvailabilityTest": null,
-  "Date": "2024-06-30",
+  "Date": "2024-07-03",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.13.0",
@@ -39,7 +39,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "b1fbcebb34348a740a245801842be10100bfba65495406faddd2bbc2f69d0aee",
+  "PackageInfoSHA256": "acf65177d604768e86e6f7ce27c547424d4f305278a695e993f2abe0fc9132bd",
   "PackageInfoURL": "https://homalg-project.github.io/CAP_project/CAP/PackageInfo.g",
   "PackageName": "CAP",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/CAP",
@@ -97,5 +97,5 @@
   "Status": "deposited",
   "Subtitle": "Categories, Algorithms, Programming",
   "TestFile": "tst/testall.g",
-  "Version": "2024.06-05"
+  "Version": "2024.07-01"
 }
