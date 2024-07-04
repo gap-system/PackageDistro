@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "Tools for computing with elements of unipotent subgroups of Chevalley groups.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "8e055d97c7bf0ce1c177a489f6783e4de9253e593017416c96c6fc5870dd0e47",
-  "ArchiveURL": "https://github.com/gap-packages/unipot/releases/download/v1.5/unipot-1.5",
+  "ArchiveSHA256": "2028808e74fd67c9ff88442b701a7e9946b4a5cde6f718259efc98f2c9d44e1c",
+  "ArchiveURL": "https://github.com/gap-packages/unipot/releases/download/v1.6/unipot-1.6",
   "AvailabilityTest": null,
-  "Date": "22/02/2022",
+  "Date": "04/07/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.7",
@@ -32,7 +32,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "3d87ed1079fd8488b91680b8485180d68e08e54352981a318213440c005c7e74",
+  "PackageInfoSHA256": "e62989f25f8e01cc336d2414c9a3a857532d875aa7ae107faa499f6a4b7e51ae",
   "PackageInfoURL": "https://gap-packages.github.io/unipot/PackageInfo.g",
   "PackageName": "Unipot",
   "PackageWWWHome": "https://gap-packages.github.io/unipot/",
@@ -43,17 +43,17 @@
       "IsAuthor": true,
       "IsMaintainer": false,
       "LastName": "Haller",
-      "WWWHome": "http://www.sergei-haller.de"
+      "WWWHome": "https://www.sergei-haller.de"
     },
     {
-      "Email": "horn@mathematik.uni-kl.de",
+      "Email": "mhorn@rptu.de",
       "FirstNames": "Max",
-      "Institution": "TU Kaiserslautern",
+      "Institution": "RPTU Kaiserslautern-Landau",
       "IsAuthor": false,
       "IsMaintainer": true,
       "LastName": "Horn",
       "Place": "Kaiserslautern, Germany",
-      "PostalAddress": "Fachbereich Mathematik\nTU Kaiserslautern\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
+      "PostalAddress": "Fachbereich Mathematik\nRPTU Kaiserslautern-Landau\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
       "WWWHome": "https://www.quendi.de/math"
     }
   ],
@@ -65,5 +65,5 @@
   "Status": "deposited",
   "Subtitle": "Computing with elements of unipotent subgroups of Chevalley groups",
   "TestFile": "tst/testall.g",
-  "Version": "1.5"
+  "Version": "1.6"
 }
