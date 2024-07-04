@@ -2,11 +2,11 @@
   "AbstractHTML": "The <span class=\"smallgrp\">SmallGrp</span> package provides the library of groups of certain \"small\" orders. The groups are sorted by their orders and they are listed up to isomorphism; that is, for each of the available orders a complete and irredundant list of isomorphism type representatives of groups is given.",
   "AcceptDate": "02/2002",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "f1b1e0fd06f6800dbec417fdeb2bed58410934d15031fbd8b3e58589d051faf0",
-  "ArchiveURL": "https://github.com/gap-packages/SmallGrp/releases/download/v1.5.3/SmallGrp-1.5.3",
+  "ArchiveSHA256": "dea2172de9aa89a128aa8846192b7144df03cf54b12459241db7b5fbb7091905",
+  "ArchiveURL": "https://github.com/gap-packages/SmallGrp/releases/download/v1.5.4/SmallGrp-1.5.4",
   "AvailabilityTest": null,
   "CommunicatedBy": "Mike Newman (Canberra)",
-  "Date": "16/05/2023",
+  "Date": "04/07/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.9",
@@ -32,7 +32,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "af9cbf1a116abf29bca5d5f0e623a555e625cdef8710e357a3228783a9988a3e",
+  "PackageInfoSHA256": "a243807cb009faa7daba0864492d6fdbb4121aec70c87c3b4d783da7d3f52451",
   "PackageInfoURL": "https://gap-packages.github.io/smallgrp/PackageInfo.g",
   "PackageName": "SmallGrp",
   "PackageWWWHome": "https://gap-packages.github.io/smallgrp/",
@@ -85,5 +85,5 @@
   "Status": "accepted",
   "Subtitle": "The GAP Small Groups Library",
   "TestFile": "tst/testall.g",
-  "Version": "1.5.3"
+  "Version": "1.5.4"
 }
