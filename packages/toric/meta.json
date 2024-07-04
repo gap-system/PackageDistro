@@ -2,18 +2,18 @@
   "AbstractHTML": "<span class=\"pkgname\">toric</span> is a <span class=\"pkgname\">GAP</span>package for computing with toric varieties.",
   "AcceptDate": "10/2005",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "8eb65c64bc38038957e9552fc8f409023407a0ed079884fd484fffe8d61e03de",
-  "ArchiveURL": "https://github.com/gap-packages/toric/releases/download/v1.9.5/Toric-1.9.5",
+  "ArchiveSHA256": "3cc7fd0da3c258371f41b15718212ade864d1ddc7dcc28a0b3e82cf8316db4bd",
+  "ArchiveURL": "https://github.com/gap-packages/toric/releases/download/v1.9.6/Toric-1.9.6",
   "AutoDoc": {
     "TitlePage": {
-      "Acknowledgements": "\nThe code for the <Package>toric</Package> package was written during the\nsummer of 2002. \nIt was put into &GAP; package format in the summer of 2004.\n<P/>\n    <Package>toric</Package> is free software; you can redistribute it and/or modify\n    it under the terms of the MIT License.\n<P/>\n    <Package>toric</Package> is distributed in the hope that it will be useful,\n    but WITHOUT ANY WARRANTY; without even the implied warranty of\n    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n    MIT License for more details.\n<P/>\n\n<P/>This documentation was prepared with the \n<Package>GAPDoc</Package> package of Frank Lübeck and Max Neunhöffer. \nMoreover, a bug in toric 1.8 was fixed with the help of Max Horn, and this\ndocumentation was modified accordingly. Finally, I thank Alexander Konovalov\nand Max Horn for transferring this package to the new Git repository.\n",
+      "Acknowledgements": "\nThe code for the <Package>toric</Package> package was written during the\nsummer of 2002. \nIt was put into &GAP; package format in the summer of 2004.\n<P/>\n    <Package>toric</Package> is free software; you can redistribute it and/or modify\n    it under the terms of the MIT License.\n<P/>\n    <Package>toric</Package> is distributed in the hope that it will be useful,\n    but WITHOUT ANY WARRANTY; without even the implied warranty of\n    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n    MIT License for more details.\n<P/>\n\n<P/>This documentation was prepared with the \n<Package>GAPDoc</Package> package of Frank Lübeck and Max Neunhöffer. \nMoreover, a bug in toric 1.8 was fixed with the help of Max Horn, and this\ndocumentation was modified accordingly. Finally, I thank Olexandr Konovalov\nand Max Horn for transferring this package to the new Git repository.\n",
       "Copyright": "&copyright; 2004-2017 David Joyner."
     }
   },
   "Autoload": false,
   "AvailabilityTest": null,
   "CommunicatedBy": "Gerhard Hiss (Aachen)",
-  "Date": "07/10/2019",
+  "Date": "04/07/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.5",
@@ -35,13 +35,13 @@
       ],
       "Autoload": true,
       "BookName": "toric",
-      "HTMLStart": "doc/chap0.html",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "toric variety package",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "767fa004dba1c7cd76bd98caedeab70bcdc7463faa8e0a2dac5e852df80ae492",
+  "PackageInfoSHA256": "19690514b5feab8261e70b8aab2ff6422ebe2a49ef41c9ab50a0d1817b05b9df",
   "PackageInfoURL": "https://gap-packages.github.io/toric/PackageInfo.g",
   "PackageName": "Toric",
   "PackageWWWHome": "https://gap-packages.github.io/toric",
@@ -73,5 +73,5 @@
   "Status": "accepted",
   "Subtitle": "toric varieties and some combinatorial geometry computations",
   "TestFile": "tst/testall.g",
-  "Version": "1.9.5"
+  "Version": "1.9.6"
 }
