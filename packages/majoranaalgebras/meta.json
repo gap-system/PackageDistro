@@ -1,15 +1,15 @@
 {
   "AbstractHTML": "MajoranaAlgebras is a package for constructing Majorana\nrepresentations of finite groups. It also offers some functions to calculate\nwith a constructed Majorana representation. The main constructive functions\nuse the algorithm described in the preprint Constructing Majorana\nRepresentations (https://arxiv.org/abs/1803.10723) by Markus Pfeiffer and\nMadeleine Whybrow.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "e13011470f5d2cc887a4b9bb46d3c6aa00bd3a78ebc31774519107cb07ca2219",
-  "ArchiveURL": "https://github.com/gap-packages/MajoranaAlgebras/releases/download/v1.5.1/MajoranaAlgebras-1.5.1",
+  "ArchiveSHA256": "ee0edc3ee3314958444c0d5daca5ebb9972cd6f4fc540d8b4185932311c63926",
+  "ArchiveURL": "https://github.com/gap-packages/MajoranaAlgebras/releases/download/v1.5.2/MajoranaAlgebras-1.5.2",
   "AutoDoc": {
     "TitlePage": {
       "Copyright": "&copyright; 2018 by Markus Pfeiffer and Madeleine Whybrow<P/>\n&MajoranaAlgebras; package is free software;\nyou can redistribute it and/or modify it under the terms of the\n<URL Text=\"GNU General Public License\">https://www.fsf.org/licenses/gpl.html</URL>\nas published by the Free Software Foundation; either version 2 of the License,\nor (at your option) any later version."
     }
   },
   "AvailabilityTest": null,
-  "Date": "09/12/2022",
+  "Date": "07/07/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.8",
@@ -56,7 +56,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "19699463fd0915442e0bcf450c1924132ea1edb3957ae7911f2180469cef5535",
+  "PackageInfoSHA256": "2fa82cd570a3fbc11332c3272e6b37ff5f9705fbc3019ed3b047a8b01626b99e",
   "PackageInfoURL": "https://gap-packages.github.io/MajoranaAlgebras/PackageInfo.g",
   "PackageName": "MajoranaAlgebras",
   "PackageWWWHome": "https://gap-packages.github.io/MajoranaAlgebras/",
@@ -96,5 +96,5 @@
   "Status": "deposited",
   "Subtitle": "A package for constructing Majorana algebras and representations",
   "TestFile": "tst/testall.g",
-  "Version": "1.5.1"
+  "Version": "1.5.2"
 }
