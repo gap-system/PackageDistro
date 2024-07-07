@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">JupyterKernel</span> package provides a so-called kernel for the Jupyter interactive document system.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "228dbee41c6280471275e0cf1db517fef499579357f62a4cf4fde0e53f5dcd5c",
-  "ArchiveURL": "https://github.com/gap-packages/JupyterKernel/releases/download/v1.5.0/JupyterKernel-1.5.0",
+  "ArchiveSHA256": "907d99c0196539a98d76eb84226c9fb25580de382e4e80e842c9305508b3aaa9",
+  "ArchiveURL": "https://github.com/gap-packages/JupyterKernel/releases/download/v1.5.1/JupyterKernel-1.5.1",
   "AvailabilityTest": null,
-  "Date": "25/02/2023",
+  "Date": "07/07/2024",
   "Dependencies": {
     "ExternalConditions": [
       [
@@ -59,7 +59,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "4ac2caa1ca82a83c52a65791f8c11a2d70e59d044f2eee2d3bf19c057b9b960c",
+  "PackageInfoSHA256": "a7cb7a0c2b52a21a88bb382c172ffc49d691bd2af0e18c3a54e83c06921fe8cb",
   "PackageInfoURL": "https://gap-packages.github.io/JupyterKernel/PackageInfo.g",
   "PackageName": "JupyterKernel",
   "PackageWWWHome": "https://gap-packages.github.io/JupyterKernel/",
@@ -154,5 +154,5 @@
   "Status": "deposited",
   "Subtitle": "Jupyter kernel written in GAP",
   "TestFile": "tst/testinstall.g",
-  "Version": "1.5.0"
+  "Version": "1.5.1"
 }
