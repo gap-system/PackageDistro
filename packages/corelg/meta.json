@@ -2,19 +2,19 @@
   "AbstractHTML": "The package <span class=\"pkgname\">CoReLG</span> contains functionality for working with real semisimple Lie algebras.",
   "AcceptDate": "01/2014",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "06ee7fc8faf147e38f61a01c0178b061ed37f922dce4f065c6451f179865185f",
-  "ArchiveURL": "https://github.com/gap-packages/corelg/releases/download/v1.56/corelg-1.56",
+  "ArchiveSHA256": "f87443c2c3d74b8fdc78e7e77267dd757e3372063b8e2369e7dfd0384b701750",
+  "ArchiveURL": "https://github.com/gap-packages/corelg/releases/download/v1.57/corelg-1.57",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "\n      This package provides functions for computing with various\n      aspects of the theory of real simple Lie algebras.\n      ",
       "Acknowledgements": "\n      The research leading to this package has received funding from\n      the European Union's Seventh Framework Program FP7/2007-2013\n      under grant agreement no 271712, and from the Australian Research\n      Council, grantor code DE140100088 and DP190100317.\n      ",
       "Copyright": "&copyright; 2013-2019 Heiko Dietrich, Paolo Faccin, and Willem de Graaf",
-      "Version": "Version 1.56"
+      "Version": "Version 1.57"
     }
   },
   "AvailabilityTest": null,
   "CommunicatedBy": "Bettina Eick (Braunschweig)",
-  "Date": "24/02/2022",
+  "Date": "07/07/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.8",
@@ -38,13 +38,13 @@
         "doc"
       ],
       "BookName": "CoReLG",
-      "HTMLStart": "doc/chap0.html",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "Computing with real Lie algebras",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "d23043e7c7ea0cd5a2df51d9102fa3c5bb1c422ffd1c0377d53538c28e4d87ec",
+  "PackageInfoSHA256": "8fcf1a2301ab37bca05d0cec608dd41aa3d5c69f5054b5ecef5b42112938a059",
   "PackageInfoURL": "https://gap-packages.github.io/corelg/PackageInfo.g",
   "PackageName": "CoReLG",
   "PackageWWWHome": "https://gap-packages.github.io/corelg/",
@@ -90,5 +90,5 @@
   "Status": "accepted",
   "Subtitle": "Computing with real Lie algebras",
   "TestFile": "tst/testall.g",
-  "Version": "1.56"
+  "Version": "1.57"
 }
