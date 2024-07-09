@@ -1,8 +1,8 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">GaussForHomalg</span> package provides Gauss functionality for <span class=\"pkgname\">homalg</span> using the package <span class=\"pkgname\">Gauss</span>",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "114b3744ddbdc766c66e7891ffd2badb02c1ebe3c326df525d0ffa198975f570",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/GaussForHomalg-2023.11-01/GaussForHomalg-2023.11-01",
+  "ArchiveSHA256": "e5a08d929f79bb36370dbcc63c4a53217bac5399aa714c3218b5fb2e464ec688",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/GaussForHomalg-2024.07-01/GaussForHomalg-2024.07-01",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "This document explains the primary uses of the &GaussForHomalg; package. Included in this manual is a documented list of the most important methods and functions you will need.<P/>\n",
@@ -11,7 +11,7 @@
     }
   },
   "AvailabilityTest": null,
-  "Date": "2023-11-30",
+  "Date": "2024-07-09",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12.1",
@@ -54,7 +54,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "47cb88649044a06d5fa8068d3036662bf73d071142ba8e8ddbeab980675eb3a8",
+  "PackageInfoSHA256": "c3d779353eb597e13a46cee933fe8c5abc67158d6209410ad63d1a9d0571b1d2",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/GaussForHomalg/PackageInfo.g",
   "PackageName": "GaussForHomalg",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/GaussForHomalg",
@@ -90,5 +90,5 @@
   "Status": "deposited",
   "Subtitle": "Gauss functionality for the homalg project",
   "TestFile": "tst/testall.g",
-  "Version": "2023.11-01"
+  "Version": "2024.07-01"
 }
