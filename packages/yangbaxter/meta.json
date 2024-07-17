@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">YangBaxter</span> package provides functionality to construct classical and skew braces. It also includes a database of classical and skew braces of small orders.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "cd721912f0397a0997b6b2fc708577a2745fa304ad87d0f3ae283d38570567c9",
-  "ArchiveURL": "https://github.com/gap-packages/YangBaxter/releases/download/v0.10.5/YangBaxter-0.10.5",
+  "ArchiveSHA256": "07ffb52c317d6da02e7618efcf4010f687e0d9463602e96a4d3d2d4d81d7d8b1",
+  "ArchiveURL": "https://github.com/gap-packages/YangBaxter/releases/download/v0.10.6/YangBaxter-0.10.6",
   "AvailabilityTest": null,
-  "Date": "15/06/2024",
+  "Date": "17/07/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.9",
@@ -38,7 +38,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "e9b5dd4df0e427d16006d848232c35200232ced4c50949acf5c15358024399f3",
+  "PackageInfoSHA256": "1d7bb9c4cb18b6a2cbbb4e67ea3c0637bc409679c0b64f1e99bdd714afdbd900",
   "PackageInfoURL": "https://gap-packages.github.io/YangBaxter/PackageInfo.g",
   "PackageName": "YangBaxter",
   "PackageWWWHome": "https://gap-packages.github.io/YangBaxter",
@@ -74,5 +74,5 @@
   "Status": "deposited",
   "Subtitle": "Combinatorial Solutions for the Yang-Baxter equation",
   "TestFile": "tst/testall.g",
-  "Version": "0.10.5"
+  "Version": "0.10.6"
 }
