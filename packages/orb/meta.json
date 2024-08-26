@@ -1,18 +1,18 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">orb</span> package is about enumerating orbits in various ways.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "a1f81707743cbbf5eddecf0b195293b308987f17c7795690c65b5e4a92dfbc1f",
-  "ArchiveURL": "https://github.com/gap-packages/orb/releases/download/v4.9.0/orb-4.9.0",
+  "ArchiveSHA256": "747b963f1125b51244b279ed090f2a15d480d88beb4782b1ae0307fbc3daed8a",
+  "ArchiveURL": "https://github.com/gap-packages/orb/releases/download/v4.9.1/orb-4.9.1",
   "AutoDoc": {
     "TitlePage": {
       "Copyright": "&copyright; 2005-2014 by Jürgen Müller, Max Neunhöffer and Felix Noeske<P/>\n\nThis program is free software: you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation, either version 3 of the License, or\n(at your option) any later version.\n\nThis program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License\nalong with this program.  If not, see\n<URL><Link>https://www.gnu.org/licenses/</Link></URL>.\n"
     }
   },
   "AvailabilityTest": null,
-  "Date": "26/09/2022",
+  "Date": "26/08/2024",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">=4.9",
+    "GAP": ">=4.12",
     "NeededOtherPackages": [],
     "SuggestedOtherPackages": [
       [
@@ -41,7 +41,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "5c81b74964246aaee3c6348470838b66b8fdf100a4367bb22e33bef2e10306fc",
+  "PackageInfoSHA256": "7a01fd3a492e1bc1c6ec2450e30124bd41650e02ec42492968db8818ddc37184",
   "PackageInfoURL": "https://gap-packages.github.io/orb/PackageInfo.g",
   "PackageName": "orb",
   "PackageWWWHome": "https://gap-packages.github.io/orb",
@@ -78,14 +78,14 @@
       "WWWHome": "http://www.math.rwth-aachen.de/~Felix.Noeske"
     },
     {
-      "Email": "horn@mathematik.uni-kl.de",
+      "Email": "mhorn@rptu.de",
       "FirstNames": "Max",
-      "Institution": "TU Kaiserslautern",
+      "Institution": "RPTU Kaiserslautern-Landau",
       "IsAuthor": false,
       "IsMaintainer": true,
       "LastName": "Horn",
       "Place": "Kaiserslautern, Germany",
-      "PostalAddress": "Fachbereich Mathematik\nTU Kaiserslautern\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
+      "PostalAddress": "Fachbereich Mathematik\nRPTU Kaiserslautern-Landau\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
       "WWWHome": "https://www.quendi.de/math"
     }
   ],
@@ -97,5 +97,5 @@
   "Status": "deposited",
   "Subtitle": "Methods to enumerate orbits",
   "TestFile": "tst/testall.g",
-  "Version": "4.9.0"
+  "Version": "4.9.1"
 }
