@@ -1,8 +1,8 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">datastructures</span> package provides some    standard data structures.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "452798be2e3cc6f9f78e876c20120ae55f2ec40661654ac1e12d478e99b393bb",
-  "ArchiveURL": "https://github.com/gap-packages/datastructures/releases/download/v0.3.0/datastructures-0.3.0",
+  "ArchiveSHA256": "0d4fba02f80e7c5eada63fae0402effbbe2ccbeb4d204c1d826cc85e67a582b0",
+  "ArchiveURL": "https://github.com/gap-packages/datastructures/releases/download/v0.3.1/datastructures-0.3.1",
   "AutoDoc": {
     "TitlePage": {
       "Acknowledgements": "We appreciate very much all past and future comments, suggestions and\ncontributions to this package and its documentation provided by &GAP;\nusers and developers.",
@@ -10,10 +10,10 @@
     }
   },
   "AvailabilityTest": null,
-  "Date": "04/11/2022",
+  "Date": "26/08/2024",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">= 4.10",
+    "GAP": ">= 4.12",
     "NeededOtherPackages": [
       [
         "GAPDoc",
@@ -40,7 +40,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "742b856fc45a7812cb5ae382c48fb4feadf186aecaf1037dc15670e0c36cf5f8",
+  "PackageInfoSHA256": "094946688d7771ef9fa1886b3f557d238af88819036ddf0001105bf46091113f",
   "PackageInfoURL": "https://gap-packages.github.io/datastructures/PackageInfo.g",
   "PackageName": "datastructures",
   "PackageWWWHome": "https://gap-packages.github.io/datastructures",
@@ -57,14 +57,14 @@
       "WWWHome": "http://www.morphism.de/~markusp"
     },
     {
-      "Email": "horn@mathematik.uni-kl.de",
+      "Email": "mhorn@rptu.de",
       "FirstNames": "Max",
-      "Institution": "TU Kaiserslautern",
+      "Institution": "RPTU Kaiserslautern-Landau",
       "IsAuthor": true,
       "IsMaintainer": true,
       "LastName": "Horn",
       "Place": "Kaiserslautern, Germany",
-      "PostalAddress": "Fachbereich Mathematik\nTU Kaiserslautern\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
+      "PostalAddress": "Fachbereich Mathematik\nRPTU Kaiserslautern-Landau\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
       "WWWHome": "https://www.quendi.de/math"
     },
     {
@@ -98,5 +98,5 @@
   "Status": "deposited",
   "Subtitle": "Collection of standard data structures for GAP",
   "TestFile": "tst/testall.g",
-  "Version": "0.3.0"
+  "Version": "0.3.1"
 }
