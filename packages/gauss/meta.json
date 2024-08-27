@@ -1,8 +1,8 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">Gauss</span> package provideds extended Gauss functionality for <span class=\"pkgname\">GAP</span>",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "04f2194fe8663a4548bb10fc1a7f1a923bc75cfbc6b5c2947be2c2a2b8e85936",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/Gauss-2023.02-04/Gauss-2023.02-04",
+  "ArchiveSHA256": "a4ca1a7076346f0d521822a1ebd7a09e3b680bb9a0e8eb7b7704308ab772ba0f",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/Gauss-2023.08-01/Gauss-2023.08-01",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "This document explains the primary uses of the &Gauss; package. Included is a documented list of the most important methods and functions needed to work with sparse matrices and the algorithms provided by the &Gauss; package. <P/>\n",
@@ -11,7 +11,7 @@
     }
   },
   "AvailabilityTest": null,
-  "Date": "2023-02-28",
+  "Date": "2024-08-27",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12.1",
@@ -42,7 +42,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "484e399912ef4d403eee29968bc23e9761365dd4ef53e0070ee4b9a4728a9091",
+  "PackageInfoSHA256": "eef0e33c76ff09e6f74bb0267ed87a79b5d95f3d98e16711791af46c8d44379b",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/Gauss/PackageInfo.g",
   "PackageName": "Gauss",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/Gauss",
@@ -89,5 +89,5 @@
   "Status": "deposited",
   "Subtitle": "Extended Gauss functionality for GAP",
   "TestFile": "tst/testall.g",
-  "Version": "2023.02-04"
+  "Version": "2023.08-01"
 }
