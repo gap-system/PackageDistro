@@ -1,23 +1,23 @@
 {
   "AbstractHTML": "The <Package>Smallsemi</Package> package is a data library of semigroups    of small size. It provides all semigroups with at most 8 elements as well    as various information about these objects.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "40ba8edf1c5801aa87fa6785fc86388dfa6dfc0e3acd7e70968a5b1b65cc6f55",
-  "ArchiveURL": "https://github.com/gap-packages/smallsemi/releases/download/v0.7.0/smallsemi-0.7.0",
+  "ArchiveSHA256": "c5d05dd93deafcd7eb29414eed366398f130de0f5ede57db1478f84360f62c32",
+  "ArchiveURL": "https://github.com/gap-packages/smallsemi/releases/download/v0.7.1/smallsemi-0.7.1",
   "AutoDoc": {
     "TitlePage": {
       "Acknowledgements": "\n            We would like to thank Tom Kelsey for making this library\n            possible by running all the initial computations in Minion <Cite\n            Key=\"minion\"/>. <Br/>\n\n            The first author acknowledges financial support of the University\n            of St Andrews. The second author acknowledges support of EPSRC\n            grant number GR/S/56085/01.\n            ",
       "Colophon": "\n            If you find any bugs or have any suggestions or comments, we would\n            very much appreciate it if you would let us know via our\n            issue tracker (see\n            <URL>https://github.com/gap-packages/smallsemi/issues</URL>).\n            ",
       "Copyright": "\n            &copyright; 2008-24 A. Distler &amp; J. D. Mitchell.<P/>\n\n            <Package>Smallsemi</Package> is free software: you can\n            redistribute it and/or modify it under the terms of the GNU\n            General Public License as published by the Free Software\n            Foundation, either version 3 of the license, or (at your option)\n            any later version.<P/>\n\n            <Package>Smallsemi</Package> is distributed in the hope that it\n            will be useful, but WITHOUT ANY WARRANTY; without even the\n            implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR\n            PURPOSE. See the GNU General Public License for more details.<P/>\n\n            A copy of the GNU General Public License is available in the file\n            'LICENSE'; for the latest version\n            see <URL>https://www.gnu.org/licenses/#GPL</URL>.<P/>\n\n            This file is part of <Package>Smallsemi</Package>, though as\n            documentation it is released under the GNU Free Documentation\n            License (see <URL>https://www.gnu.org/licenses/#FDL</URL>).\n            ",
-      "Version": "Version 0.7.0"
+      "Version": "Version 0.7.1"
     },
     "entities": {
-      "ARCHIVENAME": "smallsemi-0.7.0",
-      "VERSION": "0.7.0"
+      "ARCHIVENAME": "smallsemi-0.7.1",
+      "VERSION": "0.7.1"
     }
   },
   "AvailabilityTest": null,
-  "BannerString": "-----------------------------------------------------------------------------\nSmallsemi -   A library of small semigroups\nby Andreas Distler & James Mitchell\nFor contents, type: ?Smallsemi:\nLoading Smallsemi 0.7.0 ...\n-----------------------------------------------------------------------------\n",
-  "Date": "20/05/2024",
+  "BannerString": "-----------------------------------------------------------------------------\nSmallsemi -   A library of small semigroups\nby Andreas Distler & James Mitchell\nFor contents, type: ?Smallsemi:\nLoading Smallsemi 0.7.1 ...\n-----------------------------------------------------------------------------\n",
+  "Date": "27/08/2024",
   "Dependencies": {
     "ExternalConditions": [
       "gzip is needed in standard location if data files are used uncompressed"
@@ -45,7 +45,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "168ad7fc7c10f7cf2a5186681ff56aaf32289d03d5e2effb4f6e5e679792317a",
+  "PackageInfoSHA256": "d5058f7c6d67651cb398e3dbf8c37df7fae75043d64beadf8e9266bae837cf53",
   "PackageInfoURL": "https://gap-packages.github.io/smallsemi/PackageInfo.g",
   "PackageName": "Smallsemi",
   "PackageWWWHome": "https://gap-packages.github.io/smallsemi/",
@@ -77,5 +77,5 @@
   "Status": "deposited",
   "Subtitle": "A library of small semigroups",
   "TestFile": "tst/testall.g",
-  "Version": "0.7.0"
+  "Version": "0.7.1"
 }
