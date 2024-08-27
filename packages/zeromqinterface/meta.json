@@ -1,19 +1,19 @@
 {
   "AbstractHTML": "",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "85d41e243ade6f868ca5fcb2b55619437b66248a194404d01fa693b3cc21945c",
-  "ArchiveURL": "https://github.com/gap-packages/ZeroMQInterface/releases/download/v0.15/ZeroMQInterface-0.15",
+  "ArchiveSHA256": "da9fc9ee04ba701b224d0809fdf4fc5b9782d9399326982273f77419fb3bd400",
+  "ArchiveURL": "https://github.com/gap-packages/ZeroMQInterface/releases/download/v0.16/ZeroMQInterface-0.16",
   "AutoDoc": {
     "TitlePage": {
-      "Acknowledgements": "We appreciate very much all past and future comments, suggestions and \ncontributions to this package and its documentation provided by &GAP; \nusers and developers.",
-      "Copyright": "&copyright; 2015-17 by Markus Pfeiffer, Reimer Behrends and others<P/>\nThe &ZeroMQInterface; package is free software; \nyou can redistribute it and/or modify it under the terms of the \n<URL Text=\"GNU General Public License\">http://www.fsf.org/licenses/gpl.html</URL> \nas published by the Free Software Foundation; either version 2 of the License, \nor (at your option) any later version."
+      "Acknowledgements": "We appreciate very much all past and future comments, suggestions and\ncontributions to this package and its documentation provided by &GAP;\nusers and developers.",
+      "Copyright": "&copyright; 2015-17 by Markus Pfeiffer, Reimer Behrends and others<P/>\nThe &ZeroMQInterface; package is free software;\nyou can redistribute it and/or modify it under the terms of the\n<URL Text=\"GNU General Public License\">http://www.fsf.org/licenses/gpl.html</URL>\nas published by the Free Software Foundation; either version 2 of the License,\nor (at your option) any later version."
     }
   },
   "AvailabilityTest": null,
-  "Date": "01/07/2024",
+  "Date": "27/08/2024",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">= 4.9",
+    "GAP": ">= 4.12",
     "NeededOtherPackages": [
       [
         "GAPDoc",
@@ -41,7 +41,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "0cbcde9ab6fd8fa58d448de29730bde5240a30a8ae25bd28d13b2aac156a1b7e",
+  "PackageInfoSHA256": "50bddf3eb2576db1483a075ee2bb6d4889d46897e46ea24624733e9a1dbbd99c",
   "PackageInfoURL": "https://gap-packages.github.io/ZeroMQInterface/PackageInfo.g",
   "PackageName": "ZeroMQInterface",
   "PackageWWWHome": "https://gap-packages.github.io/ZeroMQInterface/",
@@ -84,5 +84,5 @@
   "Status": "deposited",
   "Subtitle": "ZeroMQ bindings for GAP",
   "TestFile": "tst/testall.g",
-  "Version": "0.15"
+  "Version": "0.16"
 }
