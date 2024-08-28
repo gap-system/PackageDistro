@@ -1,8 +1,8 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">smallantimagmas</span> package,    classifies all finite, antassociative magmas.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "37959750d08cfd852c75fb3042c6e93e7122561c0c4c906b33c28b92a39c5dd5",
-  "ArchiveURL": "https://github.com/limakzi/smallantimagmas/releases/download/v0.2.8/smallantimagmas-v0.2.8",
+  "ArchiveSHA256": "d66a19f5afcc7d57f5046463d8bb543c26ac0819fd925180d6f6b04d03ff94f2",
+  "ArchiveURL": "https://github.com/limakzi/smallantimagmas/releases/download/v0.2.10/smallantimagmas-v0.2.10",
   "AutoDoc": {
     "TitlePage": {
       "Acknowledgements": "\n      We appreciate very much all past and future comments, suggestions and\n      contributions to this package and its documentation provided by &GAP;\n      users and developers.\n      ",
@@ -28,7 +28,7 @@
     "smallantimagmas",
     "antiassociative"
   ],
-  "License": "GPL",
+  "License": "GPL-3.0-or-later",
   "PackageDoc": [
     {
       "ArchiveURLSubset": [
@@ -42,7 +42,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "07a38fe2af0b19fa90468a404668b5af94c031fb401a87fcddd0b12d445bbe52",
+  "PackageInfoSHA256": "147eebd7b41a548d9be722258e8b8b6e2d37e7c07a702aca15c27b58306de50f",
   "PackageInfoURL": "https://limakzi.github.io/smallantimagmas/PackageInfo.g",
   "PackageName": "smallantimagmas",
   "PackageWWWHome": "https://limakzi.github.io/smallantimagmas",
@@ -63,8 +63,8 @@
     "URL": "https://github.com/limakzi/smallantimagmas"
   },
   "Status": "deposited",
-  "Subtitle": "A fork of smallgrp package for small antiassociative magmas",
+  "Subtitle": "A library of antiassociative magmas of small order",
   "SupportEmail": "limakzi@proton.me",
   "TestFile": "tst/testall.g",
-  "Version": "0.2.8"
+  "Version": "0.2.10"
 }
