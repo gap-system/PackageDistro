@@ -156,7 +156,7 @@ def gap_exec(commands: str, args: str = "") -> Tuple[int, bytes]:
         return GAP.returncode, out
 
 
-def gap_exec2(commands: str, args: str = "") -> Tuple[int, bytes]:
+def gap_exec2(commands: str, args: str = "") -> int:
     with subprocess.Popen(
         "gap -A -b --quitonbreak -q " + args,
         stdin=subprocess.PIPE,
