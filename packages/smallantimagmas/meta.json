@@ -1,0 +1,70 @@
+{
+  "AbstractHTML": "The <span class=\"pkgname\">smallantimagmas</span> package,    classifies all finite, antassociative magmas.",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSHA256": "b72216efc0c370b358325974bc68023173a118d4d876692f8fc56d92cc5cb3c9",
+  "ArchiveURL": "https://github.com/limakzi/smallantimagmas/archive/refs/tags/v0.2.3/smallantimagmas-0.2.3",
+  "AutoDoc": {
+    "TitlePage": {
+      "Acknowledgements": "\n      We appreciate very much all past and future comments, suggestions and\n      contributions to this package and its documentation provided by &GAP;\n      users and developers.\n      ",
+      "Copyright": "\n      <Index>License</Index>\n      &copyright; 2024 by Kamil Zabielski<P/>\n      &smallantimagmas; package is free software;\n      you can redistribute it and/or modify it under the terms of the\n      <URL Text=\"GNU General Public License\">http://www.fsf.org/licenses/gpl.html</URL>\n      as published by the Free Software Foundation; either version 2 of the License,\n      or (at your option) any later version.\n      "
+    }
+  },
+  "AvailabilityTest": null,
+  "CommunicatedBy": "Kamil Zabielski (Białystok)",
+  "Date": "28/08/2024",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": "4.12",
+    "NeededOtherPackages": [
+      [
+        "GAPDoc",
+        "1.5"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "IssueTrackerURL": "https://github.com/limakzi/smallantimagmas/issues",
+  "Keywords": [
+    "smallantimagmas",
+    "antiassociative"
+  ],
+  "License": "GPL",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "Autoload": true,
+      "BookName": "smallantimagmas",
+      "HTMLStart": "doc/chap0_mj.html",
+      "LongTitle": "smallantimagmas/Antimagmas package",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSHA256": "26d15f5fd952f16ea6af80cda5c63073aba7e95ea8f755dacbac4eb8c88038f4",
+  "PackageInfoURL": "https://limakzi.github.io/smallantimagmas/PackageInfo.g",
+  "PackageName": "smallantimagmas",
+  "PackageWWWHome": "https://limakzi.github.io/smallantimagmas",
+  "Persons": [
+    {
+      "FirstNames": "Kamil",
+      "Institution": "Białystok University of Technology",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Zabielski",
+      "Place": "Białystok, Poland",
+      "PostalAddress": "Department of Theoretical Computer Science\nBiałystok University of Technology\nWiejska 45A\n15-325 Białystok\nPoland"
+    }
+  ],
+  "README_URL": "https://limakzi.github.io/smallantimagmas/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/limakzi/smallantimagmas"
+  },
+  "Status": "deposited",
+  "Subtitle": "A fork of smallgrp package for small antiassociative magmas",
+  "SupportEmail": "limakzi@proton.me",
+  "TestFile": "tst/testall.g",
+  "Version": "0.2.3"
+}
