@@ -1,8 +1,8 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">Hecke</span> package provides functions for calculating decomposition matrices of Hecke algebras of the symmetric groups and q-Schur algebras. Hecke is a port of the <span class=\"pkgname\">GAP 3</span> package <span class=\"pkgname\">Specht 2.4</span> to <span class=\"pkgname\">GAP 4</span>.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "f8847a80b74ee979f0275ee8496232475e1c2939990a091f44e31ef39b7718ed",
-  "ArchiveURL": "https://github.com/gap-packages/hecke/releases/download/v1.5.3/hecke-1.5.3",
+  "ArchiveSHA256": "5f048ba8b62283de5ce3b2aeaae87338d9c89f4e74e59618bc5d546b77faf877",
+  "ArchiveURL": "https://github.com/gap-packages/hecke/releases/download/v1.5.4/hecke-1.5.4",
   "AutoDoc": {
     "TitlePage": {
       "Acknowledgements": "\n            &Specht; is a port of the &GAP; 3 package <Package>Specht</Package> 2.4 to &GAP; 4.\n            <Package>Specht</Package> 2.4 was written by Andrew Mathas, who allowed\n            Dmitriy Traytel to use his source code as the basis for &specht;.\n            ",
@@ -10,7 +10,7 @@
     }
   },
   "AvailabilityTest": null,
-  "Date": "01/09/2019",
+  "Date": "27/08/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.8",
@@ -32,13 +32,13 @@
       ],
       "Autoload": true,
       "BookName": "hecke",
-      "HTMLStart": "doc/chap0.html",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "Hecke - Specht 2.4 ported to GAP 4",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "07a7555399aecd810d80448cac82e6fe448550324e4ea90445abbab3d6e9c63a",
+  "PackageInfoSHA256": "a5079caa4169fce80be8218ec0c7772eca467a1f0232d0c1e51cc3285cb2a4c1",
   "PackageInfoURL": "https://gap-packages.github.io/hecke/PackageInfo.g",
   "PackageName": "hecke",
   "PackageWWWHome": "https://gap-packages.github.io/hecke/",
@@ -51,7 +51,7 @@
       "IsMaintainer": false,
       "LastName": "Traytel",
       "Place": "Munich",
-      "WWWHome": "http://home.in.tum.de/~traytel/hecke/"
+      "WWWHome": "https://home.in.tum.de/~traytel/hecke/"
     },
     {
       "Email": "support@gap-system.org",
@@ -69,5 +69,5 @@
   "Status": "deposited",
   "Subtitle": "Calculating decomposition matrices of Hecke algebras",
   "TestFile": "tst/testall.g",
-  "Version": "1.5.3"
+  "Version": "1.5.4"
 }
