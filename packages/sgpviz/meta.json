@@ -1,11 +1,11 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">SgpViz</span> package, is a package with some visualization features for finite semigroups.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "3a84588ff942b20930918be1ed82397da5cf2da2342f34d7d5462044c2758f52",
-  "ArchiveURL": "https://github.com/gap-packages/sgpviz/releases/download/v0.999.5/SgpViz-0.999.5",
+  "ArchiveSHA256": "dbfc5f4714c589c94837c73a187898774bdc5c48029e2e1e15aed28ebe85a2fc",
+  "ArchiveURL": "https://github.com/gap-packages/sgpviz/releases/download/v0.999.6/SgpViz-0.999.6",
   "AvailabilityTest": null,
-  "BannerString": "----------------------------------------------------------------\nLoading  SgpViz 0.999.5(semigroup visualization)\nFor help, type: ?SgpViz: \n----------------------------------------------------------------\n",
-  "Date": "20/03/2022",
+  "BannerString": "----------------------------------------------------------------\nLoading  SgpViz 0.999.6(semigroup visualization)\nFor help, type: ?SgpViz: \n----------------------------------------------------------------\n",
+  "Date": "30/08/2024",
   "Dependencies": {
     "GAP": ">=4.4",
     "NeededOtherPackages": [
@@ -30,13 +30,13 @@
         "doc"
       ],
       "BookName": "SgpViz",
-      "HTMLStart": "doc/chap0.html",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "SgpViz, a GAP package for semigroup visualization",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "2dc8bab2d38febc059a1f4232f42980359633f94615f52f2f3e27c022b1cf198",
+  "PackageInfoSHA256": "31a3cd1dd490591e7c0504a39804b67d64884c30e4ac07cb1f43826c7e925cc0",
   "PackageInfoURL": "https://gap-packages.github.io/sgpviz/PackageInfo.g",
   "PackageName": "SgpViz",
   "PackageWWWHome": "https://gap-packages.github.io/sgpviz",
@@ -49,7 +49,7 @@
       "IsMaintainer": true,
       "LastName": "Delgado",
       "Place": "Porto",
-      "PostalAddress": "Departamento de Matemática - Faculdade de Ciências\nPorto\nPortugal",
+      "PostalAddress": "CMUP, Departamento de Matemática\nFaculdade de Ciências, Universidade do Porto\nRua do Campo Alegre s/n\n4169-007 Porto\nPortugal",
       "WWWHome": "http://www.fc.up.pt/cmup/mdelgado/"
     },
     {
@@ -68,5 +68,5 @@
   "Status": "deposited",
   "Subtitle": "A package for semigroup visualization",
   "TestFile": "tst/testall.g",
-  "Version": "0.999.5"
+  "Version": "0.999.6"
 }
