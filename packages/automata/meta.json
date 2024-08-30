@@ -2,12 +2,12 @@
   "AbstractHTML": "The <span class=\"pkgname\">Automata</span> package, as its name suggests, is package with algorithms to deal with automata.",
   "AcceptDate": "09/2004",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSHA256": "0098035c11d4583055cdc391f6b08aa2603ed3259f605fe5cc5c4ed8adb7b3a7",
-  "ArchiveURL": "https://github.com/gap-packages/automata/releases/download/v1.15/automata-1.15",
+  "ArchiveSHA256": "2599cc9dabc885f032425320e2c60cabdb9b781b8b5b6f3f6691b4eac6d60f0a",
+  "ArchiveURL": "https://github.com/gap-packages/automata/releases/download/v1.16/automata-1.16",
   "Autoload": false,
   "AvailabilityTest": null,
   "CommunicatedBy": "Edmund Robertson (St. Andrews)",
-  "Date": "20/03/2022",
+  "Date": "30/08/2024",
   "Dependencies": {
     "GAP": ">=4.8",
     "NeededOtherPackages": [],
@@ -30,13 +30,13 @@
         "doc"
       ],
       "BookName": "Automata",
-      "HTMLStart": "doc/chap0.html",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "Automata, a GAP package for finite state automata",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "72b37e0910f3654cb740b6f094049790001592beae46dfc8eac14b3f138fc4df",
+  "PackageInfoSHA256": "56a49ccec668d6d03951bd9e9ecf62a27dbf052f1195eb1e6afce05d66ddb39b",
   "PackageInfoURL": "https://gap-packages.github.io/automata/PackageInfo.g",
   "PackageName": "Automata",
   "PackageWWWHome": "https://gap-packages.github.io/automata/",
@@ -49,8 +49,19 @@
       "IsMaintainer": true,
       "LastName": "Delgado",
       "Place": "Porto",
-      "PostalAddress": "Departamento de Matemática - Faculdade de Ciências\nPorto\nPortugal",
+      "PostalAddress": "CMUP, Departamento de Matemática\nFaculdade de Ciências, Universidade do Porto\nRua do Campo Alegre s/n\n4169-007 Porto\nPortugal",
       "WWWHome": "https://cmup.fc.up.pt/cmup/mdelgado/"
+    },
+    {
+      "Email": "rh347@st-andrews.ac.uk",
+      "FirstNames": "Ruth",
+      "Institution": "School of Computer Science, University of St. Andrews",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "Hoffmann",
+      "Place": "St. Andrews",
+      "PostalAddress": "School of Computer Science\nUniversity of St Andrews\nJack Cole Building, North Haugh\nSt Andrews, Fife, KY16 9SX\nUnited Kingdom",
+      "WWWHome": "https://research-portal.st-andrews.ac.uk/en/persons/ruth-hoffmann"
     },
     {
       "Email": "steve.linton@st-andrews.ac.uk",
@@ -79,5 +90,5 @@
   "Status": "accepted",
   "Subtitle": "A package on automata",
   "TestFile": "tst/testall.g",
-  "Version": "1.15"
+  "Version": "1.16"
 }
