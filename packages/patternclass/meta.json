@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "The PatternClass package is build on the idea of token passing networks building permutation pattern classes. Those classes are best determined by their basis. Both sets can be encoded by rank encoding their permutations. Each, the class and its basis, in their encoded form build a rational language. Rational languages can be easily computed by using automata, which also can be build directly from the token passing networks. Both ways will build the same language, i.e. the same automaton.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "4e5e9b193c7c78dbd6cfd677065340fdf1fcfc7e665c8282c68b1380fe8351fa",
-  "ArchiveURL": "https://github.com/gap-packages/PatternClass/releases/download/v2.4.4/PatternClass-2.4.4",
+  "ArchiveSHA256": "01310b9d13258779df14bcb452df0341104b373fa4bdb8861bcceb7bf7f07103",
+  "ArchiveURL": "https://github.com/gap-packages/PatternClass/releases/download/v2.4.5/PatternClass-2.4.5",
   "AvailabilityTest": null,
-  "Date": "28/08/2024",
+  "Date": "30/08/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.8",
@@ -43,21 +43,21 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "9f8f8008e367d1eb387ff45c5ac7d03f9501e4e3be8d892cdf86ad21b6595f93",
+  "PackageInfoSHA256": "c7e46b8ea981f8ed2ddeff942c7e7bffca85d5f639b6cf28fa1ce6e30784c626",
   "PackageInfoURL": "https://gap-packages.github.io/PatternClass/PackageInfo.g",
   "PackageName": "PatternClass",
   "PackageWWWHome": "https://gap-packages.github.io/PatternClass/",
   "Persons": [
     {
-      "Email": "rh347@icloud.com",
+      "Email": "rh347@st-andrews.ac.uk",
       "FirstNames": "Ruth",
-      "Institution": "School of Computing Science, University of Glasgow",
+      "Institution": "School of Computer Science, University of St Andrews",
       "IsAuthor": true,
       "IsMaintainer": true,
       "LastName": "Hoffmann",
-      "Place": "Glasgow",
+      "Place": "St Andrews",
       "PostalAddress": "School of Computer Science,\nUniversity of St. Andrews,\nNorth Haugh,\nSt. Andrews,\nFife,\nKY16 9SS,\nSCOTLAND",
-      "WWWHome": "https://rh347.host.cs.st-andrews.ac.uk/"
+      "WWWHome": "https://www.st-andrews.ac.uk/computer-science/people/rh347/"
     },
     {
       "Email": "sl4@st-andrews.ac.uk",
@@ -90,5 +90,5 @@
   "Status": "deposited",
   "Subtitle": "A permutation pattern class package",
   "TestFile": "tst/testall.g",
-  "Version": "2.4.4"
+  "Version": "2.4.5"
 }
