@@ -1,11 +1,11 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">IntPic</span> package, is a package for drawing integers, by emphasizing some subsets.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "fb3a3a5d83e5dc604345e71a88271990576a36f924afd02c6488f31cb1401c80",
-  "ArchiveURL": "https://github.com/gap-packages/intpic/releases/download/v0.3.0/IntPic-0.3.0",
+  "ArchiveSHA256": "52f0a1e31755736f4cb2c2f52a385bef46f133a7fc3936dfbaeac0c61de54536",
+  "ArchiveURL": "https://github.com/gap-packages/intpic/releases/download/v0.4.0/IntPic-0.4.0",
   "AvailabilityTest": null,
-  "BannerString": "----------------------------------------------------------------\nLoading  IntPic 0.3.0 (drawing integers)\nby Manuel Delgado (http://www.fc.up.pt/cmup/mdelgado/)\nFor help, type: ?IntPic;\n----------------------------------------------------------------\n",
-  "Date": "02/06/2022",
+  "BannerString": "----------------------------------------------------------------\nLoading  IntPic 0.4.0 (drawing integers)\nby Manuel Delgado (http://www.fc.up.pt/cmup/mdelgado/)\nFor help, type: ?IntPic;\n----------------------------------------------------------------\n",
+  "Date": "30/08/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": "4.7",
@@ -37,13 +37,13 @@
         "images"
       ],
       "BookName": "IntPic",
-      "HTMLStart": "doc/chap0.html",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "IntPic, a GAP package for drawing integers",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "1c4e6de6b22729a2f7963b195a6e467030f214a6911515e9aff7d1f1c9b0f426",
+  "PackageInfoSHA256": "3b62a8d88a245045583ce49d4c816ea58550248821bd3faf86267eac98b16822",
   "PackageInfoURL": "https://gap-packages.github.io/intpic/PackageInfo.g",
   "PackageName": "IntPic",
   "PackageWWWHome": "https://gap-packages.github.io/intpic",
@@ -56,7 +56,7 @@
       "IsMaintainer": true,
       "LastName": "Delgado",
       "Place": "Porto",
-      "PostalAddress": "Departamento de Matemática - Faculdade de Ciências\nPorto\nPortugal",
+      "PostalAddress": "CMUP, Departamento de Matemática\nFaculdade de Ciências, Universidade do Porto\nRua do Campo Alegre s/n\n4169-007 Porto\nPortugal",
       "WWWHome": "http://www.fc.up.pt/cmup/mdelgado/"
     }
   ],
@@ -68,5 +68,5 @@
   "Status": "deposited",
   "Subtitle": "A package for drawing integers",
   "TestFile": "tst/testall.g",
-  "Version": "0.3.0"
+  "Version": "0.4.0"
 }
