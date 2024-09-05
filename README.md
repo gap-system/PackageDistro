@@ -183,7 +183,7 @@ Some more details:
   - The checks this perform include
       - check output of GAP function `ValidatePackageInfo`
       - verify version is greater than previous version and does not contain `dev`
-      - verify release data is not less than previous release date
+      - verify release date is not less than previous release date
       - verify release date is not in the future
       - verify URLs are valid (currently `PackageInfoURL`, `README_URL`, source archives)
       - validates source archives, including:
