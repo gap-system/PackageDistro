@@ -45,7 +45,7 @@ to go about this that ensure we will still be able to pick up updates:
 
 There are several options how to do this.
 
-1. Submit an issue to this repository, requesting that your package be added.
+1. (**RECOMMENDED**) Submit an issue to this repository, requesting that your package be added.
    Make sure to include a link to the `PackageInfo.g` file of your package.
    Note that such requests are visible to the anyone watching this repository.
 
@@ -53,11 +53,6 @@ There are several options how to do this.
    Make sure to include a link to the `PackageInfo.g` file of your package.
    Note that such requests are visible to only to a small group of people listed
    [on this web page](https://www.gap-system.org/Contacts/People/supportgroup.html).
-
-3. Open a pull request to this repository manually: first run the script
-   `tools/import_packages.py URL_OF_PACKAGEINFO_G` with a list of one or more
-   URLs of PackageInfo.g files for the packages to be added. The script will
-   download and parse each of them
 
 In either case, we will evaluate your request and will inform you about the
 outcome of that (which may be: accept, accept after modifications, reject).
@@ -79,9 +74,8 @@ as follows:
 1. Go to <https://github.com/gap-system/PackageDistro/actions/workflows/scan-for-updates.yml>
 2. Click "Run workflow" once to open a popup menu. There is a field there accepting
    a space separated list of `PackageInfo.g` URLs. Do so.
-3. Click on the new green "Run workflow" button to actually trigger the workflow
-4. You can now follow this action, it should only run for about 5 minutes, and will
-   create a new pull request for each package you listed.
+3. Click on the new green "Run workflow" button to actually trigger the workflow.
+4. After 2-3 minutes this should create a new pull request for each package you listed.
 
 Once the PR is created, a bunch of CI tests are started. Once they are completed,
 a report is added to the PR which indicates whether the new package breaks something
