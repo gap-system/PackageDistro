@@ -146,7 +146,6 @@ or adding Python code must run `black` on all Python files in order to pass the
 test suite and be merged.
 
 
-
 ## Other directories
 
 The various scripts create and/oruse a bunch of auxiliary directories to store
@@ -156,3 +155,47 @@ and exchange data:
 - `_pkginfos` stores copies of the `PackageInfo.g` 
 - `_releases`: TODO
 - `_unpacked_archives`: TODO
+
+
+## What do we test, and how?
+
+In a nutshell, when a new package update is received, we validates its
+metadata (including validating URLs in it), and run the testsuites of GAP and
+of all GAP packages in the package distribution. If any of these detects an
+issue, this is reported.
+
+Some more details:
+- if a package update is detected, we fetch its latest metadata and validate it
+  - This can be replicated manually by doing the following in an up-to-date clone
+    of the PackageDistro repository (substitute `example` by the name of your package)
+    ```
+    ./tools/scan_for_updates.py example
+    ./tools/validate_package.py example
+    ```
+    However this only works if you already made a release, as it downloads the metadata
+    from the `PackageInfoURL` (see also <https://github.com/gap-system/PackageDistro/issues/1024>).
+  - The checks this perform include
+      - check output of GAP function `ValidatePackageInfo`
+      - verify version is greater than previous version and does not contain `dev`
+      - verify release date is not less than previous release date
+      - verify release date is not in the future
+      - verify URLs are valid (currently `PackageInfoURL`, `README_URL`, source archives)
+      - validates source archives, including:
+        - must not contain absolute paths, or rather: all files in the archive must be
+          contained in a single parent subdirectory
+        - must contain `PackageInfo.g`
+        - must not contain symlinks
+- clone the GAP repository and build GAP
+  - this (and all steps after this) is actually done twice, once for the latest
+    GAP `master` branch and once for the latest `stable-X.Y` branch)
+- compile all packages that require it
+  - actually we skip `xgap` and also don't test it for technical reasons
+- start GAP, execute `LoadAllPackages()`, run GAP's `testinstall` test suite
+- for each package `pkgname` in the distribution
+  - start GAP, do `LoadPackage("pkgname")` then `TestPackage("pkgname")`
+  - start GAP, do `LoadPackage("pkgname" : OnlyNeeded)` then `TestPackage("pkgname")`
+    - unfortunately quite some packages have issues with that as their test
+    suites actually require more than the minimal set of dependencies. We
+    currently are lenient there and include custom treatment for a bunch of
+    packages (for details see the "Run tests with OnlyNeeded" step in
+    `.github/workflows/test-all.yml`)
