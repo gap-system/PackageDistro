@@ -2,13 +2,13 @@
   "AbstractHTML": "The <span class=\"pkgname\">ModIsom</span> package contains various methods for computing with nilpotent associative algebras. In particular, it contains a method to determine the automorphism group and to test isomorphis of such algebras over finite fields and of modular group algebras of finite p-groups, and it contains a nilpotent quotient algorithm for finitely presented associative algebras and a method to determine Kurosh algebras.",
   "AcceptDate": "11/2013",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "0f805c55a1c67807d7300271e423aae258be49a9948944c018063d418557922b",
-  "ArchiveURL": "https://github.com/gap-packages/modisom/releases/download/v2.5.4/modisom-2.5.4",
+  "ArchiveSHA256": "e97fb7337d9422c7b5c838dea0870398bedee7c2f77f4b8f4e8923973e58436b",
+  "ArchiveURL": "https://github.com/gap-packages/modisom/releases/download/v3.0.0/modisom-3.0.0",
   "Autoload": false,
   "AvailabilityTest": null,
-  "BannerString": "Loading ModIsom 2.5.4... \n",
+  "BannerString": "Loading ModIsom 3.0.0... \n",
   "CommunicatedBy": "Olexandr Konovalov (St Andrews)",
-  "Date": "27/02/2023",
+  "Date": "23/09/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.7",
@@ -44,7 +44,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "9a0f7a6b8f9d18755bad521113246b577175991e2868bbee9b9561853917349b",
+  "PackageInfoSHA256": "8f55735ff8cfd9a5f3d8195a62522f49868420a11b49752decbcbaed86f95d07",
   "PackageInfoURL": "https://gap-packages.github.io/modisom/PackageInfo.g",
   "PackageName": "ModIsom",
   "PackageWWWHome": "https://gap-packages.github.io/modisom/",
@@ -61,6 +61,16 @@
       "WWWHome": "http://www.iaa.tu-bs.de/beick"
     },
     {
+      "Email": "diego.garcial@um.es",
+      "FirstNames": "Diego",
+      "Institution": "Universidad de Murcia",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Garcia-Lucas",
+      "Place": "Murcia",
+      "PostalAddress": "Departamento de Matematicas\nFacultad de Matematicas\nUniversidad de Murcia\nES-30100 Murcia\nSpain"
+    },
+    {
       "Email": "obk1@st-andrews.ac.uk",
       "FirstNames": "Olexandr",
       "Institution": "University of St Andrews",
@@ -70,6 +80,28 @@
       "Place": "St Andrews",
       "PostalAddress": "School of Computer Science\nUniversity of St Andrews\nJack Cole Building, North Haugh,\nSt Andrews, Fife, KY16 9SX, Scotland",
       "WWWHome": "https://olexandr-konovalov.github.io/"
+    },
+    {
+      "Email": "leo.margolis@uam.es",
+      "FirstNames": "Leo",
+      "Institution": "Universidad Autonoma de Madrid",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Margolis",
+      "Place": "Madrid",
+      "PostalAddress": "Departamento de Matematicas\nUniversidad Autonoma de Madrid\nCampus Cantoblanco\n28049 Madrid\nSpain",
+      "WWWHome": "http://www.margollo.github.io"
+    },
+    {
+      "Email": "t.moede@tu-braunschweig.de",
+      "FirstNames": "Tobias",
+      "Institution": "TU Braunschweig",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Moede",
+      "Place": "Braunschweig",
+      "PostalAddress": "Institute of Analysis and Algebra\nTU Braunschweig\nUniversitaetsplatz 2, 38106 Braunschweig\nGermany",
+      "WWWHome": "https://www.tu-braunschweig.de/iaa/personal/moede"
     }
   ],
   "README_URL": "https://gap-packages.github.io/modisom/README.md",
@@ -80,5 +112,5 @@
   "Status": "accepted",
   "Subtitle": "Computing automorphisms and checking isomorphisms for modular group algebras of finite p-groups",
   "TestFile": "tst/testall.g",
-  "Version": "2.5.4"
+  "Version": "3.0.0"
 }
