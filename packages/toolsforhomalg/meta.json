@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">ToolsForHomalg</span> package provides GAP extensions for the homalg project",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "8871fadc04adfff831f0884d490d221ecb9668419a4dd6a38d3e2c52d5a83834",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/ToolsForHomalg-2024.07-01/ToolsForHomalg-2024.07-01",
+  "ArchiveSHA256": "8d4d5485b02dcd7a7183fc7efe8e1e634d5cc5ffe6c50549935d06dfffae55b0",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/ToolsForHomalg-2024.09-01/ToolsForHomalg-2024.09-01",
   "AvailabilityTest": null,
-  "Date": "2024-07-09",
+  "Date": "2024-09-20",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12.1",
@@ -26,7 +26,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "0d719e343ca02c029150f9dc280d564175df8584099af95107afbd64e55e2387",
+  "PackageInfoSHA256": "cee7ab1d4a23bbff4d1816a3a8c9618bfadc00b52201263f7b4f09df976b59c1",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/ToolsForHomalg/PackageInfo.g",
   "PackageName": "ToolsForHomalg",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/ToolsForHomalg",
@@ -73,5 +73,5 @@
   "Status": "deposited",
   "Subtitle": "Special methods and knowledge propagation tools",
   "TestFile": "tst/testall.g",
-  "Version": "2024.07-01"
+  "Version": "2024.09-01"
 }
