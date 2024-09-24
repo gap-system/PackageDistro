@@ -7,9 +7,9 @@ on this repository.
 
 ## High-level status dashboard
 
-| Test            | GAP `master` | GAP `4.12.2` |
+| Test            | GAP `master` | GAP `4.13.1` |
 |:---------------:|:----------:|:----------:|
-| Released packages | [![Tests](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gap-system/PackageDistro/data/badges/latest-master/badge.json)](https://gap-system.github.io/PackageDistro/latest-master/redirect.html) | [![Tests](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gap-system/PackageDistro/data/badges/latest-4.12.2/badge.json)](https://gap-system.github.io/PackageDistro/latest-4.12.2/redirect.html) |
+| Released packages | [![Tests](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gap-system/PackageDistro/data/badges/latest-master/badge.json)](https://gap-system.github.io/PackageDistro/latest-master/redirect.html) | [![Tests](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gap-system/PackageDistro/data/badges/latest-4.13.1/badge.json)](https://gap-system.github.io/PackageDistro/latest-4.13.1/redirect.html) |
 
 
 ## Instructions for package authors
