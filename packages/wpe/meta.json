@@ -1,0 +1,50 @@
+{
+  "AbstractHTML": "",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSHA256": "5060c63080c51f20f95b421287214f7e2c7e6dcd474d32869666ba8b02c18ebd",
+  "ArchiveURL": "https://github.com/gap-packages/WPE/releases/download/v0.7/WPE-0.7",
+  "AvailabilityTest": null,
+  "Date": "16/10/2024",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">= 4.13",
+    "NeededOtherPackages": [],
+    "SuggestedOtherPackages": []
+  },
+  "IssueTrackerURL": "https://github.com/gap-packages/WPE/issues",
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "WPE",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "Provides efficient methods for working with wreath product elements.",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSHA256": "a0a4e9a85cc25a583d942c5f124e1e489ba569b136349d26b8b62626f31a942b",
+  "PackageInfoURL": "https://gap-packages.github.io/WPE/PackageInfo.g",
+  "PackageName": "WPE",
+  "PackageWWWHome": "https://gap-packages.github.io/WPE/",
+  "Persons": [
+    {
+      "Email": "friedrich.rober@rwth-aachen.de",
+      "FirstNames": "Friedrich",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Rober"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/WPE/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/WPE"
+  },
+  "Status": "deposited",
+  "Subtitle": "Provides efficient methods for working with wreath product elements.",
+  "TestFile": "tst/testall.g",
+  "Version": "0.7"
+}
