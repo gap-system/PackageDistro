@@ -1,8 +1,8 @@
 {
   "AbstractHTML": "\n          The Semigroups package is a GAP package for semigroups, and monoids.\n          There are particularly efficient methods for finitely presented\n          semigroups and monoids, and for semigroups and monoids consisting of\n          transformations, partial permutations, bipartitions, partitioned\n          binary relations, subsemigroups of regular Rees 0-matrix semigroups,\n          and matrices of various semirings including boolean matrices,\n          matrices over finite fields, and certain tropical matrices.\n\n          Semigroups contains efficient methods for creating semigroups,\n          monoids, and inverse semigroups and monoids, calculating their\n          Green's structure, ideals, size, elements, group of units, small\n          generating sets, testing membership, finding the inverses of a\n          regular element, factorizing elements over the generators, and so on.\n          It is possible to test if a semigroup satisfies a particular\n          property, such as if it is regular, simple, inverse, completely\n          regular, and a large number of further properties.\n\n          There are methods for finding presentations for a semigroup, the\n          congruences of a semigroup, the maximal subsemigroups of a finite\n          semigroup, smaller degree partial permutation representations, and\n          the character tables of inverse semigroups. There are functions for\n          producing pictures of the Green's structure of a semigroup, and for\n          drawing graphical representations of certain types of elements.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "aee9864514d6910127e13de31bd2fd3744101b00ce6950ffdeca079cfa088216",
-  "ArchiveURL": "https://github.com/semigroups/Semigroups/releases/download/v5.3.7/semigroups-5.3.7",
+  "ArchiveSHA256": "9a22d6c6cd2a99392e286b6a4636258cdf50a308655dc11f444696aa4880d98e",
+  "ArchiveURL": "https://github.com/semigroups/Semigroups/releases/download/v5.4.0/semigroups-5.4.0",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "\n          The Semigroups package is a GAP package for semigroups, and monoids.\n          There are particularly efficient methods for finitely presented\n          semigroups and monoids, and for semigroups and monoids consisting of\n          transformations, partial permutations, bipartitions, partitioned\n          binary relations, subsemigroups of regular Rees 0-matrix semigroups,\n          and matrices of various semirings including boolean matrices,\n          matrices over finite fields, and certain tropical matrices.\n\n          Semigroups contains efficient methods for creating semigroups,\n          monoids, and inverse semigroups and monoids, calculating their\n          Green's structure, ideals, size, elements, group of units, small\n          generating sets, testing membership, finding the inverses of a\n          regular element, factorizing elements over the generators, and so on.\n          It is possible to test if a semigroup satisfies a particular\n          property, such as if it is regular, simple, inverse, completely\n          regular, and a large number of further properties.\n\n          There are methods for finding presentations for a semigroup, the\n          congruences of a semigroup, the maximal subsemigroups of a finite\n          semigroup, smaller degree partial permutation representations, and\n          the character tables of inverse semigroups. There are functions for\n          producing pictures of the Green's structure of a semigroup, and for\n          drawing graphical representations of certain types of elements.",
@@ -12,11 +12,11 @@
   },
   "Autoload": false,
   "AvailabilityTest": null,
-  "BannerString": "-----------------------------------------------------------------------------\nLoading  Semigroups 5.3.7\nby James Mitchell (https://jdbm.me)\nwith contributions by:\n     Marina Anagnostopoulou-Merkouri (https://github.com/marinaanagno),\n     Thomas Breuer (https://www.math.rwth-aachen.de/~Thomas.Breuer/),\n     Stuart Burrell (https://stuartburrell.github.io),\n     Reinis Cirpons (https://reinisc.id.lv/),\n     Tom Conti-Leslie (https://tomcontileslie.com/),\n     Joseph Edwards (https://github.com/Joseph-Edwards),\n     Attila Egri-Nagy (http://www.egri-nagy.hu),\n     Luke Elliott (https://le27.github.io/Luke-Elliott/),\n     Fernando Flores Brito (https://github.com/ffloresbrito),\n     Nick Ham (https://n-ham.github.io),\n     Robert Hancock (https://sites.google.com/view/robert-hancock/),\n     Max Horn (https://www.quendi.de/math),\n     Christopher Jefferson (https://caj.host.cs.st-andrews.ac.uk/),\n     Julius Jonusas (http://julius.jonusas.work),\n     Chinmaya Nagpal,\n     Olexandr Konovalov (https://olexandr-konovalov.github.io/),\n     Artemis Konstantinidi,\n     Dima V. Pasechnik (http://users.ox.ac.uk/~coml0531/),\n     Markus Pfeiffer (https://www.morphism.de/~markusp/),\n     Christopher Russell,\n     Jack Schmidt (https://www.ms.uky.edu/~jack/),\n     Sergio Siccha,\n     Finn Smith (https://flsmith.github.io/),\n     Ben Spiers,\n     Nicolas Thiéry (https://nicolas.thiery.name/),\n     Maria Tsalakou (https://mariatsalakou.github.io/),\n     Chris Wensley,\n     Murray Whyte,\n     Wilf A. Wilson (https://wilf.me),\n     Michael Young (https://mtorpey.github.io/),\n and Fabian Zickgraf.\n-----------------------------------------------------------------------------\n",
-  "Date": "11/03/2024",
+  "BannerString": "-----------------------------------------------------------------------------\nLoading  Semigroups 5.4.0\nby James Mitchell (https://jdbm.me)\nwith contributions by:\n     Marina Anagnostopoulou-Merkouri (https://marinaanagno.github.io),\n     Thomas Breuer (https://www.math.rwth-aachen.de/~Thomas.Breuer/),\n     Stuart Burrell (https://stuartburrell.github.io),\n     Reinis Cirpons (https://reinisc.id.lv/),\n     Tom Conti-Leslie (https://tomcontileslie.com/),\n     Joseph Edwards (https://github.com/Joseph-Edwards),\n     Attila Egri-Nagy (http://www.egri-nagy.hu),\n     Luke Elliott (https://le27.github.io/Luke-Elliott/),\n     Fernando Flores Brito,\n     Tillman Froehlich,\n     Nick Ham (https://n-ham.github.io),\n     Robert Hancock (https://sites.google.com/view/robert-hancock/),\n     Max Horn (https://www.quendi.de/math),\n     Christopher Jefferson (https://heather.cafe/),\n     Julius Jonusas (http://julius.jonusas.work),\n     Chinmaya Nagpal,\n     Olexandr Konovalov (https://olexandr-konovalov.github.io/),\n     Artemis Konstantinidi,\n     Hyeokjun Kwon,\n     Dima V. Pasechnik (http://users.ox.ac.uk/~coml0531/),\n     Markus Pfeiffer (https://markusp.morphism.de/),\n     Christopher Russell,\n     Jack Schmidt (https://www.ms.uky.edu/~jack/),\n     Sergio Siccha,\n     Finn Smith (https://flsmith.github.io/),\n     Ben Spiers,\n     Nicolas Thiéry (https://nicolas.thiery.name/),\n     Maria Tsalakou (https://mariatsalakou.github.io/),\n     Chris Wensley,\n     Murray Whyte,\n     Wilf A. Wilson (https://wilf.me),\n     Tianrun Yang,\n     Michael Young (https://mtorpey.github.io/),\n and Fabian Zickgraf.\n-----------------------------------------------------------------------------\n",
+  "Date": "19/10/2024",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">=4.12.0",
+    "GAP": ">=4.12.1",
     "NeededOtherPackages": [
       [
         "datastructures",
@@ -79,7 +79,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "168fbfd1ad8c5c9ace5abf2f3cfbf2f835166b002f30a6966b313ac23cc98574",
+  "PackageInfoSHA256": "a6b44638d7c8cd37d7eb84c1bdc664a64457b32ed3d9d65a51e402b24ef52f5d",
   "PackageInfoURL": "https://semigroups.github.io/Semigroups/PackageInfo.g",
   "PackageName": "Semigroups",
   "PackageWWWHome": "https://semigroups.github.io/Semigroups",
@@ -96,15 +96,14 @@
       "WWWHome": "https://jdbm.me"
     },
     {
-      "Email": "mam49@st-andrews.ac.uk",
+      "Email": "marina.anagnostopoulou-merkouri@bristol.ac.uk",
       "FirstNames": "Marina",
-      "Institution": "University of St Andrews",
+      "Institution": "University of Bristol",
       "IsAuthor": true,
       "IsMaintainer": false,
       "LastName": "Anagnostopoulou-Merkouri",
-      "Place": "St Andrews",
-      "PostalAddress": "Mathematical Institute, North Haugh, St Andrews, Fife, KY16 9SS, Scotland",
-      "WWWHome": "https://github.com/marinaanagno"
+      "Place": "Bristol",
+      "WWWHome": "https://marinaanagno.github.io"
     },
     {
       "Email": "sam@math.rwth-aachen.de",
@@ -178,8 +177,14 @@
       "FirstNames": "Fernando",
       "IsAuthor": true,
       "IsMaintainer": false,
-      "LastName": "Flores Brito",
-      "WWWHome": "https://github.com/ffloresbrito"
+      "LastName": "Flores Brito"
+    },
+    {
+      "Email": "trf1@st-andrews.ac.uk",
+      "FirstNames": "Tillman",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Froehlich"
     },
     {
       "Email": "nicholas.charles.ham@gmail.com",
@@ -192,7 +197,7 @@
       "WWWHome": "https://n-ham.github.io"
     },
     {
-      "Email": "hancock@informatik.uni-heidelberg.de",
+      "Email": "robert.hancock@maths.ox.ac.uk",
       "FirstNames": "Robert",
       "IsAuthor": true,
       "IsMaintainer": false,
@@ -219,7 +224,7 @@
       "LastName": "Jefferson",
       "Place": "St Andrews",
       "PostalAddress": "Jack Cole Building, North Haugh, St Andrews, Fife, KY16 9SX, Scotland",
-      "WWWHome": "https://caj.host.cs.st-andrews.ac.uk/"
+      "WWWHome": "https://heather.cafe/"
     },
     {
       "Email": "j.jonusas@gmail.com",
@@ -231,14 +236,10 @@
       "WWWHome": "http://julius.jonusas.work"
     },
     {
-      "Email": "chinmaya1011@gmail.com",
       "FirstNames": "Chinmaya",
-      "Institution": "University of St Andrews",
       "IsAuthor": true,
       "IsMaintainer": false,
-      "LastName": "Nagpal",
-      "Place": "St Andrews",
-      "PostalAddress": "Mathematical Institute, North Haugh, St Andrews, Fife, KY16 9SS, Scotland"
+      "LastName": "Nagpal"
     },
     {
       "Email": "obk1@st-andrews.ac.uk",
@@ -252,14 +253,16 @@
       "WWWHome": "https://olexandr-konovalov.github.io/"
     },
     {
-      "Email": "ak316@st-andrews.ac.uk",
       "FirstNames": "Artemis",
-      "Institution": "University of St Andrews",
       "IsAuthor": true,
       "IsMaintainer": false,
-      "LastName": "Konstantinidi",
-      "Place": "St Andrews",
-      "PostalAddress": "Mathematical Institute, North Haugh, St Andrews, Fife, KY16 9SS, Scotland"
+      "LastName": "Konstantinidi"
+    },
+    {
+      "FirstNames": "Hyeokjun",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Kwon"
     },
     {
       "Email": "dmitrii.pasechnik@cs.ox.ac.uk",
@@ -278,7 +281,7 @@
       "IsAuthor": true,
       "IsMaintainer": false,
       "LastName": "Pfeiffer",
-      "WWWHome": "https://www.morphism.de/~markusp/"
+      "WWWHome": "https://markusp.morphism.de/"
     },
     {
       "FirstNames": "Christopher",
@@ -313,7 +316,6 @@
       "WWWHome": "https://flsmith.github.io/"
     },
     {
-      "Email": "bspiers972@outlook.com",
       "FirstNames": "Ben",
       "IsAuthor": true,
       "IsMaintainer": false,
@@ -366,6 +368,12 @@
       "WWWHome": "https://wilf.me"
     },
     {
+      "FirstNames": "Tianrun",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Yang"
+    },
+    {
       "Email": "mct25@st-andrews.ac.uk",
       "FirstNames": "Michael",
       "Institution": "University of St Andrews",
@@ -392,5 +400,5 @@
   "Status": "deposited",
   "Subtitle": "A package for semigroups and monoids",
   "TestFile": "tst/teststandard.g",
-  "Version": "5.3.7"
+  "Version": "5.4.0"
 }
