@@ -2,15 +2,11 @@
   "AbstractHTML": "<span class=\"pkgname\">DESIGN</span> is a package for constructing, classifying, partitioning, and studying block designs.",
   "AcceptDate": "08/2006",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "30d9773f9de779df6f8d1df8fd05474a310bfd4c05e471b98114ba38ecfed942",
-  "ArchiveURL": "https://github.com/gap-packages/design/releases/download/v1.8/design-1.8",
+  "ArchiveSHA256": "962b28c746fb4754e3096970b9217d408035c3348257643c504dd8d760a08e4e",
+  "ArchiveURL": "https://github.com/gap-packages/design/releases/download/v1.8.1/design-1.8.1",
   "AvailabilityTest": null,
-  "BinaryFiles": [
-    "doc/manual.dvi",
-    "doc/manual.pdf"
-  ],
   "CommunicatedBy": "Akos Seress (Ohio State)",
-  "Date": "20/02/2023",
+  "Date": "21/10/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10",
@@ -52,7 +48,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "fc573aab422b44bd86d417c33918543568c687ad062a67bca928d9e3d48bb801",
+  "PackageInfoSHA256": "1b432fed2319c06747d1146f85c39e46c6ce9a6b72e5561d00214f5483df00ab",
   "PackageInfoURL": "https://gap-packages.github.io/design/PackageInfo.g",
   "PackageName": "DESIGN",
   "PackageWWWHome": "https://gap-packages.github.io/design",
@@ -76,5 +72,5 @@
   "Status": "accepted",
   "Subtitle": "The Design Package for GAP",
   "TestFile": "tst/testall.g",
-  "Version": "1.8"
+  "Version": "1.8.1"
 }
