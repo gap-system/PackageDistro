@@ -2,17 +2,18 @@
   "AbstractHTML": "The <span class=\"pkgname\">ANUPQ</span> package provides an interactive    interface to the p-quotient, p-group generation and standard presentation    algorithms of the ANU pq C program.",
   "AcceptDate": "04/2002",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSHA256": "8276e5191308d3a96c968bde53eed2d0a5af3de374d5f82bd378aa608f5e3e23",
-  "ArchiveURL": "https://github.com/gap-packages/anupq/releases/download/v3.3.0/anupq-3.3.0",
+  "ArchiveSHA256": "fba1526f9e904e13ee7a9b980c795fbf27a8276c6734d684c1f91ebb3a1926b6",
+  "ArchiveURL": "https://github.com/gap-packages/anupq/releases/download/v3.3.1/anupq-3.3.1",
   "AutoDoc": {
     "TitlePage": {
-      "Copyright": "\n      &copyright; 2001-2016 by Greg Gamble<P/>\n      &copyright; 2001-2005 by Werner Nickel<P/>\n      &copyright; 1995-2001 by Eamon O'Brien<P/>\n\n      The &GAP; package &ANUPQ; is licensed under the <URL Text=\"Artistic License 2.0\">https://opensource.org/licenses/artistic-license-2.0</URL>.\n      "
+      "Copyright": "\n      <P/>\n      &copyright; 2001-2016 by Greg Gamble<P/>\n      &copyright; 2001-2005 by Werner Nickel<P/>\n      &copyright; 1995-2001 by Eamon O'Brien<P/>\n\n      The &GAP; package &ANUPQ; is licensed under the <URL Text=\"Artistic License 2.0\">https://opensource.org/licenses/artistic-license-2.0</URL>.\n      ",
+      "TitleComment": "\n            &ANUPQ; is maintained by <URL Text=\"Max Horn\">mailto:mhorn@rptu.de</URL>.\n            For support requests, please use <URL Text=\"our issue tracker\">https</URL>.\n            "
     }
   },
   "AvailabilityTest": null,
   "BannerFunction": null,
   "CommunicatedBy": "Charles Wright (Eugene)",
-  "Date": "05/01/2023",
+  "Date": "21/10/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.9",
@@ -44,7 +45,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "0bbb5cd158e8004574d58642cf9a74ff3506bd2bddaa2bdcb1b37cca7a19da78",
+  "PackageInfoSHA256": "0c4657d11631aca4d7ba40d9301073b46e8e36619290dba2227141d4bc69cb6e",
   "PackageInfoURL": "https://gap-packages.github.io/anupq/PackageInfo.g",
   "PackageName": "ANUPQ",
   "PackageWWWHome": "https://gap-packages.github.io/anupq/",
@@ -54,18 +55,16 @@
       "FirstNames": "Greg",
       "Institution": "Curtin University",
       "IsAuthor": true,
-      "IsMaintainer": true,
+      "IsMaintainer": false,
       "LastName": "Gamble",
       "Place": "Perth",
-      "PostalAddress": "Department of Mathematics and Statistics\nCurtin University\nGPO Box U 1987\nPerth WA 6845\nAustralia",
-      "WWWHome": "http://school.maths.uwa.edu.au/~gregg"
+      "PostalAddress": "Department of Mathematics and Statistics\nCurtin University\nGPO Box U 1987\nPerth WA 6845\nAustralia"
     },
     {
       "FirstNames": "Werner",
       "IsAuthor": true,
       "IsMaintainer": false,
-      "LastName": "Nickel",
-      "WWWHome": "https://www2.mathematik.tu-darmstadt.de/~nickel/"
+      "LastName": "Nickel"
     },
     {
       "Email": "obrien@math.auckland.ac.nz",
@@ -79,14 +78,14 @@
       "WWWHome": "https://www.math.auckland.ac.nz/~obrien"
     },
     {
-      "Email": "horn@mathematik.uni-kl.de",
+      "Email": "mhorn@rptu.de",
       "FirstNames": "Max",
-      "Institution": "TU Kaiserslautern",
+      "Institution": "RPTU Kaiserslautern-Landau",
       "IsAuthor": false,
       "IsMaintainer": true,
       "LastName": "Horn",
       "Place": "Kaiserslautern, Germany",
-      "PostalAddress": "Fachbereich Mathematik\nTU Kaiserslautern\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
+      "PostalAddress": "Fachbereich Mathematik\nRPTU Kaiserslautern-Landau\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
       "WWWHome": "https://www.quendi.de/math"
     }
   ],
@@ -98,5 +97,5 @@
   "Status": "accepted",
   "Subtitle": "ANU p-Quotient",
   "TestFile": "tst/testinstall.g",
-  "Version": "3.3.0"
+  "Version": "3.3.1"
 }
