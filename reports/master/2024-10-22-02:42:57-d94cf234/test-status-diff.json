@@ -1,0 +1,16 @@
+{
+  "current": "master/2024-10-22-02:42:57-d94cf234",
+  "last": "master/2024-10-21-20:33:15-d94cf234",
+  "total": 162,
+  "failure": 0,
+  "success": 158,
+  "skipped": 4,
+  "new": 0,
+  "removed": 0,
+  "failure_changed": 0,
+  "success_changed": 0,
+  "skipped_changed": 0,
+  "failure_same": 0,
+  "success_same": 158,
+  "skipped_same": 4
+}
