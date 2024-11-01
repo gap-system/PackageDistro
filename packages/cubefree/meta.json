@@ -2,12 +2,11 @@
   "AbstractHTML": "The <span class=\"pkgname\">Cubefree</span> package contains methods to construct up to isomorphism the groups of a given (reasonable) cubefree order. The main function ConstructAllCFGroups(n) constructs all groups of a given cubefree order n. The function NumberCFGroups(n) counts all groups of a cubefree order n. Furthermore, IrreducibleSubgroupsOfGL(2,q) constructs the irreducible subgroups of GL(2,q), q=p^r, p>=5 prime, up to conjugacy and RewriteAbsolutelyIrreducibleMatrixGroup(G) rewrites the absolutely irreducible matrix group G (over a finite field) over a minimal subfield.",
   "AcceptDate": "10/2007",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "993f420922b48c9ab4f7e77c6de50041ebcf1cd6d13376a940ecd84684255676",
-  "ArchiveURL": "https://github.com/gap-packages/cubefree/releases/download/v1.19/cubefree-1.19",
-  "Autoload": false,
+  "ArchiveSHA256": "c4f4b749bf47f22cb76764933bc03e74999066370d93901cdf5a1be27771a81d",
+  "ArchiveURL": "https://github.com/gap-packages/cubefree/releases/download/v1.20/cubefree-1.20",
   "AvailabilityTest": null,
   "CommunicatedBy": "David Joyner (Annapolis)",
-  "Date": "21/02/2022",
+  "Date": "01/11/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.8",
@@ -36,7 +35,6 @@
         "doc",
         "htm"
       ],
-      "Autoload": true,
       "BookName": "Cubefree",
       "HTMLStart": "htm/chapters.htm",
       "LongTitle": "Constructing the groups of a given cubefree order",
@@ -44,7 +42,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "df738657020ff638d7b367e82324c54fae0a8ab84f79acbe4227ae1b46bfe77b",
+  "PackageInfoSHA256": "296440b642a5607a0fdd221ac6ddb88a9508dfebea3ebf719e76e5d12869def7",
   "PackageInfoURL": "https://gap-packages.github.io/cubefree/PackageInfo.g",
   "PackageName": "Cubefree",
   "PackageWWWHome": "https://gap-packages.github.io/cubefree/",
@@ -69,5 +67,5 @@
   "Status": "accepted",
   "Subtitle": "Constructing the Groups of a Given Cubefree Order",
   "TestFile": "tst/testall.g",
-  "Version": "1.19"
+  "Version": "1.20"
 }
