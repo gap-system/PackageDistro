@@ -1,22 +1,22 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">RingsForHomalg</span> package provides small dictionaries for  <span class=\"pkgname\">homalg</span> to speak (as much as needed of) the languages  of Singular, Macaulay2, MAGMA, Sage, and Maple",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "7b97f6aa2c76e27af3d85924fa2a4fd1ff3cb31f63f0e6fd32ca7c60b3932ea5",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/RingsForHomalg-2024.06-01/RingsForHomalg-2024.06-01",
+  "ArchiveSHA256": "acfbbb152b48629988232748e2936e35fa65e5bdccaee21e21b18683ccfd11ca",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/RingsForHomalg-2024.11-02/RingsForHomalg-2024.11-02",
   "AutoDoc": {
     "TitlePage": {
       "Copyright": "&copyright; 2007-2015 by Mohamed Barakat, Simon Görtzen, Markus Kirschmer, Markus Lange-Hegermann, Oleksandr Motsak, Max Neunhöffer, Daniel Robertz, and Hans Schönemann.\n\nThis package may be distributed under the terms and conditions of the GNU Public License Version 2 or (at your option) any later version.\n"
     }
   },
   "AvailabilityTest": null,
-  "Date": "2024-06-20",
+  "Date": "2024-11-16",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12.1",
     "NeededOtherPackages": [
       [
         "MatricesForHomalg",
-        ">= 2023.08-01"
+        ">= 2024.11-02"
       ],
       [
         "HomalgToCAS",
@@ -53,7 +53,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "3c29bfcc6197e204dc67977f0f3bb45d3311837c4b35de0096edb5cecc49a96f",
+  "PackageInfoSHA256": "290f3ed1cc83e049749d6bc193df20ed210f2bfea8f7b4cd5d7af241fd276f07",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/RingsForHomalg/PackageInfo.g",
   "PackageName": "RingsForHomalg",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/RingsForHomalg",
@@ -176,5 +176,5 @@
   "Status": "deposited",
   "Subtitle": "Dictionaries of external rings",
   "TestFile": "tst/testall.g",
-  "Version": "2024.06-01"
+  "Version": "2024.11-02"
 }
