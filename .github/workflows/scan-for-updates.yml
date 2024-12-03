@@ -60,6 +60,11 @@ jobs:
           GAP_PKGS_TO_CLONE: 'crypting json'
           GAP_PKGS_TO_BUILD: 'crypting json'
 
+      - name: "Set up Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
       - name: "Install prerequisites for package distribution tools"
         run: python -m pip install -r tools/requirements.txt
 

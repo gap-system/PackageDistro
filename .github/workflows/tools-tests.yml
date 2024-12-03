@@ -9,18 +9,25 @@ on:
   push:
     paths:
       - 'tools/*'
+      - '.github/workflows/tools-test.yml'  # modified workflow may affect tools
     branches:
       - main
   pull_request:
     paths:
       - 'tools/*'
+      - '.github/workflows/tools-test.yml'  # modified workflow may affect tools
 
 jobs:
-  py39:
+  py311:
     name: "Run tests"
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v4
+
+      - name: "Set up Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
 
       - name: Install dependencies
         run: |

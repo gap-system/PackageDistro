@@ -30,6 +30,11 @@ jobs:
     name: "Upload report"
     runs-on: ubuntu-20.04
     steps:
+      - name: "Set up Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
       - uses: actions/checkout@v4
 
       - name: "Install package distribution tools"
