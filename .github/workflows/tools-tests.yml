@@ -9,11 +9,13 @@ on:
   push:
     paths:
       - 'tools/*'
+      - '.github/workflows/tools-test.yml'  # modified workflow may affect tools
     branches:
       - main
   pull_request:
     paths:
       - 'tools/*'
+      - '.github/workflows/tools-test.yml'  # modified workflow may affect tools
 
 jobs:
   py311:
