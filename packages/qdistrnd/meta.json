@@ -1,8 +1,8 @@
 {
   "AbstractHTML": "The GAP package <code>QDistRnd</code> \nimplements a probabilistic algorithm for finding the \nminimum distance of a quantum code linear over a finite\nfield GF(<var>q</var>).\n",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "40c9751415e799e024a6cd01543fc9ae033673365fc66dbaeee1b052e30e2561",
-  "ArchiveURL": "https://github.com/QEC-pages/QDistRnd/releases/download/v0.9.4/qdistrnd-0.9.4",
+  "ArchiveSHA256": "6ace3148eee647f20ec072ed7296bd5c385c165765af94a3bb66d3a0487f033e",
+  "ArchiveURL": "https://github.com/QEC-pages/QDistRnd/releases/download/v0.9.5/qdistrnd-0.9.5",
   "AutoDoc": {
     "TitlePage": {
       "Acknowledgements": "\n      We appreciate very much all past and future comments, suggestions and \n      contributions to this package and its documentation provided by &GAP;\n      users and developers.\n            ",
@@ -10,7 +10,7 @@
     }
   },
   "AvailabilityTest": null,
-  "Date": "23/02/2024",
+  "Date": "20/11/2024",
   "Dependencies": {
     "GAP": "4.11",
     "NeededOtherPackages": [
@@ -49,7 +49,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "43d12b483a94d1a7a12532bfd5939e5cdc5ec89c6081e7f4e7bda3482b24f085",
+  "PackageInfoSHA256": "6c1078df9892948ed4661b7d76700bd72b1455ccfc98f25f68c579823a34e48f",
   "PackageInfoURL": "https://QEC-pages.github.io/QDistRnd/PackageInfo.g",
   "PackageName": "QDistRnd",
   "PackageWWWHome": "https://QEC-pages.github.io/QDistRnd",
@@ -92,5 +92,5 @@
   "Subtitle": "Calculate the distance of a q-ary quantum stabilizer code",
   "SupportEmail": "leonid.pryadko@gmail.com",
   "TestFile": "tst/testall.g",
-  "Version": "0.9.4"
+  "Version": "0.9.5"
 }
