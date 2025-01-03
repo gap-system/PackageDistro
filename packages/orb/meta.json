@@ -1,15 +1,15 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">orb</span> package is about enumerating orbits in various ways.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "747b963f1125b51244b279ed090f2a15d480d88beb4782b1ae0307fbc3daed8a",
-  "ArchiveURL": "https://github.com/gap-packages/orb/releases/download/v4.9.1/orb-4.9.1",
+  "ArchiveSHA256": "99167072903307ad0a8bcbe1943e18a9677f3aad36024928762c43a0e65c345a",
+  "ArchiveURL": "https://github.com/gap-packages/orb/releases/download/v4.9.2/orb-4.9.2",
   "AutoDoc": {
     "TitlePage": {
       "Copyright": "&copyright; 2005-2014 by Jürgen Müller, Max Neunhöffer and Felix Noeske<P/>\n\nThis program is free software: you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation, either version 3 of the License, or\n(at your option) any later version.\n\nThis program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License\nalong with this program.  If not, see\n<URL><Link>https://www.gnu.org/licenses/</Link></URL>.\n"
     }
   },
   "AvailabilityTest": null,
-  "Date": "26/08/2024",
+  "Date": "03/01/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.12",
@@ -41,7 +41,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "7a01fd3a492e1bc1c6ec2450e30124bd41650e02ec42492968db8818ddc37184",
+  "PackageInfoSHA256": "054a8d2c2546f920e039d1f60bdd93234236466afbd40d67bcaf17df8666faf9",
   "PackageInfoURL": "https://gap-packages.github.io/orb/PackageInfo.g",
   "PackageName": "orb",
   "PackageWWWHome": "https://gap-packages.github.io/orb",
@@ -97,5 +97,5 @@
   "Status": "deposited",
   "Subtitle": "Methods to enumerate orbits",
   "TestFile": "tst/testall.g",
-  "Version": "4.9.1"
+  "Version": "4.9.2"
 }
