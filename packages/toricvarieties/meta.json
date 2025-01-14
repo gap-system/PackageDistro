@@ -74,7 +74,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "8741bf4eb3191c53076a544c27bc8033aae021f47f1dd78b143c5fb6c60bef15",
+  "PackageInfoSHA256": "bf688c74d882df1d0c94cac0ddb8ed287f5ccbf6bed164ed611bc81ec310ed17",
   "PackageInfoURL": "https://homalg-project.github.io/ToricVarieties_project/ToricVarieties/PackageInfo.g",
   "PackageName": "ToricVarieties",
   "PackageWWWHome": "https://homalg-project.github.io/ToricVarieties_project/ToricVarieties",
@@ -84,7 +84,7 @@
       "FirstNames": "Sebastian",
       "Institution": "University of Siegen",
       "IsAuthor": true,
-      "IsMaintainer": true,
+      "IsMaintainer": false,
       "LastName": "Gutsche",
       "Place": "Siegen",
       "PostalAddress": "Department Mathematik\nUniversität Siegen\nWalter-Flex-Straße 3\n57072 Siegen\nGermany",
