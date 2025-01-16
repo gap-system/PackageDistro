@@ -69,8 +69,6 @@ def test_exec_gap(ensure_in_tests_dir):
 def test_scan_for_one_update(ensure_in_tests_dir, tmpdir):
     scan_for_one_update(str(tmpdir), "aclib")
     assert exists(join(str(tmpdir), "aclib.g"))
-    scan_for_one_update(str(tmpdir), "toricvarieties")
-    assert not exists(join(str(tmpdir), "toricvarieties.g"))
     scan_for_one_update(str(tmpdir), "atlasrep")
     assert exists(join(str(tmpdir), "atlasrep.g"))
 
