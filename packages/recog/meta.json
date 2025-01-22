@@ -1,15 +1,15 @@
 {
   "AbstractHTML": "\n    <p><b>Warning:</b> This package is still under development and\n    this version is to be considered a working, but preliminary one.</p>\n\n    <p>This package contains a collection of methods for the\n    constructive recognition of groups. It is mostly intended for\n    permutation groups, matrix groups and projective groups.</p>\n    ",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSHA256": "67a22055faa18b1ce132e746d6efacec9c6b976ea022ce820269ddb9cc12a9c9",
-  "ArchiveURL": "https://github.com/gap-packages/recog/releases/download/v1.4.3/recog-1.4.3",
+  "ArchiveSHA256": "a9b11c0250669e18ef95060042011f5cbf17449155f8ed5bca0e1f17c1808c38",
+  "ArchiveURL": "https://github.com/gap-packages/recog/releases/download/v1.4.4/recog-1.4.4",
   "AutoDoc": {
     "TitlePage": {
       "Copyright": "&copyright; 2005-2014 by Max Neunhöffer and Ákos Seress<P/>\n&copyright; 2005-2022 by its authors, see file <F>COPYRIGHT</F> for details.<P/>\n\nThis package may be distributed under the terms and conditions of the\nGNU Public License Version 3 or (at your option) any later version.\n"
     }
   },
   "AvailabilityTest": null,
-  "Date": "16/10/2024",
+  "Date": "22/01/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.11",
@@ -60,7 +60,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "c506553833e37c343fe348c3c9380f413cd00756f2a00c912fab4fd0529cfa3d",
+  "PackageInfoSHA256": "ab9fbca532e14cbfe63d9cc78d19f88d5f0e5d0d3f5ad5650014adb9ed4009cd",
   "PackageInfoURL": "https://gap-packages.github.io/recog/PackageInfo.g",
   "PackageName": "recog",
   "PackageWWWHome": "https://gap-packages.github.io/recog",
@@ -253,5 +253,5 @@
   "Status": "deposited",
   "Subtitle": "A package for constructive recognition of permutation and matrix groups",
   "TestFile": "tst/testquick.g",
-  "Version": "1.4.3"
+  "Version": "1.4.4"
 }
