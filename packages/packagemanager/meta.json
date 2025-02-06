@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "<span class=\"pkgname\">PackageManager</span> is a basic collection of    simple functions for installing and removing    <span class=\"pkgname\">GAP</span> packages, with the eventual aim of    becoming a full pip-style package manager for the    <span class=\"pkgname\">GAP</span> system.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "4913b5960b1ad55c16f7b1da9b07d032ead0fc7710f346506441194ae074d249",
-  "ArchiveURL": "https://github.com/gap-packages/PackageManager/releases/download/v1.6/PackageManager-1.6",
+  "ArchiveSHA256": "2df07433a9cc096614ab480692c70e8bd6dd57dc73bb7a34a327713ec41f4fd7",
+  "ArchiveURL": "https://github.com/gap-packages/PackageManager/releases/download/v1.6.1/PackageManager-1.6.1",
   "AvailabilityTest": null,
-  "Date": "19/09/2024",
+  "Date": "05/02/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12",
@@ -49,7 +49,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "322b5df9e81bc137a5277b8e3a366e315d53aa2973f96bd8202824761cd81048",
+  "PackageInfoSHA256": "63d5eded63630b761cfab7583b04feb25efa381de5d88115099568455efb0ee9",
   "PackageInfoURL": "https://gap-packages.github.io/PackageManager/PackageInfo.g",
   "PackageName": "PackageManager",
   "PackageWWWHome": "https://gap-packages.github.io/PackageManager/",
@@ -63,7 +63,7 @@
       "LastName": "Young",
       "Place": "St Andrews",
       "PostalAddress": "School of Computer Science\nUniversity of St Andrews\nJack Cole Building, North Haugh\nSt Andrews, Fife, KY16 9SX\nUnited Kingdom",
-      "WWWHome": "https://mct25.host.cs.st-andrews.ac.uk/"
+      "WWWHome": "https://myoung.uk/work"
     },
     {
       "Email": "support@gap-system.org",
@@ -81,5 +81,5 @@
   "Status": "deposited",
   "Subtitle": "Easily download and install GAP packages",
   "TestFile": "tst/testall.g",
-  "Version": "1.6"
+  "Version": "1.6.1"
 }
