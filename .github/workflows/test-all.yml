@@ -306,6 +306,7 @@ jobs:
                 SetInfoLevel(InfoPackageLoading, PACKAGE_DEBUG);
                 LoadPackage(pkgname);
                 SetInfoLevel(InfoPackageLoading, PACKAGE_ERROR);
+                SetInfoLevel(InfoPackageManager, 10); # HACK
 
                 res:=TestPackage(pkgname);
                 FORCE_QUIT_GAP(res);
