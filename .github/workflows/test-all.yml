@@ -300,6 +300,7 @@ jobs:
         id: tests-default
         run: |
           PKG=${{ matrix.package }}
+          set -i -e 's/, 1/, 10/' $HOME/gap/pkg/*/tst/testall.g # HACK to increase InfoPackageManager
           gap --quitonbreak -r -c "
                 pkgname := \"$PKG\";
 
