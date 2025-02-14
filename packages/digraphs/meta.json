@@ -1,8 +1,8 @@
 {
   "AbstractHTML": "The &Digraphs; package is a &GAP; package containing\n          methods for graphs, digraphs, and multidigraphs.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "08dcc08be73a042f85ec1694111f91b1026b3241483f74f7100b308bbf9c4f11",
-  "ArchiveURL": "https://github.com/digraphs/Digraphs/releases/download/v1.9.0/digraphs-1.9.0",
+  "ArchiveSHA256": "fe7670dabaca7b4f237be360e791ed4a01d096f8b6ad4c8bbd35b772b04503c8",
+  "ArchiveURL": "https://github.com/digraphs/Digraphs/releases/download/v1.10.0/digraphs-1.10.0",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "The &Digraphs; package is a &GAP; package containing\n          methods for graphs, digraphs, and multidigraphs.",
@@ -12,8 +12,8 @@
   },
   "Autoload": false,
   "AvailabilityTest": null,
-  "BannerString": "-----------------------------------------------------------------------------\nLoading Digraphs 1.9.0\nby:\n     Jan De Beule (http://homepages.vub.ac.be/~jdbeule/),\n     Julius Jonusas (http://julius.jonusas.work),\n     James Mitchell (https://jdbm.me),\n     Wilf A. Wilson (https://wilf.me),\n     Michael Young (https://mct25.host.cs.st-andrews.ac.uk)\nwith contributions by:\n     Marina Anagnostopoulou-Merkouri,\n     Finn Buck,\n     Stuart Burrell (https://stuartburrell.github.io),\n     Graham Campbell,\n     Raiyan Chowdhury,\n     Reinis Cirpons,\n     Ashley Clayton,\n     Tom Conti-Leslie (https://tomcontileslie.com),\n     Joseph Edwards (https://github.com/Joseph-Edwards),\n     Luna Elliott,\n     Isuru Fernando,\n     Ewan Gilligan,\n     Sebastian Gutsche,\n     Samantha Harper,\n     Max Horn (https://www.quendi.de/math),\n     Christopher Jefferson (https://caj.host.cs.st-andrews.ac.uk),\n     Olexandr Konovalov (https://olexandr-konovalov.github.io/),\n     Hyeokjun Kwon,\n     Andrea Lee,\n     Saffron McIver,\n     Michael Orlitzky (https://michael.orlitzky.com/),\n     Matthew Pancer,\n     Markus Pfeiffer (https://markusp.morphism.de/),\n     Daniel Pointon,\n     Lea Racine,\n     Christopher Russell,\n     Artur Schaefer,\n     Isabella Scott,\n     Kamran Sharma,\n     Finn Smith,\n     Ben Spiers,\n     Maria Tsalakou (https://mariatsalakou.github.io/),\n     Meike Weiss (https://bit.ly/4e6pUeP),\n     Murray Whyte,\n and Fabian Zickgraf.\n-----------------------------------------------------------------------------\n",
-  "Date": "06/09/2024",
+  "BannerString": "-----------------------------------------------------------------------------\nLoading Digraphs 1.10.0\nby:\n     Jan De Beule (https://wids.research.vub.be/en/jan-de-beule),\n     Julius Jonusas (http://julius.jonusas.work),\n     James Mitchell (https://jdbm.me),\n     Wilf A. Wilson (https://wilf.me),\n     Michael Young (https://myoung.uk/work/)\nwith contributions by:\n     Marina Anagnostopoulou-Merkouri,\n     Finn Buck,\n     Stuart Burrell (https://stuartburrell.github.io),\n     Graham Campbell,\n     Raiyan Chowdhury,\n     Reinis Cirpons,\n     Ashley Clayton,\n     Tom Conti-Leslie (https://tomcontileslie.com),\n     Joseph Edwards (https://github.com/Joseph-Edwards),\n     Luna Elliott (https://research.manchester.ac.uk/en/persons/luna-elliott),\n     Isuru Fernando,\n     Ewan Gilligan,\n     Gillis Frankie,\n     Sebastian Gutsche,\n     Samantha Harper,\n     Max Horn (https://www.quendi.de/math),\n     Christopher Jefferson (https://heather.cafe/),\n     Malachi Johns,\n     Olexandr Konovalov (https://olexandr-konovalov.github.io/),\n     Hyeokjun Kwon,\n     Aidan Lau,\n     Andrea Lee,\n     Saffron McIver,\n     Michael Orlitzky (https://michael.orlitzky.com/),\n     Matthew Pancer,\n     Markus Pfeiffer (https://markusp.morphism.de/),\n     Daniel Pointon,\n     Lea Racine,\n     Christopher Russell,\n     Artur Schaefer,\n     Isabella Scott,\n     Kamran Sharma,\n     Finn Smith,\n     Ben Spiers,\n     Maria Tsalakou (https://mariatsalakou.github.io/),\n     Meike Weiss (https://bit.ly/4e6pUeP),\n     Murray Whyte,\n and Fabian Zickgraf.\n-----------------------------------------------------------------------------\n",
+  "Date": "14/02/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10.0",
@@ -66,7 +66,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "caa4d7a38b6ecd9afb70e83feb9bb3c20e06aebc83394d2e0659a0dff4794801",
+  "PackageInfoSHA256": "19430bdd6de9afac444bd8119ec60cf655b43df8fd3a57f829e44aca1b59ac89",
   "PackageInfoURL": "https://digraphs.github.io/Digraphs/PackageInfo.g",
   "PackageName": "Digraphs",
   "PackageWWWHome": "https://digraphs.github.io/Digraphs",
@@ -80,7 +80,7 @@
       "LastName": "De Beule",
       "Place": "Brussels",
       "PostalAddress": "Vrije Universiteit Brussel,  Vakgroep Wiskunde,  Pleinlaan 2,  B - 1050 Brussels,  Belgium",
-      "WWWHome": "http://homepages.vub.ac.be/~jdbeule/"
+      "WWWHome": "https://wids.research.vub.be/en/jan-de-beule"
     },
     {
       "Email": "j.jonusas@gmail.com",
@@ -119,7 +119,7 @@
       "LastName": "Young",
       "Place": "St Andrews",
       "PostalAddress": "Jack Cole Building, North Haugh, St Andrews, Fife, KY16 9SX, Scotland",
-      "WWWHome": "https://mct25.host.cs.st-andrews.ac.uk"
+      "WWWHome": "https://myoung.uk/work/"
     },
     {
       "Email": "mam49@st-andrews.ac.uk",
@@ -201,14 +201,13 @@
       "WWWHome": "https://github.com/Joseph-Edwards"
     },
     {
-      "Email": "TODO",
+      "Email": "luna.elliott142857@gmail.com",
       "FirstNames": "Luna",
-      "Institution": "University of St Andrews",
+      "Institution": "University of Manchester",
       "IsAuthor": true,
       "IsMaintainer": false,
       "LastName": "Elliott",
-      "Place": "St Andrews",
-      "PostalAddress": "Mathematical Institute, North Haugh, St Andrews, Fife, KY16 9SS, Scotland"
+      "WWWHome": "https://research.manchester.ac.uk/en/persons/luna-elliott"
     },
     {
       "Email": "isuruf@gmail.com",
@@ -223,6 +222,13 @@
       "IsAuthor": true,
       "IsMaintainer": false,
       "LastName": "Gilligan"
+    },
+    {
+      "Email": "fotg1@st-andrews.ac.uk",
+      "FirstNames": "Gillis",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Frankie"
     },
     {
       "Email": "gutsche@momo.math.rwth-aachen.de",
@@ -258,7 +264,14 @@
       "LastName": "Jefferson",
       "Place": "St Andrews",
       "PostalAddress": "Jack Cole Building, North Haugh, St Andrews, Fife, KY16 9SX, Scotland",
-      "WWWHome": "https://caj.host.cs.st-andrews.ac.uk"
+      "WWWHome": "https://heather.cafe/"
+    },
+    {
+      "Email": "zlj1@st-andrews.ac.uk",
+      "FirstNames": "Malachi",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Johns"
     },
     {
       "Email": "obk1@st-andrews.ac.uk",
@@ -279,14 +292,17 @@
       "LastName": "Kwon"
     },
     {
-      "Email": "ahwl1@st-andrews.ac.uk",
-      "FirstNames": "Andrea",
-      "Institution": "University of St Andrews",
+      "FirstNames": "Aidan",
       "IsAuthor": true,
       "IsMaintainer": false,
-      "LastName": "Lee",
-      "Place": "St Andrews",
-      "PostalAddress": "Mathematical Institute, North Haugh, St Andrews, Fife, KY16 9SS, Scotland"
+      "LastName": "Lau"
+    },
+    {
+      "Email": "ahwl1@st-andrews.ac.uk",
+      "FirstNames": "Andrea",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Lee"
     },
     {
       "Email": "sm544@st-andrews.ac.uk",
@@ -432,5 +448,5 @@
   "Status": "deposited",
   "Subtitle": "Graphs, digraphs, and multidigraphs in GAP",
   "TestFile": "tst/teststandard.g",
-  "Version": "1.9.0"
+  "Version": "1.10.0"
 }
