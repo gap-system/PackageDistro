@@ -300,12 +300,14 @@ jobs:
         id: tests-default
         run: |
           PKG=${{ matrix.package }}
+          sed -i -e 's/, 1/, 10/' $HOME/gap/pkg/*/tst/testall.g # HACK to increase InfoPackageManager
           gap --quitonbreak -r -c "
                 pkgname := \"$PKG\";
 
                 SetInfoLevel(InfoPackageLoading, PACKAGE_DEBUG);
                 LoadPackage(pkgname);
                 SetInfoLevel(InfoPackageLoading, PACKAGE_ERROR);
+                SetInfoLevel(InfoPackageManager, 10); # HACK
 
                 res:=TestPackage(pkgname);
                 FORCE_QUIT_GAP(res);
