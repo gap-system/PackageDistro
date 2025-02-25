@@ -156,6 +156,9 @@ jobs:
 
           # put GAP into PATH
           ln -s $HOME/gap/gap /usr/local/bin/gap
+          
+          echo "=== sysinfo.gap content ==="
+          cat sysinfo.gap
 
       - name: "Extract packages"
         run: |
