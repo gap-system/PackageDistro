@@ -1,0 +1,99 @@
+{
+  "AbstractHTML": "The <span class=\"pkgname\">PrimGrp</span> package provides the library   of primitive permutation groups which includes, up to permutation isomorphism   (i.e., up to conjugacy in the corresponding symmetric group), all primitive   permutation groups of degree &lt; 4096.",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSHA256": "9d6fde0fa4658100f662c364f77c9fd67b1699e9f3dbb60306ed357cc5837cff",
+  "ArchiveURL": "https://github.com/gap-packages/primgrp/releases/download/v3.4.4/primgrp-3.4.4",
+  "AutoDoc": {
+    "entities": {
+      "RELEASEDATE": "25 February 2023",
+      "RELEASEYEAR": "2023",
+      "VERSION": "3.4.4"
+    }
+  },
+  "AvailabilityTest": null,
+  "Date": "25/02/2023",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": "4.10.0",
+    "NeededOtherPackages": [
+      [
+        "GAPDoc",
+        "1.5"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "IssueTrackerURL": "https://github.com/gap-packages/primgrp/issues",
+  "Keywords": [
+    "primitive permutation group"
+  ],
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "primgrp",
+      "HTMLStart": "doc/chap0_mj.html",
+      "LongTitle": "GAP Primitive Permutation Groups Library",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSHA256": "37e2123ad03819d361a3d573d2bbbd5101317bd2cf2915fac63d45e6deb75ebc",
+  "PackageInfoURL": "https://gap-packages.github.io/primgrp/PackageInfo.g",
+  "PackageName": "PrimGrp",
+  "PackageWWWHome": "https://gap-packages.github.io/primgrp/",
+  "Persons": [
+    {
+      "Email": "hulpke@math.colostate.edu",
+      "FirstNames": "Alexander",
+      "Institution": "Department of Mathematics, Colorado State University",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Hulpke",
+      "Place": "Fort Collins, CO",
+      "WWWHome": "https://www.math.colostate.edu/~hulpke/"
+    },
+    {
+      "Email": "obk1@st-andrews.ac.uk",
+      "FirstNames": "Olexandr",
+      "Institution": "University of St Andrews",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "Konovalov",
+      "Place": "St Andrews",
+      "PostalAddress": "School of Computer Science\nUniversity of St Andrews\nJack Cole Building, North Haugh,\nSt Andrews, Fife, KY16 9SX, Scotland",
+      "WWWHome": "https://olexandr-konovalov.github.io/"
+    },
+    {
+      "Email": "colva.roney-dougal@st-andrews.ac.uk",
+      "FirstNames": "Colva M.",
+      "Institution": "University of St Andrews",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Roney-Dougal",
+      "Place": "St Andrews",
+      "PostalAddress": "School of Mathematics and Statistics\nUniversity of St Andrews\nNorth Haugh, St Andrews\nFife, KY16 9SS, Scotland",
+      "WWWHome": "http://www-groups.mcs.st-and.ac.uk/~colva/"
+    },
+    {
+      "Email": "cr66@st-andrews.ac.uk",
+      "FirstNames": "Christopher",
+      "Institution": "University of St Andrews",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Russell",
+      "Place": "St Andrews"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/primgrp/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/primgrp"
+  },
+  "Status": "deposited",
+  "Subtitle": "GAP Primitive Permutation Groups Library",
+  "TestFile": "tst/testall.g",
+  "Version": "3.4.4"
+}

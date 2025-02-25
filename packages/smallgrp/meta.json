@@ -1,0 +1,89 @@
+{
+  "AbstractHTML": "The <span class=\"smallgrp\">SmallGrp</span> package provides the library of groups of certain \"small\" orders. The groups are sorted by their orders and they are listed up to isomorphism; that is, for each of the available orders a complete and irredundant list of isomorphism type representatives of groups is given.",
+  "AcceptDate": "02/2002",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSHA256": "dea2172de9aa89a128aa8846192b7144df03cf54b12459241db7b5fbb7091905",
+  "ArchiveURL": "https://github.com/gap-packages/SmallGrp/releases/download/v1.5.4/SmallGrp-1.5.4",
+  "AvailabilityTest": null,
+  "CommunicatedBy": "Mike Newman (Canberra)",
+  "Date": "04/07/2024",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">= 4.9",
+    "NeededOtherPackages": [
+      [
+        "GAPDoc",
+        ">= 1.5"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "IssueTrackerURL": "https://github.com/gap-packages/SmallGrp/issues",
+  "License": "Artistic-2.0",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "smallgrp",
+      "HTMLStart": "doc/chap0_mj.html",
+      "LongTitle": "The GAP Small Groups Library",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSHA256": "a243807cb009faa7daba0864492d6fdbb4121aec70c87c3b4d783da7d3f52451",
+  "PackageInfoURL": "https://gap-packages.github.io/smallgrp/PackageInfo.g",
+  "PackageName": "SmallGrp",
+  "PackageWWWHome": "https://gap-packages.github.io/smallgrp/",
+  "Persons": [
+    {
+      "FirstNames": "Hans Ulrich",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Besche"
+    },
+    {
+      "Email": "beick@tu-bs.de",
+      "FirstNames": "Bettina",
+      "Institution": "TU Braunschweig",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Eick",
+      "Place": "Braunschweig",
+      "PostalAddress": "Institut Analysis und Algebra\nTU Braunschweig\nUniversitätsplatz 2\nD-38106 Braunschweig\nGermany",
+      "WWWHome": "http://www.iaa.tu-bs.de/beick"
+    },
+    {
+      "Email": "obrien@math.auckland.ac.nz",
+      "FirstNames": "Eamonn",
+      "Institution": "University of Auckland",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "O'Brien",
+      "Place": "Auckland",
+      "PostalAddress": "Department of Mathematics\nUniversity of Auckland\nPrivate Bag 92019\n Auckland\n New Zealand",
+      "WWWHome": "https://www.math.auckland.ac.nz/~obrien"
+    },
+    {
+      "Email": "mhorn@rptu.de",
+      "FirstNames": "Max",
+      "Institution": "RPTU Kaiserslautern-Landau",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "Horn",
+      "Place": "Kaiserslautern, Germany",
+      "PostalAddress": "Fachbereich Mathematik\nRPTU Kaiserslautern-Landau\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
+      "WWWHome": "https://www.quendi.de/math"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/smallgrp/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/SmallGrp"
+  },
+  "Status": "accepted",
+  "Subtitle": "The GAP Small Groups Library",
+  "TestFile": "tst/testall.g",
+  "Version": "1.5.4"
+}
