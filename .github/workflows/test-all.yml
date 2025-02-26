@@ -302,7 +302,7 @@ jobs:
         timeout-minutes: 10
         id: tests-default
         run: |
-          MAKEFLAGS='V=1'
+          export MAKEFLAGS='V=1'
           PKG=${{ matrix.package }}
           sed -i -e 's/, 1/, 10/' $HOME/gap/pkg/*/tst/testall.g # HACK to increase InfoPackageManager
           gap --quitonbreak -r -c "
