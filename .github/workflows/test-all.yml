@@ -202,7 +202,7 @@ jobs:
       - name: "Create tarball"
         run: |
           cd $HOME
-          tar --exclude-vcs --exclude=build --exclude=.libs -cf gap.tar.zst gap
+          tar --exclude-vcs --exclude=build/obj --exclude=.libs -cf gap.tar.zst gap
 
       - name: "Compute suitable artifact basename"
         id: get-artifact-name
