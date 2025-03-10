@@ -1,0 +1,89 @@
+{
+  "AbstractHTML": "The IBNP package provides methods for computing an involutive (Groebner) basis B for an ideal J over a polynomial ring R in both the commutative and noncommutative cases. Secondly, methods are provided to involutively reduce a given polynomial to its normal form in R/J.",
+  "AcceptDate": "",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSHA256": "d584338d01d66a9d70bb0aecdc025efba172895e83db507732520bded3c42ccf",
+  "ArchiveURL": "https://github.com/gap-packages/ibnp/releases/download/v0.15/IBNP-0.15",
+  "AutoDoc": {
+    "TitlePage": {
+      "Abstract": "The &IBNP; package provides methods for computing an involutive (&Grob;) basis <M>B</M> for an ideal <M>J</M> over a polynomial ring <M>R</M> in both the commutative and noncommutative cases. <P/>Secondly, methods are provided to involutively reduce a given polynomial to its normal form in <M>R/J</M>. <P/>Bug reports, comments, suggestions for additional features, and offers to implement some of these, will all be very welcome. <P/>Please submit any issues at <URL>https://github.com/gap-packages/ibnp/issues/</URL> or send an email to the second author at <Email>cdwensley.maths@btinternet.com</Email>.\n <P/>",
+      "Acknowledgements": "This documentation was prepared with the &GAPDoc; <Cite Key='GAPDoc'/> and &AutoDoc; <Cite Key='AutoDoc'/> packages.<P/>\nThe procedure used to produce new releases uses the package <Package>GitHubPagesForGAP</Package> <Cite Key='GitHubPagesForGAP' /> and the package <Package>ReleaseTools</Package>.<P/>",
+      "Copyright": "&copyright; 2024-2025, Gareth Evans and Chris Wensley.<P/>\nThe &IBNP; package is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\n"
+    }
+  },
+  "Autoload": false,
+  "AvailabilityTest": null,
+  "BannerString": "Loading IBNP 0.15 (Involutive Bases for Noncommutative Polynomials)\nby Gareth Evans and Chris Wensley (https://github.com/cdwensley).\nReport issues at https://github.com/gap-packages/ibnp/issues.\n--------------------------------------------------------------------\n",
+  "CommunicatedBy": "",
+  "Date": "10/03/2025",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">= 4.13.0",
+    "NeededOtherPackages": [
+      [
+        "GAPDoc",
+        ">= 1.6.1"
+      ],
+      [
+        "GBNP",
+        ">= 1.1.0"
+      ],
+      [
+        "utils",
+        ">= 0.81"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "IssueTrackerURL": "https://github.com/gap-packages/ibnp/issues",
+  "Keywords": [
+    "involutive bases"
+  ],
+  "License": "GPL-3.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "Autoload": true,
+      "BookName": "IBNP",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "Involutive Bases for Noncommutative Polynomials",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSHA256": "f14b40a286edb7340c12864a4f9d985aaa576c621e0fde5d65995ed43f4154d9",
+  "PackageInfoURL": "https://gap-packages.github.io/ibnp/PackageInfo.g",
+  "PackageName": "IBNP",
+  "PackageWWWHome": "https://gap-packages.github.io/ibnp/",
+  "Persons": [
+    {
+      "Email": "gareth@mathemateg.com",
+      "FirstNames": "Gareth A.",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Evans",
+      "PostalAddress": "Ysgol y Creuddyn \nFfordd Derwen, Bae Penrhyn \nLlandudno, LL30 3LB \nU.K."
+    },
+    {
+      "Email": "cdwensley.maths@btinternet.com",
+      "FirstNames": "Christopher D.",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Wensley",
+      "Place": "Llanfairfechan",
+      "WWWHome": "https://github.com/cdwensley"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/ibnp/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/ibnp"
+  },
+  "Status": "deposited",
+  "Subtitle": "Involutive Bases for Noncommutative Polynomials",
+  "SupportEmail": "cdwensley.maths@btinternet.com",
+  "TestFile": "tst/testall.g",
+  "Version": "0.15"
+}
