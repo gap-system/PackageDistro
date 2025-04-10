@@ -2,11 +2,11 @@
   "AbstractHTML": "The <span class=\"pkgname\">AutPGrp</span> package introduces a new function to compute the automorphism group of a finite $p$-group. The underlying algorithm is a refinement of the methods described in O'Brien (1995). In particular, this implementation is more efficient in both time and space requirements and hence has a wider range of applications than the ANUPQ method. Our package is written in GAP code and it makes use of a number of methods from the GAP library such as the MeatAxe for matrix groups and permutation group functions. We have compared our method to the others available in GAP. Our package usually out-performs all but the method designed for finite abelian groups. We note that our method uses the small groups library in certain cases and hence our algorithm is more effective if the small groups library is installed.",
   "AcceptDate": "09/2000",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "ade6c143b5b9b03c5c4c5b121732287146aa79d40de53d5383383c76f8cc1eb2",
-  "ArchiveURL": "https://github.com/gap-packages/autpgrp/releases/download/v1.11/autpgrp-1.11",
+  "ArchiveSHA256": "2cd0ec699d26072945778885d627a45a33c51a9373a01d938e5544feff9895d3",
+  "ArchiveURL": "https://github.com/gap-packages/autpgrp/releases/download/v1.11.1/autpgrp-1.11.1",
   "AvailabilityTest": null,
   "CommunicatedBy": "Derek F. Holt (Warwick)",
-  "Date": "05/08/2022",
+  "Date": "10/04/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.7",
@@ -25,7 +25,6 @@
         "doc",
         "htm"
       ],
-      "Autoload": true,
       "BookName": "AutPGrp",
       "HTMLStart": "htm/chapters.htm",
       "LongTitle": "Computing the Automorphism Group of a p-Group",
@@ -33,7 +32,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "f586e385cf3ef14e904db04ecdb05c1dcd58654daedff9eebf8a7efc1f029996",
+  "PackageInfoSHA256": "088847ea8bbb8a2ef339d7151ab81814d6a3badbf7798e6162e585ea4a81b54a",
   "PackageInfoURL": "https://gap-packages.github.io/autpgrp/PackageInfo.g",
   "PackageName": "AutPGrp",
   "PackageWWWHome": "https://gap-packages.github.io/autpgrp/",
@@ -50,14 +49,14 @@
       "WWWHome": "http://www.iaa.tu-bs.de/beick"
     },
     {
-      "Email": "horn@mathematik.uni-kl.de",
+      "Email": "mhorn@rptu.de",
       "FirstNames": "Max",
-      "Institution": "TU Kaiserslautern",
+      "Institution": "RPTU Kaiserslautern-Landau",
       "IsAuthor": false,
       "IsMaintainer": true,
       "LastName": "Horn",
       "Place": "Kaiserslautern, Germany",
-      "PostalAddress": "Fachbereich Mathematik\nTU Kaiserslautern\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
+      "PostalAddress": "Fachbereich Mathematik\nRPTU Kaiserslautern-Landau\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
       "WWWHome": "https://www.quendi.de/math"
     },
     {
@@ -80,5 +79,5 @@
   "Status": "accepted",
   "Subtitle": "Computing the Automorphism Group of a p-Group",
   "TestFile": "tst/testall.g",
-  "Version": "1.11"
+  "Version": "1.11.1"
 }
