@@ -2,12 +2,12 @@
   "AbstractHTML": "The <span class=\"pkgname\">ACE</span> package provides both an    interactive and non-interactive interface with the Todd-Coxeter coset   enumeration functions of the ACE (Advanced Coset Enumerator) C program.",
   "AcceptDate": "04/2001",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "9cc94cd6327147b8b538341ba7594e4252a80ca7c960ac6749224efa437c9b66",
-  "ArchiveURL": "https://github.com/gap-packages/ace/releases/download/v5.6.2/ace-5.6.2",
+  "ArchiveSHA256": "7123e4100f1340a791d20bca1a8d9e6d9f09fe74a1c5fb15f1723899a1bb4553",
+  "ArchiveURL": "https://github.com/gap-packages/ace/releases/download/v5.7.0/ace-5.7.0",
   "AvailabilityTest": null,
-  "BannerString": "---------------------------------------------------------------------------\nLoading    ACE (Advanced Coset Enumerator) 5.6.2\nGAP code by Greg Gamble <Greg.Gamble@uwa.edu.au> (address for correspondence)\n       Alexander Hulpke (https://www.math.colostate.edu/~hulpke)\n           [uses ACE binary (C code program) version: 3.001]\nC code by  George Havas (http://staff.itee.uq.edu.au/havas)\n           Colin Ramsay <cram@itee.uq.edu.au>\nCo-maintainer: Max Horn <horn@mathematik.uni-kl.de>\n\n                 For help, type: ?ACE\n---------------------------------------------------------------------------\n",
+  "BannerString": "---------------------------------------------------------------------------\nLoading    ACE (Advanced Coset Enumerator) 5.7.0\nGAP code by Greg Gamble <Greg.Gamble@uwa.edu.au> (address for correspondence)\n       Alexander Hulpke (https://www.math.colostate.edu/~hulpke)\n           [uses ACE binary (C code program) version: 3.001]\nC code by  George Havas (http://staff.itee.uq.edu.au/havas)\n           Colin Ramsay <cram@itee.uq.edu.au>\nCo-maintainer: Max Horn <mhorn@rptu.de>\n\n                 For help, type: ?ACE\n---------------------------------------------------------------------------\n",
   "CommunicatedBy": "Joachim Neubüser (Aachen)",
-  "Date": "03/01/2023",
+  "Date": "10/04/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.7",
@@ -38,7 +38,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "474fbf7cec1e91da0e22371c31cbac01e3c9e7beab87e1590688283dfc60ae33",
+  "PackageInfoSHA256": "d19bc3b993f8843093d792d5c25f7554a1b06bfd068c8cc33fada6355212f1ac",
   "PackageInfoURL": "https://gap-packages.github.io/ace/PackageInfo.g",
   "PackageName": "ACE",
   "PackageWWWHome": "https://gap-packages.github.io/ace",
@@ -87,14 +87,14 @@
       "PostalAddress": "Colin Ramsay\nCentre for Discrete Mathematics and Computing\nDepartment of Information Technology and Electrical Engineering\nThe University of Queensland\nSt. Lucia 4072\nAustralia"
     },
     {
-      "Email": "horn@mathematik.uni-kl.de",
+      "Email": "mhorn@rptu.de",
       "FirstNames": "Max",
-      "Institution": "TU Kaiserslautern",
+      "Institution": "RPTU Kaiserslautern-Landau",
       "IsAuthor": false,
       "IsMaintainer": true,
       "LastName": "Horn",
       "Place": "Kaiserslautern, Germany",
-      "PostalAddress": "Fachbereich Mathematik\nTU Kaiserslautern\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
+      "PostalAddress": "Fachbereich Mathematik\nRPTU Kaiserslautern-Landau\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
       "WWWHome": "https://www.quendi.de/math"
     }
   ],
@@ -106,5 +106,5 @@
   "Status": "accepted",
   "Subtitle": "Advanced Coset Enumerator",
   "TestFile": "tst/aceds.tst",
-  "Version": "5.6.2"
+  "Version": "5.7.0"
 }
