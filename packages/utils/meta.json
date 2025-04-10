@@ -1,19 +1,18 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">Utils</span> package provides a collection   of utility functions gleaned from many packages.",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "bed23a5b58ffe8492c700aa048fe2e72dca6c9b608dd314265e8b9ad16ad82b9",
-  "ArchiveURL": "https://github.com/gap-packages/utils/releases/download/v0.85/utils-0.85",
+  "ArchiveSHA256": "eb7e639385629aac6e8547e71966c7644300e4220db099b7bf2da822661914ee",
+  "ArchiveURL": "https://github.com/gap-packages/utils/releases/download/v0.89/utils-0.89",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "The &Utils; package provides a space for utility functions in a variety of &GAP; packages to be collected together into a single package.  In this way it is hoped that they will become more visible to package authors.\n<P/>\nAny package author who transfers a function to &Utils; will become an author of &Utils;.\n<P/>\nIf deemed appropriate, functions may also be transferred from the main library.\n<P/>\nBug reports, suggestions and comments are, of course, welcome.\nPlease contact the last author at <Email>cdwensley.maths@btinternet.com</Email> or submit an issue at the GitHub repository <URL>https://github.com/gap-packages/utils/issues/</URL>.\n",
       "Acknowledgements": "This documentation was prepared using the &GAPDoc; <Cite Key='GAPDoc'/> and &AutoDoc; <Cite Key='AutoDoc'/> packages.<P/>\nThe procedure used to produce new releases uses the package <Package>GitHubPagesForGAP</Package> <Cite Key='GitHubPagesForGAP' /> and the package <Package>ReleaseTools</Package>.<P/>",
-      "Copyright": "&copyright; 2015-2024, The GAP Group. <P/>\nThe &Utils; package is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\n"
+      "Copyright": "© 2015-2025, The GAP Group. <P/>\nThe &Utils; package is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\n"
     }
   },
-  "Autoload": false,
   "AvailabilityTest": null,
-  "BannerString": "Loading Utils 0.85 for GAP 4.12.1 - a collection of utility functions.\n",
-  "Date": "23/01/2024",
+  "BannerString": "Loading Utils 0.89 for GAP 4.14.0 - a collection of utility functions.\n",
+  "Date": "10/04/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10.1",
@@ -33,7 +32,6 @@
       "ArchiveURLSubset": [
         "doc"
       ],
-      "Autoload": true,
       "BookName": "Utils",
       "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "Utility functions in GAP",
@@ -41,7 +39,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "8076f253af65fcb6056efd94ae887b5275efc0d2f0ec4ae5fb4d3bbe1a230ca4",
+  "PackageInfoSHA256": "0ac13b4810d9c020d148bedd9f096de4753f26ecee8afc0db46de791be5436c5",
   "PackageInfoURL": "https://gap-packages.github.io/utils/PackageInfo.g",
   "PackageName": "utils",
   "PackageWWWHome": "https://gap-packages.github.io/utils",
@@ -57,13 +55,13 @@
       "WWWHome": "https://www.math.rwth-aachen.de/~Thomas.Breuer"
     },
     {
-      "Email": "gutsche@mathematik.uni-seigen.de",
+      "Email": "gutsche@mathematik.uni-siegen.de",
       "FirstNames": "Sebastian",
-      "Institution": "University of Seigen",
+      "Institution": "University of Siegen",
       "IsAuthor": true,
       "IsMaintainer": false,
       "LastName": "Gutsche",
-      "Place": "Seigen",
+      "Place": "Siegen",
       "WWWHome": "https://sebasguts.github.io/"
     },
     {
@@ -133,5 +131,5 @@
   "Status": "deposited",
   "Subtitle": "Utility functions in GAP",
   "TestFile": "tst/testall.g",
-  "Version": "0.85"
+  "Version": "0.89"
 }
