@@ -28,7 +28,7 @@ on:
 jobs:
   update-latest:
     name: "Upload report"
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: "Set up Python"
         uses: actions/setup-python@v5

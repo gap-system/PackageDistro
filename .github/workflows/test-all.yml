@@ -69,7 +69,7 @@ jobs:
     # If you change this name, you must adjust the corresponding name
     # in tools/generate_test_status.py
     name: "Build GAP and packages"
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     outputs:
       matrix: ${{ steps.get-names.outputs.matrix }}
       artifact: ${{ steps.get-artifact-name.outputs.artifact }}
@@ -247,7 +247,7 @@ jobs:
     name: "${{ matrix.package }}"
     if: ${{ needs.build.outputs.matrix != '{"package":[]}' }}
     needs: build
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix: ${{ fromJSON(needs.build.outputs.matrix) }}
@@ -355,7 +355,7 @@ jobs:
     name: "Generate report"
     needs: [build, test-package]
     if: always()
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     outputs:
       test-status: ${{ steps.test-status.outputs.test-status }}
     steps:

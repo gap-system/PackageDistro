@@ -26,7 +26,7 @@ concurrency:
 jobs:
   detect-changes:
     name: "Detect affected packages"
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     if: ${{ !contains( github.event.pull_request.labels.*.name, 'skip tests') }}
     outputs:
       modified: ${{ steps.modified.outputs.modified }}
@@ -102,7 +102,7 @@ jobs:
 
   status-comment:
     name: "Create or update PR comment"
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     needs: test-all-master  # TODO: also handle test-all-release
     if: always()
     steps:
