@@ -38,7 +38,7 @@ ubtunu_deps = {
         "texlive-fonts-recommended",
     ],
     "localizeringforhomalg": ["singular"],
-    "normalizinterface": ["libeantic-dev", "libflint-dev"],
+    "normalizinterface": ["libnormaliz-dev"],
     "polymaking": ["polymake"],
     "ringsforhomalg": ["singular"],
     "singular": ["singular"],
