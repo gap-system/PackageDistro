@@ -75,10 +75,10 @@ def test_archive_name(ensure_in_tests_dir):
 
 
 def test_archive_url():
-#     assert (
-#         archive_url(metadata("aclib"))
-#         == "https://github.com/gap-packages/aclib/releases/download/v1.3.2/aclib-1.3.2.tar.gz"
-#     )
+    #     assert (
+    #         archive_url(metadata("aclib"))
+    #         == "https://github.com/gap-packages/aclib/releases/download/v1.3.2/aclib-1.3.2.tar.gz"
+    #     )
 
     # Non-existent file
     with pytest.raises(SystemExit) as e:
@@ -98,7 +98,9 @@ def test_download_archive(ensure_in_tests_dir, tmpdir):
         "requests.get", side_effect=RequestException("Failed Request")
     ) as mock_request_post:
         with pytest.raises(RequestException) as e:
-            download_archive(str(tmpdir), "unipot")  # FIXME??? is this *supposed* to fail???
+            download_archive(
+                str(tmpdir), "unipot"
+            )  # FIXME??? is this *supposed* to fail???
         assert e.type == RequestException
 
     download_archive(str(tmpdir), "aclib")
