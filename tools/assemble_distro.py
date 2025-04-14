@@ -134,9 +134,9 @@ def main() -> None:
     binary_file = gzip.GzipFile(package_infos_file, "w", 9, mtime=0)
     # the next line is needed to make mypy happy, see <https://stackoverflow.com/a/58407810/928031>
     binary_file_for_mypy = typing.cast(typing.IO[bytes], binary_file)
-    f = io.TextIOWrapper(binary_file_for_mypy, "utf-8", None, None)
-    json.dump(package_info, f, indent=4)
-    f.close()
+    f_pkg_info = io.TextIOWrapper(binary_file_for_mypy, "utf-8", None, None)
+    json.dump(package_info, f_pkg_info, indent=4)
+    f_pkg_info.close()
     binary_file.close()
     write_sha256(package_infos_file)
 
