@@ -2,17 +2,17 @@
   "AbstractHTML": "This package can be used for work with sesquilinear and quadratic forms on finite vector spaces; objects that are used to describe polar spaces and classical groups.",
   "AcceptDate": "03/2009",
   "ArchiveFormats": ".tar.gz .zip .tar.bz2",
-  "ArchiveSHA256": "8aad253f7744af5c787f6a7bc306968dd2d1821a44772b81367b6f0e6e0e4dc8",
-  "ArchiveURL": "https://github.com/gap-packages/forms/releases/download/v1.2.12/forms-1.2.12",
+  "ArchiveSHA256": "0b389987b9dd19e66fa01944f9de41bb508acb4f6f6c3118d005420754fcbd39",
+  "ArchiveURL": "https://github.com/gap-packages/forms/releases/download/v1.2.13/forms-1.2.13",
   "AutoDoc": {
     "TitlePage": {
       "Copyright": "&copyright; 2015-2024 by the authors<P/>\n\nThis package may be distributed under the terms and conditions of the GNU Public License Version 2 or (at your option) any later version.\n"
     }
   },
   "AvailabilityTest": null,
-  "BannerString": "---------------------------------------------------------------------\nLoading 'Forms' 1.2.12 (30/08/2024)\nby John Bamberg (http://school.maths.uwa.edu.au/~bamberg/)\n   Jan De Beule (http://www.debeule.eu)\nFor help, type: ?Forms \n---------------------------------------------------------------------\n",
+  "BannerString": "---------------------------------------------------------------------\nLoading 'Forms' 1.2.13 (05/05/2025)\nby John Bamberg (http://school.maths.uwa.edu.au/~bamberg/)\n   Jan De Beule (http://www.debeule.eu)\nFor help, type: ?Forms \n---------------------------------------------------------------------\n",
   "CommunicatedBy": "Leonard Soicher (London)",
-  "Date": "30/08/2024",
+  "Date": "05/05/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.9",
@@ -38,7 +38,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "db685c96193e77212ceefb1d4fba9137aaee0459ac6bf22aa604341e06a535fc",
+  "PackageInfoSHA256": "392cef98e4a3c0c8423f1c5a86279aa38e94f91aedef62cfd67c14df6a91ef9f",
   "PackageInfoURL": "https://gap-packages.github.io/forms/PackageInfo.g",
   "PackageName": "Forms",
   "PackageWWWHome": "https://gap-packages.github.io/forms",
@@ -51,7 +51,7 @@
       "IsMaintainer": true,
       "LastName": "Bamberg",
       "Place": "Perth",
-      "PostalAddress": "School of Mathematics and Statistics\nThe University of Western Australia\n35 Stirling Highway\nCrawleyY WA 6009, Perth\nAustralia",
+      "PostalAddress": "School of Mathematics and Statistics\nThe University of Western Australia\n35 Stirling Highway\nCrawley WA 6009, Perth\nAustralia",
       "WWWHome": "http://school.maths.uwa.edu.au/~bamberg/"
     },
     {
@@ -85,5 +85,5 @@
   "Status": "accepted",
   "Subtitle": "Sesquilinear and Quadratic",
   "TestFile": "tst/testall.g",
-  "Version": "1.2.12"
+  "Version": "1.2.13"
 }
