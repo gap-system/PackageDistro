@@ -2,8 +2,8 @@
   "AbstractHTML": "The <span class=\"pkgname\">smallantimagmas</span> package,    classifies all finite, antassociative magmas.",
   "AcceptDate": "08/2025",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "64c45951e56294f80791e2142bdb70839a0f9efbe3a46411df0b96f2da1cb152",
-  "ArchiveURL": "https://github.com/limakzi/smallantimagmas/releases/download/v0.4.0/smallantimagmas-v0.4.0",
+  "ArchiveSHA256": "dc3785bea30acaf892158e71273c00a630b2862190ab86d1639d137a46b595a1",
+  "ArchiveURL": "https://github.com/gap-packages/smallantimagmas/releases/download/v0.4.1/smallantimagmas-v0.4.1",
   "AutoDoc": {
     "TitlePage": {
       "Acknowledgements": "\n      We appreciate very much all past and future comments, suggestions and\n      contributions to this package and its documentation provided by &GAP;\n      users and developers.\n      ",
@@ -12,7 +12,7 @@
   },
   "AvailabilityTest": null,
   "CommunicatedBy": "Kamil Zabielski (Białystok)",
-  "Date": "12/05/2025",
+  "Date": "14/05/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": "4.12",
@@ -24,7 +24,7 @@
     ],
     "SuggestedOtherPackages": []
   },
-  "IssueTrackerURL": "https://github.com/limakzi/smallantimagmas/issues",
+  "IssueTrackerURL": "https://github.com/gap-packages/smallantimagmas/issues",
   "Keywords": [
     "smallantimagmas",
     "antiassociative"
@@ -43,10 +43,10 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "99ba7e5f0a2fa5fb6e2ab3414ab1f569082f1e2aa1fae837a14c24cf3ae96587",
-  "PackageInfoURL": "https://limakzi.github.io/smallantimagmas/PackageInfo.g",
+  "PackageInfoSHA256": "8e2c33e919dcceee6e4c49ff0077dc49a43cc6cdc1aca3a51087e2cbda50336f",
+  "PackageInfoURL": "https://gap-packages.github.io/smallantimagmas/PackageInfo.g",
   "PackageName": "smallantimagmas",
-  "PackageWWWHome": "https://limakzi.github.io/smallantimagmas",
+  "PackageWWWHome": "https://gap-packages.github.io/smallantimagmas",
   "Persons": [
     {
       "FirstNames": "Kamil",
@@ -67,14 +67,14 @@
       "PostalAddress": "Department of Theoretical Computer Science\nBiałystok University of Technology\nWiejska 45A\n15-325 Białystok\nPoland"
     }
   ],
-  "README_URL": "https://limakzi.github.io/smallantimagmas/README.md",
+  "README_URL": "https://gap-packages.github.io/smallantimagmas/README.md",
   "SourceRepository": {
     "Type": "git",
-    "URL": "https://github.com/limakzi/smallantimagmas"
+    "URL": "https://github.com/gap-packages/smallantimagmas"
   },
   "Status": "accepted",
   "Subtitle": "A library of antiassociative magmas of small order",
-  "SupportEmail": "limakzi@proton.me",
+  "SupportEmail": "kamil@zabielscy.com",
   "TestFile": "tst/testall.g",
-  "Version": "0.4.0"
+  "Version": "0.4.1"
 }
