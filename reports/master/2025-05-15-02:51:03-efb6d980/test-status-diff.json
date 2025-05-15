@@ -1,0 +1,16 @@
+{
+  "current": "master/2025-05-15-02:51:03-efb6d980",
+  "last": "master/2025-05-14-23:59:37-efb6d980",
+  "total": 163,
+  "failure": 0,
+  "success": 159,
+  "skipped": 4,
+  "new": 0,
+  "removed": 0,
+  "failure_changed": 0,
+  "success_changed": 1,
+  "skipped_changed": 0,
+  "failure_same": 0,
+  "success_same": 158,
+  "skipped_same": 4
+}
