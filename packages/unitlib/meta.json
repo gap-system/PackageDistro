@@ -1,12 +1,12 @@
 {
-  "AbstractHTML": "The <span class=\"pkgname\">UnitLib</span> package extends the <span class=\"pkgname\">LAGUNA</span> package and provides the library of normalized unit groups of modular group algebras of all finite p-groups of order less than 243 over the field of p elements.",
+  "AbstractHTML": "The <span class=\"pkgname\">UnitLib</span> package extends the <span class=\"pkgname\">LAGUNA</span> package and provides the library of normalized unit groups of modular group algebras of all finite p-groups of order up to 243 over the field of p elements.",
   "AcceptDate": "03/2007",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "d55660574ebb24cf3c729d9ac726d10e655aec0cb390cf874d3450f7540f400d",
-  "ArchiveURL": "https://github.com/gap-packages/unitlib/releases/download/v4.2.0/unitlib-4.2.0",
+  "ArchiveSHA256": "3cdcd383defaecfbb8c6aed8cfc7db569387c780f60562cd0c04a05786428c2e",
+  "ArchiveURL": "https://github.com/gap-packages/unitlib/releases/download/v5.0.0/unitlib-5.0.0",
   "AvailabilityTest": null,
   "CommunicatedBy": "Bettina Eick (Braunschweig)",
-  "Date": "25/02/2023",
+  "Date": "12/06/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.11",
@@ -43,7 +43,6 @@
       "ArchiveURLSubset": [
         "doc"
       ],
-      "Autoload": true,
       "BookName": "UnitLib",
       "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "The library of normalized unit groups of modular group algebras",
@@ -51,7 +50,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "739eaf9d94f20f968638f345d25f9122f7e42525006289b9ce3745d79ec500d6",
+  "PackageInfoSHA256": "5b46ae802b37e674cdde318ab000630325c66e952f2ca318cce950240ac655b8",
   "PackageInfoURL": "https://gap-packages.github.io/unitlib/PackageInfo.g",
   "PackageName": "UnitLib",
   "PackageWWWHome": "https://gap-packages.github.io/unitlib",
@@ -74,6 +73,16 @@
       "IsMaintainer": false,
       "LastName": "Yakimenko",
       "Place": "Zaporizhzhia"
+    },
+    {
+      "Email": "kamil@zabielscy.com",
+      "FirstNames": "Kamil",
+      "Institution": "Białystok University of Technology",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Zabielski",
+      "Place": "Białystok",
+      "WWWHome": "https://limakzi.me"
     }
   ],
   "README_URL": "https://gap-packages.github.io/unitlib/README.md",
@@ -84,5 +93,5 @@
   "Status": "accepted",
   "Subtitle": "Library of normalized unit groups of modular group algebras",
   "TestFile": "tst/testall.g",
-  "Version": "4.2.0"
+  "Version": "5.0.0"
 }
