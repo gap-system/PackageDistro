@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "6bdb7e3e908c45d4b683be4fbb60a733ec75a171c242e16251d5ed8602cac43a",
-  "ArchiveURL": "https://github.com/gap-packages/profiling/releases/download/v2.6.0/profiling-2.6.0",
+  "ArchiveSHA256": "be25744b50acd82f04ce16e27e2689f2a288263c9d887f3cb0ac7a877f1d7e67",
+  "ArchiveURL": "https://github.com/gap-packages/profiling/releases/download/v2.6.1/profiling-2.6.1",
   "AvailabilityTest": null,
-  "Date": "27/08/2024",
+  "Date": "19/06/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12",
@@ -34,7 +34,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "aecdccdbc3a8663bd75433f0ebf4dd4d7e50e192762035c9c448a255783cfcb4",
+  "PackageInfoSHA256": "1e06c21ff9ba92e4a0d41a4b59cf5776cdaa79a85730d159a207eca4d7e91c98",
   "PackageInfoURL": "https://gap-packages.github.io/profiling/PackageInfo.g",
   "PackageName": "profiling",
   "PackageWWWHome": "https://gap-packages.github.io/profiling/",
@@ -59,5 +59,5 @@
   "Status": "deposited",
   "Subtitle": "Line by line profiling and code coverage for GAP",
   "TestFile": "tst/testall.g",
-  "Version": "2.6.0"
+  "Version": "2.6.1"
 }
