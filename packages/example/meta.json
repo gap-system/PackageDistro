@@ -1,8 +1,8 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">Example</span> package, as its name suggests,    is an example of how to create a <span class=\"pkgname\">GAP</span>    package. It has little functionality except for being a package.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "56abe7342b9c1eae77a18adfd43cd51f2eaee1b2988eaeeeadbc9125ca4013c0",
-  "ArchiveURL": "https://github.com/gap-packages/example/releases/download/v4.4.0/Example-4.4.0",
+  "ArchiveSHA256": "a7c9baf7eb0d2f039007dc15866b2c9e2f582644762312969d04d383e4e22b04",
+  "ArchiveURL": "https://github.com/gap-packages/example/releases/download/v4.4.1/Example-4.4.1",
   "AutoDoc": {
     "TitlePage": {
       "Acknowledgements": "\n      We appreciate very much all past and future comments, suggestions and\n      contributions to this package and its documentation provided by &GAP;\n      users and developers.\n      ",
@@ -10,7 +10,7 @@
     }
   },
   "AvailabilityTest": null,
-  "Date": "2024-11-20",
+  "Date": "2025-06-20",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": "4.10",
@@ -40,7 +40,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "6e5174c70f9bcfd1d2e570032b11bb36df6529f1fecbaa29a516240eb27ded59",
+  "PackageInfoSHA256": "af5cc11e539c1b44636bbc0edd75930ed6dd69e09eb8838bf3ffabe5f1214aa0",
   "PackageInfoURL": "https://gap-packages.github.io/example/PackageInfo.g",
   "PackageName": "Example",
   "PackageWWWHome": "https://gap-packages.github.io/example",
@@ -83,5 +83,5 @@
   "Subtitle": "Example/Template of a GAP Package",
   "SupportEmail": "obk1@st-andrews.ac.uk",
   "TestFile": "tst/testall.g",
-  "Version": "4.4.0"
+  "Version": "4.4.1"
 }
