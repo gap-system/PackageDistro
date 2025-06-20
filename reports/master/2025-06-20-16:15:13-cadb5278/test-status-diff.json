@@ -1,0 +1,16 @@
+{
+  "current": "master/2025-06-20-16:15:13-cadb5278",
+  "last": "master/2025-06-20-13:15:59-58f0e8a3",
+  "total": 163,
+  "failure": 0,
+  "success": 147,
+  "skipped": 16,
+  "new": 0,
+  "removed": 0,
+  "failure_changed": 0,
+  "success_changed": 0,
+  "skipped_changed": 12,
+  "failure_same": 0,
+  "success_same": 147,
+  "skipped_same": 4
+}
