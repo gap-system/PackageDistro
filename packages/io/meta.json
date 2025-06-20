@@ -1,15 +1,15 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">IO</span> package, as its name suggests,    provides bindings for <span class=\"pkgname\">GAP</span> to the lower    levels of Input/Output functionality in the C library.",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSHA256": "edb0a8ab61ad36664e2ddaab38af052ad3e063479dfdb7985a10ebb8b1c7795b",
-  "ArchiveURL": "https://github.com/gap-packages/io/releases/download/v4.9.1/io-4.9.1",
+  "ArchiveSHA256": "15b2960e7e818c68ee94af2615d74973dacd180aef33cfa41524769f0777406f",
+  "ArchiveURL": "https://github.com/gap-packages/io/releases/download/v4.9.2/io-4.9.2",
   "AutoDoc": {
     "TitlePage": {
       "Copyright": "&copyright; 2005-2014 by Max Neunhöffer<P/>\n\nThis package may be distributed under the terms and conditions of the\nGNU Public License Version 3 or later (at your convenience).\n"
     }
   },
   "AvailabilityTest": null,
-  "Date": "18/11/2024",
+  "Date": "20/06/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.12",
@@ -45,7 +45,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "40c0ba78334b6646246fb7b0a9ae586563b16650e9f9b07143fa81c88064ffd3",
+  "PackageInfoSHA256": "2b1505dc6c1f7a9f2dac733bda0b17d6280703b2d2bc73adb9470db2937499a7",
   "PackageInfoURL": "https://gap-packages.github.io/io/PackageInfo.g",
   "PackageName": "IO",
   "PackageWWWHome": "https://gap-packages.github.io/io",
@@ -78,5 +78,5 @@
   "Status": "deposited",
   "Subtitle": "Bindings for low level C library I/O routines",
   "TestFile": "tst/testall.g",
-  "Version": "4.9.1"
+  "Version": "4.9.2"
 }
