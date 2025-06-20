@@ -1,15 +1,15 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">orb</span> package is about enumerating orbits in various ways.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "b9fd9e3041ed2977f30bb0deafd2b0ef348cdd5972fbe453fdc5df7771d2011e",
-  "ArchiveURL": "https://github.com/gap-packages/orb/releases/download/v5.0.0/orb-5.0.0",
+  "ArchiveSHA256": "3f8430f5ba49bab1ce69d13894fff30bc1dd04bbf371e4a872740c93c51fd246",
+  "ArchiveURL": "https://github.com/gap-packages/orb/releases/download/v5.0.1/orb-5.0.1",
   "AutoDoc": {
     "TitlePage": {
       "Copyright": "&copyright; 2005-2014 by Jürgen Müller, Max Neunhöffer and Felix Noeske<P/>\n\nThis program is free software: you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation, either version 3 of the License, or\n(at your option) any later version.\n\nThis program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License\nalong with this program.  If not, see\n<URL><Link>https://www.gnu.org/licenses/</Link></URL>.\n"
     }
   },
   "AvailabilityTest": null,
-  "Date": "22/01/2025",
+  "Date": "20/06/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.12",
@@ -41,7 +41,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "b7aba20e9945f4da16f358fb9ef95923417968ebfe5b3f24aabdcbc9ce368f9d",
+  "PackageInfoSHA256": "7a96f54975652c2f241bff196bd8a09533ae4aa0d59bf809574823c238c32adf",
   "PackageInfoURL": "https://gap-packages.github.io/orb/PackageInfo.g",
   "PackageName": "orb",
   "PackageWWWHome": "https://gap-packages.github.io/orb",
@@ -51,7 +51,7 @@
       "FirstNames": "Juergen",
       "Institution": "RWTH Aachen",
       "IsAuthor": true,
-      "IsMaintainer": true,
+      "IsMaintainer": false,
       "LastName": "Mueller",
       "Place": "Aachen",
       "PostalAddress": "Juergen Mueller\nLehrstuhl D fuer Mathematik, RWTH Aachen\nTemplergraben 64\n52056 Aachen\nGermany",
@@ -71,7 +71,7 @@
       "FirstNames": "Felix",
       "Institution": "RWTH Aachen",
       "IsAuthor": true,
-      "IsMaintainer": true,
+      "IsMaintainer": false,
       "LastName": "Noeske",
       "Place": "Aachen",
       "PostalAddress": "Felix Noeske\nLehrstuhl D fuer Mathematik, RWTH Aachen\nTemplergraben 64\n52056 Aachen\nGermany",
@@ -97,5 +97,5 @@
   "Status": "deposited",
   "Subtitle": "Methods to enumerate orbits",
   "TestFile": "tst/testall.g",
-  "Version": "5.0.0"
+  "Version": "5.0.1"
 }
