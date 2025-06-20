@@ -1,11 +1,11 @@
 {
   "AbstractHTML": "",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "f1939d6bde96aa096274f9b09ede046cdee7c3a8443db45940164c1905c1ee38",
-  "ArchiveURL": "https://github.com/gap-packages/curlInterface/releases/download/v2.4.1/curlInterface-2.4.1",
+  "ArchiveSHA256": "973d4b518bb25295fa36e367c54fd257adb7af4723634f039f53dae507855756",
+  "ArchiveURL": "https://github.com/gap-packages/curlInterface/releases/download/v2.4.2/curlInterface-2.4.2",
   "AvailabilityTest": null,
   "BannerFunction": null,
-  "Date": "06/06/2025",
+  "Date": "20/06/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12",
@@ -31,7 +31,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "360f0d205e6dd5a31a693b5dd1be30bdfbe4ad7698d236d77f69013ef20e500e",
+  "PackageInfoSHA256": "521e5a23585a46495b24356b42794fd58ca09527fe55856eec05af25ff08311d",
   "PackageInfoURL": "https://gap-packages.github.io/curlInterface/PackageInfo.g",
   "PackageName": "curlInterface",
   "PackageWWWHome": "https://gap-packages.github.io/curlInterface/",
@@ -78,5 +78,5 @@
   "Status": "deposited",
   "Subtitle": "Simple Web Access",
   "TestFile": "tst/testall.g",
-  "Version": "2.4.1"
+  "Version": "2.4.2"
 }
