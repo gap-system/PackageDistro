@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "This package provides functions for computations in finitely generated nilpotent groups based on the Deep Thought algorithm.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "104a6e7d6704d450b4641441b3bc91245449823a4e8396a9aef66415f19d333c",
-  "ArchiveURL": "https://github.com/gap-packages/DeepThought/releases/download/v1.0.8/DeepThought-1.0.8",
+  "ArchiveSHA256": "4eda8cddaa8987473b963c740d6f1f647099a92112a1e7c8bba4fff7515fb5e4",
+  "ArchiveURL": "https://github.com/gap-packages/DeepThought/releases/download/v1.0.9/DeepThought-1.0.9",
   "AvailabilityTest": null,
-  "Date": "03/01/2025",
+  "Date": "20/06/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12",
@@ -39,7 +39,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "382a19137fcd4a62d2f1e69e4ebbfad24b8b5e4bb5c5dc111ef96afa045dc00c",
+  "PackageInfoSHA256": "0f5d8c5f2af1263478ac4bfba9a7d05efec605797abf3a165ac3650d27fc799a",
   "PackageInfoURL": "https://gap-packages.github.io/DeepThought/PackageInfo.g",
   "PackageName": "DeepThought",
   "PackageWWWHome": "https://gap-packages.github.io/DeepThought/",
@@ -71,5 +71,5 @@
   "Status": "deposited",
   "Subtitle": "This package provides functions for computations in finitely generated nilpotent groups based on the Deep Thought algorithm.",
   "TestFile": "tst/testall.g",
-  "Version": "1.0.8"
+  "Version": "1.0.9"
 }
