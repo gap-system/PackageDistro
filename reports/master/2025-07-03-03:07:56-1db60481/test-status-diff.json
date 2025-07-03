@@ -1,0 +1,16 @@
+{
+  "current": "master/2025-07-03-03:07:56-1db60481",
+  "last": "master/2025-07-02-03:09:31-1db60481",
+  "total": 163,
+  "failure": 4,
+  "success": 155,
+  "skipped": 4,
+  "new": 0,
+  "removed": 0,
+  "failure_changed": 0,
+  "success_changed": 0,
+  "skipped_changed": 0,
+  "failure_same": 4,
+  "success_same": 155,
+  "skipped_same": 4
+}
