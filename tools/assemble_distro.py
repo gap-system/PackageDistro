@@ -99,7 +99,10 @@ def make_packages_tar_gz(
 
         full_tarname = os.path.join(release_dir, tarname)
         print("Creating final tarball: ", full_tarname)
-        subprocess.run(["tar", "czf", full_tarname, "-C", tempdir, "."])
+        # exclude ._* files, see <https://github.com/gap-system/PackageDistro/issues/1147>
+        subprocess.run(
+            ["tar", "czf", full_tarname, "--exclude", "._*", "-C", tempdir, "."]
+        )
         write_sha256(full_tarname)
 
 
