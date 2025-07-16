@@ -54,7 +54,7 @@ def download(url: str, dst: str) -> None:
     response.raise_for_status()  # raise a meaningful (?) exception if there was e.g. a 404 error
     os.makedirs(os.path.dirname(dst), exist_ok=True)
     with open(dst, "wb") as f:
-        for chunk in response.raw.stream(16384, decode_content=False):
+        for chunk in response.raw.stream(16384, decode_content=True):
             if chunk:
                 f.write(chunk)
 
