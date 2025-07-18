@@ -2,15 +2,15 @@
   "AbstractHTML": "This package, previously known as <span class=\"pkgname\">CrystGAP</span>, provides a rich set of methods for the computation with affine crystallographic groups, in particular space groups. Affine crystallographic groups are fully supported both in representations acting from the right or from the left, the latter one being preferred by crystallographers. Functions to determine representatives of all space group types of a given dimension are also provided. Where necessary, <span class=\"pkgname\">Cryst</span> can also make use of functionality provided by the package <span class=\"pkgname\">CaratInterface</span>.",
   "AcceptDate": "02/2000",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "2abd2bbcf92e9ddd1a8606ebae6b5c57bb37a5174b196a76582ef984f15583ff",
-  "ArchiveURL": "https://www.math.uni-bielefeld.de/~gaehler/gap/Cryst/cryst-4.1.28",
+  "ArchiveSHA256": "f8fc61277cb8606478ffbab8dd25aba467ca153ccbcd84ab5620486ca3c9e244",
+  "ArchiveURL": "https://www.math.uni-bielefeld.de/~gaehler/gap/Cryst/cryst-4.1.29",
   "AvailabilityTest": null,
   "BinaryFiles": [
     "doc/manual.pdf",
     "doc/manual.dvi"
   ],
   "CommunicatedBy": "Herbert Pahlings (Aachen)",
-  "Date": "17/07/2025",
+  "Date": "18/07/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.12",
@@ -65,7 +65,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "30ab5dba1a33c036f69dc0a637380537657104262c666dfb075882928b4e292c",
+  "PackageInfoSHA256": "887fd672600a9460d099a9e16885a7dd3463645be8ca89e1ff18ea3f9419f5c5",
   "PackageInfoURL": "https://www.math.uni-bielefeld.de/~gaehler/gap/Cryst/PackageInfo.g",
   "PackageName": "Cryst",
   "PackageWWWHome": "https://www.math.uni-bielefeld.de/~gaehler/gap/packages.php",
@@ -108,5 +108,5 @@
   "Subtitle": "Computing with crystallographic groups",
   "SupportEmail": "gaehler@math.uni-bielefeld.de",
   "TestFile": "tst/testall.g",
-  "Version": "4.1.28"
+  "Version": "4.1.29"
 }
