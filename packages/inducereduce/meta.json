@@ -1,0 +1,92 @@
+{
+  "AbstractHTML": "This package provides an implementation of Unger's algorithm to compute the character table of a finite group.",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSHA256": "37927103047c0f577f35a57a5f92e34b1b322be93a03404e3eac9ef64e5c8dcc",
+  "ArchiveURL": "https://github.com/gap-packages/InduceReduce/releases/download/v1.1/InduceReduce-1.1",
+  "AutoDoc": {
+    "entities": {
+      "RELEASEDATE": "16 July 2025",
+      "RELEASEYEAR": "2025",
+      "VERSION": "1.1"
+    }
+  },
+  "AvailabilityTest": null,
+  "Date": "16/07/2025",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">= 4.9",
+    "NeededOtherPackages": [
+      [
+        "GAPDoc",
+        ">= 1.5"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "IssueTrackerURL": "https://github.com/gap-packages/InduceReduce/issues",
+  "Keywords": [
+    "character table",
+    "elementary subgroups",
+    "induced characters"
+  ],
+  "License": "GPL-3.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "InduceReduce",
+      "HTMLStart": "doc/chap0_mj.html",
+      "LongTitle": "Computing Character Tables using Unger's algorithm",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSHA256": "f2c2f7e5d354b8377800f546bf74196300486f3cce323ca8e1718c82081ef0ae",
+  "PackageInfoURL": "https://gap-packages.github.io/InduceReduce/PackageInfo.g",
+  "PackageName": "InduceReduce",
+  "PackageWWWHome": "https://gap-packages.github.io/InduceReduce/",
+  "Persons": [
+    {
+      "Email": "jonathan.gruber@fau.de",
+      "FirstNames": "Jonathan",
+      "Institution": "University Erlangen-Nuremberg",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Gruber",
+      "Place": "Erlangen"
+    },
+    {
+      "Email": "sam@math.rwth-aachen.de",
+      "FirstNames": "Thomas",
+      "Institution": "Lehrstuhl für Algebra und Zahlentheorie, RWTH Aachen",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "Breuer",
+      "Place": "Aachen",
+      "PostalAddress": "Thomas Breuer\nLehrstuhl für Algebra und Zahlentheorie\nPontdriesch 14/16\n52062 Aachen\nGermany",
+      "WWWHome": "https://www.math.rwth-aachen.de/~Thomas.Breuer"
+    },
+    {
+      "Email": "mhorn@rptu.de",
+      "FirstNames": "Max",
+      "GitHubUsername": "fingolfin",
+      "Institution": "RPTU Kaiserslautern-Landau",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "Horn",
+      "Place": "Kaiserslautern, Germany",
+      "PostalAddress": "Fachbereich Mathematik\nRPTU Kaiserslautern-Landau\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
+      "WWWHome": "https://www.quendi.de/math"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/InduceReduce/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/InduceReduce"
+  },
+  "Status": "deposited",
+  "Subtitle": "Unger's algorithm to compute character tables of finite groups",
+  "TestFile": "tst/testall.g",
+  "Version": "1.1"
+}
