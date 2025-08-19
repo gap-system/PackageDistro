@@ -141,7 +141,7 @@ jobs:
       # <https://github.com/peter-evans/create-pull-request/blob/main/docs/concepts-guidelines.md#authenticating-with-github-app-generated-tokens>
       # The bot can also be set up for personal forks of this repository, for testing
       # and debugging, see <https://github.com/apps/gap-package-distribution-bot>.
-      - uses: tibdex/github-app-token@v1
+      - uses: tibdex/github-app-token@v2
         id: generate-token
         with:
           app_id: ${{ secrets.APP_ID }}
