@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "<span class=\"pkgname\">LinearAlgebraForCAP</span> provides a skeletal model of the category of finite dimensional vector spaces over a computable field.",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "b8abf4ca99939aa89f93ba703192a74352a94aed485baba97c2ed12c51851c79",
-  "ArchiveURL": "https://github.com/homalg-project/CAP_project/releases/download/LinearAlgebraForCAP-2025.08-01/LinearAlgebraForCAP-2025.08-01",
+  "ArchiveSHA256": "2543cfacca8e1907558ff9ad081609658f0560621635d7f203c9e4f183843fbe",
+  "ArchiveURL": "https://github.com/homalg-project/CAP_project/releases/download/LinearAlgebraForCAP-2025.08-02/LinearAlgebraForCAP-2025.08-02",
   "AvailabilityTest": null,
-  "Date": "2025-08-23",
+  "Date": "2025-08-25",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.13.0",
@@ -56,13 +56,13 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "7954ffca2cbac778178c947acf6eee6e6a733e2a94aee5f512fd72a54ee77652",
+  "PackageInfoSHA256": "f2b60f7ec89e0ed74cab2dbd1f884a3b5a6d224a5afe39b12093a36268ffba28",
   "PackageInfoURL": "https://homalg-project.github.io/CAP_project/LinearAlgebraForCAP/PackageInfo.g",
   "PackageName": "LinearAlgebraForCAP",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/LinearAlgebraForCAP",
   "Persons": [
     {
-      "Email": "gutsche@mathematik.uni-siegen.de",
+      "Email": "sebastian.gutsche@gmail.com",
       "FirstNames": "Sebastian",
       "Institution": "University of Siegen",
       "IsAuthor": true,
@@ -73,7 +73,7 @@
       "WWWHome": "https://sebasguts.github.io/"
     },
     {
-      "Email": "sebastian.posur@uni-siegen.de",
+      "Email": "sebastian.posur@uni-muenster.de",
       "FirstNames": "Sebastian",
       "Institution": "University of Siegen",
       "IsAuthor": true,
@@ -84,7 +84,7 @@
       "WWWHome": "https://sebastianpos.github.io"
     },
     {
-      "Email": "fabian.zickgraf@uni-siegen.de",
+      "Email": "f.zickgraf@dashdos.com",
       "FirstNames": "Fabian",
       "Institution": "University of Siegen",
       "IsAuthor": true,
@@ -103,5 +103,5 @@
   "Status": "deposited",
   "Subtitle": "Category of Matrices over a Field for CAP",
   "TestFile": "tst/testall.g",
-  "Version": "2025.08-01"
+  "Version": "2025.08-02"
 }

@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "<span class=\"pkgname\">CAP</span> (Categories, Algorithms, Programming) is a package for category theory.\nIt facilitates the implementation of specific instances of categories\nand provides a language for writing generic categorical algorithms.",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "c7195780ae6692394530da2c6dccd0f75dbafabf4601aba782181731f79c55f2",
-  "ArchiveURL": "https://github.com/homalg-project/CAP_project/releases/download/CAP-2025.08-02/CAP-2025.08-02",
+  "ArchiveSHA256": "e8e9b369ee5feea81b08395ed1f70e310f06b27fe03f7112cecb816d37453fa1",
+  "ArchiveURL": "https://github.com/homalg-project/CAP_project/releases/download/CAP-2025.08-03/CAP-2025.08-03",
   "AvailabilityTest": null,
-  "Date": "2025-08-08",
+  "Date": "2025-08-25",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.13.0",
@@ -59,13 +59,13 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "e9d9598b54b371867771c44fdeee5c6ae51c77c391e1c10bee842f41397593d8",
+  "PackageInfoSHA256": "8a093759856ca94f90f10422b49941797b36a8877ed091e9b49554dddbfc70b1",
   "PackageInfoURL": "https://homalg-project.github.io/CAP_project/CAP/PackageInfo.g",
   "PackageName": "CAP",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/CAP",
   "Persons": [
     {
-      "Email": "gutsche@mathematik.uni-siegen.de",
+      "Email": "sebastian.gutsche@gmail.com",
       "FirstNames": "Sebastian",
       "Institution": "University of Siegen",
       "IsAuthor": true,
@@ -76,7 +76,7 @@
       "WWWHome": "https://sebasguts.github.io/"
     },
     {
-      "Email": "sebastian.posur@uni-siegen.de",
+      "Email": "sebastian.posur@uni-muenster.de",
       "FirstNames": "Sebastian",
       "Institution": "University of Siegen",
       "IsAuthor": true,
@@ -98,7 +98,7 @@
       "WWWHome": "http://www.math.ntnu.no/~oysteini/"
     },
     {
-      "Email": "fabian.zickgraf@uni-siegen.de",
+      "Email": "f.zickgraf@dashdos.com",
       "FirstNames": "Fabian",
       "Institution": "University of Siegen",
       "IsAuthor": true,
@@ -117,5 +117,5 @@
   "Status": "deposited",
   "Subtitle": "Categories, Algorithms, Programming",
   "TestFile": "tst/testall.g",
-  "Version": "2025.08-02"
+  "Version": "2025.08-03"
 }
