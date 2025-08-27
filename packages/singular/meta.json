@@ -1,11 +1,10 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">singular</span> package provides an interface    from <span class=\"pkgname\">GAP</span> to the computer algebra system    <span class=\"pkgname\">Singular</span>.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "46d00b4b62130310a9b33225d87a56f0ea2e5fca541e171f7a938b6d9d8f3c29",
-  "ArchiveURL": "https://github.com/gap-packages/singular/releases/download/v2024.06.03/singular-2024.06.03",
-  "Autoload": false,
+  "ArchiveSHA256": "11456e65b805d094147f92158222dce98f26fd74f2f1c85595c13fab7dfa8685",
+  "ArchiveURL": "https://github.com/gap-packages/singular/releases/download/v2025.08.26/singular-2025.08.26",
   "AvailabilityTest": null,
-  "Date": "03/06/2024",
+  "Date": "26/08/2025",
   "Dependencies": {
     "ExternalConditions": [
       [
@@ -28,7 +27,6 @@
       "ArchiveURLSubset": [
         "doc"
       ],
-      "Autoload": true,
       "BookName": "singular",
       "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "A GAP interface to Singular",
@@ -36,7 +34,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "2c94f4676ed3e5340835f46143ac85fff61e8dbb94e98fe6bbe2d1e695a8af8f",
+  "PackageInfoSHA256": "db8a63758dd9f280cd7d698314db0b8f33154f3cadeddb8e9595be15cf607fee",
   "PackageInfoURL": "https://gap-packages.github.io/singular/PackageInfo.g",
   "PackageName": "singular",
   "PackageWWWHome": "https://gap-packages.github.io/singular/",
@@ -74,5 +72,5 @@
   "Status": "deposited",
   "Subtitle": "A GAP interface to Singular",
   "TestFile": "tst/testall.g",
-  "Version": "2024.06.03"
+  "Version": "2025.08.26"
 }
