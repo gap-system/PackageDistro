@@ -1,17 +1,17 @@
 {
-  "AbstractHTML": "The <span class=\"pkgname\">PrimGrp</span> package provides the library   of primitive permutation groups which includes, up to permutation isomorphism   (i.e., up to conjugacy in the corresponding symmetric group), all primitive   permutation groups of degree &lt; 4096.",
+  "AbstractHTML": "The <span class=\"pkgname\">PrimGrp</span> package provides the library   of primitive permutation groups which includes, up to permutation isomorphism   (i.e., up to conjugacy in the corresponding symmetric group), all primitive   permutation groups of degree &lt; 8192.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "9d6fde0fa4658100f662c364f77c9fd67b1699e9f3dbb60306ed357cc5837cff",
-  "ArchiveURL": "https://github.com/gap-packages/primgrp/releases/download/v3.4.4/primgrp-3.4.4",
+  "ArchiveSHA256": "e92c4ed3f04dee7b429463b51047701d309f24f94639b84da5e35b620e16916b",
+  "ArchiveURL": "https://github.com/gap-packages/primgrp/releases/download/v4.0.0/primgrp-4.0.0",
   "AutoDoc": {
     "entities": {
-      "RELEASEDATE": "25 February 2023",
-      "RELEASEYEAR": "2023",
-      "VERSION": "3.4.4"
+      "RELEASEDATE": "6 December 2024",
+      "RELEASEYEAR": "2024",
+      "VERSION": "4.0.0"
     }
   },
   "AvailabilityTest": null,
-  "Date": "25/02/2023",
+  "Date": "06/12/2024",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": "4.10.0",
@@ -40,7 +40,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "37e2123ad03819d361a3d573d2bbbd5101317bd2cf2915fac63d45e6deb75ebc",
+  "PackageInfoSHA256": "8f450a037d97c2eb6b50e09d7118ae7456f660efa08570f88609b4744e2f3a99",
   "PackageInfoURL": "https://gap-packages.github.io/primgrp/PackageInfo.g",
   "PackageName": "PrimGrp",
   "PackageWWWHome": "https://gap-packages.github.io/primgrp/",
@@ -67,6 +67,17 @@
       "WWWHome": "https://olexandr-konovalov.github.io/"
     },
     {
+      "Email": "jesse.lansdown@canterbury.ac.nz",
+      "FirstNames": "Jesse",
+      "Institution": "University of Canterbury",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Lansdown",
+      "Place": "Christchurch",
+      "PostalAddress": "Jesse Lansdown\nSchool of Mathematics and Statistics\nUniversity of Canterbury\nChristchurch 8140\nNew Zealand",
+      "WWWHome": "https://www.jesselansdown.com"
+    },
+    {
       "Email": "colva.roney-dougal@st-andrews.ac.uk",
       "FirstNames": "Colva M.",
       "Institution": "University of St Andrews",
@@ -78,11 +89,11 @@
       "WWWHome": "http://www-groups.mcs.st-and.ac.uk/~colva/"
     },
     {
-      "Email": "cr66@st-andrews.ac.uk",
+      "Email": "chriswgrussell@hotmail.co.uk",
       "FirstNames": "Christopher",
       "Institution": "University of St Andrews",
       "IsAuthor": true,
-      "IsMaintainer": true,
+      "IsMaintainer": false,
       "LastName": "Russell",
       "Place": "St Andrews"
     }
@@ -95,5 +106,5 @@
   "Status": "deposited",
   "Subtitle": "GAP Primitive Permutation Groups Library",
   "TestFile": "tst/testall.g",
-  "Version": "3.4.4"
+  "Version": "4.0.0"
 }
