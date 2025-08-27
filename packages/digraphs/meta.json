@@ -1,19 +1,19 @@
 {
   "AbstractHTML": "The &Digraphs; package is a &GAP; package containing\n          methods for graphs, digraphs, and multidigraphs.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "fe7670dabaca7b4f237be360e791ed4a01d096f8b6ad4c8bbd35b772b04503c8",
-  "ArchiveURL": "https://github.com/digraphs/Digraphs/releases/download/v1.10.0/digraphs-1.10.0",
+  "ArchiveSHA256": "b3b34f8bc5e82fa1fed491f8c8550a676d44574e44b8f31bf17a9e81a0927c79",
+  "ArchiveURL": "https://github.com/digraphs/Digraphs/releases/download/v1.10.1/digraphs-1.10.1",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "The &Digraphs; package is a &GAP; package containing\n          methods for graphs, digraphs, and multidigraphs.",
-      "Acknowledgements": "\n          We would like to thank Christopher Jefferson for his help in including\n          &BLISS; in &Digraphs;.\n\n          This package's methods for computing digraph homomorphisms are based\n          on work by Max Neunh&#246;ffer, and independently Artur Sch&#228;fer.\n        ",
+      "Acknowledgements": "\n          We would like to thank Christopher Jefferson for his help in including\n          &BLISS; in &Digraphs;.\n\n          We also gratefully acknowledge the encouragement and assistance of\n          Leonard Soicher, and the inspiration of his &GRAPE; package, at many\n          points throughout the development of &Digraphs;.\n\n          This package's methods for computing digraph homomorphisms are based\n          on work by Max Neunh&#246;ffer, and independently Artur Sch&#228;fer.\n        ",
       "Copyright": "Jan De Beule, Julius Jonu&#353;as, James D. Mitchell,\n          Wilf A. Wilson, Michael Young et al.<P/>\n\n          &Digraphs; is free software; you can redistribute it and/or modify\n          it under the terms of the <URL Text=\"GNU General Public License\">\n          https://www.fsf.org/licenses/gpl.html</URL> as published by the\n          Free Software Foundation; either version 3 of the License, or (at\n          your option) any later version."
     }
   },
   "Autoload": false,
   "AvailabilityTest": null,
-  "BannerString": "-----------------------------------------------------------------------------\nLoading Digraphs 1.10.0\nby:\n     Jan De Beule (https://wids.research.vub.be/en/jan-de-beule),\n     Julius Jonusas (http://julius.jonusas.work),\n     James Mitchell (https://jdbm.me),\n     Wilf A. Wilson (https://wilf.me),\n     Michael Young (https://myoung.uk/work/)\nwith contributions by:\n     Marina Anagnostopoulou-Merkouri,\n     Finn Buck,\n     Stuart Burrell (https://stuartburrell.github.io),\n     Graham Campbell,\n     Raiyan Chowdhury,\n     Reinis Cirpons,\n     Ashley Clayton,\n     Tom Conti-Leslie (https://tomcontileslie.com),\n     Joseph Edwards (https://github.com/Joseph-Edwards),\n     Luna Elliott (https://research.manchester.ac.uk/en/persons/luna-elliott),\n     Isuru Fernando,\n     Ewan Gilligan,\n     Gillis Frankie,\n     Sebastian Gutsche,\n     Samantha Harper,\n     Max Horn (https://www.quendi.de/math),\n     Christopher Jefferson (https://heather.cafe/),\n     Malachi Johns,\n     Olexandr Konovalov (https://olexandr-konovalov.github.io/),\n     Hyeokjun Kwon,\n     Aidan Lau,\n     Andrea Lee,\n     Saffron McIver,\n     Michael Orlitzky (https://michael.orlitzky.com/),\n     Matthew Pancer,\n     Markus Pfeiffer (https://markusp.morphism.de/),\n     Daniel Pointon,\n     Lea Racine,\n     Christopher Russell,\n     Artur Schaefer,\n     Isabella Scott,\n     Kamran Sharma,\n     Finn Smith,\n     Ben Spiers,\n     Maria Tsalakou (https://mariatsalakou.github.io/),\n     Meike Weiss (https://bit.ly/4e6pUeP),\n     Murray Whyte,\n and Fabian Zickgraf.\n-----------------------------------------------------------------------------\n",
-  "Date": "14/02/2025",
+  "BannerString": "-----------------------------------------------------------------------------\nLoading Digraphs 1.10.1\nby:\n     Jan De Beule (https://wids.research.vub.be/en/jan-de-beule),\n     Julius Jonusas (http://julius.jonusas.work),\n     James Mitchell (https://jdbm.me),\n     Wilf A. Wilson (https://wilf.me),\n     Michael Young (https://myoung.uk/work/)\nwith contributions by:\n     Marina Anagnostopoulou-Merkouri,\n     Finn Buck,\n     Stuart Burrell (https://stuartburrell.github.io),\n     Graham Campbell,\n     Raiyan Chowdhury,\n     Reinis Cirpons,\n     Ashley Clayton,\n     Tom Conti-Leslie (https://tomcontileslie.com),\n     Joseph Edwards (https://github.com/Joseph-Edwards),\n     Luna Elliott (https://research.manchester.ac.uk/en/persons/luna-elliott),\n     Isuru Fernando,\n     Ewan Gilligan,\n     Gillis Frankie,\n     Sebastian Gutsche,\n     Samantha Harper,\n     Max Horn (https://www.quendi.de/math),\n     Christopher Jefferson (https://heather.cafe/),\n     Malachi Johns,\n     Olexandr Konovalov (https://olexandr-konovalov.github.io/),\n     Hyeokjun Kwon,\n     Aidan Lau,\n     Andrea Lee,\n     Saffron McIver,\n     Michael Orlitzky (https://michael.orlitzky.com/),\n     Matthew Pancer,\n     Markus Pfeiffer (https://markusp.morphism.de/),\n     Daniel Pointon,\n     Lea Racine,\n     Christopher Russell,\n     Artur Schaefer,\n     Isabella Scott,\n     Kamran Sharma,\n     Finn Smith,\n     Ben Spiers,\n     Maria Tsalakou (https://mariatsalakou.github.io/),\n     Meike Weiss (https://bit.ly/4e6pUeP),\n     Murray Whyte,\n and Fabian Zickgraf.\n-----------------------------------------------------------------------------\n",
+  "Date": "27/08/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10.0",
@@ -66,7 +66,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "19430bdd6de9afac444bd8119ec60cf655b43df8fd3a57f829e44aca1b59ac89",
+  "PackageInfoSHA256": "ba1ca412ae10a9988cae628b37cd8dd4d356c49d05ad78a3cf45e2503ae6e1df",
   "PackageInfoURL": "https://digraphs.github.io/Digraphs/PackageInfo.g",
   "PackageName": "Digraphs",
   "PackageWWWHome": "https://digraphs.github.io/Digraphs",
@@ -448,5 +448,5 @@
   "Status": "deposited",
   "Subtitle": "Graphs, digraphs, and multidigraphs in GAP",
   "TestFile": "tst/teststandard.g",
-  "Version": "1.10.0"
+  "Version": "1.10.1"
 }
