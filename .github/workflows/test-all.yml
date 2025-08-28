@@ -229,11 +229,6 @@ jobs:
               elif [[ ${PKG} == xgap ]]; then
                 echo "Skip xgap: no X11 headers, and no means to test it"
                 SKIPPED="${SKIPPED}${PKG} "
-              elif [[ ${PKG} == polycyclic ]]; then
-                # HACK FIXME TODO: skip polycyclic for now
-                echo "Skip polycyclic tests for now, as they run in an infinite (?) loop"
-                echo "Re-enable them once there is a new polycyclic release"
-                SKIPPED="${SKIPPED}${PKG} "
               else
                 MATRIX="${MATRIX}\"${PKG}\","
               fi
