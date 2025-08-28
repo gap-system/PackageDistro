@@ -2,20 +2,20 @@
   "AbstractHTML": "This package provides various algorithms for computations with polycyclic groups defined by polycyclic presentations.",
   "AcceptDate": "01/2004",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "6983a72c90d92d0e6a3706dde7686c4a5658e48b04b5889d24808939896df007",
-  "ArchiveURL": "https://github.com/gap-packages/polycyclic/releases/download/v2.16/polycyclic-2.16",
+  "ArchiveSHA256": "0d82a709155db7a0d3db7dd7ce96a50c7e7f4bd07dd0085eb0009de01f1e2ca1",
+  "ArchiveURL": "https://github.com/gap-packages/polycyclic/releases/download/v2.17/polycyclic-2.17",
   "AutoDoc": {
     "TitlePage": {
-      "Acknowledgements": "We appreciate very much all past and future comments, suggestions andcontributions to this package and its documentation provided by &GAP;users and developers.",
-      "Copyright": "<Index>License</Index>&copyright; 2003-2018 by Bettina Eick, Max Horn and Werner Nickel<P/>The &Polycyclic; package is free software;you can redistribute it and/or modify it under the terms of the<URL Text=\"GNU General Public License\">http://www.fsf.org/licenses/gpl.html</URL>as published by the Free Software Foundation; either version 2 of the License,or (at your option) any later version."
+      "Acknowledgements": "\nWe appreciate very much all past and future comments, suggestions and\ncontributions to this package and its documentation provided by &GAP;\nusers and developers.",
+      "Copyright": "<Index>License</Index>\n&copyright; 2003-2018 by Bettina Eick, Max Horn and Werner Nickel<P/>\nThe &Polycyclic; package is free software;\nyou can redistribute it and/or modify it under the terms of the\n<URL Text=\"GNU General Public License\">http://www.fsf.org/licenses/gpl.html</URL>\nas published by the Free Software Foundation; either version 2 of the License,\nor (at your option) any later version."
     }
   },
   "AvailabilityTest": null,
   "CommunicatedBy": "Charles Wright (Eugene)",
-  "Date": "25/07/2020",
+  "Date": "28/08/2025",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">= 4.9",
+    "GAP": ">= 4.10",
     "NeededOtherPackages": [
       [
         "alnuth",
@@ -64,15 +64,14 @@
       "ArchiveURLSubset": [
         "doc"
       ],
-      "Autoload": true,
       "BookName": "polycyclic",
-      "HTMLStart": "doc/chap0.html",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "Computation with polycyclic groups",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "e9470e813ff0773e47fda0420335aa8c1856ea89f8d361538f304e046503487d",
+  "PackageInfoSHA256": "7f8c1600aeef8467c97dcca0dfb453b1eec7d03034b43f218bcc8eacba0325e4",
   "PackageInfoURL": "https://gap-packages.github.io/polycyclic/PackageInfo.g",
   "PackageName": "Polycyclic",
   "PackageWWWHome": "https://gap-packages.github.io/polycyclic/",
@@ -80,6 +79,7 @@
     {
       "Email": "beick@tu-bs.de",
       "FirstNames": "Bettina",
+      "GitHubUsername": "beick",
       "Institution": "TU Braunschweig",
       "IsAuthor": true,
       "IsMaintainer": true,
@@ -96,15 +96,39 @@
       "WWWHome": "http://www.mathematik.tu-darmstadt.de/~nickel/"
     },
     {
-      "Email": "horn@mathematik.uni-kl.de",
+      "Email": "mhorn@rptu.de",
       "FirstNames": "Max",
-      "Institution": "TU Kaiserslautern",
+      "GitHubUsername": "fingolfin",
+      "Institution": "RPTU Kaiserslautern-Landau",
       "IsAuthor": true,
       "IsMaintainer": true,
       "LastName": "Horn",
       "Place": "Kaiserslautern, Germany",
-      "PostalAddress": "Fachbereich Mathematik\nTU Kaiserslautern\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
+      "PostalAddress": "Fachbereich Mathematik\nRPTU Kaiserslautern-Landau\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
       "WWWHome": "https://www.quendi.de/math"
+    },
+    {
+      "Email": "oscar00ayala@gmail.com",
+      "FirstNames": "Óscar",
+      "GitHubUsername": "osferay",
+      "Institution": "TU Braunschweig",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "Fernández Ayala",
+      "Place": "Braunschweig",
+      "WWWHome": "https://Osferay.github.io"
+    },
+    {
+      "Email": "sam.tertooy@kuleuven.be",
+      "FirstNames": "Sam",
+      "GitHubUsername": "stertooy",
+      "Institution": "KU Leuven, Kulak Kortrijk Campus",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "Tertooy",
+      "Place": "Kortrijk, Belgium",
+      "PostalAddress": "\n           Wiskunde\n           KU Leuven, Kulak Kortrijk Campus\n           Etienne Sabbelaan 53\n           8500 Kortrijk\n           Belgium\n       ",
+      "WWWHome": "https://stertooy.github.io/"
     }
   ],
   "README_URL": "https://gap-packages.github.io/polycyclic/README.md",
@@ -115,5 +139,5 @@
   "Status": "accepted",
   "Subtitle": "Computation with polycyclic groups",
   "TestFile": "tst/testall.g",
-  "Version": "2.16"
+  "Version": "2.17"
 }
