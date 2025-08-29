@@ -1,8 +1,8 @@
 {
   "AbstractHTML": "The &Digraphs; package is a &GAP; package containing\n          methods for graphs, digraphs, and multidigraphs.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "b3b34f8bc5e82fa1fed491f8c8550a676d44574e44b8f31bf17a9e81a0927c79",
-  "ArchiveURL": "https://github.com/digraphs/Digraphs/releases/download/v1.10.1/digraphs-1.10.1",
+  "ArchiveSHA256": "e1968f3bc2ffccd99fb407836e9f67c8916aa8e3362ffec9e0d9c653efbfb1e8",
+  "ArchiveURL": "https://github.com/digraphs/Digraphs/releases/download/v1.11.0/digraphs-1.11.0",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "The &Digraphs; package is a &GAP; package containing\n          methods for graphs, digraphs, and multidigraphs.",
@@ -12,8 +12,8 @@
   },
   "Autoload": false,
   "AvailabilityTest": null,
-  "BannerString": "-----------------------------------------------------------------------------\nLoading Digraphs 1.10.1\nby:\n     Jan De Beule (https://wids.research.vub.be/en/jan-de-beule),\n     Julius Jonusas (http://julius.jonusas.work),\n     James Mitchell (https://jdbm.me),\n     Wilf A. Wilson (https://wilf.me),\n     Michael Young (https://myoung.uk/work/)\nwith contributions by:\n     Marina Anagnostopoulou-Merkouri,\n     Finn Buck,\n     Stuart Burrell (https://stuartburrell.github.io),\n     Graham Campbell,\n     Raiyan Chowdhury,\n     Reinis Cirpons,\n     Ashley Clayton,\n     Tom Conti-Leslie (https://tomcontileslie.com),\n     Joseph Edwards (https://github.com/Joseph-Edwards),\n     Luna Elliott (https://research.manchester.ac.uk/en/persons/luna-elliott),\n     Isuru Fernando,\n     Ewan Gilligan,\n     Gillis Frankie,\n     Sebastian Gutsche,\n     Samantha Harper,\n     Max Horn (https://www.quendi.de/math),\n     Christopher Jefferson (https://heather.cafe/),\n     Malachi Johns,\n     Olexandr Konovalov (https://olexandr-konovalov.github.io/),\n     Hyeokjun Kwon,\n     Aidan Lau,\n     Andrea Lee,\n     Saffron McIver,\n     Michael Orlitzky (https://michael.orlitzky.com/),\n     Matthew Pancer,\n     Markus Pfeiffer (https://markusp.morphism.de/),\n     Daniel Pointon,\n     Lea Racine,\n     Christopher Russell,\n     Artur Schaefer,\n     Isabella Scott,\n     Kamran Sharma,\n     Finn Smith,\n     Ben Spiers,\n     Maria Tsalakou (https://mariatsalakou.github.io/),\n     Meike Weiss (https://bit.ly/4e6pUeP),\n     Murray Whyte,\n and Fabian Zickgraf.\n-----------------------------------------------------------------------------\n",
-  "Date": "27/08/2025",
+  "BannerString": "-----------------------------------------------------------------------------\nLoading Digraphs 1.11.0\nby:\n     Jan De Beule (https://wids.research.vub.be/en/jan-de-beule),\n     Julius Jonusas (http://julius.jonusas.work),\n     James Mitchell (https://jdbm.me),\n     Wilf A. Wilson (https://wilf.me),\n     Michael Young (https://myoung.uk/work/)\nwith contributions by:\n     Marina Anagnostopoulou-Merkouri,\n     Finn Buck,\n     Stuart Burrell (https://stuartburrell.github.io),\n     Graham Campbell,\n     Raiyan Chowdhury,\n     Reinis Cirpons,\n     Ashley Clayton,\n     Tom Conti-Leslie (https://tomcontileslie.com),\n     Joseph Edwards (https://github.com/Joseph-Edwards),\n     Luna Elliott (https://research.manchester.ac.uk/en/persons/luna-elliott),\n     Isuru Fernando,\n     Ewan Gilligan,\n     Gillis Frankie,\n     Sebastian Gutsche,\n     Samantha Harper,\n     Max Horn (https://www.quendi.de/math),\n     Harry Jack,\n     Christopher Jefferson (https://heather.cafe/),\n     Malachi Johns,\n     Olexandr Konovalov (https://olexandr-konovalov.github.io/),\n     Hyeokjun Kwon,\n     Aidan Lau,\n     Andrea Lee,\n     Saffron McIver,\n     Seyyed Ali Mohammadiyeh,\n     Michael Orlitzky (https://michael.orlitzky.com/),\n     Matthew Pancer,\n     Markus Pfeiffer (https://markusp.morphism.de/),\n     Daniel Pointon,\n     Pramoth Ragavan,\n     Lea Racine,\n     Christopher Russell,\n     Artur Schaefer,\n     Isabella Scott,\n     Kamran Sharma,\n     Finn Smith,\n     Ben Spiers,\n     Maria Tsalakou (https://mariatsalakou.github.io/),\n     Agastyaa Vishvanath,\n     Meike Weiss (https://bit.ly/4e6pUeP),\n     Murray Whyte,\n and Fabian Zickgraf.\n-----------------------------------------------------------------------------\n",
+  "Date": "28/08/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10.0",
@@ -66,7 +66,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "ba1ca412ae10a9988cae628b37cd8dd4d356c49d05ad78a3cf45e2503ae6e1df",
+  "PackageInfoSHA256": "e1b587d0fa72a629f77bb2b4ac26da0ac5e62a5885c9a6325fe945fd4314dd88",
   "PackageInfoURL": "https://digraphs.github.io/Digraphs/PackageInfo.g",
   "PackageName": "Digraphs",
   "PackageWWWHome": "https://digraphs.github.io/Digraphs",
@@ -245,15 +245,22 @@
       "LastName": "Harper"
     },
     {
-      "Email": "horn@mathematik.uni-kl.de",
+      "Email": "mhorn@rptu.de",
       "FirstNames": "Max",
-      "Institution": "TU Kaiserslautern",
+      "Institution": "RPTU Kaiserslautern-Landau",
       "IsAuthor": true,
       "IsMaintainer": false,
       "LastName": "Horn",
       "Place": "Kaiserslautern, Germany",
-      "PostalAddress": "Fachbereich Mathematik, TU Kaiserslautern, Gottlieb-Daimler-Straße 48, 67663 Kaiserslautern, Germany",
+      "PostalAddress": "Fachbereich Mathematik, RPTU Kaiserslautern-Landau, Gottlieb-Daimler-Straße 48, 67663 Kaiserslautern, Germany",
       "WWWHome": "https://www.quendi.de/math"
+    },
+    {
+      "Email": "hrj4@st-andrews.ac.uk",
+      "FirstNames": "Harry",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Jack"
     },
     {
       "Email": "caj21@st-andrews.ac.uk",
@@ -312,6 +319,13 @@
       "LastName": "McIver"
     },
     {
+      "Email": "MaxBaseCode@Gmail.Com",
+      "FirstNames": "Seyyed Ali",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Mohammadiyeh"
+    },
+    {
       "Email": "michael@orlitzky.com",
       "FirstNames": "Michael",
       "IsAuthor": true,
@@ -340,6 +354,13 @@
       "IsAuthor": true,
       "IsMaintainer": false,
       "LastName": "Pointon"
+    },
+    {
+      "Email": "107881923+pramothragavan@users.noreply.github.com",
+      "FirstNames": "Pramoth",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Ragavan"
     },
     {
       "Email": "lr217@st-andrews.ac.uk",
@@ -412,6 +433,13 @@
       "WWWHome": "https://mariatsalakou.github.io/"
     },
     {
+      "Email": "av215@st-andrews.ac.uk",
+      "FirstNames": "Agastyaa",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Vishvanath"
+    },
+    {
       "Email": "weiss@art.rwth-aachen.de",
       "FirstNames": "Meike",
       "Institution": "RWTH-Aachen University",
@@ -448,5 +476,5 @@
   "Status": "deposited",
   "Subtitle": "Graphs, digraphs, and multidigraphs in GAP",
   "TestFile": "tst/teststandard.g",
-  "Version": "1.10.1"
+  "Version": "1.11.0"
 }
