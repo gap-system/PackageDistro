@@ -1,8 +1,8 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">ALCO</span> package provides tools for algebraic combinatorics including implementations of octonion and Jordan algebras.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "5fb653698ac560149c079d47c59e3581474bdf774ddd794ee0dab4617cf1de9b",
-  "ArchiveURL": "https://github.com/BNasmith/alco/releases/download/v1.1.1/ALCO-1.1.1",
+  "ArchiveSHA256": "27a4c511d14053275027d6cc79f19409880a7fa4f768f12662cb06ab4cae06ab",
+  "ArchiveURL": "https://github.com/BNasmith/alco/releases/download/v1.1.2/ALCO-1.1.2",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "ALCO provides implementations in &GAP; of octonion algebras, Jordan algebras, and certain important integer subrings of those algebras. It also provides tools to compute the parameters of t-designs in spherical and projective spaces (modeled as manifolds of primitive idempotent elements in a simple Euclidean Jordan algebra). Finally, this package provides tools to explore octonion lattice constructions, including octonion Leech lattices.\n",
@@ -11,14 +11,14 @@
     },
     "entities": {
       "ALCO": "<Package>ALCO</Package>",
-      "DATE": "26/01/2025",
-      "VERSION": "1.1.1",
+      "DATE": "05/09/2025",
+      "VERSION": "1.1.2",
       "io": "<Package>io</Package>"
     }
   },
   "AvailabilityTest": null,
-  "BannerString": "----------------------------------------------------------------\nLoading  ALCO 1.1.1\t(Tools for Algebraic Combinatorics)\nby Benjamin Nasmith (https://github.com/BNasmith/)\nThis program is distributed under GNU General Public License 3.0\n----------------------------------------------------------------\n",
-  "Date": "26/01/2025",
+  "BannerString": "----------------------------------------------------------------\nLoading  ALCO 1.1.2\t(Tools for Algebraic Combinatorics)\nby Benjamin Nasmith (https://github.com/BNasmith/)\nThis program is distributed under GNU General Public License 3.0\n----------------------------------------------------------------\n",
+  "Date": "05/09/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": "4.14",
@@ -49,7 +49,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "25beaa9a3dfb129324a064568fe33ddf45d386ed24ad33b63b949717e4ab5a87",
+  "PackageInfoSHA256": "3df7399a631f4c47b053af86f770e77b8d685af61d55889e88015e1e0703ec1a",
   "PackageInfoURL": "https://bnasmith.github.io/alco//PackageInfo.g",
   "PackageName": "ALCO",
   "PackageWWWHome": "https://bnasmith.github.io/alco/",
@@ -72,5 +72,5 @@
   "Subtitle": "Tools for algebraic combinatorics",
   "SupportEmail": "bnasmith@proton.me",
   "TestFile": "tst/testall.g",
-  "Version": "1.1.1"
+  "Version": "1.1.2"
 }
