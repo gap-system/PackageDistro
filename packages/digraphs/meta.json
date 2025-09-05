@@ -1,5 +1,5 @@
 {
-  "AbstractHTML": "The &Digraphs; package is a &GAP; package containing\n          methods for graphs, digraphs, and multidigraphs.",
+  "AbstractHTML": "The <Strong>Digraphs</Strong> package is a <Strong>GAP</Strong> package containing\n          methods for graphs, digraphs, and multidigraphs.",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "c6a16647437a17d6cfe76cd53f33e6e35e118f57e1e732f4fc147167657eabc4",
   "ArchiveURL": "https://github.com/digraphs/Digraphs/releases/download/v1.12.0/digraphs-1.12.0",
@@ -67,7 +67,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "65709504ff9ef5ec287214af05155ac6fbdfbe2acc04244477e99e1abbbffeba",
+  "PackageInfoSHA256": "5c81d9b630af698d3aaae46408fa0d1bd8233fca20ecb3b03a19f95544f69ac2",
   "PackageInfoURL": "https://digraphs.github.io/Digraphs/PackageInfo.g",
   "PackageName": "Digraphs",
   "PackageWWWHome": "https://digraphs.github.io/Digraphs",
