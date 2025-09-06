@@ -1,8 +1,8 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">HomalgToCAS</span> package provides the first layer of abstraction  needed for <span class=\"pkgname\">homalg</span> to access external computer algebra systems",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "59c422b1b156b8d17d9a55a1335193b976724cfa2d8340d8733eda2232e81ac6",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/HomalgToCAS-2023.11-01/HomalgToCAS-2023.11-01",
+  "ArchiveSHA256": "5fbd98b9a95f905675f64cac04713ed05ea432bbcc25c252eefe834d752bc4fd",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/HomalgToCAS-2025.08-01/HomalgToCAS-2025.08-01",
   "AutoDoc": {
     "TitlePage": {
       "Acknowledgements": "\n             We are very much indebted to Max Neunhöffer who provided the first\n             piece of code around which the package &IO_ForHomalg; was built. The\n             package &HomalgToCAS; provides a further abstraction layer preparing\n             the communication.\n                    ",
@@ -10,7 +10,7 @@
     }
   },
   "AvailabilityTest": null,
-  "Date": "2023-11-30",
+  "Date": "2025-09-06",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12.1",
@@ -58,7 +58,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "94e3175518b38e3d6829693c868901c22ebffce9ad38a8be37ebcde082bfe828",
+  "PackageInfoSHA256": "af6e9255f5cc485623155f7c9524da055d0903f77348feeb4d763c62f6ae7f74",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/HomalgToCAS/PackageInfo.g",
   "PackageName": "HomalgToCAS",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/HomalgToCAS",
@@ -119,7 +119,7 @@
       "WWWHome": "https://sebasguts.github.io"
     },
     {
-      "Email": "frank.luebeck@@math.rwth-aachen.de",
+      "Email": "frank.luebeck@math.rwth-aachen.de",
       "FirstNames": "Frank",
       "Institution": "RWTH Aachen University",
       "IsAuthor": false,
@@ -149,5 +149,5 @@
   "Status": "deposited",
   "Subtitle": "A window to the outer world",
   "TestFile": "tst/testall.g",
-  "Version": "2023.11-01"
+  "Version": "2025.08-01"
 }
