@@ -59,7 +59,7 @@ jobs:
           update_packager_index: false
 
       - name: "Install GAP"
-        uses: gap-actions/setup-gap@v2
+        uses: gap-actions/setup-gap@v3
         with:
           GAP_BOOTSTRAP: 'minimal'
           GAP_PKGS_TO_CLONE: 'json'
