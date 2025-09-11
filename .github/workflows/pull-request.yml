@@ -59,11 +59,12 @@ jobs:
           update_packager_index: false
 
       - name: "Install GAP"
-        uses: gap-actions/setup-gap@v2
-        with:
-          GAP_BOOTSTRAP: 'minimal'
-          GAP_PKGS_TO_CLONE: 'json'
-          GAP_PKGS_TO_BUILD: 'json'
+        uses: gap-actions/setup-gap@v3
+
+      - name: "Build the json package"
+        run: |
+          cd ${GAPROOT}/pkg
+          ../bin/BuildPackages.sh --strict json
 
       - name: "Determine what was added or modified, validate"
         id: modified
