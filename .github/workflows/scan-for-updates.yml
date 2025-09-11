@@ -54,11 +54,12 @@ jobs:
           update_packager_index: false
 
       - name: "Install GAP"
-        uses: gap-actions/setup-gap@v2
-        with:
-          GAP_BOOTSTRAP: 'minimal'
-          GAP_PKGS_TO_CLONE: 'crypting json'
-          GAP_PKGS_TO_BUILD: 'crypting json'
+        uses: gap-actions/setup-gap@v3
+
+      - name: "Build the json and crypting packages"
+        run: |
+          cd ${GAPROOT}/pkg
+          ../bin/BuildPackages.sh --strict json crypting
 
       - name: "Set up Python"
         uses: actions/setup-python@v6
