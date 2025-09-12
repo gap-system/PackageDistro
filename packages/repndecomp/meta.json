@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "The <span class='pkgname'>RepnDecomp</span> package provides functions implementing various algorithms for decomposing linear representations of finite groups.",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSHA256": "bda2ceadf512ffac17794c0b2c6640c4ea18d5a8929bb9de1cfe73eb5e04bbb2",
-  "ArchiveURL": "https://github.com/gap-packages/RepnDecomp/releases/download/v1.3.0/RepnDecomp-1.3.0",
+  "ArchiveSHA256": "fd9a8653ac2c019b06ce8f149b5bbff148b48f8572feed63a3464a8b27ced1d9",
+  "ArchiveURL": "https://github.com/gap-packages/RepnDecomp/releases/download/v1.3.1/RepnDecomp-1.3.1",
   "AvailabilityTest": null,
-  "Date": "02/01/2023",
+  "Date": "10/09/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.10",
@@ -43,7 +43,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "8d50bdff26ead79c7b42416d8f53dddedeeb0793fb9626450441535f162e0ba5",
+  "PackageInfoSHA256": "710c463a098e1e0a18f770d14b63e4e30f740563462f6a326d63bfb0ccfdcb59",
   "PackageInfoURL": "https://gap-packages.github.io/RepnDecomp/PackageInfo.g",
   "PackageName": "RepnDecomp",
   "PackageWWWHome": "https://gap-packages.github.io/RepnDecomp",
@@ -59,14 +59,14 @@
       "WWWHome": "https://kaashif.co.uk"
     },
     {
-      "Email": "dima@e.email",
+      "Email": "dima@pasechnik.info",
       "FirstNames": "Dmitrii",
-      "Institution": "University of Oxford",
+      "Institution": "Northwestern University",
       "IsAuthor": false,
       "IsMaintainer": true,
       "LastName": "Pasechnik",
-      "Place": "Oxford",
-      "WWWHome": "http://pasechnik.info"
+      "Place": "Evanston",
+      "WWWHome": "https://pasechnik.info/dima"
     }
   ],
   "README_URL": "https://gap-packages.github.io/RepnDecomp/README.md",
@@ -77,5 +77,5 @@
   "Status": "deposited",
   "Subtitle": "Decompose representations of finite groups into irreducibles",
   "TestFile": "tst/testall.g",
-  "Version": "1.3.0"
+  "Version": "1.3.1"
 }
