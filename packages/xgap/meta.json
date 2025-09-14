@@ -2,11 +2,11 @@
   "AbstractHTML": "The <span class=\"pkgname\">XGAP</span> package allows to use graphics in GAP.",
   "AcceptDate": "07/1999",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "87d9a0d10f602f7a58a2b1d162b2c18ee2f648421bf0d7cfd60d4239944a336c",
-  "ArchiveURL": "https://github.com/gap-packages/xgap/releases/download/v4.32/xgap-4.32",
+  "ArchiveSHA256": "5330f59825c662670cb5e40f6500c76c318760c7dd403cfb40ed8772ed93a3ff",
+  "ArchiveURL": "https://github.com/gap-packages/xgap/releases/download/v4.33/xgap-4.33",
   "AvailabilityTest": null,
   "CommunicatedBy": "Gerhard Hiß (Aachen)",
-  "Date": "08/02/2024",
+  "Date": "14/09/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.7",
@@ -21,7 +21,6 @@
         "htm",
         "doc"
       ],
-      "Autoload": true,
       "BookName": "XGAP",
       "HTMLStart": "htm/chapters.htm",
       "LongTitle": "XGAP - a graphical user interface for GAP",
@@ -29,7 +28,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "3a094d47f67c0de717c8ff13cb1f8dfd30ce241d6a3d85bffa2ab706b978a24d",
+  "PackageInfoSHA256": "d57155f6333310be31fe2f5c962114432448a89124513c22cb4fb378d6de7120",
   "PackageInfoURL": "https://gap-packages.github.io/xgap/PackageInfo.g",
   "PackageName": "XGAP",
   "PackageWWWHome": "https://gap-packages.github.io/xgap",
@@ -45,12 +44,12 @@
     {
       "Email": "mhorn@rptu.de",
       "FirstNames": "Max",
+      "GitHubUsername": "fingolfin",
       "Institution": "RPTU Kaiserslautern-Landau",
       "IsAuthor": false,
-      "IsMaintainer": true,
+      "IsMaintainer": false,
       "LastName": "Horn",
       "Place": "Kaiserslautern, Germany",
-      "PostalAddress": "Fachbereich Mathematik\nRPTU Kaiserslautern-Landau\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
       "WWWHome": "https://www.quendi.de/math"
     },
     {
@@ -59,7 +58,6 @@
       "IsAuthor": true,
       "IsMaintainer": false,
       "LastName": "Neunhöffer",
-      "PostalAddress": "Gustav-Freytag-Straße 40\n50354 Hürth\nGermany",
       "WWWHome": "http://www-groups.mcs.st-and.ac.uk/~neunhoef"
     }
   ],
@@ -71,5 +69,5 @@
   "Status": "accepted",
   "Subtitle": "a graphical user interface for GAP",
   "TestFile": "tst/testall.g",
-  "Version": "4.32"
+  "Version": "4.33"
 }
