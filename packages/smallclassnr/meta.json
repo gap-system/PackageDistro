@@ -1,0 +1,58 @@
+{
+  "AbstractHTML": "Library of finite groups with small class number.",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSHA256": "e80da757d1241793da41312f3364ce60da5aab7dd8d606a782cde105d9e5a410",
+  "ArchiveURL": "https://github.com/stertooy/SmallClassNr/releases/download/v1.4.1/SmallClassNr-1.4.1",
+  "Date": "13/09/2025",
+  "Dependencies": {
+    "GAP": ">= 4.14",
+    "NeededOtherPackages": [],
+    "SuggestedOtherPackages": []
+  },
+  "IssueTrackerURL": "https://github.com/stertooy/SmallClassNr/issues",
+  "Keywords": [
+    "conjugacy",
+    "conjugacy class",
+    "class number"
+  ],
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "SmallClassNr",
+      "HTMLStart": "doc/chap0_mj.html",
+      "LongTitle": "Library of finite groups with small class number",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSHA256": "73c9e1622e36ca459eda59ff8823a9b9a3eda75b6c057410a09b45f2b1968a0f",
+  "PackageInfoURL": "https://stertooy.github.io/SmallClassNr/PackageInfo.g",
+  "PackageName": "SmallClassNr",
+  "PackageWWWHome": "https://stertooy.github.io/SmallClassNr",
+  "Persons": [
+    {
+      "Email": "sam.tertooy@kuleuven.be",
+      "FirstNames": "Sam",
+      "GitHubUsername": "stertooy",
+      "Institution": "KU Leuven, Kulak Kortrijk Campus",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Tertooy",
+      "Place": "Kortrijk, Belgium",
+      "PostalAddress": "\n            Wiskunde\n            KU Leuven, Kulak Kortrijk Campus\n            Etienne Sabbelaan 53\n            8500 Kortrijk\n            Belgium\n        ",
+      "WWWHome": "https://stertooy.github.io/"
+    }
+  ],
+  "README_URL": "https://stertooy.github.io/SmallClassNr/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/stertooy/SmallClassNr"
+  },
+  "Subtitle": "Library of finite groups with small class number",
+  "SupportEmail": "sam.tertooy@kuleuven.be",
+  "TestFile": "tst/testall.g",
+  "Version": "1.4.1"
+}
