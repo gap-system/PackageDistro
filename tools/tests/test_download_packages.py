@@ -100,7 +100,7 @@ def test_download_archive(ensure_in_tests_dir, tmpdir):
         with pytest.raises(RequestException) as e:
             download_archive(
                 str(tmpdir), "unipot"
-            )  # FIXME??? is this *supposed* to fail???
+            )
         assert e.type == RequestException
 
     download_archive(str(tmpdir), "aclib")
