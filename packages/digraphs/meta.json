@@ -1,8 +1,8 @@
 {
   "AbstractHTML": "The <Strong>Digraphs</Strong> package is a <Strong>GAP</Strong> package containing\n          methods for graphs, digraphs, and multidigraphs.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "d565360b528c468686086d15294a58edc9c50fa99d982645efd42de2742b7da5",
-  "ArchiveURL": "https://github.com/digraphs/Digraphs/releases/download/v1.12.1/digraphs-1.12.1",
+  "ArchiveSHA256": "7dfbc15618282e40bddafd3524d3fcf48a7a80ce5725069a1e3f34e5f44cec2c",
+  "ArchiveURL": "https://github.com/digraphs/Digraphs/releases/download/v1.12.2/digraphs-1.12.2",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "The &Digraphs; package is a &GAP; package containing\n          methods for graphs, digraphs, and multidigraphs.",
@@ -12,15 +12,15 @@
   },
   "Autoload": false,
   "AvailabilityTest": null,
-  "BannerString": "-----------------------------------------------------------------------------\nLoading Digraphs 1.12.1\nby:\n     Jan De Beule (https://researchportal.vub.be/en/persons/jan-de-beule),\n     Julius Jonusas (http://julius.jonusas.work),\n     James Mitchell (https://jdbm.me),\n     Wilf A. Wilson (https://wilf.me),\n     Michael Young (https://myoung.uk/work/)\nwith contributions by:\n     Marina Anagnostopoulou-Merkouri,\n     Finn Buck,\n     Stuart Burrell (https://stuartburrell.github.io),\n     Graham Campbell,\n     Raiyan Chowdhury,\n     Reinis Cirpons,\n     Ashley Clayton,\n     Tom Conti-Leslie (https://tomcontileslie.com),\n     Joseph Edwards (https://github.com/Joseph-Edwards),\n     Luna Elliott (https://research.manchester.ac.uk/en/persons/luna-elliott),\n     Isuru Fernando,\n     Ewan Gilligan,\n     Gillis Frankie,\n     Sebastian Gutsche,\n     Samantha Harper,\n     Max Horn (https://www.quendi.de/math),\n     Harry Jack,\n     Christopher Jefferson (https://heather.cafe/),\n     Malachi Johns,\n     Olexandr Konovalov (https://olexandr-konovalov.github.io/),\n     Hyeokjun Kwon,\n     Aidan Lau,\n     Andrea Lee,\n     Saffron McIver,\n     Seyyed Ali Mohammadiyeh,\n     Michael Orlitzky (https://michael.orlitzky.com/),\n     Matthew Pancer,\n     Markus Pfeiffer (https://markusp.morphism.de/),\n     Daniel Pointon,\n     Pramoth Ragavan,\n     Lea Racine,\n     Christopher Russell,\n     Artur Schaefer,\n     Isabella Scott,\n     Kamran Sharma,\n     Finn Smith,\n     Ben Spiers,\n     Maria Tsalakou (https://mariatsalakou.github.io/),\n     Agastyaa Vishvanath,\n     Meike Weiss (https://bit.ly/4e6pUeP),\n     Murray Whyte,\n and Fabian Zickgraf.\n-----------------------------------------------------------------------------\n",
+  "BannerString": "-----------------------------------------------------------------------------\nLoading Digraphs 1.12.2\nby:\n     Jan De Beule (https://researchportal.vub.be/en/persons/jan-de-beule),\n     Julius Jonusas (http://julius.jonusas.work),\n     James Mitchell (https://jdbm.me),\n     Wilf A. Wilson (https://wilf.me),\n     Michael Young (https://myoung.uk/work/)\nwith contributions by:\n     Marina Anagnostopoulou-Merkouri,\n     Finn Buck,\n     Stuart Burrell (https://stuartburrell.github.io),\n     Graham Campbell,\n     Raiyan Chowdhury,\n     Reinis Cirpons,\n     Ashley Clayton,\n     Tom Conti-Leslie (https://tomcontileslie.com),\n     Joseph Edwards (https://github.com/Joseph-Edwards),\n     Luna Elliott (https://research.manchester.ac.uk/en/persons/luna-elliott),\n     Isuru Fernando,\n     Ewan Gilligan,\n     Gillis Frankie,\n     Sebastian Gutsche,\n     Samantha Harper,\n     Max Horn (https://www.quendi.de/math),\n     Harry Jack,\n     Christopher Jefferson (https://heather.cafe/),\n     Malachi Johns,\n     Olexandr Konovalov (https://olexandr-konovalov.github.io/),\n     Hyeokjun Kwon,\n     Aidan Lau,\n     Andrea Lee,\n     Saffron McIver,\n     Seyyed Ali Mohammadiyeh,\n     Michael Orlitzky (https://michael.orlitzky.com/),\n     Matthew Pancer,\n     Markus Pfeiffer (https://markusp.morphism.de/),\n     Daniel Pointon,\n     Pramoth Ragavan,\n     Lea Racine,\n     Christopher Russell,\n     Artur Schaefer,\n     Isabella Scott,\n     Kamran Sharma,\n     Finn Smith,\n     Ben Spiers,\n     Maria Tsalakou (https://mariatsalakou.github.io/),\n     Agastyaa Vishvanath,\n     Meike Weiss (https://bit.ly/4e6pUeP),\n     Murray Whyte,\n and Fabian Zickgraf.\n-----------------------------------------------------------------------------\n",
   "CHANGES_URL": "https://digraphs.github.io/Digraphs/CHANGELOG.md",
-  "Date": "10/09/2025",
+  "Date": "20/09/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10.0",
     "NeededOtherPackages": [
       [
-        "io",
+        "IO",
         ">=4.5.1"
       ],
       [
@@ -38,11 +38,11 @@
         ">=1.6.3"
       ],
       [
-        "grape",
+        "GRAPE",
         ">=4.8.1"
       ],
       [
-        "nautytracesinterface",
+        "NautyTracesInterface",
         ">=0.2"
       ],
       [
@@ -67,7 +67,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "ca77d93758dd20be1bc61969ac513f9fd9b9ab05376c04a7f24814765f9cf295",
+  "PackageInfoSHA256": "70573b49c2e7d1216ad51867d14e999000f74981f2bc4460e575b03426ab4eae",
   "PackageInfoURL": "https://digraphs.github.io/Digraphs/PackageInfo.g",
   "PackageName": "Digraphs",
   "PackageWWWHome": "https://digraphs.github.io/Digraphs",
@@ -523,5 +523,5 @@
   "Status": "deposited",
   "Subtitle": "Graphs, digraphs, and multidigraphs in GAP",
   "TestFile": "tst/teststandard.g",
-  "Version": "1.12.1"
+  "Version": "1.12.2"
 }
