@@ -2,8 +2,8 @@
   "AbstractHTML": "This package provides implementations of algorithms and methods for computation in certain infinite permutation groups.",
   "AcceptDate": "04/2005",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "181e5b7e69f5267ede042a5d505217c01ceccc3d21baa96b2bc71341caf33728",
-  "ArchiveURL": "https://github.com/gap-packages/rcwa/releases/download/v4.7.1/rcwa-4.7.1",
+  "ArchiveSHA256": "cfd1f318686d11b1a204f670bff39c0f4545c62d88e0dd676dcb051d3f85749d",
+  "ArchiveURL": "https://github.com/gap-packages/rcwa/releases/download/v4.8.0/rcwa-4.8.0",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "<#Include SYSTEM \"abstract.xml\">",
@@ -12,12 +12,12 @@
     }
   },
   "AvailabilityTest": null,
-  "BannerString": "\nLoading RCWA 4.7.1 ([R]esidue-[C]lass-[W]ise [A]ffine groups)\n  by Stefan Kohl, sk239@st-andrews.ac.uk.\nSee ?RCWA:About for information about the package.\n\n",
+  "BannerString": "\nLoading RCWA 4.8.0 ([R]esidue-[C]lass-[W]ise [A]ffine groups)\n  by Stefan Kohl, sk239@st-andrews.ac.uk.\nSee ?RCWA:About for information about the package.\n\n",
   "CommunicatedBy": "Bettina Eick (Braunschweig)",
-  "Date": "06/12/2022",
+  "Date": "22/09/2025",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">=4.9.1",
+    "GAP": ">=4.12.0",
     "NeededOtherPackages": [
       [
         "ResClasses",
@@ -62,7 +62,6 @@
       "ArchiveURLSubset": [
         "doc"
       ],
-      "Autoload": true,
       "BookName": "RCWA",
       "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "[R]esidue-[C]lass-[W]ise [A]ffine groups",
@@ -70,7 +69,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "8a02b136fbc5c8b9d58a74f59a80344e03a7e5de24ab85dba25ee9095ab7a92f",
+  "PackageInfoSHA256": "4cbcdd29bd7678d7f374cd9bb7a89b3d22fe192158e8abbd82ccc52ffa98490a",
   "PackageInfoURL": "https://gap-packages.github.io/rcwa/PackageInfo.g",
   "PackageName": "RCWA",
   "PackageWWWHome": "https://gap-packages.github.io/rcwa/",
@@ -92,5 +91,5 @@
   "Status": "accepted",
   "Subtitle": "Residue-Class-Wise Affine Groups",
   "TestFile": "tst/testall.g",
-  "Version": "4.7.1"
+  "Version": "4.8.0"
 }
