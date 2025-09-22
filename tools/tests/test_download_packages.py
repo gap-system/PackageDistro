@@ -98,9 +98,7 @@ def test_download_archive(ensure_in_tests_dir, tmpdir):
         "requests.get", side_effect=RequestException("Failed Request")
     ) as mock_request_post:
         with pytest.raises(RequestException) as e:
-            download_archive(
-                str(tmpdir), "unipot"
-            )
+            download_archive(str(tmpdir), "unipot")
         assert e.type == RequestException
 
     download_archive(str(tmpdir), "aclib")
