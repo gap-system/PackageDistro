@@ -60,6 +60,9 @@ def gather_dependencies(pkg_name: str, seen: set) -> set:
     gap_deps = tmp["NeededOtherPackages"]
     if "SuggestedOtherPackages" in tmp:
         gap_deps += tmp["SuggestedOtherPackages"]
+    if "Extensions" in pkg_json:
+        for ext in pkg_json["Extensions"]:
+            gap_deps += ext["needed"]
     for pkg, _ in gap_deps:
         pkg = pkg.lower()
         if not pkg in seen:
