@@ -2,8 +2,8 @@
   "AbstractHTML": "",
   "AcceptDate": "09/2007",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "378ee7dc82fde2e2e7fccf60bf6a92eb3fcefa9a05057f9404f7cc551968c427",
-  "ArchiveURL": "https://github.com/gap-packages/liealgdb/releases/download/v2.2.1/liealgdb-2.2.1",
+  "ArchiveSHA256": "1b028a8d5d4572c972fb4a2186b03818a372e66a5c81a2b65fa4a94aabe66036",
+  "ArchiveURL": "https://github.com/gap-packages/liealgdb/releases/download/v2.3.0/liealgdb-2.3.0",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "\nThis package provides access to the classification of the following\nfamilies of Lie algebras:\n<List>\n<Item> non-solvable Lie algebras over finite fields up to dimension 6;\n</Item>\n<Item> nilpotent Lie algebras of dimension up to 9 over <A>GF(2)</A>, of dimension\nup to 7 over <A>GF(3)</A> or <A>GF(5)</A>;</Item>\n<Item> simple Lie algebras of dimensions between 7 and 9 over <A>GF(2)</A>;\n</Item>\n<Item> the classification of solvable Lie algebras of dimension at most 4;\n</Item>\n<Item> the classification of nilpotent Lie algebras of dimensions at most 6.\n</Item>\n</List>\n",
@@ -13,7 +13,7 @@
   },
   "AvailabilityTest": null,
   "CommunicatedBy": "Bettina Eick (Braunschweig)",
-  "Date": "07/10/2019",
+  "Date": "24/09/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.8",
@@ -30,15 +30,14 @@
       "ArchiveURLSubset": [
         "doc"
       ],
-      "Autoload": true,
       "BookName": "LieAlgDB",
-      "HTMLStart": "doc/chap0.html",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "A library of Lie algebras",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "363904dedb9a47b067890b08ac42c802ad4c054a67b53b9dc8eb9f6663f941f2",
+  "PackageInfoSHA256": "83c82301496835f056d45307688752598fce4322d7d3846a773fa02385be8642",
   "PackageInfoURL": "https://gap-packages.github.io/liealgdb/PackageInfo.g",
   "PackageName": "LieAlgDB",
   "PackageWWWHome": "https://gap-packages.github.io/liealgdb/",
@@ -91,5 +90,5 @@
   "Status": "accepted",
   "Subtitle": "A database of Lie algebras",
   "TestFile": "tst/testall.g",
-  "Version": "2.2.1"
+  "Version": "2.3.0"
 }
