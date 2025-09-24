@@ -2,11 +2,11 @@
   "AbstractHTML": "This package provides functions for the complete enumeration of relative difference sets.",
   "AcceptDate": "02/2008",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "d58c1320b84fde09d3b778f64de3ce312e9ee53f3aa4361ff846d8ffa4a34faa",
-  "ArchiveURL": "https://github.com/gap-packages/rds/releases/download/v1.8/rds-1.8",
+  "ArchiveSHA256": "066385ba8bcd7d8f82ca5e186b7d6db21c2ea44540b77cdafca14c37290df24f",
+  "ArchiveURL": "https://github.com/gap-packages/rds/releases/download/v1.9/rds-1.9",
   "AvailabilityTest": null,
   "CommunicatedBy": "Leonard Soicher (Queen Mary, London)",
-  "Date": "21/02/2022",
+  "Date": "24/09/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.8",
@@ -36,7 +36,6 @@
         "doc",
         "htm"
       ],
-      "Autoload": true,
       "BookName": "RDS",
       "HTMLStart": "htm/chapters.htm",
       "LongTitle": "Relative Difference Sets",
@@ -44,7 +43,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "4781e3a8a0f1ea6f10886400ed87fb212e9f9f01c58391e3419382f7c3b4b38b",
+  "PackageInfoSHA256": "6aa968afe48337e8fcb06699358ddc634d4ecb179762b853a135d17ea9b044b6",
   "PackageInfoURL": "https://gap-packages.github.io/rds/PackageInfo.g",
   "PackageName": "RDS",
   "PackageWWWHome": "https://gap-packages.github.io/rds/",
@@ -73,5 +72,5 @@
   "Status": "accepted",
   "Subtitle": "A package for searching relative difference sets",
   "TestFile": "tst/testall.g",
-  "Version": "1.8"
+  "Version": "1.9"
 }
