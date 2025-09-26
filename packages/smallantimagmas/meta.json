@@ -2,8 +2,8 @@
   "AbstractHTML": "The <span class=\"pkgname\">smallantimagmas</span> package,    classifies all finite, antassociative magmas.",
   "AcceptDate": "08/2025",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "dc3785bea30acaf892158e71273c00a630b2862190ab86d1639d137a46b595a1",
-  "ArchiveURL": "https://github.com/gap-packages/smallantimagmas/releases/download/v0.4.1/smallantimagmas-v0.4.1",
+  "ArchiveSHA256": "4bee1a2853d1399e36110201f49617ee1570f220b63ead28a1e77a4f36c2e5f2",
+  "ArchiveURL": "https://github.com/gap-packages/smallantimagmas/releases/download/v0.5.1/smallantimagmas-v0.5.1",
   "AutoDoc": {
     "TitlePage": {
       "Acknowledgements": "\n      We appreciate very much all past and future comments, suggestions and\n      contributions to this package and its documentation provided by &GAP;\n      users and developers.\n      ",
@@ -12,7 +12,7 @@
   },
   "AvailabilityTest": null,
   "CommunicatedBy": "Kamil Zabielski (Białystok)",
-  "Date": "14/05/2025",
+  "Date": "26/09/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": "4.12",
@@ -43,7 +43,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "8e2c33e919dcceee6e4c49ff0077dc49a43cc6cdc1aca3a51087e2cbda50336f",
+  "PackageInfoSHA256": "1aa9dbd57b00e84ecf7a78ea421ceae82c6369d12c3f68aef5a2eca898e32413",
   "PackageInfoURL": "https://gap-packages.github.io/smallantimagmas/PackageInfo.g",
   "PackageName": "smallantimagmas",
   "PackageWWWHome": "https://gap-packages.github.io/smallantimagmas",
@@ -76,5 +76,5 @@
   "Subtitle": "A library of antiassociative magmas of small order",
   "SupportEmail": "kamil@zabielscy.com",
   "TestFile": "tst/testall.g",
-  "Version": "0.4.1"
+  "Version": "0.5.1"
 }
