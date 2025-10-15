@@ -1,17 +1,17 @@
 {
   "AbstractHTML": "This package provides an implementation of Unger's algorithm to compute the character table of a finite group.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "37927103047c0f577f35a57a5f92e34b1b322be93a03404e3eac9ef64e5c8dcc",
-  "ArchiveURL": "https://github.com/gap-packages/InduceReduce/releases/download/v1.1/InduceReduce-1.1",
+  "ArchiveSHA256": "c5f5ed8649829837fcfbe6045a368c2486bfc875fa09f8315dc037163bcd03e8",
+  "ArchiveURL": "https://github.com/gap-packages/InduceReduce/releases/download/v1.2/InduceReduce-1.2",
   "AutoDoc": {
     "entities": {
-      "RELEASEDATE": "16 July 2025",
+      "RELEASEDATE": "15 October 2025",
       "RELEASEYEAR": "2025",
-      "VERSION": "1.1"
+      "VERSION": "1.2"
     }
   },
   "AvailabilityTest": null,
-  "Date": "16/07/2025",
+  "Date": "15/10/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.9",
@@ -42,7 +42,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "f2c2f7e5d354b8377800f546bf74196300486f3cce323ca8e1718c82081ef0ae",
+  "PackageInfoSHA256": "b15c20b2b230116baa708bd00d429d8ce43d26c32e47288c5ef5bac5dbd1f0a0",
   "PackageInfoURL": "https://gap-packages.github.io/InduceReduce/PackageInfo.g",
   "PackageName": "InduceReduce",
   "PackageWWWHome": "https://gap-packages.github.io/InduceReduce/",
@@ -88,5 +88,5 @@
   "Status": "deposited",
   "Subtitle": "Unger's algorithm to compute character tables of finite groups",
   "TestFile": "tst/testall.g",
-  "Version": "1.1"
+  "Version": "1.2"
 }
