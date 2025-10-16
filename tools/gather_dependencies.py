@@ -37,7 +37,7 @@ ubtunu_deps = {
         "texlive-latex-extra",
         "texlive-fonts-recommended",
     ],
-    "hap": ["imagemagick"],
+    "hap": ["graphviz", "imagemagick"],
     "localizeringforhomalg": ["singular"],
     "normalizinterface": ["libnormaliz-dev"],
     "polymaking": ["polymake"],
