@@ -2,12 +2,11 @@
   "AbstractHTML": "The <span class=\"pkgname\">cohomolo</span> package is a       <span class=\"pkgname\">GAP</span> interface to some `C' programs   for computing Schur multipliers and covering groups of finite groups   and first and second cohomology groups of finite groups acting   on finite modules",
   "AcceptDate": "01/1970",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "63e9ff01c73e3c263b57407075a77d7981bbb32b6a1b611610f092781db5d7e5",
-  "ArchiveURL": "https://github.com/gap-packages/cohomolo/releases/download/v1.6.11/cohomolo-1.6.11",
-  "Autoload": false,
+  "ArchiveSHA256": "9f68a987685affd3510a21c4a7d2b1260a6a98f237c5ac76531e4980616532a8",
+  "ArchiveURL": "https://github.com/gap-packages/cohomolo/releases/download/v1.6.12/cohomolo-1.6.12",
   "AvailabilityTest": null,
   "CommunicatedBy": "unknown (unknown)",
-  "Date": "03/01/2023",
+  "Date": "17/10/2025",
   "Dependencies": {
     "ExternalConditions": [
       "Unix only"
@@ -29,7 +28,6 @@
         "doc",
         "htm"
       ],
-      "Autoload": true,
       "BookName": "cohomolo",
       "HTMLStart": "htm/chapters.htm",
       "LongTitle": "Computing Cohomology groups and Schur Multipliers",
@@ -37,7 +35,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "1daa3ae5803eb03d81984434373a29ac4a892c3c69a620b598543cdaaab4d44f",
+  "PackageInfoSHA256": "d4e41372b83f4c19dfc1dff41c1587f5e3955f3dd516850c5d71ddaccdff28bd",
   "PackageInfoURL": "https://gap-packages.github.io/cohomolo/PackageInfo.g",
   "PackageName": "cohomolo",
   "PackageWWWHome": "https://gap-packages.github.io/cohomolo",
@@ -67,5 +65,5 @@
   "Status": "accepted",
   "Subtitle": "Cohomology groups of finite groups on finite modules",
   "TestFile": "tst/testall.g",
-  "Version": "1.6.11"
+  "Version": "1.6.12"
 }
