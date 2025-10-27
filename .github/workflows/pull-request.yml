@@ -108,7 +108,7 @@ jobs:
     if: always()
     steps:
       - name: "Download report"
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: report-master
           path: _report
