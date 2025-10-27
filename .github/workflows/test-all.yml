@@ -210,7 +210,7 @@ jobs:
           echo "artifact=${{ github.event.inputs.which-gap || inputs.which-gap }}" | sed -e 's;/;-;g'  >> $GITHUB_OUTPUT
 
       - name: "Upload GAP with packages as artifact"
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: gap-${{ steps.get-artifact-name.outputs.artifact }}
           path: /home/runner/gap.tar.zst
@@ -406,7 +406,7 @@ jobs:
         run: tools/generate_report.py ${{ steps.test-status.outputs.dir-rel }} latest-${{ needs.build.outputs.artifact }}
 
       - name: "Upload report as artifact"
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: "report-${{ needs.build.outputs.artifact }}"
           path: "${{ steps.test-status.outputs.dir }}"
