@@ -2,8 +2,8 @@
   "AbstractHTML": "The IBNP package provides methods for computing an involutive (Groebner) basis B for an ideal J over a polynomial ring R in both the commutative and noncommutative cases. Secondly, methods are provided to involutively reduce a given polynomial to its normal form in R/J.",
   "AcceptDate": "",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "80d771733f828dac9a831950b323ad61123fa5a1759a90722c6c9f99abb0793e",
-  "ArchiveURL": "https://github.com/gap-packages/ibnp/releases/download/v0.17/IBNP-0.17",
+  "ArchiveSHA256": "b874110657e633cb468ec74bfd9492d0e070d5e2063a19156a8781f9da6d56a5",
+  "ArchiveURL": "https://github.com/gap-packages/ibnp/releases/download/v0.18/IBNP-0.18",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "The &IBNP; package provides methods for computing an involutive (&Grob;) basis <M>B</M> for an ideal <M>J</M> over a polynomial ring <M>R</M> in both the commutative and noncommutative cases. <P/>Secondly, methods are provided to involutively reduce a given polynomial to its normal form in <M>R/J</M>. <P/>Bug reports, comments, suggestions for additional features, and offers to implement some of these, will all be very welcome. <P/>Please submit any issues at <URL>https://github.com/gap-packages/ibnp/issues/</URL> or send an email to the second author at <Email>cdwensley.maths@btinternet.com</Email>.\n <P/>",
@@ -13,9 +13,9 @@
   },
   "Autoload": false,
   "AvailabilityTest": null,
-  "BannerString": "Loading IBNP 0.17 (Involutive Bases for Noncommutative Polynomials)\nby Gareth Evans and Chris Wensley (https://github.com/cdwensley).\nReport issues at https://github.com/gap-packages/ibnp/issues.\n--------------------------------------------------------------------\n",
+  "BannerString": "Loading IBNP 0.18 (Involutive Bases for Noncommutative Polynomials)\nby Gareth Evans and Chris Wensley (https://github.com/cdwensley).\nReport issues at https://github.com/gap-packages/ibnp/issues.\n--------------------------------------------------------------------\n",
   "CommunicatedBy": "",
-  "Date": "11/09/2025",
+  "Date": "04/11/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.13.0",
@@ -53,7 +53,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "b16428fcd49cf297c18748c0af4f97aa338e4dc0cc58b1fd3c10e630dec936a4",
+  "PackageInfoSHA256": "f557f33f349cd84965b4bfc8e9224f9c51a30e20a167bf72eb4bf5d769efddc2",
   "PackageInfoURL": "https://gap-packages.github.io/ibnp/PackageInfo.g",
   "PackageName": "IBNP",
   "PackageWWWHome": "https://gap-packages.github.io/ibnp/",
@@ -85,5 +85,5 @@
   "Subtitle": "Involutive Bases for Noncommutative Polynomials",
   "SupportEmail": "cdwensley.maths@btinternet.com",
   "TestFile": "tst/testall.g",
-  "Version": "0.17"
+  "Version": "0.18"
 }
