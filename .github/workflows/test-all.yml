@@ -312,7 +312,7 @@ jobs:
         id: tests-only-needed
         run: |
           PKG=${{ matrix.package }}
-          gap -A --quitonbreak -r -c "
+          gap --bare --quitonbreak -r -c 'LoadPackage("gapdoc");' -c "
                 pkgname := \"$PKG\";
 
                 # WORKAROUNDS for various packages which need additional packages
