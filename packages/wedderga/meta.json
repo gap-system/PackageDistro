@@ -2,11 +2,18 @@
   "AbstractHTML": "<span class=\"pkgname\">Wedderga</span> is the package to compute the simple components of the Wedderburn decomposition of semisimple group algebras of finite groups over finite fields and over subfields of finite cyclotomic extensions of the rationals. It also contains functions that produce the primitive central idempotents of semisimple group algebras and functions for computing Schur indices. Other functions of <span class=\"pkgname\">Wedderga</span> allow one to construct crossed products over a group with coefficients in an associative ring with identity and the multiplication determined by a given action and twisting.",
   "AcceptDate": "01/2008",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "2ff72e51aad3eccbcaa58a11235c39812d6bc8fceec9e879f75c19d18ada222b",
-  "ArchiveURL": "https://github.com/gap-packages/wedderga/releases/download/v4.11.1/wedderga-4.11.1",
+  "ArchiveSHA256": "bd356d6728388bd00d1d2e7474b8bf5cdf88530124c9b0a6b0dc70bddd1085e9",
+  "ArchiveURL": "https://github.com/gap-packages/wedderga/releases/download/v4.11.2/wedderga-4.11.2",
+  "AutoDoc": {
+    "entities": {
+      "RELEASEDATE": "3 November 2025",
+      "RELEASEYEAR": "2025",
+      "VERSION": "4.11.2"
+    }
+  },
   "AvailabilityTest": null,
   "CommunicatedBy": "Gerhard Hiss (Aachen)",
-  "Date": "07/07/2025",
+  "Date": "03/11/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.8",
@@ -47,7 +54,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "6574206d86d07dccd2e18d571a0b20c305899fb5d652e1e5d3dc1a0371e6f930",
+  "PackageInfoSHA256": "aa296076417b565a0a2fb2f9137d97582154e714e6b58a46f6ccd768a569ef4d",
   "PackageInfoURL": "https://gap-packages.github.io/wedderga/PackageInfo.g",
   "PackageName": "Wedderga",
   "PackageWWWHome": "https://gap-packages.github.io/wedderga",
@@ -155,5 +162,5 @@
   "Status": "accepted",
   "Subtitle": "Wedderburn Decomposition of Group Algebras",
   "TestFile": "tst/testall.g",
-  "Version": "4.11.1"
+  "Version": "4.11.2"
 }
