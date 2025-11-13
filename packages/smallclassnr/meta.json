@@ -1,9 +1,9 @@
 {
   "AbstractHTML": "Library of finite groups with small class number.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "3d5df691937400ff89eb88832e0e408b6e0f743f127348f311bdbabfcd9ea7fd",
-  "ArchiveURL": "https://github.com/stertooy/SmallClassNr/releases/download/v1.4.2/SmallClassNr-1.4.2",
-  "Date": "11/10/2025",
+  "ArchiveSHA256": "bddbee6743fa895899de1336c5af885c21741c431d366da6612cad81d727de8c",
+  "ArchiveURL": "https://github.com/stertooy/SmallClassNr/releases/download/v1.4.3/SmallClassNr-1.4.3",
+  "Date": "13/11/2025",
   "Dependencies": {
     "GAP": ">= 4.14",
     "NeededOtherPackages": [],
@@ -28,7 +28,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "d9b54e9ace9116d378c18f656863c4d85d9ac53b8d503b3ad24e7dd0719b29e2",
+  "PackageInfoSHA256": "1676f5e087b57b63ed89023449c90fef35205c3e87b2aa02f452f94e72ba66cd",
   "PackageInfoURL": "https://stertooy.github.io/SmallClassNr/PackageInfo.g",
   "PackageName": "SmallClassNr",
   "PackageWWWHome": "https://stertooy.github.io/SmallClassNr",
@@ -54,5 +54,5 @@
   "Subtitle": "Library of finite groups with small class number",
   "SupportEmail": "sam.tertooy@kuleuven.be",
   "TestFile": "tst/testall.g",
-  "Version": "1.4.2"
+  "Version": "1.4.3"
 }
