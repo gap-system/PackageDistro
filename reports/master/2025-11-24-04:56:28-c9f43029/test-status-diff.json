@@ -1,0 +1,16 @@
+{
+  "current": "master/2025-11-24-04:56:28-c9f43029",
+  "last": "master/2025-11-23-03:02:22-c9f43029",
+  "total": 166,
+  "failure": 17,
+  "success": 146,
+  "skipped": 3,
+  "new": 0,
+  "removed": 0,
+  "failure_changed": 16,
+  "success_changed": 0,
+  "skipped_changed": 0,
+  "failure_same": 1,
+  "success_same": 146,
+  "skipped_same": 3
+}
