@@ -74,7 +74,7 @@ jobs:
       matrix: ${{ steps.get-names.outputs.matrix }}
       artifact: ${{ steps.get-artifact-name.outputs.artifact }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       # Cache the package archives we download across runs of this job
       # to speed up things considerably
@@ -247,7 +247,7 @@ jobs:
       fail-fast: false
       matrix: ${{ fromJSON(needs.build.outputs.matrix) }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - name: "Set up Python"
         uses: actions/setup-python@v6
@@ -354,7 +354,7 @@ jobs:
     outputs:
       test-status: ${{ steps.test-status.outputs.test-status }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - name: "Set up Python"
         uses: actions/setup-python@v6
