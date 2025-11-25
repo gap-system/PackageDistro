@@ -33,7 +33,7 @@ jobs:
     steps:
       # clone with depth 0, so that we can determine what was changed
       # TODO: isn't depth 1 sufficient?
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
 

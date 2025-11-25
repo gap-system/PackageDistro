@@ -28,7 +28,7 @@ jobs:
     outputs:
       matrix: ${{ steps.get-names.outputs.matrix }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       # Cache the package archives we download across runs of this job
       # to speed up things considerably
@@ -119,7 +119,7 @@ jobs:
       fail-fast: false
       matrix: ${{ fromJSON(needs.scan-for-updates.outputs.matrix) }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - name: "Download metadata from previous job"
         uses: actions/download-artifact@v6
