@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "The <span class='pkgname'>NConvex</span> package is a GAP package.   Its aim is to carry out polyhedral constructions and computations,  namely computing properties and attributes of cones, polyhedrons, polytopes and fans.",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "d8396d9de36a0df3047f0389f3f25a08b97349f525ebf1c5fd45372e00c24d0f",
-  "ArchiveURL": "https://github.com/homalg-project/NConvex/releases/download/v2024.12-01/NConvex-2024.12-01",
+  "ArchiveSHA256": "1cf94960ba8e9713d6734df1f79259d21feef76bf3f56810e4447c70cb161309",
+  "ArchiveURL": "https://github.com/homalg-project/NConvex/releases/download/v2025.12-01/NConvex-2025.12-01",
   "AvailabilityTest": null,
-  "Date": "28/12/2024",
+  "Date": "2025-12-01",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.11.1",
@@ -59,7 +59,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "3fea5d6479ee71f10943586e7df328179d38a9bee9287f1692412d2fe9ee9044",
+  "PackageInfoSHA256": "946149d157d7e31326864fb1881d558a9e51c4625c73ba87e631aba2797227d9",
   "PackageInfoURL": "https://homalg-project.github.io/NConvex/PackageInfo.g",
   "PackageName": "NConvex",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/NConvex",
@@ -80,7 +80,7 @@
       "FirstNames": "Sebastian",
       "Institution": "University of Siegen",
       "IsAuthor": true,
-      "IsMaintainer": true,
+      "IsMaintainer": false,
       "LastName": "Gutsche",
       "Place": "Siegen",
       "PostalAddress": "Department Mathematik\nUniversität Siegen\nWalter-Flex-Straße 3\n57068 Siegen\nGermany",
@@ -95,5 +95,5 @@
   "Status": "deposited",
   "Subtitle": "A Gap package to perform polyhedral computations",
   "TestFile": "tst/testall.g",
-  "Version": "2024.12-01"
+  "Version": "2025.12-01"
 }
