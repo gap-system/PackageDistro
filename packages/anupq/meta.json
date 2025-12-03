@@ -2,18 +2,20 @@
   "AbstractHTML": "The <span class=\"pkgname\">ANUPQ</span> package provides an interactive    interface to the p-quotient, p-group generation and standard presentation    algorithms of the ANU pq C program.",
   "AcceptDate": "04/2002",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSHA256": "2ee92fc2314ad139cc6800a8a21e5dfbde04a6182f4867dc32c20024b2ac3bca",
-  "ArchiveURL": "https://github.com/gap-packages/anupq/releases/download/v3.3.2/anupq-3.3.2",
+  "ArchiveSHA256": "6a1b25ddcdb05abd933911f8e0e718b195d24b502e5d098d4b431db5f371ffc2",
+  "ArchiveURL": "https://github.com/gap-packages/anupq/releases/download/v3.3.3/anupq-3.3.3",
   "AutoDoc": {
-    "TitlePage": {
-      "Copyright": "\n      <P/>\n      &copyright; 2001-2016 by Greg Gamble<P/>\n      &copyright; 2001-2005 by Werner Nickel<P/>\n      &copyright; 1995-2001 by Eamon O'Brien<P/>\n\n      The &GAP; package &ANUPQ; is licensed under the <URL Text=\"Artistic License 2.0\">https://opensource.org/licenses/artistic-license-2.0</URL>.\n      ",
-      "TitleComment": "\n            &ANUPQ; is maintained by <URL Text=\"Max Horn\">mailto:mhorn@rptu.de</URL>.\n            For support requests, please use <URL Text=\"our issue tracker\">https</URL>.\n            "
+    "entities": {
+      "AutPGrp": "<Package>AutPGrp</Package>",
+      "RELEASEDATE": "25 November 2025",
+      "RELEASEYEAR": "2025",
+      "VERSION": "3.3.3"
     }
   },
   "AvailabilityTest": null,
   "BannerFunction": null,
   "CommunicatedBy": "Charles Wright (Eugene)",
-  "Date": "28/08/2025",
+  "Date": "25/11/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.9",
@@ -45,7 +47,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "00794482d58dff9ef89d8a61e43a7ae30a9cfba94af4980bf6ca49b075b1d88f",
+  "PackageInfoSHA256": "1ec3664cf0a8f85148242546838c6cd317ca8306211fc072b1641eab7bab0f0a",
   "PackageInfoURL": "https://gap-packages.github.io/anupq/PackageInfo.g",
   "PackageName": "ANUPQ",
   "PackageWWWHome": "https://gap-packages.github.io/anupq/",
@@ -98,5 +100,5 @@
   "Status": "accepted",
   "Subtitle": "ANU p-Quotient",
   "TestFile": "tst/testinstall.g",
-  "Version": "3.3.2"
+  "Version": "3.3.3"
 }
