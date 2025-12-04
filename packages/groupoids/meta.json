@@ -2,8 +2,8 @@
   "AbstractHTML": "The groupoids package provides a collection of functions for computing with finite groupoids, graph of groups, and graphs of groupoids. These are based on the more basic structures of magmas with objects and their mappings. It provides functions for normal forms of elements in Free Products with Amalgamation and in HNN extensions. Up until April 2017 this package was named Gpd.",
   "AcceptDate": "05/2015",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "3730662c0aa6001cc0a6b4e935af4f04734e4ea20dc315fad9db64fc2ae025b1",
-  "ArchiveURL": "https://github.com/gap-packages/groupoids/releases/download/v1.79/groupoids-1.79",
+  "ArchiveSHA256": "5483075441fca6d5d86b1b09db35840688eb3f0c7e15fbadec6bffcf0f0dd363",
+  "ArchiveURL": "https://github.com/gap-packages/groupoids/releases/download/v1.81/groupoids-1.81",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "The &groupoids; package provides functions for computation with groupoids (categories with every arrow invertible) and their morphisms; for graphs of groups, and graphs of groupoids.\nThe most basic structure introduced is that of <E>magma with objects</E>; followed by <E>semigroup with objects</E>; then <E>monoid with objects</E>; and finally <E>groupoid</E>, which is a <E>group with objects</E>.\n <P/>It provides normal forms for Free Products with Amalgamation and for HNN-extensions when the initial groups have rewrite systems and the subgroups have finite index. <P/>The &groupoids; package was originally implemented in 2000 (as <Package>GraphGpd</Package>) when the first author was studying for a Ph.D. in Bangor.\n <P/>The package was then renamed <Package>Gpd</Package> and version 1.07 was released in July 2011, ready for &GAP; 4.5.\n <P/><Package>Gpd</Package> became an accepted &GAP; package in May 2015.\n <P/>In April 2017 the package was renamed again, as <Package>groupoids</Package>.\n <P/>Later versions implement many of the constructions described in the paper <Cite Key='AlWe' /> for automorphisms of groupoids.\n <P/>Bug reports, comments, suggestions for additional features, and offers to implement some of these, will all be very welcome.\n <P/>Please submit any issues at <URL>https://github.com/gap-packages/groupoids/issues/</URL> or send an email to the second author at <Email>cdwensley.maths@btinternet.com</Email>.\n <P/>",
@@ -12,9 +12,9 @@
     }
   },
   "AvailabilityTest": null,
-  "BannerString": "Loading groupoids 1.79 (algorithms for finite groupoids)\nby Emma Moore and Chris Wensley (https://github.com/cdwensley)\n--------------------------------------------------------------\n",
+  "BannerString": "Loading groupoids 1.81 (algorithms for finite groupoids)\nby Emma Moore and Chris Wensley (https://github.com/cdwensley)\n--------------------------------------------------------------\n",
   "CommunicatedBy": "Derek Holt (Warwick)",
-  "Date": "11/09/2025",
+  "Date": "26/11/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10.1",
@@ -57,7 +57,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "a832c18b02a4dba2477f2cbc344e7ab5c75f7b3dff2be720e84224a0bae6e659",
+  "PackageInfoSHA256": "18e885a04979f2e8894638a5e776a2bbc6b647a5763be934a2f278f8152ae108",
   "PackageInfoURL": "https://gap-packages.github.io/groupoids/PackageInfo.g",
   "PackageName": "groupoids",
   "PackageWWWHome": "https://gap-packages.github.io/groupoids/",
@@ -87,5 +87,5 @@
   "Subtitle": "Calculations with finite groupoids and their homomorphisms",
   "SupportEmail": "cdwensley1234@btinternet.com",
   "TestFile": "tst/testall.g",
-  "Version": "1.79"
+  "Version": "1.81"
 }
