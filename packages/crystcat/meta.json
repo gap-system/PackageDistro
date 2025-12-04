@@ -2,22 +2,21 @@
   "AbstractHTML": "This package provides a catalog of crystallographic groups of dimensions 2, 3, and 4 which covers most of the data contained in the book <em>Crystallographic groups of four-dimensional space</em> by H. Brown, R. B&uuml;low, J. Neub&uuml;ser, H. Wondratschek, and H. Zassenhaus (John Wiley, New York, 1978). Methods for the computation with these groups are provided by the package <span class=\"pkgname\">Cryst</span>, which must be installed as well.",
   "AcceptDate": "02/2000",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "0e2e568ed054c83312e56b52da26955742034814c85609eb69524a1154d8f2bc",
-  "ArchiveURL": "https://www.math.uni-bielefeld.de/~gaehler/gap/CrystCat/crystcat-1.1.10",
+  "ArchiveSHA256": "643c6c350b58880a64bbbee16520378c564441f453223b0703eda1c210d6e096",
+  "ArchiveURL": "https://www.math.uni-bielefeld.de/~gaehler/gap/CrystCat/crystcat-1.1.11",
   "AvailabilityTest": null,
   "BinaryFiles": [
     "doc/manual.pdf",
     "doc/manual.dvi"
   ],
   "CommunicatedBy": "Herbert Pahlings (Aachen)",
-  "Date": "29/07/2022",
+  "Date": "04/12/2025",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">=4.11",
     "NeededOtherPackages": [
       [
         "Cryst",
-        ">=4.1.24"
+        ">=4.1.25"
       ]
     ],
     "SuggestedOtherPackages": []
@@ -41,7 +40,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "a6593bc65416e1c5dfa0f5985897870bead2d9741470c52780a902929952bff9",
+  "PackageInfoSHA256": "8f6699100fd8ee29968fc86296f6ca1d05842b2a7ef24e237e3b5886fe0fa610",
   "PackageInfoURL": "https://www.math.uni-bielefeld.de/~gaehler/gap/CrystCat/PackageInfo.g",
   "PackageName": "CrystCat",
   "PackageWWWHome": "https://www.math.uni-bielefeld.de/~gaehler/gap/packages.php",
@@ -51,7 +50,7 @@
       "FirstNames": "Volkmar",
       "Institution": "Lehrstuhl D für Mathematik, RWTH Aachen",
       "IsAuthor": true,
-      "IsMaintainer": true,
+      "IsMaintainer": false,
       "LastName": "Felsch",
       "Place": "Aachen",
       "WWWHome": "http://www.math.rwth-aachen.de/~Volkmar.Felsch/"
@@ -76,5 +75,5 @@
   "Subtitle": "The crystallographic groups catalog",
   "SupportEmail": "gaehler@math.uni-bielefeld.de",
   "TestFile": "tst/testall.g",
-  "Version": "1.1.10"
+  "Version": "1.1.11"
 }
