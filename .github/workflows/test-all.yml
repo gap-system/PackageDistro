@@ -79,7 +79,7 @@ jobs:
       # Cache the package archives we download across runs of this job
       # to speed up things considerably
       - name: "Cache archives"
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: _archives
           key: archives-${{ hashFiles('packages/*/meta.json') }}
