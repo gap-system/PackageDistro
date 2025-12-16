@@ -105,7 +105,7 @@ jobs:
             echo "matrix=$MATRIX" >> $GITHUB_OUTPUT
 
       - name: "Upload metadata as artifact for pull request jobs"
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: metadata
           path: modified.tar.gz
