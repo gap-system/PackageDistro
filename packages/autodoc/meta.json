@@ -1,23 +1,21 @@
 {
   "AbstractHTML": "",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "4b72c71f6bf0972102c296a4e761fcb9803fe9a7d2b5b6c4d83efef3c12bf43d",
-  "ArchiveURL": "https://github.com/gap-packages/AutoDoc/releases/download/v2025.10.16/AutoDoc-2025.10.16",
+  "ArchiveSHA256": "0225ebe9089be8d5becd36cf7af60433b067e5e6cf5741753ad4dfd61d0965f9",
+  "ArchiveURL": "https://github.com/gap-packages/AutoDoc/releases/download/v2025.12.19/AutoDoc-2025.12.19",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "&AutoDoc; is a &GAP; package whose purpose is to aid &GAP; package authors in creating and maintaining the documentation of their packages.\n",
       "Acknowledgements": "This documentation was prepared using the &GAPDoc; package <Cite Key='GAPDoc'/>.\n<P/>\n",
-      "Copyright": "&copyright; 2012-2022 by Sebastian Gutsche and Max Horn<P/>\n\nThis package may be distributed under the terms and conditions of the GNU Public License Version 2 or (at your option) any later version.\n"
+      "Copyright": "&copyright; 2012-2025 by Sebastian Gutsche and Max Horn<P/>\n\nThis package may be distributed under the terms and conditions of the GNU Public License Version 2 or (at your option) any later version.\n"
     },
     "entities": {
-      "DATE": "16/10/2025",
       "PackageName": "<Package>PackageName</Package>",
-      "VERSION": "2025.10.16",
       "io": "<Package>io</Package>"
     }
   },
   "AvailabilityTest": null,
-  "Date": "16/10/2025",
+  "Date": "19/12/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.5",
@@ -46,7 +44,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "4292b00d223408df785699865e7890e1304ab014e5029b362de2d2f0f29e8458",
+  "PackageInfoSHA256": "277fd1a79863eda1cadd2e1cd2feda75100a0d19335f22eec411eec2fa8b5efa",
   "PackageInfoURL": "https://gap-packages.github.io/AutoDoc/PackageInfo.g",
   "PackageName": "AutoDoc",
   "PackageWWWHome": "https://gap-packages.github.io/AutoDoc",
@@ -119,5 +117,5 @@
   "Status": "deposited",
   "Subtitle": "Generate documentation from GAP source code",
   "TestFile": "tst/testall.g",
-  "Version": "2025.10.16"
+  "Version": "2025.12.19"
 }
