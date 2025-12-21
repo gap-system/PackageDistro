@@ -2,12 +2,12 @@
   "AbstractHTML": "This package provides some functions for group cohomology and algebraic topology. ",
   "AcceptDate": "03/2006",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "300e776141be73f807a2fbdfc0ce45d871c8d4a765dc2ca3b49ba38db9d51861",
-  "ArchiveURL": "https://github.com/gap-packages/hap/releases/download/v1.70/hap-1.70",
+  "ArchiveSHA256": "0d9062ed95af35d8ed607bfafe424c00428629dfecaaf773df013b2ca8a5caaf",
+  "ArchiveURL": "https://github.com/gap-packages/hap/releases/download/v1.72/hap-1.72",
   "AvailabilityTest": null,
-  "BannerString": "Loading HAP 1.70 ...\n",
+  "BannerString": "Loading HAP 1.72 ...\n",
   "CommunicatedBy": "Derek Holt (Warwick)",
-  "Date": "19/07/2025",
+  "Date": "21/12/2025",
   "Dependencies": {
     "ExternalConditions": [
       [
@@ -31,7 +31,7 @@
         "http://www.cis.udel.edu/~dumas"
       ]
     ],
-    "GAP": ">= 4.5.6",
+    "GAP": ">= 4.12",
     "NeededOtherPackages": [
       [
         "polycyclic",
@@ -56,10 +56,6 @@
     ],
     "SuggestedOtherPackages": [
       [
-        "gapdoc",
-        ">=0.0"
-      ],
-      [
         "homology",
         ">=0.0"
       ],
@@ -77,11 +73,11 @@
       ],
       [
         "HAPcryst",
-        ">=0.0.0"
+        ">=0.1.0"
       ],
       [
         "Polymaking",
-        ">=0.8.3"
+        ">=0.8.4"
       ],
       [
         "xmod",
@@ -124,7 +120,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "932bbeaa205f11cf0cbd683f1a640fbacf272bb89013655381e2780eb5252c33",
+  "PackageInfoSHA256": "03bd586583985f296af6a4d540fbdc24befb74a7c24eb55969ff775e96690beb",
   "PackageInfoURL": "https://gap-packages.github.io/hap/PackageInfo.g",
   "PackageName": "HAP",
   "PackageWWWHome": "https://gap-packages.github.io/hap",
@@ -149,5 +145,5 @@
   "Status": "accepted",
   "Subtitle": "Homological Algebra Programming",
   "TestFile": "tst/testquick.g",
-  "Version": "1.70"
+  "Version": "1.72"
 }
