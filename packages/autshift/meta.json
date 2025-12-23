@@ -1,0 +1,81 @@
+{
+  "AbstractHTML": "The autshift package is a GAP package containing methods for transducers that can be used  to represent isomorphisms between subshifts of finite type and related objects. It implements the some of processes described in the papers https://arxiv.org/abs/2004.08478v4by and https://arxiv.org/abs/2112.13359 and builds on the existing package https://github.com/gap-packages/aaa.",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSHA256": "870051e0b3fedf54777dc4c696dc171f714b98aa2655856bca4356e8f812a734",
+  "ArchiveURL": "https://github.com/gap-packages/autshift/releases/download/v0.1.0/autshift-0.1.0",
+  "AutoDoc": {
+    "TitlePage": {
+      "Abstract": "The autshift package is a GAP package containing methods for transducers that can be used     to represent isomorphisms between subshifts of finite type and related objects. It implements the    some of processes described in the papers https://arxiv.org/abs/2004.08478v4by and https://arxiv.org/abs/2112.13359    and builds on the existing package https://github.com/gap-packages/aaa.",
+      "Acknowledgements": "This package was created by Luke Elliott under the funding of ESPRC grant EP/R032866/1 and supervised by Collin Bleak. Special thanks to James Mitchell and Michael Torpey for their technical support."
+    }
+  },
+  "AvailabilityTest": null,
+  "Date": "16/02/2022",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">=4.8.0",
+    "NeededOtherPackages": [
+      [
+        "automata",
+        ">=0.0.0"
+      ],
+      [
+        "digraphs",
+        ">=0.15.0"
+      ],
+      [
+        "fr",
+        ">=2.4.6"
+      ],
+      [
+        "aaa",
+        ">=0.0.0"
+      ],
+      [
+        "datastructures",
+        ">= 0.2.5"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "IssueTrackerURL": "https://github.com/gap-packages/autshift/issues",
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "autshift",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "Algorithms for Automotphisms of the Shift and related objects",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSHA256": "c0abce2156abcc1536e7f3c963232437aa0b61934bad7afc110746678ada6594",
+  "PackageInfoURL": "https://gap-packages.github.io/autshift/PackageInfo.g",
+  "PackageName": "autshift",
+  "PackageWWWHome": "https://gap-packages.github.io/autshift",
+  "Persons": [
+    {
+      "Email": "Y",
+      "FirstNames": "Luke",
+      "Institution": "University of St Andrews",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Elliott",
+      "Place": "St Andrews",
+      "PostalAddress": "Mathematical Institute, North Haugh, St Andrews, Fife, KY16 9SS, Scotland",
+      "WWWHome": "https://le27.github.io/Luke-Elliott/"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/autshift/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/autshift"
+  },
+  "Status": "dev",
+  "Subtitle": "Algorithms for Automotphisms of the Shift and related objects",
+  "TestFile": "tst/testall.g",
+  "Version": "0.1.0"
+}
