@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">4ti2Interface</span> package provides an interface to 4ti2",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "6716431f63a5b29e20333b2bc4b432198528e9b50c28dea988658962857659e7",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/4ti2Interface-2024.11-01/4ti2Interface-2024.11-01",
+  "ArchiveSHA256": "14004024e413453150cd32e07e1529caeb36d4384890e2a5bfc15e53e778192d",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/4ti2Interface-2025.12-01/4ti2Interface-2025.12-01",
   "AvailabilityTest": null,
-  "Date": "2024-11-23",
+  "Date": "2025-12-23",
   "Dependencies": {
     "ExternalConditions": [
       [
@@ -12,7 +12,7 @@
         "https://4ti2.github.io/"
       ]
     ],
-    "GAP": ">= 4.12.1",
+    "GAP": ">= 4.13.0",
     "NeededOtherPackages": [
       [
         "io",
@@ -35,7 +35,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "1501bf80ed7dcd0f466ca6af7bebf54e8981763612622bf42a6b4a8081ec4f96",
+  "PackageInfoSHA256": "f97ac8dfe85bb7d21c1d538680d0b57275f82eec0022a7e387e29809238e27a0",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/4ti2Interface/PackageInfo.g",
   "PackageName": "4ti2Interface",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/4ti2Interface",
@@ -60,5 +60,5 @@
   "Status": "deposited",
   "Subtitle": "A link to 4ti2",
   "TestFile": "tst/testall.g",
-  "Version": "2024.11-01"
+  "Version": "2025.12-01"
 }
