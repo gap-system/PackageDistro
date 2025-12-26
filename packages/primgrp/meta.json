@@ -1,17 +1,17 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">PrimGrp</span> package provides the library   of primitive permutation groups which includes, up to permutation isomorphism   (i.e., up to conjugacy in the corresponding symmetric group), all primitive   permutation groups of degree &lt; 8192.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "1e5edb01f2d71bcb4e32afaf9342e779b407db6c9f1b9d7b309e26d62f78bc02",
-  "ArchiveURL": "https://github.com/gap-packages/primgrp/releases/download/v4.0.1/primgrp-4.0.1",
+  "ArchiveSHA256": "8920965473a74800237c7d57bcc7b52f1af118c5ef438b064d04ca333ac28827",
+  "ArchiveURL": "https://github.com/gap-packages/primgrp/releases/download/v4.0.2/primgrp-4.0.2",
   "AutoDoc": {
     "entities": {
-      "RELEASEDATE": "24 September 2025",
+      "RELEASEDATE": "26 December 2025",
       "RELEASEYEAR": "2025",
-      "VERSION": "4.0.1"
+      "VERSION": "4.0.2"
     }
   },
   "AvailabilityTest": null,
-  "Date": "24/09/2025",
+  "Date": "26/12/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": "4.10.0",
@@ -40,7 +40,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "555c484a6629d2a83560bd6ad434bacd3289ebb0d074bf8fdb8b0cb4f8e74747",
+  "PackageInfoSHA256": "e0aa5b02b345b6d9b695e28df9ce43709db266e89183ef8d46f9890f14779c29",
   "PackageInfoURL": "https://gap-packages.github.io/primgrp/PackageInfo.g",
   "PackageName": "PrimGrp",
   "PackageWWWHome": "https://gap-packages.github.io/primgrp/",
@@ -106,5 +106,5 @@
   "Status": "deposited",
   "Subtitle": "GAP Primitive Permutation Groups Library",
   "TestFile": "tst/testall.g",
-  "Version": "4.0.1"
+  "Version": "4.0.2"
 }
