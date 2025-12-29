@@ -1,18 +1,18 @@
 {
   "AbstractHTML": "This homalg based package realizes the computability of the Abelian category of finitely presented graded modules over a computable graded ring",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "da32a22d7f31e14665541a4ae234b2d922020e3e71be13aeaafa6d925bbc4b3e",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/GradedModules-2024.12-01/GradedModules-2024.12-01",
+  "ArchiveSHA256": "51288f024e7fd02202f55e5a92fe8fe116be1bc33f0af63249fc46b7c0a9b0e5",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/GradedModules-2025.12-01/GradedModules-2025.12-01",
   "AutoDoc": {
     "TitlePage": {
       "Copyright": "&copyright; 2008-2015 by Mohamed Barakat, Sebastian Gutsche, and Markus Lange-Hegermann\n\nThis package may be distributed under the terms and conditions of the GNU Public License Version 2 or (at your option) any later version.\n"
     }
   },
   "AvailabilityTest": null,
-  "Date": "2024-12-22",
+  "Date": "2025-12-23",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">= 4.12.1",
+    "GAP": ">= 4.13.0",
     "NeededOtherPackages": [
       [
         "ToolsForHomalg",
@@ -70,7 +70,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "f3989bc6217945a9a3305d3def6f76cd2c4f0406597ea1c980a4025ad14e6e09",
+  "PackageInfoSHA256": "5edc7e9b4a32125b52aca4cb46923f237f7fceb5887c10b970af74d14e74a0c9",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/GradedModules/PackageInfo.g",
   "PackageName": "GradedModules",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/GradedModules",
@@ -150,5 +150,5 @@
   "Status": "deposited",
   "Subtitle": "A homalg based package for the Abelian category of finitely presented graded modules over computable graded rings",
   "TestFile": "tst/testall.g",
-  "Version": "2024.12-01"
+  "Version": "2025.12-01"
 }
