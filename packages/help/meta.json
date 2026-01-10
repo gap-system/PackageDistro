@@ -1,8 +1,8 @@
 {
   "AbstractHTML": "<span class=\"pkgname\">HeLP</span> is a package to compute constraints on partial augmentations of torsion units in integral group rings using a method developed by Luthar, Passi and Hertweck.  The package can be employed to verify the Zassenhaus Conjecture, the Prime Graph Question, the Spectrum Problem and the Kimmerle Problem for finite groups, once characters are known. It uses an interface to the software package 4ti2 to solve integral linear inequalities or alternatively Normaliz.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "49a8533b98030a1feea6c8e02601e5219a51a37c85bebd06d3cdd2ca951b7f86",
-  "ArchiveURL": "https://github.com/gap-packages/HeLP/releases/download/v4.0/HeLP-4.0",
+  "ArchiveSHA256": "9fe8a7c6efaaaaa16860e4656e341db856ef4489350a64cdc2435494133746f3",
+  "ArchiveURL": "https://github.com/gap-packages/HeLP/releases/download/v4.1/HeLP-4.1",
   "AutoDoc": {
     "TitlePage": {
       "Acknowledgements": "The authors are grateful to Sebastian Gutsche, Christof Söger and Max Horn for endowing GAP\nwith a 4ti2-Interface and a normaliz-Interface.\nWe also would like to thank Gutsche and Söger for many very helpful discussions.\nWe also want to give credits to the developers of the softwares 4ti2 and normaliz.\nThanks go to David Avis for writing lrslib and answering our questions about it.\nWe moreover thank Wolfgang Kimmerle for introducing us to the beautiful world of group rings.\nThe development of this package was partially supported by the Research Foundation Flanders \n(FWO - Vlaanderen) and the DFG priority program SPP 1489 Algorithmic and Experimental Methods in Algebra, Geometry, and Number Theory.\n",
@@ -10,7 +10,7 @@
     }
   },
   "AvailabilityTest": null,
-  "Date": "29/02/2024",
+  "Date": "09/01/2026",
   "Dependencies": {
     "ExternalConditions": [
       [
@@ -18,7 +18,7 @@
         "https://4ti2.github.io"
       ]
     ],
-    "GAP": ">=4.8.2",
+    "GAP": ">=4.13",
     "NeededOtherPackages": [
       [
         "io",
@@ -36,14 +36,35 @@
       ],
       [
         "NormalizInterface",
-        ">= 0.9.6"
+        ">= 1.4.1"
       ]
     ]
   },
+  "Extensions": [
+    {
+      "filename": "lib/HeLP_internal_4ti2.gi",
+      "needed": [
+        [
+          "4ti2Interface",
+          ">= 2015.04.29"
+        ]
+      ]
+    },
+    {
+      "filename": "lib/HeLP_internal_normaliz.gi",
+      "needed": [
+        [
+          "NormalizInterface",
+          ">= 1.4.1"
+        ]
+      ]
+    }
+  ],
   "IssueTrackerURL": "https://github.com/gap-packages/HeLP/issues",
   "Keywords": [
     "HeLP method",
     "torsion units",
+    "integral group rings",
     "rational conjugacy",
     "Zassenhaus Conjecture",
     "Prime Graph Question",
@@ -56,7 +77,6 @@
       "ArchiveURLSubset": [
         "doc"
       ],
-      "Autoload": false,
       "BookName": "HeLP",
       "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "Hertweck-Luthar-Passi method.",
@@ -64,7 +84,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "a53a6b3417f276bc1afb2529a70503a268a6a08c54ddde94a56abd9ebcf03a4c",
+  "PackageInfoSHA256": "f4ee36dcb8aecdcd7c5ff1fac3977eae5603d418a8cdafcf8a97c3fefbd38cb4",
   "PackageInfoURL": "https://gap-packages.github.io/HeLP/PackageInfo.g",
   "PackageName": "HeLP",
   "PackageWWWHome": "https://gap-packages.github.io/HeLP",
@@ -99,5 +119,5 @@
   "Status": "deposited",
   "Subtitle": "Hertweck-Luthar-Passi method.",
   "TestFile": "tst/testall.g",
-  "Version": "4.0"
+  "Version": "4.1"
 }
