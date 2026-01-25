@@ -1,8 +1,8 @@
 {
   "AbstractHTML": "The <Strong>Digraphs</Strong> package is a <Strong>GAP</Strong> package containing\n          methods for graphs, digraphs, and multidigraphs.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "b965094b187b448c36edac9eb8400809adcd3045df7067aea47ba3dd5fec7396",
-  "ArchiveURL": "https://github.com/digraphs/Digraphs/releases/download/v1.13.1/digraphs-1.13.1",
+  "ArchiveSHA256": "2ae9c1691fe46950a44e2614ed4dcfe5dbb418c13cf3ebb4515f6aa59990ea9f",
+  "ArchiveURL": "https://github.com/digraphs/Digraphs/releases/download/v1.14.0/digraphs-1.14.0",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "The &Digraphs; package is a &GAP; package containing\n          methods for graphs, digraphs, and multidigraphs.",
@@ -12,12 +12,12 @@
   },
   "Autoload": false,
   "AvailabilityTest": null,
-  "BannerString": "-----------------------------------------------------------------------------\nLoading Digraphs 1.13.1\nby:\n     Jan De Beule (https://researchportal.vub.be/en/persons/jan-de-beule),\n     Julius Jonusas (http://julius.jonusas.work),\n     James Mitchell (https://jdbm.me),\n     Wilf A. Wilson (https://wilf.me),\n     Michael Young (https://myoung.uk/work/)\nwith contributions by:\n     Marina Anagnostopoulou-Merkouri,\n     Finn Buck,\n     Stuart Burrell (https://stuartburrell.github.io),\n     Graham Campbell,\n     Raiyan Chowdhury,\n     Reinis Cirpons,\n     Ashley Clayton,\n     Tom Conti-Leslie (https://tomcontileslie.com),\n     Joseph Edwards (https://github.com/Joseph-Edwards),\n     Luna Elliott (https://research.manchester.ac.uk/en/persons/luna-elliott),\n     Jan Engelhardt (https://inai.de),\n     Isuru Fernando,\n     Ewan Gilligan,\n     Gillis Frankie,\n     Sebastian Gutsche,\n     Samantha Harper,\n     Max Horn (https://www.quendi.de/math),\n     Harry Jack,\n     Christopher Jefferson (https://heather.cafe/),\n     Malachi Johns,\n     Olexandr Konovalov (https://olexandr-konovalov.github.io/),\n     Hyeokjun Kwon,\n     Aidan Lau,\n     Andrea Lee,\n     Saffron McIver,\n     Seyyed Ali Mohammadiyeh,\n     Michael Orlitzky (https://michael.orlitzky.com/),\n     Matthew Pancer,\n     Markus Pfeiffer (https://markusp.morphism.de/),\n     Daniel Pointon,\n     Pramoth Ragavan,\n     Lea Racine,\n     Christopher Russell,\n     Artur Schaefer,\n     Isabella Scott,\n     Kamran Sharma,\n     Finn Smith,\n     Ben Spiers,\n     Maria Tsalakou (https://mariatsalakou.github.io/),\n     Agastyaa Vishvanath,\n     Meike Weiss (https://bit.ly/4e6pUeP),\n     Murray Whyte,\n and Fabian Zickgraf.\n-----------------------------------------------------------------------------\n",
+  "BannerString": "-----------------------------------------------------------------------------\nLoading Digraphs 1.14.0\nby:\n     Jan De Beule (https://researchportal.vub.be/en/persons/jan-de-beule),\n     Julius Jonusas (http://julius.jonusas.work),\n     James Mitchell (https://jdbm.me),\n     Wilf A. Wilson (https://wilf.me),\n     Michael Young (https://myoung.uk/work/)\nwith contributions by:\n     Marina Anagnostopoulou-Merkouri,\n     Cora Aked,\n     Finn Buck,\n     Stuart Burrell (https://stuartburrell.github.io),\n     Graham Campbell,\n     Devansh Chopra,\n     Raiyan Chowdhury,\n     Reinis Cirpons,\n     Ashley Clayton,\n     Tom Conti-Leslie (https://tomcontileslie.com),\n     Joseph Edwards (https://github.com/Joseph-Edwards),\n     Luna Elliott (https://research.manchester.ac.uk/en/persons/luna-elliott),\n     Jan Engelhardt (https://inai.de),\n     Fernando Flores Brito,\n     Isuru Fernando,\n     Ewan Gilligan,\n     Gillis Frankie,\n     Sebastian Gutsche,\n     Samantha Harper,\n     Max Horn (https://www.quendi.de/math),\n     Harry Jack,\n     Christopher Jefferson (https://heather.cafe/),\n     Malachi Johns,\n     Olexandr Konovalov (https://olexandr-konovalov.github.io/),\n     Hyeokjun Kwon,\n     Aidan Lau,\n     Andrea Lee,\n     Saffron McIver,\n     Seyyed Ali Mohammadiyeh,\n     Rheya Monerasinghe,\n     Michael Orlitzky (https://michael.orlitzky.com/),\n     Matthew Pancer,\n     Markus Pfeiffer (https://markusp.morphism.de/),\n     Amelia Phillips,\n     Daniel Pointon,\n     Pramoth Ragavan,\n     Lea Racine,\n     Christopher Russell,\n     Artur Schaefer,\n     Isabella Scott,\n     Kamran Sharma,\n     Finn Smith,\n     Ben Spiers,\n     Maria Tsalakou (https://mariatsalakou.github.io/),\n     Agastyaa Vishvanath,\n     Meike Weiss (https://bit.ly/4e6pUeP),\n     Murray Whyte,\n and Fabian Zickgraf.\n-----------------------------------------------------------------------------\n",
   "CHANGES_URL": "https://digraphs.github.io/Digraphs/CHANGELOG.md",
-  "Date": "27/09/2025",
+  "Date": "22/01/2026",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">=4.10.0",
+    "GAP": ">=4.11.0",
     "NeededOtherPackages": [
       [
         "IO",
@@ -67,7 +67,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "e2632ae77a00f640da2e8e287ae11cdd25ecced5cc5d728657aa846764fd5d7b",
+  "PackageInfoSHA256": "3ccbdae5922f3d3b1aa283fea19a235800e033deb70645549802b3ffd47d2f22",
   "PackageInfoURL": "https://digraphs.github.io/Digraphs/PackageInfo.g",
   "PackageName": "Digraphs",
   "PackageWWWHome": "https://digraphs.github.io/Digraphs",
@@ -131,23 +131,25 @@
       "Email": "mam49@st-andrews.ac.uk",
       "FirstNames": "Marina",
       "GithubUsername": "marinaanagno",
-      "Institution": "University of St Andrews",
       "IsAuthor": true,
       "IsMaintainer": false,
-      "LastName": "Anagnostopoulou-Merkouri",
-      "Place": "St Andrews",
-      "PostalAddress": "Mathematical Institute, North Haugh, St Andrews, Fife, KY16 9SS, Scotland"
+      "LastName": "Anagnostopoulou-Merkouri"
+    },
+    {
+      "Email": "ca219@st-andrews.ac.uk",
+      "FirstNames": "Cora",
+      "GithubUsername": "coraaked",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Aked"
     },
     {
       "Email": "finneganlbuck@gmail.com",
       "FirstNames": "Finn",
       "GithubUsername": "finnbuck",
-      "Institution": "University of St Andrews",
       "IsAuthor": true,
       "IsMaintainer": false,
-      "LastName": "Buck",
-      "Place": "St Andrews",
-      "PostalAddress": "Mathematical Institute, North Haugh, St Andrews, Fife, KY16 9SS, Scotland"
+      "LastName": "Buck"
     },
     {
       "Email": "stuartburrell1994@gmail.com",
@@ -166,6 +168,14 @@
       "LastName": "Campbell"
     },
     {
+      "Email": "dc268@st-andrews.ac.uk",
+      "FirstNames": "Devansh",
+      "GithubUsername": "devansh2605",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Chopra"
+    },
+    {
       "FirstNames": "Raiyan",
       "GithubUsername": "RaiyanC",
       "IsAuthor": true,
@@ -176,23 +186,17 @@
       "Email": "rc234@st-andrews.ac.uk",
       "FirstNames": "Reinis",
       "GithubUsername": "reiniscirpons",
-      "Institution": "University of St Andrews",
       "IsAuthor": true,
       "IsMaintainer": false,
-      "LastName": "Cirpons",
-      "Place": "St Andrews",
-      "PostalAddress": "Mathematical Institute, North Haugh, St Andrews, Fife, KY16 9SS, Scotland"
+      "LastName": "Cirpons"
     },
     {
       "Email": "ac323@st-andrews.ac.uk",
       "FirstNames": "Ashley",
       "GithubUsername": "AshleyClayton",
-      "Institution": "University of St Andrews",
       "IsAuthor": true,
       "IsMaintainer": false,
-      "LastName": "Clayton",
-      "Place": "St Andrews",
-      "PostalAddress": "Mathematical Institute, North Haugh, St Andrews, Fife, KY16 9SS, Scotland"
+      "LastName": "Clayton"
     },
     {
       "Email": "tom.contileslie@gmail.com",
@@ -233,6 +237,14 @@
       "IsMaintainer": false,
       "LastName": "Engelhardt",
       "WWWHome": "https://inai.de"
+    },
+    {
+      "Email": "ffloresbrito@gmail.com",
+      "FirstNames": "Fernando",
+      "GithubUsername": "ffloresbrito",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Flores Brito"
     },
     {
       "Email": "isuruf@gmail.com",
@@ -366,6 +378,14 @@
       "LastName": "Mohammadiyeh"
     },
     {
+      "Email": "rm387@st-andrews.ac.uk",
+      "FirstNames": "Rheya",
+      "GithubUsername": "RheyaM",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Monerasinghe"
+    },
+    {
       "Email": "michael@orlitzky.com",
       "FirstNames": "Michael",
       "GithubUsername": "orlitzky",
@@ -392,6 +412,14 @@
       "WWWHome": "https://markusp.morphism.de/"
     },
     {
+      "Email": "ap410@st-andrews.ac.uk",
+      "FirstNames": "Amelia",
+      "GithubUsername": "ap4108735",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Phillips"
+    },
+    {
       "Email": "dp211@st-andrews.ac.uk",
       "FirstNames": "Daniel",
       "GithubUsername": "DanielPointon",
@@ -411,12 +439,9 @@
       "Email": "lr217@st-andrews.ac.uk",
       "FirstNames": "Lea",
       "GithubUsername": "LRacine",
-      "Institution": "University of St Andrews",
       "IsAuthor": true,
       "IsMaintainer": false,
-      "LastName": "Racine",
-      "Place": "St Andrews",
-      "PostalAddress": "Jack Cole Building, North Haugh, St Andrews, Fife, KY16 9SX, Scotland"
+      "LastName": "Racine"
     },
     {
       "FirstNames": "Christopher",
@@ -446,12 +471,9 @@
       "Email": "kks4@st-andrews.ac.uk",
       "FirstNames": "Kamran",
       "GithubUsername": "KamranKSharma",
-      "Institution": "University of St Andrews",
       "IsAuthor": true,
       "IsMaintainer": false,
-      "LastName": "Sharma",
-      "Place": "St Andrews",
-      "PostalAddress": "Jack Cole Building, North Haugh, St Andrews, Fife, KY16 9SX, Scotland"
+      "LastName": "Sharma"
     },
     {
       "Email": "fls3@st-andrews.ac.uk",
@@ -476,12 +498,9 @@
       "Email": "mt200@st-andrews.ac.uk",
       "FirstNames": "Maria",
       "GithubUsername": "mariatsalakou",
-      "Institution": "University of St Andrews",
       "IsAuthor": true,
       "IsMaintainer": false,
       "LastName": "Tsalakou",
-      "Place": "St Andrews",
-      "PostalAddress": "Mathematical Institute, North Haugh, St Andrews, Fife, KY16 9SS, Scotland",
       "WWWHome": "https://mariatsalakou.github.io/"
     },
     {
@@ -532,5 +551,5 @@
   "Status": "deposited",
   "Subtitle": "Graphs, digraphs, and multidigraphs in GAP",
   "TestFile": "tst/teststandard.g",
-  "Version": "1.13.1"
+  "Version": "1.14.0"
 }
