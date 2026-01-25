@@ -33,7 +33,7 @@ concurrency:
 jobs:
   assemble:
     name: "Assemble the package distribution"
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     steps:
       - uses: actions/checkout@v6
 

@@ -350,7 +350,7 @@ jobs:
     name: "Generate report"
     needs: [build, test-package]
     if: always()
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     outputs:
       test-status: ${{ steps.test-status.outputs.test-status }}
     steps:

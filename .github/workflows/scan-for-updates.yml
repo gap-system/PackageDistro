@@ -24,7 +24,7 @@ on:
 jobs:
   scan-for-updates:
     name: "Scan for package updates"
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     outputs:
       matrix: ${{ steps.get-names.outputs.matrix }}
     steps:
@@ -114,7 +114,7 @@ jobs:
     name: "Create pull request for ${{ matrix.package_or_group }}"
     if: ${{ needs.scan-for-updates.outputs.matrix != '{"package_or_group":[]}' }}
     needs: scan-for-updates
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     strategy:
       fail-fast: false
       matrix: ${{ fromJSON(needs.scan-for-updates.outputs.matrix) }}

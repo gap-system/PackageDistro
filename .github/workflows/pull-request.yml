@@ -103,7 +103,7 @@ jobs:
 
   status-comment:
     name: "Create or update PR comment"
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     needs: test-all-master  # TODO: also handle test-all-release
     if: always()
     steps:
