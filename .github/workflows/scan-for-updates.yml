@@ -126,6 +126,14 @@ jobs:
         with:
           name: metadata
 
+      - name: "Set up Python"
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: "Install prerequisites for package distribution tools"
+        run: python -m pip install -r tools/requirements.txt
+
       - name: "Prepare pull request"
         run: |
           tar xvf modified.tar.gz
