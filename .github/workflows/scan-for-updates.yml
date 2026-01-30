@@ -24,7 +24,7 @@ on:
 jobs:
   scan-for-updates:
     name: "Scan for package updates"
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-latest
     outputs:
       matrix: ${{ steps.get-names.outputs.matrix }}
     steps:
