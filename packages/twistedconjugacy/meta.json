@@ -1,9 +1,9 @@
 {
   "AbstractHTML": "\n    The TwistedConjugacy package provides methods for solving the twisted\n    conjugacy problem (including the \"search\" and \"multiple\" variants) and for\n    computing Reidemeister classes, numbers, spectra, and zeta functions. It\n    also includes utility functions for working with (double) cosets, group\n    homomorphisms, and group derivations.\n\n    These methods are primarily designed for use with finite groups and with\n    PcpGroups (finite or infinite) provided by the Polycyclic package.\n",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "b710e4cce5ae31d4d39521b1614ed31d29c621bc64c6971152ee2b3c7f4e369d",
-  "ArchiveURL": "https://github.com/stertooy/TwistedConjugacy/releases/download/v3.1.2/TwistedConjugacy-3.1.2",
-  "Date": "14/11/2025",
+  "ArchiveSHA256": "a72c674ab40ebc9a7a2bea0c048409049717d3f0d32c35062db7e7436809e8d0",
+  "ArchiveURL": "https://github.com/stertooy/TwistedConjugacy/releases/download/v3.2.0/TwistedConjugacy-3.2.0",
+  "Date": "11/02/2026",
   "Dependencies": {
     "GAP": ">= 4.14",
     "NeededOtherPackages": [],
@@ -20,7 +20,7 @@
       "needed": [
         [
           "Polycyclic",
-          "2.16"
+          "2.17"
         ]
       ]
     }
@@ -56,7 +56,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "2ce05206e72217958d4bb0ed16c0374a8b8e0da7973315c761873db619245020",
+  "PackageInfoSHA256": "84ffc744e8a62047ba5f97d37b9cfeaca1ae3b570fe5c8619d0d4c268b1718d7",
   "PackageInfoURL": "https://stertooy.github.io/TwistedConjugacy/PackageInfo.g",
   "PackageName": "TwistedConjugacy",
   "PackageWWWHome": "https://stertooy.github.io/TwistedConjugacy",
@@ -82,5 +82,5 @@
   "Subtitle": "Computation with twisted conjugacy classes",
   "SupportEmail": "sam.tertooy@kuleuven.be",
   "TestFile": "tst/testall.g",
-  "Version": "3.1.2"
+  "Version": "3.2.0"
 }
