@@ -2,12 +2,12 @@
   "AbstractHTML": "This package provides some functions for group cohomology and algebraic topology. ",
   "AcceptDate": "03/2006",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "357f720914ce8e148afe3d0fdd6dde1b6bbb3f071d9f32d912d8179e1271374c",
-  "ArchiveURL": "https://github.com/gap-packages/hap/releases/download/v1.74/hap-1.74",
+  "ArchiveSHA256": "1b385df3e5104d933fe5383a218e6c9433b5ecea060625b3c2e911bff8dcf071",
+  "ArchiveURL": "https://github.com/gap-packages/hap/releases/download/v1.75/hap-1.75",
   "AvailabilityTest": null,
-  "BannerString": "Loading HAP 1.74 ...\n",
+  "BannerString": "Loading HAP 1.75 ...\n",
   "CommunicatedBy": "Derek Holt (Warwick)",
-  "Date": "10/01/2026",
+  "Date": "24/03/2026",
   "Dependencies": {
     "ExternalConditions": [
       [
@@ -60,6 +60,10 @@
       [
         "SmallGrp",
         ">=1.1"
+      ],
+      [
+        "Polymaking",
+        ">=0.8.4"
       ]
     ],
     "SuggestedOtherPackages": [
@@ -82,10 +86,6 @@
       [
         "HAPcryst",
         ">=0.1.0"
-      ],
-      [
-        "Polymaking",
-        ">=0.8.4"
       ],
       [
         "xmod",
@@ -128,7 +128,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "f8cb1952f0aa8313a56e9f431984999e4b361b9961760e6ae0d7ad1eb19850d0",
+  "PackageInfoSHA256": "381afadc0864fcc85b43ef48842e1daf0a6bfea6f7983e3dbbac6409b0b2249d",
   "PackageInfoURL": "https://gap-packages.github.io/hap/PackageInfo.g",
   "PackageName": "HAP",
   "PackageWWWHome": "https://gap-packages.github.io/hap",
@@ -153,5 +153,5 @@
   "Status": "accepted",
   "Subtitle": "Homological Algebra Programming",
   "TestFile": "tst/testquick.g",
-  "Version": "1.74"
+  "Version": "1.75"
 }
