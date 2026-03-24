@@ -1,0 +1,64 @@
+{
+  "AbstractHTML": "",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSHA256": "0e71c5a0a211b7f8f8ea2d738ce04bbbb20f9443a0d1a5ccef5a902b5d86d802",
+  "ArchiveURL": "https://github.com/gap-packages/PackageMaker/releases/download/v1.0.0/PackageMaker-1.0.0",
+  "AvailabilityTest": null,
+  "Date": "24/03/2026",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">= 4.9",
+    "NeededOtherPackages": [
+      [
+        "AutoDoc",
+        ">= 2018.02.14"
+      ],
+      [
+        "io",
+        ">= 3.0"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "IssueTrackerURL": "https://github.com/gap-packages/PackageMaker/issues",
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "PackageMaker",
+      "HTMLStart": "doc/chap0_mj.html",
+      "LongTitle": "A GAP package for creating new GAP packages",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSHA256": "75099214f84c0c0dc5b7c3f6c43e23282113c868d7308cd4a1e7b690f7cbec7f",
+  "PackageInfoURL": "https://gap-packages.github.io/PackageMaker/PackageInfo.g",
+  "PackageName": "PackageMaker",
+  "PackageWWWHome": "https://gap-packages.github.io/PackageMaker",
+  "Persons": [
+    {
+      "Email": "mhorn@rptu.de",
+      "FirstNames": "Max",
+      "GitHubUsername": "fingolfin",
+      "Institution": "RPTU Kaiserslautern-Landau",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Horn",
+      "Place": "Kaiserslautern, Germany",
+      "PostalAddress": "Fachbereich Mathematik\nRPTU Kaiserslautern-Landau\nGottlieb-Daimler-Straße 48\n67663 Kaiserslautern\nGermany",
+      "WWWHome": "https://www.quendi.de/math"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/PackageMaker/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/PackageMaker"
+  },
+  "Status": "dev",
+  "Subtitle": "A GAP package for creating new GAP packages",
+  "TestFile": "tst/testall.g",
+  "Version": "1.0.0"
+}
