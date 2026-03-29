@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "The <span class='pkgname'>CddInterface</span> package provides a GAP interface to <a href='https://inf.ethz.ch/personal/fukudak/cdd_home'>cdd</a>, enabling direct access to the most of the functionality of cddlib, such as translating between H,V- representations of a polyhedron and solving linear programming problems.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "b2fee838455b73ea264c3a1a826c50a0ce74893c5018f4a04f9dee48d198ce38",
-  "ArchiveURL": "https://github.com/homalg-project/CddInterface/releases/download/v2026.03.01/CddInterface-2026.03.01",
+  "ArchiveSHA256": "e425b0e87667df3f6e4c33cd2656bfc53602297620c91f60e322b29478954a2b",
+  "ArchiveURL": "https://github.com/homalg-project/CddInterface/releases/download/v2026.03.02/CddInterface-2026.03.02",
   "AvailabilityTest": null,
-  "Date": "01/03/2026",
+  "Date": "02/03/2026",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12",
@@ -14,6 +14,18 @@
         ">= 1.5"
       ]
     ],
+    "NeededSystemPackages": {
+      "Homebrew": [
+        [
+          "cddlib"
+        ]
+      ],
+      "Ubuntu": [
+        [
+          "libcdd-dev"
+        ]
+      ]
+    },
     "SuggestedOtherPackages": []
   },
   "IssueTrackerURL": "https://github.com/homalg-project/CddInterface/issues",
@@ -36,7 +48,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "6568c28b9fe57a2a1202985a24aa8253a6b924c71f946ea1918f1ee2b698595d",
+  "PackageInfoSHA256": "147ba32b5feaf8d238ab189338d85457b1c7d0e573a12f4c0beb025e4e81d97d",
   "PackageInfoURL": "https://homalg-project.github.io/CddInterface/PackageInfo.g",
   "PackageName": "CddInterface",
   "PackageWWWHome": "https://homalg-project.github.io/CddInterface",
@@ -61,5 +73,5 @@
   "Status": "deposited",
   "Subtitle": "Gap interface to Cdd package",
   "TestFile": "tst/testall.g",
-  "Version": "2026.03.01"
+  "Version": "2026.03.02"
 }
