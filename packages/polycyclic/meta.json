@@ -2,20 +2,20 @@
   "AbstractHTML": "This package provides various algorithms for computations with polycyclic groups defined by polycyclic presentations.",
   "AcceptDate": "01/2004",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "0d82a709155db7a0d3db7dd7ce96a50c7e7f4bd07dd0085eb0009de01f1e2ca1",
-  "ArchiveURL": "https://github.com/gap-packages/polycyclic/releases/download/v2.17/polycyclic-2.17",
+  "ArchiveSHA256": "334416c8aeb8bcd0a2b58b16cba590ea26fa8d54d275a0bdcf5999b889c13317",
+  "ArchiveURL": "https://github.com/gap-packages/polycyclic/releases/download/v2.18/polycyclic-2.18",
   "AutoDoc": {
     "TitlePage": {
       "Acknowledgements": "\nWe appreciate very much all past and future comments, suggestions and\ncontributions to this package and its documentation provided by &GAP;\nusers and developers.",
-      "Copyright": "<Index>License</Index>\n&copyright; 2003-2018 by Bettina Eick, Max Horn and Werner Nickel<P/>\nThe &Polycyclic; package is free software;\nyou can redistribute it and/or modify it under the terms of the\n<URL Text=\"GNU General Public License\">http://www.fsf.org/licenses/gpl.html</URL>\nas published by the Free Software Foundation; either version 2 of the License,\nor (at your option) any later version."
+      "Copyright": "<Index>License</Index>\n&copyright; 2003-2026 by Bettina Eick, Max Horn and Werner Nickel<P/>\nThe &Polycyclic; package is free software;\nyou can redistribute it and/or modify it under the terms of the\n<URL Text=\"GNU General Public License\">http://www.fsf.org/licenses/gpl.html</URL>\nas published by the Free Software Foundation; either version 2 of the License,\nor (at your option) any later version."
     }
   },
   "AvailabilityTest": null,
   "CommunicatedBy": "Charles Wright (Eugene)",
-  "Date": "28/08/2025",
+  "Date": "09/04/2026",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">= 4.10",
+    "GAP": ">= 4.12",
     "NeededOtherPackages": [
       [
         "alnuth",
@@ -71,7 +71,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "7f8c1600aeef8467c97dcca0dfb453b1eec7d03034b43f218bcc8eacba0325e4",
+  "PackageInfoSHA256": "3a52fab365915e99ebb6e2924bc5baa4ca90c409033357b272a8925a58588b5d",
   "PackageInfoURL": "https://gap-packages.github.io/polycyclic/PackageInfo.g",
   "PackageName": "Polycyclic",
   "PackageWWWHome": "https://gap-packages.github.io/polycyclic/",
@@ -139,5 +139,5 @@
   "Status": "accepted",
   "Subtitle": "Computation with polycyclic groups",
   "TestFile": "tst/testall.g",
-  "Version": "2.17"
+  "Version": "2.18"
 }
