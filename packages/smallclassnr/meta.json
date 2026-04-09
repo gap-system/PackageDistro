@@ -1,13 +1,31 @@
 {
   "AbstractHTML": "Library of finite groups with small class number.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "bddbee6743fa895899de1336c5af885c21741c431d366da6612cad81d727de8c",
-  "ArchiveURL": "https://github.com/stertooy/SmallClassNr/releases/download/v1.4.3/SmallClassNr-1.4.3",
-  "Date": "13/11/2025",
+  "ArchiveSHA256": "d026c0a58c0e3d3bd4498aad39b19f4c254291c7c9cf25dff3fc929c51e343c5",
+  "ArchiveURL": "https://github.com/stertooy/SmallClassNr/releases/download/v1.5.0/SmallClassNr-1.5.0",
+  "Date": "05/04/2026",
   "Dependencies": {
     "GAP": ">= 4.14",
     "NeededOtherPackages": [],
-    "SuggestedOtherPackages": []
+    "SuggestedOtherPackages": [],
+    "TestPackages": [
+      [
+        "primgrp",
+        "3.4.4"
+      ],
+      [
+        "smallgrp",
+        "1.5.4"
+      ],
+      [
+        "transgrp",
+        "3.6.5"
+      ],
+      [
+        "atlasrep",
+        "2.1.9"
+      ]
+    ]
   },
   "IssueTrackerURL": "https://github.com/stertooy/SmallClassNr/issues",
   "Keywords": [
@@ -28,7 +46,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "1676f5e087b57b63ed89023449c90fef35205c3e87b2aa02f452f94e72ba66cd",
+  "PackageInfoSHA256": "c6db80323df12f6f75038fbac4ff20ebdcae4ef6412075d5f4437a689904e04a",
   "PackageInfoURL": "https://stertooy.github.io/SmallClassNr/PackageInfo.g",
   "PackageName": "SmallClassNr",
   "PackageWWWHome": "https://stertooy.github.io/SmallClassNr",
@@ -54,5 +72,5 @@
   "Subtitle": "Library of finite groups with small class number",
   "SupportEmail": "sam.tertooy@kuleuven.be",
   "TestFile": "tst/testall.g",
-  "Version": "1.4.3"
+  "Version": "1.5.0"
 }
