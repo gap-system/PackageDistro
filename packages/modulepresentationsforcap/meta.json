@@ -1,21 +1,21 @@
 {
   "AbstractHTML": "<span class=\"pkgname\">ModulePresentationsForCAP</span> provides the category of finitely presented modules over a computable ring.",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "997464b3898d0e41783f857533249f71f679ede0250896d6fc48f999a47bc0d1",
-  "ArchiveURL": "https://github.com/homalg-project/CAP_project/releases/download/ModulePresentationsForCAP-2025.12-01/ModulePresentationsForCAP-2025.12-01",
+  "ArchiveSHA256": "eaa98a5a5a6cf8338c257bc14478665949b02c03b7bbb0cfdac1a70b1dd2200d",
+  "ArchiveURL": "https://github.com/homalg-project/CAP_project/releases/download/ModulePresentationsForCAP-2026.04-01/ModulePresentationsForCAP-2026.04-01",
   "AvailabilityTest": null,
-  "Date": "2025-12-23",
+  "Date": "2026-04-10",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.13.0",
     "NeededOtherPackages": [
       [
         "MatricesForHomalg",
-        ">=2019.02.01"
+        ">= 2026.04-01"
       ],
       [
         "CAP",
-        ">= 2023.05-03"
+        ">= 2026.04-01"
       ],
       [
         "MonoidalCategories",
@@ -35,11 +35,11 @@
       "needed": [
         [
           "FreydCategoriesForCAP",
-          ">= 2024.01-03"
+          ">= 2026.04-01"
         ],
         [
           "AdditiveClosuresForCAP",
-          ">= 2025.06-01"
+          ">= 2026.04-01"
         ]
       ]
     }
@@ -58,7 +58,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "b7123ab23eaa5eb8a37cda7069c9495a07d3b6ac5a93895e6f83f170c3db9cd7",
+  "PackageInfoSHA256": "0287ab8b4b8a141c2b5bb9e2230cd1f57874cd59498da07990a9b0837459912b",
   "PackageInfoURL": "https://homalg-project.github.io/CAP_project/ModulePresentationsForCAP/PackageInfo.g",
   "PackageName": "ModulePresentationsForCAP",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/ModulePresentationsForCAP",
@@ -105,5 +105,5 @@
   "Status": "deposited",
   "Subtitle": "Category R-pres for CAP",
   "TestFile": "tst/testall.g",
-  "Version": "2025.12-01"
+  "Version": "2026.04-01"
 }
