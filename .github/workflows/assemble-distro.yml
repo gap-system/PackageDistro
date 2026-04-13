@@ -93,7 +93,7 @@ jobs:
             _releases/pkglist.csv
 
       - name: "Update tag"
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             github.rest.git.updateRef({
