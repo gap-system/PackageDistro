@@ -1,8 +1,8 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">GaussForHomalg</span> package provides Gauss functionality for <span class=\"pkgname\">homalg</span> using the package <span class=\"pkgname\">Gauss</span>",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "5f7e5ea80c79555e8027251275351c435bed48adaee48ef2b06aa93b84aef50e",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/GaussForHomalg-2025.12-01/GaussForHomalg-2025.12-01",
+  "ArchiveSHA256": "5c1d8f495f6e3bf51892b8d87587cd110e513901fbac8e0a20e87f0a1cf4d608",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/GaussForHomalg-2026.04-01/GaussForHomalg-2026.04-01",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "This document explains the primary uses of the &GaussForHomalg; package. Included in this manual is a documented list of the most important methods and functions you will need.<P/>\n",
@@ -11,14 +11,14 @@
     }
   },
   "AvailabilityTest": null,
-  "Date": "2025-12-23",
+  "Date": "2026-04-10",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.13.0",
     "NeededOtherPackages": [
       [
         "ToolsForHomalg",
-        ">= 2023.11-01"
+        ">= 2026.04-01"
       ],
       [
         "Gauss",
@@ -26,7 +26,7 @@
       ],
       [
         "MatricesForHomalg",
-        ">= 2023.10-01"
+        ">= 2026.04-01"
       ],
       [
         "GAPDoc",
@@ -54,7 +54,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "dddb53fdf8ee84b2ac5477d6039ba3cc2c8e785d62cab60c07d69fc8e268b4bb",
+  "PackageInfoSHA256": "1deb32288fb6279b2fdba0fb19c571095bd61c7d9f59709658103464c7811dde",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/GaussForHomalg/PackageInfo.g",
   "PackageName": "GaussForHomalg",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/GaussForHomalg",
@@ -90,5 +90,5 @@
   "Status": "deposited",
   "Subtitle": "Gauss functionality for the homalg project",
   "TestFile": "tst/testall.g",
-  "Version": "2025.12-01"
+  "Version": "2026.04-01"
 }

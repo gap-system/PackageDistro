@@ -1,30 +1,30 @@
 {
   "AbstractHTML": "This package is part of the homalg-project and allows localization of a (computable) commutative ring at a (finitely generated) maximal ideal.",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "b46dee39562dea32a96818411e0cec910fc0da87c801a1337068c30433ac7b4e",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/LocalizeRingForHomalg-2025.12-01/LocalizeRingForHomalg-2025.12-01",
+  "ArchiveSHA256": "262ce8365a15db0c6897a93b8c7d3ec8ae7b1ab8dbede4213e566b66c46246b1",
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/LocalizeRingForHomalg-2026.04-01/LocalizeRingForHomalg-2026.04-01",
   "AutoDoc": {
     "TitlePage": {
       "Copyright": "&copyright; 2009-2015 by Mohamed Barakat and Markus Lange-Hegermann\n\nThis package may be distributed under the terms and conditions of the GNU Public License Version 2 or (at your option) any later version.\n"
     }
   },
   "AvailabilityTest": null,
-  "Date": "2025-12-23",
+  "Date": "2026-04-10",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.13.0",
     "NeededOtherPackages": [
       [
         "MatricesForHomalg",
-        ">= 2023.10-01"
+        ">= 2026.04-01"
       ],
       [
         "HomalgToCAS",
-        ">= 2023.08-01"
+        ">= 2026.04-01"
       ],
       [
         "Modules",
-        ">= 2023.08-01"
+        ">= 2026.04-01"
       ],
       [
         "GAPDoc",
@@ -54,7 +54,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "f347952286dff88c8fdf72168584f94ee04d90dee0347a10839f83ea2d05334e",
+  "PackageInfoSHA256": "081899785fa382ccbe3fcfa3846c4681ae8c603c400e20d067f038afa0581748",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/LocalizeRingForHomalg/PackageInfo.g",
   "PackageName": "LocalizeRingForHomalg",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/LocalizeRingForHomalg",
@@ -101,5 +101,5 @@
   "Status": "deposited",
   "Subtitle": "A Package for Localization of Polynomial Rings",
   "TestFile": "tst/testall.g",
-  "Version": "2025.12-01"
+  "Version": "2026.04-01"
 }
