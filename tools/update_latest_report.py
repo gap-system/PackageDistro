@@ -67,8 +67,7 @@ def generate_redirect(
     blob_url = repo + "/blob/" + dir_report + "/report.md"
 
     with open(os.path.join(dir_redirect, "redirect.html"), "w") as f:
-        f.write(
-            f"""
+        f.write(f"""
         <!DOCTYPE html>
         <meta charset="utf-8">
         <title>Redirecting to latest report</title>
@@ -78,8 +77,7 @@ def generate_redirect(
         <body>
         <a href="{blob_url}">{blob_url}</a>
         </body>
-        """
-        )
+        """)
 
 
 ################################################################################
