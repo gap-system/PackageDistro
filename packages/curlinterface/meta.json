@@ -1,11 +1,11 @@
 {
   "AbstractHTML": "",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "973d4b518bb25295fa36e367c54fd257adb7af4723634f039f53dae507855756",
-  "ArchiveURL": "https://github.com/gap-packages/curlInterface/releases/download/v2.4.2/curlInterface-2.4.2",
+  "ArchiveSHA256": "bba4ac8190eb9f51a5b645d09aaea7a60e9af949b37e6c8ff8f1d2ce5f4df587",
+  "ArchiveURL": "https://github.com/gap-packages/curlInterface/releases/download/v2.4.3/curlInterface-2.4.3",
   "AvailabilityTest": null,
   "BannerFunction": null,
-  "Date": "20/06/2025",
+  "Date": "22/04/2026",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12",
@@ -15,6 +15,18 @@
         ">= 1.5"
       ]
     ],
+    "NeededSystemPackages": {
+      "Homebrew": [
+        [
+          "curl"
+        ]
+      ],
+      "Ubuntu": [
+        [
+          "libcurl4-gnutls-dev"
+        ]
+      ]
+    },
     "SuggestedOtherPackages": []
   },
   "IssueTrackerURL": "https://github.com/gap-packages/curlInterface/issues",
@@ -31,7 +43,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "521e5a23585a46495b24356b42794fd58ca09527fe55856eec05af25ff08311d",
+  "PackageInfoSHA256": "b52f60543c2acee22ccbb625c3c94232ce27bf5a66b4ebb9dc2cdcd84300fdea",
   "PackageInfoURL": "https://gap-packages.github.io/curlInterface/PackageInfo.g",
   "PackageName": "curlInterface",
   "PackageWWWHome": "https://gap-packages.github.io/curlInterface/",
@@ -50,6 +62,7 @@
     {
       "Email": "mhorn@rptu.de",
       "FirstNames": "Max",
+      "GitHubUsername": "fingolfin",
       "Institution": "RPTU Kaiserslautern-Landau",
       "IsAuthor": false,
       "IsMaintainer": true,
@@ -78,5 +91,5 @@
   "Status": "deposited",
   "Subtitle": "Simple Web Access",
   "TestFile": "tst/testall.g",
-  "Version": "2.4.2"
+  "Version": "2.4.3"
 }
