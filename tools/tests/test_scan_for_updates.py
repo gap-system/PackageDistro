@@ -5,6 +5,7 @@
 """
 This module contains some tests for the scan_for_updates.py script
 """
+
 import json
 import os
 import shutil
