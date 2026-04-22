@@ -30,138 +30,188 @@ import json
 import os
 import sys
 from datetime import datetime
-from typing import Any, Dict
+from typing import Any, Callable, Dict, List
 
 import requests
 from utils import error, metadata, normalize_pkg_name, warning
 
-################################################################################
-# Arguments
-num_args = len(sys.argv)
 
-if num_args != 7:
-    error("Unknown number of arguments")
+def github_headers(git_token: str) -> Dict[str, str]:
+    return {"Authorization": f"Bearer {git_token}"}
 
-git_token = sys.argv[1]
-repo = sys.argv[2]
-run_id = sys.argv[3]
-hash = sys.argv[4]
-which_gap = sys.argv[5]
-job_name_prefix = sys.argv[6]
 
-################################################################################
-# Collect names of all packages
-files = []
-for file in glob.glob("packages/*/meta.json"):
-    files.append(file)
+def response_jobs(res: requests.Response, url: str) -> List[Dict[str, Any]]:
+    payload = res.json()
+    jobs = payload.get("jobs")
+    if jobs is None:
+        warning(f'GitHub API response for "{url}" did not contain a "jobs" key')
+        return []
+    return jobs
 
-files.sort()
-pkgs: Dict[str, Any] = {}
 
-for file in files:
-    pkgs[normalize_pkg_name(file)] = {}
+def fetch_jobs(
+    git_token: str,
+    repo: str,
+    run_id: str,
+    get: Callable[..., requests.Response] = requests.get,
+) -> List[Dict[str, Any]]:
+    # Use filter=all so rerunning a single matrix job still lets us see the
+    # jobs from previous attempts of the same workflow run.
+    url = (
+        f"https://api.github.com/repos/{repo}/actions/runs/{run_id}/jobs"
+        "?simple=yes&filter=all&per_page=100&page=1"
+    )
+    headers = github_headers(git_token)
+    res = get(url, headers=headers)
+    res.raise_for_status()
+    jobs_list = response_jobs(res, url)
+    while "next" in res.links.keys():
+        url = res.links["next"]["url"]
+        res = get(url, headers=headers)
+        res.raise_for_status()
+        jobs_list.extend(response_jobs(res, url))
+    return jobs_list
 
-################################################################################
-# Collect job information for all packages
-#
-# Retrieve additional meta data about this workflow run via the REST API.
-# We use this to figure out the status of all jobs
-# as well as the direct links to jobs in the final status report.
 
-# https://stackoverflow.com/questions/33878019/how-to-get-data-from-all-pages-in-github-api-with-python
-url = f"https://api.github.com/repos/{repo}/actions/runs/{run_id}/jobs?simple=yes&per_page=100&page=1"
-res = requests.get(url, headers={"Authorization": git_token})
-jobs_list = res.json()["jobs"]
-while "next" in res.links.keys():
-    res = requests.get(res.links["next"]["url"], headers={"Authorization": git_token})
-    jobs_list.extend(res.json()["jobs"])
+def job_is_newer(job: Dict[str, Any], current_job: Dict[str, Any]) -> bool:
+    completed_at = job.get("completed_at") or ""
+    current_completed_at = current_job.get("completed_at") or ""
+    return completed_at >= current_completed_at
 
-# Turn list of jobs into a dictionary containing only the relevant data
-jobs_dict: Dict[str, Any] = {}
-for job in jobs_list:
-    jobs_dict[job["name"]] = {
-        "status": job["conclusion"],
-        "workflow_run": job["html_url"],
-    }
-jobs_names = jobs_dict.keys()
 
-# Direct link to job that constructs the test matrix.
-# This is used for skipped packages
-# that were not included in the test matrix.
-name = f"{job_name_prefix}Build GAP and packages"
-job = jobs_dict[name]
-skipped_run = job["workflow_run"]
+def main(argv: List[str]) -> int:
+    ################################################################################
+    # Arguments
+    num_args = len(argv)
 
-# Add status and direct link to workflow for all packages
-for pkg, data in pkgs.items():
-    name = f"{job_name_prefix}{pkg}"
-    if name in jobs_names:
-        job = jobs_dict[name]
-        # https://docs.github.com/en/actions/learn-github-actions/contexts#steps-context
-        # Possible values for conclusion are success, failure, cancelled, or skipped.
-        # We treat cancelled the same way as skipped.
-        status = job["status"]
-        if status == "failure":
-            data["status"] = "failure"
-        elif status == "success":
-            data["status"] = "success"
-        else:  # cancelled or skipped
-            data["status"] = "skipped"
+    if num_args != 7:
+        error("Unknown number of arguments")
 
-        data["workflow_run"] = job["workflow_run"]
-    else:  # if pkg was skipped
-        data["status"] = "skipped"
-        data["workflow_run"] = skipped_run
+    git_token = argv[1]
+    repo = argv[2]
+    run_id = argv[3]
+    hash = argv[4]
+    which_gap = argv[5]
+    job_name_prefix = argv[6]
 
-################################################################################
-# Generate main test-status.json
+    ################################################################################
+    # Collect names of all packages
+    files = []
+    for file in glob.glob("packages/*/meta.json"):
+        files.append(file)
 
-# General Information
-report: Dict[str, Any] = {}
-report["repo"] = os.path.join("https://github.com", repo)
-report["workflow"] = os.path.join("https://github.com", repo, "actions", "runs", run_id)
-report["hash"] = hash
-date = str(datetime.now()).split(".")[0]
-report["date"] = date
-report["gap_version"] = which_gap
-report["id"] = os.path.join(which_gap, "%s-%s" % (date.replace(" ", "-"), hash[:8]))
+    files.sort()
+    pkgs: Dict[str, Any] = {}
 
-# Path
-root = "data/reports"
-dir_test_status = os.path.join(root, report["id"])
-os.makedirs(dir_test_status, exist_ok=True)
+    for file in files:
+        pkgs[normalize_pkg_name(file)] = {}
 
-# Package Information
-for pkg, data in pkgs.items():
-    pkg_json = metadata(pkg)
-    data["version"] = pkg_json["Version"]
-    data["archive_url"] = pkg_json["ArchiveURL"]
-    data["archive_sha256"] = pkg_json["ArchiveSHA256"]
+    ################################################################################
+    # Collect job information for all packages
+    jobs_list = fetch_jobs(git_token, repo, run_id)
 
-report["pkgs"] = pkgs
+    # Turn list of jobs into a dictionary containing only the relevant data.
+    # With filter=all a rerun may contain multiple jobs with the same name, so
+    # keep the most recent one according to completed_at.
+    jobs_dict: Dict[str, Any] = {}
+    for job in jobs_list:
+        name = job["name"]
+        current_job = jobs_dict.get(name)
+        if current_job is None or job_is_newer(job, current_job):
+            jobs_dict[name] = {
+                "status": job["conclusion"],
+                "workflow_run": job["html_url"],
+                "completed_at": job.get("completed_at"),
+            }
 
-# Summary Information
-report["total"] = 0
-report["success"] = 0
-report["failure"] = 0
-report["skipped"] = 0
+    workflow_run_url = os.path.join(
+        "https://github.com", repo, "actions", "runs", run_id
+    )
 
-for pkg, data in pkgs.items():
-    report["total"] += 1
-    status = data["status"]
-    if status == "success":
-        report["success"] += 1
-    elif status == "failure":
-        report["failure"] += 1
-    elif status == "skipped":
-        report["skipped"] += 1
+    # Direct link to job that constructs the test matrix.
+    # This is used for skipped packages that were not included in the test matrix.
+    name = f"{job_name_prefix}Build GAP and packages"
+    job = jobs_dict.get(name)
+    if job is None:
+        warning(f'Could not find job "{name}" in workflow run {run_id}')
+        skipped_run = workflow_run_url
     else:
-        warning('Unknown job status detected for pkg "' + pkg + '"')
+        skipped_run = job["workflow_run"]
 
-with open(os.path.join(dir_test_status, "test-status.json"), "w") as f:
-    json.dump(report, f, ensure_ascii=False, indent=2)
-    f.write("\n")
+    # Add status and direct link to workflow for all packages
+    for pkg, data in pkgs.items():
+        name = f"{job_name_prefix}{pkg}"
+        job = jobs_dict.get(name)
+        if job is not None:
+            # https://docs.github.com/en/actions/learn-github-actions/contexts#steps-context
+            # Possible values for conclusion are success, failure, cancelled, or skipped.
+            # We treat cancelled the same way as skipped.
+            status = job["status"]
+            if status == "failure":
+                data["status"] = "failure"
+            elif status == "success":
+                data["status"] = "success"
+            else:  # cancelled or skipped
+                data["status"] = "skipped"
 
-# Print id to terminal, so that the workflow scripts
-# can parse the output for further processing
-print(report["id"])
+            data["workflow_run"] = job["workflow_run"]
+        else:  # if pkg was skipped
+            data["status"] = "skipped"
+            data["workflow_run"] = skipped_run
+
+    ################################################################################
+    # Generate main test-status.json
+
+    # General Information
+    report: Dict[str, Any] = {}
+    report["repo"] = os.path.join("https://github.com", repo)
+    report["workflow"] = workflow_run_url
+    report["hash"] = hash
+    date = str(datetime.now()).split(".")[0]
+    report["date"] = date
+    report["gap_version"] = which_gap
+    report["id"] = os.path.join(which_gap, "%s-%s" % (date.replace(" ", "-"), hash[:8]))
+
+    # Path
+    root = "data/reports"
+    dir_test_status = os.path.join(root, report["id"])
+    os.makedirs(dir_test_status, exist_ok=True)
+
+    # Package Information
+    for pkg, data in pkgs.items():
+        pkg_json = metadata(pkg)
+        data["version"] = pkg_json["Version"]
+        data["archive_url"] = pkg_json["ArchiveURL"]
+        data["archive_sha256"] = pkg_json["ArchiveSHA256"]
+
+    report["pkgs"] = pkgs
+
+    # Summary Information
+    report["total"] = 0
+    report["success"] = 0
+    report["failure"] = 0
+    report["skipped"] = 0
+
+    for pkg, data in pkgs.items():
+        report["total"] += 1
+        status = data["status"]
+        if status == "success":
+            report["success"] += 1
+        elif status == "failure":
+            report["failure"] += 1
+        elif status == "skipped":
+            report["skipped"] += 1
+        else:
+            warning('Unknown job status detected for pkg "' + pkg + '"')
+
+    with open(os.path.join(dir_test_status, "test-status.json"), "w") as f:
+        json.dump(report, f, ensure_ascii=False, indent=2)
+        f.write("\n")
+
+    # Print id to terminal, so that the workflow scripts can parse the output.
+    print(report["id"])
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main(sys.argv))
