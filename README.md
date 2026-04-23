@@ -154,7 +154,6 @@ and exchange data:
 - `_archives` is used to store copies of all package archives
 - `_pkginfos` stores copies of the `PackageInfo.g` 
 - `_releases`: TODO
-- `_unpacked_archives`: TODO
 
 
 ## What do we test, and how?
