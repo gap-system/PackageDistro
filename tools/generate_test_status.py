@@ -30,10 +30,16 @@ import json
 import os
 import sys
 from datetime import datetime
-from typing import Any, Callable, Dict, List
+from typing import Any, Callable, Dict, List, NotRequired, TypedDict
 
 import requests
 from utils import error, metadata, normalize_pkg_name, warning
+
+
+class JobInfo(TypedDict):
+    status: str | None
+    workflow_run: str
+    completed_at: NotRequired[str | None]
 
 
 def github_headers(git_token: str) -> Dict[str, str]:
@@ -73,7 +79,7 @@ def fetch_jobs(
     return jobs_list
 
 
-def job_is_newer(job: Dict[str, Any], current_job: Dict[str, Any]) -> bool:
+def job_is_newer(job: Dict[str, Any], current_job: JobInfo) -> bool:
     completed_at = job.get("completed_at") or ""
     current_completed_at = current_job.get("completed_at") or ""
     return completed_at >= current_completed_at
@@ -113,15 +119,15 @@ def main(argv: List[str]) -> int:
     # Turn list of jobs into a dictionary containing only the relevant data.
     # With filter=all a rerun may contain multiple jobs with the same name, so
     # keep the most recent one according to completed_at.
-    jobs_dict: Dict[str, Any] = {}
-    for job in jobs_list:
-        name = job["name"]
+    jobs_dict: Dict[str, JobInfo] = {}
+    for raw_job in jobs_list:
+        name = raw_job["name"]
         current_job = jobs_dict.get(name)
-        if current_job is None or job_is_newer(job, current_job):
+        if current_job is None or job_is_newer(raw_job, current_job):
             jobs_dict[name] = {
-                "status": job["conclusion"],
-                "workflow_run": job["html_url"],
-                "completed_at": job.get("completed_at"),
+                "status": raw_job["conclusion"],
+                "workflow_run": raw_job["html_url"],
+                "completed_at": raw_job.get("completed_at"),
             }
 
     workflow_run_url = os.path.join(
@@ -131,22 +137,22 @@ def main(argv: List[str]) -> int:
     # Direct link to job that constructs the test matrix.
     # This is used for skipped packages that were not included in the test matrix.
     name = f"{job_name_prefix}Build GAP and packages"
-    job = jobs_dict.get(name)
-    if job is None:
+    build_job = jobs_dict.get(name)
+    if build_job is None:
         warning(f'Could not find job "{name}" in workflow run {run_id}')
         skipped_run = workflow_run_url
     else:
-        skipped_run = job["workflow_run"]
+        skipped_run = build_job["workflow_run"]
 
     # Add status and direct link to workflow for all packages
     for pkg, data in pkgs.items():
         name = f"{job_name_prefix}{pkg}"
-        job = jobs_dict.get(name)
-        if job is not None:
+        pkg_job = jobs_dict.get(name)
+        if pkg_job is not None:
             # https://docs.github.com/en/actions/learn-github-actions/contexts#steps-context
             # Possible values for conclusion are success, failure, cancelled, or skipped.
             # We treat cancelled the same way as skipped.
-            status = job["status"]
+            status = pkg_job["status"]
             if status == "failure":
                 data["status"] = "failure"
             elif status == "success":
@@ -154,7 +160,7 @@ def main(argv: List[str]) -> int:
             else:  # cancelled or skipped
                 data["status"] = "skipped"
 
-            data["workflow_run"] = job["workflow_run"]
+            data["workflow_run"] = pkg_job["workflow_run"]
         else:  # if pkg was skipped
             data["status"] = "skipped"
             data["workflow_run"] = skipped_run
