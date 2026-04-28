@@ -12,6 +12,7 @@ import shutil
 import sys
 from os.path import exists, join
 
+import mock
 import pytest
 import requests
 
@@ -19,7 +20,12 @@ sys.path.insert(
     0, "/".join(os.path.dirname(os.path.realpath(__file__)).split("/")[:-1])
 )
 
-from scan_for_updates import main, scan_for_one_update, scan_for_updates
+from scan_for_updates import (
+    import_packages,
+    main,
+    scan_for_one_update,
+    scan_for_updates,
+)
 from utils import download_to_memory, gap_exec, metadata, sha256
 
 
@@ -104,3 +110,31 @@ def test_main_again(ensure_in_tests_dir):
     shutil.rmtree("packages/badjson")
     main()
     reset()
+
+
+def test_import_packages_records_archive_size(ensure_in_tests_dir, tmpdir):
+    pkg_json = {
+        "ArchiveFormats": ".tar.gz",
+        "ArchiveURL": "https://example.com/testpkg-1.0",
+        "PackageName": "TestPkg",
+        "Version": "1.0",
+    }
+    archive_bytes = b"archive-bytes-go-here"
+
+    def fake_download(_url, dst):
+        os.makedirs(os.path.dirname(dst), exist_ok=True)
+        with open(dst, "wb") as f:
+            f.write(archive_bytes)
+
+    with mock.patch(
+        "scan_for_updates.parse_pkginfo_files", return_value=[pkg_json]
+    ), mock.patch("scan_for_updates.utils.download", side_effect=fake_download):
+        import_packages(["dummy.g"])
+
+    meta = metadata("testpkg")
+    archive_path = "_archives/testpkg-1.0.tar.gz"
+    assert meta["ArchiveSHA256"] == sha256(archive_path)
+    assert meta["ArchiveSize"] == len(archive_bytes)
+
+    shutil.rmtree("packages/testpkg")
+    shutil.rmtree("_archives")

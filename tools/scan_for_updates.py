@@ -114,9 +114,11 @@ def import_packages(pkginfo_paths: List[str]) -> None:
         try:
             utils.download(url, archive_fname)
             pkg_json["ArchiveSHA256"] = sha256(archive_fname)
+            pkg_json["ArchiveSize"] = os.path.getsize(archive_fname)
         except requests.RequestException as e:
             warning(f"{pkgname}: {e}")
             pkg_json["ArchiveSHA256"] = "FAIL"
+            pkg_json["ArchiveSize"] = 0
 
         pkg_json_file = metadata_fname(pkgname)
         notice(f"update {pkg_json_file}")
