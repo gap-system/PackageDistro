@@ -151,7 +151,9 @@ jobs:
           git fetch --no-tags --depth=1 origin \
             ${{ github.event.repository.default_branch }}
           paths=${PR_FILES//,/ }
-          if git diff --quiet FETCH_HEAD -- $paths; then
+          if git ls-files --others --exclude-standard -- $paths | grep -q .; then
+            echo "skip_pr=false" >> $GITHUB_OUTPUT
+          elif git diff --quiet FETCH_HEAD -- $paths; then
             echo "skip_pr=true" >> $GITHUB_OUTPUT
             echo "No changes remain against the latest default branch."
           else
