@@ -1,14 +1,32 @@
 {
   "AbstractHTML": "",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "c113c5df2119ddf41a38a26db435c63f3224cc2b50b5b1313c4791a085da33ad",
-  "ArchiveURL": "https://github.com/gap-packages/typeset/releases/download/v1.2.3/typeset-1.2.3",
+  "ArchiveSHA256": "d1c3785859aaad302fbe1b6403c4f204ed6577291058830703266d939bb8db4b",
+  "ArchiveURL": "https://github.com/gap-packages/typeset/releases/download/v1.2.4/typeset-1.2.4",
   "AvailabilityTest": null,
-  "Date": "03/07/2025",
+  "Date": "28/04/2026",
   "Dependencies": {
-    "ExternalConditions": [],
+    "ExternalConditions": [
+      [
+        "dot2tex must be installed",
+        "https://dot2tex.readthedocs.io/en/latest/installation_guide.html"
+      ]
+    ],
     "GAP": ">= 4.11",
     "NeededOtherPackages": [],
+    "NeededSystemPackages": {
+      "Ubuntu": [
+        [
+          "dot2tex"
+        ],
+        [
+          "preview-latex-style"
+        ],
+        [
+          "texlive-pictures"
+        ]
+      ]
+    },
     "SuggestedOtherPackages": [
       [
         "digraphs",
@@ -35,7 +53,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "6f87ab5b8b34c98a119768ae57f63c4006c4c38288d8ad40aac293e171831554",
+  "PackageInfoSHA256": "24e273537e5ca129e8181eca02d7f326dbf57703e141bd8778543b608ac1cf5f",
   "PackageInfoURL": "https://gap-packages.github.io/typeset/PackageInfo.g",
   "PackageName": "typeset",
   "PackageWWWHome": "https://gap-packages.github.io/typeset/",
@@ -43,12 +61,28 @@
     {
       "Email": "me@zachnewbery.com",
       "FirstNames": "Zachariah",
-      "Institution": "University of St. Andrews",
       "IsAuthor": true,
       "IsMaintainer": true,
       "LastName": "Newbery",
-      "Place": "St. Andrews",
       "WWWHome": "https://zachnewbery.com"
+    },
+    {
+      "Email": "obk1@st-andrews.ac.uk",
+      "FirstNames": "Olexandr",
+      "Institution": "University of St Andrews",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "Konovalov",
+      "Place": "St Andrews",
+      "PostalAddress": "School of Computer Science\nUniversity of St Andrews\nJack Cole Building, North Haugh,\nSt Andrews, Fife, KY16 9SX, Scotland",
+      "WWWHome": "https://olexandr-konovalov.github.io/"
+    },
+    {
+      "Email": "support@gap-system.org",
+      "FirstNames": "The",
+      "IsAuthor": false,
+      "IsMaintainer": true,
+      "LastName": "GAP Team"
     }
   ],
   "README_URL": "https://gap-packages.github.io/typeset/README.md",
@@ -59,5 +93,5 @@
   "Status": "deposited",
   "Subtitle": "Automatic typesetting framework for common GAP objects, with LaTeX generation",
   "TestFile": "tst/testall.g",
-  "Version": "1.2.3"
+  "Version": "1.2.4"
 }
