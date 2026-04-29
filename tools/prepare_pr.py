@@ -37,12 +37,19 @@ def randomword(length: int) -> str:
     return "".join(random.choice(letters) for i in range(length))
 
 
+def archive_size_mb(pkg_json: Dict[str, Any]) -> str:
+    return f"{pkg_json['ArchiveSize'] / 1_000_000:.1f} MB"
+
+
 def infostr_for_package(pkg_json: Dict[str, Any]) -> str:
     s = f"- {pkg_json['PackageName']} {pkg_json['Version']}: "
     s += f"[[`PackageInfo.g`]({pkg_json['PackageInfoURL']})] "
     s += f"[[`README`]({pkg_json['README_URL']})] "
     s += f"[[website]({pkg_json['PackageWWWHome']})] "
-    s += f"[[source archive]({utils.archive_url(pkg_json)})] "
+    s += (
+        f"[[source archive]({utils.archive_url(pkg_json)}) "
+        f"({archive_size_mb(pkg_json)})] "
+    )
     s += "\n"
     return s
 
