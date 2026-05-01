@@ -25,10 +25,16 @@ on:
         type: string
         default: master  # or 4.11.1 or ...
 
+permissions:
+  contents: write
+  issues: write
+
 jobs:
   update-latest:
     name: "Upload report"
     runs-on: ubuntu-slim
+    env:
+      CI_REGRESSION_MENTIONS: "@fingolfin"
     steps:
       - name: "Set up Python"
         uses: actions/setup-python@v6
@@ -55,10 +61,21 @@ jobs:
           git branch --track gh-pages origin/gh-pages
           git worktree add gh-pages gh-pages
 
+      - name: "Capture previous report status"
+        run: |
+          PREVIOUS="data/reports/latest-${{ github.event.inputs.which-gap || inputs.which-gap }}/test-status.json"
+          if [ -f "${PREVIOUS}" ]; then
+            jq '.pkgs | with_entries(.value = .value.status)' "${PREVIOUS}" > _previous-statuses.json
+          else
+            echo '{}' > _previous-statuses.json
+          fi
+
       - name: "Update latest report"
+        id: update-latest-report
         run: |
           ROOT="data/reports"
           DIR_REL=$(jq -r '.id' < '_report/test-status.json')
+          echo "dir_rel=${DIR_REL}" >> "$GITHUB_OUTPUT"
           DIR="${ROOT}/${DIR_REL}"
           mkdir -p ${DIR}
           mv _report/* ${DIR}
@@ -78,3 +95,16 @@ jobs:
           git add -A
           git commit -m "Automated redirect for ${{ github.event.inputs.which-gap || inputs.which-gap }}"
           git pull --rebase && git push
+
+      - name: "Notify CI regressions"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python tools/notify_ci_regressions.py \
+            "${GITHUB_TOKEN}" \
+            "${GITHUB_REPOSITORY}" \
+            "${{ github.event.inputs.which-gap || inputs.which-gap }}" \
+            "${CI_REGRESSION_MENTIONS}" \
+            "data/reports/${{ steps.update-latest-report.outputs.dir_rel }}/test-status.json" \
+            "data/reports/${{ steps.update-latest-report.outputs.dir_rel }}/test-status-diff.json" \
+            "_previous-statuses.json"
