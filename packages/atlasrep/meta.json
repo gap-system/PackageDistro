@@ -2,11 +2,12 @@
   "AbstractHTML": "The package provides a <span class=\"pkgname\">GAP</span> interface to the <a href=\"http://atlas.math.rwth-aachen.de/Atlas/v3\">Atlas of Group Representations</a>",
   "AcceptDate": "04/2001",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "9206625a428784bcddba0da1699f3729541232550fe0e11cf4a160c2138a1bf4",
-  "ArchiveURL": "https://www.math.rwth-aachen.de/~Thomas.Breuer/atlasrep/atlasrep-2.1.10",
+  "ArchiveSHA256": "1ccb65af694d53f60ba41f85b2293e505c42a2fecf90b36747c1d841a5ce0b47",
+  "ArchiveSize": 2387994,
+  "ArchiveURL": "https://www.math.rwth-aachen.de/~Thomas.Breuer/atlasrep/atlasrep-2.1.11",
   "AvailabilityTest": null,
   "CommunicatedBy": "Herbert Pahlings (Aachen)",
-  "Date": "09/04/2026",
+  "Date": "01/05/2026",
   "Dates_all": [
     [
       "03/04/2001",
@@ -91,6 +92,10 @@
     [
       "09/04/2026",
       "2.1.10"
+    ],
+    [
+      "01/05/2026",
+      "2.1.11"
     ]
   ],
   "Dependencies": {
@@ -192,7 +197,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "c5c4571ae20fc1b3e22da4afe124de79d693434efc24d2661b61dcbe0adaf1e3",
+  "PackageInfoSHA256": "5006b2fdf0fc2737e026ee34f3bc5020e36674e410205e41e137eccb12d4d657",
   "PackageInfoURL": "https://www.math.rwth-aachen.de/~Thomas.Breuer/atlasrep/PackageInfo.g",
   "PackageName": "AtlasRep",
   "PackageWWWHome": "https://www.math.rwth-aachen.de/~Thomas.Breuer/atlasrep",
@@ -248,5 +253,5 @@
   "Status": "accepted",
   "Subtitle": "A GAP Interface to the Atlas of Group Representations",
   "TestFile": "tst/testauto.g",
-  "Version": "2.1.10"
+  "Version": "2.1.11"
 }
