@@ -22,8 +22,27 @@ on:
     - cron: '3 * * * *' # Every hours at 3 past
 
 jobs:
+  check-schedule-scope:
+    name: "Check whether this workflow should run"
+    runs-on: ubuntu-slim
+    outputs:
+      should_run: ${{ steps.check.outputs.should_run }}
+    steps:
+      - name: "Decide whether to continue"
+        id: check
+        run: |
+          if [[ "${{ github.event_name }}" != "schedule" ]] || \
+             [[ "${{ github.repository }}" == "gap-system/PackageDistro" ]]; then
+            echo "should_run=true" >> $GITHUB_OUTPUT
+          else
+            echo "should_run=false" >> $GITHUB_OUTPUT
+            echo "Skipping scheduled run outside gap-system/PackageDistro."
+          fi
+
   scan-for-updates:
     name: "Scan for package updates"
+    needs: check-schedule-scope
+    if: ${{ needs.check-schedule-scope.outputs.should_run == 'true' }}
     runs-on: ubuntu-latest
     outputs:
       matrix: ${{ steps.get-names.outputs.matrix }}
@@ -112,8 +131,10 @@ jobs:
 
   create-pull-request:
     name: "Create pull request for ${{ matrix.package_or_group }}"
-    if: ${{ needs.scan-for-updates.outputs.matrix != '{"package_or_group":[]}' }}
-    needs: scan-for-updates
+    if: ${{ needs.check-schedule-scope.outputs.should_run == 'true' && needs.scan-for-updates.outputs.matrix != '{"package_or_group":[]}' }}
+    needs:
+      - check-schedule-scope
+      - scan-for-updates
     runs-on: ubuntu-slim
     strategy:
       fail-fast: false

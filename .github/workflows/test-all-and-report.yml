@@ -25,19 +25,40 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  check-schedule-scope:
+    name: "Check whether this workflow should run"
+    runs-on: ubuntu-slim
+    outputs:
+      should_run: ${{ steps.check.outputs.should_run }}
+    steps:
+      - name: "Decide whether to continue"
+        id: check
+        run: |
+          if [[ "${{ github.event_name }}" != "schedule" ]] || \
+             [[ "${{ github.repository }}" == "gap-system/PackageDistro" ]]; then
+            echo "should_run=true" >> $GITHUB_OUTPUT
+          else
+            echo "should_run=false" >> $GITHUB_OUTPUT
+            echo "Skipping scheduled run outside gap-system/PackageDistro."
+          fi
+
   # GAP master branch
   test-all-master:
     # If you change this name, you must adjust the corresponding prefix
     # in the step of test-all.yml that calls tools/generate_test_status.py
     name: "master"
+    needs: check-schedule-scope
+    if: ${{ needs.check-schedule-scope.outputs.should_run == 'true' }}
     uses: ./.github/workflows/test-all.yml
     with:
       which-gap: master
 
   update-latest-master:
     name: "Upload master report"
-    needs: test-all-master
-    if: always()
+    needs:
+      - check-schedule-scope
+      - test-all-master
+    if: ${{ always() && needs.check-schedule-scope.outputs.should_run == 'true' }}
     uses: ./.github/workflows/update-latest-report.yml
     with:
       which-gap: master
