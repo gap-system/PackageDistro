@@ -2,8 +2,9 @@
   "AbstractHTML": "This package provides <span class=\"pkgname\">GAP</span> interface routines to some of the stand-alone programs of <a href=\"https://lbfm-rwth.github.io/carat\">CARAT</a>, a package for the computation with crystallographic groups. CARAT is to a large extent complementary to the <span class=\"pkgname\">GAP</span> package <span class=\"pkgname\">Cryst</span>. In particular, it provides routines for the computation of normalizers and conjugators of finite unimodular groups in GL(n,Z), and routines for the computation of Bravais groups, which are all missing in <span class=\"pkgname\">Cryst</span>. A catalog of Bravais groups up to dimension 6 is also provided.",
   "AcceptDate": "02/2000",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "fdbc0f86befd8bf575c93475b33f58329ce99fe2ef97ba69af1478bc8664059c",
-  "ArchiveURL": "https://www.math.uni-bielefeld.de/~gaehler/gap/CaratInterface/CaratInterface-2.3.7",
+  "ArchiveSHA256": "469caf37aa84cbedf6c616e69b0e2bc252376a296f0e171a134d7533b84b8dff",
+  "ArchiveSize": 7105290,
+  "ArchiveURL": "https://www.math.uni-bielefeld.de/~gaehler/gap/CaratInterface/CaratInterface-2.3.9",
   "AvailabilityTest": null,
   "BinaryFiles": [
     "doc/manual.pdf",
@@ -11,7 +12,7 @@
     "carat.tgz"
   ],
   "CommunicatedBy": "Herbert Pahlings (Aachen)",
-  "Date": "16/10/2024",
+  "Date": "05/05/2026",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.11.1",
@@ -48,7 +49,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "88ae2e68a797ff5955103cdede77b6f3b9f2bfc7e260110ae81d7721cba4db6d",
+  "PackageInfoSHA256": "1eb8500c9852069797bd5168657e18dda7a03ffd6c721c2da50dcbfc4f1609e7",
   "PackageInfoURL": "https://www.math.uni-bielefeld.de/~gaehler/gap/CaratInterface/PackageInfo.g",
   "PackageName": "CaratInterface",
   "PackageWWWHome": "https://www.math.uni-bielefeld.de/~gaehler/gap/packages.php",
@@ -73,5 +74,5 @@
   "Subtitle": "Interface to CARAT, a crystallographic groups package",
   "SupportEmail": "gaehler@math.uni-bielefeld.de",
   "TestFile": "tst/testall.g",
-  "Version": "2.3.7"
+  "Version": "2.3.9"
 }
