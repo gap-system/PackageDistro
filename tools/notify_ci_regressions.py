@@ -50,6 +50,20 @@ def changed_failures(
     return rows
 
 
+def current_failures(test_status: dict[str, Any]) -> list[dict[str, str]]:
+    rows = []
+    for pkg, data in sorted(test_status["pkgs"].items()):
+        if data["status"] == "failure":
+            rows.append(
+                {
+                    "name": pkg,
+                    "version": data["version"],
+                    "job_url": data["workflow_run"],
+                }
+            )
+    return rows
+
+
 def format_package_lines(rows: list[dict[str, str]]) -> str:
     return "\n".join(
         f"- {row['name']} {row['version']} ([failure]({row['job_url']}))"
@@ -66,11 +80,11 @@ def render_issue_body(
     mentions: list[str] | None = None,
 ) -> str:
     body = (
-        f"Detected new package regressions on GAP `{which_gap}`.\n\n"
+        f"Current package failures on GAP `{which_gap}`.\n\n"
         f"Report id: `{report_id}`\n\n"
         f"Workflow: {workflow_url}\n\n"
         f"Report: {report_url}\n\n"
-        f"New failures:\n{format_package_lines(rows)}\n\n"
+        f"Current failures:\n{format_package_lines(rows)}\n\n"
     )
     if mentions:
         body += f"{' '.join(mentions)}\n"
@@ -93,8 +107,22 @@ def render_issue_comment(
     )
 
 
+def render_resolution_comment(
+    which_gap: str,
+    workflow_url: str,
+    report_url: str,
+    report_id: str,
+) -> str:
+    return (
+        f"Latest report for GAP `{which_gap}` is now fully passing.\n\n"
+        f"Report id: `{report_id}`\n\n"
+        f"Workflow: {workflow_url}\n\n"
+        f"Report: {report_url}\n"
+    )
+
+
 def find_open_incident_issue(
-    session: requests.Session, repo: str, token: str
+    session: requests.Session, repo: str, token: str, which_gap: str
 ) -> dict[str, Any] | None:
     url = f"https://api.github.com/repos/{repo}/issues"
     params: dict[str, str] = {
@@ -102,6 +130,7 @@ def find_open_incident_issue(
         "labels": ISSUE_LABEL,
         "per_page": "100",
     }
+    expected_title = f"{ISSUE_TITLE_PREFIX} packages now failing on GAP {which_gap}"
     res = session.get(
         url,
         headers=github_headers(token),
@@ -109,7 +138,7 @@ def find_open_incident_issue(
     )
     res.raise_for_status()
     for issue in res.json():
-        if issue["title"].startswith(ISSUE_TITLE_PREFIX):
+        if issue["title"] == expected_title:
             return issue
     return None
 
@@ -125,12 +154,34 @@ def run_notification(
     previous_statuses: dict[str, str] | None = None,
     report_url: str | None = None,
 ) -> dict[str, Any]:
-    if report_diff.get("failure_changed", 0) <= 0:
-        return {"action": "noop", "issue_number": None}
-
-    rows = changed_failures(test_status, previous_statuses or {})
+    current_rows = current_failures(test_status)
     workflow_url = test_status["workflow"]
-    issue = find_open_incident_issue(session, repo, token)
+    issue = find_open_incident_issue(session, repo, token, which_gap)
+    if not current_rows:
+        if issue is None:
+            return {"action": "noop", "issue_number": None}
+        res = session.post(
+            f"https://api.github.com/repos/{repo}/issues/{issue['number']}/comments",
+            headers=github_headers(token),
+            json={
+                "body": render_resolution_comment(
+                    which_gap,
+                    workflow_url,
+                    report_url or workflow_url,
+                    test_status["id"],
+                )
+            },
+        )
+        res.raise_for_status()
+        res = session.patch(
+            f"https://api.github.com/repos/{repo}/issues/{issue['number']}",
+            headers=github_headers(token),
+            json={"state": "closed"},
+        )
+        res.raise_for_status()
+        return {"action": "closed", "issue_number": issue["number"]}
+
+    changed_rows = changed_failures(test_status, previous_statuses or {})
     title = f"{ISSUE_TITLE_PREFIX} packages now failing on GAP {which_gap}"
     if issue is None:
         body = render_issue_body(
@@ -138,7 +189,7 @@ def run_notification(
             workflow_url,
             report_url or workflow_url,
             test_status["id"],
-            rows,
+            current_rows,
             mentions,
         )
         res = session.post(
@@ -155,7 +206,7 @@ def run_notification(
         workflow_url,
         report_url or workflow_url,
         test_status["id"],
-        rows,
+        current_rows,
     )
     res = session.patch(
         f"https://api.github.com/repos/{repo}/issues/{issue['number']}",
@@ -163,20 +214,21 @@ def run_notification(
         json={"title": title, "body": body},
     )
     res.raise_for_status()
-    res = session.post(
-        f"https://api.github.com/repos/{repo}/issues/{issue['number']}/comments",
-        headers=github_headers(token),
-        json={
-            "body": render_issue_comment(
-                which_gap,
-                workflow_url,
-                report_url or workflow_url,
-                test_status["id"],
-                rows,
-            )
-        },
-    )
-    res.raise_for_status()
+    if changed_rows:
+        res = session.post(
+            f"https://api.github.com/repos/{repo}/issues/{issue['number']}/comments",
+            headers=github_headers(token),
+            json={
+                "body": render_issue_comment(
+                    which_gap,
+                    workflow_url,
+                    report_url or workflow_url,
+                    test_status["id"],
+                    changed_rows,
+                )
+            },
+        )
+        res.raise_for_status()
     return {"action": "updated", "issue_number": issue["number"]}
 
 
