@@ -1,0 +1,113 @@
+{
+  "AbstractHTML": "This package provides a collection of algorithms for computing with   finite-index subgroups of (P)SL(2,Z).",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSHA256": "00dcc6c06f14e0d3b266910b6102758569f5b08334c06bb60bb06997e867b644",
+  "ArchiveSize": 313449,
+  "ArchiveURL": "https://github.com/ag-weitze-schmithusen/ModularGroup/releases/download/v2.0.2/ModularGroup-2.0.2",
+  "AutoDoc": {
+    "entities": {
+      "RELEASEDATE": "4 May 2026",
+      "RELEASEYEAR": "2026",
+      "VERSION": "2.0.2"
+    }
+  },
+  "AvailabilityTest": null,
+  "BannerString": "----------------------------------------------------------------\nLoading  ModularGroup 2.0.2\nby Sebastian Engelhardt (https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen.html)\n   Luca Leon Junk (https://www.uni-saarland.de/lehrstuhl/weber-moritz/team/luca-junk.html)\n   Hannah Wagmann (https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen/team/hannah-wagmann.html)\n   Gabriela Weitze-Schmithüsen (https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen/team/gabriela-weitze-schmithuesen.html)\nFor help, type: ?ModularGroup package \n----------------------------------------------------------------\n",
+  "Date": "04/05/2026",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": "4.12",
+    "NeededOtherPackages": [
+      [
+        "CTblLib",
+        ">= 1.2.2"
+      ],
+      [
+        "Congruence",
+        ">=1.1.1"
+      ]
+    ]
+  },
+  "IssueTrackerURL": "https://github.com/ag-weitze-schmithusen/ModularGroup/issues",
+  "Keywords": [
+    "PSL(2,Z)",
+    "PSL2Z",
+    "SL(2,Z)",
+    "SL2Z",
+    "modular group",
+    "congruence subgroup"
+  ],
+  "License": "GPL-3.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "ModularGroup",
+      "HTMLStart": "doc/chap0_mj.html",
+      "LongTitle": "Finite-index subgroups of (P)SL(2,Integers)",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSHA256": "5b1d624da3442173fc4df4bebff3964cd91aa83c68a51d5c9502a398d3c65bb2",
+  "PackageInfoURL": "https://ag-weitze-schmithusen.github.io/ModularGroup/PackageInfo.g",
+  "PackageName": "ModularGroup",
+  "PackageWWWHome": "https://ag-weitze-schmithusen.github.io/ModularGroup",
+  "Persons": [
+    {
+      "Email": "seen00001@stud.uni-saarland.de",
+      "FirstNames": "Sebastian",
+      "Institution": "Universität des Saarlandes",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Engelhardt",
+      "Place": "Saarbrücken",
+      "PostalAddress": "AG Weitze-Schmithüsen\nFR 6.1 Mathematik\nUniversität des Saarlandes\nD-66041 Saarbrücken",
+      "WWWHome": "https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen.html"
+    },
+    {
+      "Email": "junk@math.uni-sb.de",
+      "FirstNames": "Luca Leon",
+      "Institution": "Universität des Saarlandes",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Junk",
+      "Place": "Saarbrücken",
+      "PostalAddress": "Saarland University\nDepartment of Mathematics\nPostfach 15 11 50\n66041 Saarbrücken\nGermany",
+      "WWWHome": "https://www.uni-saarland.de/lehrstuhl/weber-moritz/team/luca-junk.html"
+    },
+    {
+      "Email": "wagmann@math.uni-sb.de",
+      "FirstNames": "Hannah",
+      "Institution": "Universität des Saarlandes",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Wagmann",
+      "Place": "Saarbrücken",
+      "PostalAddress": "AG Weitze-Schmithüsen\nFR 6.1 Mathematik\nUniversität des Saarlandes\nD-66041 Saarbrücken",
+      "WWWHome": "https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen/team/hannah-wagmann.html"
+    },
+    {
+      "Email": "weitze@math.uni-sb.de",
+      "FirstNames": "Gabriela",
+      "Institution": "Universität des Saarlandes",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Weitze-Schmithüsen",
+      "Place": "Saarbrücken",
+      "PostalAddress": "AG Weitze-Schmithüsen\nFR 6.1 Mathematik\nUniversität des Saarlandes\nD-66041 Saarbrücken",
+      "WWWHome": "https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen/team/gabriela-weitze-schmithuesen.html"
+    }
+  ],
+  "README_URL": "https://ag-weitze-schmithusen.github.io/ModularGroup/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/ag-weitze-schmithusen/ModularGroup"
+  },
+  "Status": "other",
+  "Subtitle": "Finite-index subgroups of (P)SL(2,Integers)",
+  "SupportEmail": "weitze@math.uni-sb.de",
+  "TestFile": "tst/testall.g",
+  "Version": "2.0.2"
+}
