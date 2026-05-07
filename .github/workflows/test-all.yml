@@ -26,6 +26,31 @@ on:
         required: false
         type: string
         default: https://github.com/gap-system/gap.git
+      which-gap-sha:
+        description: 'Exact GAP commit SHA expected at the branch head'
+        required: false
+        type: string
+        default: ""
+      report-key:
+        description: 'Identifier used for artifacts and report paths'
+        required: false
+        type: string
+        default: ""
+      report-label:
+        description: 'Human-readable GAP label for the generated report'
+        required: false
+        type: string
+        default: ""
+      baseline-key:
+        description: 'Baseline key used for latest-* comparisons'
+        required: false
+        type: string
+        default: ""
+      job-name-prefix:
+        description: 'Reusable workflow job prefix override'
+        required: false
+        type: string
+        default: ""
       pkg-build-glob:
         description: 'Only build packages matching the given glob'
         required: false
@@ -53,6 +78,31 @@ on:
         required: false
         type: string
         default: https://github.com/gap-system/gap.git
+      which-gap-sha:
+        description: 'Exact GAP commit SHA expected at the branch head'
+        required: false
+        type: string
+        default: ""
+      report-key:
+        description: 'Identifier used for artifacts and report paths'
+        required: false
+        type: string
+        default: ""
+      report-label:
+        description: 'Human-readable GAP label for the generated report'
+        required: false
+        type: string
+        default: ""
+      baseline-key:
+        description: 'Baseline key used for latest-* comparisons'
+        required: false
+        type: string
+        default: ""
+      job-name-prefix:
+        description: 'Reusable workflow job prefix override'
+        required: false
+        type: string
+        default: ""
       pkg-build-glob:
         description: 'Only build packages matching the given glob'
         required: false
@@ -130,16 +180,25 @@ jobs:
           echo "::group::fetch"
           whichgap="${{ github.event.inputs.which-gap || inputs.which-gap }}"
           whichgaprepo="${{ github.event.inputs.which-gap-repo || inputs.which-gap-repo }}"
-          if [[ "${whichgap}" == 4.* ]]; then
+          whichgapsha="${{ github.event.inputs.which-gap-sha || inputs.which-gap-sha }}"
+          if [[ "${whichgap}" == 4.* && -z "${whichgapsha}" ]]; then
             # assume it is a tag
             wget --quiet https://github.com/gap-system/gap/releases/download/v${whichgap}/gap-${whichgap}-core.tar.gz
             tar xf gap-${whichgap}-core.tar.gz
             rm gap-${whichgap}-core.tar.gz
             mv gap-${whichgap} $HOME/gap
           else
-            git clone --depth=2 -b ${whichgap} ${whichgaprepo} $HOME/gap
+            git clone --depth=1 -b "${whichgap}" "${whichgaprepo}" $HOME/gap
           fi
           cd $HOME/gap
+          if [[ -n "${whichgapsha}" ]]; then
+            actualsha=$(git rev-parse HEAD)
+            if [[ "${actualsha}" != "${whichgapsha}" ]]; then
+              echo "Expected GAP branch head ${whichgapsha}, got ${actualsha}."
+              echo "The pull request changed after this run was requested."
+              exit 1
+            fi
+          fi
           echo "::endgroup::"
 
           echo "::group::autogen"
@@ -209,7 +268,8 @@ jobs:
       - name: "Compute suitable artifact basename"
         id: get-artifact-name
         run: |
-          echo "artifact=${{ github.event.inputs.which-gap || inputs.which-gap }}" | sed -e 's;/;-;g'  >> $GITHUB_OUTPUT
+          artifact_key="${{ github.event.inputs.report-key || inputs.report-key || github.event.inputs.which-gap || inputs.which-gap }}"
+          echo "artifact=${artifact_key}" | sed -e 's;/;-;g' >> $GITHUB_OUTPUT
 
       - name: "Upload GAP with packages as artifact"
         uses: actions/upload-artifact@v7
@@ -369,15 +429,18 @@ jobs:
       - name: "Generate test-status.json"
         id: test-status
         run: |
-          # Is this a workflow_call?
-          if [ "${{inputs.which-gap}}" != "" ]; then
-            JOB_NAME_PREFIX="${{inputs.which-gap}} / "
+          REPORT_KEY="${{ github.event.inputs.report-key || inputs.report-key || github.event.inputs.which-gap || inputs.which-gap }}"
+          REPORT_LABEL="${{ github.event.inputs.report-label || inputs.report-label || github.event.inputs.which-gap || inputs.which-gap }}"
+          if [ "${{ inputs.job-name-prefix }}" != "" ]; then
+            JOB_NAME_PREFIX="${{ inputs.job-name-prefix }} / "
+          elif [ "${{ inputs.which-gap }}" != "" ]; then
+            JOB_NAME_PREFIX="${{ inputs.which-gap }} / "
           else
             JOB_NAME_PREFIX=""
           fi
           ROOT='data/reports'
           # relative path (with respect to ROOT) to generated test-status.json, i.e. the "id" entry of the json-file.
-          DIR_REL=$(tools/generate_test_status.py ${{secrets.GITHUB_TOKEN}} ${{ github.repository }} "$GITHUB_RUN_ID" "$GITHUB_SHA" ${{ github.event.inputs.which-gap || inputs.which-gap }} "$JOB_NAME_PREFIX")
+          DIR_REL=$(tools/generate_test_status.py ${{secrets.GITHUB_TOKEN}} ${{ github.repository }} "$GITHUB_RUN_ID" "$GITHUB_SHA" "${REPORT_KEY}" "${REPORT_LABEL}" "${JOB_NAME_PREFIX}")
           DIR="${ROOT}/${DIR_REL}"
           echo "dir=${DIR}" >> $GITHUB_OUTPUT
           echo "dir-rel=${DIR_REL}" >> $GITHUB_OUTPUT
@@ -386,7 +449,8 @@ jobs:
         id: download-latest-report
         run: |
           ROOT="data/reports"
-          DIR_SYM_REL=latest-${{ needs.build.outputs.artifact }}
+          BASELINE_KEY="${{ github.event.inputs.baseline-key || inputs.baseline-key || github.event.inputs.report-key || inputs.report-key || github.event.inputs.which-gap || inputs.which-gap }}"
+          DIR_SYM_REL=latest-${BASELINE_KEY}
           DIR_SYM="${ROOT}/${DIR_SYM_REL}"
           URL_SYM="https://raw.githubusercontent.com/${{ github.repository }}/${DIR_SYM}"
           # Check if file at url exists,
@@ -405,7 +469,9 @@ jobs:
 
       - name: "Generate report"
         id: report
-        run: tools/generate_report.py ${{ steps.test-status.outputs.dir-rel }} latest-${{ needs.build.outputs.artifact }}
+        run: |
+          BASELINE_KEY="${{ github.event.inputs.baseline-key || inputs.baseline-key || github.event.inputs.report-key || inputs.report-key || github.event.inputs.which-gap || inputs.which-gap }}"
+          tools/generate_report.py ${{ steps.test-status.outputs.dir-rel }} latest-${BASELINE_KEY}
 
       - name: "Upload report as artifact"
         uses: actions/upload-artifact@v7

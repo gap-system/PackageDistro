@@ -82,6 +82,22 @@ a report is added to the PR which indicates whether the new package breaks somet
 in GAP or other packages, and whether its tests pass. If all looks good, the
 PR may be merged by any maintainer.
 
+### Testing GAP pull requests against all packages
+
+Maintainers can also run the full PackageDistro test suite against a pull
+request on `gap-system/gap`.
+
+1. Go to
+   <https://github.com/gap-system/PackageDistro/actions/workflows/test-gap-pr.yml>
+2. Click "Run workflow".
+3. Paste the GAP pull request URL into the `gap-pr-url` field.
+4. Optionally restrict the package build or test glob.
+
+The workflow resolves the pull request automatically, checks out the exact
+head revision, compares the results against the latest report for the pull
+request's target branch, and posts a summary comment back to the GAP pull
+request.
+
 
 ## How everything works
 

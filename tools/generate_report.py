@@ -100,6 +100,11 @@ for status in status_list:
         and pkgs[pkg]["status"] == status
     ]
 
+report_diff["failures_changed"] = sorted(pkgs_changed["failure"])
+report_diff["failures_current"] = sorted(
+    pkg for pkg, data in pkgs.items() if data["status"] == "failure"
+)
+
 
 def write_details_list(
     f: io.TextIOWrapper, pkgnames: List[str], pkgs: Dict[str, Any]
