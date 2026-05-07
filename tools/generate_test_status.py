@@ -90,15 +90,23 @@ def main(argv: List[str]) -> int:
     # Arguments
     num_args = len(argv)
 
-    if num_args != 7:
+    if num_args not in (7, 8):
         error("Unknown number of arguments")
 
     git_token = argv[1]
     repo = argv[2]
     run_id = argv[3]
     hash = argv[4]
-    which_gap = argv[5]
-    job_name_prefix = argv[6]
+    report_key = argv[5]
+    if num_args == 8:
+        # Ad hoc PR runs pass a stable storage key plus a friendlier display
+        # label. Scheduled branch-based runs still use the older 7-argument
+        # calling convention in which the key also serves as the display name.
+        gap_display_name = argv[6]
+        job_name_prefix = argv[7]
+    else:
+        gap_display_name = report_key
+        job_name_prefix = argv[6]
 
     ################################################################################
     # Collect names of all packages
@@ -175,8 +183,15 @@ def main(argv: List[str]) -> int:
     report["hash"] = hash
     date = str(datetime.now()).split(".")[0]
     report["date"] = date
-    report["gap_version"] = which_gap
-    report["id"] = os.path.join(which_gap, "%s-%s" % (date.replace(" ", "-"), hash[:8]))
+    report["gap_version"] = gap_display_name
+    # `gap_report_key` is the machine-oriented identifier used to pick the
+    # storage location and compare against the right baseline. For regular runs
+    # it is just "master" etc.; for PR-triggered runs it is a synthetic key
+    # such as "pr-gap-system-gap-1234-deadbeef".
+    report["gap_report_key"] = report_key
+    report["id"] = os.path.join(
+        report_key, "%s-%s" % (date.replace(" ", "-"), hash[:8])
+    )
 
     # Path
     root = "data/reports"
