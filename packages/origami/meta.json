@@ -1,0 +1,168 @@
+{
+  "AbstractHTML": "<span class=\"pkgname\">Origami</span> is a package for computing the Veech group of square-tiled surfaces which are also known as origamis.",
+  "ArchiveFormats": ".tar.gz .zip",
+  "ArchiveSHA256": "52898d4262a023b81241c7a40f418f481cfa3a9648099b52dabc505ef08f72f3",
+  "ArchiveSize": 404780,
+  "ArchiveURL": "https://github.com/AG-Weitze-Schmithusen/Origami/releases/download/v2.0.3/Origami-2.0.3",
+  "AutoDoc": {
+    "entities": {
+      "RELEASEDATE": "4 May 2026",
+      "RELEASEYEAR": "2026",
+      "VERSION": "2.0.3"
+    }
+  },
+  "AvailabilityTest": null,
+  "BannerString": "\n─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\nLoading  Origami 2.0.3 (Computing Veech groups of origamis)\nby Leo Emmerich (https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen.html),\n   Sebastian Engelhardt (https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen.html),\n   Simon Ertl (https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen.html),\n   Luca Junk (https://www.uni-saarland.de/lehrstuhl/weber-moritz/team/luca-junk.html),\n   Pascal Kattler (https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen/team/pascal-kattler.html),\n   Alexander Rogovskyy (https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen.html),\n   Pascal Schumann (https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen.html),\n   Andrea Thevis (https://www.uni-frankfurt.de/115635174/Dr__Andrea_Thevis),\n   Hannah Wagmann (https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen/team/hannah-wagmann.html), and\n   Gabriela Weitze-Schmithüsen (https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen/team/gabriela-weitze-schmithuesen.html).\nHomepage: https://AG-Weitze-Schmithusen.github.io/Origami/\n\n                +---+---+\n                |   |   |\n+---+---+---+---+---+---+---+\n|   |   |   |   |   |   |   |\n+---+---+---+---+---+---+---+\n    |   |   |   |\n    +---+---+---+\n\n─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\n",
+  "Date": "04/05/2026",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": "4.12",
+    "NeededOtherPackages": [
+      [
+        "ModularGroup",
+        "2.0.1"
+      ],
+      [
+        "Orb",
+        "4.7.6"
+      ]
+    ]
+  },
+  "GithubRepository": "Origami",
+  "GithubUser": "AG-Weitze-Schmithusen",
+  "GithubWWW": "https://github.com/AG-Weitze-Schmithusen/Origami",
+  "License": "GPL-3.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "Origami",
+      "HTMLStart": "doc/chap0_mj.html",
+      "LongTitle": "Computing Veech groups of origamis",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSHA256": "633095337b11b3a552ca3a339ac9cce72064c6fa2d32d93aa37670010865a0f6",
+  "PackageInfoURL": "https://AG-Weitze-Schmithusen.github.io/Origami/PackageInfo.g",
+  "PackageName": "Origami",
+  "PackageWWWHome": "https://AG-Weitze-Schmithusen.github.io/Origami/",
+  "Persons": [
+    {
+      "Email": "leem00001@stud.uni-saarland.de",
+      "FirstNames": "Leo",
+      "Institution": "Universität des Saarlandes",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Emmerich",
+      "Place": "Saarbrücken",
+      "PostalAddress": "AG Weitze-Schmithüsen\nFR 6.1 Mathematik\nUniversität des Saarlandes\nD-66041 Saarbrücken",
+      "WWWHome": "https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen.html"
+    },
+    {
+      "Email": "seen00001@stud.uni-saarland.de",
+      "FirstNames": "Sebastian",
+      "Institution": "Universität des Saarlandes",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Engelhardt",
+      "Place": "Saarbrücken",
+      "PostalAddress": "AG Weitze-Schmithüsen\nFR 6.1 Mathematik\nUniversität des Saarlandes\nD-66041 Saarbrücken",
+      "WWWHome": "https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen.html"
+    },
+    {
+      "Email": "s8siertl@stud.uni-saarland.de",
+      "FirstNames": "Simon",
+      "Institution": "Universität des Saarlandes",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Ertl",
+      "Place": "Saarbrücken",
+      "PostalAddress": "AG Weitze-Schmithüsen\nFR 6.1 Mathematik\nUniversität des Saarlandes\nD-66041 Saarbrücken",
+      "WWWHome": "https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen.html"
+    },
+    {
+      "Email": "junk@math.uni-sb.de",
+      "FirstNames": "Luca Leon",
+      "Institution": "Universität des Saarlandes",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Junk",
+      "Place": "Saarbrücken",
+      "PostalAddress": "Saarland University\nDepartment of Mathematics\nPostfach 15 11 50\n66041 Saarbrücken\nGermany",
+      "WWWHome": "https://www.uni-saarland.de/lehrstuhl/weber-moritz/team/luca-junk.html"
+    },
+    {
+      "Email": "kattler@math.uni-sb.de",
+      "FirstNames": "Pascal",
+      "Institution": "Universität des Saarlandes",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Kattler",
+      "Place": "Saarbrücken",
+      "PostalAddress": "AG Weitze-Schmithüsen\nFR 6.1 Mathematik\nUniversität des Saarlandes\nD-66041 Saarbrücken",
+      "WWWHome": "https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen/team/pascal-kattler.html"
+    },
+    {
+      "Email": "s8alrogo@stud.uni-saarland.de",
+      "FirstNames": "Alexander",
+      "Institution": "Universität des Saarlandes",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Rogovskyy",
+      "Place": "Saarbrücken",
+      "PostalAddress": "AG Weitze-Schmithüsen\nFR 6.1 Mathematik\nUniversität des Saarlandes\nD-66041 Saarbrücken",
+      "WWWHome": "https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen.html"
+    },
+    {
+      "Email": "s8pcschu@stud.uni-saarland.de",
+      "FirstNames": "Pascal",
+      "Institution": "Universität des Saarlandes",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Schumann",
+      "Place": "Saarbrücken",
+      "PostalAddress": "AG Weitze-Schmithüsen\nFR 6.1 Mathematik\nUniversität des Saarlandes\nD-66041 Saarbrücken",
+      "WWWHome": "https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen.html"
+    },
+    {
+      "Email": "thevis@math.uni-frankfurt.de",
+      "FirstNames": "Andrea",
+      "Institution": "Universität des Saarlandes",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Thevis",
+      "Place": "Saarbrücken",
+      "PostalAddress": "FB 12 – Institut für Mathematik\nJohann Wolfgang Goethe-Universität\nRobert-Mayer-Str. 6-8\n D-60325 Frankfurt am Main",
+      "WWWHome": "https://www.uni-frankfurt.de/115635174/Dr__Andrea_Thevis/"
+    },
+    {
+      "Email": "wagmann@math.uni-sb.de",
+      "FirstNames": "Hannah",
+      "Institution": "Universität des Saarlandes",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Wagmann",
+      "Place": "Saarbrücken",
+      "PostalAddress": "AG Weitze-Schmithüsen\nFR 6.1 Mathematik\nUniversität des Saarlandes\nD-66041 Saarbrücken",
+      "WWWHome": "https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen/team/hannah-wagmann.html"
+    },
+    {
+      "Email": "weitze@math.uni-sb.de",
+      "FirstNames": "Gabriela",
+      "Institution": "Universität des Saarlandes",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Weitze-Schmithüsen",
+      "Place": "Saarbrücken",
+      "PostalAddress": "AG Weitze-Schmithüsen\nFR 6.1 Mathematik\nUniversität des Saarlandes\nD-66041 Saarbrücken",
+      "WWWHome": "https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen/team/gabriela-weitze-schmithuesen.html"
+    }
+  ],
+  "README_URL": "https://AG-Weitze-Schmithusen.github.io/Origami/README.md",
+  "Status": "other",
+  "Subtitle": "Computing Veech groups of origamis",
+  "TestFile": "tst/testall.g",
+  "Version": "2.0.3"
+}
