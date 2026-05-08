@@ -2,11 +2,12 @@
   "AbstractHTML": "This package contains a definition of a structure for <span class='pkgname'>GAP</span> (package) documentation, based on XML. It also contains  conversion programs for producing text-, PDF- or HTML-versions of such documents, with hyperlinks if possible.",
   "AcceptDate": "10/2006",
   "ArchiveFormats": ".tar.bz2 .tar.gz -win.zip",
-  "ArchiveSHA256": "74287a47e7d5927c7f4bff08aa2349d8b2fa695f7fb87f829b5fcae4cba11d39",
-  "ArchiveURL": "https://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/GAPDoc-1.6.7",
+  "ArchiveSHA256": "efd65e3b4335d71036d0301238dd9914ed99041b41fd95e5043fadb8acda3632",
+  "ArchiveSize": 1557737,
+  "ArchiveURL": "https://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/GAPDoc-1.6.9",
   "AvailabilityTest": null,
   "CommunicatedBy": "Steve Linton (St Andrews)",
-  "Date": "21/02/2024",
+  "Date": "08/05/2026",
   "Dependencies": {
     "ExternalConditions": [
       "(La)TeX installation for converting documents to PDF",
@@ -15,6 +16,24 @@
     ],
     "GAP": "4.11.0",
     "NeededOtherPackages": [],
+    "NeededSystemPackages": {
+      "Debian": [
+        [
+          "texlive"
+        ],
+        [
+          "texlive-latex-extra"
+        ]
+      ],
+      "Ubuntu": [
+        [
+          "texlive"
+        ],
+        [
+          "texlive-latex-extra"
+        ]
+      ]
+    },
     "SuggestedOtherPackages": [
       [
         "IO",
@@ -58,7 +77,7 @@
       "SixFile": "example/manual.six"
     }
   ],
-  "PackageInfoSHA256": "480cd51e1646d5c106d0cb99e77150e983ca70b9af8dd213492a73a9cde60c4a",
+  "PackageInfoSHA256": "d28f65868320a600ade4e2a405f11b620412fbfca0fb9bb2c6a8e7092bb7216d",
   "PackageInfoURL": "https://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/PackageInfo.g",
   "PackageName": "GAPDoc",
   "PackageWWWHome": "https://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc",
@@ -89,5 +108,5 @@
   "Status": "accepted",
   "Subtitle": "A Meta Package for GAP Documentation",
   "TestFile": "tst/test.tst",
-  "Version": "1.6.7"
+  "Version": "1.6.9"
 }
