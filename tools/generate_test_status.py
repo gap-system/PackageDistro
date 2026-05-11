@@ -99,6 +99,9 @@ def main(argv: List[str]) -> int:
     hash = argv[4]
     report_key = argv[5]
     if num_args == 8:
+        # Ad hoc PR runs pass a stable storage key plus a friendlier display
+        # label. Scheduled branch-based runs still use the older 7-argument
+        # calling convention in which the key also serves as the display name.
         gap_display_name = argv[6]
         job_name_prefix = argv[7]
     else:
@@ -181,6 +184,10 @@ def main(argv: List[str]) -> int:
     date = str(datetime.now()).split(".")[0]
     report["date"] = date
     report["gap_version"] = gap_display_name
+    # `gap_report_key` is the machine-oriented identifier used to pick the
+    # storage location and compare against the right baseline. For regular runs
+    # it is just "master" etc.; for PR-triggered runs it is a synthetic key
+    # such as "pr-gap-system-gap-1234-deadbeef".
     report["gap_report_key"] = report_key
     report["id"] = os.path.join(
         report_key, "%s-%s" % (date.replace(" ", "-"), hash[:8])

@@ -16,6 +16,9 @@ from typing import Any
 
 from utils import error
 
+# The GAP-side trigger workflow and the PackageDistro-side completion workflow
+# communicate through a single PR comment. This marker lets both sides find and
+# update that comment rather than leaving a trail of stale status messages.
 COMMENT_MARKER = "<!-- gap-package-distribution-bot:gap-pr-test -->"
 
 
@@ -32,6 +35,8 @@ def load_text(path: str) -> str:
 def package_links(
     package_names: list[str], test_status: dict[str, Any], limit: int = 10
 ) -> str:
+    # The underlying report can be large. The PR comment keeps only the most
+    # relevant failing packages inline and links each one directly to its job.
     rows = []
     for name in package_names[:limit]:
         pkg = test_status["pkgs"][name]
@@ -47,6 +52,13 @@ def render_gap_pr_comment(
     report_diff: dict[str, Any],
     report_markdown: str,
 ) -> str:
+    # This comment intentionally contains three layers of information:
+    # 1. immutable run identity (PR URL, tested SHA, workflow link),
+    # 2. a compact failure summary for quick triage, and
+    # 3. the full generated report in a collapsible details block.
+    #
+    # That keeps the PR conversation readable while still exposing the same
+    # report content that a user would otherwise have to fetch from artifacts.
     repo_full_name = metadata["repo_full_name"]
     number = metadata["number"]
     head_sha = metadata["head_sha"][:8]
@@ -74,6 +86,8 @@ def render_gap_pr_comment(
 
     failures_changed = report_diff.get("failures_changed", [])
     failures_current = report_diff.get("failures_current", [])
+    # Prefer regressions over the full failure list: when a baseline exists, the
+    # new failures are the most actionable signal for reviewers.
     if report_diff.get("failure_changed", 0) > 0 and failures_changed:
         lines.append("### New failures vs baseline")
         lines.append("")
@@ -99,6 +113,9 @@ def render_gap_pr_comment(
 
 
 def main(argv: list[str]) -> int:
+    # The workflow passes file paths instead of large JSON blobs on the command
+    # line so that the shell glue stays simple and the data is easy to inspect
+    # in failed CI runs.
     if len(argv) != 5:
         error(
             "usage: render_gap_pr_test_comment.py "

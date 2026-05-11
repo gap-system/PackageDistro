@@ -26,11 +26,19 @@ on:
         required: false
         type: string
         default: https://github.com/gap-system/gap.git
+      # Optional PR-specific pin: when set, we still clone `which-gap` from
+      # `which-gap-repo`, but then verify that the branch head matches this
+      # exact commit SHA. This lets ad hoc runs target a moving PR branch
+      # without silently testing newer commits if the PR is updated mid-run.
       which-gap-sha:
         description: 'Exact GAP commit SHA expected at the branch head'
         required: false
         type: string
         default: ""
+      # `report-key` controls where reports/artifacts are stored, while
+      # `report-label` is what humans see in report.md. Scheduled runs use the
+      # same string for both ("master", "4.12.2", ...), but PR-triggered runs
+      # use a synthetic key and a friendlier display label.
       report-key:
         description: 'Identifier used for artifacts and report paths'
         required: false
@@ -41,11 +49,18 @@ on:
         required: false
         type: string
         default: ""
+      # Comparison runs need an explicit baseline key because the thing we test
+      # (`which-gap`) is not always the thing we compare against. For a GAP PR
+      # head we test the PR branch/ref, but compare against the latest report
+      # for the PR base branch, usually `master`.
       baseline-key:
         description: 'Baseline key used for latest-* comparisons'
         required: false
         type: string
         default: ""
+      # The generated test-status script identifies package jobs by their
+      # workflow job names. Reusable callers can override the visible prefix
+      # here so the report code knows how to map job names back to packages.
       job-name-prefix:
         description: 'Reusable workflow job prefix override'
         required: false
@@ -78,26 +93,31 @@ on:
         required: false
         type: string
         default: https://github.com/gap-system/gap.git
+      # See the matching comment under `workflow_dispatch` above.
       which-gap-sha:
         description: 'Exact GAP commit SHA expected at the branch head'
         required: false
         type: string
         default: ""
+      # See the matching comment under `workflow_dispatch` above.
       report-key:
         description: 'Identifier used for artifacts and report paths'
         required: false
         type: string
         default: ""
+      # See the matching comment under `workflow_dispatch` above.
       report-label:
         description: 'Human-readable GAP label for the generated report'
         required: false
         type: string
         default: ""
+      # See the matching comment under `workflow_dispatch` above.
       baseline-key:
         description: 'Baseline key used for latest-* comparisons'
         required: false
         type: string
         default: ""
+      # See the matching comment under `workflow_dispatch` above.
       job-name-prefix:
         description: 'Reusable workflow job prefix override'
         required: false
@@ -192,6 +212,10 @@ jobs:
           fi
           cd $HOME/gap
           if [[ -n "${whichgapsha}" ]]; then
+            # The branch may have moved since the dispatch request was created.
+            # Fail explicitly in that case so the caller knows it must retrigger
+            # against the new PR head, rather than reporting results for the
+            # wrong commit.
             actualsha=$(git rev-parse HEAD)
             if [[ "${actualsha}" != "${whichgapsha}" ]]; then
               echo "Expected GAP branch head ${whichgapsha}, got ${actualsha}."
@@ -429,6 +453,10 @@ jobs:
       - name: "Generate test-status.json"
         id: test-status
         run: |
+          # `REPORT_KEY` selects the storage location under data/reports/,
+          # while `REPORT_LABEL` controls the human-facing label inside the
+          # report. Keeping these separate lets PR runs reuse the same report
+          # generator without colliding with long-lived branch reports.
           REPORT_KEY="${{ github.event.inputs.report-key || inputs.report-key || github.event.inputs.which-gap || inputs.which-gap }}"
           REPORT_LABEL="${{ github.event.inputs.report-label || inputs.report-label || github.event.inputs.which-gap || inputs.which-gap }}"
           if [ "${{ inputs.job-name-prefix }}" != "" ]; then
@@ -449,6 +477,8 @@ jobs:
         id: download-latest-report
         run: |
           ROOT="data/reports"
+          # Compare against the latest report for the chosen baseline key, which
+          # may differ from REPORT_KEY for ad hoc PR runs.
           BASELINE_KEY="${{ github.event.inputs.baseline-key || inputs.baseline-key || github.event.inputs.report-key || inputs.report-key || github.event.inputs.which-gap || inputs.which-gap }}"
           DIR_SYM_REL=latest-${BASELINE_KEY}
           DIR_SYM="${ROOT}/${DIR_SYM_REL}"
