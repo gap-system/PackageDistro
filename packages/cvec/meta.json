@@ -1,15 +1,16 @@
 {
   "AbstractHTML": "This package provides an implementation of compact vectors over finite   fields. Contrary to earlier implementations no table lookups are used   but only word-based processor arithmetic. This allows for bigger finite   fields and higher speed.",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSHA256": "0df5c9d9b5e55002f596e79a4a799d09554d4964683fbd8f813ed2f9d2f5635f",
-  "ArchiveURL": "https://github.com/gap-packages/cvec/releases/download/v2.8.4/cvec-2.8.4",
+  "ArchiveSHA256": "c812d742483244c52dab7b14e38886fa3face7c8d813c352dcb75f8e5791e28a",
+  "ArchiveSize": 534949,
+  "ArchiveURL": "https://github.com/gap-packages/cvec/releases/download/v2.8.5/cvec-2.8.5",
   "AutoDoc": {
     "TitlePage": {
       "Copyright": "\n      &copyright; 2005-2014 by Max Neunhöffer<P/>\n\n      <Package>cvec</Package> is free software: you can redistribute it and/or modify\n      it under the terms of the GNU General Public License as published by\n      the Free Software Foundation, either version 2 of the License, or\n      (at your option) any later version. <P/>\n\n      <Package>cvec</Package> is distributed in the hope that it will be useful,\n      but WITHOUT ANY WARRANTY; without even the implied warranty of\n      MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the\n      GNU General Public License for more details. <P/>\n\n      For a copy of the GNU General Public License, see\n      the file <F>LICENSE</F> included with this software,\n      or see <URL>https://www.gnu.org/licenses/gpl.html</URL>.\n      "
     }
   },
   "AvailabilityTest": null,
-  "Date": "20/06/2025",
+  "Date": "15/05/2026",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.12",
@@ -44,7 +45,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "7722412bfe763d329390f42205a837efe266018330418225262c1262207d8ec7",
+  "PackageInfoSHA256": "48b7edbe25c435a18fbf8e0a03b6df7b9305743aa600d3b7e73e5a84e5f523fc",
   "PackageInfoURL": "https://gap-packages.github.io/cvec/PackageInfo.g",
   "PackageName": "cvec",
   "PackageWWWHome": "https://gap-packages.github.io/cvec",
@@ -61,6 +62,7 @@
     {
       "Email": "mhorn@rptu.de",
       "FirstNames": "Max",
+      "GitHubUsername": "fingolfin",
       "Institution": "RPTU Kaiserslautern-Landau",
       "IsAuthor": false,
       "IsMaintainer": true,
@@ -78,5 +80,5 @@
   "Status": "deposited",
   "Subtitle": "Compact vectors over finite fields",
   "TestFile": "tst/testall.g",
-  "Version": "2.8.4"
+  "Version": "2.8.5"
 }
