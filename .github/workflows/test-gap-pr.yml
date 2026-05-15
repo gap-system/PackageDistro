@@ -1,0 +1,200 @@
+#
+# This workflow resolves a GAP pull request URL, runs the full PackageDistro
+# test suite against the pull request head, and posts a summary comment back
+# to the pull request.
+#
+name: "Test GAP pull request"
+
+on:
+  workflow_dispatch:
+    inputs:
+      gap-pr-url:
+        description: 'URL of a pull request on gap-system/gap'
+        required: true
+        type: string
+      pkg-build-glob:
+        description: 'Only build packages matching the given glob'
+        required: false
+        type: string
+        default: "*"
+      pkg-test-glob:
+        description: 'Only test packages matching the given glob'
+        required: false
+        type: string
+        default: "*"
+      callback-repo:
+        description: 'Optional repo to comment on, e.g. gap-system/gap'
+        required: false
+        type: string
+        default: ""
+      callback-pr-number:
+        description: 'Optional PR number override for callback comments'
+        required: false
+        type: string
+        default: ""
+      callback-comment-id:
+        description: 'Optional existing comment id to update'
+        required: false
+        type: string
+        default: ""
+      requester:
+        description: 'Optional login of the user who requested the run'
+        required: false
+        type: string
+        default: ""
+      command:
+        description: 'Optional command string that triggered the run'
+        required: false
+        type: string
+        default: ""
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.inputs.gap-pr-url }}
+  cancel-in-progress: true
+
+jobs:
+  resolve:
+    name: "Resolve GAP pull request"
+    runs-on: ubuntu-slim
+    outputs:
+      repo-owner: ${{ steps.resolve.outputs.repo-owner }}
+      repo-name: ${{ steps.resolve.outputs.repo-name }}
+      repo-full-name: ${{ steps.resolve.outputs.repo-full-name }}
+      pr-number: ${{ steps.resolve.outputs.pr-number }}
+      pr-url: ${{ steps.resolve.outputs.pr-url }}
+      base-ref: ${{ steps.resolve.outputs.base-ref }}
+      head-ref: ${{ steps.resolve.outputs.head-ref }}
+      head-sha: ${{ steps.resolve.outputs.head-sha }}
+      head-repo-clone-url: ${{ steps.resolve.outputs.head-repo-clone-url }}
+      report-key: ${{ steps.resolve.outputs.report-key }}
+      report-label: ${{ steps.resolve.outputs.report-label }}
+      report-artifact: ${{ steps.resolve.outputs.report-artifact }}
+      job-name-prefix: ${{ steps.resolve.outputs.job-name-prefix }}
+      callback-repo-owner: ${{ steps.resolve.outputs.callback-repo-owner }}
+      callback-repo-name: ${{ steps.resolve.outputs.callback-repo-name }}
+      callback-pr-number: ${{ steps.resolve.outputs.callback-pr-number }}
+      callback-comment-id: ${{ steps.resolve.outputs.callback-comment-id }}
+      requester: ${{ steps.resolve.outputs.requester }}
+      command: ${{ steps.resolve.outputs.command }}
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: "Set up Python"
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: "Install package distribution tools"
+        run: python -m pip install -r tools/requirements.txt
+
+      - name: "Resolve GAP PR metadata"
+        id: resolve
+        run: |
+          python tools/gap_pr_utils.py "${{ github.event.inputs.gap-pr-url }}" > resolved.json
+
+          callback_repo="${{ github.event.inputs.callback-repo }}"
+          if [[ -n "${callback_repo}" ]]; then
+            callback_repo_owner="${callback_repo%%/*}"
+            callback_repo_name="${callback_repo##*/}"
+          else
+            callback_repo_owner=$(jq -r '.repo_owner' resolved.json)
+            callback_repo_name=$(jq -r '.repo_name' resolved.json)
+          fi
+
+          callback_pr_number="${{ github.event.inputs.callback-pr-number }}"
+          if [[ -z "${callback_pr_number}" ]]; then
+            callback_pr_number=$(jq -r '.number' resolved.json)
+          fi
+
+          echo "repo-owner=$(jq -r '.repo_owner' resolved.json)" >> $GITHUB_OUTPUT
+          echo "repo-name=$(jq -r '.repo_name' resolved.json)" >> $GITHUB_OUTPUT
+          echo "repo-full-name=$(jq -r '.repo_full_name' resolved.json)" >> $GITHUB_OUTPUT
+          echo "pr-number=$(jq -r '.number' resolved.json)" >> $GITHUB_OUTPUT
+          echo "pr-url=$(jq -r '.pr_url' resolved.json)" >> $GITHUB_OUTPUT
+          echo "base-ref=$(jq -r '.base_ref' resolved.json)" >> $GITHUB_OUTPUT
+          echo "head-ref=$(jq -r '.head_ref' resolved.json)" >> $GITHUB_OUTPUT
+          echo "head-sha=$(jq -r '.head_sha' resolved.json)" >> $GITHUB_OUTPUT
+          echo "head-repo-clone-url=$(jq -r '.head_repo_clone_url' resolved.json)" >> $GITHUB_OUTPUT
+          echo "report-key=$(jq -r '.report_key' resolved.json)" >> $GITHUB_OUTPUT
+          echo "report-label=$(jq -r '.report_label' resolved.json)" >> $GITHUB_OUTPUT
+          echo "report-artifact=$(jq -r '.report_key' resolved.json)" >> $GITHUB_OUTPUT
+          echo "job-name-prefix=$(jq -r '.job_name_prefix' resolved.json)" >> $GITHUB_OUTPUT
+          echo "callback-repo-owner=${callback_repo_owner}" >> $GITHUB_OUTPUT
+          echo "callback-repo-name=${callback_repo_name}" >> $GITHUB_OUTPUT
+          echo "callback-pr-number=${callback_pr_number}" >> $GITHUB_OUTPUT
+          echo "callback-comment-id=${{ github.event.inputs.callback-comment-id }}" >> $GITHUB_OUTPUT
+          echo "requester=${{ github.event.inputs.requester }}" >> $GITHUB_OUTPUT
+          echo "command=${{ github.event.inputs.command }}" >> $GITHUB_OUTPUT
+
+  test-gap-pr:
+    name: ${{ needs.resolve.outputs.job-name-prefix }}
+    needs: resolve
+    uses: ./.github/workflows/test-all.yml
+    with:
+      which-gap: ${{ needs.resolve.outputs.head-ref }}
+      which-gap-repo: ${{ needs.resolve.outputs.head-repo-clone-url }}
+      which-gap-sha: ${{ needs.resolve.outputs.head-sha }}
+      report-key: ${{ needs.resolve.outputs.report-key }}
+      report-label: ${{ needs.resolve.outputs.report-label }}
+      baseline-key: ${{ needs.resolve.outputs.base-ref }}
+      job-name-prefix: ${{ needs.resolve.outputs.job-name-prefix }}
+      pkg-build-glob: ${{ github.event.inputs.pkg-build-glob }}
+      pkg-test-glob: ${{ github.event.inputs.pkg-test-glob }}
+
+  comment:
+    name: "Comment on GAP pull request"
+    needs: [resolve, test-gap-pr]
+    if: always()
+    runs-on: ubuntu-slim
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: "Set up Python"
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: "Install package distribution tools"
+        run: python -m pip install -r tools/requirements.txt
+
+      - name: "Download report"
+        uses: actions/download-artifact@v8
+        with:
+          name: report-${{ needs.resolve.outputs.report-artifact }}
+          path: _report
+
+      - name: "Build comment body"
+        run: |
+          mkdir -p _comment
+          cat > _comment/metadata.json <<EOF
+          {
+            "pr_url": "${{ needs.resolve.outputs.pr-url }}",
+            "repo_full_name": "${{ needs.resolve.outputs.repo-full-name }}",
+            "number": ${{ needs.resolve.outputs.callback-pr-number }},
+            "head_sha": "${{ needs.resolve.outputs.head-sha }}",
+            "requester": "${{ needs.resolve.outputs.requester }}",
+            "command": "${{ needs.resolve.outputs.command }}"
+          }
+          EOF
+          python tools/render_gap_pr_test_comment.py \
+            _comment/metadata.json \
+            _report/test-status.json \
+            _report/test-status-diff.json \
+            _report/report.md > _comment/body.md
+
+      - uses: actions/create-github-app-token@v3
+        id: generate-token
+        with:
+          client-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          owner: ${{ needs.resolve.outputs.callback-repo-owner }}
+          repositories: ${{ needs.resolve.outputs.callback-repo-name }}
+
+      - name: "Create or update comment"
+        uses: peter-evans/create-or-update-comment@v5
+        with:
+          token: ${{ steps.generate-token.outputs.token }}
+          issue-number: ${{ needs.resolve.outputs.callback-pr-number }}
+          comment-id: ${{ needs.resolve.outputs.callback-comment-id }}
+          body-path: _comment/body.md
+          edit-mode: replace

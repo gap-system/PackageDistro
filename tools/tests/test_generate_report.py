@@ -6,6 +6,7 @@
 This module contains some tests for the generate_report.py script
 """
 
+import json
 import os
 import shutil
 
@@ -60,5 +61,27 @@ def test_report():
         )
         == 0
     )
+
+    clear_files(root)
+
+
+def test_report_diff_contains_failure_lists():
+    root = "/".join(os.path.dirname(os.path.realpath(__file__)).split("/")[:-2])
+    os.chdir(root)
+
+    _, current_path = generate_report(root)
+
+    with open(os.path.join(current_path, "test-status-diff.json"), "r") as f:
+        report_diff = json.load(f)
+
+    assert report_diff["failures_changed"] == ["boogle", "zork"]
+    assert report_diff["failures_current"] == [
+        "bar",
+        "boogle",
+        "foo",
+        "ham",
+        "quux",
+        "zork",
+    ]
 
     clear_files(root)
