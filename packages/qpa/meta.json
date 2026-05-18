@@ -1,14 +1,14 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">QPA</span> package provides data structures                    and algorithms for doing computations with finite dimensional quotients                    of path algebras, and finitely generated modules over such algebras. The                    current version of the QPA package has data structures for quivers,                    quotients of path algebras, and modules, homomorphisms and complexes of                    modules over quotients of path algebras.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "8c7929b5568ef3614bb8967e7967fd10e3cd5e178ee8ca87e53c4e5cb51e1486",
-  "ArchiveSize": 1527074,
-  "ArchiveURL": "https://github.com/gap-packages/qpa/releases/download/v1.36/qpa-1.36",
+  "ArchiveSHA256": "3a7ca91caf55f1f4a5596f73f82f8b89df3c9e6140358a027a960795e4641ca7",
+  "ArchiveSize": 1504534,
+  "ArchiveURL": "https://github.com/gap-packages/qpa/releases/download/v1.37/qpa-1.37",
   "AvailabilityTest": null,
-  "Date": "07/04/2025",
+  "Date": "13/05/2026",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">=4.5",
+    "GAP": ">=4.11",
     "NeededOtherPackages": [
       [
         "GBNP",
@@ -36,7 +36,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "bf435205e80d9c2d8ab91394fe07741a0449543b7506bfe3ea659d3953199d82",
+  "PackageInfoSHA256": "8194733ab769d72564f0878f29c65cbb15c250b02611537a787bda94ae3f5c0e",
   "PackageInfoURL": "https://gap-packages.github.io/qpa/PackageInfo.g",
   "PackageName": "qpa",
   "PackageWWWHome": "https://gap-packages.github.io/qpa",
@@ -72,5 +72,5 @@
   "Status": "deposited",
   "Subtitle": "Quivers and Path Algebras",
   "TestFile": "tst/testall.g",
-  "Version": "1.36"
+  "Version": "1.37"
 }
