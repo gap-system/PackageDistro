@@ -2,11 +2,22 @@
   "AbstractHTML": "The <span class=\"pkgname\">AutPGrp</span> package introduces a new function to compute the automorphism group of a finite $p$-group. The underlying algorithm is a refinement of the methods described in O'Brien (1995). In particular, this implementation is more efficient in both time and space requirements and hence has a wider range of applications than the ANUPQ method. Our package is written in GAP code and it makes use of a number of methods from the GAP library such as the MeatAxe for matrix groups and permutation group functions. We have compared our method to the others available in GAP. Our package usually out-performs all but the method designed for finite abelian groups. We note that our method uses the small groups library in certain cases and hence our algorithm is more effective if the small groups library is installed.",
   "AcceptDate": "09/2000",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "2cd0ec699d26072945778885d627a45a33c51a9373a01d938e5544feff9895d3",
-  "ArchiveURL": "https://github.com/gap-packages/autpgrp/releases/download/v1.11.1/autpgrp-1.11.1",
+  "ArchiveSHA256": "00c53afe289568f4da974d2b363cd8e6602e80f18e5b9be7fa8853354c9e96c7",
+  "ArchiveSize": 222404,
+  "ArchiveURL": "https://github.com/gap-packages/autpgrp/releases/download/v1.12.0/autpgrp-1.12.0",
+  "AutoDoc": {
+    "TitlePage": {
+      "Abstract": "\n          The &AUTPGRP; package introduces a new\n          function to compute the automorphism group of a finite\n          <M>p</M>-group. The underlying algorithm is a refinement of the\n          methods described in O'Brien (1995). In particular, this\n          implementation is more efficient in both time and space requirements\n          and hence has a wider range of applications than the ANUPQ method.\n          Our package is written in &GAP; code and it makes use of a number of\n          methods from the &GAP; library such as the MeatAxe for matrix groups\n          and permutation group functions. We have compared our method to the\n          others available in &GAP;. Our package usually out-performs all but\n          the method designed for finite abelian groups. We note that our\n          method uses the small groups library in certain cases and hence our\n          algorithm is more effective if the small groups library is\n          installed.",
+      "Acknowledgements": "\n          We thank Alexander Hulpke for helping us with efficiency\n          problems. Werner Nickel provided some functions from\n          the &GAP; <C>PQuotient</C> which are used in this package.\n        ",
+      "Copyright": "\n          Bettina Eick and Eamonn O'Brien.<P/>\n\n          AutPGrp is free software; you can redistribute it and/or modify\n          it under the terms of the <URL Text=\"GNU General Public License\">\n          https://www.fsf.org/licenses/gpl.html</URL> as published by the\n          Free Software Foundation; either version 2 of the License, or (at\n          your option) any later version."
+    },
+    "entities": {
+      "AUTPGRP": "<Package>AutPGrp</Package>"
+    }
+  },
   "AvailabilityTest": null,
   "CommunicatedBy": "Derek F. Holt (Warwick)",
-  "Date": "10/04/2024",
+  "Date": "17/05/2026",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.7",
@@ -22,17 +33,16 @@
   "PackageDoc": [
     {
       "ArchiveURLSubset": [
-        "doc",
-        "htm"
+        "doc"
       ],
       "BookName": "AutPGrp",
-      "HTMLStart": "htm/chapters.htm",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "Computing the Automorphism Group of a p-Group",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "088847ea8bbb8a2ef339d7151ab81814d6a3badbf7798e6162e585ea4a81b54a",
+  "PackageInfoSHA256": "f2b9ee1678e9a0e03e2f95d3fd01c51ae102f2396182f1ceef64b1bc2fd04411",
   "PackageInfoURL": "https://gap-packages.github.io/autpgrp/PackageInfo.g",
   "PackageName": "AutPGrp",
   "PackageWWWHome": "https://gap-packages.github.io/autpgrp/",
@@ -51,6 +61,7 @@
     {
       "Email": "mhorn@rptu.de",
       "FirstNames": "Max",
+      "GitHubUsername": "fingolfin",
       "Institution": "RPTU Kaiserslautern-Landau",
       "IsAuthor": false,
       "IsMaintainer": true,
@@ -79,5 +90,5 @@
   "Status": "accepted",
   "Subtitle": "Computing the Automorphism Group of a p-Group",
   "TestFile": "tst/testall.g",
-  "Version": "1.11.1"
+  "Version": "1.12.0"
 }
