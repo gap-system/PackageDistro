@@ -100,6 +100,14 @@ for status in status_list:
         and pkgs[pkg]["status"] == status
     ]
 
+report_diff["failures_changed"] = sorted(pkgs_changed["failure"])
+# Keep an explicit list of current failures in the JSON diff so workflows that
+# post condensed summaries to PR comments do not have to re-derive it from the
+# full package table.
+report_diff["failures_current"] = sorted(
+    pkg for pkg, data in pkgs.items() if data["status"] == "failure"
+)
+
 
 def write_details_list(
     f: io.TextIOWrapper, pkgnames: List[str], pkgs: Dict[str, Any]
