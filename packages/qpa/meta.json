@@ -1,10 +1,11 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">QPA</span> package provides data structures                    and algorithms for doing computations with finite dimensional quotients                    of path algebras, and finitely generated modules over such algebras. The                    current version of the QPA package has data structures for quivers,                    quotients of path algebras, and modules, homomorphisms and complexes of                    modules over quotients of path algebras.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "7e77dd49c87ccf0e17e09db12476b0c2287a5145c0f3383158dc6734b7d4b12a",
-  "ArchiveURL": "https://folk.ntnu.no/oyvinso/QPA/qpa-1.35",
+  "ArchiveSHA256": "8c7929b5568ef3614bb8967e7967fd10e3cd5e178ee8ca87e53c4e5cb51e1486",
+  "ArchiveSize": 1527074,
+  "ArchiveURL": "https://github.com/gap-packages/qpa/releases/download/v1.36/qpa-1.36",
   "AvailabilityTest": null,
-  "Date": "04/01/2024",
+  "Date": "07/04/2025",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.5",
@@ -35,10 +36,10 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "c720222c3e4fd68dbd92f8c4e5cec5db219a0355e3f03e73620c436182733699",
-  "PackageInfoURL": "https://folk.ntnu.no/oyvinso/QPA/PackageInfo.g",
-  "PackageName": "QPA",
-  "PackageWWWHome": "https://folk.ntnu.no/oyvinso/QPA/",
+  "PackageInfoSHA256": "bf435205e80d9c2d8ab91394fe07741a0449543b7506bfe3ea659d3953199d82",
+  "PackageInfoURL": "https://gap-packages.github.io/qpa/PackageInfo.g",
+  "PackageName": "qpa",
+  "PackageWWWHome": "https://gap-packages.github.io/qpa",
   "Persons": [
     {
       "Email": "green@math.vt.edu",
@@ -63,7 +64,7 @@
       "WWWHome": "https://folk.ntnu.no/oyvinso/"
     }
   ],
-  "README_URL": "https://folk.ntnu.no/oyvinso/QPA/README",
+  "README_URL": "https://gap-packages.github.io/qpa/README",
   "SourceRepository": {
     "Type": "git",
     "URL": "https://github.com/gap-packages/qpa"
@@ -71,5 +72,5 @@
   "Status": "deposited",
   "Subtitle": "Quivers and Path Algebras",
   "TestFile": "tst/testall.g",
-  "Version": "1.35"
+  "Version": "1.36"
 }
