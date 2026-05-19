@@ -136,7 +136,7 @@ jobs:
       - uses: actions/create-github-app-token@v3
         id: generate-token
         with:
-          client-id: ${{ secrets.APP_ID }}
+          client-id: ${{ vars.APP_CLIENT_ID || secrets.APP_CLIENT_ID || secrets.APP_ID }}
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
 
       # TODO: extra work is needed to make the following work with pull requests

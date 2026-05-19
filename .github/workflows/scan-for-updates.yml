@@ -190,7 +190,7 @@ jobs:
         id: generate-token
         if: steps.check-diff.outputs.skip_pr != 'true'
         with:
-          client-id: ${{ secrets.APP_ID }}
+          client-id: ${{ vars.APP_CLIENT_ID || secrets.APP_CLIENT_ID || secrets.APP_ID }}
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
 
       - uses: peter-evans/create-pull-request@v8

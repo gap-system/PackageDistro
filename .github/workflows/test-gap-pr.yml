@@ -194,6 +194,7 @@ jobs:
         uses: peter-evans/create-or-update-comment@v5
         with:
           token: ${{ steps.generate-token.outputs.token }}
+          repository: ${{ needs.resolve.outputs.callback-repo-owner }}/${{ needs.resolve.outputs.callback-repo-name }}
           issue-number: ${{ needs.resolve.outputs.callback-pr-number }}
           comment-id: ${{ needs.resolve.outputs.callback-comment-id }}
           body-path: _comment/body.md
