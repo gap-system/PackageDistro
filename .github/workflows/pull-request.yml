@@ -149,3 +149,40 @@ jobs:
           issue-number: ${{ github.event.pull_request.number }}
           body: ${{ steps.get-comment-body.outputs.body }}
           edit-mode: replace
+
+  package-tests-passed:
+    name: "Package tests passed"
+    runs-on: ubuntu-slim
+    needs:
+      - detect-changes
+      - test-all-master
+    # This job is intended to be the stable required check for branch
+    # protection / rulesets.  The called test-all workflow expands to many
+    # package jobs, and their names change as packages are added or removed.
+    #
+    # Keep this as `always()` and fail explicitly below: GitHub treats skipped
+    # required checks as successful, so this gate must not be skipped when an
+    # upstream job fails or is skipped.
+    if: always()
+    steps:
+      - name: "Check package test workflow result"
+        run: |
+          if [[ "${{ needs.detect-changes.result }}" != "success" ]]; then
+            echo "The affected-package detection job did not pass."
+            echo "Result: ${{ needs.detect-changes.result }}"
+            exit 1
+          fi
+
+          if [[ "${{ needs.detect-changes.outputs.modified }}" != "true" ]]; then
+            echo "No added or modified package metadata was found."
+            echo "Refusing to mark package tests as passed."
+            exit 1
+          fi
+
+          if [[ "${{ needs.test-all-master.result }}" != "success" ]]; then
+            echo "The package test workflow did not pass."
+            echo "Result: ${{ needs.test-all-master.result }}"
+            exit 1
+          fi
+
+          echo "The package test workflow passed."
