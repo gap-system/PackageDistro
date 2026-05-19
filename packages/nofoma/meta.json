@@ -1,0 +1,83 @@
+{
+  "AbstractHTML": "This package computes the Frobenius normal form and  the Jordan-Chevalley decomposition of a (square) matrix over any field  that is available in GAP. It also computes the Jordan normal form  of matrices over finite fields.",
+  "ArchiveFormats": ".tar.gz .tar.bz2",
+  "ArchiveSHA256": "e12ee0f5e52995e1d57243b0a5a5d71816dabbe82826d1fffcf66a5b120b3547",
+  "ArchiveSize": 229825,
+  "ArchiveURL": "https://github.com/gap-packages/nofoma/releases/download/v1.0.1/nofoma-1.0.1",
+  "AutoDoc": {
+    "TitlePage": {
+      "Abstract": "This package computes the Frobenius normal form and  the Jordan-Chevalley decomposition of a (square) matrix over any field  that is available in GAP. It also computes the Jordan normal form  of matrices over finite fields.\n            <P/>\n            Bug reports, suggestions and comments are, welcome.\n            Please submit them to our issue tracker\n            <URL>https://github.com/gap-packages/nofoma/issues</URL>.",
+      "Acknowledgements": "\n            The original code by Meinolf Geck was cleaned up and made ready for inclusion\n            in the &GAP; package distribution Alia Bonnet in 2025, with some assistance\n            by Max Horn.\n        ",
+      "Copyright": "\n            &copyright; 2026 by Meinolf Geck.\n            The &nofoma; package is free software; you can redistribute it and/or\n            modify it under the terms of the GNU General Public License as published\n            by the Free Software Foundation; either version 2 of the License, or (at\n            your option) any later version.\n        "
+    }
+  },
+  "AvailabilityTest": null,
+  "BannerString": "──────────────────────────────────────────────────────────────────────────\nLoading  nofoma 1.0.1 (Normal forms of matrices), \nby Meinolf Geck (https://pnp.mathematik.uni-stuttgart.de/idsr/idsr1/geckmf/)\nand Alia Bonnet (https://github.com/AliaBonnet).\nHelp about the main functions in this package is obtained by typing:\n    ?FrobeniusNormalForm     ?JordanNormalform     ?JordanChevalleyDecMat\n──────────────────────────────────────────────────────────────────────────\n",
+  "Date": "17/05/2026",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">= 4.15",
+    "NeededOtherPackages": [
+      [
+        "AutPGrp",
+        ">= 1.5"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "IssueTrackerURL": "https://github.com/gap-packages/nofoma/issues",
+  "Keywords": [
+    "maximal vectors",
+    "Frobenius normal form",
+    "Jordan normal form",
+    "Jordan-Chevalley decomposition"
+  ],
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "nofoma",
+      "HTMLStart": "doc/chap0_mj.html",
+      "LongTitle": "Normal forms of matrices",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSHA256": "b0ce5bd1cbfa72e3b6566f66d216d2163e7a0cd6eb3aa1cb26c3d4363e11b5cb",
+  "PackageInfoURL": "https://gap-packages.github.io/nofoma/PackageInfo.g",
+  "PackageName": "nofoma",
+  "PackageWWWHome": "https://gap-packages.github.io/nofoma",
+  "Persons": [
+    {
+      "Email": "meinolf.geck@mathematik.uni-stuttgart.de",
+      "FirstNames": "Meinolf",
+      "Institution": "University of Stuttgart",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Geck",
+      "Place": "Stuttgart",
+      "PostalAddress": "Fachbereich Mathematik, Pfaffenwaldring 57, 70569 Stuttgart, Germany",
+      "WWWHome": "https://pnp.mathematik.uni-stuttgart.de/idsr/idsr1/geckmf/"
+    },
+    {
+      "Email": "alia.bonnet@rwth.aachen.de",
+      "FirstNames": "Alia",
+      "Institution": "RWTH Aachen",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Bonnet",
+      "Place": "Aachen"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/nofoma/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/nofoma"
+  },
+  "Status": "dev",
+  "Subtitle": "Normal forms of matrices",
+  "TestFile": "tst/testall.g",
+  "Version": "1.0.1"
+}
