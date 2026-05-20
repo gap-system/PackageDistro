@@ -1,0 +1,22 @@
+{
+  "current": "master/2026-05-20-03:29:26-9bd801d3",
+  "last": "master/2026-05-19-03:29:50-57bf5dda",
+  "total": 169,
+  "failure": 1,
+  "success": 165,
+  "skipped": 3,
+  "failures_changed": [
+    "packagemanager"
+  ],
+  "failures_current": [
+    "packagemanager"
+  ],
+  "new": 0,
+  "removed": 0,
+  "failure_changed": 1,
+  "success_changed": 0,
+  "skipped_changed": 0,
+  "failure_same": 0,
+  "success_same": 165,
+  "skipped_same": 3
+}
