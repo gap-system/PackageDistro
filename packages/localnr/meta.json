@@ -1,0 +1,90 @@
+{
+  "AbstractHTML": "The <span class=\"pkgname\">LocalNR</span> package contains the library of local nearrings of small orders and some functions to analyze finite nearrings.",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSHA256": "d83014e574de390baf618802af88c0e05b7b43982796aad5f35f4c19e1496641",
+  "ArchiveSize": 7763403,
+  "ArchiveURL": "https://github.com/gap-packages/LocalNR/releases/download/v2.0.0/LocalNR-2.0.0",
+  "AvailabilityTest": null,
+  "BannerString": "-------------------------------------------------------------------------------------\nLoading LocalNR 2.0.0\nby Yaroslav Sysak (https://www.imath.kiev.ua/~algebra/Sysak/)\nwith contributions by:\nIryna Raievska (https://www.imath.kiev.ua/~algebra/Raievska_I/)\n and Maryna Raievska (https://www.imath.kiev.ua/~algebra/Raievska_M/)\n\n LocalNR - a package of local nearrings\n http://www.imath.kiev.ua/~algebra/LocalNR/\n ----------------------------------------------------------------------------- \n",
+  "Date": "21/05/2026",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">=4.10.0",
+    "NeededOtherPackages": [
+      [
+        "SONATA",
+        ">= 2.4"
+      ]
+    ],
+    "SuggestedOtherPackages": []
+  },
+  "IssueTrackerURL": "https://github.com/gap-packages/LocalNR/issues",
+  "Keywords": [
+    "local nearring",
+    "endomorphism",
+    "automorphisms group"
+  ],
+  "License": "GPL-3.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "LocalNR",
+      "HTMLStart": "doc/chap0_mj.html",
+      "LongTitle": "a GAP package of local nearrings",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSHA256": "cc6cc0399942befee9645aa7b3250467711f4677003243903b44f256d272a410",
+  "PackageInfoURL": "https://gap-packages.github.io/LocalNR/PackageInfo.g",
+  "PackageName": "LocalNR",
+  "PackageWWWHome": "https://gap-packages.github.io/LocalNR",
+  "Persons": [
+    {
+      "Email": "raeirina@imath.kiev.ua",
+      "FirstNames": "Iryna",
+      "GitHubUsername": "IrynaRaievska",
+      "Institution": "Institute of Mathematics",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Raievska",
+      "Place": "Kyiv",
+      "PostalAddress": "Institute of Mathematics\nNational Academy of Sciences of Ukraine\n01024 Ukraine, Kyiv, 3, Tereshchenkivska st.",
+      "WWWHome": "https://www.imath.kiev.ua/~algebra/Raievska_I/"
+    },
+    {
+      "Email": "raemarina@imath.kiev.ua",
+      "FirstNames": "Maryna",
+      "GitHubUsername": "raemarina",
+      "Institution": "Institute of Mathematics",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Raievska",
+      "Place": "Kyiv",
+      "PostalAddress": "Institute of Mathematics\nNational Academy of Sciences of Ukraine\n01024 Ukraine, Kyiv, 3, Tereshchenkivska st.",
+      "WWWHome": "https://www.imath.kiev.ua/~algebra/Raievska_M/"
+    },
+    {
+      "Email": "sysak@imath.kiev.ua",
+      "FirstNames": "Yaroslav",
+      "Institution": "Institute of Mathematics",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Sysak",
+      "Place": "Kyiv",
+      "PostalAddress": "Institute of Mathematics\nNational Academy of Sciences of Ukraine\n01024 Ukraine, Kyiv, 3, Tereshchenkivska st.",
+      "WWWHome": "https://www.imath.kiev.ua/~algebra/Sysak/"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/LocalNR/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/LocalNR"
+  },
+  "Status": "other",
+  "Subtitle": "Package of local nearrings",
+  "TestFile": "tst/testall.g",
+  "Version": "2.0.0"
+}
