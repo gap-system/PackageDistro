@@ -1,12 +1,12 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">LocalNR</span> package contains the library of local nearrings of small orders and some functions to analyze finite nearrings.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "d83014e574de390baf618802af88c0e05b7b43982796aad5f35f4c19e1496641",
-  "ArchiveSize": 7763403,
-  "ArchiveURL": "https://github.com/gap-packages/LocalNR/releases/download/v2.0.0/LocalNR-2.0.0",
+  "ArchiveSHA256": "7d7542139a7cc4971966b0b79e3023681250e941d7950cedb1615e2a5bf9ffb4",
+  "ArchiveSize": 7758800,
+  "ArchiveURL": "https://github.com/gap-packages/LocalNR/releases/download/v2.1.0/LocalNR-2.1.0",
   "AvailabilityTest": null,
-  "BannerString": "-------------------------------------------------------------------------------------\nLoading LocalNR 2.0.0\nby Yaroslav Sysak (https://www.imath.kiev.ua/~algebra/Sysak/)\nwith contributions by:\nIryna Raievska (https://www.imath.kiev.ua/~algebra/Raievska_I/)\n and Maryna Raievska (https://www.imath.kiev.ua/~algebra/Raievska_M/)\n\n LocalNR - a package of local nearrings\n http://www.imath.kiev.ua/~algebra/LocalNR/\n ----------------------------------------------------------------------------- \n",
-  "Date": "21/05/2026",
+  "BannerString": "-------------------------------------------------------------------------------------\nLoading LocalNR 2.1.0\nby Yaroslav Sysak (https://www.imath.kiev.ua/~algebra/Sysak/)\nwith contributions by:\nIryna Raievska (https://www.imath.kiev.ua/~algebra/Raievska_I/)\n and Maryna Raievska (https://www.imath.kiev.ua/~algebra/Raievska_M/)\n\n LocalNR - a package of local nearrings\n https://gap-packages.github.io/LocalNR/\n ----------------------------------------------------------------------------- \n",
+  "Date": "22/05/2026",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10.0",
@@ -37,7 +37,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "cc6cc0399942befee9645aa7b3250467711f4677003243903b44f256d272a410",
+  "PackageInfoSHA256": "c2141b55af40e9c575ed7b77797185845d214b55c3eb7dbf2a24d927c03f2628",
   "PackageInfoURL": "https://gap-packages.github.io/LocalNR/PackageInfo.g",
   "PackageName": "LocalNR",
   "PackageWWWHome": "https://gap-packages.github.io/LocalNR",
@@ -86,5 +86,5 @@
   "Status": "other",
   "Subtitle": "Package of local nearrings",
   "TestFile": "tst/testall.g",
-  "Version": "2.0.0"
+  "Version": "2.1.0"
 }
