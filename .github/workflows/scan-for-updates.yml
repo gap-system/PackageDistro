@@ -19,7 +19,7 @@ on:
         type: string
         default: ''
   schedule:
-    - cron: '3 * * * *' # Every hours at 3 past
+    - cron: '3 * * * *' # Every hour at 3 past
 
 jobs:
   check-schedule-scope:
