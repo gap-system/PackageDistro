@@ -1,38 +1,39 @@
 {
   "AbstractHTML": "\n    <p><b>Warning:</b> This package is still under development and\n    this version is to be considered a working, but preliminary one.</p>\n\n    <p>This package contains a collection of methods for the\n    constructive recognition of groups. It is mostly intended for\n    permutation groups, matrix groups and projective groups.</p>\n    ",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSHA256": "a9b11c0250669e18ef95060042011f5cbf17449155f8ed5bca0e1f17c1808c38",
-  "ArchiveURL": "https://github.com/gap-packages/recog/releases/download/v1.4.4/recog-1.4.4",
+  "ArchiveSHA256": "eae7deaecb263242ee378f5728e4d7a717d6d1903d9d04e099d74ba1b7c53931",
+  "ArchiveSize": 3861031,
+  "ArchiveURL": "https://github.com/gap-packages/recog/releases/download/v1.5.1/recog-1.5.1",
   "AutoDoc": {
     "TitlePage": {
-      "Copyright": "&copyright; 2005-2014 by Max Neunhöffer and Ákos Seress<P/>\n&copyright; 2005-2022 by its authors, see file <F>COPYRIGHT</F> for details.<P/>\n\nThis package may be distributed under the terms and conditions of the\nGNU Public License Version 3 or (at your option) any later version.\n"
+      "Copyright": "&copyright; 2005-2014 by Max Neunhöffer and Ákos Seress<P/>\n&copyright; 2005-2026 by its authors, see file <F>COPYRIGHT</F> for details.<P/>\n\nThis package may be distributed under the terms and conditions of the\nGNU Public License Version 3 or (at your option) any later version.\n"
     }
   },
   "AvailabilityTest": null,
-  "Date": "22/01/2025",
+  "Date": "19/05/2026",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">=4.11",
+    "GAP": ">=4.13",
     "NeededOtherPackages": [
       [
         "AtlasRep",
-        ">= 1.4.0"
+        ">= 2.1.0"
       ],
       [
         "FactInt",
-        ">= 1.5.2"
+        ">= 1.6.3"
       ],
       [
         "Forms",
-        ">= 1.2"
+        ">= 1.2.11"
       ],
       [
         "genss",
-        ">= 1.3"
+        ">= 1.6.8"
       ],
       [
         "Orb",
-        ">= 3.4"
+        ">= 4.9.0"
       ]
     ],
     "SuggestedOtherPackages": []
@@ -60,7 +61,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "ab9fbca532e14cbfe63d9cc78d19f88d5f0e5d0d3f5ad5650014adb9ed4009cd",
+  "PackageInfoSHA256": "cf8bbc8936e40e20342f3371cbb9b312bbec154822afc808db7d9c9ee548fa6b",
   "PackageInfoURL": "https://gap-packages.github.io/recog/PackageInfo.g",
   "PackageName": "recog",
   "PackageWWWHome": "https://gap-packages.github.io/recog",
@@ -79,13 +80,15 @@
       "LastName": "Seress"
     },
     {
-      "Email": "bernhardt@mathb.rwth-aachen.de",
-      "FirstNames": "Dominik",
-      "Institution": "RWTH Aachen University",
+      "Email": "mhorn@rptu.de",
+      "FirstNames": "Max",
+      "GitHubUsername": "fingolfin",
+      "Institution": "RPTU Kaiserslautern-Landau",
       "IsAuthor": false,
-      "IsMaintainer": false,
-      "LastName": "Bernhardt",
-      "Place": "Aachen"
+      "IsMaintainer": true,
+      "LastName": "Horn",
+      "Place": "Kaiserslautern",
+      "WWWHome": "https://www.quendi.de/math"
     },
     {
       "Email": "ankarali@atauni.edu.tr",
@@ -93,6 +96,15 @@
       "IsAuthor": false,
       "IsMaintainer": false,
       "LastName": "Ankaralioglu"
+    },
+    {
+      "Email": "bernhardt@mathb.rwth-aachen.de",
+      "FirstNames": "Dominik",
+      "Institution": "RWTH Aachen University",
+      "IsAuthor": false,
+      "IsMaintainer": false,
+      "LastName": "Bernhardt",
+      "Place": "Aachen"
     },
     {
       "Email": "pbrooksb@bucknell.edu",
@@ -119,8 +131,13 @@
       "IsAuthor": false,
       "IsMaintainer": false,
       "LastName": "Hähndel",
-      "Place": "Halle (Saale)",
-      "WWWHome": "https://algebra.mathematik.uni-halle.de/haehndel/"
+      "Place": "Halle (Saale)"
+    },
+    {
+      "FirstNames": "Stephen",
+      "IsAuthor": false,
+      "IsMaintainer": false,
+      "LastName": "Howe"
     },
     {
       "Email": "hulpke@colostate.edu",
@@ -133,20 +150,13 @@
       "WWWHome": "https://www.math.colostate.edu/~hulpke/"
     },
     {
-      "FirstNames": "Stephen",
-      "IsAuthor": false,
-      "IsMaintainer": false,
-      "LastName": "Howe"
-    },
-    {
       "Email": "caj21@st-andrews.ac.uk",
       "FirstNames": "Christopher",
       "Institution": "University of St Andrews",
       "IsAuthor": false,
       "IsMaintainer": false,
       "LastName": "Jefferson",
-      "Place": "St Andrews",
-      "WWWHome": "https://caj.host.cs.st-andrews.ac.uk"
+      "Place": "St Andrews"
     },
     {
       "Email": "maska@maths.uwa.edu.au",
@@ -164,18 +174,27 @@
       "IsAuthor": false,
       "IsMaintainer": false,
       "LastName": "Linton",
-      "Place": "St Andrews",
-      "WWWHome": "http://www-groups.mcs.st-and.ac.uk/~sal"
+      "Place": "St Andrews"
     },
     {
       "Email": "malle@mathematik.uni-kl.de",
       "FirstNames": "Gunter",
-      "Institution": "Universität Kaiserslautern",
+      "Institution": "RPTU Kaiserslautern-Landau",
       "IsAuthor": false,
       "IsMaintainer": false,
       "LastName": "Malle",
       "Place": "Kaiserslautern",
-      "WWWHome": "https://www.mathematik.uni-kl.de/~malle/"
+      "WWWHome": "https://agag-malle.math.rptu.de/~malle/en/"
+    },
+    {
+      "Email": "t.mueller@math.rptu.de",
+      "FirstNames": "Till",
+      "GitHubUsername": "Till-Eisen",
+      "Institution": "RPTU Kaiserslautern-Landau",
+      "IsAuthor": false,
+      "IsMaintainer": false,
+      "LastName": "Müller",
+      "Place": "Kaiserslautern"
     },
     {
       "Email": "alice.niemeyer@mathb.rwth-aachen.de",
@@ -204,18 +223,7 @@
       "IsAuthor": false,
       "IsMaintainer": false,
       "LastName": "Roney-Dougal",
-      "Place": "St Andrews",
-      "WWWHome": "http://www-groups.mcs.st-and.ac.uk/~colva"
-    },
-    {
-      "Email": "mhorn@rptu.de",
-      "FirstNames": "Max",
-      "Institution": "RPTU Kaiserslautern-Landau",
-      "IsAuthor": false,
-      "IsMaintainer": true,
-      "LastName": "Horn",
-      "Place": "Kaiserslautern",
-      "WWWHome": "https://www.quendi.de/math"
+      "Place": "St Andrews"
     },
     {
       "Email": "sergio@mathb.rwth-aachen.de",
@@ -225,6 +233,26 @@
       "IsMaintainer": false,
       "LastName": "Siccha",
       "Place": "Aachen"
+    },
+    {
+      "Email": "marwagne@rptu.de",
+      "FirstNames": "Martin",
+      "GitHubUsername": "SoongNoonien",
+      "Institution": "RPTU Kaiserslautern-Landau",
+      "IsAuthor": false,
+      "IsMaintainer": false,
+      "LastName": "Wagner",
+      "Place": "Kaiserslautern"
+    },
+    {
+      "Email": "torben.wiedemann@rptu.de",
+      "FirstNames": "Torben",
+      "GitHubUsername": "TWiedemann",
+      "Institution": "RPTU Kaiserslautern-Landau",
+      "IsAuthor": false,
+      "IsMaintainer": false,
+      "LastName": "Wiedemann",
+      "Place": "Kaiserslautern"
     },
     {
       "Email": "gap@wilf-wilson.net",
@@ -253,5 +281,5 @@
   "Status": "deposited",
   "Subtitle": "A package for constructive recognition of permutation and matrix groups",
   "TestFile": "tst/testquick.g",
-  "Version": "1.4.4"
+  "Version": "1.5.1"
 }
