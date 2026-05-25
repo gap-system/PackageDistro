@@ -1,0 +1,18 @@
+{
+  "current": "master/2026-05-25-09:16:37-595ca6c1",
+  "last": "master/2026-05-24-03:28:13-595ca6c1",
+  "total": 171,
+  "failure": 0,
+  "success": 163,
+  "skipped": 8,
+  "failures_changed": [],
+  "failures_current": [],
+  "new": 0,
+  "removed": 0,
+  "failure_changed": 0,
+  "success_changed": 0,
+  "skipped_changed": 5,
+  "failure_same": 0,
+  "success_same": 163,
+  "skipped_same": 3
+}
