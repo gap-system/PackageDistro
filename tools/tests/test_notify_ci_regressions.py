@@ -10,6 +10,26 @@ sys.path.insert(
 )
 
 
+def test_render_issue_title_names_current_failures():
+    module = importlib.import_module("notify_ci_regressions")
+
+    assert (
+        module.render_issue_title("master", [{"name": "atlasrep"}])
+        == 'CI regression: "atlasrep" now failing on GAP master'
+    )
+    assert (
+        module.render_issue_title("master", [{"name": "atlasrep"}, {"name": "guava"}])
+        == 'CI regression: "atlasrep" and "guava" now failing on GAP master'
+    )
+    assert (
+        module.render_issue_title(
+            "master",
+            [{"name": "atlasrep"}, {"name": "guava"}, {"name": "io"}],
+        )
+        == 'CI regression: "atlasrep" and 2 more packages now failing on GAP master'
+    )
+
+
 def test_run_returns_without_api_calls_when_no_failures_and_no_issue():
     module = importlib.import_module("notify_ci_regressions")
     calls = []
@@ -271,7 +291,7 @@ def test_run_creates_incident_issue_with_mentions_for_first_regression():
     assert "@user1 @user2" in body
     assert "atlasrep 2.1" in body
     assert (
-        "CI regression: packages now failing on GAP master"
+        'CI regression: "atlasrep" now failing on GAP master'
         == seen["posts"][0][1]["title"]
     )
 
@@ -422,6 +442,10 @@ def test_run_updates_existing_incident_and_comments_without_mentions():
     assert "Current failures:" in patch_body
     assert "atlasrep 2.1" in patch_body
     assert "guava 3.0" in patch_body
+    assert (
+        seen["patches"][0][1]["title"]
+        == 'CI regression: "atlasrep" and "guava" now failing on GAP master'
+    )
 
     assert "New regression event detected on GAP `master`." in comment_body
     assert "New failures:" in comment_body
@@ -455,7 +479,9 @@ def test_run_updates_existing_incident_and_comments_for_mixed_delta():
                 [
                     {
                         "number": 7550,
-                        "title": "CI regression: packages now failing on GAP master",
+                        "title": (
+                            'CI regression: "atlasrep" now failing on GAP master'
+                        ),
                         "labels": [{"name": "ci-regression"}],
                     }
                 ]
@@ -501,6 +527,10 @@ def test_run_updates_existing_incident_and_comments_for_mixed_delta():
     assert len(seen["posts"]) == 1
     patch_body = seen["patches"][0][1]["body"]
     comment_body = seen["posts"][0][1]["body"]
+    assert (
+        seen["patches"][0][1]["title"]
+        == 'CI regression: "guava" now failing on GAP master'
+    )
 
     assert "Current package failures on GAP `master`." in patch_body
     assert "atlasrep 2.1" not in patch_body
