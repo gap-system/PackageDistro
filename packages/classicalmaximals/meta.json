@@ -1,0 +1,97 @@
+{
+  "AbstractHTML": "",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSHA256": "a7cf1888756a33ca90281cb428576e27000e0136f13aebf98f1caf6157288549",
+  "ArchiveSize": 418948,
+  "ArchiveURL": "https://github.com/gap-packages/ClassicalMaximals/releases/download/v1.1/ClassicalMaximals-1.1",
+  "AvailabilityTest": null,
+  "Date": "26/05/2026",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">= 4.15",
+    "NeededOtherPackages": [
+      [
+        "Forms",
+        "1.2.12"
+      ],
+      [
+        "recog",
+        "1.5.0"
+      ]
+    ],
+    "SuggestedOtherPackages": [],
+    "TestPackages": []
+  },
+  "IssueTrackerURL": "https://github.com/gap-packages/ClassicalMaximals/issues",
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "ClassicalMaximals",
+      "HTMLStart": "doc/chap0_mj.html",
+      "LongTitle": "Maximal subgroups of classical groups",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSHA256": "316b00125edb596b68ae2c1594439d79ddcf6e5a063031358f20aa661d58cbbe",
+  "PackageInfoURL": "https://gap-packages.github.io/ClassicalMaximals/PackageInfo.g",
+  "PackageName": "ClassicalMaximals",
+  "PackageWWWHome": "https://gap-packages.github.io/ClassicalMaximals/",
+  "Persons": [
+    {
+      "Email": "mahauck@rhrk.uni-kl.de",
+      "FirstNames": "Maximilian",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Hauck"
+    },
+    {
+      "Email": "mhorn@rptu.de",
+      "FirstNames": "Max",
+      "GitHubUsername": "fingolfin",
+      "Institution": "RPTU Kaiserslautern-Landau",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Horn",
+      "Place": "Kaiserslautern, Germany"
+    },
+    {
+      "Email": "tristan.pfersdorff@edu.rptu.de",
+      "FirstNames": "Tristan",
+      "Institution": "RPTU Kaiserslautern-Landau",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Pfersdorff",
+      "Place": "Kaiserslautern, Germany"
+    },
+    {
+      "Email": "christian.seeger@edu.rptu.de",
+      "FirstNames": "Christian",
+      "GitHubUsername": "chseeger",
+      "Institution": "RPTU Kaiserslautern-Landau",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Seeger",
+      "Place": "Kaiserslautern, Germany"
+    },
+    {
+      "Email": "siccha@mathematik.uni-kl.de",
+      "FirstNames": "Sergio",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Siccha"
+    }
+  ],
+  "README_URL": "https://gap-packages.github.io/ClassicalMaximals/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/gap-packages/ClassicalMaximals"
+  },
+  "Status": "dev",
+  "Subtitle": "Maximal subgroups of classical groups",
+  "TestFile": "tst/testquick.g",
+  "Version": "1.1"
+}
