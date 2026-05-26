@@ -54,6 +54,42 @@ def infostr_for_package(pkg_json: Dict[str, Any]) -> str:
     return s
 
 
+def maintainer_mentions(pkg_json: Dict[str, Any]) -> List[str]:
+    mentions = []
+    for person in pkg_json.get("Persons", []):
+        username = person.get("GitHubUsername")
+        if username and person.get("IsMaintainer"):
+            mentions.append(f"@{username}")
+    return mentions
+
+
+def body_for_packages(pkg_jsons: List[Dict[str, Any]]) -> str:
+    body = "".join(map(infostr_for_package, pkg_jsons))
+
+    # Add link to the source repository only once, as package groups are defined
+    # via the source repository.
+    pkg_json = pkg_jsons[0]
+    if "SourceRepository" in pkg_json:
+        url = pkg_json["SourceRepository"]["URL"]
+        body += f"""- [source repository]({url})""" + "\n"
+
+    # HACK: also add the issue tracker only once; while in theory packages in a
+    # group could have different issue trackers, this is not currently the case,
+    # ever. We'll deal with it if it ever happens.
+    if "IssueTrackerURL" in pkg_json:
+        body += f"""- [issue tracker]({pkg_json["IssueTrackerURL"]})""" + "\n"
+
+    mentions = []
+    for pkg_json in pkg_jsons:
+        for mention in maintainer_mentions(pkg_json):
+            if mention not in mentions:
+                mentions.append(mention)
+    if mentions:
+        body += "\nMaintainers: " + " ".join(mentions) + "\n"
+
+    return body
+
+
 def is_new_package(pkg_name: str) -> bool:
     fname = utils.metadata_fname(pkg_name)
     result = subprocess.run(
@@ -105,20 +141,8 @@ def main(pkg_or_group_name: str, modmap: List[str]) -> None:
     print(f"PR_FILES={','.join(files)}")
 
     # generate PR body content
-    mod_json = map(utils.metadata, modified)
-    body = "".join(map(infostr_for_package, mod_json))
-
-    # add link to the source repository; we do this only once, as package groups
-    # are defined via the source repository
-    if "SourceRepository" in pkg_json:
-        url = pkg_json["SourceRepository"]["URL"]
-        body += f"""- [source repository]({url})""" + "\n"
-
-    # HACK: also add the issue tracker only once; while in theory packages in
-    # a group could have different issue trackers, this is not currently the case,
-    # ever. We'll deal with it if it ever happens
-    if "IssueTrackerURL" in pkg_json:
-        body += f"""- [issue tracker]({pkg_json["IssueTrackerURL"]})""" + "\n"
+    mod_json = [utils.metadata(pkg_name) for pkg_name in modified]
+    body = body_for_packages(mod_json)
 
     # generate multiline environment variable using "heredoc" syntax, as per
     # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
