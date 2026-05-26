@@ -71,6 +71,17 @@ def format_package_lines(rows: list[dict[str, str]]) -> str:
     )
 
 
+def render_issue_title(which_gap: str, rows: list[dict[str, str]]) -> str:
+    names = sorted(row["name"] for row in rows)
+    if len(names) == 1:
+        package_summary = f'"{names[0]}"'
+    elif len(names) == 2:
+        package_summary = f'"{names[0]}" and "{names[1]}"'
+    else:
+        package_summary = f'"{names[0]}" and {len(names) - 1} more packages'
+    return f"{ISSUE_TITLE_PREFIX} {package_summary} now failing on GAP {which_gap}"
+
+
 def render_issue_body(
     which_gap: str,
     workflow_url: str,
@@ -130,7 +141,7 @@ def find_open_incident_issue(
         "labels": ISSUE_LABEL,
         "per_page": "100",
     }
-    expected_title = f"{ISSUE_TITLE_PREFIX} packages now failing on GAP {which_gap}"
+    title_suffix = f" now failing on GAP {which_gap}"
     res = session.get(
         url,
         headers=github_headers(token),
@@ -138,7 +149,8 @@ def find_open_incident_issue(
     )
     res.raise_for_status()
     for issue in res.json():
-        if issue["title"] == expected_title:
+        title = issue["title"]
+        if title.startswith(f"{ISSUE_TITLE_PREFIX} ") and title.endswith(title_suffix):
             return issue
     return None
 
@@ -182,7 +194,7 @@ def run_notification(
         return {"action": "closed", "issue_number": issue["number"]}
 
     changed_rows = changed_failures(test_status, previous_statuses or {})
-    title = f"{ISSUE_TITLE_PREFIX} packages now failing on GAP {which_gap}"
+    title = render_issue_title(which_gap, current_rows)
     if issue is None:
         body = render_issue_body(
             which_gap,
