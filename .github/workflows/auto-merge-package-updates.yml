@@ -1,0 +1,85 @@
+#
+# This workflow merges package update pull requests produced by the scheduled
+# scan-for-updates workflow, once the repository ruleset says they are ready.
+#
+name: "Auto-merge package updates"
+
+on:
+  workflow_dispatch:  # manual trigger for debugging
+    inputs:
+      minimum_age_seconds:
+        description: 'Minimum PR age before merging'
+        required: true
+        type: number
+        default: 86400
+      dry_run:
+        description: 'Print PRs that would be merged without merging them'
+        required: true
+        type: boolean
+        default: true
+  schedule:
+    - cron: '0 2 * * *' # Daily at 02:00 UTC
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+jobs:
+  check-schedule-scope:
+    name: "Check whether this workflow should run"
+    runs-on: ubuntu-slim
+    outputs:
+      should_run: ${{ steps.check.outputs.should_run }}
+    steps:
+      - name: "Decide whether to continue"
+        id: check
+        run: |
+          if [[ "${{ github.event_name }}" != "schedule" ]] || \
+             [[ "${{ github.repository }}" == "gap-system/PackageDistro" ]]; then
+            echo "should_run=true" >> $GITHUB_OUTPUT
+          else
+            echo "should_run=false" >> $GITHUB_OUTPUT
+            echo "Skipping scheduled run outside gap-system/PackageDistro."
+          fi
+
+  auto-merge:
+    name: "Merge eligible package update PRs"
+    needs: check-schedule-scope
+    if: ${{ needs.check-schedule-scope.outputs.should_run == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: "Set up Python"
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      # Use the same GitHub App that creates the automatic package update PRs,
+      # so merges and branch cleanup are attributed to the package bot.
+      - uses: actions/create-github-app-token@v3
+        id: generate-token
+        with:
+          client-id: ${{ vars.APP_CLIENT_ID || secrets.APP_CLIENT_ID || secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+
+      - name: "Merge eligible pull requests"
+        env:
+          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
+          GH_REPO: ${{ github.repository }}
+          DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
+          MINIMUM_AGE_SECONDS: ${{ github.event.inputs.minimum_age_seconds || '86400' }}
+          REPOSITORY_OWNER: ${{ github.repository_owner }}
+        run: |
+          set -euo pipefail
+
+          args=(
+            --repository "${GH_REPO}"
+            --repository-owner "${REPOSITORY_OWNER}"
+            --minimum-age-seconds "${MINIMUM_AGE_SECONDS}"
+          )
+          if [[ "${DRY_RUN}" == "true" ]]; then
+            args+=(--dry-run)
+          fi
+
+          python tools/auto_merge_package_updates.py "${args[@]}"

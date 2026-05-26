@@ -7,7 +7,7 @@ sys.path.insert(
     0, "/".join(os.path.dirname(os.path.realpath(__file__)).split("/")[:-1])
 )
 
-from prepare_pr import body_for_packages, infostr_for_package
+from prepare_pr import automerge_notice, body_for_packages, infostr_for_package
 
 
 def test_infostr_for_package_includes_archive_size():
@@ -63,3 +63,10 @@ def test_body_for_packages_mentions_maintainers_with_github_usernames():
 
     assert "Maintainers: @maintainer" in body
     assert "@author" not in body
+
+
+def test_automerge_notice_mentions_blocking_comments():
+    notice = automerge_notice()
+
+    assert "prevent this pull request from being auto-merged" in notice
+    assert "[noblock]" in notice

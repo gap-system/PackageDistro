@@ -90,6 +90,17 @@ def body_for_packages(pkg_jsons: List[Dict[str, Any]]) -> str:
     return body
 
 
+def automerge_notice() -> str:
+    return (
+        "\n"
+        "## Auto-merge\n\n"
+        "This pull request may be auto-merged after all required checks pass.\n"
+        "To prevent this pull request from being auto-merged, leave a comment.\n"
+        "To comment without blocking auto-merge, include `[noblock]` in the "
+        "comment.\n"
+    )
+
+
 def is_new_package(pkg_name: str) -> bool:
     fname = utils.metadata_fname(pkg_name)
     result = subprocess.run(
@@ -143,6 +154,8 @@ def main(pkg_or_group_name: str, modmap: List[str]) -> None:
     # generate PR body content
     mod_json = [utils.metadata(pkg_name) for pkg_name in modified]
     body = body_for_packages(mod_json)
+
+    body += automerge_notice()
 
     # generate multiline environment variable using "heredoc" syntax, as per
     # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
