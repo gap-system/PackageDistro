@@ -1,12 +1,21 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">float</span> package allows                     GAP to manipulate floating-point numbers with arbitrary                     precision. It is based on MPFR, MPFI, MPC, CXSC, FPLLL",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "cf4e87714ef774d5d760ef252f81bcfe6d0b3bb726ae263c602c68cd5d3a495b",
-  "ArchiveURL": "https://github.com/gap-packages/float/releases/download/v1.0.9/float-1.0.9",
+  "ArchiveSHA256": "9eeecb3de00528f9852250a47eb60cd4b1ca0745b124e66d9b5e4728cf31eafc",
+  "ArchiveSize": 608472,
+  "ArchiveURL": "https://github.com/gap-packages/float/releases/download/v1.0.10/float-1.0.10",
+  "AutoDoc": {
+    "MainPage": false,
+    "TitlePage": false,
+    "entities": {
+      "Date": "27/05/2026",
+      "Version": "1.0.10"
+    }
+  },
   "AvailabilityTest": null,
   "BannerFunction": null,
-  "BannerString": "float 1.0.9 with modules [?] ...\n",
-  "Date": "26/08/2025",
+  "BannerString": "float 1.0.10 with modules [?] ...\n",
+  "Date": "27/05/2026",
   "Dependencies": {
     "ExternalConditions": [
       "GAP compiled with GMP support"
@@ -18,6 +27,30 @@
         ">=1.0"
       ]
     ],
+    "NeededSystemPackages": {
+      "Homebrew": [
+        [
+          "libmpc"
+        ],
+        [
+          "mpfi"
+        ],
+        [
+          "mpfr"
+        ]
+      ],
+      "Ubuntu": [
+        [
+          "libmpc-dev"
+        ],
+        [
+          "libmpfi-dev"
+        ],
+        [
+          "libmpfr-dev"
+        ]
+      ]
+    },
     "SuggestedOtherPackages": []
   },
   "IssueTrackerURL": "https://github.com/gap-packages/float/issues",
@@ -37,7 +70,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "a15b0be7bc5b4c7e84a8a1e25912516816bf7674d49eed2a7c503cddcd0c7a37",
+  "PackageInfoSHA256": "1390121747a0341287842d44182f7d043e91f6342ffc7f28a573aa6cace6dc66",
   "PackageInfoURL": "https://gap-packages.github.io/float/PackageInfo.g",
   "PackageName": "float",
   "PackageWWWHome": "https://gap-packages.github.io/float/",
@@ -62,5 +95,5 @@
   "Status": "deposited",
   "Subtitle": "Integration of mpfr, mpfi, mpc, fplll and cxsc in GAP",
   "TestFile": "tst/testall.g",
-  "Version": "1.0.9"
+  "Version": "1.0.10"
 }
