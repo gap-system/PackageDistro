@@ -1,15 +1,16 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">RingsForHomalg</span> package provides small dictionaries for  <span class=\"pkgname\">homalg</span> to speak (as much as needed of) the languages  of Singular, Macaulay2, MAGMA, Sage, and Maple",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "acb28c65f49d6d9e1487fc00ef88b091c23f050e1c8f004d27e2542cdfeefebf",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/RingsForHomalg-2025.12-01/RingsForHomalg-2025.12-01",
+  "ArchiveSHA256": "346c2be6cf58827b91f097a6a0f3dc148f4ea9c5b015a9f9ebd2812e39a6a404",
+  "ArchiveSize": 1141591,
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/RingsForHomalg-2026.05-01/RingsForHomalg-2026.05-01",
   "AutoDoc": {
     "TitlePage": {
       "Copyright": "&copyright; 2007-2015 by Mohamed Barakat, Simon Görtzen, Markus Kirschmer, Markus Lange-Hegermann, Oleksandr Motsak, Max Neunhöffer, Daniel Robertz, and Hans Schönemann.\n\nThis package may be distributed under the terms and conditions of the GNU Public License Version 2 or (at your option) any later version.\n"
     }
   },
   "AvailabilityTest": null,
-  "Date": "2025-12-23",
+  "Date": "2026-05-27",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.13.0",
@@ -25,12 +26,20 @@
       [
         "GaussForHomalg",
         ">= 2023.08-01"
-      ],
-      [
-        "GAPDoc",
-        ">= 1.0"
       ]
     ],
+    "NeededSystemPackages": {
+      "Homebrew": [
+        [
+          "singular"
+        ]
+      ],
+      "Ubuntu": [
+        [
+          "singular"
+        ]
+      ]
+    },
     "SuggestedOtherPackages": []
   },
   "IssueTrackerURL": "https://github.com/homalg-project/homalg_project/issues",
@@ -53,7 +62,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "eeef9790daaf761a4438a55db1798f878f3511329c90fbc51f470ff907088958",
+  "PackageInfoSHA256": "ed6ed512701ac19a3faa6403ef1ffbcd9193bdfce431e02d9a8395961425f933",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/RingsForHomalg/PackageInfo.g",
   "PackageName": "RingsForHomalg",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/RingsForHomalg",
@@ -176,5 +185,5 @@
   "Status": "deposited",
   "Subtitle": "Dictionaries of external rings",
   "TestFile": "tst/testall.g",
-  "Version": "2025.12-01"
+  "Version": "2026.05-01"
 }
