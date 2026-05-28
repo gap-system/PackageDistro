@@ -15,37 +15,30 @@ This script installs Ubuntu packages required by the GAP packages specified
 on the command line.
 """
 
-import os
 import sys
-from typing import List, Set
+from typing import Any, Dict, List, Set
 
 from utils import metadata, normalize_pkg_name
 
 # The following maps names of GAP packages to lists of Ubuntu package names.
 # The Ubuntu packages should be installed in order to build and/or use the GAP
-# package
+# package. It serves as a fallback for those packages which do not yet set
+# NeededSystemPackages in their package metadata.
+#
+# This map should be removed once it becomes empty.
 ubtunu_deps = {
-    "4ti2interface": ["4ti2"],
-    "alnuth": ["pari-gp"],
     "browse": ["libncurses5-dev"],
-    "cddinterface": ["libcdd-dev"],
-    "curlinterface": ["libcurl4-openssl-dev"],
-    "float": ["libmpc-dev", "libmpfi-dev", "libmpfr-dev"],
-    "gapdoc": [
-        "texlive-latex-base",
-        "texlive-latex-recommended",
-        "texlive-latex-extra",
-        "texlive-fonts-recommended",
-    ],
     "hap": ["graphviz", "imagemagick"],
-    "localizeringforhomalg": ["singular"],
-    "normalizinterface": ["libnormaliz-dev"],
-    "polymaking": ["polymake"],
-    "ringsforhomalg": ["singular"],
-    "singular": ["singular"],
-    "typeset": ["graphviz", "texlive", "preview-latex-style", "dot2tex"],
-    "zeromqinterface": ["libzmq3-dev"],
 }
+
+
+def metadata_ubuntu_packages(pkg_json: Dict[str, Any]) -> Set[str]:
+    system_packages = pkg_json["Dependencies"].get("NeededSystemPackages", {})
+    return set(package_names[0] for package_names in system_packages.get("Ubuntu", []))
+
+
+def ubuntu_packages(pkg_name: str, pkg_json: Dict[str, Any]) -> Set[str]:
+    return set(ubtunu_deps.get(pkg_name, [])) | metadata_ubuntu_packages(pkg_json)
 
 
 def gather_dependencies(pkg_name: str, seen: set) -> set:
@@ -54,7 +47,7 @@ def gather_dependencies(pkg_name: str, seen: set) -> set:
     except:
         return set()
     seen.add(pkg_name)
-    deps = set(ubtunu_deps.get(pkg_name, []))
+    deps = ubuntu_packages(pkg_name, pkg_json)
 
     tmp = pkg_json["Dependencies"]
     gap_deps = tmp["NeededOtherPackages"]
