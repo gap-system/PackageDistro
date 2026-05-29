@@ -58,7 +58,7 @@ def gather_dependencies(pkg_name: str, seen: set) -> set:
             gap_deps += ext["needed"]
     for pkg, _ in gap_deps:
         pkg = pkg.lower()
-        if not pkg in seen:
+        if not pkg in seen | {"gapdoc"}:
             deps |= gather_dependencies(pkg, seen)
     return deps
 
