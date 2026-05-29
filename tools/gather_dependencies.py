@@ -29,6 +29,7 @@ from utils import metadata, normalize_pkg_name
 ubtunu_deps = {
     "browse": ["libncurses5-dev"],
     "hap": ["graphviz", "imagemagick"],
+    "normalizinterface": ["libnormaliz-dev"],
 }
 
 
