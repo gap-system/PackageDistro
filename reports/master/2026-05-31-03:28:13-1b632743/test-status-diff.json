@@ -1,0 +1,21 @@
+{
+  "current": "master/2026-05-31-03:28:13-1b632743",
+  "last": "master/2026-05-30-03:36:35-1b632743",
+  "total": 172,
+  "failure": 2,
+  "success": 167,
+  "skipped": 3,
+  "failures_changed": [],
+  "failures_current": [
+    "nconvex",
+    "normalizinterface"
+  ],
+  "new": 0,
+  "removed": 0,
+  "failure_changed": 0,
+  "success_changed": 1,
+  "skipped_changed": 0,
+  "failure_same": 2,
+  "success_same": 166,
+  "skipped_same": 3
+}
