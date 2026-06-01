@@ -37,6 +37,23 @@ def collect_package_info(pkgs: List[str]) -> Dict[str, Any]:
     return package_info
 
 
+def normalize_access_permissions(root: str) -> None:
+    for subdir, dirs, files in os.walk(root):
+        os.chmod(subdir, 0o755)
+        for dirname in dirs:
+            dirpath = os.path.join(subdir, dirname)
+            if not os.path.islink(dirpath):
+                os.chmod(dirpath, 0o755)
+        for filename in files:
+            filepath = os.path.join(subdir, filename)
+            if os.path.islink(filepath):
+                continue
+            if os.stat(filepath).st_mode & 0o111:
+                os.chmod(filepath, 0o755)
+            else:
+                os.chmod(filepath, 0o644)
+
+
 def make_packages_tar_gz(
     tarname: str, archive_dir: str, release_dir: str, pkgs: List[str]
 ) -> None:
@@ -70,6 +87,8 @@ def make_packages_tar_gz(
                     os.path.join(unpack, pkg_name), os.path.join(tempdir, pkg_name)
                 )
             os.rmdir(unpack)
+
+        normalize_access_permissions(tempdir)
 
         # cleanup step: remove all PACKAGE/doc/*.aux etc. etc. files
         for ext in [
