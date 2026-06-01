@@ -60,9 +60,10 @@ def gather_dependencies(pkg_name: str, seen: set) -> set:
     for pkg, _ in gap_deps:
         pkg = pkg.lower()
         # Ignore GAPDoc: TeX packages matter when testing GAPDoc itself, but
-        # most recursive GAPDoc users only need it for documentation. See
-        # https://github.com/gap-system/PackageDistro/issues/1400
-        if not pkg in seen | {"gapdoc"}:
+        # most recursive GAPDoc users only need it for documentation. The only
+        # known exception is PackageManager.
+        # See https://github.com/gap-system/PackageDistro/issues/1400
+        if not pkg in seen and (pkg != "gapdoc" or pkg_name == "packagemanager"):
             deps |= gather_dependencies(pkg, seen)
     return deps
 
