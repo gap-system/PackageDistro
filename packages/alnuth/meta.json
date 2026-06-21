@@ -2,20 +2,20 @@
   "AbstractHTML": "The <span class=\"pkgname\">Alnuth</span> package provides various methods to compute with number fields which are given by a defining polynomial or by generators. Some of the methods provided in this package are written in <span class=\"pkgname\">GAP</span> code. The other part of the methods is imported from an another computer algebra system, currently either PARI/GP or OSCAR. Hence this package contains some <span class=\"pkgname\">GAP</span> functions and an interface to some functions in the computer algebra systems PARI/GP and OSCAR. The main methods included in <span class=\"pkgname\">Alnuth</span> are: creating a number field, computing its maximal order (using the external CAS), computing its unit group (using the external CAS) and a presentation of this unit group, computing the elements of a given norm of the number field (using the external CAS), determining a presentation for a finitely generated multiplicative subgroup (using the external CAS), and factoring polynomials defined over number fields (using the external CAS).",
   "AcceptDate": "01/2004",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "73bb248322a8c96f0b2528fcd71ce58952df9fd9d605a3cc75e908a7bf64ac46",
-  "ArchiveSize": 272000,
-  "ArchiveURL": "https://github.com/gap-packages/alnuth/releases/download/v4.0.1/alnuth-4.0.1",
+  "ArchiveSHA256": "056a1f14718a4a8f11ebae3600c007ba38f818c9f7487a0a88b0fe94ee1a9e65",
+  "ArchiveSize": 272005,
+  "ArchiveURL": "https://github.com/gap-packages/alnuth/releases/download/v4.0.2/alnuth-4.0.2",
   "AutoDoc": {
     "entities": {
       "Polycyclic": "<Package>Polycyclic</Package>",
-      "RELEASEDATE": "19 June 2026",
+      "RELEASEDATE": "21 June 2026",
       "RELEASEYEAR": "2026",
-      "VERSION": "4.0.1"
+      "VERSION": "4.0.2"
     }
   },
   "AvailabilityTest": null,
   "CommunicatedBy": "Charles Wright (Eugene)",
-  "Date": "19/06/2026",
+  "Date": "21/06/2026",
   "Dependencies": {
     "ExternalConditions": [
       [
@@ -78,7 +78,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "00c42f81360279ff5261b1335955d5fb56cd478a02438b7181f3e54debf2850b",
+  "PackageInfoSHA256": "26f583ddcf12eb694dcdab205eee0f7cee614d8576a001a15a8b7e860031ea81",
   "PackageInfoURL": "https://gap-packages.github.io/alnuth/PackageInfo.g",
   "PackageName": "Alnuth",
   "PackageWWWHome": "https://gap-packages.github.io/alnuth",
@@ -136,5 +136,5 @@
   "Status": "accepted",
   "Subtitle": "ALgebraic NUmber THeory and an interface to PARI/GP and OSCAR",
   "TestFile": "tst/testall.g",
-  "Version": "4.0.1"
+  "Version": "4.0.2"
 }
