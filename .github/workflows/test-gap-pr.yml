@@ -77,7 +77,7 @@ jobs:
       requester: ${{ steps.resolve.outputs.requester }}
       command: ${{ steps.resolve.outputs.command }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: "Set up Python"
         uses: actions/setup-python@v6
@@ -147,7 +147,7 @@ jobs:
     if: always()
     runs-on: ubuntu-slim
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: "Set up Python"
         uses: actions/setup-python@v6
