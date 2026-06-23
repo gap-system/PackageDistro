@@ -35,7 +35,7 @@ jobs:
     name: "Assemble the package distribution"
     runs-on: ubuntu-slim
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       # Cache the package archives we download across runs of this job
       # to speed up things considerably
