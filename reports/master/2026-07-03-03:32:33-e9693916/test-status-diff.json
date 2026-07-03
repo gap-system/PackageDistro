@@ -1,0 +1,21 @@
+{
+  "current": "master/2026-07-03-03:32:33-e9693916",
+  "last": "master/2026-07-02-03:38:08-e9693916",
+  "total": 172,
+  "failure": 2,
+  "success": 167,
+  "skipped": 3,
+  "failures_changed": [],
+  "failures_current": [
+    "io",
+    "matgrp"
+  ],
+  "new": 0,
+  "removed": 0,
+  "failure_changed": 0,
+  "success_changed": 0,
+  "skipped_changed": 0,
+  "failure_same": 2,
+  "success_same": 167,
+  "skipped_same": 3
+}
