@@ -1,14 +1,14 @@
 {
   "AbstractHTML": "",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "72883759336d8e69f103590cdf4ab90e53e77921ba8fbdb043838e825af1edd0",
-  "ArchiveSize": 189791,
-  "ArchiveURL": "https://github.com/gap-packages/PackageMaker/releases/download/v1.0.1/PackageMaker-1.0.1",
+  "ArchiveSHA256": "3023506e25e4f484a9532665fcdfd484729c6b97743d56b5719e0279b5bcd97f",
+  "ArchiveSize": 189891,
+  "ArchiveURL": "https://github.com/gap-packages/PackageMaker/releases/download/v1.0.2/PackageMaker-1.0.2",
   "AvailabilityTest": null,
-  "Date": "09/05/2026",
+  "Date": "13/07/2026",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">= 4.9",
+    "GAP": ">= 4.13",
     "NeededOtherPackages": [
       [
         "AutoDoc",
@@ -35,7 +35,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "11a4914e16557632d93e9f1873e96a074857261a3c7a12d3597f526bd4874370",
+  "PackageInfoSHA256": "ab26783c6767d12ae7099a28bfa43786827e851dfc36bd4cfa0910ee84c93d7d",
   "PackageInfoURL": "https://gap-packages.github.io/PackageMaker/PackageInfo.g",
   "PackageName": "PackageMaker",
   "PackageWWWHome": "https://gap-packages.github.io/PackageMaker",
@@ -61,5 +61,5 @@
   "Status": "dev",
   "Subtitle": "A GAP package for creating new GAP packages",
   "TestFile": "tst/testall.g",
-  "Version": "1.0.1"
+  "Version": "1.0.2"
 }
