@@ -2,21 +2,16 @@
   "AbstractHTML": "The <span class=\"pkgname\">Automata</span> package, as its name suggests, is package with algorithms to deal with automata.",
   "AcceptDate": "09/2004",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSHA256": "2599cc9dabc885f032425320e2c60cabdb9b781b8b5b6f3f6691b4eac6d60f0a",
-  "ArchiveURL": "https://github.com/gap-packages/automata/releases/download/v1.16/automata-1.16",
-  "Autoload": false,
+  "ArchiveSHA256": "30e5bb54e81a9b35105f2c5734039a58d211d56efe7ba414aaf34287b00b17d8",
+  "ArchiveSize": 791474,
+  "ArchiveURL": "https://github.com/gap-packages/automata/releases/download/v1.17/automata-1.17",
   "AvailabilityTest": null,
   "CommunicatedBy": "Edmund Robertson (St. Andrews)",
-  "Date": "30/08/2024",
+  "Date": "16/07/2026",
   "Dependencies": {
-    "GAP": ">=4.8",
+    "GAP": ">=4.9",
     "NeededOtherPackages": [],
-    "SuggestedOtherPackages": [
-      [
-        "GAPDoc",
-        ">= 1.2"
-      ]
-    ]
+    "SuggestedOtherPackages": []
   },
   "IssueTrackerURL": "https://github.com/gap-packages/automata/issues",
   "Keywords": [
@@ -36,7 +31,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "56a49ccec668d6d03951bd9e9ecf62a27dbf052f1195eb1e6afce05d66ddb39b",
+  "PackageInfoSHA256": "1144eed88c10ceb62ada9cfc2b565c89992f15c5c55827cac456a039f10300d1",
   "PackageInfoURL": "https://gap-packages.github.io/automata/PackageInfo.g",
   "PackageName": "Automata",
   "PackageWWWHome": "https://gap-packages.github.io/automata/",
@@ -68,7 +63,7 @@
       "FirstNames": "Steve",
       "Institution": "School of Computer Science, University of St. Andrews",
       "IsAuthor": true,
-      "IsMaintainer": true,
+      "IsMaintainer": false,
       "LastName": "Linton",
       "Place": "St. Andrews",
       "PostalAddress": "School of Computer Science\nUniversity of St Andrews\nJack Cole Building, North Haugh\nSt Andrews, Fife, KY16 9SX\nUnited Kingdom",
@@ -90,5 +85,5 @@
   "Status": "accepted",
   "Subtitle": "A package on automata",
   "TestFile": "tst/testall.g",
-  "Version": "1.16"
+  "Version": "1.17"
 }
