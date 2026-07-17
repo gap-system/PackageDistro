@@ -1,0 +1,22 @@
+{
+  "current": "master/2026-07-17-03:23:42-908a2552",
+  "last": "master/2026-07-16-20:44:55-3f2ddc7e",
+  "total": 172,
+  "failure": 3,
+  "success": 166,
+  "skipped": 3,
+  "failures_changed": [],
+  "failures_current": [
+    "curlinterface",
+    "matgrp",
+    "utils"
+  ],
+  "new": 0,
+  "removed": 0,
+  "failure_changed": 0,
+  "success_changed": 1,
+  "skipped_changed": 0,
+  "failure_same": 3,
+  "success_same": 165,
+  "skipped_same": 3
+}
