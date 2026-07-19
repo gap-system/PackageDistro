@@ -1,15 +1,16 @@
 {
   "AbstractHTML": "This homalg based package realizes the computability of the Abelian category of finitely presented graded modules over a computable graded ring",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "436542af5e6b8e8844a5e6c6118dd826ecb8ee8861a1f9d18d1d519e8d8949c9",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/GradedModules-2026.04-01/GradedModules-2026.04-01",
+  "ArchiveSHA256": "b2d86b4e5c90c42a3f25f1f981abf3863ffbab9479ad9ef787482434e5685246",
+  "ArchiveSize": 325278,
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/GradedModules-2026.07-01/GradedModules-2026.07-01",
   "AutoDoc": {
     "TitlePage": {
       "Copyright": "&copyright; 2008-2015 by Mohamed Barakat, Sebastian Gutsche, and Markus Lange-Hegermann\n\nThis package may be distributed under the terms and conditions of the GNU Public License Version 2 or (at your option) any later version.\n"
     }
   },
   "AvailabilityTest": null,
-  "Date": "2026-04-10",
+  "Date": "2026-07-19",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.13.0",
@@ -41,10 +42,6 @@
       [
         "Modules",
         ">= 2026.04-01"
-      ],
-      [
-        "GAPDoc",
-        ">= 1.0"
       ]
     ],
     "SuggestedOtherPackages": []
@@ -70,7 +67,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "d7f46a7921c8aaf8beaa842926fe76991cdd81fecd22ce56c1bf72eb8e385526",
+  "PackageInfoSHA256": "0afadd69e3717e0e8a5ba89ac32bb81be1aae35192167c526063e366fe2e99e8",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/GradedModules/PackageInfo.g",
   "PackageName": "GradedModules",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/GradedModules",
@@ -150,5 +147,5 @@
   "Status": "deposited",
   "Subtitle": "A homalg based package for the Abelian category of finitely presented graded modules over computable graded rings",
   "TestFile": "tst/testall.g",
-  "Version": "2026.04-01"
+  "Version": "2026.07-01"
 }

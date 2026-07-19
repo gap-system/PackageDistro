@@ -1,15 +1,16 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">ExamplesForHomalg</span> package provides example scripts for the <span class=\"pkgname\">homalg</span> package that can be used with several computer algebra systems",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "1ada9e4bfce1f6ffde7e707af2f2a7483a0feab6e603148f1403f6febb5183d6",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/ExamplesForHomalg-2025.12-01/ExamplesForHomalg-2025.12-01",
+  "ArchiveSHA256": "40f44e882251ebe81dc43a97f7cc037ca7c55d654ce245aa170888a95277632e",
+  "ArchiveSize": 224926,
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/ExamplesForHomalg-2026.07-01/ExamplesForHomalg-2026.07-01",
   "AutoDoc": {
     "TitlePage": {
       "Copyright": "&copyright; 2008-2015 by Mohamed Barakat, Simon Goertzen, Markus Lange-Hegermann\n\nThis package may be distributed under the terms and conditions of the GNU Public License Version 2 or (at your option) any later version.\n"
     }
   },
   "AvailabilityTest": null,
-  "Date": "2025-12-23",
+  "Date": "2026-07-19",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.13.0",
@@ -37,10 +38,6 @@
       [
         "GaussForHomalg",
         ">=2023.08-01"
-      ],
-      [
-        "GAPDoc",
-        ">= 1.1"
       ]
     ],
     "SuggestedOtherPackages": []
@@ -63,7 +60,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "32424e9486278150e222ee9d3080829e92978f6fabf3cc2ed9f7ebf0cb25d7d6",
+  "PackageInfoSHA256": "3299b852012a23b8a6f3627b8d3391f307f5be6ce7f33f9d380f683a8097f3ee",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/ExamplesForHomalg/PackageInfo.g",
   "PackageName": "ExamplesForHomalg",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/ExamplesForHomalg",
@@ -110,5 +107,5 @@
   "Status": "deposited",
   "Subtitle": "Examples for the GAP Package homalg",
   "TestFile": "tst/testall.g",
-  "Version": "2025.12-01"
+  "Version": "2026.07-01"
 }

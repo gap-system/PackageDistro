@@ -1,10 +1,11 @@
 {
   "AbstractHTML": "This package is part of the homalg-project and manages graded rings.",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "8f8bc8465b934531209b20f4f68a346b29efb4f5d2ca76ce5cfa92737d2b5b99",
-  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/GradedRingForHomalg-2026.04-01/GradedRingForHomalg-2026.04-01",
+  "ArchiveSHA256": "7e1cec873cfffd19fbee6a308d16c8b0ca2887047ea1d8c39c60cebe7ae8cde6",
+  "ArchiveSize": 253105,
+  "ArchiveURL": "https://github.com/homalg-project/homalg_project/releases/download/GradedRingForHomalg-2026.07-01/GradedRingForHomalg-2026.07-01",
   "AvailabilityTest": null,
-  "Date": "2026-04-10",
+  "Date": "2026-07-19",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.13.0",
@@ -28,10 +29,6 @@
       [
         "Modules",
         ">= 2026.04-01"
-      ],
-      [
-        "GAPDoc",
-        ">= 1.0"
       ]
     ],
     "SuggestedOtherPackages": [
@@ -63,7 +60,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "c27672f4179e962f93ee5def1a311c585ab79c70f65d794e6165a5f5f11df39d",
+  "PackageInfoSHA256": "f3729d598c4d68c653dd62f76242cd2d21a5216e5707a0036c975d4a4a5a316d",
   "PackageInfoURL": "https://homalg-project.github.io/homalg_project/GradedRingForHomalg/PackageInfo.g",
   "PackageName": "GradedRingForHomalg",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/GradedRingForHomalg",
@@ -143,5 +140,5 @@
   "Status": "deposited",
   "Subtitle": "Endow Commutative Rings with an Abelian Grading",
   "TestFile": "tst/testall.g",
-  "Version": "2026.04-01"
+  "Version": "2026.07-01"
 }
