@@ -1,20 +1,16 @@
 {
   "AbstractHTML": "",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "bba4ac8190eb9f51a5b645d09aaea7a60e9af949b37e6c8ff8f1d2ce5f4df587",
-  "ArchiveURL": "https://github.com/gap-packages/curlInterface/releases/download/v2.4.3/curlInterface-2.4.3",
+  "ArchiveSHA256": "13c911293923626898e593ef6d0ef23e38d94860efc2586d43a8e30f7baca7f9",
+  "ArchiveSize": 165642,
+  "ArchiveURL": "https://github.com/gap-packages/curlInterface/releases/download/v2.4.4/curlInterface-2.4.4",
   "AvailabilityTest": null,
   "BannerFunction": null,
-  "Date": "22/04/2026",
+  "Date": "19/07/2026",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12",
-    "NeededOtherPackages": [
-      [
-        "GAPDoc",
-        ">= 1.5"
-      ]
-    ],
+    "NeededOtherPackages": [],
     "NeededSystemPackages": {
       "Homebrew": [
         [
@@ -27,7 +23,13 @@
         ]
       ]
     },
-    "SuggestedOtherPackages": []
+    "SuggestedOtherPackages": [],
+    "TestPackages": [
+      [
+        "io",
+        ">= 4.7.0"
+      ]
+    ]
   },
   "IssueTrackerURL": "https://github.com/gap-packages/curlInterface/issues",
   "License": "GPL-2.0-or-later",
@@ -43,7 +45,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "b52f60543c2acee22ccbb625c3c94232ce27bf5a66b4ebb9dc2cdcd84300fdea",
+  "PackageInfoSHA256": "87da6bbae3992c84f50d95a53dad12fbcb4dc10361ddef802b7f139960c81e4a",
   "PackageInfoURL": "https://gap-packages.github.io/curlInterface/PackageInfo.g",
   "PackageName": "curlInterface",
   "PackageWWWHome": "https://gap-packages.github.io/curlInterface/",
@@ -91,5 +93,5 @@
   "Status": "deposited",
   "Subtitle": "Simple Web Access",
   "TestFile": "tst/testall.g",
-  "Version": "2.4.3"
+  "Version": "2.4.4"
 }
