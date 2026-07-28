@@ -2,20 +2,16 @@
   "AbstractHTML": "The <span class=\"smallgrp\">SmallGrp</span> package provides the library of groups of certain \"small\" orders. The groups are sorted by their orders and they are listed up to isomorphism; that is, for each of the available orders a complete and irredundant list of isomorphism type representatives of groups is given.",
   "AcceptDate": "02/2002",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "dea2172de9aa89a128aa8846192b7144df03cf54b12459241db7b5fbb7091905",
-  "ArchiveURL": "https://github.com/gap-packages/SmallGrp/releases/download/v1.5.4/SmallGrp-1.5.4",
+  "ArchiveSHA256": "839820e1f1a5761ab872de6c7cf0cafae004f95ccba33cf245528ad2095e60c7",
+  "ArchiveSize": 20031946,
+  "ArchiveURL": "https://github.com/gap-packages/SmallGrp/releases/download/v1.5.5/SmallGrp-1.5.5",
   "AvailabilityTest": null,
   "CommunicatedBy": "Mike Newman (Canberra)",
-  "Date": "04/07/2024",
+  "Date": "28/07/2026",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.9",
-    "NeededOtherPackages": [
-      [
-        "GAPDoc",
-        ">= 1.5"
-      ]
-    ],
+    "NeededOtherPackages": [],
     "SuggestedOtherPackages": []
   },
   "IssueTrackerURL": "https://github.com/gap-packages/SmallGrp/issues",
@@ -32,7 +28,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "a243807cb009faa7daba0864492d6fdbb4121aec70c87c3b4d783da7d3f52451",
+  "PackageInfoSHA256": "fa83a705d8610940040b7177bc63701501df9a7b74680ed4013ed466de0d221b",
   "PackageInfoURL": "https://gap-packages.github.io/smallgrp/PackageInfo.g",
   "PackageName": "SmallGrp",
   "PackageWWWHome": "https://gap-packages.github.io/smallgrp/",
@@ -46,6 +42,7 @@
     {
       "Email": "beick@tu-bs.de",
       "FirstNames": "Bettina",
+      "GitHubUsername": "beick",
       "Institution": "TU Braunschweig",
       "IsAuthor": true,
       "IsMaintainer": false,
@@ -57,6 +54,7 @@
     {
       "Email": "obrien@math.auckland.ac.nz",
       "FirstNames": "Eamonn",
+      "GitHubUsername": "eamonnaobrien",
       "Institution": "University of Auckland",
       "IsAuthor": true,
       "IsMaintainer": false,
@@ -68,6 +66,7 @@
     {
       "Email": "mhorn@rptu.de",
       "FirstNames": "Max",
+      "GitHubUsername": "fingolfin",
       "Institution": "RPTU Kaiserslautern-Landau",
       "IsAuthor": false,
       "IsMaintainer": true,
@@ -85,5 +84,5 @@
   "Status": "accepted",
   "Subtitle": "The GAP Small Groups Library",
   "TestFile": "tst/testall.g",
-  "Version": "1.5.4"
+  "Version": "1.5.5"
 }
