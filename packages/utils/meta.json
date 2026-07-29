@@ -1,9 +1,9 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">Utils</span> package provides a collection   of utility functions gleaned from many packages.",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "767cf210518e35c2a5457e431aff752ccaf825f013d462bdfb10427f9e9fe224",
-  "ArchiveSize": 468506,
-  "ArchiveURL": "https://github.com/gap-packages/utils/releases/download/v0.96/utils-0.96",
+  "ArchiveSHA256": "107a378faa26be2f51dd5649ba03b8b70d2494b7ece755d1839a349f570d14c0",
+  "ArchiveSize": 469982,
+  "ArchiveURL": "https://github.com/gap-packages/utils/releases/download/v0.97/utils-0.97",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "The &Utils; package provides a space for utility functions in a variety of &GAP; packages to be collected together into a single package.  In this way it is hoped that they will become more visible to package authors.\n<P/>\nAny package author who transfers a function to &Utils; will become an author of &Utils;.\n<P/>\nIf deemed appropriate, functions may also be transferred from the main library.\n<P/>\nBug reports, suggestions and comments are, of course, welcome.\nPlease contact the last author at <Email>cdwensley.maths@btinternet.com</Email> or submit an issue at the GitHub repository <URL>https://github.com/gap-packages/utils/issues/</URL>.\n",
@@ -12,16 +12,22 @@
     }
   },
   "AvailabilityTest": null,
-  "BannerString": "Loading Utils 0.96 - a collection of utility functions.\n",
-  "Date": "06/06/2026",
+  "BannerString": "Loading Utils 0.97 - a collection of utility functions.\n",
+  "Date": "29/07/2026",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">=4.10.1",
+    "GAP": ">=4.12",
     "NeededOtherPackages": [],
     "SuggestedOtherPackages": [
       [
         "curlInterface",
-        ">= 2.3.0"
+        ">= 2.4.0"
+      ]
+    ],
+    "TestPackages": [
+      [
+        "io",
+        ">= 4.7.0"
       ]
     ]
   },
@@ -40,7 +46,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "47588887eadee709844e09b5e0a93caf2e78966e48941c3aa27e7e347d947722",
+  "PackageInfoSHA256": "3df613a922ee2f94735be993398fd6dd4031bb07b9d2f73b9916ff1ee056b27e",
   "PackageInfoURL": "https://gap-packages.github.io/utils/PackageInfo.g",
   "PackageName": "utils",
   "PackageWWWHome": "https://gap-packages.github.io/utils",
@@ -132,5 +138,5 @@
   "Status": "deposited",
   "Subtitle": "Utility functions in GAP",
   "TestFile": "tst/testall.g",
-  "Version": "0.96"
+  "Version": "0.97"
 }
