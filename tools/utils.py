@@ -13,10 +13,24 @@ import os
 import subprocess
 import sys
 import tempfile
+import time
 from os.path import join
 from typing import Any, Dict, List, NoReturn, Tuple
 
 import requests
+
+# Timeouts in seconds, as (connect, read). Without these, a stalled connection
+# blocks forever, which matters for unattended runs (e.g. the mirror on
+# files.gap-system.org). Both are deliberately generous: the point is to bound
+# a hang, not to enforce a fast connection. Poor networks have been observed
+# taking over 20 seconds just to connect to the host serving GitHub release
+# assets, and the read timeout applies between reads, not to the whole
+# download, so a large archive on a slow link is fine.
+DOWNLOAD_TIMEOUT = (30, 60)
+
+# How many times to attempt a download before giving up. Only transient
+# failures are retried; see `_should_retry`.
+DOWNLOAD_ATTEMPTS = 3
 
 
 # print notices in green
@@ -48,19 +62,45 @@ def sha256(fname: str) -> str:
     return hash_archive.hexdigest()
 
 
+def _should_retry(e: requests.RequestException) -> bool:
+    """Return whether the failed request `e` is worth retrying.
+
+    Connection problems and timeouts are transient. So are HTTP 429 (rate
+    limited) and 5xx responses. Anything else -- notably a 404 -- will fail the
+    same way again, so retrying only wastes time.
+    """
+    if isinstance(e, requests.HTTPError) and e.response is not None:
+        return e.response.status_code == 429 or e.response.status_code >= 500
+    return isinstance(e, (requests.ConnectionError, requests.Timeout))
+
+
 def download(url: str, dst: str) -> None:
-    """Download the file at the given URL `url` to the file with path `dst`."""
-    response = requests.get(url, stream=True)
-    response.raise_for_status()  # raise a meaningful (?) exception if there was e.g. a 404 error
-    os.makedirs(os.path.dirname(dst), exist_ok=True)
-    with open(dst, "wb") as f:
-        for chunk in response.raw.stream(16384, decode_content=True):
-            if chunk:
-                f.write(chunk)
+    """Download the file at the given URL `url` to the file with path `dst`.
+
+    Transient failures are retried; if every attempt fails, the underlying
+    `requests.RequestException` is raised.
+    """
+    dst_dir = os.path.dirname(dst)
+    if dst_dir:
+        os.makedirs(dst_dir, exist_ok=True)
+    for attempt in range(1, DOWNLOAD_ATTEMPTS + 1):
+        try:
+            response = requests.get(url, stream=True, timeout=DOWNLOAD_TIMEOUT)
+            response.raise_for_status()  # raise a meaningful (?) exception if there was e.g. a 404 error
+            with open(dst, "wb") as f:
+                for chunk in response.raw.stream(16384, decode_content=True):
+                    if chunk:
+                        f.write(chunk)
+            return
+        except requests.RequestException as e:
+            if attempt == DOWNLOAD_ATTEMPTS or not _should_retry(e):
+                raise
+            warning(f"downloading {url} failed ({e}), retrying")
+            time.sleep(2**attempt)
 
 
 def download_to_memory(url: str) -> bytes:
-    response = requests.get(url)
+    response = requests.get(url, timeout=DOWNLOAD_TIMEOUT)
     response.raise_for_status()
     return response.content
 
