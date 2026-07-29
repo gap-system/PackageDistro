@@ -1,22 +1,23 @@
 {
-  "AbstractHTML": "Library of finite groups with small class number.",
+  "AbstractHTML": "\n    The SmallClassNr package provides access to finite groups with small class\n    number. Currently, the package contains all finite groups of class number\n    at most 14, and most finite groups with class numbers 15 to 20.\n",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "11660362b268576629accd04bbf6617599c5177678729dffe240cebb05652222",
-  "ArchiveSize": 210665,
-  "ArchiveURL": "https://github.com/stertooy/SmallClassNr/releases/download/v1.5.1/SmallClassNr-1.5.1",
-  "Date": "11/05/2026",
+  "ArchiveSHA256": "203a110b4813ac707cbae0f7bdf84ea87992fad3bb264f1e92c9400ed7ae52bc",
+  "ArchiveSize": 278235,
+  "ArchiveURL": "https://github.com/stertooy/SmallClassNr/releases/download/v1.6.0/SmallClassNr-1.6.0",
+  "Date": "29/07/2026",
   "Dependencies": {
     "GAP": ">= 4.14",
     "NeededOtherPackages": [],
-    "SuggestedOtherPackages": [],
+    "SuggestedOtherPackages": [
+      [
+        "smallgrp",
+        "1.5.4"
+      ]
+    ],
     "TestPackages": [
       [
         "primgrp",
         "3.4.4"
-      ],
-      [
-        "smallgrp",
-        "1.5.4"
       ],
       [
         "transgrp",
@@ -29,11 +30,6 @@
     ]
   },
   "IssueTrackerURL": "https://github.com/stertooy/SmallClassNr/issues",
-  "Keywords": [
-    "conjugacy",
-    "conjugacy class",
-    "class number"
-  ],
   "License": "GPL-2.0-or-later",
   "PackageDoc": [
     {
@@ -47,7 +43,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "cd0733f7dd8f8c32ec98153976dbd122b21f76215d6eab37fa20e41c03ab49b9",
+  "PackageInfoSHA256": "d5fb9481291356d21d7ba66bc1490211dce63d71e0dff6f739481b4befb6ddd7",
   "PackageInfoURL": "https://stertooy.github.io/SmallClassNr/PackageInfo.g",
   "PackageName": "SmallClassNr",
   "PackageWWWHome": "https://stertooy.github.io/SmallClassNr",
@@ -73,5 +69,5 @@
   "Subtitle": "Library of finite groups with small class number",
   "SupportEmail": "sam.tertooy@kuleuven.be",
   "TestFile": "tst/testall.g",
-  "Version": "1.5.1"
+  "Version": "1.6.0"
 }
