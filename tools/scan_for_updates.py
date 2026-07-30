@@ -109,6 +109,12 @@ def import_packages(pkginfo_paths: List[str]) -> None:
     pkginfos = parse_pkginfo_files(pkginfo_paths)
     for pkg_json in pkginfos:
         pkgname = pkg_json["PackageName"].lower()
+        # Do this before anything else reads the format: the archive we
+        # download, and hence the checksum and size we record, must be the one
+        # our consumers will use.
+        pkg_json["ArchiveFormats"] = utils.sort_archive_formats(
+            pkg_json["ArchiveFormats"]
+        )
         url = archive_url(pkg_json)
         archive_fname = join(archive_dir, url.split("/")[-1])
         try:

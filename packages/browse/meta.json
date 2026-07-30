@@ -1,8 +1,8 @@
 {
   "AbstractHTML": "The <span class='pkgname'>Browse</span> package provides three levels of functionality</p><ul><li>A <span class='pkgname'>GAP</span> interface to the C-library <a href='http://www.gnu.org/software/ncurses/ncurses.html'>ncurses</a>.</li><li>A generic function for interactive browsing through two-dimensional arrays of data.</li><li>Several applications of the first two, e.g., a method for browsing character tables, browsing through the content of some data collections, or some games.</li></ul><p>",
-  "ArchiveFormats": ".tar.bz2 .tar.gz -win.zip",
-  "ArchiveSHA256": "a367fc74cbcfe9bedc626fff79ce6c5c3ea404c04414f80746cb3ab36acfbb71",
-  "ArchiveSize": 1494440,
+  "ArchiveFormats": ".tar.gz .tar.bz2 -win.zip",
+  "ArchiveSHA256": "90f2e8f71aa4b9276a80370fc2503daeba9d3555e159a968559731da18be6b60",
+  "ArchiveSize": 1856409,
   "ArchiveURL": "https://www.math.rwth-aachen.de/~Browse/Browse-1.8.23",
   "AvailabilityTest": null,
   "Date": "2026-07-30",

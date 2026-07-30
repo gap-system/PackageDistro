@@ -6,6 +6,8 @@
 This module contains some tests for the download_packages.py script
 """
 
+import glob
+import json
 import os
 import runpy
 import shutil
@@ -25,7 +27,14 @@ sys.path.insert(
 from download_packages import ChecksumError, download_archive, main
 
 # TODO: move the tests for these functions to their own test file?
-from utils import _should_retry, archive_name, archive_url, download, metadata
+from utils import (
+    _should_retry,
+    archive_name,
+    archive_url,
+    download,
+    metadata,
+    sort_archive_formats,
+)
 
 
 @pytest.fixture
@@ -73,6 +82,38 @@ def test_archive_name(ensure_in_tests_dir):
         meta = archive_name("badjson")
     assert e.type == SystemExit
     assert e.value.code == 1
+
+
+def test_sort_archive_formats():
+    # A preferred format is moved to the front, others keep their order.
+    assert (
+        sort_archive_formats(".tar.bz2 .tar.gz -win.zip") == ".tar.gz .tar.bz2 -win.zip"
+    )
+    assert sort_archive_formats(".tar.gz .zip") == ".tar.gz .zip"
+    assert sort_archive_formats(".zip .tar.bz2") == ".zip .tar.bz2"
+
+    # Nothing to prefer, and nothing to do.
+    assert sort_archive_formats(".tar.bz2") == ".tar.bz2"
+    assert sort_archive_formats(".tar.gz") == ".tar.gz"
+
+    # Some PackageInfo.g files separate the formats by more than one space.
+    assert (
+        sort_archive_formats(".tar.bz2  .tar.gz   -win.zip")
+        == ".tar.gz .tar.bz2 -win.zip"
+    )
+
+
+def test_distributed_metadata_prefers_tar_gz():
+    # Guard against a package sneaking back in that offers .tar.gz but does not
+    # list it first: the first format is the one we download and mirror, and
+    # some consumers cannot unpack .tar.bz2.
+    root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
+    metas = sorted(glob.glob(join(root, "packages", "*", "meta.json")))
+    assert metas, "found no packages to check"
+    for fname in metas:
+        with open(fname, "r", encoding="utf-8") as f:
+            formats = json.load(f)["ArchiveFormats"]
+        assert formats == sort_archive_formats(formats), fname
 
 
 def test_archive_url():

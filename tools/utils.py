@@ -133,15 +133,38 @@ def metadata(pkg_name: str) -> Dict[str, Any]:
     return pkg_json
 
 
+# Archive formats to put first, in order of preference. Our own tooling uses
+# the first format listed in `ArchiveFormats`: it is the archive we download,
+# checksum, redistribute and mirror to files.gap-system.org, and hence the only
+# one guaranteed to be available from there. Prefer .tar.gz as the most widely
+# supported -- some consumers cannot unpack .tar.bz2 at all.
+PREFERRED_ARCHIVE_FORMATS = [".tar.gz"]
+
+
+def sort_archive_formats(formats: str) -> str:
+    """Reorder a space separated `ArchiveFormats` value, preferred formats first.
+
+    Formats we have no opinion about keep their original relative order.
+    """
+    rank = {fmt: i for i, fmt in enumerate(PREFERRED_ARCHIVE_FORMATS)}
+    unranked = len(PREFERRED_ARCHIVE_FORMATS)
+    return " ".join(sorted(formats.split(), key=lambda f: rank.get(f, unranked)))
+
+
+def archive_format(pkg_json: Dict[str, Any]) -> str:
+    """The archive format the distribution uses for this package."""
+    # Note that `split()` without arguments also copes with the handful of
+    # PackageInfo.g files that separate the formats by more than one space.
+    return pkg_json["ArchiveFormats"].split()[0]
+
+
 def archive_name(pkg_name: str) -> str:
     pkg_json = metadata(pkg_name)
-    return (
-        pkg_json["ArchiveURL"].split("/")[-1] + pkg_json["ArchiveFormats"].split(" ")[0]
-    )
+    return pkg_json["ArchiveURL"].split("/")[-1] + archive_format(pkg_json)
 
 
 def archive_url(pkg_json: Dict[str, Any]) -> str:
-    return pkg_json["ArchiveURL"] + pkg_json["ArchiveFormats"].split(" ")[0]
+    return pkg_json["ArchiveURL"] + archive_format(pkg_json)
 
 
 # https://stackoverflow.com/questions/8299386/modifying-a-symlink-in-python/55742015#55742015
