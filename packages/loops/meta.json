@@ -2,8 +2,9 @@
   "AbstractHTML": "The LOOPS package provides researchers in nonassociative algebra with a computational tool that integrates standard notions of loop theory with libraries of loops and group-theoretical algorithms of GAP. The package also expands GAP toward nonassociative structures.",
   "AcceptDate": "05/2015",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "928b94314330e139b52cb16f7dd0175062e2b621dc5687f2db24a0f8ebee90cc",
-  "ArchiveURL": "https://github.com/gap-packages/loops/releases/download/v3.4.4/loops-3.4.4",
+  "ArchiveSHA256": "ff9009afe500fc29367e4e19f9530bb8e61dbed19833f01b5d22cd0a003daedd",
+  "ArchiveSize": 1070680,
+  "ArchiveURL": "https://github.com/gap-packages/loops/releases/download/v3.4.5/loops-3.4.5",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "The LOOPS package provides researchers in nonassociative algebra with a computational tool that integrates standard notions of loop theory with libraries of loops and group-theoretical algorithms of GAP. The package also expands GAP toward nonassociative structures.",
@@ -14,11 +15,20 @@
   },
   "AvailabilityTest": null,
   "CommunicatedBy": "Leonard Soicher (QMUL)",
-  "Date": "29/08/2024",
+  "Date": "29/07/2026",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">=4.8",
-    "NeededOtherPackages": [],
+    "GAP": ">=4.12",
+    "NeededOtherPackages": [
+      [
+        "SmallGrp",
+        ">=1.0"
+      ],
+      [
+        "TransGrp",
+        ">=3.1"
+      ]
+    ],
     "SuggestedOtherPackages": []
   },
   "IssueTrackerURL": "https://github.com/gap-packages/loops/issues",
@@ -43,7 +53,6 @@
       "ArchiveURLSubset": [
         "doc"
       ],
-      "Autoload": true,
       "BookName": "loops",
       "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "The LOOPS Package: Loops and quasigroups for GAP",
@@ -51,7 +60,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "7ab1f95d423d7682200ed104e4f38bbac869f051abeeb93d1a0f167d9a32aca3",
+  "PackageInfoSHA256": "60d360fb1ff64441f9eb58abc824b302e08066a5d0439b6c656e61dd083f1a9e",
   "PackageInfoURL": "https://gap-packages.github.io/loops/PackageInfo.g",
   "PackageName": "loops",
   "PackageWWWHome": "https://gap-packages.github.io/loops/",
@@ -87,5 +96,5 @@
   "Status": "accepted",
   "Subtitle": "Computing with quasigroups and loops in GAP",
   "TestFile": "tst/testall.g",
-  "Version": "3.4.4"
+  "Version": "3.4.5"
 }
