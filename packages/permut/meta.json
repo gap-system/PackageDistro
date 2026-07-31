@@ -2,14 +2,15 @@
   "AbstractHTML": "This package provides functions for computing with permutability in finite groups.",
   "AcceptDate": "04/2014",
   "ArchiveFormats": ".tar.gz .tar.bz2 .zip",
-  "ArchiveSHA256": "f1ae109af1e6e58675f26c963012ac495b9368e2dd095a93d7b7c2115f1ce98f",
-  "ArchiveURL": "https://github.com/gap-packages/permut/releases/download/v2.0.5/permut-2.0.5",
+  "ArchiveSHA256": "89ccc4a1ffd3dcced48b5b05c5b75d8e9339acc4f49073b262fcad7d7d75ffee",
+  "ArchiveSize": 356271,
+  "ArchiveURL": "https://github.com/gap-packages/permut/releases/download/v2.0.6/permut-2.0.6",
   "AvailabilityTest": null,
   "CommunicatedBy": "Alice Niemeyer (Perth)",
-  "Date": "11/01/2024",
+  "Date": "31/07/2026",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": "4.7.4",
+    "GAP": "4.11",
     "NeededOtherPackages": [
       [
         "format",
@@ -42,7 +43,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "d97282482768ac4d527a33022e2fe3e7bcbda8e9b45bef211d8bea4e1394c766",
+  "PackageInfoSHA256": "3e73366e2f0e8122ff6808a91ae280633188a075f1c12cdbb770a5823d7be06c",
   "PackageInfoURL": "https://gap-packages.github.io/permut/PackageInfo.g",
   "PackageName": "permut",
   "PackageWWWHome": "https://gap-packages.github.io/permut/",
@@ -89,5 +90,5 @@
   "Subtitle": "A package to deal with permutability in finite groups",
   "SupportEmail": "Ramon.Esteban@uv.es",
   "TestFile": "tst/testall.g",
-  "Version": "2.0.5"
+  "Version": "2.0.6"
 }
