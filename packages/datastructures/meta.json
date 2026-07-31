@@ -1,9 +1,9 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">datastructures</span> package provides some    standard data structures.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "2f775ba446ebb9425f77d5407598ab7364a920817713c1e642d0fd513b817c4e",
-  "ArchiveSize": 331731,
-  "ArchiveURL": "https://github.com/gap-packages/datastructures/releases/download/v0.4.2/datastructures-0.4.2",
+  "ArchiveSHA256": "87f49f4215cde3e8bad179fb1f548c83108ec00f9cdcce601b8ba5f2aba3e4bc",
+  "ArchiveSize": 331794,
+  "ArchiveURL": "https://github.com/gap-packages/datastructures/releases/download/v0.4.3/datastructures-0.4.3",
   "AutoDoc": {
     "TitlePage": {
       "Acknowledgements": "We appreciate very much all past and future comments, suggestions and\ncontributions to this package and its documentation provided by &GAP;\nusers and developers.",
@@ -11,7 +11,7 @@
     }
   },
   "AvailabilityTest": null,
-  "Date": "16/07/2026",
+  "Date": "31/07/2026",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12",
@@ -36,7 +36,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "14d77ab95206065a46036bd6e1677d48df804fed44639f3a01d94d91ce8f2d47",
+  "PackageInfoSHA256": "a38cd6929cd6b5e60840623b3f9a7c59164a431f042a6867e2104b0e7a1647c1",
   "PackageInfoURL": "https://gap-packages.github.io/datastructures/PackageInfo.g",
   "PackageName": "datastructures",
   "PackageWWWHome": "https://gap-packages.github.io/datastructures",
@@ -95,5 +95,5 @@
   "Status": "deposited",
   "Subtitle": "Collection of standard data structures for GAP",
   "TestFile": "tst/testall.g",
-  "Version": "0.4.2"
+  "Version": "0.4.3"
 }
