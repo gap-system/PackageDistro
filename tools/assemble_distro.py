@@ -14,7 +14,6 @@ import gzip
 import io
 import json
 import os
-import shutil
 import subprocess
 import sys
 import typing
@@ -22,7 +21,14 @@ from tempfile import TemporaryDirectory
 from typing import Any, Dict, List, Optional
 
 from download_packages import download_archive
-from utils import all_packages, error, metadata, normalize_pkg_name, sha256
+from utils import (
+    all_packages,
+    error,
+    metadata,
+    normalize_pkg_name,
+    sha256,
+    unpack_archive,
+)
 
 
 def write_sha256(filename: str) -> None:
@@ -69,7 +75,7 @@ def make_packages_tar_gz(
             # Unpack into packagename-unpack
             unpack = os.path.join(tempdir, pkg_name + "-unpack")
             os.mkdir(unpack)
-            shutil.unpack_archive(pkg_archive, unpack)
+            unpack_archive(pkg_archive, unpack)
             # Check there is only one directory. Rename it to standardised name (pkg_name)
             pkgdirs = os.listdir(unpack)
             if len(pkgdirs) == 0:
