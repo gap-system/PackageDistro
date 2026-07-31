@@ -86,30 +86,35 @@ def test_scan_for_one_update(ensure_in_tests_dir, tmpdir):
 def test_scan_updates(ensure_in_tests_dir, tmpdir):
     if shutil.which("gap") == None:
         return
-    with pytest.raises(SystemExit) as e:
-        scan_for_updates(str(tmpdir), True)
-    # fails because badjson is considered and bad!
-    assert e.type == SystemExit
-    assert e.value.code == 1
-    reset()
+    try:
+        with pytest.raises(SystemExit) as e:
+            # fails because badjson is considered and bad!
+            scan_for_updates(["aclib", "badjson"], str(tmpdir), True)
+        assert e.type == SystemExit
+        assert e.value.code == 1
+    finally:
+        reset()
 
 
 def test_main(ensure_in_tests_dir):
     if shutil.which("gap") == None:
         return
-    shutil.rmtree("packages/badjson")
+    # a leftover _pkginfos directory must not upset the scan
     os.mkdir("_pkginfos")
     os.system("touch _pkginfos/.fakefile")
-    main()
-    reset()
+    try:
+        main(["aclib"])
+    finally:
+        reset()
 
 
 def test_main_again(ensure_in_tests_dir):
     if shutil.which("gap") == None:
         return
-    shutil.rmtree("packages/badjson")
-    main()
-    reset()
+    try:
+        main(["aclib"])
+    finally:
+        reset()
 
 
 def test_import_packages_records_archive_size(ensure_in_tests_dir, tmpdir):
