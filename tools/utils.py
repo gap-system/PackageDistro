@@ -10,8 +10,10 @@
 import hashlib
 import json
 import os
+import shutil
 import subprocess
 import sys
+import tarfile
 import tempfile
 import time
 from os.path import join
@@ -97,6 +99,24 @@ def download(url: str, dst: str) -> None:
                 raise
             warning(f"downloading {url} failed ({e}), retrying")
             time.sleep(2**attempt)
+
+
+def unpack_archive(archive: str, dst: str) -> None:
+    """Unpack the archive `archive` into the directory `dst`.
+
+    Tar archives are extracted using the "data" extraction filter, which
+    refuses entries that would write outside `dst`. Python 3.14 applies that
+    filter by default and warns about relying on the old, unfiltered behaviour;
+    naming it here keeps extraction identical across Python versions.
+
+    Extraction filters are a tar concept, and `shutil` rejects the argument for
+    other formats, so zip archives are simply unpacked as before.
+    """
+    if tarfile.is_tarfile(archive):
+        with tarfile.open(archive) as tf:
+            tf.extractall(dst, filter="data")
+    else:
+        shutil.unpack_archive(archive, dst)
 
 
 def download_to_memory(url: str) -> bytes:

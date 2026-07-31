@@ -28,7 +28,6 @@ name, or the path to a meta.json file. For example:
 """
 
 import os
-import shutil
 import sys
 import tarfile
 from os.path import join
@@ -118,7 +117,7 @@ def main(pkgs: List[str]) -> None:
             try:
                 archive_fname = download_archive(archive_dir, pkg_name)
                 pkgdir = join(tempdir, validate_tarball(archive_fname))
-                shutil.unpack_archive(archive_fname, tempdir)
+                utils.unpack_archive(archive_fname, tempdir)
                 validate_package(archive_fname, pkgdir, pkg_name)
                 result = utils.gap_exec2(
                     f'ValidatePackagesArchive("{pkgdir}", "{pkg_name}");',
