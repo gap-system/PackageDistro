@@ -134,6 +134,10 @@ For example, the SHA256 in this excerpt of a `meta.json` file refers to the
     "ArchiveSHA256": "15c516d89863916ef8f4b0d5c68f5b79cb41b75741fc3b604a6a868569dcda38",
     "ArchiveURL": "https://github.com/homalg-project/ToricVarieties_project/releases/download/2022-03-04/ToricVarieties",
 
+Note that `ArchiveFormats` is not necessarily in the same order as in the
+package's `PackageInfo.g`: when importing a package we move `.tar.gz` to the
+front if the package offers it.
+
 
 ### GitHub Workflows
 

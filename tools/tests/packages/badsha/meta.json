@@ -1,0 +1,7 @@
+{
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSHA256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "ArchiveURL": "https://example.com/badsha/badsha-1.0",
+  "PackageName": "badsha",
+  "Version": "1.0"
+}

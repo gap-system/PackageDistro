@@ -1,0 +1,7 @@
+{
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSHA256": "45ec324678494670098df213a3b5dbcf8a8fec20bd8c53389ba1f9c4f72b2383",
+  "ArchiveURL": "https://example.com/goodsha/goodsha-1.0",
+  "PackageName": "goodsha",
+  "Version": "1.0"
+}
