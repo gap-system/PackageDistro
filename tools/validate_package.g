@@ -78,7 +78,8 @@ end;
 # - the package at <unpacked_dir>/<nam> is not a dev version
 #   (according to its version number),
 # - the version number in <nam>/meta.json is *strictly larger than*
-#   the version number in <nam>/meta.json.old,
+#   the version number in <nam>/meta.json.old, provided the package
+#   actually released something new (see below),
 # - the release date in <nam>/meta.json is *at least* the release date
 #   in <nam>/meta.json.old.
 # - the release date in <nam>/meta.json is not more than one day in the future
@@ -117,7 +118,14 @@ ValidatePackagesArchive := function(unpacked_dir, pkgnames)
       if json_old <> fail then
         json_old := JsonStringToGap(json_old);
       fi;
-      if json_old <> fail and json <> json_old and
+      # A package must not ship different content under a version number it
+      # already used. What tells us it did is a change of the checksums, not a
+      # change of the metadata as a whole: we also edit meta.json ourselves,
+      # e.g. to normalize a field or to add one, and such an edit is not a
+      # release and hence needs no new version number.
+      if json_old <> fail and
+         (json.ArchiveSHA256 <> json_old.ArchiveSHA256 or
+          json.PackageInfoSHA256 <> json_old.PackageInfoSHA256) and
          CompareVersionNumbers(json_old.Version, json.Version) then
         PrintToFormatted("*errout*",
                          Concatenation("\033[33m{}: current release version is {},",
