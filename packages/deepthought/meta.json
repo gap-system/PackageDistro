@@ -1,24 +1,27 @@
 {
   "AbstractHTML": "This package provides functions for computations in finitely generated nilpotent groups based on the Deep Thought algorithm.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "4eda8cddaa8987473b963c740d6f1f647099a92112a1e7c8bba4fff7515fb5e4",
-  "ArchiveURL": "https://github.com/gap-packages/DeepThought/releases/download/v1.0.9/DeepThought-1.0.9",
+  "ArchiveSHA256": "6dd757a515e83284658b9e51375117fff9ddc304ae366946c41d423fe2f6d90e",
+  "ArchiveSize": 254199,
+  "ArchiveURL": "https://github.com/gap-packages/DeepThought/releases/download/v1.0.10/DeepThought-1.0.10",
   "AvailabilityTest": null,
-  "Date": "20/06/2025",
+  "Date": "01/08/2026",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12",
     "NeededOtherPackages": [
       [
-        "GAPDoc",
-        ">= 1.5"
-      ],
-      [
         "polycyclic",
         ">= 2.11"
       ]
     ],
-    "SuggestedOtherPackages": []
+    "SuggestedOtherPackages": [],
+    "TestPackages": [
+      [
+        "SmallGrp",
+        ">= 1.0"
+      ]
+    ]
   },
   "IssueTrackerURL": "https://github.com/gap-packages/DeepThought/issues",
   "Keywords": [
@@ -39,7 +42,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "0f5d8c5f2af1263478ac4bfba9a7d05efec605797abf3a165ac3650d27fc799a",
+  "PackageInfoSHA256": "f3a1e572de8e144d22a7dcef4ecf8d00c5df67efe9f4f639028c6a3ee05c503b",
   "PackageInfoURL": "https://gap-packages.github.io/DeepThought/PackageInfo.g",
   "PackageName": "DeepThought",
   "PackageWWWHome": "https://gap-packages.github.io/DeepThought/",
@@ -54,6 +57,7 @@
     {
       "Email": "mhorn@rptu.de",
       "FirstNames": "Max",
+      "GitHubUsername": "fingolfin",
       "Institution": "RPTU Kaiserslautern-Landau",
       "IsAuthor": false,
       "IsMaintainer": true,
@@ -71,5 +75,5 @@
   "Status": "deposited",
   "Subtitle": "This package provides functions for computations in finitely generated nilpotent groups based on the Deep Thought algorithm.",
   "TestFile": "tst/testall.g",
-  "Version": "1.0.9"
+  "Version": "1.0.10"
 }
