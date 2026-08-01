@@ -218,3 +218,8 @@ Some more details:
     currently are lenient there and include custom treatment for a bunch of
     packages (for details see the "Run tests with OnlyNeeded" step in
     `.github/workflows/test-all.yml`)
+  - start GAP, do `LoadPackage("pkgname" : OnlyNeeded)` and check whether GAP
+    printed any syntax errors or warnings for files of `pkgname` while doing so
+    - such messages do not make loading fail, so nothing else notices them, but
+      they look alarming to users and almost always indicate a genuine mistake
+      in the package, which we then report upstream

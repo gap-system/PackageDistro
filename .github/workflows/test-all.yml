@@ -433,6 +433,25 @@ jobs:
                 FORCE_QUIT_GAP(res);
                 "
 
+      # Loading a package can print syntax errors and warnings without loading
+      # itself failing, so neither of the two steps above notices them. Look
+      # for them in a separate step, which we can do in a fresh GAP session
+      # without the workarounds above, as those are only needed for the tests.
+      #
+      # We only load with 'OnlyNeeded': fewer global variables are bound then
+      # than with a default load, so this is the setting in which GAP reports
+      # the most problems.
+      - name: "Check for syntax warnings when loading"
+        timeout-minutes: 10
+        if: always()
+        id: syntax-warnings
+        run: |
+          PKG=${{ matrix.package }}
+          gap -A --quitonbreak -r -c "
+                Read(\"tools/check_syntax_warnings.g\");
+                FORCE_QUIT_GAP(LoadPackageAndCheckSyntax(\"$PKG\" : OnlyNeeded));
+                "
+
   report:
     name: "Generate report"
     needs: [build, test-package]
