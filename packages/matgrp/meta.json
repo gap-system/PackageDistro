@@ -6,7 +6,7 @@
   "ArchiveURL": "https://www.math.colostate.edu/~hulpke/matgrp/matgrp0.75",
   "AvailabilityTest": null,
   "BannerString": "Matrix Group Interface routines 0.75 by A. Hulpke\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n",
-  "Date": "13/07/2026",
+  "Date": "2026-07-13",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.12",

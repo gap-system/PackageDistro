@@ -17,7 +17,7 @@
   },
   "AvailabilityTest": null,
   "BannerString": "-----------------------------------------------------------------------------\nSmallsemi -   A library of small semigroups\nby Andreas Distler & James Mitchell\nFor contents, type: ?Smallsemi:\nLoading Smallsemi 0.7.2 ...\n-----------------------------------------------------------------------------\n",
-  "Date": "25/02/2025",
+  "Date": "2025-02-25",
   "Dependencies": {
     "ExternalConditions": [
       "gzip is needed in standard location if data files are used uncompressed"

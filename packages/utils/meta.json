@@ -13,7 +13,7 @@
   },
   "AvailabilityTest": null,
   "BannerString": "Loading Utils 0.97 - a collection of utility functions.\n",
-  "Date": "29/07/2026",
+  "Date": "2026-07-29",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.12",

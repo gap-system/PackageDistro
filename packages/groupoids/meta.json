@@ -14,7 +14,7 @@
   "AvailabilityTest": null,
   "BannerString": "Loading groupoids 1.81 (algorithms for finite groupoids)\nby Emma Moore and Chris Wensley (https://github.com/cdwensley)\n--------------------------------------------------------------\n",
   "CommunicatedBy": "Derek Holt (Warwick)",
-  "Date": "26/11/2025",
+  "Date": "2025-11-26",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10.1",

@@ -16,7 +16,7 @@
   "AvailabilityTest": null,
   "BannerString": "---------------------------------------------------------------------\n             ______________       ________      _________            \n             ___  ____/__(_)__________  _/________  ____/            \n             __  /_   __  /__  __ __  / __  __   / __              \n             _  __/   _  / _  / / /_/ /  _  / / / /_/ /              \n             /_/      /_/  /_/ /_//___/  /_/ /_/____/               \n---------------------------------------------------------------------\nLoading  FinInG 1.5.6 (Finite Incidence Geometry) \nby John Bamberg (http://school.maths.uwa.edu.au/~bamberg/)\n   Anton Betten (http://www.math.colostate.edu/~betten)\n   Philippe Cara (http://homepages.vub.ac.be/~pcara)\n   Jan De Beule (http://www.debeule.eu)\n   Michel Lavrauw (http://people.sabanciuniv.edu/~mlavrauw/)\n   Max Neunhoeffer (http://www-groups.mcs.st-and.ac.uk/~neunhoef/)\nFor help, type: ?FinInG \n---------------------------------------------------------------------\n",
   "CommunicatedBy": "Olexandr Konovalov (St Andrews)",
-  "Date": "27/07/2023",
+  "Date": "2023-07-27",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10",

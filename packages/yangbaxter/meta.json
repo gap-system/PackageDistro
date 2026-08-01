@@ -4,7 +4,7 @@
   "ArchiveSHA256": "9ba7bed677adccc51b5fdf161540da07167166cf84588b10ef4b358e53ca297d",
   "ArchiveURL": "https://github.com/gap-packages/YangBaxter/releases/download/v0.10.7/YangBaxter-0.10.7",
   "AvailabilityTest": null,
-  "Date": "14/07/2025",
+  "Date": "2025-07-14",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.9",

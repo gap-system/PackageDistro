@@ -5,7 +5,7 @@
   "ArchiveSize": 107842,
   "ArchiveURL": "https://github.com/gap-packages/json/releases/download/v2.4.0/json-2.4.0",
   "AvailabilityTest": null,
-  "Date": "08/05/2026",
+  "Date": "2026-05-08",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12",

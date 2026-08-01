@@ -12,7 +12,7 @@
   },
   "AvailabilityTest": null,
   "CommunicatedBy": "Alexander Hulpke (Colorado State)",
-  "Date": "14/09/2019",
+  "Date": "2019-09-14",
   "Dependencies": {
     "GAP": "4.9",
     "NeededOtherPackages": [

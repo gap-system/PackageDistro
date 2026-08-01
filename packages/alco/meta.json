@@ -18,7 +18,7 @@
   },
   "AvailabilityTest": null,
   "BannerString": "----------------------------------------------------------------\nLoading  ALCO 1.1.2\t(Tools for Algebraic Combinatorics)\nby Benjamin Nasmith (https://github.com/BNasmith/)\nThis program is distributed under GNU General Public License 3.0\n----------------------------------------------------------------\n",
-  "Date": "05/09/2025",
+  "Date": "2025-09-05",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": "4.14",

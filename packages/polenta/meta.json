@@ -12,7 +12,7 @@
   },
   "AvailabilityTest": null,
   "CommunicatedBy": "Charles Wright (Eugene)",
-  "Date": "10/04/2025",
+  "Date": "2025-04-10",
   "Dependencies": {
     "GAP": ">= 4.7",
     "NeededOtherPackages": [

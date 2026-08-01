@@ -4,7 +4,7 @@
   "ArchiveSHA256": "e9cb319ad599643259b8e8bb680a8a293fb29db2aff2b27cd8c358351b4d00f1",
   "ArchiveURL": "https://github.com/nathancarter/jupyterviz/releases/download/v1.5.6/jupyterviz-1.5.6",
   "AvailabilityTest": null,
-  "Date": "16/08/2022",
+  "Date": "2022-08-16",
   "Dependencies": {
     "GAP": ">= 4.9",
     "NeededOtherPackages": [

@@ -5,7 +5,7 @@
   "ArchiveSize": 327392,
   "ArchiveURL": "https://github.com/gap-packages/walrus/releases/download/v0.9993/walrus-0.9993",
   "AvailabilityTest": null,
-  "Date": "29/07/2026",
+  "Date": "2026-07-29",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.10",

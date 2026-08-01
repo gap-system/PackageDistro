@@ -11,7 +11,7 @@
     }
   },
   "AvailabilityTest": null,
-  "Date": "24/03/2026",
+  "Date": "2026-03-24",
   "Dependencies": {
     "ExternalConditions": [
       "polymake (https://polymake.org) must be installed to calculate resolutions"

@@ -6,7 +6,7 @@
   "ArchiveURL": "https://github.com/gap-packages/curlInterface/releases/download/v2.4.4/curlInterface-2.4.4",
   "AvailabilityTest": null,
   "BannerFunction": null,
-  "Date": "19/07/2026",
+  "Date": "2026-07-19",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12",

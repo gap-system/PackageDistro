@@ -5,7 +5,7 @@
   "ArchiveSize": 394386,
   "ArchiveURL": "https://github.com/gap-packages/profiling/releases/download/v2.6.3/profiling-2.6.3",
   "AvailabilityTest": null,
-  "Date": "29/07/2026",
+  "Date": "2026-07-29",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12",

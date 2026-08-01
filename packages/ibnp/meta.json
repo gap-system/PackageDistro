@@ -15,7 +15,7 @@
   "AvailabilityTest": null,
   "BannerString": "Loading IBNP 0.18 (Involutive Bases for Noncommutative Polynomials)\nby Gareth Evans and Chris Wensley (https://github.com/cdwensley).\nReport issues at https://github.com/gap-packages/ibnp/issues.\n--------------------------------------------------------------------\n",
   "CommunicatedBy": "",
-  "Date": "04/11/2025",
+  "Date": "2025-11-04",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.13.0",

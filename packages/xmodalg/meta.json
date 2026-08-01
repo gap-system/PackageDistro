@@ -14,7 +14,7 @@
   "AvailabilityTest": null,
   "BannerString": "-----------------------------------------------------------------------------\nLoading XModAlg 1.32 (11/04/2025) for GAP 4.14 \nMethods for crossed modules of commutative algebras and cat1-algebras\nby Zekeriya Arvasi (zarvasi@ogu.edu.tr) and Alper Odabas (aodabas@ogu.edu.tr).\n-----------------------------------------------------------------------------\n",
   "CommunicatedBy": "",
-  "Date": "11/04/2025",
+  "Date": "2025-04-11",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.12.0",

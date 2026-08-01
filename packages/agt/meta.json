@@ -4,7 +4,7 @@
   "ArchiveSHA256": "289f2519e158d3e5473ead800355f6751413d75dbe5afe817bb9076604d3ce34",
   "ArchiveURL": "https://github.com/gap-packages/AGT/releases/download/v0.3.1/AGT-0.3.1",
   "AvailabilityTest": null,
-  "Date": "31/12/2022",
+  "Date": "2022-12-31",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.10",

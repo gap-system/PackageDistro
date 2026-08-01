@@ -12,7 +12,7 @@
     }
   },
   "AvailabilityTest": null,
-  "Date": "28/07/2026",
+  "Date": "2026-07-28",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": "4.10.0",

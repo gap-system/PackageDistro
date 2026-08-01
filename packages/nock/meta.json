@@ -14,7 +14,7 @@
   "AvailabilityTest": null,
   "BannerString": "----------------------------------------------------------------\nNoCK Package 1.5\nby Maciej Bocheński, Piotr Jastrzębski, Anna Szczepkowska, Aleksy Tralle, Artur Woike.\n----------------------------------------------------------------\n",
   "CommunicatedBy": "Leonard Soicher (QMUL)",
-  "Date": "30/03/2022",
+  "Date": "2022-03-30",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.8",

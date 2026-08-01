@@ -8,7 +8,7 @@
   "AvailabilityTest": null,
   "BannerString": "Loading lpres 1.1.2 ...\n",
   "CommunicatedBy": "Olexandr Konovalov (St Andrews)",
-  "Date": "22/05/2026",
+  "Date": "2026-05-22",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.9",

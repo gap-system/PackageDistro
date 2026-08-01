@@ -16,7 +16,7 @@
   "AvailabilityTest": null,
   "BannerString": "Loading simpcomp 2.1.14\nby F. Effenberger and J. Spreer\nhttps://github.com/simpcomp-team/simpcomp\n",
   "CommunicatedBy": "Graham Ellis (Galway)",
-  "Date": "15/03/2022",
+  "Date": "2022-03-15",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.5",

@@ -15,7 +15,7 @@
   "AvailabilityTest": null,
   "BannerString": "\nLoading RCWA 4.10.0 ([R]esidue-[C]lass-[W]ise [A]ffine groups)\n  by Stefan Kohl, sk239@st-andrews.ac.uk.\nSee ?RCWA:About for information about the package.\n\n",
   "CommunicatedBy": "Bettina Eick (Braunschweig)",
-  "Date": "30/07/2026",
+  "Date": "2026-07-30",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.12.0",

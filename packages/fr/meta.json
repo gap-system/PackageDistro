@@ -14,7 +14,7 @@
   "AvailabilityTest": null,
   "BannerString": "Loading FR 2.4.13 ...\n",
   "CommunicatedBy": "Götz Pfeiffer (NUI Galway)",
-  "Date": "11/01/2024",
+  "Date": "2024-01-11",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.8",

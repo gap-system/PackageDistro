@@ -13,7 +13,7 @@
   },
   "AvailabilityTest": null,
   "CommunicatedBy": "Gerhard Hiss (Aachen)",
-  "Date": "26/12/2025",
+  "Date": "2025-12-26",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.8",

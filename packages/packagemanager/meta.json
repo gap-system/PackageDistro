@@ -4,7 +4,7 @@
   "ArchiveSHA256": "db852b5dcdd60697e1588fb4997fd33e8a33dfa4f784b6e702d1b9e0509b729b",
   "ArchiveURL": "https://github.com/gap-packages/PackageManager/releases/download/v1.6.3/PackageManager-1.6.3",
   "AvailabilityTest": null,
-  "Date": "14/05/2025",
+  "Date": "2025-05-14",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12",

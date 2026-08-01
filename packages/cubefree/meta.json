@@ -6,7 +6,7 @@
   "ArchiveURL": "https://github.com/gap-packages/cubefree/releases/download/v1.21/cubefree-1.21",
   "AvailabilityTest": null,
   "CommunicatedBy": "David Joyner (Annapolis)",
-  "Date": "29/08/2025",
+  "Date": "2025-08-29",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.9",

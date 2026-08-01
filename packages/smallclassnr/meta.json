@@ -4,7 +4,7 @@
   "ArchiveSHA256": "203a110b4813ac707cbae0f7bdf84ea87992fad3bb264f1e92c9400ed7ae52bc",
   "ArchiveSize": 278235,
   "ArchiveURL": "https://github.com/stertooy/SmallClassNr/releases/download/v1.6.0/SmallClassNr-1.6.0",
-  "Date": "29/07/2026",
+  "Date": "2026-07-29",
   "Dependencies": {
     "GAP": ">= 4.14",
     "NeededOtherPackages": [],

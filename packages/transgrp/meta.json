@@ -4,7 +4,7 @@
   "ArchiveSHA256": "6f2ec142a004f9d5e3b28bfa03246472fee93ceb12837206960bcb560eb72376",
   "ArchiveURL": "https://www.math.colostate.edu/~hulpke/transgrp/transgrp3.6.5",
   "AvailabilityTest": null,
-  "Date": "15/12/2023",
+  "Date": "2023-12-15",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.9",

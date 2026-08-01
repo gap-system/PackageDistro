@@ -4,7 +4,7 @@
   "ArchiveSHA256": "94d541108315bb86ccb93300409e377fa3f83e320882a0173bb2cbe3092716d7",
   "ArchiveURL": "https://github.com/gap-packages/WPE/releases/download/v0.8/WPE-0.8",
   "AvailabilityTest": null,
-  "Date": "21/10/2024",
+  "Date": "2024-10-21",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.13",

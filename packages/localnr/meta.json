@@ -6,7 +6,7 @@
   "ArchiveURL": "https://github.com/gap-packages/LocalNR/releases/download/v2.1.0/LocalNR-2.1.0",
   "AvailabilityTest": null,
   "BannerString": "-------------------------------------------------------------------------------------\nLoading LocalNR 2.1.0\nby Yaroslav Sysak (https://www.imath.kiev.ua/~algebra/Sysak/)\nwith contributions by:\nIryna Raievska (https://www.imath.kiev.ua/~algebra/Raievska_I/)\n and Maryna Raievska (https://www.imath.kiev.ua/~algebra/Raievska_M/)\n\n LocalNR - a package of local nearrings\n https://gap-packages.github.io/LocalNR/\n ----------------------------------------------------------------------------- \n",
-  "Date": "22/05/2026",
+  "Date": "2026-05-22",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10.0",

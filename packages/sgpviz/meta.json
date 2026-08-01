@@ -5,7 +5,7 @@
   "ArchiveURL": "https://github.com/gap-packages/sgpviz/releases/download/v0.999.6/SgpViz-0.999.6",
   "AvailabilityTest": null,
   "BannerString": "----------------------------------------------------------------\nLoading  SgpViz 0.999.6(semigroup visualization)\nFor help, type: ?SgpViz: \n----------------------------------------------------------------\n",
-  "Date": "30/08/2024",
+  "Date": "2024-08-30",
   "Dependencies": {
     "GAP": ">=4.4",
     "NeededOtherPackages": [

@@ -13,7 +13,7 @@
   },
   "AvailabilityTest": null,
   "CommunicatedBy": "Bettina Eick (Braunschweig)",
-  "Date": "24/09/2025",
+  "Date": "2025-09-24",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.8",

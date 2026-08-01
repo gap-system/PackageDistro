@@ -14,7 +14,7 @@
   "AvailabilityTest": null,
   "BannerString": "\nThis is CRIME, Version 1.6\n\"Obviously crime pays, or there'd be no crime\".\n                                G. Gordon Liddy\n\n",
   "CommunicatedBy": "Bettina Eick (Braunschweig)",
-  "Date": "17/03/2022",
+  "Date": "2022-03-17",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.9",

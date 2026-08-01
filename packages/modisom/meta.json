@@ -7,7 +7,7 @@
   "AvailabilityTest": null,
   "BannerString": "Loading ModIsom 3.1.0... \n",
   "CommunicatedBy": "Olexandr Konovalov (St Andrews)",
-  "Date": "09/01/2026",
+  "Date": "2026-01-09",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10",

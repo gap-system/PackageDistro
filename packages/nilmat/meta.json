@@ -8,7 +8,7 @@
   "AvailabilityTest": null,
   "BannerString": "Loading Nilmat 1.4.2...\n",
   "CommunicatedBy": "Derek Holt (Warwick)",
-  "Date": "05/08/2022",
+  "Date": "2022-08-05",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.8",

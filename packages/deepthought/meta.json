@@ -5,7 +5,7 @@
   "ArchiveSize": 254199,
   "ArchiveURL": "https://github.com/gap-packages/DeepThought/releases/download/v1.0.10/DeepThought-1.0.10",
   "AvailabilityTest": null,
-  "Date": "01/08/2026",
+  "Date": "2026-08-01",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12",

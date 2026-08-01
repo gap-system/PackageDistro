@@ -5,7 +5,7 @@
   "ArchiveSize": 418948,
   "ArchiveURL": "https://github.com/gap-packages/ClassicalMaximals/releases/download/v1.1/ClassicalMaximals-1.1",
   "AvailabilityTest": null,
-  "Date": "26/05/2026",
+  "Date": "2026-05-26",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.15",

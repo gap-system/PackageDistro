@@ -4,7 +4,7 @@
   "ArchiveSHA256": "d1c3785859aaad302fbe1b6403c4f204ed6577291058830703266d939bb8db4b",
   "ArchiveURL": "https://github.com/gap-packages/typeset/releases/download/v1.2.4/typeset-1.2.4",
   "AvailabilityTest": null,
-  "Date": "28/04/2026",
+  "Date": "2026-04-28",
   "Dependencies": {
     "ExternalConditions": [
       [

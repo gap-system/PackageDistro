@@ -107,6 +107,11 @@ def validate_package(archive_fname: str, pkgdir: str, pkg_name: str) -> None:
     if pkg_json["ArchiveSHA256"] != sha256(archive_fname):
         error(f"{pkg_name}: ArchiveSHA256 is not the SHA256 of {archive_fname}")
 
+    # `scan_for_updates.py` stores the release date in ISO format; catch
+    # hand-edited metadata that reverts to the traditional DD/MM/YYYY
+    if pkg_json["Date"] != utils.normalize_date(pkg_json["Date"]):
+        error(f"{pkg_name}: Date {pkg_json['Date']} is not in YYYY-MM-DD format")
+
 
 def main(pkgs: List[str]) -> None:
     archive_dir = "_archives"

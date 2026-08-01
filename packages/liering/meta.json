@@ -14,7 +14,7 @@
   "AvailabilityTest": null,
   "BannerString": "LieRing\n a package for working with Lie rings \n by Serena Cicalò and Willem de Graaf\n",
   "CommunicatedBy": "Max Neunhoeffer (Cologne)",
-  "Date": "10/02/2022",
+  "Date": "2022-02-10",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.8",

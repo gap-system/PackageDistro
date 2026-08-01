@@ -7,7 +7,7 @@
   "ArchiveURL": "https://github.com/gap-packages/permut/releases/download/v2.0.6/permut-2.0.6",
   "AvailabilityTest": null,
   "CommunicatedBy": "Alice Niemeyer (Perth)",
-  "Date": "31/07/2026",
+  "Date": "2026-07-31",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": "4.11",

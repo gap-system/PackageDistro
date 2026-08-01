@@ -13,7 +13,7 @@
   "AvailabilityTest": null,
   "BannerString": "Loading nq 2.5.11 (Nilpotent Quotient Algorithm)\n  by Werner Nickel\n  maintained by Max Horn (mhorn@rptu.de)\n",
   "CommunicatedBy": "Joachim Neubüser (RWTH Aachen)",
-  "Date": "12/01/2024",
+  "Date": "2024-01-12",
   "Dependencies": {
     "ExternalConditions": [
       "needs a UNIX system with C-compiler",

@@ -7,7 +7,7 @@
   "ArchiveURL": "https://github.com/gap-packages/grpconst/releases/download/v2.6.6/grpconst-2.6.6",
   "AvailabilityTest": null,
   "CommunicatedBy": "Charles Wright (Eugene)",
-  "Date": "21/07/2026",
+  "Date": "2026-07-21",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.11",

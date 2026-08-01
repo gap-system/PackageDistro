@@ -15,7 +15,7 @@
   "AvailabilityTest": null,
   "BannerString": "Loading Kan 1.37 (computing with Kan extensions)\nby Anne Heyworth and Chris Wensley (https://github.com/cdwensley)\n-----------------------------------------------------------------------\n",
   "CommunicatedBy": "Leonard Soicher (QMUL)",
-  "Date": "23/01/2024",
+  "Date": "2024-01-23",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.11.0",

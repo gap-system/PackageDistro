@@ -5,7 +5,7 @@
   "ArchiveSize": 189891,
   "ArchiveURL": "https://github.com/gap-packages/PackageMaker/releases/download/v1.0.2/PackageMaker-1.0.2",
   "AvailabilityTest": null,
-  "Date": "13/07/2026",
+  "Date": "2026-07-13",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.13",

@@ -6,7 +6,7 @@
   "ArchiveURL": "https://github.com/gap-packages/MapClass/releases/download/v1.4.6/MapClass-1.4.6",
   "AvailabilityTest": null,
   "CommunicatedBy": "Leonard Soicher (QMUL)",
-  "Date": "17/09/2022",
+  "Date": "2022-09-17",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.9",

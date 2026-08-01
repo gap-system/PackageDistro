@@ -5,7 +5,7 @@
   "ArchiveSize": 1504534,
   "ArchiveURL": "https://github.com/gap-packages/qpa/releases/download/v1.37/qpa-1.37",
   "AvailabilityTest": null,
-  "Date": "13/05/2026",
+  "Date": "2026-05-13",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.11",

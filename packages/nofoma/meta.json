@@ -13,7 +13,7 @@
   },
   "AvailabilityTest": null,
   "BannerString": "──────────────────────────────────────────────────────────────────────────\nLoading  nofoma 1.0.1 (Normal forms of matrices), \nby Meinolf Geck (https://pnp.mathematik.uni-stuttgart.de/idsr/idsr1/geckmf/)\nand Alia Bonnet (https://github.com/AliaBonnet).\nHelp about the main functions in this package is obtained by typing:\n    ?FrobeniusNormalForm     ?JordanNormalform     ?JordanChevalleyDecMat\n──────────────────────────────────────────────────────────────────────────\n",
-  "Date": "17/05/2026",
+  "Date": "2026-05-17",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.15",

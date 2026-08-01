@@ -4,7 +4,7 @@
   "ArchiveSHA256": "946b05c75e877de8aea71b5bf0af74f79b392064793fda7322e4895073e7cf6a",
   "ArchiveURL": "https://github.com/gap-packages/crypting/releases/download/v0.10.6/crypting-0.10.6",
   "AvailabilityTest": null,
-  "Date": "20/06/2025",
+  "Date": "2025-06-20",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12",

@@ -5,7 +5,7 @@
   "ArchiveSize": 351878,
   "ArchiveURL": "https://github.com/gap-packages/singular/releases/download/v2026.05.05/singular-2026.05.05",
   "AvailabilityTest": null,
-  "Date": "05/05/2026",
+  "Date": "2026-05-05",
   "Dependencies": {
     "ExternalConditions": [
       [

@@ -17,7 +17,7 @@
   },
   "AvailabilityTest": null,
   "CommunicatedBy": "Alexander Hulpke (Fort Collins, CO)",
-  "Date": "29/08/2024",
+  "Date": "2024-08-29",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.8",

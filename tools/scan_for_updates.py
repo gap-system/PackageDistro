@@ -115,6 +115,9 @@ def import_packages(pkginfo_paths: List[str]) -> None:
         pkg_json["ArchiveFormats"] = utils.sort_archive_formats(
             pkg_json["ArchiveFormats"]
         )
+        # Store the release date in ISO format, whichever of the two formats
+        # GAP accepts the PackageInfo.g happened to use.
+        pkg_json["Date"] = utils.normalize_date(pkg_json["Date"])
         url = archive_url(pkg_json)
         archive_fname = join(archive_dir, url.split("/")[-1])
         try:

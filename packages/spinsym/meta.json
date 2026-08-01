@@ -10,7 +10,7 @@
     }
   },
   "AvailabilityTest": null,
-  "Date": "01/10/2019",
+  "Date": "2019-10-01",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.5",

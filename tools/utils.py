@@ -16,6 +16,7 @@ import sys
 import tarfile
 import tempfile
 import time
+from datetime import datetime
 from os.path import join
 from typing import Any, Dict, List, NoReturn, Tuple
 
@@ -151,6 +152,31 @@ def metadata(pkg_name: str) -> Dict[str, Any]:
     except json.JSONDecodeError as e:
         error(f"invalid json in {fname}\n{e.msg}")
     return pkg_json
+
+
+# Release dates in `PackageInfo.g` come in two flavours: the traditional GAP
+# format `DD/MM/YYYY`, and the ISO 8601 format `YYYY-MM-DD` accepted since GAP
+# 4.12. Listed most preferred first, i.e. the first entry is what we store.
+DATE_FORMATS = ["%Y-%m-%d", "%d/%m/%Y"]
+
+
+def normalize_date(date: str) -> str:
+    """Return the release date `date` in ISO 8601 format, i.e. `YYYY-MM-DD`.
+
+    Both formats GAP accepts in a `PackageInfo.g` are understood. We store only
+    the ISO one, so that consumers of `meta.json` -- and of the
+    `package-infos.json` derived from it -- never have to guess which of the
+    two they are looking at, and can compare dates by comparing strings.
+
+    An unparseable date is an error rather than something we pass through
+    unchanged: silently keeping it would defeat the point of normalizing.
+    """
+    for fmt in DATE_FORMATS:
+        try:
+            return datetime.strptime(date, fmt).strftime(DATE_FORMATS[0])
+        except ValueError:
+            pass
+    error(f"cannot parse date {date!r}, expected YYYY-MM-DD or DD/MM/YYYY")
 
 
 # Archive formats to put first, in order of preference. Our own tooling uses

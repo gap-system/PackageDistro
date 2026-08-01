@@ -4,7 +4,7 @@
   "ArchiveSHA256": "01310b9d13258779df14bcb452df0341104b373fa4bdb8861bcceb7bf7f07103",
   "ArchiveURL": "https://github.com/gap-packages/PatternClass/releases/download/v2.4.5/PatternClass-2.4.5",
   "AvailabilityTest": null,
-  "Date": "30/08/2024",
+  "Date": "2024-08-30",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.8",

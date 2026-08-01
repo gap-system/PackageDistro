@@ -6,7 +6,7 @@
   "ArchiveURL": "https://github.com/gap-packages/grape/releases/download/v4.9.3/grape-4.9.3",
   "AvailabilityTest": null,
   "CommunicatedBy": "Leonard Soicher (QMUL)",
-  "Date": "06/09/2025",
+  "Date": "2025-09-06",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.11",

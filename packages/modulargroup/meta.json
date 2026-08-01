@@ -13,7 +13,7 @@
   },
   "AvailabilityTest": null,
   "BannerString": "----------------------------------------------------------------\nLoading  ModularGroup 2.0.3\nby Sebastian Engelhardt (https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen.html)\n   Luca Leon Junk (https://www.uni-saarland.de/lehrstuhl/weber-moritz/team/luca-junk.html)\n   Hannah Wagmann (https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen/team/hannah-wagmann.html)\n   Gabriela Weitze-Schmithüsen (https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen/team/gabriela-weitze-schmithuesen.html)\nFor help, type: ?ModularGroup package \n----------------------------------------------------------------\n",
-  "Date": "17/06/2026",
+  "Date": "2026-06-17",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": "4.12",

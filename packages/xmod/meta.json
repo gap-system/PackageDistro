@@ -14,7 +14,7 @@
   "AvailabilityTest": null,
   "BannerString": "Loading XMod 2.98 (methods for crossed modules and cat1-groups)\nby Chris Wensley (https://github.com/cdwensley),\n with contributions from:\n    Murat Alp (murat.alp@aum.edu.kw),\n    Alper Odabas (aodabas@ogu.edu.tr),\nand Enver Uslu.\n-----------------------------------------------------------------------------\n",
   "CommunicatedBy": "Derek Holt (Warwick)",
-  "Date": "12/03/2026",
+  "Date": "2026-03-12",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.11.0",

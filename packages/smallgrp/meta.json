@@ -7,7 +7,7 @@
   "ArchiveURL": "https://github.com/gap-packages/SmallGrp/releases/download/v1.5.5/SmallGrp-1.5.5",
   "AvailabilityTest": null,
   "CommunicatedBy": "Mike Newman (Canberra)",
-  "Date": "28/07/2026",
+  "Date": "2026-07-28",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.9",

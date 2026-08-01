@@ -13,7 +13,7 @@
   },
   "AvailabilityTest": null,
   "CommunicatedBy": "Kamil Zabielski (Białystok)",
-  "Date": "05/07/2026",
+  "Date": "2026-07-05",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": "4.12",

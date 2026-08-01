@@ -4,7 +4,7 @@
   "ArchiveSHA256": "7e9ffeb9dbe0ddab862a524b1379c09732ef7b40bea2b04ce01db3fb9c27e28e",
   "ArchiveURL": "https://www.math.rwth-aachen.de/~Frank.Luebeck/gap/StandardFF//StandardFF-1.0",
   "AvailabilityTest": null,
-  "Date": "13/09/2023",
+  "Date": "2023-09-13",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12",
