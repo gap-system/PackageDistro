@@ -1,0 +1,22 @@
+{
+  "current": "master/2026-08-01-16:45:44-1071a94d",
+  "last": "master/2026-08-01-03:24:05-1b5c40e9",
+  "total": 172,
+  "failure": 1,
+  "success": 168,
+  "skipped": 3,
+  "failures_changed": [
+    "lins"
+  ],
+  "failures_current": [
+    "lins"
+  ],
+  "new": 0,
+  "removed": 0,
+  "failure_changed": 1,
+  "success_changed": 1,
+  "skipped_changed": 0,
+  "failure_same": 0,
+  "success_same": 167,
+  "skipped_same": 3
+}
