@@ -18,6 +18,30 @@ def test_github_headers_use_bearer_token():
     }
 
 
+def test_report_id_splits_date_into_year_and_month_directories():
+    module = importlib.import_module("generate_test_status")
+
+    assert (
+        module.report_id("master", "2026-08-02 13:39:15")
+        == "master/2026/08/02_13-39-15"
+    )
+
+
+def test_report_id_contains_no_colons():
+    module = importlib.import_module("generate_test_status")
+
+    assert ":" not in module.report_id("master", "2026-08-02 13:39:15")
+
+
+def test_report_id_prefixes_synthetic_pr_keys_unchanged():
+    module = importlib.import_module("generate_test_status")
+
+    assert (
+        module.report_id("pr-gap-system-gap-1234-01234567", "2026-12-31 00:00:00")
+        == "pr-gap-system-gap-1234-01234567/2026/12/31_00-00-00"
+    )
+
+
 def test_fetch_jobs_returns_empty_list_for_error_payload():
     module = importlib.import_module("generate_test_status")
     seen = {}
