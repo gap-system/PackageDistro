@@ -5,6 +5,10 @@ contains the metadata of all the GAP packages in the distribution. We also
 upload snapshots of the package distribution to appropriate release tags
 on this repository.
 
+An overview of all packages in the distribution, with their versions, release
+dates and links, is published at
+<https://gap-system.github.io/PackageDistro/packages/>.
+
 ## High-level status dashboard
 
 | Test            | GAP `master` |

@@ -1,0 +1,81 @@
+#
+# This workflow regenerates the package distribution overview page listing
+# all packages in the distribution and publishes it on the `gh-pages` branch,
+# from where it is served as
+# https://gap-system.github.io/PackageDistro/packages/
+#
+# It runs whenever package metadata on `main` changes, i.e. after every merged
+# package update, so that the published page never lags behind the
+# distribution. The daily schedule is a safety net for changes that reach
+# `main` without triggering a push event, and for refreshing the generation
+# date shown on the page.
+#
+name: "Update overview page"
+
+on:
+  workflow_dispatch:  # manual trigger for debugging
+  push:
+    paths:
+      - 'packages/**'
+      - 'tools/generate_overview.py'
+      - '.github/workflows/update-overview.yml'
+    branches:
+      - main
+  schedule:
+    - cron: '17 4 * * *' # Every day at 4:17
+
+# Two runs pushing to `gh-pages` at the same time would race; a merged batch of
+# package updates easily triggers that. Only the newest run is interesting,
+# since the page is regenerated from scratch every time.
+concurrency:
+  group: "update-overview"
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  update-overview:
+    name: "Generate and publish the overview page"
+    runs-on: ubuntu-slim
+    # Forks have neither a `gh-pages` branch to publish to nor a reason to run
+    # this on a schedule.
+    if: ${{ github.event_name != 'schedule' || github.repository == 'gap-system/PackageDistro' }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: "Set up Python"
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+
+      - name: "Install package distribution tools"
+        run: python -m pip install -r tools/requirements.txt
+
+      - name: "Create gh-pages worktree"
+        run: |
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
+          git fetch origin gh-pages
+          git branch --track gh-pages origin/gh-pages
+          git worktree add gh-pages gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: "Generate overview page"
+        run: tools/generate_overview.py gh-pages
+
+      - name: "Publish overview page"
+        run: |
+          git config --global user.name 'gap-package-distribution-bot'
+          # https://api.github.com/users/gap-package-distribution-bot%5Bbot%5D
+          git config --global user.email '100730870+gap-package-distribution-bot[bot]@users.noreply.github.com'
+          cd gh-pages
+          git add -A
+          # The scheduled run usually finds nothing to do, as the page only
+          # changes when the metadata it is generated from changed.
+          if git diff --cached --quiet; then
+            echo "Overview page is up to date."
+            exit 0
+          fi
+          git commit -m "Automated update of the package overview page"
+          git pull --rebase && git push
