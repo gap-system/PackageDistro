@@ -14,7 +14,7 @@
   "Autoload": false,
   "AvailabilityTest": null,
   "CommunicatedBy": "Charles Wright (Oregon)",
-  "Date": "03/01/2023",
+  "Date": "2023-01-03",
   "Dependencies": {
     "ExternalConditions": [
       "Unix only"

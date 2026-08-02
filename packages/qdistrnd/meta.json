@@ -10,7 +10,7 @@
     }
   },
   "AvailabilityTest": null,
-  "Date": "20/11/2024",
+  "Date": "2024-11-20",
   "Dependencies": {
     "GAP": "4.11",
     "NeededOtherPackages": [

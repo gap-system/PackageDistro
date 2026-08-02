@@ -6,7 +6,7 @@
   "Autoload": true,
   "AvailabilityTest": null,
   "BannerString": "Classical Group Presentations, v.1.22\n",
-  "Date": "06/05/2022",
+  "Date": "2022-05-06",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.11",

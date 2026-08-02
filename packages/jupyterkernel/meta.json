@@ -4,7 +4,7 @@
   "ArchiveSHA256": "907d99c0196539a98d76eb84226c9fb25580de382e4e80e842c9305508b3aaa9",
   "ArchiveURL": "https://github.com/gap-packages/JupyterKernel/releases/download/v1.5.1/JupyterKernel-1.5.1",
   "AvailabilityTest": null,
-  "Date": "07/07/2024",
+  "Date": "2024-07-07",
   "Dependencies": {
     "ExternalConditions": [
       [

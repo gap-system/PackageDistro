@@ -13,7 +13,7 @@
   "Autoload": false,
   "AvailabilityTest": null,
   "CommunicatedBy": "Gerhard Hiss (Aachen)",
-  "Date": "04/07/2024",
+  "Date": "2024-07-04",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.5",

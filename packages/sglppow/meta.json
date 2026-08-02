@@ -8,7 +8,7 @@
   "AvailabilityTest": null,
   "BannerString": "----------------------------------------------------------------\nLoading SglPPow 2.5\nby Michael Vaughan-Lee and Bettina Eick \n----------------------------------------------------------------\n",
   "CommunicatedBy": "Leonard Soicher (QMUL)",
-  "Date": "28/07/2026",
+  "Date": "2026-07-28",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10",

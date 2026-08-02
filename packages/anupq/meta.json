@@ -15,7 +15,7 @@
   "AvailabilityTest": null,
   "BannerFunction": null,
   "CommunicatedBy": "Charles Wright (Eugene)",
-  "Date": "25/11/2025",
+  "Date": "2025-11-25",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.9",

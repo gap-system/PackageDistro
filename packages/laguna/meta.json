@@ -6,7 +6,7 @@
   "ArchiveURL": "https://github.com/gap-packages/laguna/releases/download/v3.9.7/laguna-3.9.7",
   "AvailabilityTest": null,
   "CommunicatedBy": "Herbert Pahlings (Aachen)",
-  "Date": "01/07/2024",
+  "Date": "2024-07-01",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.9",

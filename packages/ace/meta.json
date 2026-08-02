@@ -7,7 +7,7 @@
   "AvailabilityTest": null,
   "BannerString": "---------------------------------------------------------------------------\nLoading    ACE (Advanced Coset Enumerator) 5.7.0\nGAP code by Greg Gamble <Greg.Gamble@uwa.edu.au> (address for correspondence)\n       Alexander Hulpke (https://www.math.colostate.edu/~hulpke)\n           [uses ACE binary (C code program) version: 3.001]\nC code by  George Havas (http://staff.itee.uq.edu.au/havas)\n           Colin Ramsay <cram@itee.uq.edu.au>\nCo-maintainer: Max Horn <mhorn@rptu.de>\n\n                 For help, type: ?ACE\n---------------------------------------------------------------------------\n",
   "CommunicatedBy": "Joachim Neubüser (Aachen)",
-  "Date": "10/04/2025",
+  "Date": "2025-04-10",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.7",

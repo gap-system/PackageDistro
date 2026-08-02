@@ -7,7 +7,7 @@
   "ArchiveURL": "https://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/GAPDoc-1.6.10",
   "AvailabilityTest": null,
   "CommunicatedBy": "Steve Linton (St Andrews)",
-  "Date": "20/05/2026",
+  "Date": "2026-05-20",
   "Dependencies": {
     "ExternalConditions": [
       "(La)TeX installation for converting documents to PDF",

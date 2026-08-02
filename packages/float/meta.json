@@ -15,7 +15,7 @@
   "AvailabilityTest": null,
   "BannerFunction": null,
   "BannerString": "float 1.0.10 with modules [?] ...\n",
-  "Date": "27/05/2026",
+  "Date": "2026-05-27",
   "Dependencies": {
     "ExternalConditions": [
       "GAP compiled with GMP support"

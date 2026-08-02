@@ -13,7 +13,7 @@
   "AvailabilityTest": null,
   "BannerString": "     |                                                                 \n     |          QuaGroup 1.8.4\n     |                                                                 \n-----------     A package for dealing with quantized enveloping algebras\n     |                                                                 \n     |          Willem de Graaf                                        \n     |          degraaf@science.unitn.it                               \n\n",
   "CommunicatedBy": "Gerhard Hiss (Aachen)",
-  "Date": "11/01/2024",
+  "Date": "2024-01-11",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.8",

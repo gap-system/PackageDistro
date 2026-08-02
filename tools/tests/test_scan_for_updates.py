@@ -121,6 +121,7 @@ def test_import_packages_records_archive_size(ensure_in_tests_dir, tmpdir):
     pkg_json = {
         "ArchiveFormats": ".tar.gz",
         "ArchiveURL": "https://example.com/testpkg-1.0",
+        "Date": "28/08/2025",
         "PackageName": "TestPkg",
         "Version": "1.0",
     }
@@ -140,6 +141,8 @@ def test_import_packages_records_archive_size(ensure_in_tests_dir, tmpdir):
     archive_path = "_archives/testpkg-1.0.tar.gz"
     assert meta["ArchiveSHA256"] == sha256(archive_path)
     assert meta["ArchiveSize"] == len(archive_bytes)
+    # the DD/MM/YYYY date from the PackageInfo.g is stored in ISO format
+    assert meta["Date"] == "2025-08-28"
 
     shutil.rmtree("packages/testpkg")
     shutil.rmtree("_archives")

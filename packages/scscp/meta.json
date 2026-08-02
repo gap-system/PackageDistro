@@ -9,7 +9,7 @@
     "demo/maple2gap.mw"
   ],
   "CommunicatedBy": "David Joyner (Annapolis)",
-  "Date": "27/08/2025",
+  "Date": "2025-08-27",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10",

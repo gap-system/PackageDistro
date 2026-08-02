@@ -6,7 +6,7 @@
   "ArchiveURL": "https://github.com/gap-packages/cohomolo/releases/download/v1.6.12/cohomolo-1.6.12",
   "AvailabilityTest": null,
   "CommunicatedBy": "unknown (unknown)",
-  "Date": "17/10/2025",
+  "Date": "2025-10-17",
   "Dependencies": {
     "ExternalConditions": [
       "Unix only"

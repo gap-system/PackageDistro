@@ -7,7 +7,7 @@
   "Autoload": false,
   "AvailabilityTest": null,
   "CommunicatedBy": "David Joyner (Annapolis)",
-  "Date": "25/02/2023",
+  "Date": "2023-02-25",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": " >= 4.9.0",

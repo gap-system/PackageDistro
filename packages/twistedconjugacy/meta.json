@@ -4,7 +4,7 @@
   "ArchiveSHA256": "531e25ebfa80893eb3d0a49c284c1195346a84cdee13547910ce50fcef424eed",
   "ArchiveSize": 389734,
   "ArchiveURL": "https://github.com/stertooy/TwistedConjugacy/releases/download/v3.4.0/TwistedConjugacy-3.4.0",
-  "Date": "05/07/2026",
+  "Date": "2026-07-05",
   "Dependencies": {
     "GAP": ">= 4.14",
     "NeededOtherPackages": [],

@@ -13,7 +13,7 @@
   },
   "AvailabilityTest": null,
   "CommunicatedBy": "Graham Ellis (Galway)",
-  "Date": "28/08/2024",
+  "Date": "2024-08-28",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.8",

@@ -11,7 +11,7 @@
   },
   "AvailabilityTest": null,
   "CommunicatedBy": "Edmund Robertson (St. Andrews)",
-  "Date": "04/04/2023",
+  "Date": "2023-04-04",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.8",

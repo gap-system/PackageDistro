@@ -6,7 +6,7 @@
   "ArchiveURL": "https://github.com/gap-packages/design/releases/download/v1.8.2/design-1.8.2",
   "AvailabilityTest": null,
   "CommunicatedBy": "Akos Seress (Ohio State)",
-  "Date": "02/11/2024",
+  "Date": "2024-11-02",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10",

@@ -4,7 +4,7 @@
   "ArchiveSHA256": "30d83223fde65db8be8a496428347416816a296ea63605cc9d54bca4e4f9436c",
   "ArchiveURL": "https://github.com/gap-packages/uuid/releases/download/v0.7/uuid-0.7",
   "AvailabilityTest": null,
-  "Date": "01/03/2022",
+  "Date": "2022-03-01",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.8",

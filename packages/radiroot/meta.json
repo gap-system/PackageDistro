@@ -7,7 +7,7 @@
   "Autoload": false,
   "AvailabilityTest": null,
   "CommunicatedBy": "Edmund Robertson (St Andrews)",
-  "Date": "01/03/2022",
+  "Date": "2022-03-01",
   "Dependencies": {
     "ExternalConditions": [
       "latex and the dvi-viewer xdvi are recommended"

@@ -5,7 +5,7 @@
   "ArchiveURL": "https://github.com/gap-packages/intpic/releases/download/v0.4.0/IntPic-0.4.0",
   "AvailabilityTest": null,
   "BannerString": "----------------------------------------------------------------\nLoading  IntPic 0.4.0 (drawing integers)\nby Manuel Delgado (http://www.fc.up.pt/cmup/mdelgado/)\nFor help, type: ?IntPic;\n----------------------------------------------------------------\n",
-  "Date": "30/08/2024",
+  "Date": "2024-08-30",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": "4.7",

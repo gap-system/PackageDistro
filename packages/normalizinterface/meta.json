@@ -6,7 +6,7 @@
   "ArchiveURL": "https://github.com/gap-packages/NormalizInterface/releases/download/v1.5.1/NormalizInterface-1.5.1",
   "AvailabilityTest": null,
   "BannerFunction": null,
-  "Date": "05/05/2026",
+  "Date": "2026-05-05",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12.1",

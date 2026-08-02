@@ -8,7 +8,7 @@
   "AvailabilityTest": null,
   "BannerString": "\n  ___________________________________________________________________________\n /        ___\n||       /   \\                 /\\    Version 2.9.8\n||      ||   ||  |\\    |      /  \\               /\\       Erhard Aichinger\n \\___   ||   ||  |\\\\   |     /____\\_____________/__\\      Franz Binder\n     \\  ||   ||  | \\\\  |    /      \\     ||    /    \\     Juergen Ecker\n     ||  \\___/   |  \\\\ |   /        \\    ||   /      \\    Peter Mayr\n     ||          |   \\\\|  /          \\   ||               Christof Noebauer\n \\___/           |    \\|                 ||\n\n System    Of   Nearrings     And      Their Applications\n Info: https://gap-packages.github.io/sonata/\n\n",
   "CommunicatedBy": "Charles R.B. Wright (Univ. of Oregon)",
-  "Date": "29/07/2026",
+  "Date": "2026-07-29",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.9",

@@ -7,7 +7,7 @@
   "ArchiveURL": "https://github.com/gap-packages/automata/releases/download/v1.17/automata-1.17",
   "AvailabilityTest": null,
   "CommunicatedBy": "Edmund Robertson (St. Andrews)",
-  "Date": "16/07/2026",
+  "Date": "2026-07-16",
   "Dependencies": {
     "GAP": ">=4.9",
     "NeededOtherPackages": [],

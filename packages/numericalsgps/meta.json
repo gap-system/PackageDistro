@@ -7,7 +7,7 @@
   "AvailabilityTest": null,
   "BannerString": "----------------------------------------------------------------\nLoading  NumericalSgps 1.4.0\nFor help, type: ?NumericalSgps: \nTo gain profit from other packages, please refer to chapter\n'External Packages' in the manual, or type: ?NumSgpsUse \n----------------------------------------------------------------\n",
   "CommunicatedBy": "Leonard Soicher (QMUL)",
-  "Date": "30/08/2024",
+  "Date": "2024-08-30",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": "4.7",

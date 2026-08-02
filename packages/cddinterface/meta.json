@@ -4,7 +4,7 @@
   "ArchiveSHA256": "e425b0e87667df3f6e4c33cd2656bfc53602297620c91f60e322b29478954a2b",
   "ArchiveURL": "https://github.com/homalg-project/CddInterface/releases/download/v2026.03.02/CddInterface-2026.03.02",
   "AvailabilityTest": null,
-  "Date": "02/03/2026",
+  "Date": "2026-03-02",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12",

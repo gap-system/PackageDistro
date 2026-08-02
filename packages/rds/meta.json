@@ -6,7 +6,7 @@
   "ArchiveURL": "https://github.com/gap-packages/rds/releases/download/v1.9/rds-1.9",
   "AvailabilityTest": null,
   "CommunicatedBy": "Leonard Soicher (Queen Mary, London)",
-  "Date": "24/09/2025",
+  "Date": "2025-09-24",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.8",

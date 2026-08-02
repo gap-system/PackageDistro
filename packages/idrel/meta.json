@@ -14,7 +14,7 @@
   "AvailabilityTest": null,
   "BannerString": "Loading IdRel 2.49 (Identities among Relations)\nby Anne Heyworth and Chris Wensley (https://github.com/cdwensley)\n-----------------------------------------------------------------------\n",
   "CommunicatedBy": "Leonard Soicher (QMUL)",
-  "Date": "02/10/2025",
+  "Date": "2025-10-02",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.11.1",

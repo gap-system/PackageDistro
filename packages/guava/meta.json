@@ -14,7 +14,7 @@
   "AvailabilityTest": null,
   "BannerString": "\n   ____                             |\n  /                \\          /   --+--  Version 3.21\n /       |     | |\\ \\        / /|   |\n|    __  |     | | \\ \\      / / |          the GUAVA Group\n|      | |     | |--\\ \\    / /--|\n \\     | |     | |   \\ \\  / /   |\n  \\___/   \\___/  |    \\ \\/ /    |\n\n Homepage: https://gap-packages.github.io/guava\n Report issues at https://github.com/gap-packages/guava/issues\n",
   "CommunicatedBy": "Charles Wright (Eugene)",
-  "Date": "16/02/2026",
+  "Date": "2026-02-16",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.8.0",

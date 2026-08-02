@@ -11,7 +11,7 @@
     "doc/manual.dvi"
   ],
   "CommunicatedBy": "Herbert Pahlings (Aachen)",
-  "Date": "04/05/2026",
+  "Date": "2026-05-04",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.12",

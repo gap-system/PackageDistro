@@ -9,7 +9,7 @@
     }
   },
   "AvailabilityTest": null,
-  "Date": "11/02/2022",
+  "Date": "2022-02-11",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.7",

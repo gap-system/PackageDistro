@@ -6,7 +6,7 @@
   "ArchiveURL": "https://github.com/gap-packages/unitlib/releases/download/v5.0.0/unitlib-5.0.0",
   "AvailabilityTest": null,
   "CommunicatedBy": "Bettina Eick (Braunschweig)",
-  "Date": "12/06/2025",
+  "Date": "2025-06-12",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.11",

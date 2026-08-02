@@ -6,7 +6,7 @@
   "ArchiveURL": "http://www.math.rwth-aachen.de/~Thomas.Breuer/atlasrep/atlasrep-2r1p0",
   "AvailabilityTest": null,
   "CommunicatedBy": "Herbert Pahlings (Aachen)",
-  "Date": "10/05/2019",
+  "Date": "2019-05-10",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.10.1",

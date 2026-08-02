@@ -13,7 +13,7 @@
   "AvailabilityTest": null,
   "BannerString": "---------------------------------------------------------------------\nLoading 'Forms' 1.3.0 (17/05/2026)\nby John Bamberg (https://johnbamberg.github.io)\n   Jan De Beule (http://www.debeule.eu)\nFor help, type: ?Forms \n---------------------------------------------------------------------\n",
   "CommunicatedBy": "Leonard Soicher (London)",
-  "Date": "17/05/2026",
+  "Date": "2026-05-17",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.9",

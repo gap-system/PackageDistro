@@ -6,7 +6,7 @@
   "ArchiveURL": "https://github.com/gap-packages/aclib/releases/download/v1.3.3/aclib-1.3.3",
   "AvailabilityTest": null,
   "CommunicatedBy": "Gerhard Hiss (Aachen)",
-  "Date": "28/08/2025",
+  "Date": "2025-08-28",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.7",

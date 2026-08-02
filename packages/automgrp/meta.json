@@ -7,7 +7,7 @@
   "AvailabilityTest": null,
   "BannerString": "----------------------------------------------------------------\n     ^                                    ___                   \n    / \\                                  /   \\                  \n   /   \\           _______  ___         ||        ___   __      \n  /_____\\   ||  ||    |    /   \\  |\\ /| ||   __ |/   | |  \\    \n /       \\  ||  ||    |   ||   || | V | ||   || |      |__/    \n/         \\  \\__/     |    \\___/  |   |  \\___/  |      |        \n                                                                \nLoading  AutomGrp 1.3.3 (Automata Groups and Semigroups)\nby Yevgen Muntyan (muntyan@fastmail.fm)\n   Dmytro Savchuk (http://savchuk.myweb.usf.edu/)\nHomepage: https://gap-packages.github.io/automgrp\n----------------------------------------------------------------\n",
   "CommunicatedBy": "Leonard Soicher (Queen Mary, London)",
-  "Date": "08/01/2025",
+  "Date": "2025-01-08",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.9.1",

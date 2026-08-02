@@ -8,7 +8,7 @@
   "Autoload": false,
   "AvailabilityTest": null,
   "CommunicatedBy": "Mike Atkinson (St Andrews)",
-  "Date": "21/02/2024",
+  "Date": "2024-02-21",
   "Dependencies": {
     "ExternalConditions": [
       "UNIX for the kernel function 'ElementaryDivisorsPPartRkExpSmall'"

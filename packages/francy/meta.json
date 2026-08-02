@@ -4,7 +4,7 @@
   "ArchiveSHA256": "405d71537bede7165468a5aae7d6eca708ca2308e0c977d2461040a7e37842e0",
   "ArchiveURL": "https://github.com/gap-packages/francy/releases/download/v2.0.3/francy-2.0.3",
   "AvailabilityTest": null,
-  "Date": "16/04/2023",
+  "Date": "2023-04-16",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10",

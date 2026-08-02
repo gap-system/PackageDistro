@@ -7,7 +7,7 @@
   "AvailabilityTest": null,
   "BannerString": "----------------------------------------------------------------------\n                          IRREDSOL Version 1.4.4\n  A library of irreducible soluble linear groups over finite fields\n                and of finite primivite soluble groups\n                         by Burkhard Höfling\n----------------------------------------------------------------------\n",
   "CommunicatedBy": "Gerhard Hiss (Aachen)",
-  "Date": "16/11/2022",
+  "Date": "2022-11-16",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.9",

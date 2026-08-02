@@ -6,7 +6,7 @@
   "ArchiveURL": "https://github.com/gap-packages/format/releases/download/v1.4.5/format-1.4.5",
   "AvailabilityTest": null,
   "CommunicatedBy": "Joachim Neubüser (Aachen)",
-  "Date": "24/04/2026",
+  "Date": "2026-04-24",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.5",
