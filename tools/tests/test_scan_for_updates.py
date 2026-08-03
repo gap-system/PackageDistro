@@ -146,3 +146,41 @@ def test_import_packages_records_archive_size(ensure_in_tests_dir, tmpdir):
 
     shutil.rmtree("packages/testpkg")
     shutil.rmtree("_archives")
+
+
+def test_import_packages_skips_unparseable_dates(ensure_in_tests_dir, tmpdir):
+    # A PackageInfo.g whose Date we cannot parse is skipped -- but only that
+    # one package: everything else in the same batch is imported as usual.
+    bad_pkg_json = {
+        "ArchiveFormats": ".tar.gz",
+        "ArchiveURL": "https://example.com/baddatepkg-1.0",
+        "Date": "07/20/2026",  # month and day the American way round
+        "PackageName": "BadDatePkg",
+        "Version": "1.0",
+    }
+    good_pkg_json = {
+        "ArchiveFormats": ".tar.gz",
+        "ArchiveURL": "https://example.com/gooddatepkg-1.0",
+        "Date": "20/07/2026",
+        "PackageName": "GoodDatePkg",
+        "Version": "1.0",
+    }
+
+    def fake_download(_url, dst):
+        os.makedirs(os.path.dirname(dst), exist_ok=True)
+        with open(dst, "wb") as f:
+            f.write(b"archive-bytes-go-here")
+
+    try:
+        with mock.patch(
+            "scan_for_updates.parse_pkginfo_files",
+            return_value=[bad_pkg_json, good_pkg_json],
+        ), mock.patch("scan_for_updates.utils.download", side_effect=fake_download):
+            import_packages(["bad.g", "good.g"])
+
+        assert not exists("packages/baddatepkg")
+        assert metadata("gooddatepkg")["Date"] == "2026-07-20"
+    finally:
+        shutil.rmtree("packages/baddatepkg", ignore_errors=True)
+        shutil.rmtree("packages/gooddatepkg", ignore_errors=True)
+        shutil.rmtree("_archives", ignore_errors=True)

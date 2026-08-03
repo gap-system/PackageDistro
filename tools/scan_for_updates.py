@@ -109,15 +109,22 @@ def import_packages(pkginfo_paths: List[str]) -> None:
     pkginfos = parse_pkginfo_files(pkginfo_paths)
     for pkg_json in pkginfos:
         pkgname = pkg_json["PackageName"].lower()
+        # Store the release date in ISO format, whichever of the two formats
+        # GAP accepts the PackageInfo.g happened to use. If we cannot make
+        # sense of the date at all, skip just this one package: its author
+        # gets to hear about it in the pull request for their package, while
+        # updates to all other packages must keep flowing regardless.
+        try:
+            pkg_json["Date"] = utils.normalize_date(pkg_json["Date"])
+        except ValueError as e:
+            warning(f"{pkgname}: {e}; not importing this update")
+            continue
         # Do this before anything else reads the format: the archive we
         # download, and hence the checksum and size we record, must be the one
         # our consumers will use.
         pkg_json["ArchiveFormats"] = utils.sort_archive_formats(
             pkg_json["ArchiveFormats"]
         )
-        # Store the release date in ISO format, whichever of the two formats
-        # GAP accepts the PackageInfo.g happened to use.
-        pkg_json["Date"] = utils.normalize_date(pkg_json["Date"])
         url = archive_url(pkg_json)
         archive_fname = join(archive_dir, url.split("/")[-1])
         try:

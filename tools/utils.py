@@ -168,15 +168,17 @@ def normalize_date(date: str) -> str:
     `package-infos.json` derived from it -- never have to guess which of the
     two they are looking at, and can compare dates by comparing strings.
 
-    An unparseable date is an error rather than something we pass through
-    unchanged: silently keeping it would defeat the point of normalizing.
+    An unparseable date raises `ValueError` rather than being passed through
+    unchanged: silently keeping it would defeat the point of normalizing. It is
+    up to the caller to decide how far the damage reaches -- a typo in a single
+    `PackageInfo.g` should not stop us from processing the other packages.
     """
     for fmt in DATE_FORMATS:
         try:
             return datetime.strptime(date, fmt).strftime(DATE_FORMATS[0])
         except ValueError:
             pass
-    error(f"cannot parse date {date!r}, expected YYYY-MM-DD or DD/MM/YYYY")
+    raise ValueError(f"cannot parse date {date!r}, expected YYYY-MM-DD or DD/MM/YYYY")
 
 
 # Archive formats to put first, in order of preference. Our own tooling uses
