@@ -195,8 +195,18 @@ Some more details:
     ./tools/scan_for_updates.py example
     ./tools/validate_package.py example
     ```
-    However this only works if you already made a release, as it downloads the metadata
-    from the `PackageInfoURL` (see also <https://github.com/gap-system/PackageDistro/issues/1024>).
+    This downloads the metadata from the `PackageInfoURL`, and hence only works once
+    you made a release. To try out an update beforehand, pass the directory holding
+    the `PackageInfo.g` of your working copy (or that file itself) instead of the
+    package name, and the metadata is read from there:
+    ```
+    ./tools/scan_for_updates.py path/to/example
+    ./tools/validate_package.py example
+    ```
+    Note that the source archive is still fetched from `ArchiveURL`: until you
+    publish it, `scan_for_updates.py` warns and records `FAIL` as its checksum, and
+    `validate_package.py` fails outright because it cannot download the archive it
+    is supposed to check.
   - The checks this perform include
       - check output of GAP function `ValidatePackageInfo`
       - verify version is greater than previous version and does not contain `dev`
