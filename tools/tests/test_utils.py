@@ -43,9 +43,8 @@ def test_normalize_date_rejects_bad_dates():
         "31/02/2025",  # not a real date
         "2025-02-31",
     ]:
-        with pytest.raises(SystemExit) as e:
+        with pytest.raises(ValueError):
             normalize_date(date)
-        assert e.value.code == 1, date
 
 
 def test_distributed_metadata_uses_iso_dates():
