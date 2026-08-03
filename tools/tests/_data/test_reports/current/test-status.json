@@ -1,7 +1,7 @@
 {
   "repo": "https://github.com/gap-system/PackageDistro",
   "workflow": "https://github.com/gap-system/PackageDistro/actions/runs/{CURRENT_RUN_ID_WORKFLOW}",
-  "hash": "{CURRENT_HASH_KEY}",
+  "hash": "f70b46a0d4ad09ae223b6496de11d7de05151fbe",
   "date": "{CURRENT_YEAR}-{CURRENT_MONTH}-{CURRENT_DAY} {CURRENT_HOUR}:{CURRENT_MINUTES}:{CURRENT_SECONDS}",
   "gap_version": "4.11.1",
   "id": "test_reports/current",

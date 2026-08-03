@@ -15,7 +15,7 @@ This script collects the job-status of each package from _reports/
 and generates a main test-status.json.
 
 The file is written into data/reports/{{id}} where
-id={{which_gap}}/{{date}}-{{hash_short}}.
+id={{report_key}}/{{YYYY}}/{{MM}}/{{DD}}_{{HH-mm-ss}}.
 
 Prints {{id}} to terminal.
 """
@@ -77,6 +77,27 @@ def fetch_jobs(
         res.raise_for_status()
         jobs_list.extend(response_jobs(res, url))
     return jobs_list
+
+
+def report_id(report_key: str, date: str) -> str:
+    """The storage location of a report, relative to data/reports.
+
+    `date` is a timestamp of the form "YYYY-MM-DD HH:mm:ss". Year and month
+    become directories of their own: a flat directory per report leaves the
+    `data` branch with thousands of sibling directories, which GitHub's file
+    browser is of no use for. See issue #1120.
+
+    The time is written as "HH-mm-ss" rather than with colons, which several
+    file systems reject, and an underscore separates the day from the time so
+    that the two halves stay apart at a glance. The timestamp alone identifies
+    a report: at most one run per report key is in flight at any time, so the
+    tested revision does not have to disambiguate the path, and the report
+    names it in its own text instead.
+    """
+    day_part, time_part = date.split(" ")
+    year, month, day = day_part.split("-")
+    time = time_part.replace(":", "-")
+    return os.path.join(report_key, year, month, f"{day}_{time}")
 
 
 def job_is_newer(job: Dict[str, Any], current_job: JobInfo) -> bool:
@@ -189,9 +210,7 @@ def main(argv: List[str]) -> int:
     # it is just "master" etc.; for PR-triggered runs it is a synthetic key
     # such as "pr-gap-system-gap-1234-deadbeef".
     report["gap_report_key"] = report_key
-    report["id"] = os.path.join(
-        report_key, "%s-%s" % (date.replace(" ", "-"), hash[:8])
-    )
+    report["id"] = report_id(report_key, date)
 
     # Path
     root = "data/reports"
