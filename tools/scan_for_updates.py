@@ -21,6 +21,16 @@ and do the following:
 
     TODO
 
+Usage:
+
+    scan_for_updates.py [PKGNAME...]
+    scan_for_updates.py PATH...
+
+Without arguments every package of the distribution is scanned for a new
+release, with package names only those. Given paths instead -- each either a
+directory containing a `PackageInfo.g` or such a file itself -- the metadata is
+read from there rather than downloaded, which allows trying out a package
+update before it is released.
 """
 
 import hashlib
@@ -145,17 +155,59 @@ def import_packages(pkginfo_paths: List[str]) -> None:
             f.write("\n")
 
 
-def main(pkg_names: List[str]) -> None:
-    print("Scanning for updates...")
-    if len(pkg_names) == 0:
-        pkg_names = all_packages()
-    updated_pkgs = scan_for_updates(pkg_names)
-    if len(updated_pkgs) == 0:
-        print("None found")
-        return
+def local_pkginfo(arg: str) -> Optional[str]:
+    """The `PackageInfo.g` that `arg` points at, or None if `arg` is a package name.
+
+    Naming a path instead of a package lets one import a package straight from
+    a working copy, before any release has been made and hence before there is
+    anything to download from its `PackageInfoURL`. The path may be either the
+    directory holding the `PackageInfo.g`, or that file itself.
+    """
+    if os.path.isfile(metadata_fname(normalize_pkg_name(arg))):
+        # "packages/aclib" and "packages/aclib/meta.json" name a package of the
+        # distribution, even though they are paths on disk as well.
+        return None
+    if os.path.isdir(arg):
+        pkginfo = join(arg, "PackageInfo.g")
+        if not os.path.isfile(pkginfo):
+            error(f"{arg}: directory contains no PackageInfo.g")
+        return pkginfo
+    if os.path.isfile(arg):
+        return arg
+    if os.path.dirname(arg):
+        # Anything with a directory part was meant as a path, so say that it is
+        # not there rather than going on to look for a package of that name.
+        error(f"{arg}: no such file or directory")
+    return None
+
+
+def main(args: List[str]) -> None:
+    pkginfo_paths = []
+    pkg_names = []
+    for arg in args:
+        pkginfo = local_pkginfo(arg)
+        if pkginfo is None:
+            pkg_names.append(normalize_pkg_name(arg))
+        else:
+            pkginfo_paths.append(pkginfo)
+
+    if pkginfo_paths:
+        if pkg_names:
+            error("cannot mix package names and paths to local packages")
+        for pkginfo in pkginfo_paths:
+            notice(f"importing {pkginfo}")
+    else:
+        print("Scanning for updates...")
+        if len(pkg_names) == 0:
+            pkg_names = all_packages()
+        pkginfo_paths = scan_for_updates(pkg_names)
+        if len(pkginfo_paths) == 0:
+            print("None found")
+            return
+
     print("Updating meta.json files...")
-    import_packages(updated_pkgs)
+    import_packages(pkginfo_paths)
 
 
 if __name__ == "__main__":
-    main([normalize_pkg_name(x) for x in sys.argv[1:]])
+    main(sys.argv[1:])

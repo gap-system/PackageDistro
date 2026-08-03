@@ -22,6 +22,7 @@ sys.path.insert(
 
 from scan_for_updates import (
     import_packages,
+    local_pkginfo,
     main,
     scan_for_one_update,
     scan_for_updates,
@@ -115,6 +116,65 @@ def test_main_again(ensure_in_tests_dir):
         main(["aclib"])
     finally:
         reset()
+
+
+@pytest.fixture
+def local_pkg(tmpdir):
+    """A directory holding a PackageInfo.g, as an unreleased package would."""
+    pkgdir = join(str(tmpdir), "my_gap_package")
+    os.mkdir(pkgdir)
+    pkginfo = join(pkgdir, "PackageInfo.g")
+    with open(pkginfo, "w", encoding="utf-8") as f:
+        f.write('SetPackageInfo( rec( PackageName := "MyGapPackage" ) );\n')
+    return pkgdir, pkginfo
+
+
+def test_local_pkginfo_accepts_directory_or_file(ensure_in_tests_dir, local_pkg):
+    pkgdir, pkginfo = local_pkg
+
+    assert local_pkginfo(pkgdir) == pkginfo
+    assert local_pkginfo(pkginfo) == pkginfo
+
+
+def test_local_pkginfo_leaves_package_names_alone(ensure_in_tests_dir):
+    # These name a package of the distribution; the latter two are paths on
+    # disk as well, and must not be mistaken for a local package.
+    assert local_pkginfo("aclib") is None
+    assert local_pkginfo("packages/aclib") is None
+    assert local_pkginfo("packages/aclib/meta.json") is None
+
+
+def test_local_pkginfo_rejects_directory_without_pkginfo(ensure_in_tests_dir, tmpdir):
+    with pytest.raises(SystemExit) as e:
+        local_pkginfo(str(tmpdir))
+    assert e.value.code == 1
+
+
+def test_local_pkginfo_rejects_nonexistent_path(ensure_in_tests_dir, tmpdir):
+    with pytest.raises(SystemExit) as e:
+        local_pkginfo(join(str(tmpdir), "no", "such", "package"))
+    assert e.value.code == 1
+
+
+def test_main_imports_local_package_without_scanning(ensure_in_tests_dir, local_pkg):
+    pkgdir, pkginfo = local_pkg
+
+    with mock.patch("scan_for_updates.import_packages") as fake_import, mock.patch(
+        "scan_for_updates.scan_for_updates"
+    ) as fake_scan:
+        main([pkgdir])
+
+    # The whole point: nothing is downloaded, the local file is imported as is.
+    fake_scan.assert_not_called()
+    fake_import.assert_called_once_with([pkginfo])
+
+
+def test_main_rejects_mixing_names_and_paths(ensure_in_tests_dir, local_pkg):
+    pkgdir, _ = local_pkg
+
+    with pytest.raises(SystemExit) as e:
+        main([pkgdir, "aclib"])
+    assert e.value.code == 1
 
 
 def test_import_packages_records_archive_size(ensure_in_tests_dir, tmpdir):
