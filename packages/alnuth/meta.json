@@ -1,6 +1,5 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">Alnuth</span> package provides various methods to compute with number fields which are given by a defining polynomial or by generators. Some of the methods provided in this package are written in <span class=\"pkgname\">GAP</span> code. The other part of the methods is imported from an another computer algebra system, currently either PARI/GP or OSCAR. Hence this package contains some <span class=\"pkgname\">GAP</span> functions and an interface to some functions in the computer algebra systems PARI/GP and OSCAR. The main methods included in <span class=\"pkgname\">Alnuth</span> are: creating a number field, computing its maximal order (using the external CAS), computing its unit group (using the external CAS) and a presentation of this unit group, computing the elements of a given norm of the number field (using the external CAS), determining a presentation for a finitely generated multiplicative subgroup (using the external CAS), and factoring polynomials defined over number fields (using the external CAS).",
-  "AcceptDate": "01/2004",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "056a1f14718a4a8f11ebae3600c007ba38f818c9f7487a0a88b0fe94ee1a9e65",
   "ArchiveSize": 272005,
@@ -14,7 +13,6 @@
     }
   },
   "AvailabilityTest": null,
-  "CommunicatedBy": "Charles Wright (Eugene)",
   "Date": "2026-06-21",
   "Dependencies": {
     "ExternalConditions": [
@@ -133,7 +131,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/alnuth"
   },
-  "Status": "accepted",
   "Subtitle": "ALgebraic NUmber THeory and an interface to PARI/GP and OSCAR",
   "TestFile": "tst/testall.g",
   "Version": "4.0.2"

@@ -74,7 +74,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/resclasses"
   },
-  "Status": "deposited",
   "Subtitle": "Set-Theoretic Computations with Residue Classes",
   "TestFile": "tst/testall.g",
   "Version": "4.7.4"

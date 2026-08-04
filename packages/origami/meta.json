@@ -161,7 +161,6 @@
     }
   ],
   "README_URL": "https://AG-Weitze-Schmithusen.github.io/Origami/README.md",
-  "Status": "other",
   "Subtitle": "Computing Veech groups of origamis",
   "TestFile": "tst/testall.g",
   "Version": "2.0.3"

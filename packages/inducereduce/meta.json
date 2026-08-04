@@ -81,7 +81,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/InduceReduce"
   },
-  "Status": "deposited",
   "Subtitle": "Unger's algorithm to compute character tables of finite groups",
   "TestFile": "tst/testall.g",
   "Version": "1.4"

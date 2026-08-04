@@ -58,7 +58,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/crypting"
   },
-  "Status": "deposited",
   "Subtitle": "Hashes and Crypto in GAP",
   "TestFile": "tst/testall.g",
   "Version": "0.10.6"

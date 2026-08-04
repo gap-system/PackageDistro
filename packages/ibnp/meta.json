@@ -1,6 +1,5 @@
 {
   "AbstractHTML": "The IBNP package provides methods for computing an involutive (Groebner) basis B for an ideal J over a polynomial ring R in both the commutative and noncommutative cases. Secondly, methods are provided to involutively reduce a given polynomial to its normal form in R/J.",
-  "AcceptDate": "",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "b874110657e633cb468ec74bfd9492d0e070d5e2063a19156a8781f9da6d56a5",
   "ArchiveURL": "https://github.com/gap-packages/ibnp/releases/download/v0.18/IBNP-0.18",
@@ -14,7 +13,6 @@
   "Autoload": false,
   "AvailabilityTest": null,
   "BannerString": "Loading IBNP 0.18 (Involutive Bases for Noncommutative Polynomials)\nby Gareth Evans and Chris Wensley (https://github.com/cdwensley).\nReport issues at https://github.com/gap-packages/ibnp/issues.\n--------------------------------------------------------------------\n",
-  "CommunicatedBy": "",
   "Date": "2025-11-04",
   "Dependencies": {
     "ExternalConditions": [],
@@ -81,7 +79,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/ibnp"
   },
-  "Status": "deposited",
   "Subtitle": "Involutive Bases for Noncommutative Polynomials",
   "SupportEmail": "cdwensley.maths@btinternet.com",
   "TestFile": "tst/testall.g",

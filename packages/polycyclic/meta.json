@@ -1,6 +1,5 @@
 {
   "AbstractHTML": "This package provides various algorithms for computations with polycyclic groups defined by polycyclic presentations.",
-  "AcceptDate": "01/2004",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "334416c8aeb8bcd0a2b58b16cba590ea26fa8d54d275a0bdcf5999b889c13317",
   "ArchiveURL": "https://github.com/gap-packages/polycyclic/releases/download/v2.18/polycyclic-2.18",
@@ -11,7 +10,6 @@
     }
   },
   "AvailabilityTest": null,
-  "CommunicatedBy": "Charles Wright (Eugene)",
   "Date": "2026-04-09",
   "Dependencies": {
     "ExternalConditions": [],
@@ -136,7 +134,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/polycyclic"
   },
-  "Status": "accepted",
   "Subtitle": "Computation with polycyclic groups",
   "TestFile": "tst/testall.g",
   "Version": "2.18"

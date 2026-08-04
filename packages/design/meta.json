@@ -1,11 +1,9 @@
 {
   "AbstractHTML": "<span class=\"pkgname\">DESIGN</span> is a package for constructing, classifying, partitioning, and studying block designs.",
-  "AcceptDate": "08/2006",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "f2462f3103182aedf53f4743ce02d7c96726f951152e06403c81453976c6853f",
   "ArchiveURL": "https://github.com/gap-packages/design/releases/download/v1.8.2/design-1.8.2",
   "AvailabilityTest": null,
-  "CommunicatedBy": "Akos Seress (Ohio State)",
   "Date": "2024-11-02",
   "Dependencies": {
     "ExternalConditions": [],
@@ -69,7 +67,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/design"
   },
-  "Status": "accepted",
   "Subtitle": "The Design Package for GAP",
   "TestFile": "tst/testall.g",
   "Version": "1.8.2"

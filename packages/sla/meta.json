@@ -1,6 +1,5 @@
 {
   "AbstractHTML": "The package <span class=\"pkgname\">SLA</span> contains                  functionality for working with simple Lie algebras,",
-  "AcceptDate": "01/2016",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "efcfb86635f2f3e81afdd3a053023b58d79cee871140f0699b53172974dbe866",
   "ArchiveURL": "https://github.com/gap-packages/sla/releases/download/v1.6.2/sla-1.6.2",
@@ -12,7 +11,6 @@
     }
   },
   "AvailabilityTest": null,
-  "CommunicatedBy": "Leonard Soicher (QMUL)",
   "Date": "2024-07-12",
   "Dependencies": {
     "ExternalConditions": [],
@@ -72,7 +70,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/sla"
   },
-  "Status": "accepted",
   "Subtitle": "Computing with simple Lie algebras",
   "TestFile": "tst/testall.g",
   "Version": "1.6.2"

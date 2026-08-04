@@ -82,7 +82,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/singular"
   },
-  "Status": "deposited",
   "Subtitle": "A GAP interface to Singular",
   "TestFile": "tst/testall.g",
   "Version": "2026.05.05"

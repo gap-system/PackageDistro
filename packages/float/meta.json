@@ -92,7 +92,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/float"
   },
-  "Status": "deposited",
   "Subtitle": "Integration of mpfr, mpfi, mpc, fplll and cxsc in GAP",
   "TestFile": "tst/testall.g",
   "Version": "1.0.10"

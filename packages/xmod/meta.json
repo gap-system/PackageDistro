@@ -1,6 +1,5 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">XMod</span> package provides a collection   of functions for computing with crossed modules and cat1-groups, their derivations and sections, morphisms of these structures, and higher-dimensional generalisations.",
-  "AcceptDate": "12/1996",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "d6bfae0d62ccace262f8efccd39e9fc000b44745ee8a4dac83a4adab3b152804",
   "ArchiveURL": "https://github.com/gap-packages/xmod/releases/download/v2.98/XMod-2.98",
@@ -13,7 +12,6 @@
   },
   "AvailabilityTest": null,
   "BannerString": "Loading XMod 2.98 (methods for crossed modules and cat1-groups)\nby Chris Wensley (https://github.com/cdwensley),\n with contributions from:\n    Murat Alp (murat.alp@aum.edu.kw),\n    Alper Odabas (aodabas@ogu.edu.tr),\nand Enver Uslu.\n-----------------------------------------------------------------------------\n",
-  "CommunicatedBy": "Derek Holt (Warwick)",
   "Date": "2026-03-12",
   "Dependencies": {
     "ExternalConditions": [],
@@ -110,7 +108,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/xmod"
   },
-  "Status": "accepted",
   "Subtitle": "Crossed Modules and Cat1-Groups",
   "SupportEmail": "cdwensley.maths@btinternet.com",
   "TestFile": "tst/testall.g",

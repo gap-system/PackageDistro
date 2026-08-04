@@ -1,6 +1,5 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">AutPGrp</span> package introduces a new function to compute the automorphism group of a finite $p$-group. The underlying algorithm is a refinement of the methods described in O'Brien (1995). In particular, this implementation is more efficient in both time and space requirements and hence has a wider range of applications than the ANUPQ method. Our package is written in GAP code and it makes use of a number of methods from the GAP library such as the MeatAxe for matrix groups and permutation group functions. We have compared our method to the others available in GAP. Our package usually out-performs all but the method designed for finite abelian groups. We note that our method uses the small groups library in certain cases and hence our algorithm is more effective if the small groups library is installed.",
-  "AcceptDate": "09/2000",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "00c53afe289568f4da974d2b363cd8e6602e80f18e5b9be7fa8853354c9e96c7",
   "ArchiveSize": 222404,
@@ -16,7 +15,6 @@
     }
   },
   "AvailabilityTest": null,
-  "CommunicatedBy": "Derek F. Holt (Warwick)",
   "Date": "2026-05-17",
   "Dependencies": {
     "ExternalConditions": [],
@@ -87,7 +85,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/autpgrp"
   },
-  "Status": "accepted",
   "Subtitle": "Computing the Automorphism Group of a p-Group",
   "TestFile": "tst/testall.g",
   "Version": "1.12.0"

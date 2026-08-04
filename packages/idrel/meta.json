@@ -1,6 +1,5 @@
 {
   "AbstractHTML": "<span class=\"pkgname\">IdRel</span> is a package for computing the identities among relations of a group presentation using rewriting, logged rewriting, monoid polynomials, module polynomials and Y-sequences.",
-  "AcceptDate": "05/2015",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "3b3c2c7e781d702cd1c0e10e8af8d27c36777db7b2ecdb41967f6934b3fa8324",
   "ArchiveURL": "https://github.com/gap-packages/idrel/releases/download/v2.49/idrel-2.49",
@@ -13,7 +12,6 @@
   },
   "AvailabilityTest": null,
   "BannerString": "Loading IdRel 2.49 (Identities among Relations)\nby Anne Heyworth and Chris Wensley (https://github.com/cdwensley)\n-----------------------------------------------------------------------\n",
-  "CommunicatedBy": "Leonard Soicher (QMUL)",
   "Date": "2025-10-02",
   "Dependencies": {
     "ExternalConditions": [],
@@ -66,7 +64,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/idrel"
   },
-  "Status": "accepted",
   "Subtitle": "Identities among relations",
   "TestFile": "tst/testall.g",
   "Version": "2.49"

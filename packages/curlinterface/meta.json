@@ -90,7 +90,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/curlInterface"
   },
-  "Status": "deposited",
   "Subtitle": "Simple Web Access",
   "TestFile": "tst/testall.g",
   "Version": "2.4.4"

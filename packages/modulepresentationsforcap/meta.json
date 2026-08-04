@@ -103,7 +103,6 @@
     "Type": "git",
     "URL": "https://github.com/homalg-project/CAP_project"
   },
-  "Status": "deposited",
   "Subtitle": "Category R-pres for CAP",
   "TestFile": "tst/testall.g",
   "Version": "2026.06-01"

@@ -89,7 +89,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/fwtree"
   },
-  "Status": "deposited",
   "Subtitle": "Computing trees related to some pro-p-groups of finite width",
   "TestFile": "tst/testall.g",
   "Version": "1.3"

@@ -110,7 +110,6 @@
     "Type": "git",
     "URL": "https://github.com/homalg-project/homalg_project"
   },
-  "Status": "deposited",
   "Subtitle": "IO capabilities for the homalg project",
   "TestFile": "tst/testall.g",
   "Version": "2026.07-01"

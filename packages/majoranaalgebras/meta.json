@@ -93,7 +93,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/MajoranaAlgebras"
   },
-  "Status": "deposited",
   "Subtitle": "A package for constructing Majorana algebras and representations",
   "TestFile": "tst/testall.g",
   "Version": "1.5.2"

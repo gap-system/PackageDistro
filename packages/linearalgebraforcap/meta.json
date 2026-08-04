@@ -101,7 +101,6 @@
     "Type": "git",
     "URL": "https://github.com/homalg-project/CAP_project"
   },
-  "Status": "deposited",
   "Subtitle": "Category of Matrices over a Field for CAP",
   "TestFile": "tst/testall.g",
   "Version": "2026.06-02"

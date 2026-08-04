@@ -69,7 +69,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/qpa"
   },
-  "Status": "deposited",
   "Subtitle": "Quivers and Path Algebras",
   "TestFile": "tst/testall.g",
   "Version": "1.37"

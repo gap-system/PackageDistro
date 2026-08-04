@@ -1,6 +1,5 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">smallantimagmas</span> package,    classifies all finite, antassociative magmas.",
-  "AcceptDate": "08/2025",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "53e3aa1c9961d08e378c8b4cf1069076296722e7d57c9f00229ca9cfcf1b5ff4",
   "ArchiveSize": 1189504,
@@ -12,7 +11,6 @@
     }
   },
   "AvailabilityTest": null,
-  "CommunicatedBy": "Kamil Zabielski (Białystok)",
   "Date": "2026-07-05",
   "Dependencies": {
     "ExternalConditions": [],
@@ -77,7 +75,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/smallantimagmas"
   },
-  "Status": "accepted",
   "Subtitle": "A library of antiassociative magmas of small order",
   "SupportEmail": "kamil@zabielscy.com",
   "TestFile": "tst/testall.g",

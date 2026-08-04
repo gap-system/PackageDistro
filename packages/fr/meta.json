@@ -13,7 +13,6 @@
   },
   "AvailabilityTest": null,
   "BannerString": "Loading FR 2.4.13 ...\n",
-  "CommunicatedBy": "Götz Pfeiffer (NUI Galway)",
   "Date": "2024-01-11",
   "Dependencies": {
     "ExternalConditions": [],
@@ -92,7 +91,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/fr"
   },
-  "Status": "deposited",
   "Subtitle": "Computations with functionally recursive groups",
   "TestFile": "tst/testall.g",
   "Version": "2.4.13"

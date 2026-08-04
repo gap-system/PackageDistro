@@ -72,7 +72,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/polymaking"
   },
-  "Status": "deposited",
   "Subtitle": "Interfacing the geometry software polymake",
   "TestFile": "tst/testall.g",
   "Version": "0.8.9"

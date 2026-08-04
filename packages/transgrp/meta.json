@@ -51,7 +51,6 @@
     "Type": "git",
     "URL": "https://github.com/hulpke/transgrp"
   },
-  "Status": "deposited",
   "Subtitle": "Transitive Groups Library",
   "TestFile": "tst/testall.g",
   "Version": "3.6.5"

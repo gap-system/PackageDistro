@@ -92,7 +92,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/genss"
   },
-  "Status": "deposited",
   "Subtitle": "Generic Schreier-Sims",
   "TestFile": "tst/testall.g",
   "Version": "1.6.9"

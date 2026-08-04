@@ -182,7 +182,6 @@
     "Type": "git",
     "URL": "https://github.com/homalg-project/homalg_project"
   },
-  "Status": "deposited",
   "Subtitle": "Dictionaries of external rings",
   "TestFile": "tst/testall.g",
   "Version": "2026.05-01"

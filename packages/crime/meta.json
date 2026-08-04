@@ -1,6 +1,5 @@
 {
   "AbstractHTML": "This package computes the cohomology rings of finite p-groups, induced maps, and Massey products.",
-  "AcceptDate": "10/2006",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "c6630c5d5385caa3a0e470599759f8e42bd5f0147eebfee164ca808cec83371e",
   "ArchiveURL": "https://github.com/gap-packages/crime/releases/download/v1.6/crime-1.6",
@@ -13,7 +12,6 @@
   "Autoload": false,
   "AvailabilityTest": null,
   "BannerString": "\nThis is CRIME, Version 1.6\n\"Obviously crime pays, or there'd be no crime\".\n                                G. Gordon Liddy\n\n",
-  "CommunicatedBy": "Bettina Eick (Braunschweig)",
   "Date": "2022-03-17",
   "Dependencies": {
     "ExternalConditions": [],
@@ -65,7 +63,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/crime"
   },
-  "Status": "accepted",
   "Subtitle": "A GAP Package to Calculate Group Cohomology and Massey Products",
   "TestFile": "tst/testall.g",
   "Version": "1.6"

@@ -77,7 +77,6 @@
     "Type": "git",
     "URL": "https://github.com/snw-0/sl2-reps"
   },
-  "Status": "deposited",
   "Subtitle": "Constructing symmetric representations of SL(2,Z).",
   "TestFile": "tst/testall.g",
   "Version": "1.1"

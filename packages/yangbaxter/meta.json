@@ -71,7 +71,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/YangBaxter"
   },
-  "Status": "deposited",
   "Subtitle": "Combinatorial Solutions for the Yang-Baxter equation",
   "TestFile": "tst/testall.g",
   "Version": "0.10.7"

@@ -1,6 +1,5 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">NoCK</span> package    is used for computing Tolzanos's obstruction    for compact Clifford-Klein forms",
-  "AcceptDate": "07/2019",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "69023293e9abc695f15c2740df5902ba6e95d53bd3441b9c3fe25c410c207fc6",
   "ArchiveURL": "https://github.com/gap-packages/NoCK/releases/download/v1.5/NoCK-1.5",
@@ -13,7 +12,6 @@
   },
   "AvailabilityTest": null,
   "BannerString": "----------------------------------------------------------------\nNoCK Package 1.5\nby Maciej Bocheński, Piotr Jastrzębski, Anna Szczepkowska, Aleksy Tralle, Artur Woike.\n----------------------------------------------------------------\n",
-  "CommunicatedBy": "Leonard Soicher (QMUL)",
   "Date": "2022-03-30",
   "Dependencies": {
     "ExternalConditions": [],
@@ -119,7 +117,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/NoCK"
   },
-  "Status": "accepted",
   "Subtitle": "Computing obstruction for the existence of compact Clifford-Klein form",
   "SupportEmail": "piojas@matman.uwm.edu.pl",
   "TestFile": "tst/testall.g",

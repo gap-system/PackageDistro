@@ -68,7 +68,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/NormalizInterface"
   },
-  "Status": "deposited",
   "Subtitle": "GAP wrapper for Normaliz",
   "TestFile": "tst/testall.g",
   "Version": "1.5.1"

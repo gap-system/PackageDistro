@@ -68,7 +68,6 @@
     "Type": "git",
     "URL": "https://github.com/BNasmith/alco"
   },
-  "Status": "deposited",
   "Subtitle": "Tools for algebraic combinatorics",
   "SupportEmail": "bnasmith@proton.me",
   "TestFile": "tst/testall.g",

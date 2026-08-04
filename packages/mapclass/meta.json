@@ -1,11 +1,9 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">MapClass</span> package calculates the    mapping class group orbits for a given finite group.",
-  "AcceptDate": "11/2011",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "ec8cffca7e543662c522f0f6412cf994dc5fbe439d333f5f11e22923655b9c4e",
   "ArchiveURL": "https://github.com/gap-packages/MapClass/releases/download/v1.4.6/MapClass-1.4.6",
   "AvailabilityTest": null,
-  "CommunicatedBy": "Leonard Soicher (QMUL)",
   "Date": "2022-09-17",
   "Dependencies": {
     "ExternalConditions": [],
@@ -72,7 +70,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/MapClass"
   },
-  "Status": "accepted",
   "Subtitle": "A Package For Mapping Class Orbit Computation",
   "TestFile": "tst/testall.g",
   "Version": "1.4.6"

@@ -1,12 +1,10 @@
 {
   "AbstractHTML": "The <span class=\"smallgrp\">SmallGrp</span> package provides the library of groups of certain \"small\" orders. The groups are sorted by their orders and they are listed up to isomorphism; that is, for each of the available orders a complete and irredundant list of isomorphism type representatives of groups is given.",
-  "AcceptDate": "02/2002",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "839820e1f1a5761ab872de6c7cf0cafae004f95ccba33cf245528ad2095e60c7",
   "ArchiveSize": 20031946,
   "ArchiveURL": "https://github.com/gap-packages/SmallGrp/releases/download/v1.5.5/SmallGrp-1.5.5",
   "AvailabilityTest": null,
-  "CommunicatedBy": "Mike Newman (Canberra)",
   "Date": "2026-07-28",
   "Dependencies": {
     "ExternalConditions": [],
@@ -81,7 +79,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/SmallGrp"
   },
-  "Status": "accepted",
   "Subtitle": "The GAP Small Groups Library",
   "TestFile": "tst/testall.g",
   "Version": "1.5.5"

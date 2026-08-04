@@ -427,7 +427,6 @@
     "Type": "git",
     "URL": "https://github.com/semigroups/Semigroups"
   },
-  "Status": "deposited",
   "Subtitle": "A package for semigroups and monoids",
   "TestFile": "tst/teststandard.g",
   "Version": "5.6.3"

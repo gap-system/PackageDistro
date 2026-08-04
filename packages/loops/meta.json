@@ -1,6 +1,5 @@
 {
   "AbstractHTML": "The LOOPS package provides researchers in nonassociative algebra with a computational tool that integrates standard notions of loop theory with libraries of loops and group-theoretical algorithms of GAP. The package also expands GAP toward nonassociative structures.",
-  "AcceptDate": "05/2015",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "ff9009afe500fc29367e4e19f9530bb8e61dbed19833f01b5d22cd0a003daedd",
   "ArchiveSize": 1070680,
@@ -14,7 +13,6 @@
     }
   },
   "AvailabilityTest": null,
-  "CommunicatedBy": "Leonard Soicher (QMUL)",
   "Date": "2026-07-29",
   "Dependencies": {
     "ExternalConditions": [],
@@ -93,7 +91,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/loops"
   },
-  "Status": "accepted",
   "Subtitle": "Computing with quasigroups and loops in GAP",
   "TestFile": "tst/testall.g",
   "Version": "3.4.5"

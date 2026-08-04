@@ -77,7 +77,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/cvec"
   },
-  "Status": "deposited",
   "Subtitle": "Compact vectors over finite fields",
   "TestFile": "tst/testall.g",
   "Version": "2.8.5"

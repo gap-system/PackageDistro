@@ -1,6 +1,5 @@
 {
   "AbstractHTML": "This package provides a catalog of crystallographic groups of dimensions 2, 3, and 4 which covers most of the data contained in the book <em>Crystallographic groups of four-dimensional space</em> by H. Brown, R. B&uuml;low, J. Neub&uuml;ser, H. Wondratschek, and H. Zassenhaus (John Wiley, New York, 1978). Methods for the computation with these groups are provided by the package <span class=\"pkgname\">Cryst</span>, which must be installed as well.",
-  "AcceptDate": "02/2000",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "643c6c350b58880a64bbbee16520378c564441f453223b0703eda1c210d6e096",
   "ArchiveURL": "https://www.math.uni-bielefeld.de/~gaehler/gap/CrystCat/crystcat-1.1.11",
@@ -9,7 +8,6 @@
     "doc/manual.pdf",
     "doc/manual.dvi"
   ],
-  "CommunicatedBy": "Herbert Pahlings (Aachen)",
   "Date": "2025-12-04",
   "Dependencies": {
     "ExternalConditions": [],
@@ -71,7 +69,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/crystcat"
   },
-  "Status": "accepted",
   "Subtitle": "The crystallographic groups catalog",
   "SupportEmail": "gaehler@math.uni-bielefeld.de",
   "TestFile": "tst/testall.g",

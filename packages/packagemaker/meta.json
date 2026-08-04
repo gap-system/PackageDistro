@@ -58,7 +58,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/PackageMaker"
   },
-  "Status": "dev",
   "Subtitle": "A GAP package for creating new GAP packages",
   "TestFile": "tst/testall.g",
   "Version": "1.0.2"

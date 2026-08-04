@@ -72,7 +72,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/francy"
   },
-  "Status": "deposited",
   "Subtitle": "Framework for Interactive Discrete Mathematics",
   "TestFile": "tst/testall.g",
   "Version": "2.0.3"

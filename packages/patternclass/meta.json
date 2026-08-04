@@ -87,7 +87,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/PatternClass"
   },
-  "Status": "deposited",
   "Subtitle": "A permutation pattern class package",
   "TestFile": "tst/testall.g",
   "Version": "2.4.5"

@@ -64,7 +64,6 @@
     "Type": "git",
     "URL": "https://github.com/nathancarter/jupyterviz"
   },
-  "Status": "deposited",
   "Subtitle": "Visualization Tools for Jupyter and the GAP REPL",
   "SupportEmail": "ncarter@bentley.edu",
   "TestFile": "tst/testall.g",

@@ -104,7 +104,6 @@
     "Type": "git",
     "URL": "https://github.com/homalg-project/homalg_project"
   },
-  "Status": "deposited",
   "Subtitle": "Examples for the GAP Package homalg",
   "TestFile": "tst/testall.g",
   "Version": "2026.07-01"

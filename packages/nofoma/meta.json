@@ -76,7 +76,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/nofoma"
   },
-  "Status": "dev",
   "Subtitle": "Normal forms of matrices",
   "TestFile": "tst/testall.g",
   "Version": "1.0.1"

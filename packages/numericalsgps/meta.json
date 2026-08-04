@@ -1,12 +1,10 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">NumericalSgps</span> package, is a package to compute with numerical semigroups.",
-  "AcceptDate": "05/2015",
   "ArchiveFormats": ".tar.gz .zip",
   "ArchiveSHA256": "a28bdea0c129c9aa9b302ee57fa51612c4e343a249775551133cb5a32a68cea1",
   "ArchiveURL": "https://github.com/gap-packages/numericalsgps/releases/download/v1.4.0/NumericalSgps-1.4.0",
   "AvailabilityTest": null,
   "BannerString": "----------------------------------------------------------------\nLoading  NumericalSgps 1.4.0\nFor help, type: ?NumericalSgps: \nTo gain profit from other packages, please refer to chapter\n'External Packages' in the manual, or type: ?NumSgpsUse \n----------------------------------------------------------------\n",
-  "CommunicatedBy": "Leonard Soicher (QMUL)",
   "Date": "2024-08-30",
   "Dependencies": {
     "ExternalConditions": [],
@@ -191,7 +189,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/numericalsgps"
   },
-  "Status": "accepted",
   "Subtitle": "A package for numerical semigroups",
   "TestFile": "tst/testall.g",
   "Version": "1.4.0"

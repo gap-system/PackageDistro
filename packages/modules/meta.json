@@ -135,7 +135,6 @@
     "Type": "git",
     "URL": "https://github.com/homalg-project/homalg_project"
   },
-  "Status": "deposited",
   "Subtitle": "A homalg based package for the Abelian category of finitely presented modules over computable rings",
   "TestFile": "tst/testall.g",
   "Version": "2026.04-01"

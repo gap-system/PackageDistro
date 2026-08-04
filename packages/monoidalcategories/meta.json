@@ -108,7 +108,6 @@
     "Type": "git",
     "URL": "https://github.com/homalg-project/CAP_project"
   },
-  "Status": "deposited",
   "Subtitle": "Monoidal and monoidal (co)closed categories",
   "TestFile": "tst/testall.g",
   "Version": "2026.07-03"

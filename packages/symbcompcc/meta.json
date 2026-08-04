@@ -1,11 +1,9 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">SymbCompCC</span> package computes with parametrised presentations for finite p-groups of fixed coclass.",
-  "AcceptDate": "11/2011",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "3d00760f1670acbc66219d7d72b9be62218e91b14716522d7c1922d6a50cf856",
   "ArchiveURL": "https://github.com/gap-packages/SymbCompCC/releases/download/v1.3.2/SymbCompCC-1.3.2",
   "AvailabilityTest": null,
-  "CommunicatedBy": "Mike Newman (Canberra, Australia)",
   "Date": "2022-02-10",
   "Dependencies": {
     "ExternalConditions": [],
@@ -64,7 +62,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/SymbCompCC"
   },
-  "Status": "accepted",
   "Subtitle": "Computing with parametrised presentations for p-groups of fixed coclass",
   "TestFile": "tst/testall.g",
   "Version": "1.3.2"

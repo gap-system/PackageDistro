@@ -1,6 +1,5 @@
 {
   "AbstractHTML": "This package, previously known as <span class=\"pkgname\">CrystGAP</span>, provides a rich set of methods for the computation with affine crystallographic groups, in particular space groups. Affine crystallographic groups are fully supported both in representations acting from the right or from the left, the latter one being preferred by crystallographers. Functions to determine representatives of all space group types of a given dimension are also provided. Where necessary, <span class=\"pkgname\">Cryst</span> can also make use of functionality provided by the package <span class=\"pkgname\">CaratInterface</span>.",
-  "AcceptDate": "02/2000",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "ff420bd3eb197ba3ae9a2afb290c366213d4ed0d5754c2bce12cfca73be7e07b",
   "ArchiveSize": 254528,
@@ -10,7 +9,6 @@
     "doc/manual.pdf",
     "doc/manual.dvi"
   ],
-  "CommunicatedBy": "Herbert Pahlings (Aachen)",
   "Date": "2026-05-04",
   "Dependencies": {
     "ExternalConditions": [],
@@ -105,7 +103,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/cryst"
   },
-  "Status": "accepted",
   "Subtitle": "Computing with crystallographic groups",
   "SupportEmail": "gaehler@math.uni-bielefeld.de",
   "TestFile": "tst/testall.g",

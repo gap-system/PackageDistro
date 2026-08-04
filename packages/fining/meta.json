@@ -1,6 +1,5 @@
 {
   "AbstractHTML": "<span class=\"pkgname\">FinInG</span> is a package for computation in Finite Incidence Geometry. It provides users with the basic tools to work in  various areas of finite geometry from the realms of projective spaces to the flat  lands of generalised polygons. The algebraic power of GAP is employed, particularly  in its facility with matrix and permutation groups.",
-  "AcceptDate": "11/2017",
   "ArchiveFormats": ".tar.gz .tar.bz2",
   "ArchiveSHA256": "844d76472a13458c508d76e185b275158d16ae89a26cc0fe795d7e3946e1c321",
   "ArchiveURL": "https://github.com/gap-packages/FinInG/releases/download/v1.5.6/fining-1.5.6",
@@ -15,7 +14,6 @@
   },
   "AvailabilityTest": null,
   "BannerString": "---------------------------------------------------------------------\n             ______________       ________      _________            \n             ___  ____/__(_)__________  _/________  ____/            \n             __  /_   __  /__  __ __  / __  __   / __              \n             _  __/   _  / _  / / /_/ /  _  / / / /_/ /              \n             /_/      /_/  /_/ /_//___/  /_/ /_/____/               \n---------------------------------------------------------------------\nLoading  FinInG 1.5.6 (Finite Incidence Geometry) \nby John Bamberg (http://school.maths.uwa.edu.au/~bamberg/)\n   Anton Betten (http://www.math.colostate.edu/~betten)\n   Philippe Cara (http://homepages.vub.ac.be/~pcara)\n   Jan De Beule (http://www.debeule.eu)\n   Michel Lavrauw (http://people.sabanciuniv.edu/~mlavrauw/)\n   Max Neunhoeffer (http://www-groups.mcs.st-and.ac.uk/~neunhoef/)\nFor help, type: ?FinInG \n---------------------------------------------------------------------\n",
-  "CommunicatedBy": "Olexandr Konovalov (St Andrews)",
   "Date": "2023-07-27",
   "Dependencies": {
     "ExternalConditions": [],
@@ -155,7 +153,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/FinInG"
   },
-  "Status": "accepted",
   "Subtitle": "Finite Incidence Geometry",
   "TestFile": "tst/testall.g",
   "Version": "1.5.6"

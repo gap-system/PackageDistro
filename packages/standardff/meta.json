@@ -61,7 +61,6 @@
     "Type": "git",
     "URL": "https://github.com/frankluebeck/StandardFF"
   },
-  "Status": "deposited",
   "Subtitle": "Standard finite fields and cyclic generators",
   "TestFile": "tst/testall.g",
   "Version": "1.0"

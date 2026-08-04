@@ -1,12 +1,10 @@
 {
   "AbstractHTML": "The package provides a <span class=\"pkgname\">GAP</span> interface to the <a href=\"http://atlas.math.rwth-aachen.de/Atlas/v3\">Atlas of Group Representations</a>",
-  "AcceptDate": "04/2001",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "1ccb65af694d53f60ba41f85b2293e505c42a2fecf90b36747c1d841a5ce0b47",
   "ArchiveSize": 2387994,
   "ArchiveURL": "https://www.math.rwth-aachen.de/~Thomas.Breuer/atlasrep/atlasrep-2.1.11",
   "AvailabilityTest": null,
-  "CommunicatedBy": "Herbert Pahlings (Aachen)",
   "Date": "2026-05-01",
   "Dates_all": [
     [
@@ -250,7 +248,6 @@
     }
   ],
   "README_URL": "https://www.math.rwth-aachen.de/~Thomas.Breuer/atlasrep/README.md",
-  "Status": "accepted",
   "Subtitle": "A GAP Interface to the Atlas of Group Representations",
   "TestFile": "tst/testauto.g",
   "Version": "2.1.11"

@@ -95,7 +95,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/guarana"
   },
-  "Status": "deposited",
   "Subtitle": "Applications of Lie methods for computations with infinite polycyclic groups",
   "TestFile": "tst/testall.g",
   "Version": "0.96.3"

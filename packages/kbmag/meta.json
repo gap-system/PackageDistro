@@ -1,6 +1,5 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">kbmag</span> package is a       <span class=\"pkgname\">GAP</span> interface to some `C' programs   for running the Knuth-Bendix completion program on finite semigroup,   monoid or group presentations, and for attempting to compute automatic   structures of finitely presented groups",
-  "AcceptDate": "07/2003",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "3112924625b3b2b5d0ae1a84fe7babccaaa900b0044dca37fbf33f8b3f455682",
   "ArchiveURL": "https://github.com/gap-packages/kbmag/releases/download/v1.5.11/kbmag-1.5.11",
@@ -13,7 +12,6 @@
   },
   "Autoload": false,
   "AvailabilityTest": null,
-  "CommunicatedBy": "Charles Wright (Oregon)",
   "Date": "2023-01-03",
   "Dependencies": {
     "ExternalConditions": [
@@ -69,7 +67,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/kbmag"
   },
-  "Status": "accepted",
   "Subtitle": "Knuth-Bendix on Monoids and Automatic Groups",
   "TestFile": "tst/testall.g",
   "Version": "1.5.11"

@@ -137,7 +137,6 @@
     "Type": "git",
     "URL": "https://github.com/homalg-project/homalg_project"
   },
-  "Status": "deposited",
   "Subtitle": "Endow Commutative Rings with an Abelian Grading",
   "TestFile": "tst/testall.g",
   "Version": "2026.07-01"

@@ -76,7 +76,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/io"
   },
-  "Status": "deposited",
   "Subtitle": "Bindings for low level C library I/O routines",
   "TestFile": "tst/testall.g",
   "Version": "4.10.0"

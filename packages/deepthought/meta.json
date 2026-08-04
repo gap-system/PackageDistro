@@ -72,7 +72,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/DeepThought"
   },
-  "Status": "deposited",
   "Subtitle": "This package provides functions for computations in finitely generated nilpotent groups based on the Deep Thought algorithm.",
   "TestFile": "tst/testall.g",
   "Version": "1.0.10"
