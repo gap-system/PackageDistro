@@ -1,12 +1,10 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">ACE</span> package provides both an    interactive and non-interactive interface with the Todd-Coxeter coset   enumeration functions of the ACE (Advanced Coset Enumerator) C program.",
-  "AcceptDate": "04/2001",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "7123e4100f1340a791d20bca1a8d9e6d9f09fe74a1c5fb15f1723899a1bb4553",
   "ArchiveURL": "https://github.com/gap-packages/ace/releases/download/v5.7.0/ace-5.7.0",
   "AvailabilityTest": null,
   "BannerString": "---------------------------------------------------------------------------\nLoading    ACE (Advanced Coset Enumerator) 5.7.0\nGAP code by Greg Gamble <Greg.Gamble@uwa.edu.au> (address for correspondence)\n       Alexander Hulpke (https://www.math.colostate.edu/~hulpke)\n           [uses ACE binary (C code program) version: 3.001]\nC code by  George Havas (http://staff.itee.uq.edu.au/havas)\n           Colin Ramsay <cram@itee.uq.edu.au>\nCo-maintainer: Max Horn <mhorn@rptu.de>\n\n                 For help, type: ?ACE\n---------------------------------------------------------------------------\n",
-  "CommunicatedBy": "Joachim Neubüser (Aachen)",
   "Date": "2025-04-10",
   "Dependencies": {
     "ExternalConditions": [],
@@ -103,7 +101,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/ace"
   },
-  "Status": "accepted",
   "Subtitle": "Advanced Coset Enumerator",
   "TestFile": "tst/aceds.tst",
   "Version": "5.7.0"

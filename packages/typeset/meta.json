@@ -90,7 +90,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/typeset"
   },
-  "Status": "deposited",
   "Subtitle": "Automatic typesetting framework for common GAP objects, with LaTeX generation",
   "TestFile": "tst/testall.g",
   "Version": "1.2.4"

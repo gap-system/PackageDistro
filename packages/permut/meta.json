@@ -1,12 +1,10 @@
 {
   "AbstractHTML": "This package provides functions for computing with permutability in finite groups.",
-  "AcceptDate": "04/2014",
   "ArchiveFormats": ".tar.gz .tar.bz2 .zip",
   "ArchiveSHA256": "89ccc4a1ffd3dcced48b5b05c5b75d8e9339acc4f49073b262fcad7d7d75ffee",
   "ArchiveSize": 356271,
   "ArchiveURL": "https://github.com/gap-packages/permut/releases/download/v2.0.6/permut-2.0.6",
   "AvailabilityTest": null,
-  "CommunicatedBy": "Alice Niemeyer (Perth)",
   "Date": "2026-07-31",
   "Dependencies": {
     "ExternalConditions": [],
@@ -86,7 +84,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/permut"
   },
-  "Status": "accepted",
   "Subtitle": "A package to deal with permutability in finite groups",
   "SupportEmail": "Ramon.Esteban@uv.es",
   "TestFile": "tst/testall.g",

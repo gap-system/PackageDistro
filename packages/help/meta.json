@@ -116,7 +116,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/HeLP"
   },
-  "Status": "deposited",
   "Subtitle": "Hertweck-Luthar-Passi method.",
   "TestFile": "tst/testall.g",
   "Version": "4.1"

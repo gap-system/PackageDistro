@@ -1,6 +1,5 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">GBNP</span> package provides algorithms for    computing Gröbner bases of noncommutative polynomials with coefficients    from a field implemented in <span class=\"pkgname\">GAP</span> and with    respect to the \"total degree first then lexicographical\" ordering.    Further provided are some variations, such as a weighted and truncated    version and a tracing facility. The word \"algorithm\" is to be    interpreted loosely here: in general one cannot expect such an algorithm    to terminate, as it would imply solvability of the word problem for    finitely presented (semi)groups.",
-  "AcceptDate": "05/2010",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "eb1f6d5eba80318ad88ac268d3f3b9e3affca05940f56cfaf6a31556e3a46056",
   "ArchiveURL": "https://github.com/gap-packages/gbnp/releases/download/v1.1.0/gbnp-1.1.0",
@@ -16,7 +15,6 @@
     }
   },
   "AvailabilityTest": null,
-  "CommunicatedBy": "Alexander Hulpke (Fort Collins, CO)",
   "Date": "2024-08-29",
   "Dependencies": {
     "ExternalConditions": [],
@@ -84,7 +82,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/gbnp"
   },
-  "Status": "accepted",
   "Subtitle": "computing Gröbner bases of noncommutative polynomials",
   "TestFile": "tst/testall.g",
   "Version": "1.1.0"

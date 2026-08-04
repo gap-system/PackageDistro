@@ -1,11 +1,9 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">FPLSA</span> package uses    the authors' C program (version 4.0) that implements    a Lie Todd-Coxeter method for converting    finitely presented Lie algebras into isomorphic    structure constant algebras.    This is called via the GAP function IsomorphismSCTableAlgebra.",
-  "AcceptDate": "07/1999",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "cb2fd23861df583259ec6677119080ca958caa13405834365163e7c2b0441952",
   "ArchiveURL": "https://github.com/gap-packages/FPLSA/releases/download/v1.2.8/FPLSA-1.2.8",
   "AvailabilityTest": null,
-  "CommunicatedBy": "Steve Linton (St Andrews)",
   "Date": "2025-12-26",
   "Dependencies": {
     "ExternalConditions": [],
@@ -68,7 +66,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/FPLSA"
   },
-  "Status": "accepted",
   "Subtitle": "Finitely Presented Lie Algebras",
   "TestFile": "tst/testall.g",
   "Version": "1.2.8"

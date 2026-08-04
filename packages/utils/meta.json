@@ -135,7 +135,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/utils"
   },
-  "Status": "deposited",
   "Subtitle": "Utility functions in GAP",
   "TestFile": "tst/testall.g",
   "Version": "0.98"

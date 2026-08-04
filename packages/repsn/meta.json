@@ -1,6 +1,5 @@
 {
   "AbstractHTML": "The package provides <span class=\"pkgname\">GAP</span> functions for computing characteristic zero matrix representations of finite groups.",
-  "AcceptDate": "05/2004",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "c5c643cf24bec3cf3c0bbfc50c6aae19d0a620673d01e58b87aa88d15ea139e6",
   "ArchiveSize": 199190,
@@ -11,7 +10,6 @@
     }
   },
   "AvailabilityTest": null,
-  "CommunicatedBy": "Charles Wright (Eugene)",
   "Date": "2026-07-31",
   "Dependencies": {
     "ExternalConditions": [],
@@ -67,7 +65,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/repsn"
   },
-  "Status": "accepted",
   "Subtitle": "Constructing representations of finite groups",
   "TestFile": "tst/testall.g",
   "Version": "3.1.3"

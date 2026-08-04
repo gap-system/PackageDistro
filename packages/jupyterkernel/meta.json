@@ -151,7 +151,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/JupyterKernel"
   },
-  "Status": "deposited",
   "Subtitle": "Jupyter kernel written in GAP",
   "TestFile": "tst/testinstall.g",
   "Version": "1.5.1"

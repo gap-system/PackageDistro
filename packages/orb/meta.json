@@ -95,7 +95,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/orb"
   },
-  "Status": "deposited",
   "Subtitle": "Methods to enumerate orbits",
   "TestFile": "tst/testall.g",
   "Version": "5.1.0"

@@ -1,6 +1,5 @@
 {
   "AbstractHTML": "The package <span class=\"pkgname\">LieRing</span> contains                  functionality for working with finitely presented Lie rings and the Lazard correspondence.",
-  "AcceptDate": "12/2013",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "ae9fa477e5df51e4da024b96ac16a6f17c3b8715aa953dabb9a4004da782820f",
   "ArchiveURL": "https://github.com/gap-packages/liering/releases/download/v2.4.2/liering-2.4.2",
@@ -13,7 +12,6 @@
   },
   "AvailabilityTest": null,
   "BannerString": "LieRing\n a package for working with Lie rings \n by Serena Cicalò and Willem de Graaf\n",
-  "CommunicatedBy": "Max Neunhoeffer (Cologne)",
   "Date": "2022-02-10",
   "Dependencies": {
     "ExternalConditions": [],
@@ -78,7 +76,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/liering"
   },
-  "Status": "accepted",
   "Subtitle": "Computing with finitely presented Lie rings",
   "TestFile": "tst/testall.g",
   "Version": "2.4.2"

@@ -1,6 +1,5 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">FGA</span> package installs methods for    computations with finitely generated subgroups of free groups and    provides a presentation for their automorphism groups.",
-  "AcceptDate": "05/2005",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "da426e208afbec533db2a5e3c5370756309b7735e4306d2ddf2bf35b5afb8592",
   "ArchiveURL": "https://github.com/gap-packages/fga/releases/download/v1.5.0/fga-1.5.0",
@@ -10,7 +9,6 @@
     }
   },
   "AvailabilityTest": null,
-  "CommunicatedBy": "Edmund Robertson (St. Andrews)",
   "Date": "2023-04-04",
   "Dependencies": {
     "ExternalConditions": [],
@@ -63,7 +61,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/fga"
   },
-  "Status": "accepted",
   "Subtitle": "Free Group Algorithms",
   "TestFile": "tst/testall.g",
   "Version": "1.5.0"

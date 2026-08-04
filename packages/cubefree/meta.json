@@ -1,11 +1,9 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">Cubefree</span> package contains methods to construct up to isomorphism the groups of a given (reasonable) cubefree order. The main function ConstructAllCFGroups(n) constructs all groups of a given cubefree order n. The function NumberCFGroups(n) counts all groups of a cubefree order n. Furthermore, IrreducibleSubgroupsOfGL(2,q) constructs the irreducible subgroups of GL(2,q), q=p^r, p>=5 prime, up to conjugacy and RewriteAbsolutelyIrreducibleMatrixGroup(G) rewrites the absolutely irreducible matrix group G (over a finite field) over a minimal subfield.",
-  "AcceptDate": "10/2007",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "721ea5e7034c91845a7a4c9b6dd91cbb8a2bd573e655d38f2e0b5318b943c082",
   "ArchiveURL": "https://github.com/gap-packages/cubefree/releases/download/v1.21/cubefree-1.21",
   "AvailabilityTest": null,
-  "CommunicatedBy": "David Joyner (Annapolis)",
   "Date": "2025-08-29",
   "Dependencies": {
     "ExternalConditions": [],
@@ -68,7 +66,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/cubefree"
   },
-  "Status": "accepted",
   "Subtitle": "Constructing the Groups of a Given Cubefree Order",
   "TestFile": "tst/testall.g",
   "Version": "1.21"

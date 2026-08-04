@@ -107,7 +107,6 @@
     "Type": "git",
     "URL": "https://homalg-project.github.io/ToricVarieties_project/ToricVarieties"
   },
-  "Status": "deposited",
   "Subtitle": "A package to handle toric varieties",
   "Version": "2021.11.17"
 }

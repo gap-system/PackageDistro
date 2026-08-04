@@ -66,7 +66,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/hecke"
   },
-  "Status": "deposited",
   "Subtitle": "Calculating decomposition matrices of Hecke algebras",
   "TestFile": "tst/testall.g",
   "Version": "1.5.4"

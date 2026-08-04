@@ -1,6 +1,5 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">Congruence </span> package provides functions to construct several types of canonical congruence subgroups in SL_2(Z), and also intersections of a finite number of such subgroups. Furthermore, it implements the algorithm for generating Farey symbols for congruence subgroups and using them to produce a system of independent generators for these subgroups",
-  "AcceptDate": "09/2014",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "980799e39b1d5884d0dcf2be24aa75e541430f8988e47873a92ba3e8bd4e9ee5",
   "ArchiveURL": "https://github.com/gap-packages/congruence/releases/download/v1.2.7/congruence-1.2.7",
@@ -12,7 +11,6 @@
     }
   },
   "AvailabilityTest": null,
-  "CommunicatedBy": "Graham Ellis (Galway)",
   "Date": "2024-08-28",
   "Dependencies": {
     "ExternalConditions": [],
@@ -99,7 +97,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/congruence"
   },
-  "Status": "accepted",
   "Subtitle": "Congruence subgroups of SL(2,Integers)",
   "TestFile": "tst/testall.g",
   "Version": "1.2.7"

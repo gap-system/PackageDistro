@@ -1,13 +1,11 @@
 {
   "AbstractHTML": "This <span class=\"pkgname\">GAP</span> package provides    access to interactive Todd-Coxeter computations    with finitely presented groups.",
-  "AcceptDate": "03/2000",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "19875fb3407fbda5f3696114d2a381fedacbfae6df311f928c49887ce8b18675",
   "ArchiveURL": "https://github.com/gap-packages/itc/releases/download/v1.5.1/itc-1.5.1",
   "Autoload": false,
   "AvailabilityTest": null,
   "BannerString": "\n          Loading  ITC 1.5.1  (Interactive Todd-Coxeter)\n            by V. Felsch, L. Hippe, and J. Neubueser\n              (Volkmar.Felsch@math.rwth-aachen.de)\n\n",
-  "CommunicatedBy": "Edmund F. Robertson (St Andrews)",
   "Date": "2022-03-01",
   "Dependencies": {
     "ExternalConditions": [],
@@ -84,7 +82,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/itc"
   },
-  "Status": "accepted",
   "Subtitle": "Interactive Todd-Coxeter",
   "Version": "1.5.1"
 }

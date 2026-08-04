@@ -59,6 +59,12 @@ from utils import (
 archive_dir = "_archives"
 pkginfos_dir = "_pkginfos"
 
+# Fields recording the outcome of the package refereeing process, which is no
+# longer run. Nothing ever verified what a `PackageInfo.g` claimed here, so
+# rather than carry data we do not stand behind, we drop these fields when
+# importing a package. See issue #408.
+OBSOLETE_FIELDS = ["AcceptDate", "CommunicatedBy", "Status"]
+
 
 def scan_for_one_update(pkginfos_dir: str, pkg_name: str) -> Optional[str]:
     pkg_json = metadata(pkg_name)
@@ -119,6 +125,8 @@ def import_packages(pkginfo_paths: List[str]) -> None:
     pkginfos = parse_pkginfo_files(pkginfo_paths)
     for pkg_json in pkginfos:
         pkgname = pkg_json["PackageName"].lower()
+        for field in OBSOLETE_FIELDS:
+            pkg_json.pop(field, None)
         # Store the release date in ISO format, whichever of the two formats
         # GAP accepts the PackageInfo.g happened to use. If we cannot make
         # sense of the date at all, skip just this one package: its author

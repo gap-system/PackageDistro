@@ -1,6 +1,5 @@
 {
   "AbstractHTML": "The groupoids package provides a collection of functions for computing with finite groupoids, graph of groups, and graphs of groupoids. These are based on the more basic structures of magmas with objects and their mappings. It provides functions for normal forms of elements in Free Products with Amalgamation and in HNN extensions. Up until April 2017 this package was named Gpd.",
-  "AcceptDate": "05/2015",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "5483075441fca6d5d86b1b09db35840688eb3f0c7e15fbadec6bffcf0f0dd363",
   "ArchiveURL": "https://github.com/gap-packages/groupoids/releases/download/v1.81/groupoids-1.81",
@@ -13,7 +12,6 @@
   },
   "AvailabilityTest": null,
   "BannerString": "Loading groupoids 1.81 (algorithms for finite groupoids)\nby Emma Moore and Chris Wensley (https://github.com/cdwensley)\n--------------------------------------------------------------\n",
-  "CommunicatedBy": "Derek Holt (Warwick)",
   "Date": "2025-11-26",
   "Dependencies": {
     "ExternalConditions": [],
@@ -83,7 +81,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/groupoids"
   },
-  "Status": "accepted",
   "Subtitle": "Calculations with finite groupoids and their homomorphisms",
   "SupportEmail": "cdwensley1234@btinternet.com",
   "TestFile": "tst/testall.g",

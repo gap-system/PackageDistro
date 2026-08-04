@@ -62,7 +62,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/ferret"
   },
-  "Status": "deposited",
   "Subtitle": "Backtrack Search in Permutation Groups",
   "TestFile": "tst/testall.g",
   "Version": "1.0.16"

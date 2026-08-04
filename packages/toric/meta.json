@@ -1,6 +1,5 @@
 {
   "AbstractHTML": "<span class=\"pkgname\">toric</span> is a <span class=\"pkgname\">GAP</span>package for computing with toric varieties.",
-  "AcceptDate": "10/2005",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "3cc7fd0da3c258371f41b15718212ade864d1ddc7dcc28a0b3e82cf8316db4bd",
   "ArchiveURL": "https://github.com/gap-packages/toric/releases/download/v1.9.6/Toric-1.9.6",
@@ -12,7 +11,6 @@
   },
   "Autoload": false,
   "AvailabilityTest": null,
-  "CommunicatedBy": "Gerhard Hiss (Aachen)",
   "Date": "2024-07-04",
   "Dependencies": {
     "ExternalConditions": [],
@@ -70,7 +68,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/toric"
   },
-  "Status": "accepted",
   "Subtitle": "toric varieties and some combinatorial geometry computations",
   "TestFile": "tst/testall.g",
   "Version": "1.9.6"

@@ -143,7 +143,6 @@
     "Type": "git",
     "URL": "https://github.com/homalg-project/homalg_project"
   },
-  "Status": "deposited",
   "Subtitle": "A window to the outer world",
   "TestFile": "tst/testall.g",
   "Version": "2026.07-01"

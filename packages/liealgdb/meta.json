@@ -1,6 +1,5 @@
 {
   "AbstractHTML": "",
-  "AcceptDate": "09/2007",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "1b028a8d5d4572c972fb4a2186b03818a372e66a5c81a2b65fa4a94aabe66036",
   "ArchiveURL": "https://github.com/gap-packages/liealgdb/releases/download/v2.3.0/liealgdb-2.3.0",
@@ -12,7 +11,6 @@
     }
   },
   "AvailabilityTest": null,
-  "CommunicatedBy": "Bettina Eick (Braunschweig)",
   "Date": "2025-09-24",
   "Dependencies": {
     "ExternalConditions": [],
@@ -87,7 +85,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/liealgdb"
   },
-  "Status": "accepted",
   "Subtitle": "A database of Lie algebras",
   "TestFile": "tst/testall.g",
   "Version": "2.3.0"

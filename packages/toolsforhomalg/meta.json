@@ -70,7 +70,6 @@
     "Type": "git",
     "URL": "https://github.com/homalg-project/homalg_project"
   },
-  "Status": "deposited",
   "Subtitle": "Special methods and knowledge propagation tools",
   "TestFile": "tst/testall.g",
   "Version": "2026.04-01"

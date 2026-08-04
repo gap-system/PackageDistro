@@ -98,7 +98,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/hapcryst"
   },
-  "Status": "deposited",
   "Subtitle": "A HAP extension for crystallographic groups",
   "TestFile": "tst/testall.g",
   "Version": "0.2.0"

@@ -1,11 +1,9 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">XGAP</span> package allows to use graphics in GAP.",
-  "AcceptDate": "07/1999",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "5330f59825c662670cb5e40f6500c76c318760c7dd403cfb40ed8772ed93a3ff",
   "ArchiveURL": "https://github.com/gap-packages/xgap/releases/download/v4.33/xgap-4.33",
   "AvailabilityTest": null,
-  "CommunicatedBy": "Gerhard Hiß (Aachen)",
   "Date": "2025-09-14",
   "Dependencies": {
     "ExternalConditions": [],
@@ -66,7 +64,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/xgap"
   },
-  "Status": "accepted",
   "Subtitle": "a graphical user interface for GAP",
   "TestFile": "tst/testall.g",
   "Version": "4.33"

@@ -147,6 +147,14 @@ Note that `ArchiveFormats` is not necessarily in the same order as in the
 package's `PackageInfo.g`: when importing a package we move `.tar.gz` to the
 front if the package offers it.
 
+Not everything a `PackageInfo.g` declares is carried over, either: the
+`AcceptDate`, `CommunicatedBy` and `Status` fields record the outcome of the
+package refereeing process, which is no longer run. Nothing ever verified what
+a package claimed there, so these fields are dropped on import and do not
+appear in `meta.json` or in the `package-infos.json` of a release. Packages may
+still declare them -- older versions of GAP expect them -- they simply have no
+effect here.
+
 
 ### GitHub Workflows
 

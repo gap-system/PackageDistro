@@ -1,11 +1,9 @@
 {
   "AbstractHTML": "<span class=\"pkgname\">GRAPE</span> is a package for computing with graphs and groups, and is primarily designed for constructing and analysing graphs related to groups, finite geometries, and designs.",
-  "AcceptDate": "07/1993",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "911b7e181161a4935b5c36cd370a11b250769735ea2f10087bbd75a8de3a2fa1",
   "ArchiveURL": "https://github.com/gap-packages/grape/releases/download/v4.9.3/grape-4.9.3",
   "AvailabilityTest": null,
-  "CommunicatedBy": "Leonard Soicher (QMUL)",
   "Date": "2025-09-06",
   "Dependencies": {
     "ExternalConditions": [],
@@ -56,7 +54,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/grape"
   },
-  "Status": "accepted",
   "Subtitle": "GRaph Algorithms using PErmutation groups",
   "TestFile": "tst/testall.g",
   "Version": "4.9.3"

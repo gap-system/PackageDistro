@@ -81,7 +81,6 @@
     "Type": "git",
     "URL": "https://github.com/CAPiedade/corefreesub"
   },
-  "Status": "dev",
   "Subtitle": "A GAP Package for calculating the core-free subgroups and their faithful transitive permutation representations",
   "TestFile": "tst/testall.g",
   "Version": "0.6"

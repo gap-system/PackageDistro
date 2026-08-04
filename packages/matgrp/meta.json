@@ -75,7 +75,6 @@
     "Type": "git",
     "URL": "https://github.com/hulpke/matgrp/"
   },
-  "Status": "deposited",
   "Subtitle": "Matric Group Interface Routines",
   "TestFile": "tst/testall.g",
   "Version": "0.75"

@@ -76,7 +76,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/walrus"
   },
-  "Status": "deposited",
   "Subtitle": "A new approach to proving hyperbolicity",
   "TestFile": "tst/testall.g",
   "Version": "0.9993"

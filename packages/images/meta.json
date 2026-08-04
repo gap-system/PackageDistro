@@ -91,7 +91,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/images"
   },
-  "Status": "deposited",
   "Subtitle": "Minimal and Canonical images",
   "TestFile": "tst/testall.g",
   "Version": "1.3.3"

@@ -62,7 +62,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/unipot"
   },
-  "Status": "deposited",
   "Subtitle": "Computing with elements of unipotent subgroups of Chevalley groups",
   "TestFile": "tst/testall.g",
   "Version": "1.6"

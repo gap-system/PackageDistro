@@ -1,12 +1,10 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">GAP</span> package <span class=\"pkgname\">IRREDSOL</span> provides a library of all irreducible soluble subgroups of <i>GL(n,q)</i>, up to conjugacy, for <i>q<sup>n</sup></i> up to 2^24-1, and a library of the primitive soluble groups of degree up to 2^24-1.",
-  "AcceptDate": "08/2006",
   "ArchiveFormats": ".tar.bz2",
   "ArchiveSHA256": "2e1f79f5da5b268f6ffd64f67ff60c1292653535672ce51b91c057cd781bbe98",
   "ArchiveURL": "https://github.com/bh11/irredsol/releases/download/IRREDSOL-1.4.4/irredsol-1.4.4",
   "AvailabilityTest": null,
   "BannerString": "----------------------------------------------------------------------\n                          IRREDSOL Version 1.4.4\n  A library of irreducible soluble linear groups over finite fields\n                and of finite primivite soluble groups\n                         by Burkhard Höfling\n----------------------------------------------------------------------\n",
-  "CommunicatedBy": "Gerhard Hiss (Aachen)",
   "Date": "2022-11-16",
   "Dependencies": {
     "ExternalConditions": [],
@@ -67,7 +65,6 @@
     "Type": "git",
     "URL": "https://github.com/bh11/irredsol.git"
   },
-  "Status": "accepted",
   "Subtitle": "A library of irreducible soluble linear groups over finite fields and of finite primivite soluble groups",
   "TestFile": "tst/testall.g",
   "TextBinaryFilesPatterns": [

@@ -278,7 +278,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/recog"
   },
-  "Status": "deposited",
   "Subtitle": "A package for constructive recognition of permutation and matrix groups",
   "TestFile": "tst/testquick.g",
   "Version": "1.5.1"

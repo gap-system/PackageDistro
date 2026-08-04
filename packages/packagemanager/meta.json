@@ -78,7 +78,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/PackageManager"
   },
-  "Status": "deposited",
   "Subtitle": "Easily download and install GAP packages",
   "TestFile": "tst/testall.g",
   "Version": "1.6.3"

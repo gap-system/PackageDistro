@@ -72,7 +72,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/AGT"
   },
-  "Status": "deposited",
   "Subtitle": "Algebraic Graph Theory",
   "SupportEmail": "rhysjevans00@gmail.com",
   "TestFile": "tst/testall.g",

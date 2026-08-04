@@ -99,7 +99,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/primgrp"
   },
-  "Status": "deposited",
   "Subtitle": "GAP Primitive Permutation Groups Library",
   "TestFile": "tst/testall.g",
   "Version": "4.0.3"

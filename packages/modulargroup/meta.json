@@ -105,7 +105,6 @@
     "Type": "git",
     "URL": "https://github.com/ag-weitze-schmithusen/ModularGroup"
   },
-  "Status": "other",
   "Subtitle": "Finite-index subgroups of (P)SL(2,Integers)",
   "SupportEmail": "weitze@math.uni-sb.de",
   "TestFile": "tst/testall.g",

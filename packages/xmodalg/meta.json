@@ -1,6 +1,5 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">XModAlg</span> package provides a collection of functions for computing with crossed modules and cat1-algebras and morphisms of these structures.",
-  "AcceptDate": "",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "0fa167a084d0cd6f75947df631ded11b0e2a294a5efb4e1c10c46724082cffc9",
   "ArchiveURL": "https://github.com/gap-packages/xmodalg/releases/download/v1.32/XModAlg-1.32",
@@ -13,7 +12,6 @@
   },
   "AvailabilityTest": null,
   "BannerString": "-----------------------------------------------------------------------------\nLoading XModAlg 1.32 (11/04/2025) for GAP 4.14 \nMethods for crossed modules of commutative algebras and cat1-algebras\nby Zekeriya Arvasi (zarvasi@ogu.edu.tr) and Alper Odabas (aodabas@ogu.edu.tr).\n-----------------------------------------------------------------------------\n",
-  "CommunicatedBy": "",
   "Date": "2025-04-11",
   "Dependencies": {
     "ExternalConditions": [],
@@ -89,7 +87,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/xmodalg"
   },
-  "Status": "deposited",
   "Subtitle": "Crossed Modules and Cat1-Algebras",
   "SupportEmail": "aodabas@ogu.edu.tr",
   "TestFile": "tst/testall.g",

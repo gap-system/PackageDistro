@@ -43,7 +43,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/WPE"
   },
-  "Status": "deposited",
   "Subtitle": "Provides efficient methods for working with wreath product elements.",
   "TestFile": "tst/testall.g",
   "Version": "0.8"

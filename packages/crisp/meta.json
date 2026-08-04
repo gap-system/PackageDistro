@@ -1,6 +1,5 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">GAP</span> package <span class=\"pkgname\">CRISP</span> provides algorithms for computing subgroups of finite soluble groups related to a group class <i>C</i>. In particular, it allows to compute <i>C</i>-radicals and <i>C</i>-injectors for Fitting classes (and Fitting sets) <i>C</i>, <i>C</i>-residuals for formations <i>C</i>, and <i>C</i>-projectors for Schunck classes <i>C</i>. In order to carry out these computations, the group class <i>C</i> must be represented by an algorithm which can decide membership in the group class.</p>  <p>Moreover, <span class=\"pkgname\">CRISP</span> contains algorithms for the computation of normal subgroups invariant under a prescribed set of automorphisms and belonging to a given group class.</p>  <p>This includes an improved method to compute the set of all normal subgroups of a finite soluble group, its characteristic subgroups, minimal normal subgroups and the socle and <i>p</i>-socles for given primes <i>p</i>.",
-  "AcceptDate": "12/2000",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "e27deeae72600338faa91d847b421a17cc5d38830b13650c44766340e3b350f1",
   "ArchiveSize": 322081,
@@ -10,7 +9,6 @@
   "BinaryFiles": [
     "doc/manual.pdf"
   ],
-  "CommunicatedBy": "Joachim Neubüser (Aachen)",
   "Date": "2026-07-31",
   "Dependencies": {
     "ExternalConditions": [],
@@ -65,7 +63,6 @@
     "Type": "git",
     "URL": "https://github.com/bh11/crisp.git"
   },
-  "Status": "accepted",
   "Subtitle": "Computing with Radicals, Injectors, Schunck classes and Projectors",
   "TestFile": "tst/testall.g",
   "Version": "1.4.9"

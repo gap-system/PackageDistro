@@ -1,6 +1,5 @@
 {
   "AbstractHTML": "This package provides implementations of algorithms and methods for computation in certain infinite permutation groups.",
-  "AcceptDate": "04/2005",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "4a3fa1e9662973257d9461d55e137b0f866a54d7e133a5bba2a343276495e80f",
   "ArchiveSize": 13474161,
@@ -14,7 +13,6 @@
   },
   "AvailabilityTest": null,
   "BannerString": "\nLoading RCWA 4.10.0 ([R]esidue-[C]lass-[W]ise [A]ffine groups)\n  by Stefan Kohl, sk239@st-andrews.ac.uk.\nSee ?RCWA:About for information about the package.\n\n",
-  "CommunicatedBy": "Bettina Eick (Braunschweig)",
   "Date": "2026-07-30",
   "Dependencies": {
     "ExternalConditions": [],
@@ -89,7 +87,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/rcwa"
   },
-  "Status": "accepted",
   "Subtitle": "Residue-Class-Wise Affine Groups",
   "TestFile": "tst/testall.g",
   "Version": "4.10.0"

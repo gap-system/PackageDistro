@@ -1,6 +1,5 @@
 {
   "AbstractHTML": "The Kan package provides functions for the computation of normal forms   of representatives of double cosets of finitely presented groups.",
-  "AcceptDate": "05/2015",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "45ae9ae7c11fa200bf4538636f2ba71e9e7065d3e040ce49c8eea2ed7339421b",
   "ArchiveURL": "https://github.com/gap-packages/kan/releases/download/v1.37/kan-1.37",
@@ -14,7 +13,6 @@
   "Autoload": false,
   "AvailabilityTest": null,
   "BannerString": "Loading Kan 1.37 (computing with Kan extensions)\nby Anne Heyworth and Chris Wensley (https://github.com/cdwensley)\n-----------------------------------------------------------------------\n",
-  "CommunicatedBy": "Leonard Soicher (QMUL)",
   "Date": "2024-01-23",
   "Dependencies": {
     "ExternalConditions": [],
@@ -76,7 +74,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/kan"
   },
-  "Status": "accepted",
   "Subtitle": "including double coset rewriting systems",
   "TestFile": "tst/testall.g",
   "Version": "1.37"

@@ -77,7 +77,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/Thelma"
   },
-  "Status": "deposited",
   "Subtitle": "THreshold ELements, Modeling and Applications",
   "TestFile": "tst/testall.g",
   "Version": "1.3"

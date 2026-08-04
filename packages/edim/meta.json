@@ -1,13 +1,11 @@
 {
   "AbstractHTML": "This package provides  a collection of functions for computing the Smith normal form of integer matrices and some related utilities.",
-  "AcceptDate": "08/1999",
   "ArchiveFormats": ".tar.gz .tar.bz2 -win.zip",
   "ArchiveSHA256": "32ebc14df670205aa08a4f1cdf22ae59e5665009e0b34ec4f5efe422c83b6a42",
   "ArchiveSize": 367765,
   "ArchiveURL": "https://www.math.rwth-aachen.de/~Frank.Luebeck/EDIM/EDIM-1.3.8",
   "Autoload": false,
   "AvailabilityTest": null,
-  "CommunicatedBy": "Mike Atkinson (St Andrews)",
   "Date": "2024-02-21",
   "Dependencies": {
     "ExternalConditions": [
@@ -63,7 +61,6 @@
     "Type": "git",
     "URL": "https://github.com/frankluebeck/EDIM"
   },
-  "Status": "accepted",
   "Subtitle": "Elementary Divisors of Integer Matrices",
   "TestFile": "tst/edim.tst",
   "Version": "1.3.8"

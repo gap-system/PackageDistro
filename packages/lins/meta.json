@@ -47,7 +47,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/LINS"
   },
-  "Status": "deposited",
   "Subtitle": "provides an algorithm for computing the normal subgroups of a finitely presented group up to some given index bound.",
   "TestFile": "tst/testall.g",
   "Version": "0.9"

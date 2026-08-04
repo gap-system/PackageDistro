@@ -6,6 +6,7 @@
 This module contains some tests for the scan_for_updates.py script
 """
 
+import glob
 import json
 import os
 import shutil
@@ -21,6 +22,7 @@ sys.path.insert(
 )
 
 from scan_for_updates import (
+    OBSOLETE_FIELDS,
     import_packages,
     local_pkginfo,
     main,
@@ -175,6 +177,55 @@ def test_main_rejects_mixing_names_and_paths(ensure_in_tests_dir, local_pkg):
     with pytest.raises(SystemExit) as e:
         main([pkgdir, "aclib"])
     assert e.value.code == 1
+
+
+def test_import_packages_drops_obsolete_fields(ensure_in_tests_dir, tmpdir):
+    # A PackageInfo.g still declaring the outcome of the refereeing process
+    # must not get that data into the distribution. See issue #408.
+    pkg_json = {
+        "AcceptDate": "05/2015",
+        "ArchiveFormats": ".tar.gz",
+        "ArchiveURL": "https://example.com/stalepkg-1.0",
+        "CommunicatedBy": "Someone (Somewhere)",
+        "Date": "28/08/2025",
+        "PackageName": "StalePkg",
+        "Status": "accepted",
+        "Version": "1.0",
+    }
+
+    def fake_download(_url, dst):
+        os.makedirs(os.path.dirname(dst), exist_ok=True)
+        with open(dst, "wb") as f:
+            f.write(b"archive-bytes-go-here")
+
+    try:
+        with mock.patch(
+            "scan_for_updates.parse_pkginfo_files", return_value=[pkg_json]
+        ), mock.patch("scan_for_updates.utils.download", side_effect=fake_download):
+            import_packages(["dummy.g"])
+
+        meta = metadata("stalepkg")
+        for field in ["AcceptDate", "CommunicatedBy", "Status"]:
+            assert field not in meta
+        # everything else still made it through
+        assert meta["Version"] == "1.0"
+    finally:
+        shutil.rmtree("packages/stalepkg", ignore_errors=True)
+        shutil.rmtree("_archives", ignore_errors=True)
+
+
+def test_no_package_of_the_distribution_declares_an_obsolete_field():
+    # Guards the distribution itself, not just the import: a package added or
+    # edited by hand must not bring these fields back. Deliberately independent
+    # of the working directory the other tests leave behind.
+    root = "/".join(os.path.dirname(os.path.realpath(__file__)).split("/")[:-2])
+    metafiles = glob.glob(join(root, "packages", "*", "meta.json"))
+    assert metafiles, "found no package metadata to check"
+    for fname in metafiles:
+        with open(fname, encoding="utf-8") as f:
+            pkg_json = json.load(f)
+        for field in OBSOLETE_FIELDS:
+            assert field not in pkg_json, f"{fname} still has {field}"
 
 
 def test_import_packages_records_archive_size(ensure_in_tests_dir, tmpdir):

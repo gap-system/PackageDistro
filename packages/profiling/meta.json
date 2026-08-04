@@ -53,7 +53,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/profiling"
   },
-  "Status": "deposited",
   "Subtitle": "Line by line profiling and code coverage for GAP",
   "TestFile": "tst/testall.g",
   "Version": "2.6.3"

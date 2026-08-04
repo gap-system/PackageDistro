@@ -90,7 +90,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/ClassicalMaximals"
   },
-  "Status": "dev",
   "Subtitle": "Maximal subgroups of classical groups",
   "TestFile": "tst/testquick.g",
   "Version": "1.1"

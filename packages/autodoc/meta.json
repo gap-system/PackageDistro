@@ -115,7 +115,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/AutoDoc"
   },
-  "Status": "deposited",
   "Subtitle": "Generate documentation from GAP source code",
   "TestFile": "tst/testall.g",
   "Version": "2026.06.30"

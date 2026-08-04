@@ -88,7 +88,6 @@
     "Type": "git",
     "URL": "https://github.com/QEC-pages/QDistRnd"
   },
-  "Status": "deposited",
   "Subtitle": "Calculate the distance of a q-ary quantum stabilizer code",
   "SupportEmail": "leonid.pryadko@gmail.com",
   "TestFile": "tst/testall.g",

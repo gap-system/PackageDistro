@@ -72,7 +72,6 @@
     "Type": "git",
     "URL": "https://github.com/homalg-project/CAP_project"
   },
-  "Status": "deposited",
   "Subtitle": "Implementations of generalized morphisms for the CAP project",
   "TestFile": "tst/testall.g",
   "Version": "2026.06-01"

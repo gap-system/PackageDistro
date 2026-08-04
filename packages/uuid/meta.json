@@ -63,7 +63,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/uuid"
   },
-  "Status": "deposited",
   "Subtitle": "RFC 4122 UUIDs",
   "TestFile": "tst/testall.g",
   "Version": "0.7"

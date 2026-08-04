@@ -1,6 +1,5 @@
 {
   "AbstractHTML": "The package <span class=\"pkgname\">QuaGroup</span> contains                  functionality for working with quantized enveloping algebras                 of finite-dimensional semisimple Lie algebras.",
-  "AcceptDate": "10/2003",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "05c31c30ece36dbc97649307cba58d74c764b0c849e27b9b4fc60cee00ea54d3",
   "ArchiveURL": "https://github.com/gap-packages/quagroup/releases/download/v1.8.4/quagroup-1.8.4",
@@ -12,7 +11,6 @@
   },
   "AvailabilityTest": null,
   "BannerString": "     |                                                                 \n     |          QuaGroup 1.8.4\n     |                                                                 \n-----------     A package for dealing with quantized enveloping algebras\n     |                                                                 \n     |          Willem de Graaf                                        \n     |          degraaf@science.unitn.it                               \n\n",
-  "CommunicatedBy": "Gerhard Hiss (Aachen)",
   "Date": "2024-01-11",
   "Dependencies": {
     "ExternalConditions": [],
@@ -66,7 +64,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/quagroup"
   },
-  "Status": "accepted",
   "Subtitle": "Computations with quantum groups",
   "TestFile": "tst/testall.g",
   "Version": "1.8.4"

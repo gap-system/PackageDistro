@@ -1,11 +1,9 @@
 {
   "AbstractHTML": "This package provides functions for computing with formations of finite solvable groups.",
-  "AcceptDate": "12/2000",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "fcf01313854d2d6cb2c4cb92e104bdd33ac6f852642e215df68b589dd4fef0d2",
   "ArchiveURL": "https://github.com/gap-packages/format/releases/download/v1.4.5/format-1.4.5",
   "AvailabilityTest": null,
-  "CommunicatedBy": "Joachim Neubüser (Aachen)",
   "Date": "2026-04-24",
   "Dependencies": {
     "ExternalConditions": [],
@@ -72,7 +70,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/format"
   },
-  "Status": "accepted",
   "Subtitle": "Computing with formations of finite solvable groups.",
   "TestFile": "tst/testall.g",
   "Version": "1.4.5"

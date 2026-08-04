@@ -115,7 +115,6 @@
     "Type": "git",
     "URL": "https://github.com/homalg-project/CAP_project"
   },
-  "Status": "deposited",
   "Subtitle": "Categories, Algorithms, Programming",
   "TestFile": "tst/testall.g",
   "Version": "2026.07-04"

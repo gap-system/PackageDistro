@@ -1,12 +1,10 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">RadiRoot</span> package installs a method to    display the roots of a rational polynomial as radicals if it is solvable.",
-  "AcceptDate": "02/2007",
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "9a14209632490ab1149022165c2936f57cb7044293ffb2aef0580b3d4085eb8a",
   "ArchiveURL": "https://github.com/gap-packages/radiroot/releases/download/v2.9/radiroot-2.9",
   "Autoload": false,
   "AvailabilityTest": null,
-  "CommunicatedBy": "Edmund Robertson (St Andrews)",
   "Date": "2022-03-01",
   "Dependencies": {
     "ExternalConditions": [
@@ -66,7 +64,6 @@
     "Type": "git",
     "URL": "https://github.com/gap-packages/radiroot"
   },
-  "Status": "accepted",
   "Subtitle": "Roots of a Polynomial as Radicals",
   "TestFile": "tst/testall.g",
   "Version": "2.9"
