@@ -5,9 +5,14 @@ contains the metadata of all the GAP packages in the distribution. We also
 upload snapshots of the package distribution to appropriate release tags
 on this repository.
 
-An overview of all packages in the distribution, with their versions, release
-dates and links, is published at
-<https://gap-system.github.io/PackageDistro/packages/>.
+## Package lists
+
+- <https://gap-system.github.io/PackageDistro/packages/>: all packages
+  currently in this distribution, with their versions and release dates
+- <https://www.gap-system.org/packages/>: the packages shipped with the latest
+  GAP release
+- <https://gap-packages.github.io>: further GAP packages that are not part of
+  the distribution
 
 ## High-level status dashboard
 
