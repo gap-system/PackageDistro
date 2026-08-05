@@ -1,0 +1,24 @@
+{
+  "current": "master/2026/08/05_00-06-28",
+  "last": "master/2026/08/04_14-46-59",
+  "total": 172,
+  "failure": 2,
+  "success": 167,
+  "skipped": 3,
+  "failures_changed": [
+    "packagemanager",
+    "radiroot"
+  ],
+  "failures_current": [
+    "packagemanager",
+    "radiroot"
+  ],
+  "new": 0,
+  "removed": 0,
+  "failure_changed": 2,
+  "success_changed": 0,
+  "skipped_changed": 0,
+  "failure_same": 0,
+  "success_same": 167,
+  "skipped_same": 3
+}
