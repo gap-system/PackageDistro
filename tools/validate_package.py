@@ -30,9 +30,11 @@ name, or the path to a meta.json file. For example:
 import os
 import sys
 import tarfile
+import urllib.parse
+from html.parser import HTMLParser
 from os.path import join
 from tempfile import TemporaryDirectory
-from typing import List
+from typing import List, Optional, Tuple
 
 import utils
 from download_packages import download_archive
@@ -82,6 +84,114 @@ def validate_tarball(filename: str) -> str:
         return basedir
 
 
+HTML_SUFFIXES = (".html", ".htm", ".xhtml")
+
+# The only URL schemes a link in package documentation may use. Anything else
+# is either unusable offline (`file:`), no longer something we want to send
+# readers to (`ftp:`), or not a scheme at all but a marker left behind by a
+# documentation tool: GAP's own `etc/convert.pl` turns a cross reference it
+# cannot resolve into `badlink:...`.
+ALLOWED_SCHEMES = ("http", "https", "mailto")
+
+# Package documentation is installed at `<gaproot>/pkg/<name>/`, so a relative
+# link may climb two levels above the package directory -- that is how a manual
+# links into the GAP reference manual, or into another package -- but no
+# further, as that would leave the GAP installation altogether.
+GAPROOT_HEADROOM = 2
+
+# A package with a systematic problem produces one complaint per link, of which
+# a handful tell the author everything they need to know.
+MAX_REPORTED_LINKS = 20
+
+
+class LinkExtractor(HTMLParser):
+    """Collects the target of every `<a href="...">` along with its line."""
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.links: List[Tuple[int, str]] = []
+
+    def handle_starttag(self, tag: str, attrs: List[Tuple[str, Optional[str]]]) -> None:
+        if tag != "a":
+            return
+        for name, value in attrs:
+            if name == "href" and value is not None:
+                self.links.append((self.getpos()[0], value))
+
+
+def check_link(href: str, relpath: str) -> Optional[str]:
+    """Say what is wrong with the link `href`, or None if it is acceptable.
+
+    `relpath` is the path of the HTML file containing the link, relative to
+    the package directory; it decides how far up a relative link reaches.
+
+    Only links that are wrong wherever the package is installed are rejected.
+    Whether a relative link points at a file that actually exists is
+    deliberately not checked: some packages generate parts of their
+    documentation only after installation, so that check needs to be
+    introduced more carefully.
+    """
+    href = href.strip()
+    if not href or href.startswith("#"):
+        return None
+
+    parsed = urllib.parse.urlparse(href)
+    if parsed.scheme:
+        if parsed.scheme in ALLOWED_SCHEMES:
+            return None
+        if len(parsed.scheme) == 1:
+            # A Windows drive letter, e.g. "C:\gap\doc\ref.html".
+            return f"absolute path: {href}"
+        return f"URL scheme {parsed.scheme}: is not allowed: {href}"
+    if href.startswith("/"):
+        # Both "/doc/ref" and the protocol relative "//host/doc" only ever
+        # resolve to something outside the GAP installation.
+        return f"absolute path: {href}"
+
+    target = urllib.parse.unquote(parsed.path)
+    if not target:
+        return None
+    resolved = os.path.normpath(os.path.join(os.path.dirname(relpath), target))
+    up = 0
+    for part in resolved.split(os.sep):
+        if part != "..":
+            break
+        up += 1
+    if up > GAPROOT_HEADROOM:
+        return f"link leaves the GAP installation: {href}"
+    return None
+
+
+def check_html_links(pkgdir: str, pkg_name: str) -> None:
+    """Check the links in all HTML files shipped by a package."""
+    problems = []
+    for dirpath, dirnames, filenames in os.walk(pkgdir):
+        dirnames.sort()
+        for name in sorted(filenames):
+            if not name.lower().endswith(HTML_SUFFIXES):
+                continue
+            path = join(dirpath, name)
+            relpath = os.path.relpath(path, pkgdir)
+            with open(path, "rb") as f:
+                # Package documentation is not always valid UTF-8, and a byte
+                # we cannot decode is no reason to reject a package; it cannot
+                # be part of a link we would complain about either.
+                text = f.read().decode("utf-8", errors="replace")
+            parser = LinkExtractor()
+            parser.feed(text)
+            for line, href in parser.links:
+                reason = check_link(href, relpath)
+                if reason is not None:
+                    problems.append(f"{relpath}:{line}: {reason}")
+
+    if problems:
+        shown = problems[:MAX_REPORTED_LINKS]
+        if len(problems) > len(shown):
+            shown.append(f"... and {len(problems) - len(shown)} more")
+        details = "\n  ".join(shown)
+        error(f"{pkg_name}: bad links in HTML documentation:\n  {details}")
+
+
 def validate_package(archive_fname: str, pkgdir: str, pkg_name: str) -> None:
     pkg_json = metadata(pkg_name)
 
@@ -116,6 +226,8 @@ def validate_package(archive_fname: str, pkgdir: str, pkg_name: str) -> None:
         error(f"{pkg_name}: {e}")
     if pkg_json["Date"] != iso_date:
         error(f"{pkg_name}: Date {pkg_json['Date']} is not in YYYY-MM-DD format")
+
+    check_html_links(pkgdir, pkg_name)
 
 
 def main(pkgs: List[str]) -> None:
