@@ -3,7 +3,7 @@
   "ArchiveFormats": ".tar.gz",
   "ArchiveSHA256": "e27deeae72600338faa91d847b421a17cc5d38830b13650c44766340e3b350f1",
   "ArchiveSize": 322081,
-  "ArchiveURL": "https://github.com/bh11/crisp/releases/latest/download/crisp-1.4.9",
+  "ArchiveURL": "https://github.com/bh11/crisp/releases/download/CRISP-1.4.9/crisp-1.4.9",
   "AvailabilityTest": null,
   "BannerString": "----------------------------------------------------------------------\n                        CRISP Version 1.4.9\n  Computing with Radicals, Injectors, Schunck classes and Projectors\n                         by Burkhard Höfling\n----------------------------------------------------------------------\n",
   "BinaryFiles": [
