@@ -1,12 +1,12 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">classicpres</span> package provides presentations for classical groups, translated from the corresponding Magma code.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "d85d4a0ce522ae1dd74c015b794f0dab1e6568631d1834f1b769a6ac14c941fd",
-  "ArchiveURL": "http://www.math.colostate.edu/~hulpke/classicpres/classicpres1.22",
-  "Autoload": true,
+  "ArchiveSHA256": "4f97ef6576f576bd05f99a90ec10f88682d0d6486297ae4297403f26520d338d",
+  "ArchiveSize": 142132,
+  "ArchiveURL": "http://www.math.colostate.edu/~hulpke/classicpres/classicpres1.24",
   "AvailabilityTest": null,
-  "BannerString": "Classical Group Presentations, v.1.22\n",
-  "Date": "2022-05-06",
+  "BannerString": "Classical Group Presentations, v.1.24\n",
+  "Date": "2026-08-01",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.11",
@@ -30,7 +30,6 @@
         "doc",
         "htm"
       ],
-      "Autoload": true,
       "BookName": "classicpres",
       "HTMLStart": "htm/chapters.htm",
       "LongTitle": "Classical Group Presentations",
@@ -38,7 +37,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "74d99ce7641395c0709213455e7fde12f211b097a885a34a10a60fd06320e7cd",
+  "PackageInfoSHA256": "6a1c3d201e91ed74711d10ed258a791de399d08a195ab51832a8ccc8d7130837",
   "PackageInfoURL": "http://www.math.colostate.edu/~hulpke/classicpres/PackageInfo.g",
   "PackageName": "classicpres",
   "PackageWWWHome": "http://www.math.colostate.edu/~hulpke/classicpres",
@@ -90,5 +89,5 @@
   },
   "Subtitle": "Classical Group Presentations",
   "TestFile": "tst/testall.g",
-  "Version": "1.22"
+  "Version": "1.24"
 }
