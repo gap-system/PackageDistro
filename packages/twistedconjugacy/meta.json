@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "\n    The TwistedConjugacy package provides methods for solving the twisted\n    conjugacy problem (including the \"search\" and \"multiple\" variants) and for\n    computing Reidemeister classes, numbers, spectra, and zeta functions. It\n    also includes utility functions for working with (double) cosets, group\n    homomorphisms, and group derivations.\n\n    These methods are primarily designed for use with finite groups and with\n    PcpGroups (finite or infinite) provided by the Polycyclic package.\n",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "531e25ebfa80893eb3d0a49c284c1195346a84cdee13547910ce50fcef424eed",
-  "ArchiveSize": 389734,
-  "ArchiveURL": "https://github.com/stertooy/TwistedConjugacy/releases/download/v3.4.0/TwistedConjugacy-3.4.0",
-  "Date": "2026-07-05",
+  "ArchiveSHA256": "8aed5f1c8d9b96e5c7225322e1c061719907021c250ccb9dbfac069ad349ebbe",
+  "ArchiveSize": 388984,
+  "ArchiveURL": "https://github.com/stertooy/TwistedConjugacy/releases/download/v3.4.1/TwistedConjugacy-3.4.1",
+  "Date": "2026-08-08",
   "Dependencies": {
     "GAP": ">= 4.14",
     "NeededOtherPackages": [],
@@ -27,24 +27,6 @@
     }
   ],
   "IssueTrackerURL": "https://github.com/stertooy/TwistedConjugacy/issues",
-  "Keywords": [
-    "affine action",
-    "automorphism",
-    "coincidence group",
-    "coset",
-    "derivation",
-    "double coset",
-    "endomorphism",
-    "fixed point group",
-    "homomorphism",
-    "Reidemeister class",
-    "Reidemeister number",
-    "Reidemeister spectrum",
-    "Reidemeister zeta function",
-    "twisted conjugacy",
-    "twisted conjugacy class",
-    "twisted conjugation"
-  ],
   "License": "GPL-2.0-or-later",
   "PackageDoc": [
     {
@@ -58,7 +40,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "76f6927690f8dd8e4094e2068ce547faebf48dc2cebc68c5b9b69420e244bc14",
+  "PackageInfoSHA256": "a54cffbef3f8d7f671648085eda5f44257d6360ef094cbd4b14e52ad130e64da",
   "PackageInfoURL": "https://stertooy.github.io/TwistedConjugacy/PackageInfo.g",
   "PackageName": "TwistedConjugacy",
   "PackageWWWHome": "https://stertooy.github.io/TwistedConjugacy",
@@ -84,5 +66,5 @@
   "Subtitle": "Computation with twisted conjugacy classes",
   "SupportEmail": "sam.tertooy@kuleuven.be",
   "TestFile": "tst/testall.g",
-  "Version": "3.4.0"
+  "Version": "3.4.1"
 }
