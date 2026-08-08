@@ -1,8 +1,9 @@
 {
   "AbstractHTML": "",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "1b028a8d5d4572c972fb4a2186b03818a372e66a5c81a2b65fa4a94aabe66036",
-  "ArchiveURL": "https://github.com/gap-packages/liealgdb/releases/download/v2.3.0/liealgdb-2.3.0",
+  "ArchiveSHA256": "88769154ea65c60115bb11aed0c5f77e0dbcd7be2bd7a7be5d9b1548572f5baf",
+  "ArchiveSize": 499977,
+  "ArchiveURL": "https://github.com/gap-packages/liealgdb/releases/download/v2.3.1/liealgdb-2.3.1",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "\nThis package provides access to the classification of the following\nfamilies of Lie algebras:\n<List>\n<Item> non-solvable Lie algebras over finite fields up to dimension 6;\n</Item>\n<Item> nilpotent Lie algebras of dimension up to 9 over <A>GF(2)</A>, of dimension\nup to 7 over <A>GF(3)</A> or <A>GF(5)</A>;</Item>\n<Item> simple Lie algebras of dimensions between 7 and 9 over <A>GF(2)</A>;\n</Item>\n<Item> the classification of solvable Lie algebras of dimension at most 4;\n</Item>\n<Item> the classification of nilpotent Lie algebras of dimensions at most 6.\n</Item>\n</List>\n",
@@ -11,7 +12,7 @@
     }
   },
   "AvailabilityTest": null,
-  "Date": "2025-09-24",
+  "Date": "2026-08-08",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.8",
@@ -35,7 +36,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "83c82301496835f056d45307688752598fce4322d7d3846a773fa02385be8642",
+  "PackageInfoSHA256": "deb70d52706db3830bd3ebe5fd1a85cecae2b701c655dc82d9ae301ef84538ca",
   "PackageInfoURL": "https://gap-packages.github.io/liealgdb/PackageInfo.g",
   "PackageName": "LieAlgDB",
   "PackageWWWHome": "https://gap-packages.github.io/liealgdb/",
@@ -87,5 +88,5 @@
   },
   "Subtitle": "A database of Lie algebras",
   "TestFile": "tst/testall.g",
-  "Version": "2.3.0"
+  "Version": "2.3.1"
 }
