@@ -1,11 +1,12 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">GAP</span> package <span class=\"pkgname\">IRREDSOL</span> provides a library of all irreducible soluble subgroups of <i>GL(n,q)</i>, up to conjugacy, for <i>q<sup>n</sup></i> up to 2^24-1, and a library of the primitive soluble groups of degree up to 2^24-1.",
-  "ArchiveFormats": ".tar.bz2",
-  "ArchiveSHA256": "2e1f79f5da5b268f6ffd64f67ff60c1292653535672ce51b91c057cd781bbe98",
-  "ArchiveURL": "https://github.com/bh11/irredsol/releases/download/IRREDSOL-1.4.4/irredsol-1.4.4",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSHA256": "16b901e6a0c648b7a1834a898a989f313cd855ca685c85c8322c4ae15e0447a1",
+  "ArchiveSize": 19187766,
+  "ArchiveURL": "https://github.com/bh11/irredsol/releases/download/IRREDSOL-1.4.6/irredsol-1.4.6",
   "AvailabilityTest": null,
-  "BannerString": "----------------------------------------------------------------------\n                          IRREDSOL Version 1.4.4\n  A library of irreducible soluble linear groups over finite fields\n                and of finite primivite soluble groups\n                         by Burkhard Höfling\n----------------------------------------------------------------------\n",
-  "Date": "2022-11-16",
+  "BannerString": "----------------------------------------------------------------------\n                          IRREDSOL Version 1.4.6\n  A library of irreducible soluble linear groups over finite fields\n                and of finite primivite soluble groups\n                         by Burkhard Höfling\n----------------------------------------------------------------------\n",
+  "Date": "2026-08-09",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.9",
@@ -46,18 +47,17 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "40bace2ad125709539b49de01f75e83a97f579a0a8969fab0bfb76a857edde54",
+  "PackageInfoSHA256": "4f6632a02d9c4739e0bce130a3131bf4fc3cfa7f6e68e3a941dd4318da04c898",
   "PackageInfoURL": "https://github.com/bh11/irredsol/releases/latest/download/PackageInfo.g",
   "PackageName": "IRREDSOL",
-  "PackageWWWHome": "http://www.icm.tu-bs.de/~bhoeflin/irredsol/index.html",
+  "PackageWWWHome": "https://github.com/bh11/irredsol/",
   "Persons": [
     {
       "Email": "b.hoefling@tu-bs.de",
       "FirstNames": "Burkhard",
       "IsAuthor": true,
       "IsMaintainer": true,
-      "LastName": "Höfling",
-      "WWWHome": "http://www.icm.tu-bs.de/~bhoeflin"
+      "LastName": "Höfling"
     }
   ],
   "README_URL": "https://github.com/bh11/irredsol/releases/latest/download/README.txt",
@@ -71,5 +71,5 @@
     "B*.pdf",
     "T*"
   ],
-  "Version": "1.4.4"
+  "Version": "1.4.6"
 }
