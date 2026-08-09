@@ -1,10 +1,11 @@
 {
   "AbstractHTML": "<span class=\"pkgname\">PackageManager</span> is a basic collection of    simple functions for installing and removing    <span class=\"pkgname\">GAP</span> packages, with the eventual aim of    becoming a full pip-style package manager for the    <span class=\"pkgname\">GAP</span> system.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "db852b5dcdd60697e1588fb4997fd33e8a33dfa4f784b6e702d1b9e0509b729b",
-  "ArchiveURL": "https://github.com/gap-packages/PackageManager/releases/download/v1.6.3/PackageManager-1.6.3",
+  "ArchiveSHA256": "f1ee46655ad6befdf4821e4b19d754d99ff7532a6badb26f427833fbd0651638",
+  "ArchiveSize": 165980,
+  "ArchiveURL": "https://github.com/gap-packages/PackageManager/releases/download/v1.6.4/PackageManager-1.6.4",
   "AvailabilityTest": null,
-  "Date": "2025-05-14",
+  "Date": "2026-08-08",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12",
@@ -21,6 +22,12 @@
       [
         "curlInterface",
         ">= 2.1.0"
+      ]
+    ],
+    "TestPackages": [
+      [
+        "io",
+        ">= 4.7.0"
       ]
     ]
   },
@@ -49,7 +56,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "24bd2816e37f99915ffa6dd96af345e47ed605a9561e9e2951f4cef24b32ce3e",
+  "PackageInfoSHA256": "70a4f3a7d0ecc752fbcae29c0ccbf4ce106c39f0e20525094330778bf28b7807",
   "PackageInfoURL": "https://gap-packages.github.io/PackageManager/PackageInfo.g",
   "PackageName": "PackageManager",
   "PackageWWWHome": "https://gap-packages.github.io/PackageManager/",
@@ -80,5 +87,5 @@
   },
   "Subtitle": "Easily download and install GAP packages",
   "TestFile": "tst/testall.g",
-  "Version": "1.6.3"
+  "Version": "1.6.4"
 }
