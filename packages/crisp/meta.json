@@ -1,15 +1,15 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">GAP</span> package <span class=\"pkgname\">CRISP</span> provides algorithms for computing subgroups of finite soluble groups related to a group class <i>C</i>. In particular, it allows to compute <i>C</i>-radicals and <i>C</i>-injectors for Fitting classes (and Fitting sets) <i>C</i>, <i>C</i>-residuals for formations <i>C</i>, and <i>C</i>-projectors for Schunck classes <i>C</i>. In order to carry out these computations, the group class <i>C</i> must be represented by an algorithm which can decide membership in the group class.</p>  <p>Moreover, <span class=\"pkgname\">CRISP</span> contains algorithms for the computation of normal subgroups invariant under a prescribed set of automorphisms and belonging to a given group class.</p>  <p>This includes an improved method to compute the set of all normal subgroups of a finite soluble group, its characteristic subgroups, minimal normal subgroups and the socle and <i>p</i>-socles for given primes <i>p</i>.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "e27deeae72600338faa91d847b421a17cc5d38830b13650c44766340e3b350f1",
-  "ArchiveSize": 322081,
-  "ArchiveURL": "https://github.com/bh11/crisp/releases/latest/download/crisp-1.4.9",
+  "ArchiveSHA256": "77dffc09697debf015d38a5c9b4c3c28d4cc42d3e8b9bb0f706e318a32e94fd4",
+  "ArchiveSize": 322104,
+  "ArchiveURL": "https://github.com/bh11/crisp/releases/download/CRISP-1.4.11/crisp-1.4.11",
   "AvailabilityTest": null,
-  "BannerString": "----------------------------------------------------------------------\n                        CRISP Version 1.4.9\n  Computing with Radicals, Injectors, Schunck classes and Projectors\n                         by Burkhard Höfling\n----------------------------------------------------------------------\n",
+  "BannerString": "----------------------------------------------------------------------\n                        CRISP Version 1.4.11\n  Computing with Radicals, Injectors, Schunck classes and Projectors\n                         by Burkhard Höfling\n----------------------------------------------------------------------\n",
   "BinaryFiles": [
     "doc/manual.pdf"
   ],
-  "Date": "2026-07-31",
+  "Date": "2026-08-10",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.12",
@@ -45,7 +45,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "668593f9cf2eb64501348c5c24406fa1900cbaebe07d360dada51681942e9584",
+  "PackageInfoSHA256": "f8ed536030537c7455ae6bd9e09726c5bd5b58136d9a40b99affaed540d35f0b",
   "PackageInfoURL": "https://github.com/bh11/crisp/releases/latest/download/PackageInfo.g",
   "PackageName": "CRISP",
   "PackageWWWHome": "https://github.com/bh11/crisp/",
@@ -65,5 +65,5 @@
   },
   "Subtitle": "Computing with Radicals, Injectors, Schunck classes and Projectors",
   "TestFile": "tst/testall.g",
-  "Version": "1.4.9"
+  "Version": "1.4.11"
 }
