@@ -1,8 +1,9 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">Hecke</span> package provides functions for calculating decomposition matrices of Hecke algebras of the symmetric groups and q-Schur algebras. Hecke is a port of the <span class=\"pkgname\">GAP 3</span> package <span class=\"pkgname\">Specht 2.4</span> to <span class=\"pkgname\">GAP 4</span>.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "5f048ba8b62283de5ce3b2aeaae87338d9c89f4e74e59618bc5d546b77faf877",
-  "ArchiveURL": "https://github.com/gap-packages/hecke/releases/download/v1.5.4/hecke-1.5.4",
+  "ArchiveSHA256": "c07c9284a391bb7d3afcbb18277bfdf920be56cc449f1d51374abe2f475768d0",
+  "ArchiveSize": 631276,
+  "ArchiveURL": "https://github.com/gap-packages/hecke/releases/download/v1.6.0/hecke-1.6.0",
   "AutoDoc": {
     "TitlePage": {
       "Acknowledgements": "\n            &Specht; is a port of the &GAP; 3 package <Package>Specht</Package> 2.4 to &GAP; 4.\n            <Package>Specht</Package> 2.4 was written by Andrew Mathas, who allowed\n            Dmitriy Traytel to use his source code as the basis for &specht;.\n            ",
@@ -10,10 +11,10 @@
     }
   },
   "AvailabilityTest": null,
-  "Date": "2024-08-27",
+  "Date": "2026-08-09",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">=4.8",
+    "GAP": ">=4.13",
     "NeededOtherPackages": [],
     "SuggestedOtherPackages": []
   },
@@ -30,7 +31,6 @@
       "ArchiveURLSubset": [
         "doc"
       ],
-      "Autoload": true,
       "BookName": "hecke",
       "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "Hecke - Specht 2.4 ported to GAP 4",
@@ -38,7 +38,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "a5079caa4169fce80be8218ec0c7772eca467a1f0232d0c1e51cc3285cb2a4c1",
+  "PackageInfoSHA256": "8719bd03968a49cdae364fc6d4edf0f012e2788839cb4fd47cd5815b60c99e58",
   "PackageInfoURL": "https://gap-packages.github.io/hecke/PackageInfo.g",
   "PackageName": "hecke",
   "PackageWWWHome": "https://gap-packages.github.io/hecke/",
@@ -68,5 +68,5 @@
   },
   "Subtitle": "Calculating decomposition matrices of Hecke algebras",
   "TestFile": "tst/testall.g",
-  "Version": "1.5.4"
+  "Version": "1.6.0"
 }
