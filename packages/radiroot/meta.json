@@ -1,20 +1,24 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">RadiRoot</span> package installs a method to    display the roots of a rational polynomial as radicals if it is solvable.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "9a14209632490ab1149022165c2936f57cb7044293ffb2aef0580b3d4085eb8a",
-  "ArchiveURL": "https://github.com/gap-packages/radiroot/releases/download/v2.9/radiroot-2.9",
-  "Autoload": false,
+  "ArchiveSHA256": "df636ebdf52e5d46d8469e3c27a625a3db9abdcafae9f6b9d30cb3c93d3726b0",
+  "ArchiveSize": 209104,
+  "ArchiveURL": "https://github.com/gap-packages/radiroot/releases/download/v2.10/radiroot-2.10",
   "AvailabilityTest": null,
-  "Date": "2022-03-01",
+  "Date": "2026-08-11",
   "Dependencies": {
     "ExternalConditions": [
       "latex and the dvi-viewer xdvi are recommended"
     ],
-    "GAP": ">=4.7",
+    "GAP": ">=4.9",
     "NeededOtherPackages": [
       [
         "Alnuth",
         ">=3.0"
+      ],
+      [
+        "TransGrp",
+        ">=1.0"
       ]
     ],
     "SuggestedOtherPackages": []
@@ -28,18 +32,16 @@
   "PackageDoc": [
     {
       "ArchiveURLSubset": [
-        "doc",
-        "htm"
+        "doc"
       ],
-      "Autoload": true,
       "BookName": "RadiRoot",
-      "HTMLStart": "htm/chapters.htm",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "Roots of a Polynomial as Radicals",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "fb544aca6c659a85821b1da0ca828d57e0d36cd02385cfc792dbdc0cda3edb7a",
+  "PackageInfoSHA256": "0026accd16f53ba35e750936f91cb8f7a969612ef46c41e4cb512b5e83e18472",
   "PackageInfoURL": "https://gap-packages.github.io/radiroot/PackageInfo.g",
   "PackageName": "RadiRoot",
   "PackageWWWHome": "https://gap-packages.github.io/radiroot/",
@@ -59,12 +61,12 @@
       "LastName": "GAP Team"
     }
   ],
-  "README_URL": "https://gap-packages.github.io/radiroot/README",
+  "README_URL": "https://gap-packages.github.io/radiroot/README.md",
   "SourceRepository": {
     "Type": "git",
     "URL": "https://github.com/gap-packages/radiroot"
   },
   "Subtitle": "Roots of a Polynomial as Radicals",
   "TestFile": "tst/testall.g",
-  "Version": "2.9"
+  "Version": "2.10"
 }
