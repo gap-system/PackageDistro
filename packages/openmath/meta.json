@@ -1,11 +1,23 @@
 {
   "AbstractHTML": "This package provides an <a href=\"http://www.openmath.org/\">OpenMath</a> phrasebook for <span class=\"pkgname\">GAP</span>. This package allows <span class=\"pkgname\">GAP</span> users to import and export mathematical objects encoded in OpenMath, for the purpose of exchanging them with other applications that are OpenMath enabled.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "e282626bbb3e93883ba047e7751f67bcc67179318ab2031693d1f4d179c1823a",
-  "ArchiveURL": "https://github.com/gap-packages/openmath/releases/download/v11.5.3/OpenMath-11.5.3",
-  "Autoload": false,
+  "ArchiveSHA256": "c9b0087aad6a4dce8c52bd0454e618eb94c00e9ed48bf7d09c6e91862c062e3d",
+  "ArchiveSize": 271842,
+  "ArchiveURL": "https://github.com/gap-packages/openmath/releases/download/v11.5.5/OpenMath-11.5.5",
+  "AutoDoc": {
+    "entities": {
+      "IO": "<Package>IO</Package>",
+      "OpenMath": "<Package>OpenMath</Package>",
+      "RELEASEDATE": "11 August 2026",
+      "RELEASEYEAR": "2026",
+      "SCSCP": "<Package>SCSCP</Package>",
+      "VERSION": "11.5.5",
+      "scscp1": "<Package>scscp1</Package>",
+      "scscp2": "<Package>scscp2</Package>"
+    }
+  },
   "AvailabilityTest": null,
-  "Date": "2023-02-25",
+  "Date": "2026-08-11",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": " >= 4.9.0",
@@ -31,7 +43,6 @@
       "ArchiveURLSubset": [
         "doc"
       ],
-      "Autoload": true,
       "BookName": "OpenMath",
       "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "OpenMath functionality in GAP",
@@ -39,7 +50,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "fb8de563a40eb4d580146d4a55151f732f5b08db66a6c31d86882e28d35c43c2",
+  "PackageInfoSHA256": "645caeb54f853fc781e6417786f00e363a8ae59b29eb5420a4257ba7c086706d",
   "PackageInfoURL": "https://gap-packages.github.io/openmath/PackageInfo.g",
   "PackageName": "OpenMath",
   "PackageWWWHome": "https://gap-packages.github.io/openmath",
@@ -88,5 +99,5 @@
   },
   "Subtitle": "OpenMath functionality in GAP",
   "TestFile": "tst/testall.g",
-  "Version": "11.5.3"
+  "Version": "11.5.5"
 }
