@@ -1,23 +1,35 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">LAGUNA</span> package replaces the <span class=\"pkgname\">LAG</span> package and provides functionality for calculation of the normalized unit group of the modular group algebra of the finite p-group and for investigation of Lie algebra associated with group algebras and other associative algebras.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "161585d1369e92ee12722320bb8eda055325e20ab7e0915c7a45ecb599cec32c",
-  "ArchiveURL": "https://github.com/gap-packages/laguna/releases/download/v3.9.7/laguna-3.9.7",
+  "ArchiveSHA256": "b750f5c95b1d688cdc397e6ca76e699e09b181ce1efd88bd9dd9c2e332bb1aa1",
+  "ArchiveSize": 462020,
+  "ArchiveURL": "https://github.com/gap-packages/laguna/releases/download/v3.10.0/laguna-3.10.0",
+  "AutoDoc": {
+    "entities": {
+      "C": "<Package>C</Package>",
+      "LAG": "<Package>LAG</Package>",
+      "RELEASEDATE": "11 August 2026",
+      "RELEASEYEAR": "2026",
+      "SISYPHOS": "<Package>SISYPHOS</Package>",
+      "VERSION": "3.10.0"
+    }
+  },
   "AvailabilityTest": null,
-  "Date": "2024-07-01",
+  "Date": "2026-08-11",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.9",
-    "NeededOtherPackages": [
-      [
-        "GAPDoc",
-        ">= 1.6.1"
-      ]
-    ],
+    "NeededOtherPackages": [],
     "SuggestedOtherPackages": [
       [
         "Sophus",
         ">= 1.24"
+      ]
+    ],
+    "TestPackages": [
+      [
+        "SmallGrp",
+        ">= 1.0"
       ]
     ]
   },
@@ -41,7 +53,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "5cf7d14e4d2756279a90766ce0945732024cdf041ba34ee68f7f326e151d735e",
+  "PackageInfoSHA256": "fc0d53b2a8adb1d0689980cf37004cd7152605ebfc63e00940c76a5ec0fb708b",
   "PackageInfoURL": "https://gap-packages.github.io/laguna/PackageInfo.g",
   "PackageName": "LAGUNA",
   "PackageWWWHome": "https://gap-packages.github.io/laguna",
@@ -92,5 +104,5 @@
   },
   "Subtitle": "Lie AlGebras and UNits of group Algebras",
   "TestFile": "tst/testall.g",
-  "Version": "3.9.7"
+  "Version": "3.10.0"
 }
