@@ -1,25 +1,31 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">UnitLib</span> package extends the <span class=\"pkgname\">LAGUNA</span> package and provides the library of normalized unit groups of modular group algebras of all finite p-groups of order up to 243 over the field of p elements.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "3cdcd383defaecfbb8c6aed8cfc7db569387c780f60562cd0c04a05786428c2e",
-  "ArchiveURL": "https://github.com/gap-packages/unitlib/releases/download/v5.0.0/unitlib-5.0.0",
+  "ArchiveSHA256": "c9832ce43b4cdaa3283ba6cb314bc80cfc55421dfed2edfd850f1ccaffc8812b",
+  "ArchiveSize": 29914290,
+  "ArchiveURL": "https://github.com/gap-packages/unitlib/releases/download/v5.1.0/unitlib-5.1.0",
+  "AutoDoc": {
+    "entities": {
+      "LAGUNA": "<Package>LAGUNA</Package>",
+      "RELEASEDATE": "11 August 2026",
+      "RELEASEYEAR": "2026",
+      "SCSCP": "<Package>SCSCP</Package>",
+      "VERSION": "5.1.0"
+    }
+  },
   "AvailabilityTest": null,
-  "Date": "2025-06-12",
+  "Date": "2026-08-11",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">=4.11",
+    "GAP": ">=4.12",
     "NeededOtherPackages": [
-      [
-        "GAPDoc",
-        ">= 1.6"
-      ],
-      [
-        "IO",
-        "4.5"
-      ],
       [
         "LAGUNA",
         ">= 3.9.4"
+      ],
+      [
+        "SmallGrp",
+        ">= 1.0"
       ]
     ],
     "SuggestedOtherPackages": [
@@ -48,7 +54,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "5b46ae802b37e674cdde318ab000630325c66e952f2ca318cce950240ac655b8",
+  "PackageInfoSHA256": "fb8e435d81fa8e87a477339b962a847180e9325eef6d0f3ef71ea43d1ccf7858",
   "PackageInfoURL": "https://gap-packages.github.io/unitlib/PackageInfo.g",
   "PackageName": "UnitLib",
   "PackageWWWHome": "https://gap-packages.github.io/unitlib",
@@ -90,5 +96,5 @@
   },
   "Subtitle": "Library of normalized unit groups of modular group algebras",
   "TestFile": "tst/testall.g",
-  "Version": "5.0.0"
+  "Version": "5.1.0"
 }
