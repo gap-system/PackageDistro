@@ -1,13 +1,27 @@
 {
   "AbstractHTML": "This package implements the <a href=\"https://www.openmath.org/standard/scscp/\">Symbolic Computation Software Composability Protocol</a> for the GAP system.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "6226fb76853ca94f37dd3fb74c3a99384c85e513bf4c3ea7a7ee5c43e9887d7e",
-  "ArchiveURL": "https://github.com/gap-packages/scscp/releases/download/v2.4.4/SCSCP-2.4.4",
+  "ArchiveSHA256": "4b12487017f8d70b4c8edc822a12788ad22a76318bf2b0aa637b0f9a12fe75ef",
+  "ArchiveSize": 923191,
+  "ArchiveURL": "https://github.com/gap-packages/scscp/releases/download/v2.5.0/SCSCP-2.5.0",
+  "AutoDoc": {
+    "entities": {
+      "ANUPQ": "<Package>ANUPQ</Package>",
+      "EdenTV": "<Package>EdenTV</Package>",
+      "IO": "<Package>IO</Package>",
+      "OpenMath": "<Package>OpenMath</Package>",
+      "RELEASEDATE": "11 August 2026",
+      "RELEASEYEAR": "2026",
+      "VERSION": "2.5.0",
+      "scscp1": "<Package>scscp1</Package>",
+      "scscp2": "<Package>scscp2</Package>"
+    }
+  },
   "AvailabilityTest": null,
   "BinaryFiles": [
     "demo/maple2gap.mw"
   ],
-  "Date": "2025-08-27",
+  "Date": "2026-08-11",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10",
@@ -48,7 +62,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "cc9381643f2cba41edb9357554790d81133a7443cd23396ee61df43e6239639e",
+  "PackageInfoSHA256": "488e334db603e805f7b9b9f1462f6f21e276219208a1544e71dc20d4c8644864",
   "PackageInfoURL": "https://gap-packages.github.io/scscp/PackageInfo.g",
   "PackageName": "SCSCP",
   "PackageWWWHome": "https://gap-packages.github.io/scscp",
@@ -90,5 +104,5 @@
   },
   "Subtitle": "Symbolic Computation Software Composability Protocol in GAP",
   "TestFile": "tst/offline.tst",
-  "Version": "2.4.4"
+  "Version": "2.5.0"
 }
