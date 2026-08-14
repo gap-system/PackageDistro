@@ -150,7 +150,7 @@ def main() -> None:
         "packages-required.tar.gz",
         archive_dir,
         release_dir,
-        ["gapdoc", "primgrp", "smallgrp", "transgrp"],
+        ["gapdoc", "perfgrp", "primgrp", "smallgrp", "transgrp"],
     )
 
     # Make package-infos.json
