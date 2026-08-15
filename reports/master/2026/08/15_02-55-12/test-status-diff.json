@@ -1,0 +1,24 @@
+{
+  "current": "master/2026/08/15_02-55-12",
+  "last": "master/2026/08/14_03-21-08",
+  "total": 173,
+  "failure": 2,
+  "success": 168,
+  "skipped": 3,
+  "failures_changed": [
+    "groupoids",
+    "xmod"
+  ],
+  "failures_current": [
+    "groupoids",
+    "xmod"
+  ],
+  "new": 0,
+  "removed": 0,
+  "failure_changed": 2,
+  "success_changed": 0,
+  "skipped_changed": 0,
+  "failure_same": 0,
+  "success_same": 168,
+  "skipped_same": 3
+}
