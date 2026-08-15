@@ -1,19 +1,19 @@
 {
   "AbstractHTML": "<span class=\"pkgname\">Origami</span> is a package for computing the Veech group of square-tiled surfaces which are also known as origamis.",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "52898d4262a023b81241c7a40f418f481cfa3a9648099b52dabc505ef08f72f3",
-  "ArchiveSize": 404780,
-  "ArchiveURL": "https://github.com/AG-Weitze-Schmithusen/Origami/releases/download/v2.0.3/Origami-2.0.3",
+  "ArchiveSHA256": "946a64d3b2dfee4aa4f421577a90e0842372e2f69ac0ed932723aa0b1a884ded",
+  "ArchiveSize": 406767,
+  "ArchiveURL": "https://github.com/AG-Weitze-Schmithusen/Origami/releases/download/v2.0.4/Origami-2.0.4",
   "AutoDoc": {
     "entities": {
-      "RELEASEDATE": "4 May 2026",
+      "RELEASEDATE": "15 August 2026",
       "RELEASEYEAR": "2026",
-      "VERSION": "2.0.3"
+      "VERSION": "2.0.4"
     }
   },
   "AvailabilityTest": null,
-  "BannerString": "\n─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\nLoading  Origami 2.0.3 (Computing Veech groups of origamis)\nby Leo Emmerich (https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen.html),\n   Sebastian Engelhardt (https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen.html),\n   Simon Ertl (https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen.html),\n   Luca Junk (https://www.uni-saarland.de/lehrstuhl/weber-moritz/team/luca-junk.html),\n   Pascal Kattler (https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen/team/pascal-kattler.html),\n   Alexander Rogovskyy (https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen.html),\n   Pascal Schumann (https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen.html),\n   Andrea Thevis (https://www.uni-frankfurt.de/115635174/Dr__Andrea_Thevis),\n   Hannah Wagmann (https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen/team/hannah-wagmann.html), and\n   Gabriela Weitze-Schmithüsen (https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen/team/gabriela-weitze-schmithuesen.html).\nHomepage: https://AG-Weitze-Schmithusen.github.io/Origami/\n\n                +---+---+\n                |   |   |\n+---+---+---+---+---+---+---+\n|   |   |   |   |   |   |   |\n+---+---+---+---+---+---+---+\n    |   |   |   |\n    +---+---+---+\n\n─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\n",
-  "Date": "2026-05-04",
+  "BannerString": "\n─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\nLoading  Origami 2.0.4 (Computing Veech groups of origamis)\nby Leo Emmerich (https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen.html),\n   Sebastian Engelhardt (https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen.html),\n   Simon Ertl (https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen.html),\n   Luca Junk (https://www.uni-saarland.de/lehrstuhl/weber-moritz/team/luca-junk.html),\n   Pascal Kattler (https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen/team/pascal-kattler.html),\n   Alexander Rogovskyy (https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen.html),\n   Pascal Schumann (https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen.html),\n   Andrea Thevis (https://www.uni-frankfurt.de/115635174/Dr__Andrea_Thevis),\n   Hannah Wagmann (https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen/team/hannah-wagmann.html), and\n   Gabriela Weitze-Schmithüsen (https://www.uni-saarland.de/lehrstuhl/weitze-schmithuesen/team/gabriela-weitze-schmithuesen.html).\nHomepage: https://AG-Weitze-Schmithusen.github.io/Origami/\n\n                +---+---+\n                |   |   |\n+---+---+---+---+---+---+---+\n|   |   |   |   |   |   |   |\n+---+---+---+---+---+---+---+\n    |   |   |   |\n    +---+---+---+\n\n─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\n",
+  "Date": "2026-08-15",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": "4.12",
@@ -25,6 +25,10 @@
       [
         "Orb",
         "4.7.6"
+      ],
+      [
+        "SmallGrp",
+        "1.3"
       ]
     ]
   },
@@ -44,7 +48,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "633095337b11b3a552ca3a339ac9cce72064c6fa2d32d93aa37670010865a0f6",
+  "PackageInfoSHA256": "1787a512654113ff4140df20a10cf4112ee6f9ce5f44738a3ce3a2ae936acf74",
   "PackageInfoURL": "https://AG-Weitze-Schmithusen.github.io/Origami/PackageInfo.g",
   "PackageName": "Origami",
   "PackageWWWHome": "https://AG-Weitze-Schmithusen.github.io/Origami/",
@@ -142,7 +146,7 @@
       "FirstNames": "Hannah",
       "Institution": "Universität des Saarlandes",
       "IsAuthor": true,
-      "IsMaintainer": true,
+      "IsMaintainer": false,
       "LastName": "Wagmann",
       "Place": "Saarbrücken",
       "PostalAddress": "AG Weitze-Schmithüsen\nFR 6.1 Mathematik\nUniversität des Saarlandes\nD-66041 Saarbrücken",
@@ -163,5 +167,5 @@
   "README_URL": "https://AG-Weitze-Schmithusen.github.io/Origami/README.md",
   "Subtitle": "Computing Veech groups of origamis",
   "TestFile": "tst/testall.g",
-  "Version": "2.0.3"
+  "Version": "2.0.4"
 }
