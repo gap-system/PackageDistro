@@ -1,21 +1,21 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">LAGUNA</span> package replaces the <span class=\"pkgname\">LAG</span> package and provides functionality for calculation of the normalized unit group of the modular group algebra of the finite p-group and for investigation of Lie algebra associated with group algebras and other associative algebras.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "b750f5c95b1d688cdc397e6ca76e699e09b181ce1efd88bd9dd9c2e332bb1aa1",
-  "ArchiveSize": 462020,
-  "ArchiveURL": "https://github.com/gap-packages/laguna/releases/download/v3.10.0/laguna-3.10.0",
+  "ArchiveSHA256": "84dca98cbc662266464debe078ed2d428a72fa4f1ca30cdcf0b1335e434e5ba4",
+  "ArchiveSize": 462053,
+  "ArchiveURL": "https://github.com/gap-packages/laguna/releases/download/v3.10.1/laguna-3.10.1",
   "AutoDoc": {
     "entities": {
       "C": "<Package>C</Package>",
       "LAG": "<Package>LAG</Package>",
-      "RELEASEDATE": "11 August 2026",
+      "RELEASEDATE": "14 August 2026",
       "RELEASEYEAR": "2026",
       "SISYPHOS": "<Package>SISYPHOS</Package>",
-      "VERSION": "3.10.0"
+      "VERSION": "3.10.1"
     }
   },
   "AvailabilityTest": null,
-  "Date": "2026-08-11",
+  "Date": "2026-08-14",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.9",
@@ -53,7 +53,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "fc0d53b2a8adb1d0689980cf37004cd7152605ebfc63e00940c76a5ec0fb708b",
+  "PackageInfoSHA256": "8e99a2867cbdb04586d895329e3d86a46f5bff3414ecc8b82aa36745b82e7f06",
   "PackageInfoURL": "https://gap-packages.github.io/laguna/PackageInfo.g",
   "PackageName": "LAGUNA",
   "PackageWWWHome": "https://gap-packages.github.io/laguna",
@@ -104,5 +104,5 @@
   },
   "Subtitle": "Lie AlGebras and UNits of group Algebras",
   "TestFile": "tst/testall.g",
-  "Version": "3.10.0"
+  "Version": "3.10.1"
 }
