@@ -1,23 +1,20 @@
 {
   "AbstractHTML": "MajoranaAlgebras is a package for constructing Majorana\nrepresentations of finite groups. It also offers some functions to calculate\nwith a constructed Majorana representation. The main constructive functions\nuse the algorithm described in the preprint Constructing Majorana\nRepresentations (https://arxiv.org/abs/1803.10723) by Markus Pfeiffer and\nMadeleine Whybrow.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "ee0edc3ee3314958444c0d5daca5ebb9972cd6f4fc540d8b4185932311c63926",
-  "ArchiveURL": "https://github.com/gap-packages/MajoranaAlgebras/releases/download/v1.5.2/MajoranaAlgebras-1.5.2",
+  "ArchiveSHA256": "a5d14a62079e95cf301c967008d096ef78800316bc32d4d9b9c33850de4b686c",
+  "ArchiveSize": 278007,
+  "ArchiveURL": "https://github.com/gap-packages/MajoranaAlgebras/releases/download/v1.5.3/MajoranaAlgebras-1.5.3",
   "AutoDoc": {
     "TitlePage": {
       "Copyright": "&copyright; 2018 by Markus Pfeiffer and Madeleine Whybrow<P/>\n&MajoranaAlgebras; package is free software;\nyou can redistribute it and/or modify it under the terms of the\n<URL Text=\"GNU General Public License\">https://www.fsf.org/licenses/gpl.html</URL>\nas published by the Free Software Foundation; either version 2 of the License,\nor (at your option) any later version."
     }
   },
   "AvailabilityTest": null,
-  "Date": "2024-07-07",
+  "Date": "2026-08-16",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">= 4.8",
+    "GAP": ">= 4.10",
     "NeededOtherPackages": [
-      [
-        "GAPDoc",
-        ">= 1.5"
-      ],
       [
         "automata",
         ">= 1.13"
@@ -56,7 +53,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "2fa82cd570a3fbc11332c3272e6b37ff5f9705fbc3019ed3b047a8b01626b99e",
+  "PackageInfoSHA256": "843052b071c5eee8f9bc9b7399569996259197ffe79ea33e3378ad52d275e791",
   "PackageInfoURL": "https://gap-packages.github.io/MajoranaAlgebras/PackageInfo.g",
   "PackageName": "MajoranaAlgebras",
   "PackageWWWHome": "https://gap-packages.github.io/MajoranaAlgebras/",
@@ -95,5 +92,5 @@
   },
   "Subtitle": "A package for constructing Majorana algebras and representations",
   "TestFile": "tst/testall.g",
-  "Version": "1.5.2"
+  "Version": "1.5.3"
 }
