@@ -1,10 +1,11 @@
 {
   "AbstractHTML": "Tools for computing with elements of unipotent subgroups of Chevalley groups.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "2028808e74fd67c9ff88442b701a7e9946b4a5cde6f718259efc98f2c9d44e1c",
-  "ArchiveURL": "https://github.com/gap-packages/unipot/releases/download/v1.6/unipot-1.6",
+  "ArchiveSHA256": "54fcc0a39cc4c9dd2a73166e41bd4f38c8f007266b96c63e8fd541f44dc0903a",
+  "ArchiveSize": 252281,
+  "ArchiveURL": "https://github.com/gap-packages/unipot/releases/download/v1.7/unipot-1.7",
   "AvailabilityTest": null,
-  "Date": "2024-07-04",
+  "Date": "2026-08-16",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.7",
@@ -21,18 +22,16 @@
   "PackageDoc": [
     {
       "ArchiveURLSubset": [
-        "doc",
-        "htm"
+        "doc"
       ],
-      "Autoload": true,
       "BookName": "unipot",
-      "HTMLStart": "htm/chapters.htm",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "Computing with elements of unipotent subgroups of Chevalley groups",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "e62989f25f8e01cc336d2414c9a3a857532d875aa7ae107faa499f6a4b7e51ae",
+  "PackageInfoSHA256": "5d1d9f2759580aff713a3525ca7a91c125c48a182109c6dc061adbc3ef5adf95",
   "PackageInfoURL": "https://gap-packages.github.io/unipot/PackageInfo.g",
   "PackageName": "Unipot",
   "PackageWWWHome": "https://gap-packages.github.io/unipot/",
@@ -48,6 +47,7 @@
     {
       "Email": "mhorn@rptu.de",
       "FirstNames": "Max",
+      "GitHubUsername": "fingolfin",
       "Institution": "RPTU Kaiserslautern-Landau",
       "IsAuthor": false,
       "IsMaintainer": true,
@@ -64,5 +64,5 @@
   },
   "Subtitle": "Computing with elements of unipotent subgroups of Chevalley groups",
   "TestFile": "tst/testall.g",
-  "Version": "1.6"
+  "Version": "1.7"
 }
