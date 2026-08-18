@@ -1,19 +1,19 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">SOTGrps</span> package contains methods to construct up to isomorphism the groups of a small order type.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "17a85864c76b1648bd21cddd219d5f218012959697e67f8e52256c3a6a94b7cc",
-  "ArchiveSize": 1089176,
-  "ArchiveURL": "https://github.com/gap-packages/sotgrps/releases/download/v1.3.1/SOTGrps-1.3.1",
+  "ArchiveSHA256": "5f9befc44357a574122d515aeb8024fd489b41f95f59bbd26a1f7598066e1cdb",
+  "ArchiveSize": 1089402,
+  "ArchiveURL": "https://github.com/gap-packages/sotgrps/releases/download/v1.4/SOTGrps-1.4",
   "AutoDoc": {
     "entities": {
       "SmallGrp": "<Package>SmallGrp</Package>"
     }
   },
   "AvailabilityTest": null,
-  "Date": "2026-07-29",
+  "Date": "2026-08-18",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">=4.11",
+    "GAP": ">=4.12",
     "NeededOtherPackages": [
       [
         "smallgrp",
@@ -40,7 +40,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "afdacdcef4858384a6d489f24896df62fc1d9d807930ddcaf66cf88cf665dbdd",
+  "PackageInfoSHA256": "7c284baabbf383bb4526da37ac29266ee4409da3d1e7324ebdc4b1f38e61d0af",
   "PackageInfoURL": "https://gap-packages.github.io/sotgrps//PackageInfo.g",
   "PackageName": "SOTGrps",
   "PackageWWWHome": "https://gap-packages.github.io/sotgrps/",
@@ -76,5 +76,5 @@
   },
   "Subtitle": "Constructing and identifying groups of small order type",
   "TestFile": "tst/testall.g",
-  "Version": "1.3.1"
+  "Version": "1.4"
 }
