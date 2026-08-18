@@ -29,11 +29,15 @@ import glob
 import json
 import os
 import sys
+import time
 from datetime import datetime
 from typing import Any, Callable, Dict, List, NotRequired, TypedDict
 
 import requests
-from utils import error, metadata, normalize_pkg_name, warning
+from utils import _should_retry, error, metadata, normalize_pkg_name, warning
+
+GITHUB_API_ATTEMPTS = 4
+GITHUB_API_TIMEOUT = (30, 60)
 
 
 class JobInfo(TypedDict):
@@ -61,21 +65,28 @@ def fetch_jobs(
     run_id: str,
     get: Callable[..., requests.Response] = requests.get,
 ) -> List[Dict[str, Any]]:
-    # Use filter=all so rerunning a single matrix job still lets us see the
-    # jobs from previous attempts of the same workflow run.
+    # `latest` gives us one job per name after a partial rerun, without making
+    # GitHub construct and paginate responses containing every prior attempt.
+    # Smaller pages also avoid intermittent gateway errors seen on large runs.
     url = (
         f"https://api.github.com/repos/{repo}/actions/runs/{run_id}/jobs"
-        "?simple=yes&filter=all&per_page=100&page=1"
+        "?simple=yes&filter=latest&per_page=50&page=1"
     )
     headers = github_headers(git_token)
-    res = get(url, headers=headers)
-    res.raise_for_status()
-    jobs_list = response_jobs(res, url)
-    while "next" in res.links.keys():
-        url = res.links["next"]["url"]
-        res = get(url, headers=headers)
-        res.raise_for_status()
+    jobs_list: List[Dict[str, Any]] = []
+    while url:
+        for attempt in range(1, GITHUB_API_ATTEMPTS + 1):
+            try:
+                res = get(url, headers=headers, timeout=GITHUB_API_TIMEOUT)
+                res.raise_for_status()
+                break
+            except requests.RequestException as exc:
+                if attempt == GITHUB_API_ATTEMPTS or not _should_retry(exc):
+                    raise
+                warning(f'GitHub API request for "{url}" failed ({exc}), retrying')
+                time.sleep(2**attempt)
         jobs_list.extend(response_jobs(res, url))
+        url = res.links.get("next", {}).get("url", "")
     return jobs_list
 
 
@@ -146,8 +157,8 @@ def main(argv: List[str]) -> int:
     jobs_list = fetch_jobs(git_token, repo, run_id)
 
     # Turn list of jobs into a dictionary containing only the relevant data.
-    # With filter=all a rerun may contain multiple jobs with the same name, so
-    # keep the most recent one according to completed_at.
+    # Keep the most recent job defensively in case the API returns duplicate
+    # names despite filter=latest.
     jobs_dict: Dict[str, JobInfo] = {}
     for raw_job in jobs_list:
         name = raw_job["name"]

@@ -5,6 +5,9 @@ import importlib
 import os
 import sys
 
+import pytest
+import requests
+
 sys.path.insert(
     0, "/".join(os.path.dirname(os.path.realpath(__file__)).split("/")[:-1])
 )
@@ -55,11 +58,69 @@ def test_fetch_jobs_returns_empty_list_for_error_payload():
         def json(self):
             return {"message": "Bad credentials"}
 
-    def fake_get(url, headers):
+    def fake_get(url, headers, timeout):
         seen["url"] = url
         seen["headers"] = headers
+        seen["timeout"] = timeout
         return Response()
 
     assert module.fetch_jobs("TOKEN", "gap-system/PackageDistro", "123", fake_get) == []
-    assert "filter=all" in seen["url"]
+    assert "filter=latest" in seen["url"]
+    assert "per_page=50" in seen["url"]
     assert seen["headers"] == {"Authorization": "Bearer TOKEN"}
+    assert seen["timeout"] == module.GITHUB_API_TIMEOUT
+
+
+class FakeResponse:
+    def __init__(self, status_code, payload, next_url=None):
+        self.status_code = status_code
+        self.payload = payload
+        self.links = {"next": {"url": next_url}} if next_url else {}
+
+    def raise_for_status(self):
+        if self.status_code >= 400:
+            raise requests.HTTPError(response=self)
+
+    def json(self):
+        return self.payload
+
+
+def test_fetch_jobs_retries_transient_errors_on_each_page(monkeypatch):
+    module = importlib.import_module("generate_test_status")
+    next_url = "https://api.github.test/jobs?page=2"
+    responses = iter(
+        [
+            FakeResponse(200, {"jobs": [{"name": "first"}]}, next_url),
+            FakeResponse(502, {"message": "Server Error"}),
+            FakeResponse(200, {"jobs": [{"name": "second"}]}),
+        ]
+    )
+    seen_urls = []
+    delays = []
+
+    def fake_get(url, headers, timeout):
+        seen_urls.append(url)
+        return next(responses)
+
+    monkeypatch.setattr(module.time, "sleep", delays.append)
+
+    jobs = module.fetch_jobs("TOKEN", "gap-system/PackageDistro", "123", fake_get)
+
+    assert [job["name"] for job in jobs] == ["first", "second"]
+    assert seen_urls[-2:] == [next_url, next_url]
+    assert delays == [2]
+
+
+def test_fetch_jobs_does_not_retry_permanent_errors(monkeypatch):
+    module = importlib.import_module("generate_test_status")
+    calls = []
+
+    def fake_get(url, headers, timeout):
+        calls.append(url)
+        return FakeResponse(404, {"message": "Not Found"})
+
+    monkeypatch.setattr(module.time, "sleep", lambda delay: None)
+
+    with pytest.raises(requests.HTTPError):
+        module.fetch_jobs("TOKEN", "gap-system/PackageDistro", "123", fake_get)
+    assert len(calls) == 1
