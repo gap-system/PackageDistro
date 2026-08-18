@@ -1,18 +1,18 @@
 {
   "AbstractHTML": "<span class=\"pkgname\">Wedderga</span> is the package to compute the simple components of the Wedderburn decomposition of semisimple group algebras of finite groups over finite fields and over subfields of finite cyclotomic extensions of the rationals. It also contains functions that produce the primitive central idempotents of semisimple group algebras and functions for computing Schur indices. Other functions of <span class=\"pkgname\">Wedderga</span> allow one to construct crossed products over a group with coefficients in an associative ring with identity and the multiplication determined by a given action and twisting.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "eb1c676d479bd890f8ff10cc72315816ff3f8927412f7c4cdd94386ef43a20a3",
-  "ArchiveSize": 750470,
-  "ArchiveURL": "https://github.com/gap-packages/wedderga/releases/download/v4.12.0/wedderga-4.12.0",
+  "ArchiveSHA256": "d24632aad323db0e03cf68642a43fc769ab9e80c8842826d5b87f8e33b32f282",
+  "ArchiveSize": 750346,
+  "ArchiveURL": "https://github.com/gap-packages/wedderga/releases/download/v4.12.1/wedderga-4.12.1",
   "AutoDoc": {
     "entities": {
-      "RELEASEDATE": "11 August 2026",
+      "RELEASEDATE": "18 August 2026",
       "RELEASEYEAR": "2026",
-      "VERSION": "4.12.0"
+      "VERSION": "4.12.1"
     }
   },
   "AvailabilityTest": null,
-  "Date": "2026-08-11",
+  "Date": "2026-08-18",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.8",
@@ -48,7 +48,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "bad9c1e6496a3d06df6754829c88858007336b45cf8c033f602b047669d3a90c",
+  "PackageInfoSHA256": "9788fbd50cfbdef06c37dba9b8c1fa8da0a362a555e9deba8c2065a1a26913c6",
   "PackageInfoURL": "https://gap-packages.github.io/wedderga/PackageInfo.g",
   "PackageName": "Wedderga",
   "PackageWWWHome": "https://gap-packages.github.io/wedderga",
@@ -155,5 +155,5 @@
   },
   "Subtitle": "Wedderburn Decomposition of Group Algebras",
   "TestFile": "tst/testall.g",
-  "Version": "4.12.0"
+  "Version": "4.12.1"
 }
