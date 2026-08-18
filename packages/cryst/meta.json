@@ -1,15 +1,14 @@
 {
   "AbstractHTML": "This package, previously known as <span class=\"pkgname\">CrystGAP</span>, provides a rich set of methods for the computation with affine crystallographic groups, in particular space groups. Affine crystallographic groups are fully supported both in representations acting from the right or from the left, the latter one being preferred by crystallographers. Functions to determine representatives of all space group types of a given dimension are also provided. Where necessary, <span class=\"pkgname\">Cryst</span> can also make use of functionality provided by the package <span class=\"pkgname\">CaratInterface</span>.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "ff420bd3eb197ba3ae9a2afb290c366213d4ed0d5754c2bce12cfca73be7e07b",
-  "ArchiveSize": 254528,
-  "ArchiveURL": "https://www.math.uni-bielefeld.de/~gaehler/gap/Cryst/cryst-4.1.31",
+  "ArchiveSHA256": "d563ee3bda1e8b4bdff2c5b03d8d6be9a127011490dbad298bf4d2a15d0afc0e",
+  "ArchiveSize": 398759,
+  "ArchiveURL": "https://www.math.uni-bielefeld.de/~gaehler/gap/Cryst/cryst-4.1.32",
   "AvailabilityTest": null,
   "BinaryFiles": [
-    "doc/manual.pdf",
-    "doc/manual.dvi"
+    "doc/manual.pdf"
   ],
-  "Date": "2026-05-04",
+  "Date": "2026-08-18",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.12",
@@ -31,10 +30,6 @@
       [
         "CaratInterface",
         ">=2.3.3"
-      ],
-      [
-        "XGAP",
-        ">=4.22"
       ]
     ]
   },
@@ -54,17 +49,16 @@
   "PackageDoc": [
     {
       "ArchiveURLSubset": [
-        "doc",
-        "htm"
+        "doc"
       ],
       "BookName": "Cryst",
-      "HTMLStart": "htm/chapters.htm",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "Computing with crystallographic groups",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "fd91c8cb4188795afa433b7c8f63c50d7cc0933f375a46c625682fdf9ec692c9",
+  "PackageInfoSHA256": "853777df1f85ceb52d489f8b49e64cb9326ab642debb43f0e3126a30c18d3574",
   "PackageInfoURL": "https://www.math.uni-bielefeld.de/~gaehler/gap/Cryst/PackageInfo.g",
   "PackageName": "Cryst",
   "PackageWWWHome": "https://www.math.uni-bielefeld.de/~gaehler/gap/packages.php",
@@ -77,17 +71,18 @@
       "IsMaintainer": true,
       "LastName": "Eick",
       "Place": "Braunschweig",
-      "PostalAddress": "Institut Analysis und Algebra\nTU Braunschweig\nUniversitätsplatz 2\nD-38106 Braunschweig\nGermany",
+      "PostalAddress": "Institut Analysis und Algebra, TU Braunschweig\nUniversitätsplatz 2, D-38106 Braunschweig, Germany",
       "WWWHome": "http://www.iaa.tu-bs.de/beick"
     },
     {
       "Email": "gaehler@math.uni-bielefeld.de",
       "FirstNames": "Franz",
-      "Institution": "Mathematik, Universität Bielefeld",
+      "Institution": "Universität Bielefeld",
       "IsAuthor": true,
       "IsMaintainer": true,
       "LastName": "Gähler",
       "Place": "Bielefeld",
+      "PostalAddress": "Fakultät für Mathematik, Universität Bielefeld\nPostfach 10 01 31, D-33501 Bielefeld, Germany",
       "WWWHome": "https://www.math.uni-bielefeld.de/~gaehler/"
     },
     {
@@ -106,5 +101,5 @@
   "Subtitle": "Computing with crystallographic groups",
   "SupportEmail": "gaehler@math.uni-bielefeld.de",
   "TestFile": "tst/testall.g",
-  "Version": "4.1.31"
+  "Version": "4.1.32"
 }
