@@ -1,28 +1,40 @@
 {
   "AbstractHTML": "A package for finding minimal and canonical images in permutation groups",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "69fc28df4be32613ec9b7af56fbf935148f6b500b21681f4ce8fe85400093276",
-  "ArchiveURL": "https://github.com/gap-packages/images/releases/download/v1.3.3/images-1.3.3",
+  "ArchiveSHA256": "5f444313dd38a4b37197eb0ff7acce0f2b3a9d979cf1d05b7d5f35adb2fc0960",
+  "ArchiveSize": 313499,
+  "ArchiveURL": "https://github.com/gap-packages/images/releases/download/v1.4.2/images-1.4.2",
   "AutoDoc": {
     "TitlePage": {
-      "Copyright": "\n&copyright; 2013-2019\n"
+      "Copyright": "\n&copyright; 2013-2026\n"
+    },
+    "entities": {
+      "Images": "<Package>Images</Package>"
     }
   },
   "AvailabilityTest": null,
-  "Date": "2024-08-27",
+  "Date": "2026-08-18",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">= 4.10",
+    "GAP": ">= 4.13",
     "NeededOtherPackages": [
       [
-        "GAPDoc",
-        ">= 1.5"
+        "Digraphs",
+        ">= 1.0.0"
+      ],
+      [
+        "Datastructures",
+        ">= 0.2.0"
       ]
     ],
     "SuggestedOtherPackages": [
       [
         "ferret",
         ">= 0.8.0"
+      ],
+      [
+        "vole",
+        ">= 0.6.0"
       ]
     ]
   },
@@ -41,7 +53,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "ab75a92bd9796502c58fe1312179ae96ed216520aee403d8131305bf8f03141f",
+  "PackageInfoSHA256": "67b9b37750b45fdb36d44881e026604ac628dc2e5ea9290b1d26b6ebf887311a",
   "PackageInfoURL": "https://gap-packages.github.io/images/PackageInfo.g",
   "PackageName": "images",
   "PackageWWWHome": "https://gap-packages.github.io/images/",
@@ -54,7 +66,7 @@
       "IsMaintainer": true,
       "LastName": "Jefferson",
       "Place": "St Andrews",
-      "WWWHome": "http://caj.host.cs.st-andrews.ac.uk/"
+      "WWWHome": "https://heather.cafe/"
     },
     {
       "Email": "markus.pfeiffer@morphism.de",
@@ -93,5 +105,5 @@
   },
   "Subtitle": "Minimal and Canonical images",
   "TestFile": "tst/testall.g",
-  "Version": "1.3.3"
+  "Version": "1.4.2"
 }
