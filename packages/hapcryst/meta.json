@@ -1,20 +1,24 @@
 {
   "AbstractHTML": "This is an extension to the HAP package by Graham Ellis. It implements geometric methods for the calculation of resolutions of Bieberbach groups.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "e61eb1e74f6332377ce26b2ca826a28568f4b3b0c6f091fd7abbdb50301358f0",
-  "ArchiveURL": "https://github.com/gap-packages/hapcryst/releases/download/v0.2.0/hapcryst-0.2.0",
+  "ArchiveSHA256": "75ced8efae8ec95848c8b56a82a720155653548dfc6d6622b4fbe764b55148bd",
+  "ArchiveSize": 364717,
+  "ArchiveURL": "https://github.com/gap-packages/hapcryst/releases/download/v0.2.1/hapcryst-0.2.1",
   "AutoDoc": {
     "TitlePage": {
       "Acknowledgements": "\n          This work was supported by Marie Curie Grant No. MTKD-CT-2006-042685\n        ",
       "Copyright": "\n            &copyright; 2007 Marc Röder. <P/>\n\n            This package is distributed under the terms of the GNU General\n            Public License version 2 or later (at your convenience). See the\n            file <File>LICENSE</File> or\n            <URL>https://www.gnu.org/copyleft/gpl.html</URL>\n        ",
-      "Version": "Version 0.2.0"
+      "Version": "Version 0.2.1"
     }
   },
   "AvailabilityTest": null,
-  "Date": "2026-03-24",
+  "Date": "2026-08-18",
   "Dependencies": {
     "ExternalConditions": [
-      "polymake (https://polymake.org) must be installed to calculate resolutions"
+      [
+        "polymake must be installed to calculate resolutions",
+        "https://polymake.org"
+      ]
     ],
     "GAP": ">=4.12",
     "NeededOtherPackages": [
@@ -41,8 +45,8 @@
     ],
     "SuggestedOtherPackages": [
       [
-        "Carat",
-        ">=1.1"
+        "CaratInterface",
+        ">=2.3.1"
       ],
       [
         "CrystCat",
@@ -73,7 +77,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "d8bbd67ba17be7e32b3309a207406c05f7e6ab2b674d9b1686274477d38a9316",
+  "PackageInfoSHA256": "130c635b267af263b13d73bd2a791f6c8c84e906a4e5d01df60762cdc191fea5",
   "PackageInfoURL": "https://gap-packages.github.io/hapcryst/PackageInfo.g",
   "PackageName": "HAPcryst",
   "PackageWWWHome": "https://gap-packages.github.io/hapcryst/",
@@ -100,5 +104,5 @@
   },
   "Subtitle": "A HAP extension for crystallographic groups",
   "TestFile": "tst/testall.g",
-  "Version": "0.2.0"
+  "Version": "0.2.1"
 }
