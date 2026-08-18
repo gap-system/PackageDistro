@@ -1,0 +1,18 @@
+{
+  "current": "master/2026/08/18_03-08-52",
+  "last": "master/2026/08/17_02-59-07",
+  "total": 173,
+  "failure": 0,
+  "success": 160,
+  "skipped": 13,
+  "failures_changed": [],
+  "failures_current": [],
+  "new": 0,
+  "removed": 0,
+  "failure_changed": 0,
+  "success_changed": 0,
+  "skipped_changed": 10,
+  "failure_same": 0,
+  "success_same": 160,
+  "skipped_same": 3
+}
