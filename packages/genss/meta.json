@@ -1,23 +1,20 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">genss</span> package implements the    randomised Schreier-Sims algorithm to compute a stabiliser chain    and a base and strong generating set for arbitrary finite groups.",
   "ArchiveFormats": ".tar.gz .tar.bz2",
-  "ArchiveSHA256": "3b34a226f780352f115472078af764567d2e75c5a189300cf2e2915e8f7d1429",
-  "ArchiveURL": "https://github.com/gap-packages/genss/releases/download/v1.6.9/genss-1.6.9",
+  "ArchiveSHA256": "5cefe73cf61521e9cc8786aac2001fc686cd5f513585c163cf1bf426fc5c4893",
+  "ArchiveSize": 288449,
+  "ArchiveURL": "https://github.com/gap-packages/genss/releases/download/v1.6.10/genss-1.6.10",
   "AutoDoc": {
     "TitlePage": {
       "Copyright": "&copyright; 2006-2014 by Max Neunhöffer and Felix Noeske<P/>\n\nThis package may be distributed under the terms and conditions of the\nGNU Public License Version 3 or higher.\n"
     }
   },
   "AvailabilityTest": null,
-  "Date": "2024-07-29",
+  "Date": "2026-08-18",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.9",
     "NeededOtherPackages": [
-      [
-        "GAPDoc",
-        ">= 1.5"
-      ],
       [
         "orb",
         ">= 4.5"
@@ -50,7 +47,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "58cee16f8ba9e6a18394df9e66ff032d27cf62a549e340da3d1a9a876f71e752",
+  "PackageInfoSHA256": "f32545924fc093b7870b396322d14f9284ac724e624d076984b97c2c749e97f7",
   "PackageInfoURL": "https://gap-packages.github.io/genss/PackageInfo.g",
   "PackageName": "genss",
   "PackageWWWHome": "https://gap-packages.github.io/genss",
@@ -78,6 +75,7 @@
     {
       "Email": "mhorn@rptu.de",
       "FirstNames": "Max",
+      "GitHubUsername": "fingolfin",
       "Institution": "RPTU Kaiserslautern-Landau",
       "IsAuthor": false,
       "IsMaintainer": true,
@@ -87,12 +85,12 @@
       "WWWHome": "https://www.quendi.de/math"
     }
   ],
-  "README_URL": "https://gap-packages.github.io/genss/README",
+  "README_URL": "https://gap-packages.github.io/genss/README.md",
   "SourceRepository": {
     "Type": "git",
     "URL": "https://github.com/gap-packages/genss"
   },
   "Subtitle": "Generic Schreier-Sims",
   "TestFile": "tst/testall.g",
-  "Version": "1.6.9"
+  "Version": "1.6.10"
 }
