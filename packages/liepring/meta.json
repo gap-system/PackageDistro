@@ -1,12 +1,43 @@
 {
-  "AbstractHTML": "",
+  "AbstractHTML": "The <span class=\"pkgname\">LiePRing</span> package provides access to a database of nilpotent Lie rings of order p^n for p > 2 and n &lt;= 7, together with algorithms for computing with them.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "b645b35342e9c3ea3746fe42243691df1695d90ef00df180dfa24269171ab80e",
-  "ArchiveSize": 2603651,
-  "ArchiveURL": "https://github.com/gap-packages/liepring/releases/download/v2.9.2/liepring-2.9.2",
+  "ArchiveSHA256": "17660a27f0d4830ae6f0e7e4da00805a83dc95838aaeeafb3c2e1cc1f666f718",
+  "ArchiveSize": 2666971,
+  "ArchiveURL": "https://github.com/gap-packages/liepring/releases/download/v2.9.3/liepring-2.9.3",
+  "AutoDoc": {
+    "TitlePage": {
+      "Abstract": [
+        "&LiePRing; gives access to the database of Lie <M>p</M>-rings of order",
+        "at most <M>p^7</M> as determined by Mike Newman, Eamonn O'Brien and",
+        "Michael Vaughan-Lee, see <Cite Key=\"NOV04\"/> and <Cite Key=\"OVL05\"/>,",
+        "and it provides some functionality to work with these Lie <M>p</M>-rings.",
+        "<P/>",
+        "If you use &LiePRing;, then please cite it as:",
+        "<E>Bettina Eick and Michael Vaughan-Lee</E>, LiePRing -- A GAP Package",
+        "for computing with nilpotent Lie rings of prime-power order (2014), see",
+        "<URL>https://www.gap-system.org/Packages/liepring.html</URL>"
+      ],
+      "Acknowledgements": [
+        "The Lazard correspondence induces a one-to-one correspondence between the",
+        "Lie <M>p</M>-rings of order <M>p^n</M> and class less than <M>p</M> and",
+        "the <M>p</M>-groups of order <M>p^n</M> and class less than <M>p</M>.",
+        "&LiePRing; provides a function to evaluate this correspondence; this",
+        "function has been implemented and given to us by Willem de Graaf."
+      ],
+      "Copyright": [
+        "&LiePRing; is free software; you can redistribute it under the terms of",
+        "the <URL Text=\"GNU General Public License\">https://www.fsf.org/licenses/gpl.html</URL>",
+        "as published by the Free Software Foundation; either version 2 of the",
+        "License, or (at your option) any later version. &LiePRing; is distributed",
+        "in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even",
+        "the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR",
+        "PURPOSE. See the GNU General Public License for more details."
+      ]
+    }
+  },
   "AvailabilityTest": null,
-  "BannerString": "----------------------------------------------------------------\nLoading  LiePRing 2.9.2\nby Bettina Eick and Michael Vaughan-Lee \n----------------------------------------------------------------\n",
-  "Date": "2026-08-03",
+  "BannerString": "----------------------------------------------------------------\nLoading  LiePRing 2.9.3\nby Bettina Eick and Michael Vaughan-Lee \n----------------------------------------------------------------\n",
+  "Date": "2026-08-18",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": "4.8",
@@ -31,25 +62,25 @@
   },
   "IssueTrackerURL": "https://github.com/gap-packages/liepring/issues",
   "Keywords": [
-    "",
-    "",
-    ""
+    "Lie ring",
+    "Lie p-ring",
+    "p-group",
+    "classification"
   ],
   "License": "GPL-2.0-or-later",
   "PackageDoc": [
     {
       "ArchiveURLSubset": [
-        "doc",
-        "htm"
+        "doc"
       ],
       "BookName": "LiePRing",
-      "HTMLStart": "htm/chapters.htm",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "LiePRing Package",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "dbeeb09f68bdb4325994f440ef065192eb92ec5327cf80bc1bdac1807b82a484",
+  "PackageInfoSHA256": "21b648ab98df36b9dfb881c50b9b27fa7df01a4cd1a6ce0c4c2c8fff8d13b5a2",
   "PackageInfoURL": "https://gap-packages.github.io/liepring/PackageInfo.g",
   "PackageName": "LiePRing",
   "PackageWWWHome": "https://gap-packages.github.io/liepring/",
@@ -69,8 +100,8 @@
       "IsAuthor": true,
       "IsMaintainer": true,
       "LastName": "Vaughan-Lee",
-      "WWWHome": "http://users.ox.ac.uk/~vlee",
-      "place": "Oxford"
+      "Place": "Oxford",
+      "WWWHome": "http://users.ox.ac.uk/~vlee"
     }
   ],
   "README_URL": "https://gap-packages.github.io/liepring/README.md",
@@ -80,5 +111,5 @@
   },
   "Subtitle": "Database and algorithms for Lie p-rings",
   "TestFile": "tst/testall.g",
-  "Version": "2.9.2"
+  "Version": "2.9.3"
 }
