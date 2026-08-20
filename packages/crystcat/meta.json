@@ -1,16 +1,18 @@
 {
   "AbstractHTML": "This package provides a catalog of crystallographic groups of dimensions 2, 3, and 4 which covers most of the data contained in the book <em>Crystallographic groups of four-dimensional space</em> by H. Brown, R. B&uuml;low, J. Neub&uuml;ser, H. Wondratschek, and H. Zassenhaus (John Wiley, New York, 1978). Methods for the computation with these groups are provided by the package <span class=\"pkgname\">Cryst</span>, which must be installed as well.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "643c6c350b58880a64bbbee16520378c564441f453223b0703eda1c210d6e096",
-  "ArchiveURL": "https://www.math.uni-bielefeld.de/~gaehler/gap/CrystCat/crystcat-1.1.11",
+  "ArchiveSHA256": "d6564259fd52522de11149569bdceed7b0a14d39aeff3ea068840fb9686377ad",
+  "ArchiveSize": 416208,
+  "ArchiveURL": "https://www.math.uni-bielefeld.de/~gaehler/gap/CrystCat/crystcat-1.1.13",
   "AvailabilityTest": null,
   "BinaryFiles": [
     "doc/manual.pdf",
     "doc/manual.dvi"
   ],
-  "Date": "2025-12-04",
+  "Date": "2026-08-19",
   "Dependencies": {
     "ExternalConditions": [],
+    "GAP": ">=4.12",
     "NeededOtherPackages": [
       [
         "Cryst",
@@ -28,17 +30,16 @@
   "PackageDoc": [
     {
       "ArchiveURLSubset": [
-        "doc",
-        "htm"
+        "doc"
       ],
       "BookName": "CrystCat",
-      "HTMLStart": "htm/chapters.htm",
+      "HTMLStart": "doc/chap0_mj.html",
       "LongTitle": "The crystallographic groups catalog",
       "PDFFile": "doc/manual.pdf",
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "8f6699100fd8ee29968fc86296f6ca1d05842b2a7ef24e237e3b5886fe0fa610",
+  "PackageInfoSHA256": "b393d97cad9d979f14f4eda139171fc0b1c6c317bf3e8e0f47a346c12b269e6c",
   "PackageInfoURL": "https://www.math.uni-bielefeld.de/~gaehler/gap/CrystCat/PackageInfo.g",
   "PackageName": "CrystCat",
   "PackageWWWHome": "https://www.math.uni-bielefeld.de/~gaehler/gap/packages.php",
@@ -72,5 +73,5 @@
   "Subtitle": "The crystallographic groups catalog",
   "SupportEmail": "gaehler@math.uni-bielefeld.de",
   "TestFile": "tst/testall.g",
-  "Version": "1.1.11"
+  "Version": "1.1.13"
 }
