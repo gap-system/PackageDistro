@@ -1,0 +1,1226 @@
+{
+  "repo": "https://github.com/gap-system/PackageDistro",
+  "workflow": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173",
+  "hash": "b1aa74bb80fea3bb56dc7102fa16b78a75851f4e",
+  "date": "2026-08-24 02:54:28",
+  "gap_version": "master",
+  "gap_report_key": "master",
+  "id": "master/2026/08/24_02-54-28",
+  "pkgs": {
+    "4ti2interface": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405408",
+      "version": "2026.05-01",
+      "archive_url": "https://github.com/homalg-project/homalg_project/releases/download/4ti2Interface-2026.05-01/4ti2Interface-2026.05-01",
+      "archive_sha256": "383391836acda8da95743f781686178ebd07cd15b3f13af4dbba1a5825ecf4a7"
+    },
+    "ace": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405415",
+      "version": "5.7.0",
+      "archive_url": "https://github.com/gap-packages/ace/releases/download/v5.7.0/ace-5.7.0",
+      "archive_sha256": "7123e4100f1340a791d20bca1a8d9e6d9f09fe74a1c5fb15f1723899a1bb4553"
+    },
+    "aclib": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405417",
+      "version": "1.4",
+      "archive_url": "https://github.com/gap-packages/aclib/releases/download/v1.4/aclib-1.4",
+      "archive_sha256": "a6836dcb6e25c0db7fa9c027441c21a0e9dcced71ca95697965344cffabcd565"
+    },
+    "agt": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405444",
+      "version": "0.3.1",
+      "archive_url": "https://github.com/gap-packages/AGT/releases/download/v0.3.1/AGT-0.3.1",
+      "archive_sha256": "289f2519e158d3e5473ead800355f6751413d75dbe5afe817bb9076604d3ce34"
+    },
+    "alco": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405431",
+      "version": "1.1.2",
+      "archive_url": "https://github.com/BNasmith/alco/releases/download/v1.1.2/ALCO-1.1.2",
+      "archive_sha256": "27a4c511d14053275027d6cc79f19409880a7fa4f768f12662cb06ab4cae06ab"
+    },
+    "alnuth": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405397",
+      "version": "4.0.2",
+      "archive_url": "https://github.com/gap-packages/alnuth/releases/download/v4.0.2/alnuth-4.0.2",
+      "archive_sha256": "056a1f14718a4a8f11ebae3600c007ba38f818c9f7487a0a88b0fe94ee1a9e65"
+    },
+    "anupq": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405435",
+      "version": "3.3.3",
+      "archive_url": "https://github.com/gap-packages/anupq/releases/download/v3.3.3/anupq-3.3.3",
+      "archive_sha256": "6a1b25ddcdb05abd933911f8e0e718b195d24b502e5d098d4b431db5f371ffc2"
+    },
+    "atlasrep": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405424",
+      "version": "2.1.12",
+      "archive_url": "https://www.math.rwth-aachen.de/~Thomas.Breuer/atlasrep/atlasrep-2.1.12",
+      "archive_sha256": "0f9cd6cffacd23d0131f7df31b0d3b330b9af310b77dc953a17a635b655db1ec"
+    },
+    "autodoc": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405427",
+      "version": "2026.06.30",
+      "archive_url": "https://github.com/gap-packages/AutoDoc/releases/download/v2026.06.30/AutoDoc-2026.06.30",
+      "archive_sha256": "df6e753d90223add6c877c6723c3a30e1faaf2d684ce22ec6663b8720ce436dc"
+    },
+    "automata": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405425",
+      "version": "1.17",
+      "archive_url": "https://github.com/gap-packages/automata/releases/download/v1.17/automata-1.17",
+      "archive_sha256": "30e5bb54e81a9b35105f2c5734039a58d211d56efe7ba414aaf34287b00b17d8"
+    },
+    "automgrp": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405441",
+      "version": "1.3.3",
+      "archive_url": "https://github.com/gap-packages/automgrp/releases/download/v1.3.3/automgrp-1.3.3",
+      "archive_sha256": "7793f16bb7f8b16a9b459cd3a3f1c118abf3cb3aa46b5f65703e5d2bceb53eca"
+    },
+    "autpgrp": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405526",
+      "version": "1.12.0",
+      "archive_url": "https://github.com/gap-packages/autpgrp/releases/download/v1.12.0/autpgrp-1.12.0",
+      "archive_sha256": "00c53afe289568f4da974d2b363cd8e6602e80f18e5b9be7fa8853354c9e96c7"
+    },
+    "browse": {
+      "status": "skipped",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97303059194",
+      "version": "1.8.23",
+      "archive_url": "https://www.math.rwth-aachen.de/~Browse/Browse-1.8.23",
+      "archive_sha256": "90f2e8f71aa4b9276a80370fc2503daeba9d3555e159a968559731da18be6b60"
+    },
+    "cap": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405559",
+      "version": "2026.07-04",
+      "archive_url": "https://github.com/homalg-project/CAP_project/releases/download/CAP-2026.07-04/CAP-2026.07-04",
+      "archive_sha256": "ba1a5857f343d6f5ac3b46c65ff2f15b8c1de874f92be36c9dbbaed60f7595c8"
+    },
+    "caratinterface": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405463",
+      "version": "2.3.11",
+      "archive_url": "https://www.math.uni-bielefeld.de/~gaehler/gap/CaratInterface/CaratInterface-2.3.11",
+      "archive_sha256": "3a96d873b9752ad5af4ef6e259f35e3905c08a168d0562bd5e66a4a97bdf4e1e"
+    },
+    "cddinterface": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405551",
+      "version": "2026.03.02",
+      "archive_url": "https://github.com/homalg-project/CddInterface/releases/download/v2026.03.02/CddInterface-2026.03.02",
+      "archive_sha256": "e425b0e87667df3f6e4c33cd2656bfc53602297620c91f60e322b29478954a2b"
+    },
+    "circle": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405546",
+      "version": "1.7.1",
+      "archive_url": "https://github.com/gap-packages/circle/releases/download/v1.7.1/circle-1.7.1",
+      "archive_sha256": "9ecc2d63da589f258a85843238ab47e3d681f598cc23aa56c9bcbcbb036d94a4"
+    },
+    "classicalmaximals": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405544",
+      "version": "1.1",
+      "archive_url": "https://github.com/gap-packages/ClassicalMaximals/releases/download/v1.1/ClassicalMaximals-1.1",
+      "archive_sha256": "a7cf1888756a33ca90281cb428576e27000e0136f13aebf98f1caf6157288549"
+    },
+    "classicpres": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405638",
+      "version": "1.25",
+      "archive_url": "http://www.math.colostate.edu/~hulpke/classicpres/classicpres1.25",
+      "archive_sha256": "5b1d273a62f6a67d1af5fbd43f49bd477f3051bc4d33f472a51bbf2169fe2d7c"
+    },
+    "cohomolo": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405557",
+      "version": "1.7.0",
+      "archive_url": "https://github.com/gap-packages/cohomolo/releases/download/v1.7.0/cohomolo-1.7.0",
+      "archive_sha256": "456a1506194ba66c75838933bed07076ad2f4f29be27b7d23410de6537df6c1b"
+    },
+    "congruence": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405567",
+      "version": "1.2.7",
+      "archive_url": "https://github.com/gap-packages/congruence/releases/download/v1.2.7/congruence-1.2.7",
+      "archive_sha256": "980799e39b1d5884d0dcf2be24aa75e541430f8988e47873a92ba3e8bd4e9ee5"
+    },
+    "corefreesub": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405521",
+      "version": "0.6",
+      "archive_url": "https://github.com/CAPiedade/corefreesub/releases/download/v0.6/corefreesub-0.6",
+      "archive_sha256": "fae461748299951dc191f8cc195553cd5b8df7996627ac8891292fdeee1d8c25"
+    },
+    "corelg": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405562",
+      "version": "1.57",
+      "archive_url": "https://github.com/gap-packages/corelg/releases/download/v1.57/corelg-1.57",
+      "archive_sha256": "f87443c2c3d74b8fdc78e7e77267dd757e3372063b8e2369e7dfd0384b701750"
+    },
+    "crime": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405537",
+      "version": "1.6",
+      "archive_url": "https://github.com/gap-packages/crime/releases/download/v1.6/crime-1.6",
+      "archive_sha256": "c6630c5d5385caa3a0e470599759f8e42bd5f0147eebfee164ca808cec83371e"
+    },
+    "crisp": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405620",
+      "version": "1.4.11",
+      "archive_url": "https://github.com/bh11/crisp/releases/download/CRISP-1.4.11/crisp-1.4.11",
+      "archive_sha256": "77dffc09697debf015d38a5c9b4c3c28d4cc42d3e8b9bb0f706e318a32e94fd4"
+    },
+    "crypting": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405607",
+      "version": "0.10.7",
+      "archive_url": "https://github.com/gap-packages/crypting/releases/download/v0.10.7/crypting-0.10.7",
+      "archive_sha256": "041f2c5515dee69c93c8ec64ecda2a8b52ae19169a6b5427810abd448b619f53"
+    },
+    "cryst": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405534",
+      "version": "4.1.32",
+      "archive_url": "https://www.math.uni-bielefeld.de/~gaehler/gap/Cryst/cryst-4.1.32",
+      "archive_sha256": "d563ee3bda1e8b4bdff2c5b03d8d6be9a127011490dbad298bf4d2a15d0afc0e"
+    },
+    "crystcat": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405586",
+      "version": "1.1.13",
+      "archive_url": "https://www.math.uni-bielefeld.de/~gaehler/gap/CrystCat/crystcat-1.1.13",
+      "archive_sha256": "d6564259fd52522de11149569bdceed7b0a14d39aeff3ea068840fb9686377ad"
+    },
+    "ctbllib": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405595",
+      "version": "1.3.11",
+      "archive_url": "https://www.math.rwth-aachen.de/~Thomas.Breuer/ctbllib/ctbllib-1.3.11",
+      "archive_sha256": "f201e9da571c681a7bbfb1e4683bdb2c80a23b005099ed0453521f59cb443434"
+    },
+    "cubefree": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405548",
+      "version": "1.22",
+      "archive_url": "https://github.com/gap-packages/cubefree/releases/download/v1.22/cubefree-1.22",
+      "archive_sha256": "3b91fc28cdfa27fd7efaa36430ee491a84377e84383055a7e4cf72583549d8c6"
+    },
+    "curlinterface": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405678",
+      "version": "2.4.4",
+      "archive_url": "https://github.com/gap-packages/curlInterface/releases/download/v2.4.4/curlInterface-2.4.4",
+      "archive_sha256": "13c911293923626898e593ef6d0ef23e38d94860efc2586d43a8e30f7baca7f9"
+    },
+    "cvec": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405649",
+      "version": "2.8.5",
+      "archive_url": "https://github.com/gap-packages/cvec/releases/download/v2.8.5/cvec-2.8.5",
+      "archive_sha256": "c812d742483244c52dab7b14e38886fa3face7c8d813c352dcb75f8e5791e28a"
+    },
+    "datastructures": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405654",
+      "version": "0.4.3",
+      "archive_url": "https://github.com/gap-packages/datastructures/releases/download/v0.4.3/datastructures-0.4.3",
+      "archive_sha256": "87f49f4215cde3e8bad179fb1f548c83108ec00f9cdcce601b8ba5f2aba3e4bc"
+    },
+    "deepthought": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405609",
+      "version": "1.0.10",
+      "archive_url": "https://github.com/gap-packages/DeepThought/releases/download/v1.0.10/DeepThought-1.0.10",
+      "archive_sha256": "6dd757a515e83284658b9e51375117fff9ddc304ae366946c41d423fe2f6d90e"
+    },
+    "design": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405637",
+      "version": "1.8.2",
+      "archive_url": "https://github.com/gap-packages/design/releases/download/v1.8.2/design-1.8.2",
+      "archive_sha256": "f2462f3103182aedf53f4743ce02d7c96726f951152e06403c81453976c6853f"
+    },
+    "difsets": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405688",
+      "version": "2.3.1",
+      "archive_url": "https://github.com/dylanpeifer/difsets/releases/download/v2.3.1/difsets-2.3.1",
+      "archive_sha256": "9474bd64007006b74087908bc05544fea9e5c7ef085dfdf0109d3142003cb303"
+    },
+    "digraphs": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405700",
+      "version": "1.15.0",
+      "archive_url": "https://github.com/digraphs/Digraphs/releases/download/v1.15.0/digraphs-1.15.0",
+      "archive_sha256": "cc8b0735030f8d02c40a94bb7ecb4eb40c75380b54874ce0313f34df3964954c"
+    },
+    "edim": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405621",
+      "version": "1.3.8",
+      "archive_url": "https://www.math.rwth-aachen.de/~Frank.Luebeck/EDIM/EDIM-1.3.8",
+      "archive_sha256": "32ebc14df670205aa08a4f1cdf22ae59e5665009e0b34ec4f5efe422c83b6a42"
+    },
+    "example": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405630",
+      "version": "4.4.1",
+      "archive_url": "https://github.com/gap-packages/example/releases/download/v4.4.1/Example-4.4.1",
+      "archive_sha256": "a7c9baf7eb0d2f039007dc15866b2c9e2f582644762312969d04d383e4e22b04"
+    },
+    "examplesforhomalg": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405646",
+      "version": "2026.07-01",
+      "archive_url": "https://github.com/homalg-project/homalg_project/releases/download/ExamplesForHomalg-2026.07-01/ExamplesForHomalg-2026.07-01",
+      "archive_sha256": "40f44e882251ebe81dc43a97f7cc037ca7c55d654ce245aa170888a95277632e"
+    },
+    "factint": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405735",
+      "version": "1.7.0",
+      "archive_url": "https://github.com/gap-packages/FactInt/releases/download/v1.7.0/FactInt-1.7.0",
+      "archive_sha256": "6c2c33f76cb613c895e14ada91a478b366bddf049821d36be106958802e4e0e0"
+    },
+    "ferret": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405816",
+      "version": "1.0.16",
+      "archive_url": "https://github.com/gap-packages/ferret/releases/download/v1.0.16/ferret-1.0.16",
+      "archive_sha256": "f444ac13a96c3f7f78757c6d5bfefe0e5385baabc1983599cb4d4b3b35882686"
+    },
+    "fga": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405685",
+      "version": "1.5.0",
+      "archive_url": "https://github.com/gap-packages/fga/releases/download/v1.5.0/fga-1.5.0",
+      "archive_sha256": "da426e208afbec533db2a5e3c5370756309b7735e4306d2ddf2bf35b5afb8592"
+    },
+    "fining": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405631",
+      "version": "1.5.6",
+      "archive_url": "https://github.com/gap-packages/FinInG/releases/download/v1.5.6/fining-1.5.6",
+      "archive_sha256": "844d76472a13458c508d76e185b275158d16ae89a26cc0fe795d7e3946e1c321"
+    },
+    "float": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405713",
+      "version": "1.0.10",
+      "archive_url": "https://github.com/gap-packages/float/releases/download/v1.0.10/float-1.0.10",
+      "archive_sha256": "9eeecb3de00528f9852250a47eb60cd4b1ca0745b124e66d9b5e4728cf31eafc"
+    },
+    "format": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405680",
+      "version": "1.4.5",
+      "archive_url": "https://github.com/gap-packages/format/releases/download/v1.4.5/format-1.4.5",
+      "archive_sha256": "fcf01313854d2d6cb2c4cb92e104bdd33ac6f852642e215df68b589dd4fef0d2"
+    },
+    "forms": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405714",
+      "version": "1.3.0",
+      "archive_url": "https://github.com/gap-packages/forms/releases/download/v1.3.0/forms-1.3.0",
+      "archive_sha256": "a5c823b0fc4d68f2bfbf9e30d4792ea501b413c7636596aae1be6407140f7e54"
+    },
+    "fplsa": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405710",
+      "version": "1.2.8",
+      "archive_url": "https://github.com/gap-packages/FPLSA/releases/download/v1.2.8/FPLSA-1.2.8",
+      "archive_sha256": "cb2fd23861df583259ec6677119080ca958caa13405834365163e7c2b0441952"
+    },
+    "fr": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405699",
+      "version": "2.4.13",
+      "archive_url": "https://github.com/gap-packages/fr/releases/download/v2.4.13/fr-2.4.13",
+      "archive_sha256": "826e209e21e14c986f21e8a399c96931effad7fe206bf8ae7bf69f4974455aa5"
+    },
+    "francy": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405703",
+      "version": "2.0.3",
+      "archive_url": "https://github.com/gap-packages/francy/releases/download/v2.0.3/francy-2.0.3",
+      "archive_sha256": "405d71537bede7165468a5aae7d6eca708ca2308e0c977d2461040a7e37842e0"
+    },
+    "fwtree": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405793",
+      "version": "1.4",
+      "archive_url": "https://github.com/gap-packages/fwtree/releases/download/v1.4/fwtree-1.4",
+      "archive_sha256": "04c64ca4f42880d41a56adfe02589be860cb7a44f526fbe71f896ba462414229"
+    },
+    "gapdoc": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405810",
+      "version": "1.6.10",
+      "archive_url": "https://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/GAPDoc-1.6.10",
+      "archive_sha256": "058c83fee15ea99852cfe8171b468342008a10f5532c414d70ab18b246a02dee"
+    },
+    "gauss": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405746",
+      "version": "2026.07-01",
+      "archive_url": "https://github.com/homalg-project/homalg_project/releases/download/Gauss-2026.07-01/Gauss-2026.07-01",
+      "archive_sha256": "aa235aed6684d98dff9454c30d25c5a4d58ceae686ef9efdf062c339ef9d951a"
+    },
+    "gaussforhomalg": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405776",
+      "version": "2026.07-01",
+      "archive_url": "https://github.com/homalg-project/homalg_project/releases/download/GaussForHomalg-2026.07-01/GaussForHomalg-2026.07-01",
+      "archive_sha256": "5fc663d95706cee791ca763fbf388ed95b9f7f8994ad625c78e7499de66c22e2"
+    },
+    "gbnp": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405696",
+      "version": "1.1.0",
+      "archive_url": "https://github.com/gap-packages/gbnp/releases/download/v1.1.0/gbnp-1.1.0",
+      "archive_sha256": "eb1f6d5eba80318ad88ac268d3f3b9e3affca05940f56cfaf6a31556e3a46056"
+    },
+    "generalizedmorphismsforcap": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405729",
+      "version": "2026.06-01",
+      "archive_url": "https://github.com/homalg-project/CAP_project/releases/download/GeneralizedMorphismsForCAP-2026.06-01/GeneralizedMorphismsForCAP-2026.06-01",
+      "archive_sha256": "969a5842576b642adf470370d5ba196ec1a04997d3fb4fdf34e8a32f96a45a28"
+    },
+    "genss": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405687",
+      "version": "1.6.10",
+      "archive_url": "https://github.com/gap-packages/genss/releases/download/v1.6.10/genss-1.6.10",
+      "archive_sha256": "5cefe73cf61521e9cc8786aac2001fc686cd5f513585c163cf1bf426fc5c4893"
+    },
+    "gradedmodules": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405951",
+      "version": "2026.07-01",
+      "archive_url": "https://github.com/homalg-project/homalg_project/releases/download/GradedModules-2026.07-01/GradedModules-2026.07-01",
+      "archive_sha256": "b2d86b4e5c90c42a3f25f1f981abf3863ffbab9479ad9ef787482434e5685246"
+    },
+    "gradedringforhomalg": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405958",
+      "version": "2026.07-01",
+      "archive_url": "https://github.com/homalg-project/homalg_project/releases/download/GradedRingForHomalg-2026.07-01/GradedRingForHomalg-2026.07-01",
+      "archive_sha256": "7e1cec873cfffd19fbee6a308d16c8b0ca2887047ea1d8c39c60cebe7ae8cde6"
+    },
+    "grape": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405748",
+      "version": "4.9.3",
+      "archive_url": "https://github.com/gap-packages/grape/releases/download/v4.9.3/grape-4.9.3",
+      "archive_sha256": "911b7e181161a4935b5c36cd370a11b250769735ea2f10087bbd75a8de3a2fa1"
+    },
+    "groupoids": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405820",
+      "version": "1.83",
+      "archive_url": "https://github.com/gap-packages/groupoids/releases/download/v1.83/groupoids-1.83",
+      "archive_sha256": "355f7777615773cd24ffd13e1c1fc20dcee52b76f9a9d90c75a8dcda189a53cf"
+    },
+    "grpconst": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405769",
+      "version": "2.7.0",
+      "archive_url": "https://github.com/gap-packages/grpconst/releases/download/v2.7.0/grpconst-2.7.0",
+      "archive_sha256": "a103d5774d59ebdadb48aa479ca223819b3c76664437a830981f1066dd17fd27"
+    },
+    "guarana": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405760",
+      "version": "0.96.3",
+      "archive_url": "https://github.com/gap-packages/guarana/releases/download/v0.96.3/guarana-0.96.3",
+      "archive_sha256": "14b487e9663bb0ad59aea03e2361631eb093f20f647b2574b31a05002eab12ed"
+    },
+    "guava": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405877",
+      "version": "3.21",
+      "archive_url": "https://github.com/gap-packages/guava/releases/download/v3.21/guava-3.21",
+      "archive_sha256": "00c27b50a0969cc6f93db314009e67ae6e205d51a33e6864097dba5a65482fa3"
+    },
+    "hap": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304405766",
+      "version": "1.78",
+      "archive_url": "https://github.com/gap-packages/hap/releases/download/v1.78/hap-1.78",
+      "archive_sha256": "6c619b42a9ace9fe2e8ec148c5da5f8d05421c42ca4f4d4c7b7b318cab85d2c7"
+    },
+    "hapcryst": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407879",
+      "version": "0.2.1",
+      "archive_url": "https://github.com/gap-packages/hapcryst/releases/download/v0.2.1/hapcryst-0.2.1",
+      "archive_sha256": "75ced8efae8ec95848c8b56a82a720155653548dfc6d6622b4fbe764b55148bd"
+    },
+    "hecke": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407936",
+      "version": "1.6.0",
+      "archive_url": "https://github.com/gap-packages/hecke/releases/download/v1.6.0/hecke-1.6.0",
+      "archive_sha256": "c07c9284a391bb7d3afcbb18277bfdf920be56cc449f1d51374abe2f475768d0"
+    },
+    "help": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407910",
+      "version": "4.1",
+      "archive_url": "https://github.com/gap-packages/HeLP/releases/download/v4.1/HeLP-4.1",
+      "archive_sha256": "9fe8a7c6efaaaaa16860e4656e341db856ef4489350a64cdc2435494133746f3"
+    },
+    "homalg": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407930",
+      "version": "2025.12-01",
+      "archive_url": "https://github.com/homalg-project/homalg_project/releases/download/homalg-2025.12-01/homalg-2025.12-01",
+      "archive_sha256": "b9a49b459ca3c4c7044dfd85373ad53586770f0a5ec5776bc702b1d97d80f1c1"
+    },
+    "homalgtocas": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407959",
+      "version": "2026.07-01",
+      "archive_url": "https://github.com/homalg-project/homalg_project/releases/download/HomalgToCAS-2026.07-01/HomalgToCAS-2026.07-01",
+      "archive_sha256": "240dbf6e7423bc9ae11d1ccaab447aacec815009c0d8595cd535751be99adf19"
+    },
+    "ibnp": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407895",
+      "version": "0.18",
+      "archive_url": "https://github.com/gap-packages/ibnp/releases/download/v0.18/IBNP-0.18",
+      "archive_sha256": "b874110657e633cb468ec74bfd9492d0e070d5e2063a19156a8781f9da6d56a5"
+    },
+    "idrel": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407898",
+      "version": "2.51",
+      "archive_url": "https://github.com/gap-packages/idrel/releases/download/v2.51/idrel-2.51",
+      "archive_sha256": "6537ad47372c2f6ed7e3d481a363c96da83e9bc612877df6ccd3a8972241eaf4"
+    },
+    "images": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407948",
+      "version": "1.4.2",
+      "archive_url": "https://github.com/gap-packages/images/releases/download/v1.4.2/images-1.4.2",
+      "archive_sha256": "5f444313dd38a4b37197eb0ff7acce0f2b3a9d979cf1d05b7d5f35adb2fc0960"
+    },
+    "inducereduce": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407956",
+      "version": "1.4",
+      "archive_url": "https://github.com/gap-packages/InduceReduce/releases/download/v1.4/InduceReduce-1.4",
+      "archive_sha256": "8d662e8742540dff1ce7c8df2b928722723a3ffdd36006f3275bd3fb6b5721e4"
+    },
+    "intpic": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407878",
+      "version": "0.4.0",
+      "archive_url": "https://github.com/gap-packages/intpic/releases/download/v0.4.0/IntPic-0.4.0",
+      "archive_sha256": "52f0a1e31755736f4cb2c2f52a385bef46f133a7fc3936dfbaeac0c61de54536"
+    },
+    "io": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407931",
+      "version": "4.10.0",
+      "archive_url": "https://github.com/gap-packages/io/releases/download/v4.10.0/io-4.10.0",
+      "archive_sha256": "3580922c279eb3a91b6d946c119635a81783b812f0a2d9d461128437cc4b860e"
+    },
+    "io_forhomalg": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407919",
+      "version": "2026.07-01",
+      "archive_url": "https://github.com/homalg-project/homalg_project/releases/download/IO_ForHomalg-2026.07-01/IO_ForHomalg-2026.07-01",
+      "archive_sha256": "a2f9a3dc831fdfbb5ce79294383c2140af414db8d56667ec60308f711797b69c"
+    },
+    "irredsol": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407952",
+      "version": "1.4.6",
+      "archive_url": "https://github.com/bh11/irredsol/releases/download/IRREDSOL-1.4.6/irredsol-1.4.6",
+      "archive_sha256": "16b901e6a0c648b7a1834a898a989f313cd855ca685c85c8322c4ae15e0447a1"
+    },
+    "itc": {
+      "status": "skipped",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97303059194",
+      "version": "1.5.1",
+      "archive_url": "https://github.com/gap-packages/itc/releases/download/v1.5.1/itc-1.5.1",
+      "archive_sha256": "19875fb3407fbda5f3696114d2a381fedacbfae6df311f928c49887ce8b18675"
+    },
+    "json": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304408001",
+      "version": "2.4.0",
+      "archive_url": "https://github.com/gap-packages/json/releases/download/v2.4.0/json-2.4.0",
+      "archive_sha256": "ce49399f5f5dc4caf95213f5dd7ec09988f2ae93364817e88ff075a09a22826a"
+    },
+    "jupyterkernel": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407946",
+      "version": "1.5.1",
+      "archive_url": "https://github.com/gap-packages/JupyterKernel/releases/download/v1.5.1/JupyterKernel-1.5.1",
+      "archive_sha256": "907d99c0196539a98d76eb84226c9fb25580de382e4e80e842c9305508b3aaa9"
+    },
+    "jupyterviz": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407901",
+      "version": "1.5.6",
+      "archive_url": "https://github.com/nathancarter/jupyterviz/releases/download/v1.5.6/jupyterviz-1.5.6",
+      "archive_sha256": "e9cb319ad599643259b8e8bb680a8a293fb29db2aff2b27cd8c358351b4d00f1"
+    },
+    "kan": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407926",
+      "version": "1.37",
+      "archive_url": "https://github.com/gap-packages/kan/releases/download/v1.37/kan-1.37",
+      "archive_sha256": "45ae9ae7c11fa200bf4538636f2ba71e9e7065d3e040ce49c8eea2ed7339421b"
+    },
+    "kbmag": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407918",
+      "version": "1.6.0",
+      "archive_url": "https://github.com/gap-packages/kbmag/releases/download/v1.6.0/kbmag-1.6.0",
+      "archive_sha256": "de28d1dcaabbca77561ab74a0a66588358938e58ad4dcadb1a8e479e36c7228a"
+    },
+    "laguna": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407927",
+      "version": "3.10.1",
+      "archive_url": "https://github.com/gap-packages/laguna/releases/download/v3.10.1/laguna-3.10.1",
+      "archive_sha256": "84dca98cbc662266464debe078ed2d428a72fa4f1ca30cdcf0b1335e434e5ba4"
+    },
+    "liealgdb": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407928",
+      "version": "2.3.1",
+      "archive_url": "https://github.com/gap-packages/liealgdb/releases/download/v2.3.1/liealgdb-2.3.1",
+      "archive_sha256": "88769154ea65c60115bb11aed0c5f77e0dbcd7be2bd7a7be5d9b1548572f5baf"
+    },
+    "liepring": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407933",
+      "version": "2.9.3",
+      "archive_url": "https://github.com/gap-packages/liepring/releases/download/v2.9.3/liepring-2.9.3",
+      "archive_sha256": "17660a27f0d4830ae6f0e7e4da00805a83dc95838aaeeafb3c2e1cc1f666f718"
+    },
+    "liering": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407929",
+      "version": "2.4.2",
+      "archive_url": "https://github.com/gap-packages/liering/releases/download/v2.4.2/liering-2.4.2",
+      "archive_sha256": "ae9fa477e5df51e4da024b96ac16a6f17c3b8715aa953dabb9a4004da782820f"
+    },
+    "linearalgebraforcap": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407998",
+      "version": "2026.06-02",
+      "archive_url": "https://github.com/homalg-project/CAP_project/releases/download/LinearAlgebraForCAP-2026.06-02/LinearAlgebraForCAP-2026.06-02",
+      "archive_sha256": "6192fc46bbf45dccd0394d7996d3fc34b5577cde9837874591b8cfd6cb51db4b"
+    },
+    "lins": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407955",
+      "version": "0.9",
+      "archive_url": "https://github.com/gap-packages/LINS/releases/download/v0.9/LINS-0.9",
+      "archive_sha256": "bc3c2c82a50a7e091389a065cdeecc343096b266a72c2fe779e5f4e1491f35f3"
+    },
+    "localizeringforhomalg": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407953",
+      "version": "2026.05-01",
+      "archive_url": "https://github.com/homalg-project/homalg_project/releases/download/LocalizeRingForHomalg-2026.05-01/LocalizeRingForHomalg-2026.05-01",
+      "archive_sha256": "4ef26b4f6c7d600b2cb0b8de950dd7496f1612e542b147fa9599509915765b38"
+    },
+    "localnr": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407942",
+      "version": "2.1.0",
+      "archive_url": "https://github.com/gap-packages/LocalNR/releases/download/v2.1.0/LocalNR-2.1.0",
+      "archive_sha256": "7d7542139a7cc4971966b0b79e3023681250e941d7950cedb1615e2a5bf9ffb4"
+    },
+    "loops": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407984",
+      "version": "3.4.5",
+      "archive_url": "https://github.com/gap-packages/loops/releases/download/v3.4.5/loops-3.4.5",
+      "archive_sha256": "ff9009afe500fc29367e4e19f9530bb8e61dbed19833f01b5d22cd0a003daedd"
+    },
+    "lpres": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407966",
+      "version": "1.1.2",
+      "archive_url": "https://github.com/gap-packages/lpres/releases/download/v1.1.2/lpres-1.1.2",
+      "archive_sha256": "d08a3d2c1213387520fd2f7a564c0a8c951dedc7bd18b6b0db8d95abe2f16cce"
+    },
+    "majoranaalgebras": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407978",
+      "version": "1.5.3",
+      "archive_url": "https://github.com/gap-packages/MajoranaAlgebras/releases/download/v1.5.3/MajoranaAlgebras-1.5.3",
+      "archive_sha256": "a5d14a62079e95cf301c967008d096ef78800316bc32d4d9b9c33850de4b686c"
+    },
+    "mapclass": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304408023",
+      "version": "1.4.6",
+      "archive_url": "https://github.com/gap-packages/MapClass/releases/download/v1.4.6/MapClass-1.4.6",
+      "archive_sha256": "ec8cffca7e543662c522f0f6412cf994dc5fbe439d333f5f11e22923655b9c4e"
+    },
+    "matgrp": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407999",
+      "version": "0.75",
+      "archive_url": "https://www.math.colostate.edu/~hulpke/matgrp/matgrp0.75",
+      "archive_sha256": "d80cbc1bfef69c77e055ddca8e23fffb32ca5742c9b31655c8f684aaab9b4bb1"
+    },
+    "matricesforhomalg": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304408013",
+      "version": "2026.04-01",
+      "archive_url": "https://github.com/homalg-project/homalg_project/releases/download/MatricesForHomalg-2026.04-01/MatricesForHomalg-2026.04-01",
+      "archive_sha256": "8ede2a108990f7861de1097df8ffd41162dec00d18a4d01f5421abd462e7de5d"
+    },
+    "modisom": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407989",
+      "version": "3.1.0",
+      "archive_url": "https://github.com/gap-packages/modisom/releases/download/v3.1.0/modisom-3.1.0",
+      "archive_sha256": "02456f9e8a51f0f1c01ab5aa9b835b9f8fb63211e8135d167ce2461a23fa3351"
+    },
+    "modulargroup": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407994",
+      "version": "2.0.3",
+      "archive_url": "https://github.com/ag-weitze-schmithusen/ModularGroup/releases/download/v2.0.3/ModularGroup-2.0.3",
+      "archive_sha256": "9e99ac167cf84554179df4be1fe8e634fd00089ebf78851dd4c39055c2ee42fd"
+    },
+    "modulepresentationsforcap": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304408018",
+      "version": "2026.06-01",
+      "archive_url": "https://github.com/homalg-project/CAP_project/releases/download/ModulePresentationsForCAP-2026.06-01/ModulePresentationsForCAP-2026.06-01",
+      "archive_sha256": "83bd6326ec75f6d66b48437b639610f3f3d369dbb9978a6f673f9f92fa57d41a"
+    },
+    "modules": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304408005",
+      "version": "2026.04-01",
+      "archive_url": "https://github.com/homalg-project/homalg_project/releases/download/Modules-2026.04-01/Modules-2026.04-01",
+      "archive_sha256": "0499a1b1eb98db2b994997de303af0077b29399026c208ed3425bd750d747a10"
+    },
+    "monoidalcategories": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304408044",
+      "version": "2026.08-02",
+      "archive_url": "https://github.com/homalg-project/CAP_project/releases/download/MonoidalCategories-2026.08-02/MonoidalCategories-2026.08-02",
+      "archive_sha256": "875afe2a82f9820d2b5fef3e097724e9f94f68801ba8b68032915c80bf2ec8fe"
+    },
+    "nconvex": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407971",
+      "version": "2025.12-02",
+      "archive_url": "https://github.com/homalg-project/NConvex/releases/download/v2025.12-02/NConvex-2025.12-02",
+      "archive_sha256": "9ea9b78b8cc917e8f1c81c06689b31acf6adf054483ba37d6d6ef48ed92197b5"
+    },
+    "nilmat": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304408202",
+      "version": "1.4.2",
+      "archive_url": "https://github.com/gap-packages/nilmat/releases/download/v1.4.2/nilmat-1.4.2",
+      "archive_sha256": "4580fc05e4bcfc272165e7e4fd8b4266e8a38de2fce16523d976fd521c0f4404"
+    },
+    "nock": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407990",
+      "version": "1.5",
+      "archive_url": "https://github.com/gap-packages/NoCK/releases/download/v1.5/NoCK-1.5",
+      "archive_sha256": "69023293e9abc695f15c2740df5902ba6e95d53bd3441b9c3fe25c410c207fc6"
+    },
+    "nofoma": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304408056",
+      "version": "1.0.1",
+      "archive_url": "https://github.com/gap-packages/nofoma/releases/download/v1.0.1/nofoma-1.0.1",
+      "archive_sha256": "e12ee0f5e52995e1d57243b0a5a5d71816dabbe82826d1fffcf66a5b120b3547"
+    },
+    "normalizinterface": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304408009",
+      "version": "1.5.1",
+      "archive_url": "https://github.com/gap-packages/NormalizInterface/releases/download/v1.5.1/NormalizInterface-1.5.1",
+      "archive_sha256": "ec72746c3261f73ff643fd56d26537ce8b69a5ede7e33cd43078af82dcc2343a"
+    },
+    "nq": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407996",
+      "version": "2.5.11",
+      "archive_url": "https://github.com/gap-packages/nq/releases/download/v2.5.11/nq-2.5.11",
+      "archive_sha256": "6a8ad97023d90564d789be55b12bbc68d26a3714126f46bc75b415eec8f0f406"
+    },
+    "numericalsgps": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304408067",
+      "version": "1.4.0",
+      "archive_url": "https://github.com/gap-packages/numericalsgps/releases/download/v1.4.0/NumericalSgps-1.4.0",
+      "archive_sha256": "a28bdea0c129c9aa9b302ee57fa51612c4e343a249775551133cb5a32a68cea1"
+    },
+    "openmath": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304408032",
+      "version": "11.5.5",
+      "archive_url": "https://github.com/gap-packages/openmath/releases/download/v11.5.5/OpenMath-11.5.5",
+      "archive_sha256": "c9b0087aad6a4dce8c52bd0454e618eb94c00e9ed48bf7d09c6e91862c062e3d"
+    },
+    "orb": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304408006",
+      "version": "5.1.0",
+      "archive_url": "https://github.com/gap-packages/orb/releases/download/v5.1.0/orb-5.1.0",
+      "archive_sha256": "73911bab4b31ae0f1771e76c1e3b9389100c6ede4ad27f27724cd4dc1239cb28"
+    },
+    "origami": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407988",
+      "version": "2.0.4",
+      "archive_url": "https://github.com/AG-Weitze-Schmithusen/Origami/releases/download/v2.0.4/Origami-2.0.4",
+      "archive_sha256": "946a64d3b2dfee4aa4f421577a90e0842372e2f69ac0ed932723aa0b1a884ded"
+    },
+    "packagemaker": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304408017",
+      "version": "1.0.2",
+      "archive_url": "https://github.com/gap-packages/PackageMaker/releases/download/v1.0.2/PackageMaker-1.0.2",
+      "archive_sha256": "3023506e25e4f484a9532665fcdfd484729c6b97743d56b5719e0279b5bcd97f"
+    },
+    "packagemanager": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304408083",
+      "version": "1.6.4",
+      "archive_url": "https://github.com/gap-packages/PackageManager/releases/download/v1.6.4/PackageManager-1.6.4",
+      "archive_sha256": "f1ee46655ad6befdf4821e4b19d754d99ff7532a6badb26f427833fbd0651638"
+    },
+    "patternclass": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407995",
+      "version": "2.4.5",
+      "archive_url": "https://github.com/gap-packages/PatternClass/releases/download/v2.4.5/PatternClass-2.4.5",
+      "archive_sha256": "01310b9d13258779df14bcb452df0341104b373fa4bdb8861bcceb7bf7f07103"
+    },
+    "perfgrp": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304408069",
+      "version": "1.0.0",
+      "archive_url": "https://github.com/gap-packages/perfgrp/releases/download/v1.0.0/perfgrp-1.0.0",
+      "archive_sha256": "7c880f0ec95ae96d1bdddef5c084a45568760d7ae0565b58562d1922df8c4995"
+    },
+    "permut": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304407997",
+      "version": "2.0.7",
+      "archive_url": "https://github.com/gap-packages/permut/releases/download/v2.0.7/permut-2.0.7",
+      "archive_sha256": "db5a9d8a94d0af960cecf592f35b0df463df4cc2c1e02466ae01ab8c0d7444e5"
+    },
+    "polenta": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304408133",
+      "version": "1.3.11",
+      "archive_url": "https://github.com/gap-packages/polenta/releases/download/v1.3.11/polenta-1.3.11",
+      "archive_sha256": "aabf20981e438c2b361f416527163ae299a27a0a95ff3eb908a1aeae07b21bc1"
+    },
+    "polycyclic": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304408049",
+      "version": "2.18",
+      "archive_url": "https://github.com/gap-packages/polycyclic/releases/download/v2.18/polycyclic-2.18",
+      "archive_sha256": "334416c8aeb8bcd0a2b58b16cba590ea26fa8d54d275a0bdcf5999b889c13317"
+    },
+    "polymaking": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304408145",
+      "version": "0.8.9",
+      "archive_url": "https://github.com/gap-packages/polymaking/releases/download/v0.8.9/polymaking-0.8.9",
+      "archive_sha256": "2f006c427a9443b58c16a8441405261a86b951a7e2e5854ea4fa348946342604"
+    },
+    "primgrp": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304408119",
+      "version": "4.0.3",
+      "archive_url": "https://github.com/gap-packages/primgrp/releases/download/v4.0.3/primgrp-4.0.3",
+      "archive_sha256": "2e733c10dbe7a904aac8eb8dd2c2cf1de2ecf7476b7d0fbf763866f22f489979"
+    },
+    "profiling": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304408061",
+      "version": "2.6.3",
+      "archive_url": "https://github.com/gap-packages/profiling/releases/download/v2.6.3/profiling-2.6.3",
+      "archive_sha256": "bbc4868237b88d54eedf4419ace6743dbff16ce32bdc0ebb3bf7f8d65beee335"
+    },
+    "qdistrnd": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304408143",
+      "version": "0.9.5",
+      "archive_url": "https://github.com/QEC-pages/QDistRnd/releases/download/v0.9.5/qdistrnd-0.9.5",
+      "archive_sha256": "6ace3148eee647f20ec072ed7296bd5c385c165765af94a3bb66d3a0487f033e"
+    },
+    "qpa": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304408047",
+      "version": "1.37",
+      "archive_url": "https://github.com/gap-packages/qpa/releases/download/v1.37/qpa-1.37",
+      "archive_sha256": "3a7ca91caf55f1f4a5596f73f82f8b89df3c9e6140358a027a960795e4641ca7"
+    },
+    "quagroup": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304408186",
+      "version": "1.8.4",
+      "archive_url": "https://github.com/gap-packages/quagroup/releases/download/v1.8.4/quagroup-1.8.4",
+      "archive_sha256": "05c31c30ece36dbc97649307cba58d74c764b0c849e27b9b4fc60cee00ea54d3"
+    },
+    "radiroot": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304408036",
+      "version": "2.10",
+      "archive_url": "https://github.com/gap-packages/radiroot/releases/download/v2.10/radiroot-2.10",
+      "archive_sha256": "df636ebdf52e5d46d8469e3c27a625a3db9abdcafae9f6b9d30cb3c93d3726b0"
+    },
+    "rcwa": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304408066",
+      "version": "4.10.0",
+      "archive_url": "https://github.com/gap-packages/rcwa/releases/download/v4.10.0/rcwa-4.10.0",
+      "archive_sha256": "4a3fa1e9662973257d9461d55e137b0f866a54d7e133a5bba2a343276495e80f"
+    },
+    "rds": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304408113",
+      "version": "1.10",
+      "archive_url": "https://github.com/gap-packages/rds/releases/download/v1.10/rds-1.10",
+      "archive_sha256": "b423cb715289e3779750e473ba3b8026983951fafecc385083a5a8fae9e8ad5c"
+    },
+    "recog": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304408184",
+      "version": "1.5.1",
+      "archive_url": "https://github.com/gap-packages/recog/releases/download/v1.5.1/recog-1.5.1",
+      "archive_sha256": "eae7deaecb263242ee378f5728e4d7a717d6d1903d9d04e099d74ba1b7c53931"
+    },
+    "repndecomp": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410248",
+      "version": "1.3.1",
+      "archive_url": "https://github.com/gap-packages/RepnDecomp/releases/download/v1.3.1/RepnDecomp-1.3.1",
+      "archive_sha256": "fd9a8653ac2c019b06ce8f149b5bbff148b48f8572feed63a3464a8b27ced1d9"
+    },
+    "repsn": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410268",
+      "version": "3.1.3",
+      "archive_url": "https://github.com/gap-packages/repsn/releases/download/v3.1.3/repsn-3.1.3",
+      "archive_sha256": "c5c643cf24bec3cf3c0bbfc50c6aae19d0a620673d01e58b87aa88d15ea139e6"
+    },
+    "resclasses": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410123",
+      "version": "4.7.4",
+      "archive_url": "https://github.com/gap-packages/resclasses/releases/download/v4.7.4/resclasses-4.7.4",
+      "archive_sha256": "2517bf03e4e4322d329afff81479016465a69a9c799c402cc81a0755e3a1805c"
+    },
+    "ringsforhomalg": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410154",
+      "version": "2026.05-01",
+      "archive_url": "https://github.com/homalg-project/homalg_project/releases/download/RingsForHomalg-2026.05-01/RingsForHomalg-2026.05-01",
+      "archive_sha256": "346c2be6cf58827b91f097a6a0f3dc148f4ea9c5b015a9f9ebd2812e39a6a404"
+    },
+    "sco": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410155",
+      "version": "2026.07-01",
+      "archive_url": "https://github.com/homalg-project/homalg_project/releases/download/SCO-2026.07-01/SCO-2026.07-01",
+      "archive_sha256": "2e1f943737f2d45cb95d50c5d994625f7e533a05c260c590c8f69666be781bfa"
+    },
+    "scscp": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410133",
+      "version": "2.5.0",
+      "archive_url": "https://github.com/gap-packages/scscp/releases/download/v2.5.0/SCSCP-2.5.0",
+      "archive_sha256": "4b12487017f8d70b4c8edc822a12788ad22a76318bf2b0aa637b0f9a12fe75ef"
+    },
+    "semigroups": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410137",
+      "version": "5.6.3",
+      "archive_url": "https://github.com/semigroups/Semigroups/releases/download/v5.6.3/semigroups-5.6.3",
+      "archive_sha256": "acbe1d8f3afb3ed811cab81461cc74b447e0ddf4f4f30ab47d6ef81aa21352c9"
+    },
+    "sglppow": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410196",
+      "version": "2.6",
+      "archive_url": "https://github.com/gap-packages/sglppow/releases/download/v2.6/sglppow-2.6",
+      "archive_sha256": "3a8c0f56a47fe9bb2a808800747b203c9e67d6eee952f85fccc0681da819aa6c"
+    },
+    "sgpviz": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410132",
+      "version": "0.999.6",
+      "archive_url": "https://github.com/gap-packages/sgpviz/releases/download/v0.999.6/SgpViz-0.999.6",
+      "archive_sha256": "dbfc5f4714c589c94837c73a187898774bdc5c48029e2e1e15aed28ebe85a2fc"
+    },
+    "simpcomp": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410172",
+      "version": "2.1.15",
+      "archive_url": "https://github.com/simpcomp-team/simpcomp/releases/download/v2.1.15/simpcomp-2.1.15",
+      "archive_sha256": "7588487ffc818181e9f900438160e555af8f0807c50e003e684754627d53b70b"
+    },
+    "singular": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410129",
+      "version": "2026.05.05",
+      "archive_url": "https://github.com/gap-packages/singular/releases/download/v2026.05.05/singular-2026.05.05",
+      "archive_sha256": "adb30a57aa5afea34c89cb30c3ba53f1164e7952ed5fd80d11c963c352d9a7d5"
+    },
+    "sl2reps": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410189",
+      "version": "1.1",
+      "archive_url": "https://github.com/snw-0/sl2-reps/releases/download/v1.1/sl2-reps-1.1",
+      "archive_sha256": "b0a3036e70e194ef761d932c45de92ab7ce5c1eb7da9665be1a6a76a8847820a"
+    },
+    "sla": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410143",
+      "version": "1.6.2",
+      "archive_url": "https://github.com/gap-packages/sla/releases/download/v1.6.2/sla-1.6.2",
+      "archive_sha256": "efcfb86635f2f3e81afdd3a053023b58d79cee871140f0699b53172974dbe866"
+    },
+    "smallantimagmas": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410130",
+      "version": "0.6.0",
+      "archive_url": "https://github.com/gap-packages/smallantimagmas/releases/download/v0.6.0/smallantimagmas-v0.6.0",
+      "archive_sha256": "53e3aa1c9961d08e378c8b4cf1069076296722e7d57c9f00229ca9cfcf1b5ff4"
+    },
+    "smallclassnr": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410147",
+      "version": "1.7.0",
+      "archive_url": "https://github.com/stertooy/SmallClassNr/releases/download/v1.7.0/SmallClassNr-1.7.0",
+      "archive_sha256": "befb92b38a65c95172a72bcb4be0db7a7e0a8419f71256df64659575277ef28b"
+    },
+    "smallgrp": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410149",
+      "version": "1.7.0",
+      "archive_url": "https://github.com/gap-packages/SmallGrp/releases/download/v1.7.0/SmallGrp-1.7.0",
+      "archive_sha256": "1bac5dd020d6ce38ec0879495424c964491437991961a5bb82b97f28dd734442"
+    },
+    "smallsemi": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410219",
+      "version": "0.7.2",
+      "archive_url": "https://github.com/gap-packages/smallsemi/releases/download/v0.7.2/smallsemi-0.7.2",
+      "archive_sha256": "9771bd048021cfbde4b36bdb29ca85d3243e9edbfe6430b1041bcebaaa3af878"
+    },
+    "sonata": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410161",
+      "version": "2.9.8",
+      "archive_url": "https://github.com/gap-packages/sonata/releases/download/v2.9.8/sonata-2.9.8",
+      "archive_sha256": "8faa6b03da289da3ff097f838aab44189035619ff0266d69b8f732e18641afac"
+    },
+    "sophus": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410157",
+      "version": "1.27",
+      "archive_url": "https://github.com/gap-packages/sophus/releases/download/v1.27/sophus-1.27",
+      "archive_sha256": "cd7f173d7122b1e72a1f8ae3131e7685cd586dd362bd7efd21fe542fac5411c3"
+    },
+    "sotgrps": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410170",
+      "version": "1.4",
+      "archive_url": "https://github.com/gap-packages/sotgrps/releases/download/v1.4/SOTGrps-1.4",
+      "archive_sha256": "5f9befc44357a574122d515aeb8024fd489b41f95f59bbd26a1f7598066e1cdb"
+    },
+    "spinsym": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410345",
+      "version": "1.5.2",
+      "archive_url": "https://github.com/gap-packages/spinsym/releases/download/v1.5.2/spinsym-1.5.2",
+      "archive_sha256": "700b55f0b00b5578e2de014b286b815777644dde605c60f2095c8555eb508587"
+    },
+    "standardff": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410176",
+      "version": "1.0",
+      "archive_url": "https://www.math.rwth-aachen.de/~Frank.Luebeck/gap/StandardFF//StandardFF-1.0",
+      "archive_sha256": "7e9ffeb9dbe0ddab862a524b1379c09732ef7b40bea2b04ce01db3fb9c27e28e"
+    },
+    "symbcompcc": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410173",
+      "version": "1.4.0",
+      "archive_url": "https://github.com/gap-packages/SymbCompCC/releases/download/v1.4.0/SymbCompCC-1.4.0",
+      "archive_sha256": "b2a9877f56c51960bdaf45d708176389fc02077cc97043ebc046d8157df2df2a"
+    },
+    "thelma": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410211",
+      "version": "1.3",
+      "archive_url": "https://github.com/gap-packages/Thelma/releases/download/v1.3/Thelma-1.3",
+      "archive_sha256": "44a2957e7bc22c4569a2a8ac8b9acc7e762dad7b218cca352c876cbec8ff2c74"
+    },
+    "tomlib": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410231",
+      "version": "1.2.11",
+      "archive_url": "https://github.com/gap-packages/tomlib/releases/download/v1.2.11/tomlib-1.2.11",
+      "archive_sha256": "ceb474c3c8a8dc94331b05e410e926fb9aba197d4d8e163a20aaddd1a48bebda"
+    },
+    "toolsforhomalg": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410356",
+      "version": "2026.04-01",
+      "archive_url": "https://github.com/homalg-project/homalg_project/releases/download/ToolsForHomalg-2026.04-01/ToolsForHomalg-2026.04-01",
+      "archive_sha256": "2c6d40f6f2f5cd41b2aceb0174c25f7e5a0bddb27c70eab227ee418f2b33fa7f"
+    },
+    "toric": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410289",
+      "version": "1.9.6",
+      "archive_url": "https://github.com/gap-packages/toric/releases/download/v1.9.6/Toric-1.9.6",
+      "archive_sha256": "3cc7fd0da3c258371f41b15718212ade864d1ddc7dcc28a0b3e82cf8316db4bd"
+    },
+    "transgrp": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410242",
+      "version": "3.6.5",
+      "archive_url": "https://www.math.colostate.edu/~hulpke/transgrp/transgrp3.6.5",
+      "archive_sha256": "6f2ec142a004f9d5e3b28bfa03246472fee93ceb12837206960bcb560eb72376"
+    },
+    "twistedconjugacy": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410304",
+      "version": "3.4.1",
+      "archive_url": "https://github.com/stertooy/TwistedConjugacy/releases/download/v3.4.1/TwistedConjugacy-3.4.1",
+      "archive_sha256": "8aed5f1c8d9b96e5c7225322e1c061719907021c250ccb9dbfac069ad349ebbe"
+    },
+    "typeset": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410331",
+      "version": "1.2.4",
+      "archive_url": "https://github.com/gap-packages/typeset/releases/download/v1.2.4/typeset-1.2.4",
+      "archive_sha256": "d1c3785859aaad302fbe1b6403c4f204ed6577291058830703266d939bb8db4b"
+    },
+    "ugaly": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410235",
+      "version": "4.1.3",
+      "archive_url": "https://github.com/gap-packages/UGALY/releases/download/v4.1.3/UGALY-4.1.3",
+      "archive_sha256": "26f10b940189662b00be0374cd7b5fef172eb2e98038d505557695b0b6a2d25f"
+    },
+    "unipot": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410281",
+      "version": "1.7",
+      "archive_url": "https://github.com/gap-packages/unipot/releases/download/v1.7/unipot-1.7",
+      "archive_sha256": "54fcc0a39cc4c9dd2a73166e41bd4f38c8f007266b96c63e8fd541f44dc0903a"
+    },
+    "unitlib": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410208",
+      "version": "5.1.0",
+      "archive_url": "https://github.com/gap-packages/unitlib/releases/download/v5.1.0/unitlib-5.1.0",
+      "archive_sha256": "c9832ce43b4cdaa3283ba6cb314bc80cfc55421dfed2edfd850f1ccaffc8812b"
+    },
+    "utils": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410218",
+      "version": "0.98",
+      "archive_url": "https://github.com/gap-packages/utils/releases/download/v0.98/utils-0.98",
+      "archive_sha256": "76f5369299b91e46431884e557e326eaaa82809af00ce01982f0331abfba23ec"
+    },
+    "uuid": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410246",
+      "version": "0.7",
+      "archive_url": "https://github.com/gap-packages/uuid/releases/download/v0.7/uuid-0.7",
+      "archive_sha256": "30d83223fde65db8be8a496428347416816a296ea63605cc9d54bca4e4f9436c"
+    },
+    "walrus": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410255",
+      "version": "0.9993",
+      "archive_url": "https://github.com/gap-packages/walrus/releases/download/v0.9993/walrus-0.9993",
+      "archive_sha256": "88146c40327e09a91d06dc950057aab94ba53cca8931abeb1e0a1de1c31933d9"
+    },
+    "wedderga": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410203",
+      "version": "4.12.1",
+      "archive_url": "https://github.com/gap-packages/wedderga/releases/download/v4.12.1/wedderga-4.12.1",
+      "archive_sha256": "d24632aad323db0e03cf68642a43fc769ab9e80c8842826d5b87f8e33b32f282"
+    },
+    "wpe": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410198",
+      "version": "0.8",
+      "archive_url": "https://github.com/gap-packages/WPE/releases/download/v0.8/WPE-0.8",
+      "archive_sha256": "94d541108315bb86ccb93300409e377fa3f83e320882a0173bb2cbe3092716d7"
+    },
+    "xgap": {
+      "status": "skipped",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97303059194",
+      "version": "4.33",
+      "archive_url": "https://github.com/gap-packages/xgap/releases/download/v4.33/xgap-4.33",
+      "archive_sha256": "5330f59825c662670cb5e40f6500c76c318760c7dd403cfb40ed8772ed93a3ff"
+    },
+    "xmod": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410217",
+      "version": "2.99",
+      "archive_url": "https://github.com/gap-packages/xmod/releases/download/v2.99/XMod-2.99",
+      "archive_sha256": "f76952b399ff4b6f14ae0e561be71d0eb6338917e4722b2cbafc72e158becc32"
+    },
+    "xmodalg": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410306",
+      "version": "1.32",
+      "archive_url": "https://github.com/gap-packages/xmodalg/releases/download/v1.32/XModAlg-1.32",
+      "archive_sha256": "0fa167a084d0cd6f75947df631ded11b0e2a294a5efb4e1c10c46724082cffc9"
+    },
+    "yangbaxter": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410238",
+      "version": "0.10.7",
+      "archive_url": "https://github.com/gap-packages/YangBaxter/releases/download/v0.10.7/YangBaxter-0.10.7",
+      "archive_sha256": "9ba7bed677adccc51b5fdf161540da07167166cf84588b10ef4b358e53ca297d"
+    },
+    "zeromqinterface": {
+      "status": "success",
+      "workflow_run": "https://github.com/gap-system/PackageDistro/actions/runs/32683090173/job/97304410234",
+      "version": "0.18",
+      "archive_url": "https://github.com/gap-packages/ZeroMQInterface/releases/download/v0.18/ZeroMQInterface-0.18",
+      "archive_sha256": "252d660f037dffc58edc80d452698a534ec91fb6a83c5416eabc8969a87a4b00"
+    }
+  },
+  "total": 173,
+  "success": 170,
+  "failure": 0,
+  "skipped": 3
+}
