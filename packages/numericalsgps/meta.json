@@ -1,17 +1,47 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">NumericalSgps</span> package, is a package to compute with numerical semigroups.",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "a28bdea0c129c9aa9b302ee57fa51612c4e343a249775551133cb5a32a68cea1",
-  "ArchiveURL": "https://github.com/gap-packages/numericalsgps/releases/download/v1.4.0/NumericalSgps-1.4.0",
+  "ArchiveSHA256": "5175bb74912210f7f1720af5a2d6a7f7600749e5281fa0438be7c8b72bd212d6",
+  "ArchiveSize": 7489762,
+  "ArchiveURL": "https://github.com/gap-packages/numericalsgps/releases/download/v1.5.0/NumericalSgps-1.5.0",
   "AvailabilityTest": null,
-  "BannerString": "----------------------------------------------------------------\nLoading  NumericalSgps 1.4.0\nFor help, type: ?NumericalSgps: \nTo gain profit from other packages, please refer to chapter\n'External Packages' in the manual, or type: ?NumSgpsUse \n----------------------------------------------------------------\n",
-  "Date": "2024-08-30",
+  "BannerString": "----------------------------------------------------------------\nLoading  NumericalSgps 1.5.0\nFor help, type: ?NumericalSgps: \nTo benefit from other packages, please refer to chapter\n'External Packages' in the manual, or type: ?NumSgpsUse \n----------------------------------------------------------------\n",
+  "Date": "2026-09-04",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": "4.7",
+    "GAP": "4.12",
     "NeededOtherPackages": [],
     "SuggestedOtherPackages": []
   },
+  "Extensions": [
+    {
+      "filename": "gap/normaliz-extension.gi",
+      "needed": [
+        [
+          "NormalizInterface",
+          "1.1"
+        ]
+      ]
+    },
+    {
+      "filename": "gap/singular-extension.gi",
+      "needed": [
+        [
+          "singular",
+          "2023.02.09"
+        ]
+      ]
+    },
+    {
+      "filename": "gap/4ti2-extension.gi",
+      "needed": [
+        [
+          "4ti2Interface",
+          "2024.11-01"
+        ]
+      ]
+    }
+  ],
   "IssueTrackerURL": "https://github.com/gap-packages/numericalsgps/issues",
   "Keywords": [
     "Numerical Semigroups",
@@ -31,7 +61,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "1e88ef3810626ac321f81f36c7762265a2673602871b170fef8ab3ed7e5a1db6",
+  "PackageInfoSHA256": "bae19614411bc533de5386e506332c903fa0cd12b16b71f314f6ce7601cb257f",
   "PackageInfoURL": "https://gap-packages.github.io/numericalsgps/PackageInfo.g",
   "PackageName": "NumericalSgps",
   "PackageWWWHome": "https://gap-packages.github.io/numericalsgps",
@@ -182,6 +212,34 @@
       "IsMaintainer": false,
       "LastName": "Angulo Rodríguez",
       "PostalAddress": "Universidad de Valladolid"
+    },
+    {
+      "FirstNames": "Mehmet",
+      "IsAuthor": false,
+      "IsMaintainer": false,
+      "LastName": "Yeşil",
+      "PostalAddress": "Batman University"
+    },
+    {
+      "FirstNames": "Araitz",
+      "IsAuthor": false,
+      "IsMaintainer": false,
+      "LastName": "Unanue Bidal",
+      "PostalAddress": "Universidad de Granada"
+    },
+    {
+      "FirstNames": "Rajesh",
+      "IsAuthor": false,
+      "IsMaintainer": false,
+      "LastName": "Kumar Sau",
+      "PostalAddress": "University of Messina"
+    },
+    {
+      "FirstNames": "Neeraj",
+      "IsAuthor": false,
+      "IsMaintainer": false,
+      "LastName": "Kumar",
+      "PostalAddress": "University of Porto"
     }
   ],
   "README_URL": "https://gap-packages.github.io/numericalsgps/README.md",
@@ -191,5 +249,5 @@
   },
   "Subtitle": "A package for numerical semigroups",
   "TestFile": "tst/testall.g",
-  "Version": "1.4.0"
+  "Version": "1.5.0"
 }
