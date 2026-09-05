@@ -1,0 +1,26 @@
+{
+  "current": "master/2026/09/05_02-37-03",
+  "last": "master/2026/09/04_02-42-10",
+  "total": 173,
+  "failure": 3,
+  "success": 167,
+  "skipped": 3,
+  "failures_changed": [
+    "fr",
+    "rcwa",
+    "semigroups"
+  ],
+  "failures_current": [
+    "fr",
+    "rcwa",
+    "semigroups"
+  ],
+  "new": 0,
+  "removed": 0,
+  "failure_changed": 3,
+  "success_changed": 0,
+  "skipped_changed": 0,
+  "failure_same": 0,
+  "success_same": 167,
+  "skipped_same": 3
+}
