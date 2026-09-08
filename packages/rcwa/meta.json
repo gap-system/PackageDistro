@@ -1,19 +1,19 @@
 {
   "AbstractHTML": "This package provides implementations of algorithms and methods for computation in certain infinite permutation groups.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "4a3fa1e9662973257d9461d55e137b0f866a54d7e133a5bba2a343276495e80f",
-  "ArchiveSize": 13474161,
-  "ArchiveURL": "https://github.com/gap-packages/rcwa/releases/download/v4.10.0/rcwa-4.10.0",
+  "ArchiveSHA256": "363254eae2be3eb908e9de0097683a6834045fd05b7d8af98e73ecaaad216766",
+  "ArchiveSize": 13474360,
+  "ArchiveURL": "https://github.com/gap-packages/rcwa/releases/download/v4.10.1/rcwa-4.10.1",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "<#Include SYSTEM \"abstract.xml\">",
       "Acknowledgements": "\nI am grateful to John P. McDermott for the discovery that the group\ndiscussed in Section&nbsp;<Ref Label=\"sec:ThompsonsGroupV\"/> is\nisomorphic to Thompson's Group V in July 2008, and to Laurent Bartholdi\nfor his hint on how to construct wreath products of residue-class-wise\naffine groups with&nbsp;(&ZZ;,+) in April 2006.\nFurther, I thank Bettina&nbsp;Eick for communicating this package\nand for her valuable suggestions on its manual in the time before its\nfirst public release in April 2005.\nLast but not least I thank the two anonymous referees for their\nconstructive criticism and their helpful suggestions.\n        ",
-      "Copyright": "\n&copyright; 2003 - 2018 by Stefan Kohl. <P/>\n\n&RCWA; is free software: you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation, either version 2 of the License, or\n(at your option) any later version. <P/>\n\n&RCWA; is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details. <P/>\n\nFor a copy of the GNU General Public License, see \nthe file <F>GPL</F> in the <F>etc</F> directory of the &GAP;\ndistribution or see <URL>https://www.gnu.org/licenses/gpl.html</URL>.\n<Alt Only=\"LaTeX\">\\vspace{-1cm}</Alt>\n        "
+      "Copyright": "\n&copyright; 2003 - 2026 by Stefan Kohl. <P/>\n\n&RCWA; is free software: you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation, either version 2 of the License, or\n(at your option) any later version. <P/>\n\n&RCWA; is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details. <P/>\n\nFor a copy of the GNU General Public License, see \nthe file <F>GPL</F> in the <F>etc</F> directory of the &GAP;\ndistribution or see <URL>https://www.gnu.org/licenses/gpl.html</URL>.\n<Alt Only=\"LaTeX\">\\vspace{-1cm}</Alt>\n        "
     }
   },
   "AvailabilityTest": null,
-  "BannerString": "\nLoading RCWA 4.10.0 ([R]esidue-[C]lass-[W]ise [A]ffine groups)\n  by Stefan Kohl, sk239@st-andrews.ac.uk.\nSee ?RCWA:About for information about the package.\n\n",
-  "Date": "2026-07-30",
+  "BannerString": "\nLoading RCWA 4.10.1 ([R]esidue-[C]lass-[W]ise [A]ffine groups)\n  by Stefan Kohl, sk239@st-andrews.ac.uk.\nSee ?RCWA:About for information about the package.\n\n",
+  "Date": "2026-09-08",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.12.0",
@@ -68,7 +68,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "2e9245ab9764c6889f652afe88fb42be8c90f42d596aa52814a8674d14d499ef",
+  "PackageInfoSHA256": "5fc6b616c53946846ab341b3a9369079b4a5990e0fcf4f8b85f8c9c0c918be80",
   "PackageInfoURL": "https://gap-packages.github.io/rcwa/PackageInfo.g",
   "PackageName": "RCWA",
   "PackageWWWHome": "https://gap-packages.github.io/rcwa/",
@@ -89,5 +89,5 @@
   },
   "Subtitle": "Residue-Class-Wise Affine Groups",
   "TestFile": "tst/testall.g",
-  "Version": "4.10.0"
+  "Version": "4.10.1"
 }
