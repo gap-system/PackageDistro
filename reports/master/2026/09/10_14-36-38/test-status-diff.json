@@ -1,0 +1,22 @@
+{
+  "current": "master/2026/09/10_14-36-38",
+  "last": "master/2026/09/10_13-58-59",
+  "total": 173,
+  "failure": 1,
+  "success": 168,
+  "skipped": 4,
+  "failures_changed": [
+    "semigroups"
+  ],
+  "failures_current": [
+    "semigroups"
+  ],
+  "new": 0,
+  "removed": 0,
+  "failure_changed": 1,
+  "success_changed": 166,
+  "skipped_changed": 0,
+  "failure_same": 0,
+  "success_same": 2,
+  "skipped_same": 4
+}
