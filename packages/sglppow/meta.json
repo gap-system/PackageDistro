@@ -1,12 +1,12 @@
 {
   "AbstractHTML": "",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "3a8c0f56a47fe9bb2a808800747b203c9e67d6eee952f85fccc0681da819aa6c",
-  "ArchiveSize": 15166839,
-  "ArchiveURL": "https://github.com/gap-packages/sglppow/releases/download/v2.6/sglppow-2.6",
+  "ArchiveSHA256": "317732b4fd4aa6cf1b37708413de59e3f5659c0b65320aba42d29991e880682b",
+  "ArchiveSize": 696309,
+  "ArchiveURL": "https://github.com/gap-packages/sglppow/releases/download/v2.7/sglppow-2.7",
   "AvailabilityTest": null,
-  "BannerString": "----------------------------------------------------------------\nLoading SglPPow 2.6\nby Michael Vaughan-Lee and Bettina Eick \n----------------------------------------------------------------\n",
-  "Date": "2026-08-18",
+  "BannerString": "----------------------------------------------------------------\nLoading SglPPow 2.7\nby Michael Vaughan-Lee and Bettina Eick \n----------------------------------------------------------------\n",
+  "Date": "2026-09-17",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.10",
@@ -46,7 +46,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "ad73e2600d2d15d95de6231b9d5be6c8fd41a1d11501a49b446196375b306302",
+  "PackageInfoSHA256": "9a930ff4311270380275ed5f858ec359850cf080658646607d92ae5b4438ce7c",
   "PackageInfoURL": "https://gap-packages.github.io/sglppow/PackageInfo.g",
   "PackageName": "SglPPow",
   "PackageWWWHome": "https://gap-packages.github.io/sglppow/",
@@ -79,5 +79,5 @@
   },
   "Subtitle": "Database of groups of prime-power order for some prime-powers",
   "TestFile": "tst/testall.g",
-  "Version": "2.6"
+  "Version": "2.7"
 }
