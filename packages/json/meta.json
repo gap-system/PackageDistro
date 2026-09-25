@@ -1,20 +1,15 @@
 {
   "AbstractHTML": "",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "ce49399f5f5dc4caf95213f5dd7ec09988f2ae93364817e88ff075a09a22826a",
-  "ArchiveSize": 107842,
-  "ArchiveURL": "https://github.com/gap-packages/json/releases/download/v2.4.0/json-2.4.0",
+  "ArchiveSHA256": "e7338d5afbcae645a9e881a856a1d206faf028311d0eb37e11e5870d7512254d",
+  "ArchiveSize": 111381,
+  "ArchiveURL": "https://github.com/gap-packages/json/releases/download/v2.5.0/json-2.5.0",
   "AvailabilityTest": null,
-  "Date": "2026-05-08",
+  "Date": "2026-09-25",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">= 4.12",
-    "NeededOtherPackages": [
-      [
-        "GAPDoc",
-        ">= 1.5"
-      ]
-    ],
+    "GAP": ">= 4.15",
+    "NeededOtherPackages": [],
     "SuggestedOtherPackages": []
   },
   "IssueTrackerURL": "https://github.com/gap-packages/json/issues",
@@ -31,7 +26,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "5510dfdff244eadd48d88283b9bf59f2f82abcc250ee0df62f0037792d2a0f9d",
+  "PackageInfoSHA256": "d7a48663c5bf7a350bc5a7929d1db54539830813e5a239ebac42799e3b0aff23",
   "PackageInfoURL": "https://gap-packages.github.io/json/PackageInfo.g",
   "PackageName": "json",
   "PackageWWWHome": "https://gap-packages.github.io/json/",
@@ -55,5 +50,5 @@
   },
   "Subtitle": "Reading and Writing JSON",
   "TestFile": "tst/testall.g",
-  "Version": "2.4.0"
+  "Version": "2.5.0"
 }
