@@ -1,10 +1,10 @@
 {
   "AbstractHTML": "\n    The SmallClassNr package provides access to finite groups with small class\n    number. Currently, the package contains all finite groups of class number\n    at most 20.\n",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "816d89405459b5a79626ed878c6fec499efe185f62739b956f1121cbbfe3c23b",
-  "ArchiveSize": 297426,
-  "ArchiveURL": "https://github.com/stertooy/SmallClassNr/releases/download/v1.7.1/SmallClassNr-1.7.1",
-  "Date": "2026-09-09",
+  "ArchiveSHA256": "e775001a56fbfc192887b5af6542b0fde71d1ed2fe14d94c48c83d6b20d57c49",
+  "ArchiveSize": 297101,
+  "ArchiveURL": "https://github.com/stertooy/SmallClassNr/releases/download/v1.7.2/SmallClassNr-1.7.2",
+  "Date": "2026-09-24",
   "Dependencies": {
     "GAP": ">= 4.15",
     "NeededOtherPackages": [],
@@ -46,7 +46,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "de2ec061b2e51435c07c61e44651fbc24133644bd4c37636ab2fec7951bf72f1",
+  "PackageInfoSHA256": "5f39eb83dcfc9c761793b26bf6305e24b2fed02c2305a3dab05c98390b0dfb2a",
   "PackageInfoURL": "https://stertooy.github.io/SmallClassNr/PackageInfo.g",
   "PackageName": "SmallClassNr",
   "PackageWWWHome": "https://stertooy.github.io/SmallClassNr",
@@ -72,5 +72,5 @@
   "Subtitle": "Library of finite groups with small class number",
   "SupportEmail": "sam.tertooy@kuleuven.be",
   "TestFile": "tst/testall.g",
-  "Version": "1.7.1"
+  "Version": "1.7.2"
 }
