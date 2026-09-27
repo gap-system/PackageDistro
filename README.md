@@ -48,23 +48,14 @@ to go about this that ensure we will still be able to pick up updates:
    and once the update is accepted and merged, the system
    will use only the new `PackageInfoURL`.
 2. If this is not possible, you can also submit the update as if it was a new package,
-   using one of the options listed in the next section.
+   as described in the next section.
 
 ### How to submit a new package
 
-There are several options how to do this.
-
-1. (**RECOMMENDED**) Submit an issue to this repository, requesting that your package be added.
-   Make sure to include a link to the `PackageInfo.g` file of your package.
-   Note that such requests are visible to the anyone watching this repository.
-
-2. Send an email to <support@gap-system.org>, requesting that your package be added.
-   Make sure to include a link to the `PackageInfo.g` file of your package.
-   Note that such requests are visible to only to a small group of people listed
-   [on this web page](https://www.gap-system.org/Contacts/People/supportgroup.html).
-
-In either case, we will evaluate your request and will inform you about the
-outcome of that (which may be: accept, accept after modifications, reject).
+Send an email to the open GAP development list <gap@gap-system.org>, which
+anyone can subscribe to. See <https://www.gap-system.org/packages/authors/submit/>
+for what to include, the requirements a package must meet, and how to check
+them locally.
 
 
 ## Instructions for maintainers of the package distribution
@@ -232,8 +223,8 @@ Some more details:
         - must contain `PackageInfo.g`
         - must not contain symlinks
 - clone the GAP repository and build GAP
-  - this (and all steps after this) is actually done twice, once for the latest
-    GAP `master` branch and once for the latest `stable-X.Y` branch)
+  - this (and all steps after this) is currently done only for the latest
+    GAP `master` branch; testing the latest `stable-X.Y` branch is disabled
 - compile all packages that require it
   - actually we skip `xgap` and also don't test it for technical reasons
 - start GAP, execute `LoadAllPackages()`, run GAP's `testinstall` test suite
