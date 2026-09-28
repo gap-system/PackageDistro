@@ -1,15 +1,16 @@
 {
   "AbstractHTML": " The <span class=\"pkgname\">Ferret</span> package provides a C++ reimplementation of Jeffery Leon's Partition Backtrack framework for solving problems in permutation groups",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "f444ac13a96c3f7f78757c6d5bfefe0e5385baabc1983599cb4d4b3b35882686",
-  "ArchiveURL": "https://github.com/gap-packages/ferret/releases/download/v1.0.16/ferret-1.0.16",
+  "ArchiveSHA256": "44ab0d1ee1caf0e537dd81c0325e40d40c67081627212cc0fdf02b8d9556906e",
+  "ArchiveSize": 262826,
+  "ArchiveURL": "https://github.com/gap-packages/ferret/releases/download/v1.0.17/ferret-1.0.17",
   "AutoDoc": {
     "TitlePage": {
       "Copyright": "\n&copyright; by Christopher Jefferson\n"
     }
   },
   "AvailabilityTest": null,
-  "Date": "2026-01-20",
+  "Date": "2026-09-28",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.12",
@@ -39,7 +40,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "8965a6489dbdc468552736aaeb678cf4712b2f6b11c737affbe72070f3b329f1",
+  "PackageInfoSHA256": "1a9b7f36f492273f540f68649b9ce2f3e290dea17329a7a6b27ca71ffd134077",
   "PackageInfoURL": "https://gap-packages.github.io/ferret/PackageInfo.g",
   "PackageName": "ferret",
   "PackageWWWHome": "https://gap-packages.github.io/ferret/",
@@ -64,5 +65,5 @@
   },
   "Subtitle": "Backtrack Search in Permutation Groups",
   "TestFile": "tst/testall.g",
-  "Version": "1.0.16"
+  "Version": "1.0.17"
 }
