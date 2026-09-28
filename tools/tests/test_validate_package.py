@@ -8,6 +8,7 @@ This module contains some tests for the validate_package.py script
 
 import os
 import sys
+import tarfile
 from os.path import join
 
 import pytest
@@ -16,7 +17,35 @@ sys.path.insert(
     0, "/".join(os.path.dirname(os.path.realpath(__file__)).split("/")[:-1])
 )
 
-from validate_package import check_html_links, check_link
+from validate_package import check_html_links, check_link, validate_tarball
+
+
+@pytest.mark.parametrize(
+    "name, accepted",
+    [
+        ("testpkg/tst/JSONTestSuite/n_number_-1.0..json", True),
+        ("testpkg/tst/JSONTestSuite/n_number_-2..json", True),
+        ("testpkg/tst/JSONTestSuite/n_structure_angle_bracket_..json", True),
+        ("testpkg/dir..name/file", True),
+        ("../testpkg/file", False),
+        ("testpkg/../file", False),
+        ("testpkg/subdir/..", False),
+    ],
+)
+def test_validate_tarball_parent_directory_components(tmp_path, capsys, name, accepted):
+    archive = tmp_path / "testpkg.tar.gz"
+    with tarfile.open(archive, "w:gz") as tf:
+        tf.addfile(tarfile.TarInfo("testpkg/PackageInfo.g"))
+        tf.addfile(tarfile.TarInfo(name))
+
+    if accepted:
+        assert validate_tarball(str(archive)) == "testpkg"
+    else:
+        with pytest.raises(SystemExit) as e:
+            validate_tarball(str(archive))
+        assert e.value.code == 1
+        assert f"tarball has bad entry {name}" in capsys.readouterr().err
+
 
 # Where a package manual usually keeps its chapters, and hence the vantage
 # point from which most links are resolved.

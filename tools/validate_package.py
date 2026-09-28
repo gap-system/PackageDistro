@@ -56,8 +56,8 @@ def validate_tarball(filename: str) -> str:
         if len(names) == 0:
             error("tarball is empty")
 
-        # no entry may contain ".."
-        first = next(filter(lambda n: ".." in n, names), None)
+        # no entry may contain a parent-directory component
+        first = next(filter(lambda n: ".." in n.split("/"), names), None)
         if first != None:
             error(f"tarball has bad entry {first}")
 
