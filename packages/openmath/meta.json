@@ -1,23 +1,23 @@
 {
   "AbstractHTML": "This package provides an <a href=\"http://www.openmath.org/\">OpenMath</a> phrasebook for <span class=\"pkgname\">GAP</span>. This package allows <span class=\"pkgname\">GAP</span> users to import and export mathematical objects encoded in OpenMath, for the purpose of exchanging them with other applications that are OpenMath enabled.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "c9b0087aad6a4dce8c52bd0454e618eb94c00e9ed48bf7d09c6e91862c062e3d",
-  "ArchiveSize": 271842,
-  "ArchiveURL": "https://github.com/gap-packages/openmath/releases/download/v11.5.5/OpenMath-11.5.5",
+  "ArchiveSHA256": "d7fa88855515769d8ece8f6715c407a61963336a1c682d9765c99bfc4367a187",
+  "ArchiveSize": 272054,
+  "ArchiveURL": "https://github.com/gap-packages/openmath/releases/download/v11.5.6/OpenMath-11.5.6",
   "AutoDoc": {
     "entities": {
       "IO": "<Package>IO</Package>",
       "OpenMath": "<Package>OpenMath</Package>",
-      "RELEASEDATE": "11 August 2026",
+      "RELEASEDATE": "29 September 2026",
       "RELEASEYEAR": "2026",
       "SCSCP": "<Package>SCSCP</Package>",
-      "VERSION": "11.5.5",
+      "VERSION": "11.5.6",
       "scscp1": "<Package>scscp1</Package>",
       "scscp2": "<Package>scscp2</Package>"
     }
   },
   "AvailabilityTest": null,
-  "Date": "2026-08-11",
+  "Date": "2026-09-29",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": " >= 4.9.0",
@@ -50,7 +50,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "645caeb54f853fc781e6417786f00e363a8ae59b29eb5420a4257ba7c086706d",
+  "PackageInfoSHA256": "18dc0f57bbdf567d634e2b40fd75638284f36c20f7c06eedade5d8ae12bdcb1c",
   "PackageInfoURL": "https://gap-packages.github.io/openmath/PackageInfo.g",
   "PackageName": "OpenMath",
   "PackageWWWHome": "https://gap-packages.github.io/openmath",
@@ -99,5 +99,5 @@
   },
   "Subtitle": "OpenMath functionality in GAP",
   "TestFile": "tst/testall.g",
-  "Version": "11.5.5"
+  "Version": "11.5.6"
 }
