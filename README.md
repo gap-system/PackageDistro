@@ -52,10 +52,8 @@ to go about this that ensure we will still be able to pick up updates:
 
 ### How to submit a new package
 
-Send an email to the open GAP development list <gap@gap-system.org>, which
-anyone can subscribe to. See <https://www.gap-system.org/packages/authors/submit/>
-for what to include, the requirements a package must meet, and how to check
-them.
+See <https://www.gap-system.org/packages/authors/submit/> for how to submit
+a new package, what to include, and the requirements a package must meet.
 
 
 ## Instructions for maintainers of the package distribution
