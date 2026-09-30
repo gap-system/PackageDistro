@@ -1,0 +1,31 @@
+#
+# Package submissions are discussed on the gap@gap-system.org mailing list.
+# This workflow reminds maintainers to forward a submission made as an issue
+# there. The issue form for submissions applies the label on creation.
+#
+name: "New package submission"
+
+on:
+  issues:
+    types: [labeled]
+
+permissions:
+  issues: write
+
+jobs:
+  remind:
+    name: "Remind maintainers to forward the submission"
+    if: ${{ github.event.label.name == 'new package' }}
+    runs-on: ubuntu-slim
+    steps:
+      - name: "Comment on the issue"
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          ISSUE: ${{ github.event.issue.number }}
+        run: |
+          gh issue comment "$ISSUE" --body-file - <<'EOF'
+          Thank you for your submission. It will be forwarded to the GAP development mailing list <gap@gap-system.org>, where it is discussed; see <https://www.gap-system.org/packages/authors/submit/> for what happens next.
+
+          Maintainers: please forward this issue to gap@gap-system.org.
+          EOF
