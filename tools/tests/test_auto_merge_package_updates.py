@@ -9,6 +9,10 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 
 
+def head_commit(date="2026-05-20T00:00:00Z"):
+    return json.dumps({"commit": {"committer": {"date": date}}})
+
+
 def label(name):
     return {"name": name}
 
@@ -63,7 +67,11 @@ def test_dry_run_prints_merge_candidates_without_merging(capsys):
                 stdout=json.dumps([pr(1)]),
                 stderr="",
             )
+        if args[:2] == ["api", "repos/gap-system/PackageDistro/commits/sha1"]:
+            return subprocess.CompletedProcess(args, 0, stdout=head_commit(), stderr="")
         if args[:2] == ["api", "repos/gap-system/PackageDistro/issues/1/comments"]:
+            return subprocess.CompletedProcess(args, 0, stdout="[]", stderr="")
+        if args[:2] == ["api", "repos/gap-system/PackageDistro/pulls/1/reviews"]:
             return subprocess.CompletedProcess(args, 0, stdout="[]", stderr="")
         if args[:3] == ["pr", "checks", "1"]:
             return subprocess.CompletedProcess(
@@ -111,6 +119,8 @@ def test_human_comment_blocks_auto_merge_unless_marked_noblock(capsys):
                 stdout=json.dumps([pr(1), pr(2)]),
                 stderr="",
             )
+        if args[:2] == ["api", "repos/gap-system/PackageDistro/commits/sha1"]:
+            return subprocess.CompletedProcess(args, 0, stdout=head_commit(), stderr="")
         if args[:2] == ["api", "repos/gap-system/PackageDistro/issues/1/comments"]:
             return subprocess.CompletedProcess(
                 args,
@@ -126,6 +136,8 @@ def test_human_comment_blocks_auto_merge_unless_marked_noblock(capsys):
                 ),
                 stderr="",
             )
+        if args[:2] == ["api", "repos/gap-system/PackageDistro/commits/sha2"]:
+            return subprocess.CompletedProcess(args, 0, stdout=head_commit(), stderr="")
         if args[:2] == ["api", "repos/gap-system/PackageDistro/issues/2/comments"]:
             return subprocess.CompletedProcess(
                 args,
@@ -149,6 +161,8 @@ def test_human_comment_blocks_auto_merge_unless_marked_noblock(capsys):
                 ),
                 stderr="",
             )
+        if args[:2] == ["api", "repos/gap-system/PackageDistro/pulls/2/reviews"]:
+            return subprocess.CompletedProcess(args, 0, stdout="[]", stderr="")
         if args[:3] == ["pr", "checks", "2"]:
             return subprocess.CompletedProcess(
                 args,
@@ -185,6 +199,8 @@ def test_comment_read_failure_exits_instead_of_blocking_silently():
     module = importlib.import_module("auto_merge_package_updates")
 
     def fake_run_gh(args):
+        if args[:2] == ["api", "repos/gap-system/PackageDistro/commits/sha1"]:
+            return subprocess.CompletedProcess(args, 0, stdout=head_commit(), stderr="")
         if args[:2] == ["api", "repos/gap-system/PackageDistro/issues/1/comments"]:
             return subprocess.CompletedProcess(
                 args,
@@ -221,3 +237,124 @@ def test_merge_failure_exits_instead_of_returning_false():
         assert exc.code == 1
     else:
         raise AssertionError("expected SystemExit")
+
+
+def review(login, state, body="", user_type="User"):
+    return {
+        "body": body,
+        "state": state,
+        "html_url": f"https://example.com/review/{login}",
+        "user": {"login": login, "type": user_type},
+    }
+
+
+def test_blocking_reviews():
+    module = importlib.import_module("auto_merge_package_updates")
+
+    reviews = [
+        # change request withdrawn by a later approval
+        review("alice", "CHANGES_REQUESTED", "Please fix."),
+        review("alice", "APPROVED"),
+        # a later comment does not withdraw a change request
+        review("bob", "CHANGES_REQUESTED"),
+        review("bob", "COMMENTED", "Still waiting. [noblock]"),
+        review("carol", "CHANGES_REQUESTED"),
+        review("carol", "DISMISSED"),
+        review("dave", "COMMENTED", "Is this right?"),
+        review("erin", "COMMENTED", "Fine. [noblock]"),
+        review("bot[bot]", "CHANGES_REQUESTED", user_type="Bot"),
+    ]
+
+    blockers = module.blocking_reviews(reviews)
+
+    assert [(r["user"]["login"], r["state"]) for r in blockers] == [
+        ("bob", "CHANGES_REQUESTED"),
+        ("dave", "COMMENTED"),
+    ]
+
+
+def test_requested_changes_block_auto_merge(capsys):
+    module = importlib.import_module("auto_merge_package_updates")
+
+    def fake_run_gh(args):
+        if args[:2] == ["pr", "list"]:
+            return subprocess.CompletedProcess(
+                args, 0, stdout=json.dumps([pr(1)]), stderr=""
+            )
+        if args[:2] == ["api", "repos/gap-system/PackageDistro/commits/sha1"]:
+            return subprocess.CompletedProcess(args, 0, stdout=head_commit(), stderr="")
+        if args[:2] == ["api", "repos/gap-system/PackageDistro/issues/1/comments"]:
+            return subprocess.CompletedProcess(args, 0, stdout="[]", stderr="")
+        if args[:2] == ["api", "repos/gap-system/PackageDistro/pulls/1/reviews"]:
+            return subprocess.CompletedProcess(
+                args,
+                0,
+                stdout=json.dumps([[review("maintainer", "CHANGES_REQUESTED")]]),
+                stderr="",
+            )
+        raise AssertionError(f"unexpected gh call: {args}")
+
+    merged = module.auto_merge_package_updates(
+        repository="gap-system/PackageDistro",
+        repository_owner="gap-system",
+        minimum_age_seconds=86400,
+        dry_run=True,
+        now=module.parse_github_datetime("2026-05-22T02:00:00Z"),
+        run_gh=fake_run_gh,
+    )
+
+    out = capsys.readouterr().out
+    assert merged == []
+    assert "PR #1 has blocking reviews" in out
+
+
+def test_missing_gate_check_blocks_auto_merge(capsys):
+    module = importlib.import_module("auto_merge_package_updates")
+
+    def fake_run_gh(args):
+        if args[:3] == ["pr", "checks", "1"]:
+            return subprocess.CompletedProcess(
+                args,
+                0,
+                stdout=json.dumps(
+                    [
+                        {
+                            "name": "Detect affected packages",
+                            "bucket": "pass",
+                            "state": "SUCCESS",
+                        }
+                    ]
+                ),
+                stderr="",
+            )
+        raise AssertionError(f"unexpected gh call: {args}")
+
+    assert not module.required_checks_pass(1, fake_run_gh)
+    assert "Package tests passed" in capsys.readouterr().out
+
+
+def test_recent_push_delays_auto_merge(capsys):
+    module = importlib.import_module("auto_merge_package_updates")
+
+    def fake_run_gh(args):
+        if args[:2] == ["pr", "list"]:
+            return subprocess.CompletedProcess(
+                args, 0, stdout=json.dumps([pr(1)]), stderr=""
+            )
+        if args[:2] == ["api", "repos/gap-system/PackageDistro/commits/sha1"]:
+            return subprocess.CompletedProcess(
+                args, 0, stdout=head_commit("2026-05-21T23:30:00Z"), stderr=""
+            )
+        raise AssertionError(f"unexpected gh call: {args}")
+
+    merged = module.auto_merge_package_updates(
+        repository="gap-system/PackageDistro",
+        repository_owner="gap-system",
+        minimum_age_seconds=86400,
+        dry_run=True,
+        now=module.parse_github_datetime("2026-05-22T02:00:00Z"),
+        run_gh=fake_run_gh,
+    )
+
+    assert merged == []
+    assert "PR #1 was updated too recently" in capsys.readouterr().out

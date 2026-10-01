@@ -22,6 +22,12 @@ import utils
 RunGh = Callable[[list[str]], subprocess.CompletedProcess[str]]
 NOBLOCK_MARKER = "[noblock]"
 
+# The stable required check in pull-request.yml; it only reports after all
+# package tests have finished.
+GATE_CHECK = "Package tests passed"
+
+REVIEW_VERDICTS = {"APPROVED", "CHANGES_REQUESTED", "DISMISSED"}
+
 PR_FIELDS = ",".join(
     [
         "number",
@@ -107,20 +113,15 @@ def list_pull_requests(limit: int, run: RunGh) -> list[dict[str, Any]]:
     return data
 
 
-def list_issue_comments(
-    repository: str, number: int, run: RunGh
+def list_api_items(
+    endpoint: str, description: str, number: int, run: RunGh
 ) -> list[dict[str, Any]]:
     returncode, data, stderr = gh_json(
-        [
-            "api",
-            f"repos/{repository}/issues/{number}/comments",
-            "--paginate",
-            "--slurp",
-        ],
+        ["api", endpoint, "--paginate", "--slurp"],
         run,
     )
     if returncode != 0:
-        msg = f"Could not read comments for PR #{number}; refusing to merge."
+        msg = f"Could not read {description} for PR #{number}; refusing to merge."
         if stderr:
             msg += f"\n{stderr.rstrip()}"
         utils.error(msg)
@@ -129,11 +130,41 @@ def list_issue_comments(
     return data
 
 
+def list_issue_comments(
+    repository: str, number: int, run: RunGh
+) -> list[dict[str, Any]]:
+    return list_api_items(
+        f"repos/{repository}/issues/{number}/comments", "comments", number, run
+    )
+
+
+def list_reviews(repository: str, number: int, run: RunGh) -> list[dict[str, Any]]:
+    return list_api_items(
+        f"repos/{repository}/pulls/{number}/reviews", "reviews", number, run
+    )
+
+
+def head_commit_age_seconds(
+    repository: str, pr: dict[str, Any], now: datetime, run: RunGh
+) -> int:
+    number = pr["number"]
+    returncode, data, stderr = gh_json(
+        ["api", f"repos/{repository}/commits/{pr['headRefOid']}"], run
+    )
+    if returncode != 0:
+        msg = f"Could not read head commit for PR #{number}; refusing to merge."
+        if stderr:
+            msg += f"\n{stderr.rstrip()}"
+        utils.error(msg)
+    committed = parse_github_datetime(data["commit"]["committer"]["date"])
+    return int((now - committed).total_seconds())
+
+
 def is_blocking_comment(comment: dict[str, Any]) -> bool:
     user = comment.get("user") or {}
     if user.get("type") == "Bot":
         return False
-    return NOBLOCK_MARKER not in comment.get("body", "").lower()
+    return NOBLOCK_MARKER not in (comment.get("body") or "").lower()
 
 
 def blocking_comments(comments: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -153,6 +184,40 @@ def has_blocking_comments(repository: str, number: int, run: RunGh) -> bool:
     return False
 
 
+def blocking_reviews(reviews: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    # A change request stays in force until the same reviewer approves or it
+    # is dismissed; later comment reviews do not withdraw it. Comment reviews
+    # (including inline comments) block like issue comments.
+    verdicts: dict[str, dict[str, Any]] = {}
+    comments: list[dict[str, Any]] = []
+    for review in reviews:
+        user = review.get("user") or {}
+        if user.get("type") == "Bot":
+            continue
+
+        state = review.get("state")
+        if state in REVIEW_VERDICTS:
+            verdicts[user.get("login", "")] = review
+        elif state == "COMMENTED" and is_blocking_comment(review):
+            comments.append(review)
+
+    requests = [r for r in verdicts.values() if r["state"] == "CHANGES_REQUESTED"]
+    return requests + comments
+
+
+def has_blocking_reviews(repository: str, number: int, run: RunGh) -> bool:
+    blockers = blocking_reviews(list_reviews(repository, number, run))
+    if not blockers:
+        return False
+
+    print(f"PR #{number} has blocking reviews:")
+    for review in blockers:
+        user = review.get("user") or {}
+        login = user.get("login", "unknown")
+        print(f"- {login} ({review['state']}): {review.get('html_url', '')}")
+    return True
+
+
 def required_checks_pass(number: int, run: RunGh) -> bool:
     returncode, checks, stderr = gh_json(
         ["pr", "checks", str(number), "--required", "--json", "name,bucket,state"],
@@ -167,8 +232,8 @@ def required_checks_pass(number: int, run: RunGh) -> bool:
             print(stderr.rstrip())
         return False
 
-    if not checks:
-        print(f"PR #{number} has no required checks; refusing to merge.")
+    if GATE_CHECK not in {check["name"] for check in checks or []}:
+        print(f"PR #{number} has no '{GATE_CHECK}' check yet; refusing to merge.")
         return False
 
     failing_checks = [check for check in checks if check["bucket"] != "pass"]
@@ -228,7 +293,17 @@ def auto_merge_package_updates(
     for pr in candidates:
         number = pr["number"]
         title = pr["title"]
+
+        # scan-for-updates force-pushes newer versions onto an existing PR, so
+        # the head commit can be younger than the PR
+        if head_commit_age_seconds(repository, pr, now, run_gh) < minimum_age_seconds:
+            print(f"PR #{number} was updated too recently.")
+            continue
+
         if has_blocking_comments(repository, number, run_gh):
+            continue
+
+        if has_blocking_reviews(repository, number, run_gh):
             continue
 
         if not required_checks_pass(number, run_gh):
