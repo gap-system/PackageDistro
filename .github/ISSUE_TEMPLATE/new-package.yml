@@ -7,20 +7,11 @@ body:
     attributes:
       value: >
         See <https://www.gap-system.org/packages/authors/submit/> for the
-        requirements a package must meet. Submissions made here are forwarded
-        to the GAP development mailing list <gap@gap-system.org>, where they
-        are discussed.
+        requirements a package must meet.
   - type: input
     id: name
     attributes:
       label: "Package name"
-    validations:
-      required: true
-  - type: textarea
-    id: description
-    attributes:
-      label: "Description"
-      description: "What does the package do?"
     validations:
       required: true
   - type: input
@@ -35,11 +26,6 @@ body:
     attributes:
       label: "Source repository"
       description: "Leave empty if the package has none."
-  - type: textarea
-    id: overlap
-    attributes:
-      label: "Relation to existing packages or GAP library functionality"
-      description: "Leave empty if it overlaps with none."
   - type: checkboxes
     id: consent
     attributes:
@@ -47,3 +33,10 @@ body:
       options:
         - label: "I am an author of this package, or submit it with the authors' consent."
           required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      description: "What does the package do?"
+    validations:
+      required: true
