@@ -27,7 +27,7 @@ body:
     id: pkginfo
     attributes:
       label: "URL of `PackageInfo.g`"
-      placeholder: "https://example.org/mypkg/PackageInfo.g"
+      placeholder: "https://gap-packages.github.io/mypkg/PackageInfo.g"
     validations:
       required: true
   - type: input
