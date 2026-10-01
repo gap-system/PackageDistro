@@ -1,0 +1,49 @@
+name: "Submit a new package"
+description: "Ask for a GAP package to be distributed with GAP"
+title: "New package: "
+labels: ["new package"]
+body:
+  - type: markdown
+    attributes:
+      value: >
+        See <https://www.gap-system.org/packages/authors/submit/> for the
+        requirements a package must meet. Submissions made here are forwarded
+        to the GAP development mailing list <gap@gap-system.org>, where they
+        are discussed.
+  - type: input
+    id: name
+    attributes:
+      label: "Package name"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      description: "What does the package do?"
+    validations:
+      required: true
+  - type: input
+    id: pkginfo
+    attributes:
+      label: "URL of `PackageInfo.g`"
+      placeholder: "https://gap-packages.github.io/mypkg/PackageInfo.g"
+    validations:
+      required: true
+  - type: input
+    id: repository
+    attributes:
+      label: "Source repository"
+      description: "Leave empty if the package has none."
+  - type: textarea
+    id: overlap
+    attributes:
+      label: "Relation to existing packages or GAP library functionality"
+      description: "Leave empty if it overlaps with none."
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: "Consent"
+      options:
+        - label: "I am an author of this package, or submit it with the authors' consent."
+          required: true
