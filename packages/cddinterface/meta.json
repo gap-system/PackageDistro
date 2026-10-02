@@ -1,13 +1,14 @@
 {
   "AbstractHTML": "The <span class='pkgname'>CddInterface</span> package provides a GAP interface to <a href='https://inf.ethz.ch/personal/fukudak/cdd_home'>cdd</a>, enabling direct access to the most of the functionality of cddlib, such as translating between H,V- representations of a polyhedron and solving linear programming problems.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "e425b0e87667df3f6e4c33cd2656bfc53602297620c91f60e322b29478954a2b",
-  "ArchiveURL": "https://github.com/homalg-project/CddInterface/releases/download/v2026.03.02/CddInterface-2026.03.02",
+  "ArchiveSHA256": "fd98276ee335704b7147ab7dcb418544c3c114ca1918f18f9a09a7b798582458",
+  "ArchiveSize": 341181,
+  "ArchiveURL": "https://github.com/homalg-project/CddInterface/releases/download/v2026.10.01/CddInterface-2026.10.01",
   "AvailabilityTest": null,
-  "Date": "2026-03-02",
+  "Date": "2026-10-01",
   "Dependencies": {
     "ExternalConditions": [],
-    "GAP": ">= 4.12",
+    "GAP": ">= 4.13",
     "NeededOtherPackages": [
       [
         "GAPDoc",
@@ -28,6 +29,21 @@
     },
     "SuggestedOtherPackages": []
   },
+  "Extensions": [
+    {
+      "filename": "gap/Julia.g",
+      "needed": [
+        [
+          "JuliaInterface",
+          ">= 0.2"
+        ],
+        [
+          "ToolsForHomalg",
+          ">= 2020.05.12"
+        ]
+      ]
+    }
+  ],
   "IssueTrackerURL": "https://github.com/homalg-project/CddInterface/issues",
   "Keywords": [
     "cddlib",
@@ -48,7 +64,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "147ba32b5feaf8d238ab189338d85457b1c7d0e573a12f4c0beb025e4e81d97d",
+  "PackageInfoSHA256": "aff94ab83c05fc123cd88ef8e260ccaa773c5f3abf5a07c8973c1aa08f1342e6",
   "PackageInfoURL": "https://homalg-project.github.io/CddInterface/PackageInfo.g",
   "PackageName": "CddInterface",
   "PackageWWWHome": "https://homalg-project.github.io/CddInterface",
@@ -72,5 +88,5 @@
   },
   "Subtitle": "Gap interface to Cdd package",
   "TestFile": "tst/testall.g",
-  "Version": "2026.03.02"
+  "Version": "2026.10.01"
 }
