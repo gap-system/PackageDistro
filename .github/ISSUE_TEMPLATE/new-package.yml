@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: >
-        See <https://www.gap-system.org/packages/authors/submit/> for the
+        See <https://www.gap-system.org/packages/submit/> for the
         requirements a package must meet.
   - type: input
     id: name

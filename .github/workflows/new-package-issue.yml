@@ -25,7 +25,7 @@ jobs:
           ISSUE: ${{ github.event.issue.number }}
         run: |
           gh issue comment "$ISSUE" --body-file - <<'EOF'
-          Thank you for your submission. It will be forwarded to the GAP development mailing list <gap@gap-system.org>, where it is discussed; see <https://www.gap-system.org/packages/authors/submit/> for what happens next.
+          Thank you for your submission. It will be forwarded to the GAP development mailing list <gap@gap-system.org>, where it is discussed; see <https://www.gap-system.org/packages/submit/> for what happens next.
 
           Maintainers: please forward this issue to gap@gap-system.org.
           EOF
