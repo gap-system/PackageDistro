@@ -52,7 +52,7 @@ to go about this that ensure we will still be able to pick up updates:
 
 ### How to submit a new package
 
-See <https://www.gap-system.org/packages/authors/submit/> for how to submit
+See <https://www.gap-system.org/packages/submit/> for how to submit
 a new package, what to include, and the requirements a package must meet.
 
 
@@ -60,25 +60,43 @@ a new package, what to include, and the requirements a package must meet.
 
 ### Adding a new package
 
-_**WARNING:** The following instructions are only about the technical aspects
-of adding a new package. In general we may also want to impose other requirements
-for adding new packages to the distribution._
+Whether a package is accepted is decided as described at
+<https://www.gap-system.org/packages/submit/>: submissions are discussed on
+the <gap@gap-system.org> mailing list. A submission made as an issue in this
+repository must be forwarded to that list first.
 
-People who have write access to this repository should add new packages by
-creating a pull request for each new package. One way to do that is manually,
-as described above. Alternatively, this can be achieved via a GitHub workflow
-as follows:
+Once a package is accepted, anyone with write access to this repository can
+add it, by creating a pull request for it in one of two ways.
+
+Via a GitHub workflow:
 
 1. Go to <https://github.com/gap-system/PackageDistro/actions/workflows/scan-for-updates.yml>
-2. Click "Run workflow" once to open a popup menu. There is a field there accepting
-   a space separated list of `PackageInfo.g` URLs. Do so.
+2. Click "Run workflow" once to open a popup menu, and enter the URL of the
+   `PackageInfo.g` file of the package into the field for a space separated
+   list of `PackageInfo.g` URLs.
 3. Click on the new green "Run workflow" button to actually trigger the workflow.
 4. After 2-3 minutes this should create a new pull request for each package you listed.
+
+Or by hand, in a clone of this repository:
+
+1. Run `tools/import_packages.py URL`, where `URL` is the URL of the
+   `PackageInfo.g` file of the package, or the path of a local copy. This needs
+   GAP with the packages `json` and `crypting`, and the Python packages
+   described under [Requirements](#requirements).
+2. This creates the file `packages/NAME/meta.json`. Commit it on a new branch
+   and open a pull request.
 
 Once the PR is created, a bunch of CI tests are started. Once they are completed,
 a report is added to the PR which indicates whether the new package breaks something
 in GAP or other packages, and whether its tests pass. If all looks good, the
-PR may be merged by any maintainer.
+PR may be merged by any maintainer. Afterwards, report the outcome on the
+mailing list, and close the issue of the submission if there is one.
+
+### Removing a package
+
+To remove a package from the distribution, delete its directory
+`packages/NAME` in a pull request. The report added to the PR shows whether
+the tests of other packages fail without it.
 
 ### Testing GAP pull requests against all packages
 
