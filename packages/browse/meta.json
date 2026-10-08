@@ -1,11 +1,11 @@
 {
   "AbstractHTML": "The <span class='pkgname'>Browse</span> package provides three levels of functionality</p><ul><li>A <span class='pkgname'>GAP</span> interface to the C-library <a href='http://www.gnu.org/software/ncurses/ncurses.html'>ncurses</a>.</li><li>A generic function for interactive browsing through two-dimensional arrays of data.</li><li>Several applications of the first two, e.g., a method for browsing character tables, browsing through the content of some data collections, or some games.</li></ul><p>",
   "ArchiveFormats": ".tar.gz .tar.bz2 -win.zip",
-  "ArchiveSHA256": "90f2e8f71aa4b9276a80370fc2503daeba9d3555e159a968559731da18be6b60",
-  "ArchiveSize": 1856409,
-  "ArchiveURL": "https://www.math.rwth-aachen.de/~Browse/Browse-1.8.23",
+  "ArchiveSHA256": "f4070d8b04876b1604b8ed214c1a3c172561e9b0763cfb853af4c726056964d6",
+  "ArchiveSize": 1856978,
+  "ArchiveURL": "https://www.math.rwth-aachen.de/~Browse/Browse-1.8.24",
   "AvailabilityTest": null,
-  "Date": "2026-07-30",
+  "Date": "2026-10-08",
   "Dependencies": {
     "ExternalConditions": [
       "C-compiler",
@@ -76,7 +76,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "a07a8ebfcf96568286466bcbca0aa0fad095fcd809337b68eff7e666d95d4f62",
+  "PackageInfoSHA256": "e440beadc4790bce01f8896e6f3fa0600443d4eaa96cde300897c56485c200bd",
   "PackageInfoURL": "https://www.math.rwth-aachen.de/~Browse/PackageInfo.g",
   "PackageName": "Browse",
   "PackageWWWHome": "https://www.math.rwth-aachen.de/~Browse",
@@ -106,5 +106,5 @@
   ],
   "README_URL": "https://www.math.rwth-aachen.de/~Browse/README.md",
   "Subtitle": "browsing applications and ncurses interface",
-  "Version": "1.8.23"
+  "Version": "1.8.24"
 }
