@@ -1,17 +1,18 @@
 {
   "AbstractHTML": "This package permits to compute with set-theoretic unions of residue classes of&nbsp;Z and a few other rings. In particular it provides methods for computing unions, intersections and differences of these sets.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "2517bf03e4e4322d329afff81479016465a69a9c799c402cc81a0755e3a1805c",
-  "ArchiveURL": "https://github.com/gap-packages/resclasses/releases/download/v4.7.4/resclasses-4.7.4",
+  "ArchiveSHA256": "2b4bcfad67367285af91d0843581cbbc9cee44b43c6fd43e12288cf048535417",
+  "ArchiveSize": 339089,
+  "ArchiveURL": "https://github.com/gap-packages/resclasses/releases/download/v4.8.0/resclasses-4.8.0",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "<#Include SYSTEM \"abstract.xml\">",
-      "Copyright": "\n&copyright; 2003 - 2017 by Stefan Kohl. <P/>\n\n&ResClasses; is free software: you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation, either version 2 of the License, or\n(at your option) any later version. <P/>\n\n&ResClasses; is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details. <P/>\n\nFor a copy of the GNU General Public License, see \nthe file <F>GPL</F> in the <F>etc</F> directory of the &GAP;\ndistribution or see <URL>https://www.gnu.org/licenses/gpl.html</URL>.\n        "
+      "Copyright": "\n&copyright; 2003 - 2026 by Stefan Kohl. <P/>\n\n&ResClasses; is free software: you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation, either version 2 of the License, or\n(at your option) any later version. <P/>\n\n&ResClasses; is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details. <P/>\n\nFor a copy of the GNU General Public License, see \nthe file <F>GPL</F> in the <F>etc</F> directory of the &GAP;\ndistribution or see <URL>https://www.gnu.org/licenses/gpl.html</URL>.\n        "
     }
   },
   "AvailabilityTest": null,
-  "BannerString": "\nLoading ResClasses 4.7.4 (Computations with Residue Classes)\nby Stefan Kohl, sk239@st-andrews.ac.uk\n\n",
-  "Date": "2025-09-24",
+  "BannerString": "\nLoading ResClasses 4.8.0 (Computations with Residue Classes)\nby Stefan Kohl, sk239@st-andrews.ac.uk\n\n",
+  "Date": "2026-10-12",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.11.1",
@@ -55,7 +56,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "05ab2290148d430f8581d644307a8891cd013520092446ffe863f900d00c8e73",
+  "PackageInfoSHA256": "49c2af4d3f970bcb82db8edaeada14efb3cb7b77a5f84bc2ad4fc0a90a9606dc",
   "PackageInfoURL": "https://gap-packages.github.io/resclasses/PackageInfo.g",
   "PackageName": "ResClasses",
   "PackageWWWHome": "https://gap-packages.github.io/resclasses/",
@@ -76,5 +77,5 @@
   },
   "Subtitle": "Set-Theoretic Computations with Residue Classes",
   "TestFile": "tst/testall.g",
-  "Version": "4.7.4"
+  "Version": "4.8.0"
 }
