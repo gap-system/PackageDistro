@@ -1,0 +1,23 @@
+{
+  "current": "master/2026/10/15_02-39-26",
+  "last": "master/2026/10/14_02-29-25",
+  "total": 173,
+  "failure": 2,
+  "success": 168,
+  "skipped": 3,
+  "failures_changed": [
+    "xmod"
+  ],
+  "failures_current": [
+    "semigroups",
+    "xmod"
+  ],
+  "new": 0,
+  "removed": 0,
+  "failure_changed": 1,
+  "success_changed": 0,
+  "skipped_changed": 0,
+  "failure_same": 1,
+  "success_same": 168,
+  "skipped_same": 3
+}
