@@ -1,11 +1,11 @@
 {
   "AbstractHTML": "<span class=\"pkgname\">LinearAlgebraForCAP</span> provides a skeletal model of the category of finite dimensional vector spaces over a computable field.",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "6192fc46bbf45dccd0394d7996d3fc34b5577cde9837874591b8cfd6cb51db4b",
-  "ArchiveSize": 273839,
-  "ArchiveURL": "https://github.com/homalg-project/CAP_project/releases/download/LinearAlgebraForCAP-2026.06-02/LinearAlgebraForCAP-2026.06-02",
+  "ArchiveSHA256": "35cbb73887e05fc1e3bd7a486296a51391e21016c294f24ab3aeacb4f3b3c05f",
+  "ArchiveSize": 275631,
+  "ArchiveURL": "https://github.com/homalg-project/CAP_project/releases/download/LinearAlgebraForCAP-2026.10-01/LinearAlgebraForCAP-2026.10-01",
   "AvailabilityTest": null,
-  "Date": "2026-06-30",
+  "Date": "2026-10-19",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.13.0",
@@ -57,7 +57,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "8e4a86107fe45b2b6a2f37b15d3a3cf7c43e9a354c125606a5c6eced6c5d646c",
+  "PackageInfoSHA256": "9cbe997fae167026e385b6e64368296130287fe349fdd932f99d47d6d12b27e7",
   "PackageInfoURL": "https://homalg-project.github.io/CAP_project/LinearAlgebraForCAP/PackageInfo.g",
   "PackageName": "LinearAlgebraForCAP",
   "PackageWWWHome": "https://homalg-project.github.io/pkg/LinearAlgebraForCAP",
@@ -103,5 +103,5 @@
   },
   "Subtitle": "Category of Matrices over a Field for CAP",
   "TestFile": "tst/testall.g",
-  "Version": "2026.06-02"
+  "Version": "2026.10-01"
 }
