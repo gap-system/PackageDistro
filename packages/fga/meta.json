@@ -1,15 +1,16 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">FGA</span> package installs methods for    computations with finitely generated subgroups of free groups and    provides a presentation for their automorphism groups.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "da426e208afbec533db2a5e3c5370756309b7735e4306d2ddf2bf35b5afb8592",
-  "ArchiveURL": "https://github.com/gap-packages/fga/releases/download/v1.5.0/fga-1.5.0",
+  "ArchiveSHA256": "0c3d1298c8d009a1da9789ade2efa1bbb41c4ee7484e55d666e059d20650e0a5",
+  "ArchiveSize": 207706,
+  "ArchiveURL": "https://github.com/gap-packages/fga/releases/download/v1.5.1/fga-1.5.1",
   "AutoDoc": {
     "TitlePage": {
       "TitleComment": "<E>Note:</E> This version of FGA is a fork of the original FGA, maintained by the GAP Team."
     }
   },
   "AvailabilityTest": null,
-  "Date": "2023-04-04",
+  "Date": "2026-11-07",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.8",
@@ -36,7 +37,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "7f282ebdafc00c4ce470aa31b2d4d6477589e0deda5cf374aa59615d97d127a1",
+  "PackageInfoSHA256": "0070edef76fd90dfd6446878fb6e1d8a5b8edf1c5ab9e77a3436327f3d44e23b",
   "PackageInfoURL": "https://gap-packages.github.io/fga/PackageInfo.g",
   "PackageName": "FGA",
   "PackageWWWHome": "https://gap-packages.github.io/fga/",
@@ -63,5 +64,5 @@
   },
   "Subtitle": "Free Group Algorithms",
   "TestFile": "tst/testall.g",
-  "Version": "1.5.0"
+  "Version": "1.5.1"
 }
