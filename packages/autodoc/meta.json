@@ -1,9 +1,9 @@
 {
   "AbstractHTML": "",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "8bdde4893494c479f4707d8eb80e3058562253034c8c157d35b16830ab4e534d",
-  "ArchiveSize": 555695,
-  "ArchiveURL": "https://github.com/gap-packages/AutoDoc/releases/download/v2026.09.09/AutoDoc-2026.09.09",
+  "ArchiveSHA256": "ca84cd30bde7810ffcacafd2e6454d2dae46bdc65f606ae0e0549b6e02587129",
+  "ArchiveSize": 575420,
+  "ArchiveURL": "https://github.com/gap-packages/AutoDoc/releases/download/v2026.11.15/AutoDoc-2026.11.15",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "&AutoDoc; is a &GAP; package whose purpose is to aid &GAP; package authors in creating and maintaining the documentation of their packages.\n",
@@ -16,7 +16,7 @@
     }
   },
   "AvailabilityTest": null,
-  "Date": "2026-09-09",
+  "Date": "2026-11-15",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">= 4.13",
@@ -46,7 +46,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "1bbd536ba28bf9bfedacfc65c4c416d723030e8613b9a30d0a832e908328720e",
+  "PackageInfoSHA256": "1c04a7bfd8b4285367175fd2c605ce639af092534abcdf009e038375602682a2",
   "PackageInfoURL": "https://gap-packages.github.io/AutoDoc/PackageInfo.g",
   "PackageName": "AutoDoc",
   "PackageWWWHome": "https://gap-packages.github.io/AutoDoc",
@@ -118,5 +118,5 @@
   },
   "Subtitle": "Generate documentation from GAP source code",
   "TestFile": "tst/testall.g",
-  "Version": "2026.09.09"
+  "Version": "2026.11.15"
 }
