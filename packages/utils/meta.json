@@ -1,9 +1,9 @@
 {
   "AbstractHTML": "The <span class=\"pkgname\">Utils</span> package provides a collection   of utility functions gleaned from many packages.",
   "ArchiveFormats": ".tar.gz .zip",
-  "ArchiveSHA256": "2bf430be971ec519e8e4c42ed74b48d8daf6e80c0a63d16bb34fb87dd54038c6",
-  "ArchiveSize": 475427,
-  "ArchiveURL": "https://github.com/gap-packages/utils/releases/download/v1.01/utils-1.01",
+  "ArchiveSHA256": "04d1f23a792ba95eebbf05caa889d29a6a2a5e6419706f7430731f30d8842656",
+  "ArchiveSize": 468248,
+  "ArchiveURL": "https://github.com/gap-packages/utils/releases/download/v1.02/utils-1.02",
   "AutoDoc": {
     "TitlePage": {
       "Abstract": "The &Utils; package provides a space for utility functions in a variety of &GAP; packages to be collected together into a single package.  In this way it is hoped that they will become more visible to package authors.\n<P/>\nAny package author who transfers a function to &Utils; will become an author of &Utils;.\n<P/>\nIf deemed appropriate, functions may also be transferred from the main library.\n<P/>\nBug reports, suggestions and comments are, of course, welcome.\nPlease contact the last author at <Email>cdwensley.maths@btinternet.com</Email> or submit an issue at the GitHub repository <URL>https://github.com/gap-packages/utils/issues/</URL>.\n",
@@ -12,8 +12,8 @@
     }
   },
   "AvailabilityTest": null,
-  "BannerString": "Loading Utils 1.01 - a collection of utility functions.\n",
-  "Date": "2026-10-13",
+  "BannerString": "Loading Utils 1.02 - a collection of utility functions.\n",
+  "Date": "2026-11-19",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.12",
@@ -46,7 +46,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "74085ceae9d9425b2873aa1f6f2cad5d4f2962954225703f7ee7862a79ea0557",
+  "PackageInfoSHA256": "3d110107fbb4399d9714fa7af9bfa47647173358a2dd9396a5d8eb9b03875646",
   "PackageInfoURL": "https://gap-packages.github.io/utils/PackageInfo.g",
   "PackageName": "utils",
   "PackageWWWHome": "https://gap-packages.github.io/utils",
@@ -77,7 +77,7 @@
       "IsAuthor": true,
       "IsMaintainer": false,
       "LastName": "Horn",
-      "WWWHome": "https://github.com/mhorn"
+      "WWWHome": "https://www.quendi.de/math"
     },
     {
       "Email": "hulpke@math.colostate.edu",
@@ -137,5 +137,5 @@
   },
   "Subtitle": "Utility functions in GAP",
   "TestFile": "tst/testall.g",
-  "Version": "1.01"
+  "Version": "1.02"
 }
