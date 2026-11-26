@@ -1,0 +1,70 @@
+{
+  "AbstractHTML": "The <span class=\"pkgname\">SOR</span> package computes Rocco's group &nu;(G), its variant &nu;<sup>q</sup>(G), Sidki's weak commutativity group &chi;(G), its n-copy version and its variants defined by bijections, always as a quotient of a free product of copies of G that keeps the embeddings of the copies of G and the related subgroups.",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSHA256": "42eca7bf9ba945deb77c4e51a9e4910700430c21072c4cd577e5d9e73e069b11",
+  "ArchiveSize": 327758,
+  "ArchiveURL": "https://github.com/deoliveirarn/SOR/releases/download/v0.1.0/SOR-0.1.0",
+  "AvailabilityTest": null,
+  "Date": "2026-11-25",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">= 4.13",
+    "NeededOtherPackages": [
+      [
+        "polycyclic",
+        ">= 2.16"
+      ]
+    ],
+    "SuggestedOtherPackages": [
+      [
+        "nq",
+        ">= 2.5"
+      ]
+    ]
+  },
+  "IssueTrackerURL": "https://github.com/deoliveirarn/SOR/issues",
+  "Keywords": [
+    "weak commutativity",
+    "non-abelian tensor square",
+    "Rocco group",
+    "Sidki group",
+    "free product"
+  ],
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "SOR",
+      "HTMLStart": "doc/chap0_mj.html",
+      "LongTitle": "Rocco's nu(G), Sidki's chi(G) and related groups via free products with embeddings",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSHA256": "721ce01f42b333080e9be95faceb5381a20fc2d2fcd7a84af5e2bad7fbd26bc5",
+  "PackageInfoURL": "https://deoliveirarn.github.io/SOR/PackageInfo.g",
+  "PackageName": "SOR",
+  "PackageWWWHome": "https://deoliveirarn.github.io/SOR/",
+  "Persons": [
+    {
+      "Email": "ricardo@ufg.br",
+      "FirstNames": "Ricardo Nunes",
+      "GitHubUsername": "deoliveirarn",
+      "Institution": "Universidade Federal de Goiás",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "de Oliveira",
+      "Place": "Goiânia, Brazil"
+    }
+  ],
+  "README_URL": "https://deoliveirarn.github.io/SOR/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/deoliveirarn/SOR"
+  },
+  "Subtitle": "Rocco's nu(G), Sidki's chi(G) and related groups via free products with embeddings",
+  "TestFile": "tst/testall.g",
+  "Version": "0.1.0"
+}
