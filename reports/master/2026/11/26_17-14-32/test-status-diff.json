@@ -1,0 +1,18 @@
+{
+  "current": "master/2026/11/26_17-14-32",
+  "last": "master/2026/11/26_16-16-09",
+  "total": 173,
+  "failure": 0,
+  "success": 26,
+  "skipped": 147,
+  "failures_changed": [],
+  "failures_current": [],
+  "new": 0,
+  "removed": 0,
+  "failure_changed": 0,
+  "success_changed": 0,
+  "skipped_changed": 144,
+  "failure_same": 0,
+  "success_same": 26,
+  "skipped_same": 3
+}
