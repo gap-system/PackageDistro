@@ -1,17 +1,17 @@
 {
   "AbstractHTML": "This package contains Brauer tables of Schur covers of symmetric and alternating groups, and provides some related functionalities.",
   "ArchiveFormats": ".tar.gz",
-  "ArchiveSHA256": "0e1debbe0f47d96188ffa91fb460909b849d8abd90ba2a66a8d9677ce550df22",
-  "ArchiveSize": 339077,
-  "ArchiveURL": "https://github.com/gap-packages/spinsym/releases/download/v1.5.3/spinsym-1.5.3",
+  "ArchiveSHA256": "e3a62cbfdcbc5069bc72d405961cffb7934e7392a8a58fdc563dd505d37403d0",
+  "ArchiveSize": 340035,
+  "ArchiveURL": "https://github.com/gap-packages/spinsym/releases/download/v1.6.0/spinsym-1.6.0",
   "AutoDoc": {
     "TitlePage": {
       "Copyright": "\n    &copyright; 2012 Lukas Maas <P/>\n\n    The &SpinSym; &GAP; package is free software:\n    you can redistribute it and/or modify\n    it under the terms of the GNU General Public License as published by\n    the Free Software Foundation, either version 2 of the License, or\n    (at your option) any later version.<P/>\n    This program is distributed in the hope that it will be useful,\n    but WITHOUT ANY WARRANTY; without even the implied warranty of\n    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n    GNU General Public License for more details.\n\n    You should have received a copy of the GNU General Public License\n    along with this program (see the file LICENSE).\n    If not, see <URL>https://www.gnu.org/licenses/</URL>.\n",
-      "Version": "Version 1.5.3"
+      "Version": "Version 1.6.0"
     }
   },
   "AvailabilityTest": null,
-  "Date": "2026-11-26",
+  "Date": "2026-11-27",
   "Dependencies": {
     "ExternalConditions": [],
     "GAP": ">=4.12.0",
@@ -46,7 +46,7 @@
       "SixFile": "doc/manual.six"
     }
   ],
-  "PackageInfoSHA256": "de90d5495b615ad780ac1c45ec3de6aff8006b16542ed5bf0f02c2f55abb025f",
+  "PackageInfoSHA256": "926caef575519f6c5a8cf31207377b2b5ebda0588a05fc514911a760a6276eea",
   "PackageInfoURL": "https://gap-packages.github.io/spinsym/PackageInfo.g",
   "PackageName": "SpinSym",
   "PackageWWWHome": "https://gap-packages.github.io/spinsym/",
@@ -73,5 +73,5 @@
   },
   "Subtitle": "Brauer tables of spin-symmetric groups",
   "TestFile": "tst/testall.tst",
-  "Version": "1.5.3"
+  "Version": "1.6.0"
 }
