@@ -1,0 +1,88 @@
+{
+  "AbstractHTML": "The <span class=\"pkgname\">Idp5</span> package identifies the groups of order dividing p<sup>5</sup>, for any prime p, with the groups in the SmallGroups library, and constructs isomorphisms onto the library groups.",
+  "ArchiveFormats": ".tar.gz",
+  "ArchiveSHA256": "016961f2e0f4698f01838d4320d80d49dcbfcdc1b77d8ab5e3ffe69471cb0b15",
+  "ArchiveSize": 204738,
+  "ArchiveURL": "https://github.com/heikodietrich/idp5/releases/download/v1.0.0/idp5-1.0.0",
+  "AutoDoc": {
+    "TitlePage": {
+      "Abstract": "\nThe &Idp5; package identifies the groups of order dividing <M>p^5</M>, for\nany prime <M>p</M>, with the groups in the SmallGroups library, and\nconstructs isomorphisms onto the library groups.\n",
+      "Copyright": "\n&#169; 2026 by Heiko Dietrich, and Henrik Schanze.\n<P/>\nThe &Idp5; package is free software; you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by the\nFree Software Foundation; either version 2 of the License, or (at your\noption) any later version.\n"
+    }
+  },
+  "AvailabilityTest": null,
+  "Date": "2026-11-26",
+  "Dependencies": {
+    "ExternalConditions": [],
+    "GAP": ">= 4.14",
+    "NeededOtherPackages": [
+      [
+        "smallgrp",
+        ">= 1.5"
+      ]
+    ],
+    "SuggestedOtherPackages": [
+      [
+        "autpgrp",
+        ">= 1.10"
+      ]
+    ]
+  },
+  "IssueTrackerURL": "https://github.com/heikodietrich/idp5/issues",
+  "Keywords": [
+    "group identification",
+    "IdGroup",
+    "IdSmallGroup",
+    "p-groups",
+    "groups of order p^5",
+    "small groups library",
+    "isomorphism"
+  ],
+  "License": "GPL-2.0-or-later",
+  "PackageDoc": [
+    {
+      "ArchiveURLSubset": [
+        "doc"
+      ],
+      "BookName": "Idp5",
+      "HTMLStart": "doc/chap0.html",
+      "LongTitle": "Identification of the groups of order dividing p^5",
+      "PDFFile": "doc/manual.pdf",
+      "SixFile": "doc/manual.six"
+    }
+  ],
+  "PackageInfoSHA256": "c53e74b616f9ca87a421541c994ad2985173e279f111c1e04d5b197525a2f83b",
+  "PackageInfoURL": "https://heikodietrich.github.io/idp5/PackageInfo.g",
+  "PackageName": "Idp5",
+  "PackageWWWHome": "https://heikodietrich.github.io/idp5/",
+  "Persons": [
+    {
+      "Email": "heiko.dietrich@monash.edu",
+      "FirstNames": "Heiko",
+      "Institution": "Monash University",
+      "IsAuthor": true,
+      "IsMaintainer": true,
+      "LastName": "Dietrich",
+      "Place": "Melbourne, Australia",
+      "WWWHome": "http://users.monash.edu.au/~heikod/"
+    },
+    {
+      "Email": "henrik.schanze@tu-braunschweig.de",
+      "FirstNames": "Henrik",
+      "Institution": "TU Braunschweig",
+      "IsAuthor": true,
+      "IsMaintainer": false,
+      "LastName": "Schanze",
+      "Place": "Braunschweig, Germany",
+      "WWWHome": "https://www.iaa.tu-bs.de/henschan"
+    }
+  ],
+  "README_URL": "https://heikodietrich.github.io/idp5/README.md",
+  "SourceRepository": {
+    "Type": "git",
+    "URL": "https://github.com/heikodietrich/idp5"
+  },
+  "Subtitle": "Identification of the groups of order dividing p^5",
+  "TestFile": "tst/testall.g",
+  "Version": "1.0.0"
+}
